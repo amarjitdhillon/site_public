@@ -2072,7 +2072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../azure/storage/" class="md-nav__link">
+      <a href="../../azure/azurestorage/" class="md-nav__link">
         Az Storage
       </a>
     </li>
@@ -2102,6 +2102,34 @@
     <li class="md-nav__item">
       <a href="../../azure/snowflake/" class="md-nav__link">
         Snowflake
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../azure/blob/" class="md-nav__link">
+        Blob
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../azure/adsl/" class="md-nav__link">
+        ADLS-Gen2
       </a>
     </li>
   
@@ -2982,7 +3010,7 @@
   
     <li class="md-nav__item">
       <a href="../../technical_stuff/mysql/JdbcStatements/" class="md-nav__link">
-        JDMC Statements
+        JDBC Statements
       </a>
     </li>
   
@@ -3031,6 +3059,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_stuff/sql_and_nosql/" class="md-nav__link">
+        DB,DW and Data Lake
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -3073,6 +3115,20 @@
     <li class="md-nav__item">
       <a href="../../AI/intro_to_stat/" class="md-nav__link">
         STAT 101
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/azureml/" class="md-nav__link">
+        Azure ML
       </a>
     </li>
   
@@ -3626,7 +3682,7 @@ You should be able to pull it back:</p>
 </code></pre></div>
 <p>Now, change your <code>yaml file</code> to use the local registry.</p>
 <h4 id="3building-on-minikube">3.Building on Minikube</h4>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>minikube image build -t otp-fast .
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>minikube image build -t test_app .
 </code></pre></div>
 <p>Confirm it using</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>minikube image ls
@@ -3776,7 +3832,7 @@ and <code>mydir</code> is on your path, you can import the code in <code>module.
 </code></pre></div>
 <h3 id="create-image-on-minikube">Create image on Minikube</h3>
 <p>Create a image using the sample code </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>minikube image build -t otp-fast .
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>minikube image build -t test_app .
 </code></pre></div>
 <h3 id="create-k8s-manifests-for-poc">Create k8s manifests for POC</h3>
 <ol>
