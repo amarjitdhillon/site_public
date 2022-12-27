@@ -3356,13 +3356,13 @@
 <li>Vnet supportes <code>IPv4 and IPV6 public IPs</code></li>
 <li>VNET Subnet: They are used as <code>Gateway subnets</code></li>
 <li>We can have a <code>default subnet</code></li>
-<li>Vnet has <code>Azure provided DNS</code>, we can also use the <code>custom DNS</code></li>
+<li>Vnet has <code>Azure provided DNS</code>, we can also use the <code>custom DNS</code> too.</li>
 <li>At the subnet level, you can configure <code>Network Security Groups (NSGs)</code> to secure your workloads</li>
 </ul>
 <h4 id="a-dmz-subnet-use-case">A DMZ subnet use case</h4>
-<p><mark>Our goal is to make sure that all traffic coming from the public subnet should be routed to the NVA (WAF in this case) before it gets routed to the private subnet.</mark></p>
+<p><mark>In this typical use case, our goal is to make sure that all traffic coming from the public subnet should be routed to the DMZ before it gets routed to the private subnet.</mark></p>
 <p><center> <img src="../images/use-case-subnet.jpg" width="100%"> </center></p>
-<p>The reason for this is that a public subnet contains workloads that are Internet facing, and a <code>private subnet</code> contains workloads that are not exposed to the Internet, such as databases, application logic, backend servers, etc. By default, the communication from the public subnet is allowed to the private subnet; however, we need to make sure that the traffic is filtered before it reaches the private subnet. This will help us to protect the private workloads, as all traffic is matched against the rules that you have set up in the <code>NVA</code>. If there is any attack or malicious traffic, <code>NVA</code> will take care of it. </p>
+<p>The reason for this is that a public subnet contains workloads that are Internet facing, and a <code>private subnet</code> contains workloads that are not exposed to the Internet, such as <code>databases, application logic, backend servers, etc</code>. By default, the communication from the public subnet is allowed to the private subnet; however, we need to make sure that the traffic is filtered before it reaches the private subnet. This will help us to protect the private workloads, as all traffic is matched against the rules that you have set up in the <code>NVA (WAF in this case)</code>. If there is any attack or malicious traffic, <code>NVA</code> will take care of it. </p>
 <p>Now, the question is, how can we implement this? As you can see in above diagram, we have used the routing table with User Defined Route (UDR) to accomplish this task. By default, the traffic from the public subnet to the private subnet is allowed, but using UDR, you are forcing the packets to go through the <code>DMZ subnet</code>.</p>
 <h3 id="regions">Regions</h3>
 <p><mark>VNet is scoped to a single region/location</mark>; however, multiple virtual networks from different regions can be connected together using peering.</p>

@@ -3168,6 +3168,20 @@
 </code></pre></div>
 <h2 id="reduncancy">Reduncancy</h2>
 <p>These are the redundancy options in Azure </p>
+<ul>
+<li>
+<p><strong>LRS (Locally Redundant Storage)</strong>: In LRS, you will have 3 copies of data within a single datacenter in different fault domains. The copies will always be up-to-date, and all changes are written to the storage account <code>synchronously</code>.</p>
+</li>
+<li>
+<p><strong>ZRS (Zonal Redundant Storage)</strong>: it saves one copy of instance in 3 AZs of a region.</p>
+</li>
+<li>
+<p><strong>GRS (Geo Redundant Storage)</strong>:  Data is replicated to a secondary region which is selected by Azure based on the regional pairs.</p>
+</li>
+<li>
+<p><strong>GZRS (Geo Zone Redundant Storage)</strong>: in GZRS you replicate the data synchronously in the primary region using ZRS, and then this data is replicated to the secondary region (as 3 copies in same AZ).</p>
+</li>
+</ul>
 <p><center> <img src="../images/zones.jpg" width="90%"> </center></p>
 <h2 id="spn-auth">SPN Auth</h2>
 <ul>
