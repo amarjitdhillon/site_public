@@ -1,0 +1,4807 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A personal blog by Amarjit Singh Dhillon">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.2.7">
+    
+    
+      
+        <title>VM 🖥 - Amar Dhillon's Blog</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.644de097.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#az-vm" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Amar Dhillon&#39;s Blog" class="md-header__button md-logo" aria-label="Amar Dhillon's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Amar Dhillon's Blog
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              VM 🖥
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../sys_design/concepts/consistentHashing/" class="md-tabs__link">
+        System design
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../technical_stuff/linux/linuxCommands/" class="md-tabs__link">
+        Linux
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../aws/concepts/" class="md-tabs__link">
+        AWS
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../concepts/" class="md-tabs__link md-tabs__link--active">
+        Azure
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../k8s/commands/" class="md-tabs__link">
+        Kubernetes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../technical_stuff/databricks/databricks_basics/" class="md-tabs__link">
+        Technical Stuff
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../AI/intro_to_stat/" class="md-tabs__link">
+        AI/ML
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../about/" class="md-tabs__link">
+        About me
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Amar Dhillon&#39;s Blog" class="md-nav__button md-logo" aria-label="Amar Dhillon's Blog" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Amar Dhillon's Blog
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          System design
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="System design" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          System design
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Concepts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Concepts" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys_design/concepts/consistentHashing/" class="md-nav__link">
+        Consistent Hashing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys_design/concepts/dataPartitioning/" class="md-nav__link">
+        Data Partitioning
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys_design/concepts/graphql/" class="md-nav__link">
+        GraphQL
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys_design/concepts/microservices/" class="md-nav__link">
+        Micro Services
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys_design/concepts/jwt/" class="md-nav__link">
+        JWT
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys_design/concepts/websockets/" class="md-nav__link">
+        Web Sockets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys_design/concepts/webhook/" class="md-nav__link">
+        WebHook
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys_design/concepts/protobuf/" class="md-nav__link">
+        Protobuf
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_2">
+          Design Patterns
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Design Patterns" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Design Patterns
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys_design/designPatterns/bff/" class="md-nav__link">
+        BFF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys_design/designPatterns/cdn/" class="md-nav__link">
+        CDN
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys_design/designPatterns/choreography/" class="md-nav__link">
+        Choreography
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys_design/designPatterns/cqrs/" class="md-nav__link">
+        CQRS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys_design/designPatterns/materializedView/" class="md-nav__link">
+        Materialized View
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys_design/designPatterns/priority_queue/" class="md-nav__link">
+        Priority Queue
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys_design/designPatterns/saga/" class="md-nav__link">
+        Saga
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys_design/designPatterns/serviceRegistry/" class="md-nav__link">
+        Service Registry
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys_design/designPatterns/durableFunctions/" class="md-nav__link">
+        Durable functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sys_design/designPatterns/sidecar/" class="md-nav__link">
+        Sidecar
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linux" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_stuff/linux/linuxCommands/" class="md-nav__link">
+        Commands 101
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/grepContent/" class="md-nav__link">
+        Grep content
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Linux/updatePaths/" class="md-nav__link">
+        Update Paths
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          AWS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AWS" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          AWS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/concepts/" class="md-nav__link">
+        Basic Concepts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Auth
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Auth" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Auth
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/api_gw/" class="md-nav__link">
+        API Gateway 🌉
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Compute
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Compute" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Compute
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/athnea/" class="md-nav__link">
+        Athnea
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/appsync/" class="md-nav__link">
+        App Sync ♻️
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/ec2/" class="md-nav__link">
+        EC2 🖥
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/eks/" class="md-nav__link">
+        EKS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/lambda/" class="md-nav__link">
+        Lambda ⨐
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Infrastructure
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Infrastructure" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Infrastructure
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/iam/" class="md-nav__link">
+        IAM
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_5">
+          Caching
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Caching" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Caching
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/cloudfront/" class="md-nav__link">
+        CloudFront 🌧
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/elasticache/" class="md-nav__link">
+        Elasti Cache
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_6">
+          Database
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Database" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Database
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/dynamo/" class="md-nav__link">
+        Dynamo DB
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/rds/" class="md-nav__link">
+        RDS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_7" type="checkbox" id="__nav_4_7" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_7">
+          ETL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ETL" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          ETL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/glue/" class="md-nav__link">
+        Glue
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_8" type="checkbox" id="__nav_4_8" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_8">
+          Storage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Storage" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_8">
+          <span class="md-nav__icon md-icon"></span>
+          Storage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/glacier/" class="md-nav__link">
+        Glacier 🗻
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/ebs/" class="md-nav__link">
+        EBS ▣
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/efs/" class="md-nav__link">
+        EFS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/s3/" class="md-nav__link">
+        S3 🪣
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/snowball/" class="md-nav__link">
+        Snow Ball ❄️
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/storagegw/" class="md-nav__link">
+        Storage Gateway ⻔
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_9" type="checkbox" id="__nav_4_9" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_9">
+          Network
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Network" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          Network
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/subnet/" class="md-nav__link">
+        101 Networking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/acl/" class="md-nav__link">
+        ACL ⛔️
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/elasticip/" class="md-nav__link">
+        Elastic IP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/eni/" class="md-nav__link">
+        ENI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/lb/" class="md-nav__link">
+        Load Balancers ⚖️
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/natgw/" class="md-nav__link">
+        NAT GW
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/natinstance/" class="md-nav__link">
+        NAT Instance
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/route53/" class="md-nav__link">
+        Route 53 🛣
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/sg/" class="md-nav__link">
+        Security Group 🔐
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/vpc/" class="md-nav__link">
+        VPC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_10" type="checkbox" id="__nav_4_10" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_10">
+          Monitoring
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Monitoring" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_10">
+          <span class="md-nav__icon md-icon"></span>
+          Monitoring
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/cloudwatch/" class="md-nav__link">
+        Cloud Watch ⏱
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/cloudwatch/" class="md-nav__link">
+        Cloud Trail
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_11" type="checkbox" id="__nav_4_11" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_11">
+          Misc Services
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Misc Services" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_11">
+          <span class="md-nav__icon md-icon"></span>
+          Misc Services
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/macie/" class="md-nav__link">
+        Macie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/orgs/" class="md-nav__link">
+        Orgs 🏛
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_12" type="checkbox" id="__nav_4_12" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_12">
+          Supporting Services
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Supporting Services" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_12">
+          <span class="md-nav__icon md-icon"></span>
+          Supporting Services
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/autoScaling/" class="md-nav__link">
+        Auto Scaling 📏
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/sqs/" class="md-nav__link">
+        SQS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_13" type="checkbox" id="__nav_4_13" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_13">
+          NFRs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="NFRs" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_13">
+          <span class="md-nav__icon md-icon"></span>
+          NFRs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/failover/" class="md-nav__link">
+        Failover
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../aws/readReplica/" class="md-nav__link">
+        Read Replics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Azure
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Azure" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Azure
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../concepts/" class="md-nav__link">
+        Az Concepts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../az_commands/" class="md-nav__link">
+        Az Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" type="checkbox" id="__nav_5_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3">
+          Compute
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Compute" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Compute
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appservice/" class="md-nav__link">
+        App Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../serviceFabric/" class="md-nav__link">
+        Service Fabric
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          VM 🖥
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        VM 🖥
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#disk-types" class="md-nav__link">
+    Disk types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unmanaged-disks" class="md-nav__link">
+    (Un)/managed disks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-data" class="md-nav__link">
+    Custom data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proximity-placement-groups" class="md-nav__link">
+    Proximity Placement groups
+  </a>
+  
+    <nav class="md-nav" aria-label="Proximity Placement groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-placement-group" class="md-nav__link">
+    How to use placement group?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-init" class="md-nav__link">
+    Cloud Init
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ha-solutions-in-vm" class="md-nav__link">
+    HA solutions in VM
+  </a>
+  
+    <nav class="md-nav" aria-label="HA solutions in VM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vmss-scale-sets" class="md-nav__link">
+    VMSS (Scale Sets)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#availability-set" class="md-nav__link">
+    Availability Set
+  </a>
+  
+    <nav class="md-nav" aria-label="Availability Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fault-domain-fd" class="md-nav__link">
+    Fault domain (FD)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-domain-ud" class="md-nav__link">
+    Update domain (UD)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-vs-az" class="md-nav__link">
+    AS vs AZ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#availability-zone-for-ha" class="md-nav__link">
+    Availability Zone (for HA)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regions" class="md-nav__link">
+    Regions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-scaling" class="md-nav__link">
+    Auto-scaling
+  </a>
+  
+    <nav class="md-nav" aria-label="Auto-scaling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vmss" class="md-nav__link">
+    VMSS
+  </a>
+  
+    <nav class="md-nav" aria-label="VMSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flexible" class="md-nav__link">
+    Flexible
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uniform" class="md-nav__link">
+    Uniform
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automate-vm-deployment" class="md-nav__link">
+    Automate VM deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-bastion-jump-box" class="md-nav__link">
+    Azure Bastion (Jump box)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vm-extensions" class="md-nav__link">
+    VM Extensions
+  </a>
+  
+    <nav class="md-nav" aria-label="VM Extensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cse" class="md-nav__link">
+    CSE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dsc" class="md-nav__link">
+    DSC
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spot-instance" class="md-nav__link">
+    Spot instance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-setup-scripts" class="md-nav__link">
+    Windows Setup Scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aci/" class="md-nav__link">
+        ACI 🗳
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aks/" class="md-nav__link">
+        AKS ⎈
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_4">
+          ETL
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="ETL" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          ETL
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adf/" class="md-nav__link">
+        Data Factory 🏭
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_5">
+          Event based
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Event based" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Event based
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../event_hub/" class="md-nav__link">
+        Event Hub ☄️
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../event_grid/" class="md-nav__link">
+        Event Grid ⛭
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../service_bus/" class="md-nav__link">
+        Service Bus 🚌️
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grid-hub-bus/" class="md-nav__link">
+        Service Bus vs Event Grid/Hub️
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../azure_function/" class="md-nav__link">
+        Function ⚡️
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logicApp/" class="md-nav__link">
+        Logic App 🪄
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_6">
+          Misc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Misc" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devopsatt.md" class="md-nav__link">
+        Devops
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../az-monitor/" class="md-nav__link">
+        Monitor 🔭
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../office365/" class="md-nav__link">
+        Office 365 📝
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arm/" class="md-nav__link">
+        ARM 🦾
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_7" type="checkbox" id="__nav_5_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_7">
+          Load Balancer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Load Balancer" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          Load Balancer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../app-gw/" class="md-nav__link">
+        App Gateway (L7)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../azlb/" class="md-nav__link">
+        Load Balancer (L4) ⚖️
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../front-door/" class="md-nav__link">
+        Front Door 🚪
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../atm/" class="md-nav__link">
+        Traffic Manager 🚦
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_8" type="checkbox" id="__nav_5_8" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_8">
+          Network
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Network" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_8">
+          <span class="md-nav__icon md-icon"></span>
+          Network
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api_gateway/" class="md-nav__link">
+        APIM Gateway ⾨
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dns/" class="md-nav__link">
+        DNS ☎️
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../networkingInfra/" class="md-nav__link">
+        Networking Infrastructure
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vpn_gw/" class="md-nav__link">
+        VPN Gateway
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vnet/" class="md-nav__link">
+        VNet 🕸
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_9" type="checkbox" id="__nav_5_9" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_9">
+          Security
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Security" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_9">
+          <span class="md-nav__icon md-icon"></span>
+          Security
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aad/" class="md-nav__link">
+        Active Directory 🔐
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keyVault/" class="md-nav__link">
+        Key Vault 🔑
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../waf/" class="md-nav__link">
+        WAF
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entra/" class="md-nav__link">
+        Entra
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_10" type="checkbox" id="__nav_5_10" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_10">
+          Storage
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Storage" data-md-level="2">
+        <label class="md-nav__title" for="__nav_5_10">
+          <span class="md-nav__icon md-icon"></span>
+          Storage
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../storage/" class="md-nav__link">
+        Storage Account 🗄
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acr/" class="md-nav__link">
+        Container Registry 📖
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snowflake/" class="md-nav__link">
+        Snowflake ❄️
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../blob/" class="md-nav__link">
+        Blob
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../adsl/" class="md-nav__link">
+        ADLS-Gen2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Kubernetes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Kubernetes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Kubernetes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/commands/" class="md-nav__link">
+        Commands
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/arch/docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_3" type="checkbox" id="__nav_6_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6_3">
+          Architecture
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Architecture" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_3">
+          <span class="md-nav__icon md-icon"></span>
+          Architecture
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/arch/apiserver/" class="md-nav__link">
+        API Server 💻
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/arch/arch/" class="md-nav__link">
+        Cluster Architecutre
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/arch/kubelet/" class="md-nav__link">
+        Kubelet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/arch/kubeproxy/" class="md-nav__link">
+        Kube Proxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/arch/scheduler/" class="md-nav__link">
+        Scheduler
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_4" type="checkbox" id="__nav_6_4" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6_4">
+          Admin
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Admin" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Admin
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/admin/scheduler/" class="md-nav__link">
+        Scheduler
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/admin/monitoring/" class="md-nav__link">
+        Monitoring
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/admin/security/" class="md-nav__link">
+        Security
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_5" type="checkbox" id="__nav_6_5" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6_5">
+          Resources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Resources" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_5">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/arch/controllermgr/" class="md-nav__link">
+        Controller Manager 👮‍♀️
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/deployment_python/" class="md-nav__link">
+        Deployment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/ds/" class="md-nav__link">
+        DeamonSet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/arch/etcd/" class="md-nav__link">
+        ETCD
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/ingress/" class="md-nav__link">
+        Ingress
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/rc/" class="md-nav__link">
+        Replication Controller
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/ns/" class="md-nav__link">
+        Namespace
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/node-affinity/" class="md-nav__link">
+        Node Affinity
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/pod/" class="md-nav__link">
+        Pod
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/svc/" class="md-nav__link">
+        Service
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_6" type="checkbox" id="__nav_6_6" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_6_6">
+          Demo's
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Demo's" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_6">
+          <span class="md-nav__icon md-icon"></span>
+          Demo's
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../k8s/poc_minikube/" class="md-nav__link">
+        Demo app in Minikube
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Technical Stuff
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Technical Stuff" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Technical Stuff
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          Databricks
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Databricks" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          Databricks
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_stuff/databricks/databricks_basics/" class="md-nav__link">
+        Databricks 101 🧱
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_stuff/databricks/hive/" class="md-nav__link">
+        Hive 101
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_stuff/databricks/ManipulatingTableswithDeltaLakeLab/" class="md-nav__link">
+        Table Manipulation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7_2">
+          Data/Analytics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data/Analytics" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Data/Analytics
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_stuff/sql_and_nosql/" class="md-nav__link">
+        DB, DW and Data Lake 💾
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_stuff/snowflake/" class="md-nav__link">
+        Snowflake ❄️
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_stuff/powerbi/" class="md-nav__link">
+        Power BI 📈
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_3" type="checkbox" id="__nav_7_3" >
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+            
+          
+        
+          
+        
+          
+            
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../technical_stuff/maven/downgrade_maven/">Misc</a>
+          
+            <label for="__nav_7_3">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Misc" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_stuff/linux/android_device/" class="md-nav__link">
+        Attach Android device 🤖
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_stuff/blogs/cpanel/gitAndCpanel/" class="md-nav__link">
+        Cpanel settings
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_stuff/databricks/ManipulatingTableswithDeltaLakeLab/" class="md-nav__link">
+        Delta Lake 🐟
+      </a>
+    </li>
+  
+
+            
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_stuff/installing_flink/flink/" class="md-nav__link">
+        Flink
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_stuff/wso2/h2/wso2/" class="md-nav__link">
+        H2 Db in WSO2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_stuff/linux/java_home/" class="md-nav__link">
+        Java home ☕️
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_stuff/mysql/JdbcStatements/" class="md-nav__link">
+        JDBC Statements
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_stuff/wso2/jms/" class="md-nav__link">
+        JMS Queue in WSO2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_stuff/mysql/mysql_basics/" class="md-nav__link">
+        Mysql 101
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../technical_stuff/wget/wget/" class="md-nav__link">
+        Wget
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          AI/ML
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="AI/ML" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          AI/ML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/intro_to_stat/" class="md-nav__link">
+        STAT 101
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/azureml/" class="md-nav__link">
+        Azure ML
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      
+      
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          About me
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="About me" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          About me
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        About me
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#disk-types" class="md-nav__link">
+    Disk types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unmanaged-disks" class="md-nav__link">
+    (Un)/managed disks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#custom-data" class="md-nav__link">
+    Custom data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proximity-placement-groups" class="md-nav__link">
+    Proximity Placement groups
+  </a>
+  
+    <nav class="md-nav" aria-label="Proximity Placement groups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-placement-group" class="md-nav__link">
+    How to use placement group?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-init" class="md-nav__link">
+    Cloud Init
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ha-solutions-in-vm" class="md-nav__link">
+    HA solutions in VM
+  </a>
+  
+    <nav class="md-nav" aria-label="HA solutions in VM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vmss-scale-sets" class="md-nav__link">
+    VMSS (Scale Sets)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#availability-set" class="md-nav__link">
+    Availability Set
+  </a>
+  
+    <nav class="md-nav" aria-label="Availability Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fault-domain-fd" class="md-nav__link">
+    Fault domain (FD)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-domain-ud" class="md-nav__link">
+    Update domain (UD)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-vs-az" class="md-nav__link">
+    AS vs AZ
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#availability-zone-for-ha" class="md-nav__link">
+    Availability Zone (for HA)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regions" class="md-nav__link">
+    Regions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-scaling" class="md-nav__link">
+    Auto-scaling
+  </a>
+  
+    <nav class="md-nav" aria-label="Auto-scaling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vmss" class="md-nav__link">
+    VMSS
+  </a>
+  
+    <nav class="md-nav" aria-label="VMSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flexible" class="md-nav__link">
+    Flexible
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uniform" class="md-nav__link">
+    Uniform
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automate-vm-deployment" class="md-nav__link">
+    Automate VM deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-bastion-jump-box" class="md-nav__link">
+    Azure Bastion (Jump box)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vm-extensions" class="md-nav__link">
+    VM Extensions
+  </a>
+  
+    <nav class="md-nav" aria-label="VM Extensions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cse" class="md-nav__link">
+    CSE
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dsc" class="md-nav__link">
+    DSC
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spot-instance" class="md-nav__link">
+    Spot instance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-setup-scripts" class="md-nav__link">
+    Windows Setup Scripts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="az-vm">AZ VM<a class="headerlink" href="#az-vm" title="Permanent link">&para;</a></h1>
+<h3 id="disk-types">Disk types<a class="headerlink" href="#disk-types" title="Permanent link">&para;</a></h3>
+<p>VM will use 3 disks; of which 2 comes by default</p>
+<ul>
+<li><strong>OS disk</strong>: The comes with a VM and store OS files. Its <code>C:</code> drive in windows and <code>/dev/sda</code> for Unix-like systems.</li>
+<li>
+<p><strong>Temporary disks</strong>: They also come by default and store <code>non-persistent data</code> like swap and page files. During a planned maintenance event, redeployment, or host change, the data stored in the <code>temporary disk</code> will be erased. Data will be available during normal reboots, though.</p>
+<div class="admonition danger">
+<p>Any data on the drive should not be critical to you as it is prone to loss. In Windows, the temporary disk will be labeled as the <code>D: drive</code>, and in Linux, the disk will be labeled as <code>/dev/sdb</code></p>
+</div>
+</li>
+<li>
+<p><strong>Data disk</strong>: These are additional disks for <code>persistent</code>stores like data files. These disks are VHDs (Virtual Hard Disks). They are page blobs in the blob service.</p>
+<div class="admonition info">
+<p>These disks can be labeled with any letter in Windows, and in Linux data disks are labeled from <code>/dev/sdc</code> onward</p>
+</div>
+</li>
+</ul>
+<p><center> <img src="../images/vm-disks.jpg" width="55%"> </center></p>
+<h3 id="unmanaged-disks">(Un)/managed disks<a class="headerlink" href="#unmanaged-disks" title="Permanent link">&para;</a></h3>
+<p>Microsoft has two offerings in the case of storage disks </p>
+<ol>
+<li><strong>Managed disk</strong>: An ARM managed resources with <code>Azure managed Storage Accounts</code>. Since you don’t manage the storage account, the <code>storage account</code> limits don’t apply.</li>
+<li><strong>Unmanaged disk</strong>: In Unmanaged Disk storage, you must create a storage account in resources to hold the disks (VHD files) for your Virtual Machines.</li>
+</ol>
+<h3 id="custom-data">Custom data<a class="headerlink" href="#custom-data" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Why do we need it?</p>
+<p>You might need to inject a script or other metadata into a Microsoft Azure virtual machine (VM) at provisioning time. In other clouds, this concept is often called <code>user data</code>. Microsoft Azure has a similar feature called <code>custom data</code>.</p>
+<p>Custom data is made available to the VM during the first startup or setup, which is called provisioning. Provisioning is the process where VM creation parameters (for example, hostname, username, password, certificates, custom data, and keys) are made available to the VM. A provisioning agent, such as the Linux Agent or cloud-init, processes those parameters.</p>
+</div>
+<p>Custom data is sent to the VM along with the other provisioning configuration information such as the new hostname, username, password, certificates, and keys, etc. This data is passed to the Azure API as <code>base64-encoded data</code>.  On Windows, this data ends up in <code>%SYSTEMDRIVE%\AzureData\CustomData.bin</code> as a binary file.  On Linux, this data is passed to the VM via the <code>ovf-env.xml</code> file, which is copied to the <code>/var/lib/waagent</code> directory during provisioning.</p>
+<div class="admonition tip">
+<p class="admonition-title">How to pass data</p>
+<p>To use custom data, you must Base64-encode the contents before passing the data to the API--unless you're using a CLI tool that does the conversion for you, such as the Azure CLI. The size can't exceed 64 KB. In the CLI, you can pass your custom data as a file, as the following example shows. The file will be converted to Base64.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>az vm create <span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    --resource-group myResourceGroup <span class="se">\</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    --name centos74 <span class="se">\</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    --image OpenLogic:CentOS-CI:7-CI:latest <span class="se">\</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    --custom-data cloud-init.txt <span class="se">\</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    --generate-ssh-keys
+</code></pre></div>
+</div>
+<h3 id="proximity-placement-groups">Proximity Placement groups<a class="headerlink" href="#proximity-placement-groups" title="Permanent link">&para;</a></h3>
+<p>Placing VMs in a <code>single region</code> reduces the physical distance between the instances. Placing them within a single availability zone will also bring them physically closer together. <mark>However, as the Azure footprint grows, a single availability zone may span multiple physical data centers, which may result in a network latency impacting your application.</mark></p>
+<div class="admonition question">
+<p class="admonition-title">Why to use proximity placement groups?</p>
+<p>To get VMs as close as possible, achieving the lowest possible latency, you should deploy them within a proximity placement group.</p>
+<p>A proximity placement group is a logical grouping used to make sure that Azure compute resources are physically located close to each other. Proximity placement groups are useful for workloads where low latency is a requirement.</p>
+</div>
+<h4 id="how-to-use-placement-group">How to use placement group?<a class="headerlink" href="#how-to-use-placement-group" title="Permanent link">&para;</a></h4>
+<p>A <code>proximity placement group</code> is a resource in Azure. You need to create one before using it with other resources. Once created, it could be used with <em>virtual machines</em>, <em>availability sets</em>, or <em>virtual machine scale sets</em>. You specify a proximity placement group when creating compute resources providing the <code>proximity placement group ID</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">How to move existing resources?</p>
+<p>You can also move an existing resource into a proximity placement group. When moving a resource into a proximity placement group, you should stop (deallocate) the asset first since it will be redeployed potentially into a different data center in the region to satisfy the <code>co-location constraint</code>.</p>
+</div>
+<h3 id="cloud-init">Cloud Init<a class="headerlink" href="#cloud-init" title="Permanent link">&para;</a></h3>
+<div class="admonition tldr">
+<p class="admonition-title">Tldr</p>
+<p>By default, this agent will process custom data. It accepts multiple formats of custom data, such as cloud-init configuration and scripts.</p>
+<p>Similar to the Linux Agent, if errors happen during the execution of the configuration processing or scripts when cloud-init is processing the custom data, that's not a fatal provisioning failure. You'll need to create a notification path to alert you of the completion state of the script.</p>
+</div>
+<p>Currently, only the Ubuntu images in the Microsoft Azure Gallery have cloud-init preinstalled and configured to act on the custom data sent during provisioning.  This means that for Ubuntu you can use custom data to provision a VM using a cloud-init configuration file, or just simply send a script that will be executed by cloud-init during provisioning.</p>
+<h3 id="ha-solutions-in-vm">HA solutions in VM<a class="headerlink" href="#ha-solutions-in-vm" title="Permanent link">&para;</a></h3>
+<p>Various HA solutions are:</p>
+<ol>
+<li>VMSS</li>
+<li>Availability Set</li>
+<li>Availability Zone</li>
+</ol>
+<h4 id="vmss-scale-sets">VMSS (Scale Sets)<a class="headerlink" href="#vmss-scale-sets" title="Permanent link">&para;</a></h4>
+<p>Azure <code>Virtual Machine Scale Sets (VMSS)</code> provide the management capabilities for applications that run across many VMs, automatic scaling of resources, and load balancing of traffic. With scale sets, you create a virtual machine configuration model, automatically add or remove additional instances based on CPU or memory load, and automatically upgrade to the latest OS version</p>
+<div class="admonition tip">
+<p class="admonition-title">Why to use VMSS?</p>
+<ul>
+<li>With <code>scale sets</code>, all VM instances are created from the <code>same base OS image</code> and configuration. This approach lets you easily manage hundreds of VMs without extra configuration tasks or network management.</li>
+<li><code>Scale sets</code> are used to run multiple instances of your application. If one of these VM instances has a problem, customers continue to access your application through one of the other VM instances with minimal interruption.</li>
+<li><code>Scale sets</code> are backed with Azure load balancer for <code>auto-scaling</code></li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How many VMs can I have in a scale set?</p>
+<p>A scale set can have 0 to 1,000 virtual machines (VMs) based on platform images or 0 to 600 VMs based on custom images.</p>
+</div>
+<h4 id="availability-set">Availability Set<a class="headerlink" href="#availability-set" title="Permanent link">&para;</a></h4>
+<p>In short, an <code>availability set</code> is a logical grouping of the VMs hosting our application. Since there are multiple instances, you are eliminating the <code>Single Point Of Failure (SPOF)</code></p>
+<p>Availability set consists of</p>
+<ol>
+<li>Fault domains (FD)</li>
+<li>Update domain (UD)</li>
+</ol>
+<p><center> <img src="../images/as-domains.jpg" width="85%"> </center></p>
+<div class="admonition danger">
+<p class="admonition-title">How many FD and UD per set?</p>
+<p>Every <code>virtual machine</code> that you create will be associated with a UD and FD. You can configure up to <strong>3 FDs and 20 UDs</strong> in an availability set.</p>
+</div>
+<h5 id="fault-domain-fd">Fault domain (FD)<a class="headerlink" href="#fault-domain-fd" title="Permanent link">&para;</a></h5>
+<p><code>Fault domains</code> represent a set of virtual machines that share a common network switch, power, and air conditioning. FDs can be configured up to a maximum of <strong>3</strong>, and this is the default value while setting up availability sets.</p>
+<div class="admonition danger">
+<p class="admonition-title">They vary by region</p>
+</div>
+<p>The number of managed disk fault domains <code>varies by region</code> - either 2 or 3 managed disk fault domains per region.</p>
+<h5 id="update-domain-ud">Update domain (UD)<a class="headerlink" href="#update-domain-ud" title="Permanent link">&para;</a></h5>
+<p>UDs represent a group of VMs and the underlying host that can be <mark>updated and rebooted at the same time</mark>. This will ensure that only one UD is rebooted at a time during planned maintenance events such as patching, firmware updates, etc.</p>
+<div class="admonition warning">
+<p class="admonition-title">Updating VMs in UD</p>
+<p>The default number of UDs is 5, and if you are creating more than 5 VMs, the 6<sup>th</sup> VM will be placed on the 1<sup>st</sup> UD, the 7<sup>th</sup> will be on the 2<sup>nd</sup>, and so 4<sup>th</sup> depending upon the number of instances. While a UD is getting rebooted, it’s given 30 minutes to recover before the maintenance task is started on a different domain</p>
+</div>
+<h5 id="as-vs-az">AS vs AZ<a class="headerlink" href="#as-vs-az" title="Permanent link">&para;</a></h5>
+<div class="admonition question">
+<p class="admonition-title">Why do we need AS in addition to AZ?</p>
+<p>An <code>availability set</code> avoids service downtime caused by hardware failure or planned maintenance. However, the protection offered is limited to the datacenter level. <mark>What if the entire datacenter is unavailable due to a power outage, natural disaster, or any other reasons? Since the datacenter is down, your workloads will not be available and that is why we need AZ</mark></p>
+</div>
+<p>You can use AS and AZ at the same time while creating a VM.</p>
+<h4 id="availability-zone-for-ha">Availability Zone (for HA)<a class="headerlink" href="#availability-zone-for-ha" title="Permanent link">&para;</a></h4>
+<p>Within Azure regions, you have unique physical locations named zones. Each zone comprises one or more datacenters. Also, each zone has independent cooling, power, and networking. As these zones are physically isolated and located in different parts of the region, you can deploy our applications to availability zones to protect from datacenter failures.</p>
+<p>Azure availability zones are connected by a high-performance network with a <code>round-trip latency</code> of less than 2ms. They help your data stay synchronized and accessible when things go wrong. </p>
+<div class="admonition danger">
+<p class="admonition-title">In case of AZ failure</p>
+<p>AZs are designed so that if one zone is affected, regional services, capacity, and high availability are supported by the remaining two zones.</p>
+</div>
+<h4 id="regions">Regions<a class="headerlink" href="#regions" title="Permanent link">&para;</a></h4>
+<p>In Azure, every region comprises a set of datacenters that are interconnected with a regional low-latency network</p>
+<h3 id="auto-scaling">Auto-scaling<a class="headerlink" href="#auto-scaling" title="Permanent link">&para;</a></h3>
+<h4 id="vmss">VMSS<a class="headerlink" href="#vmss" title="Permanent link">&para;</a></h4>
+<p>When you have many VMs that run your application, it’s important to maintain a consistent configuration across your environment. For the reliable performance of your application, the VM size, disk configuration, and application installs should match across all VMs.</p>
+<p>Virtual Machines Scale Sets provide a logical grouping of platform-managed virtual machines. With scale sets, you create a virtual machine configuration model, automatically add or remove additional instances based on CPU or memory load, and automatically upgrade to the latest OS version.</p>
+<p>We can set scale-out (increase VM count by 1) and scale-in (decrease VM count by 1 for example) configuration in VMSS. Also, the scale-in policy can be defined as <code>oldest VM</code> or <code>newest VM</code>, or by <code>instance id</code>, etc to make sure which VM gets deleted when the load decreases.</p>
+<h5 id="flexible">Flexible<a class="headerlink" href="#flexible" title="Permanent link">&para;</a></h5>
+<p>With <code>Flexible orchestration</code>, Azure provides a unified experience across the Azure VM ecosystem. Flexible orchestration offers high availability guarantees (up to 1000 VMs) by spreading VMs across fault domains in a region or within an Availability Zone. This enables you to scale out your application while maintaining fault domain isolation that is essential to run quorum-based or stateful workloads</p>
+<h5 id="uniform">Uniform<a class="headerlink" href="#uniform" title="Permanent link">&para;</a></h5>
+<p>With <code>uniform orchestration</code>, virtual machine scale sets use a virtual machine profile or template to scale up to desired capacity. While there is some ability to manage or customize individual virtual machine instances, uniform uses identical VM instances.</p>
+<h3 id="automate-vm-deployment">Automate VM deployment<a class="headerlink" href="#automate-vm-deployment" title="Permanent link">&para;</a></h3>
+<p>This can be done using IaC (Infra as Code)
+- <code>ARM</code> templates: We can download a template from a running VM
+- Terraform scripts
+- Bicep</p>
+<p>We can use the concept of <code>Golden Image</code> for this where A golden image is a template for a virtual machine, virtual desktop, server, or hard disk drive. Golden images are also known as ghost images, clones, master images, or base images. To create a golden image, an administrator first sets up the computing environment with the exact specifications needed and then saves the disk image as a pattern for future copies. </p>
+<h3 id="azure-bastion-jump-box">Azure Bastion (Jump box)<a class="headerlink" href="#azure-bastion-jump-box" title="Permanent link">&para;</a></h3>
+<p>Hardening the <code>jumpbox VM</code> and keeping it away from vulnerabilities are always tedious tasks for the administrator. Azure offers a life-saver service called <code>Azure Bastion</code> to solve this problem.</p>
+<div class="admonition tldr">
+<p class="admonition-title">Tldr</p>
+<p><mark>With Azure Bastion, you can connect to Azure virtual machines without the need to have public IP addresses.</mark> The catch here is Azure Bastion, which is a PaaS solution; this means you don’t have to worry about hardening the infrastructure, as this will be handled by <code>Microsoft Azure</code></p>
+</div>
+<p><center> <img src="../images/bastion-host.jpg" width="85%"> </center></p>
+<ol>
+<li>The <code>Bastion host</code> is deployed to the virtual network in a separate subnet.</li>
+<li>The user connects to the <code>Azure portal</code> using any HTML5 browser.</li>
+<li>The user navigates to the Azure virtual machine to RDP/SSH.</li>
+<li>Connect Integration - Single-click RDP/SSH session inside the browser</li>
+<li>No public IP is required on the Azure VM</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Some useful tips on bastion host</p>
+<ul>
+<li>It's a fully managed PaaS in Azure that provides RDP/SSH connectivity over <code>TLS/SSL</code></li>
+<li>It makes sure that no public IP is exposed. </li>
+<li>The VMs does not need to have a public IP. The Bastion service will open the <code>RDP/SSH</code> session/connection to your virtual machine over the <code>private IP</code> of your virtual machine, within your virtual network.</li>
+<li>NSG is not needed because the bastion is hardened internally (they are optional)</li>
+<li><mark>It is deployed per VNET</mark>, earlier it was deployed for each VM and now the process is made more streamlined by Microsoft. <code>Bastion</code> provides secure RDP and SSH connectivity to all the VMs in the virtual network in which it is provisioned</li>
+<li>It only supports IPV4 addresses</li>
+<li>There is a separate <code>bastion host subnet</code> to host the jump box.</li>
+<li>There is a <code>concurrent connection limit</code> with the bastion host (25 for RDP and 50 for SSH)</li>
+<li>The minimum <em>AzureBastionSubnet</em> size is <code>/26</code> or larger (<code>/25, /24</code>, etc.)</li>
+<li>Bastion connectivity to <code>Azure Virtual Desktop (WVD)</code> isn't supported.</li>
+</ul>
+</div>
+<h3 id="vm-extensions">VM Extensions<a class="headerlink" href="#vm-extensions" title="Permanent link">&para;</a></h3>
+<p>The post-deployment configuration and automation tasks on Azure VMs can be accomplished using small applications that are called <code>vm extensions</code>. Two main extensions are: CSE and DSC</p>
+<h4 id="cse">CSE<a class="headerlink" href="#cse" title="Permanent link">&para;</a></h4>
+<p><code>Custom Script Extension for Linux</code> (CSE): It is used to automatically invoke scripts and run them on virtual machines post-deployment.</p>
+<h4 id="dsc">DSC<a class="headerlink" href="#dsc" title="Permanent link">&para;</a></h4>
+<p><code>Desired State Configuration</code>(DSC) : In the case of CSE, you cannot deal with complex installation procedures such as reboots. Desired State Configuration helps you overcome this crisis and define a state for your virtual machines instead of writing scripts.</p>
+<p>You can define the state of a machine and enforce the state using the DSC extension handler. You could store these configuration files in Azure Storage, in internal storage, or even in source control. The handler is responsible for pulling the configuration and implementing the desired state on the virtual machine. Even if there are installations that require reboots, DSC will continue the execution of the remaining scripts after reboot</p>
+<h3 id="spot-instance">Spot instance<a class="headerlink" href="#spot-instance" title="Permanent link">&para;</a></h3>
+<p>These are low-priority VMs that are allocated from Azure’s excess capacity in the region. Using spot instances can reduce the cost of instances rather than running them as regular instances.</p>
+<h3 id="windows-setup-scripts">Windows Setup Scripts<a class="headerlink" href="#windows-setup-scripts" title="Permanent link">&para;</a></h3>
+<p><code>Setupcomplete.cmd</code> and <code>ErrorHandler.cmd</code> are custom scripts that run during or after the Windows Setup process. They can be used to install applications or run other tasks by using <code>cscript/wscript</code> scripts.</p>
+<ul>
+<li><code>%WINDIR%\Setup\Scripts\SetupComplete.cmd</code>: This script runs with local system permissions and starts immediately after the user sees the desktop. </li>
+<li><code>%WINDIR%\Setup\Scripts\ErrorHandler.cmd</code>: This script runs automatically when Setup encounters a fatal error. It runs with local system permission.</li>
+</ul>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>For a <code>Windows VM</code>, it can be up to 15 characters, and <code>Linux VMs</code> can support up to 64 characters.</li>
+<li>VM name can’t be changed once the VM is deployed, except re-deployment.</li>
+<li>If you shut down the VM from the <code>operating system</code>—for example, by clicking the Windows button and select Shutdown, then you will be charged for the VM as the hardware allocated is not released.</li>
+<li>You can use your existing licenses purchased from Software Assurance to cut down this cost. This reduction method is called <code>Azure Hybrid Benefit (AHUB)</code>. AHUB can be used for Windows, Linux (RHEL and SUSE), and SQL virtual machine licenses.</li>
+<li>You can connect to Windows machines using two options, namely, <code>Remote Desktop Protocol</code>
+  (RDP) for <em>GUI</em> and <code>Windows Remote Management</code> (WinRM) for <em>CLI</em></li>
+<li>The public key will end with the <code>extension .pub</code>, and the private key will not have any extension.</li>
+<li>ssh to vm using <code>ssh -i &lt;path-to-private-key&gt; username@publicIP</code></li>
+<li>An <code>availability set</code> is free of cost, and you pay only for the instances that you are
+  deploying.</li>
+<li>Uploads a virtual hard disk from an on-premises machine to Azure (managed disk or blob) using <code>Add-AzVhd</code></li>
+<li>If you make a change to the topology of your network and have Windows VPN clients, the VPN client package for Windows clients must be downloaded and installed again in order for the changes to be applied to the client.]</li>
+<li>The <code>Set-AzureStaticVNetIP</code> cmdlet sets the static virtual network (VNet) IP address information for a virtual machine object.</li>
+<li><code>New-AzureADMSInvitation</code> is used to invite a new external user to your directory.</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../serviceFabric/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Service Fabric" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Service Fabric
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../aci/" class="md-footer__link md-footer__link--next" aria-label="Next: ACI 🗳" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              ACI 🗳
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://instagram.com/amar_dhillon_studio" target="_blank" rel="noopener" title="instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/channel/UCbxj-orGrUOhihmOBJzE_Fg" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://medium.com/@smartsplash" target="_blank" rel="noopener" title="medium.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/amarjitdhillon/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/_adhillon_" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tooltips", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.5e67fbfe.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c44cc438.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
