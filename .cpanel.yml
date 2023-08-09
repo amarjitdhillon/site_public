@@ -4,4 +4,4 @@ deployment:
     - export DEPLOYPATH=/home/amartymq/public_html/
     - /bin/rm -Rf $DEPLOYPATH
     - /bin/mkdir $DEPLOYPATH
-    - /bin/cp -R /home/amartymq/repositories/site_public/*  $DEPLOYPATH
+    - /bin/cp -R /home/amartymq/repositories/amarjitdhillon/*  $DEPLOYPATH
