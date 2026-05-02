@@ -1288,6 +1288,24 @@ const initKapa = function () {
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Engineering 🎹
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Engineering 🎹
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -10405,6 +10423,24 @@ const initKapa = function () {
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Engineering 🎹
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Engineering 🎹
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -10551,6 +10587,282 @@ const initKapa = function () {
 <hr />
 <p>Hope you found this blog insightful! </p>
 <p>Stay curious and stay safe! 😊</p>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/amarjitdhillon" alt="Amarjit Dhillon">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-07-20 00:00:00">July 20, 2024</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="./" class="md-meta__link">Prompt Engineering</a>, 
+              <a href="../genai/" class="md-meta__link">GenAI</a>, 
+              <a href="../llms/" class="md-meta__link">LLMS</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              4 min read
+            
+          </li>
+        
+      </ul>
+      
+        <span class="md-draft">
+          Draft
+        </span>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="prompt-engineering"><a class="toclink" href="../../2024/07/20/prompt-engineering-/">Prompt Engineering 🎹</a></h2>
+<!-- Link: https://www.confident-ai.com/blog/why-llm-as-a-judge-is-the-best-llm-evaluation-method#chain-of-thought-prompting -->
+
+<!-- https://medium.com/@amiraryani/8-types-of-prompt-engineering-5322fff77bdf -->
+
+<!-- https://medium.com/the-modern-scientist/prompt-engineering-classification-of-techniques-and-prompt-tuning-6d4247b9b64c -->
+
+<h3 id="best-practices"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#best-practices">Best practices</a></h3>
+<ul>
+<li>
+<p>Be precise in saying what to do (write, summarize, extract information).</p>
+</li>
+<li>
+<p>Avoid saying what <code>not to do</code> and say <code>what to do instead</code></p>
+</li>
+<li>
+<p>Be specific: instead of saying “in a few sentences”, say “in 2–3 sentences”.</p>
+</li>
+<li>
+<p><mark>Add tags or delimiters</mark> to structurize the prompt.</p>
+</li>
+<li>
+<p>Ask for a structured output (JSON. HTML) if needed.</p>
+</li>
+<li>
+<p>Ask the model to verify whether the conditions are satisfied (e.g. “if you do not know the answer. say “No information”).</p>
+</li>
+<li>
+<p>Ask a model to first explain and then provide the answer (otherwise a model may try to justify an incorrect answer).</p>
+</li>
+</ul>
+<h3 id="single-prompting"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#single-prompting">Single Prompting</a></h3>
+<h4 id="zero-shot-learning-0"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#zero-shot-learning-0">Zero-Shot Learning 0️⃣</a></h4>
+<p>This involves giving the AI a task without any prior examples. You describe what you want in detail, assuming the AI has no prior knowledge of the task.</p>
+<h4 id="one-shot-learning-1"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#one-shot-learning-1">One-Shot Learning 1️⃣</a></h4>
+<p>You provide one example along with your prompt. This helps the AI understand the context or format you’re expecting.</p>
+<h4 id="few-shot-prompting"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#few-shot-prompting">Few-Shot Prompting 💉</a></h4>
+<p>This involves providing a few examples (usually 2–5) to help the AI understand the pattern or style of the response you’re looking for.</p>
+<p>It is definitely more computationally expensive as you’ll be <mark>including more input tokens</mark> </p>
+<h4 id="chain-of-thought-prompting"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#chain-of-thought-prompting">Chain of Thought Prompting 🧠</a></h4>
+<p><code>Chain-of-thought (CoT) prompting</code> is an approach where the model is prompted to <mark>articulate its reasoning process</mark>. CoT is used either with zero-shot or few-shot learning. The idea of Zero-shot CoT is to suggest a model to think step by step in order to come to the solution.</p>
+<figure>
+<p><img alt="" src="/blog/images/cot-example.png" width="100%" />
+  </p>
+<figcaption>Zero-shot, Few-shot and Chain-of-Thought prompting techniques. Example is from Kojima et al. (2022)</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In the context of using <code>CoTs</code> for <code>LLM judges</code>, it involves including detailed evaluation steps in the prompt instead of vague, high-level criteria to help a judge LLM perform more accurate and reliable evaluations.</p>
+</div>
+<h4 id="iterative-prompting"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#iterative-prompting">Iterative Prompting 🔂</a></h4>
+<p>This is a process where you refine your prompt based on the outputs you get, slowly guiding the AI to the desired answer or style of answer.</p>
+<h4 id="negative-prompting"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#negative-prompting">Negative Prompting ⛔️</a></h4>
+<p>In this method, you tell the AI what not to do. For instance, you might specify that you don’t want a certain type of content in the response.</p>
+<h4 id="hybrid-prompting"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#hybrid-prompting">Hybrid Prompting 🚀</a></h4>
+<p>Combining different methods, like few-shot with chain-of-thought, to get more precise or creative outputs.</p>
+<h4 id="prompt-chaining"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#prompt-chaining">Prompt Chaining ⛓️‍💥</a></h4>
+<p>Breaking down a complex task into smaller prompts and then chaining the outputs together to form a final response.</p>
+<hr />
+<h3 id="multiple-prompting"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#multiple-prompting">Multiple Prompting</a></h3>
+<h4 id="voting-self-consistancy"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#voting-self-consistancy">Voting: Self Consistancy 🗳️</a></h4>
+<h4 id="divide-n-conquer-prompting"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#divide-n-conquer-prompting">Divide n Conquer Prompting ⌹</a></h4>
+<p>The <a href="https://arxiv.org/abs/2402.05359">Divide-and-Conquer Prompting in Large Language Models Paper</a> paper proposes a "Divide-and-Conquer" (D&amp;C) program to guide large language models (LLMs) in solving complex problems. The key idea is to break down a problem into smaller, more manageable sub-problems that can be solved individually before combining the results.</p>
+<p>The D&amp;C program consists of three main components:</p>
+<ul>
+<li>
+<p><strong>Problem Decomposer</strong>: This module takes a complex problem and divides it into a series of smaller, more focused sub-problems.</p>
+</li>
+<li>
+<p><strong>Sub-Problem Solver</strong>: This component uses the LLM to solve each of the sub-problems generated by the Problem Decomposer.</p>
+</li>
+<li>
+<p><strong>Solution Composer</strong>: The final module combines the solutions to the sub-problems to arrive at the overall solution to the original complex problem.</p>
+</li>
+</ul>
+<p>The researchers evaluate their D&amp;C approach on a range of tasks, including introductory computer science problems and other multi-step reasoning challenges. They find that the D&amp;C program consistently outperforms standard LLM-based approaches, particularly on more complex problems that require structured reasoning and problem-solving skills.</p>
+<hr />
+<h3 id="external-tools"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#external-tools">External tools</a></h3>
+<h4 id="rag"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#rag">RAG 🧮</a></h4>
+<p>Checkout <a href="../../2024/06/10/rag-framework/">Rag Types</a> blog post for more info</p>
+<h4 id="react"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#react">ReAct 🧩</a></h4>
+<!-- https://bluetickconsultants.medium.com/react-integrating-reasoning-and-acting-with-retrieval-augmented-generation-rag-a6c2e869f763 -->
+
+<p><a href="https://arxiv.org/abs/2210.03629">Yao et al. 2022</a> introduced a framework named ReAct where LLMs are used to generate both reasoning traces and task-specific actions in an interleaved manner: reasoning traces help the model induce, track, and update action plans as well as handle exceptions, while actions allow it to interface with and gather additional information from external sources such as knowledge bases or environments.</p>
+<figure>
+<p><img alt="" src="/blog/images/react-example.png" width="100%" />
+  </p>
+<figcaption> Example of ReAct from Yao et al. (2022)</figcaption>
+</figure>
+<p>ReAct framework can select one of the available tools (such as Search engine, calculator, SQL agent), apply it and analyze the result to decide on the next action.</p>
+<div class="admonition info">
+<p class="admonition-title">What problem ReAct solves?</p>
+<p>ReAct overcomes prevalent issues of hallucination and error propagation in chain-of-thought reasoning by interacting with a simple Wikipedia API, and generating human-like task-solving trajectories that are more interpretable than baselines without reasoning traces (Yao et al. (2022)).</p>
+</div>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/amarjitdhillon" alt="Amarjit Dhillon">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-07-20 00:00:00">July 20, 2024</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="./" class="md-meta__link">Prompt Engineering</a>, 
+              <a href="../genai/" class="md-meta__link">GenAI</a>, 
+              <a href="../llms/" class="md-meta__link">LLMS</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              4 min read
+            
+          </li>
+        
+      </ul>
+      
+        <span class="md-draft">
+          Draft
+        </span>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="prompt-engineering"><a class="toclink" href="../../2024/07/20/prompt-engineering-/">Prompt Engineering 🎹</a></h2>
+<!-- Link: https://www.confident-ai.com/blog/why-llm-as-a-judge-is-the-best-llm-evaluation-method#chain-of-thought-prompting -->
+
+<!-- https://medium.com/@amiraryani/8-types-of-prompt-engineering-5322fff77bdf -->
+
+<!-- https://medium.com/the-modern-scientist/prompt-engineering-classification-of-techniques-and-prompt-tuning-6d4247b9b64c -->
+
+<h3 id="best-practices"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#best-practices">Best practices</a></h3>
+<ul>
+<li>
+<p>Be precise in saying what to do (write, summarize, extract information).</p>
+</li>
+<li>
+<p>Avoid saying what <code>not to do</code> and say <code>what to do instead</code></p>
+</li>
+<li>
+<p>Be specific: instead of saying “in a few sentences”, say “in 2–3 sentences”.</p>
+</li>
+<li>
+<p><mark>Add tags or delimiters</mark> to structurize the prompt.</p>
+</li>
+<li>
+<p>Ask for a structured output (JSON. HTML) if needed.</p>
+</li>
+<li>
+<p>Ask the model to verify whether the conditions are satisfied (e.g. “if you do not know the answer. say “No information”).</p>
+</li>
+<li>
+<p>Ask a model to first explain and then provide the answer (otherwise a model may try to justify an incorrect answer).</p>
+</li>
+</ul>
+<h3 id="single-prompting"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#single-prompting">Single Prompting</a></h3>
+<h4 id="zero-shot-learning-0"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#zero-shot-learning-0">Zero-Shot Learning 0️⃣</a></h4>
+<p>This involves giving the AI a task without any prior examples. You describe what you want in detail, assuming the AI has no prior knowledge of the task.</p>
+<h4 id="one-shot-learning-1"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#one-shot-learning-1">One-Shot Learning 1️⃣</a></h4>
+<p>You provide one example along with your prompt. This helps the AI understand the context or format you’re expecting.</p>
+<h4 id="few-shot-prompting"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#few-shot-prompting">Few-Shot Prompting 💉</a></h4>
+<p>This involves providing a few examples (usually 2–5) to help the AI understand the pattern or style of the response you’re looking for.</p>
+<p>It is definitely more computationally expensive as you’ll be <mark>including more input tokens</mark> </p>
+<h4 id="chain-of-thought-prompting"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#chain-of-thought-prompting">Chain of Thought Prompting 🧠</a></h4>
+<p><code>Chain-of-thought (CoT) prompting</code> is an approach where the model is prompted to <mark>articulate its reasoning process</mark>. CoT is used either with zero-shot or few-shot learning. The idea of Zero-shot CoT is to suggest a model to think step by step in order to come to the solution.</p>
+<figure>
+<p><img alt="" src="/blog/images/cot-example.png" width="100%" />
+  </p>
+<figcaption>Zero-shot, Few-shot and Chain-of-Thought prompting techniques. Example is from Kojima et al. (2022)</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In the context of using <code>CoTs</code> for <code>LLM judges</code>, it involves including detailed evaluation steps in the prompt instead of vague, high-level criteria to help a judge LLM perform more accurate and reliable evaluations.</p>
+</div>
+<h4 id="iterative-prompting"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#iterative-prompting">Iterative Prompting 🔂</a></h4>
+<p>This is a process where you refine your prompt based on the outputs you get, slowly guiding the AI to the desired answer or style of answer.</p>
+<h4 id="negative-prompting"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#negative-prompting">Negative Prompting ⛔️</a></h4>
+<p>In this method, you tell the AI what not to do. For instance, you might specify that you don’t want a certain type of content in the response.</p>
+<h4 id="hybrid-prompting"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#hybrid-prompting">Hybrid Prompting 🚀</a></h4>
+<p>Combining different methods, like few-shot with chain-of-thought, to get more precise or creative outputs.</p>
+<h4 id="prompt-chaining"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#prompt-chaining">Prompt Chaining ⛓️‍💥</a></h4>
+<p>Breaking down a complex task into smaller prompts and then chaining the outputs together to form a final response.</p>
+<hr />
+<h3 id="multiple-prompting"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#multiple-prompting">Multiple Prompting</a></h3>
+<h4 id="voting-self-consistancy"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#voting-self-consistancy">Voting: Self Consistancy 🗳️</a></h4>
+<h4 id="divide-n-conquer-prompting"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#divide-n-conquer-prompting">Divide n Conquer Prompting ⌹</a></h4>
+<p>The <a href="https://arxiv.org/abs/2402.05359">Divide-and-Conquer Prompting in Large Language Models Paper</a> paper proposes a "Divide-and-Conquer" (D&amp;C) program to guide large language models (LLMs) in solving complex problems. The key idea is to break down a problem into smaller, more manageable sub-problems that can be solved individually before combining the results.</p>
+<p>The D&amp;C program consists of three main components:</p>
+<ul>
+<li>
+<p><strong>Problem Decomposer</strong>: This module takes a complex problem and divides it into a series of smaller, more focused sub-problems.</p>
+</li>
+<li>
+<p><strong>Sub-Problem Solver</strong>: This component uses the LLM to solve each of the sub-problems generated by the Problem Decomposer.</p>
+</li>
+<li>
+<p><strong>Solution Composer</strong>: The final module combines the solutions to the sub-problems to arrive at the overall solution to the original complex problem.</p>
+</li>
+</ul>
+<p>The researchers evaluate their D&amp;C approach on a range of tasks, including introductory computer science problems and other multi-step reasoning challenges. They find that the D&amp;C program consistently outperforms standard LLM-based approaches, particularly on more complex problems that require structured reasoning and problem-solving skills.</p>
+<hr />
+<h3 id="external-tools"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#external-tools">External tools</a></h3>
+<h4 id="rag"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#rag">RAG 🧮</a></h4>
+<p>Checkout <a href="../../2024/06/10/rag-framework/">Rag Types</a> blog post for more info</p>
+<h4 id="react"><a class="toclink" href="../../2024/07/20/prompt-engineering-/#react">ReAct 🧩</a></h4>
+<!-- https://bluetickconsultants.medium.com/react-integrating-reasoning-and-acting-with-retrieval-augmented-generation-rag-a6c2e869f763 -->
+
+<p><a href="https://arxiv.org/abs/2210.03629">Yao et al. 2022</a> introduced a framework named ReAct where LLMs are used to generate both reasoning traces and task-specific actions in an interleaved manner: reasoning traces help the model induce, track, and update action plans as well as handle exceptions, while actions allow it to interface with and gather additional information from external sources such as knowledge bases or environments.</p>
+<figure>
+<p><img alt="" src="/blog/images/react-example.png" width="100%" />
+  </p>
+<figcaption> Example of ReAct from Yao et al. (2022)</figcaption>
+</figure>
+<p>ReAct framework can select one of the available tools (such as Search engine, calculator, SQL agent), apply it and analyze the result to decide on the next action.</p>
+<div class="admonition info">
+<p class="admonition-title">What problem ReAct solves?</p>
+<p>ReAct overcomes prevalent issues of hallucination and error propagation in chain-of-thought reasoning by interacting with a simple Wikipedia API, and generating human-like task-solving trajectories that are more interpretable than baselines without reasoning traces (Yao et al. (2022)).</p>
+</div>
     
   </div>
 </article>

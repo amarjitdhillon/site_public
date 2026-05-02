@@ -10367,6 +10367,24 @@ const initKapa = function () {
 </li>
       
         <li class="md-nav__item">
+  <a href="#prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Engineering 🎹
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prompt Engineering 🎹
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mlflow-in-sagemaker" class="md-nav__link">
     <span class="md-ellipsis">
       MLFlow in SageMaker
@@ -10388,24 +10406,6 @@ const initKapa = function () {
   <a href="#rag-framework" class="md-nav__link">
     <span class="md-ellipsis">
       RAG Framework
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sagemaker-deployment-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      SageMaker Deployment Options
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vector-databases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vector Databases ➾
     </span>
   </a>
   
@@ -11106,6 +11106,282 @@ Big Data
           <li class="md-meta__item">
             in
             
+              <a href="category/prompt-engineering/" class="md-meta__link">Prompt Engineering</a>, 
+              <a href="category/genai/" class="md-meta__link">GenAI</a>, 
+              <a href="category/llms/" class="md-meta__link">LLMS</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              4 min read
+            
+          </li>
+        
+      </ul>
+      
+        <span class="md-draft">
+          Draft
+        </span>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="prompt-engineering"><a class="toclink" href="2024/07/20/prompt-engineering-/">Prompt Engineering 🎹</a></h2>
+<!-- Link: https://www.confident-ai.com/blog/why-llm-as-a-judge-is-the-best-llm-evaluation-method#chain-of-thought-prompting -->
+
+<!-- https://medium.com/@amiraryani/8-types-of-prompt-engineering-5322fff77bdf -->
+
+<!-- https://medium.com/the-modern-scientist/prompt-engineering-classification-of-techniques-and-prompt-tuning-6d4247b9b64c -->
+
+<h3 id="best-practices"><a class="toclink" href="2024/07/20/prompt-engineering-/#best-practices">Best practices</a></h3>
+<ul>
+<li>
+<p>Be precise in saying what to do (write, summarize, extract information).</p>
+</li>
+<li>
+<p>Avoid saying what <code>not to do</code> and say <code>what to do instead</code></p>
+</li>
+<li>
+<p>Be specific: instead of saying “in a few sentences”, say “in 2–3 sentences”.</p>
+</li>
+<li>
+<p><mark>Add tags or delimiters</mark> to structurize the prompt.</p>
+</li>
+<li>
+<p>Ask for a structured output (JSON. HTML) if needed.</p>
+</li>
+<li>
+<p>Ask the model to verify whether the conditions are satisfied (e.g. “if you do not know the answer. say “No information”).</p>
+</li>
+<li>
+<p>Ask a model to first explain and then provide the answer (otherwise a model may try to justify an incorrect answer).</p>
+</li>
+</ul>
+<h3 id="single-prompting"><a class="toclink" href="2024/07/20/prompt-engineering-/#single-prompting">Single Prompting</a></h3>
+<h4 id="zero-shot-learning-0"><a class="toclink" href="2024/07/20/prompt-engineering-/#zero-shot-learning-0">Zero-Shot Learning 0️⃣</a></h4>
+<p>This involves giving the AI a task without any prior examples. You describe what you want in detail, assuming the AI has no prior knowledge of the task.</p>
+<h4 id="one-shot-learning-1"><a class="toclink" href="2024/07/20/prompt-engineering-/#one-shot-learning-1">One-Shot Learning 1️⃣</a></h4>
+<p>You provide one example along with your prompt. This helps the AI understand the context or format you’re expecting.</p>
+<h4 id="few-shot-prompting"><a class="toclink" href="2024/07/20/prompt-engineering-/#few-shot-prompting">Few-Shot Prompting 💉</a></h4>
+<p>This involves providing a few examples (usually 2–5) to help the AI understand the pattern or style of the response you’re looking for.</p>
+<p>It is definitely more computationally expensive as you’ll be <mark>including more input tokens</mark> </p>
+<h4 id="chain-of-thought-prompting"><a class="toclink" href="2024/07/20/prompt-engineering-/#chain-of-thought-prompting">Chain of Thought Prompting 🧠</a></h4>
+<p><code>Chain-of-thought (CoT) prompting</code> is an approach where the model is prompted to <mark>articulate its reasoning process</mark>. CoT is used either with zero-shot or few-shot learning. The idea of Zero-shot CoT is to suggest a model to think step by step in order to come to the solution.</p>
+<figure>
+<p><img alt="" src="/blog/images/cot-example.png" width="100%" />
+  </p>
+<figcaption>Zero-shot, Few-shot and Chain-of-Thought prompting techniques. Example is from Kojima et al. (2022)</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In the context of using <code>CoTs</code> for <code>LLM judges</code>, it involves including detailed evaluation steps in the prompt instead of vague, high-level criteria to help a judge LLM perform more accurate and reliable evaluations.</p>
+</div>
+<h4 id="iterative-prompting"><a class="toclink" href="2024/07/20/prompt-engineering-/#iterative-prompting">Iterative Prompting 🔂</a></h4>
+<p>This is a process where you refine your prompt based on the outputs you get, slowly guiding the AI to the desired answer or style of answer.</p>
+<h4 id="negative-prompting"><a class="toclink" href="2024/07/20/prompt-engineering-/#negative-prompting">Negative Prompting ⛔️</a></h4>
+<p>In this method, you tell the AI what not to do. For instance, you might specify that you don’t want a certain type of content in the response.</p>
+<h4 id="hybrid-prompting"><a class="toclink" href="2024/07/20/prompt-engineering-/#hybrid-prompting">Hybrid Prompting 🚀</a></h4>
+<p>Combining different methods, like few-shot with chain-of-thought, to get more precise or creative outputs.</p>
+<h4 id="prompt-chaining"><a class="toclink" href="2024/07/20/prompt-engineering-/#prompt-chaining">Prompt Chaining ⛓️‍💥</a></h4>
+<p>Breaking down a complex task into smaller prompts and then chaining the outputs together to form a final response.</p>
+<hr />
+<h3 id="multiple-prompting"><a class="toclink" href="2024/07/20/prompt-engineering-/#multiple-prompting">Multiple Prompting</a></h3>
+<h4 id="voting-self-consistancy"><a class="toclink" href="2024/07/20/prompt-engineering-/#voting-self-consistancy">Voting: Self Consistancy 🗳️</a></h4>
+<h4 id="divide-n-conquer-prompting"><a class="toclink" href="2024/07/20/prompt-engineering-/#divide-n-conquer-prompting">Divide n Conquer Prompting ⌹</a></h4>
+<p>The <a href="https://arxiv.org/abs/2402.05359">Divide-and-Conquer Prompting in Large Language Models Paper</a> paper proposes a "Divide-and-Conquer" (D&amp;C) program to guide large language models (LLMs) in solving complex problems. The key idea is to break down a problem into smaller, more manageable sub-problems that can be solved individually before combining the results.</p>
+<p>The D&amp;C program consists of three main components:</p>
+<ul>
+<li>
+<p><strong>Problem Decomposer</strong>: This module takes a complex problem and divides it into a series of smaller, more focused sub-problems.</p>
+</li>
+<li>
+<p><strong>Sub-Problem Solver</strong>: This component uses the LLM to solve each of the sub-problems generated by the Problem Decomposer.</p>
+</li>
+<li>
+<p><strong>Solution Composer</strong>: The final module combines the solutions to the sub-problems to arrive at the overall solution to the original complex problem.</p>
+</li>
+</ul>
+<p>The researchers evaluate their D&amp;C approach on a range of tasks, including introductory computer science problems and other multi-step reasoning challenges. They find that the D&amp;C program consistently outperforms standard LLM-based approaches, particularly on more complex problems that require structured reasoning and problem-solving skills.</p>
+<hr />
+<h3 id="external-tools"><a class="toclink" href="2024/07/20/prompt-engineering-/#external-tools">External tools</a></h3>
+<h4 id="rag"><a class="toclink" href="2024/07/20/prompt-engineering-/#rag">RAG 🧮</a></h4>
+<p>Checkout <a href="2024/06/10/rag-framework/">Rag Types</a> blog post for more info</p>
+<h4 id="react"><a class="toclink" href="2024/07/20/prompt-engineering-/#react">ReAct 🧩</a></h4>
+<!-- https://bluetickconsultants.medium.com/react-integrating-reasoning-and-acting-with-retrieval-augmented-generation-rag-a6c2e869f763 -->
+
+<p><a href="https://arxiv.org/abs/2210.03629">Yao et al. 2022</a> introduced a framework named ReAct where LLMs are used to generate both reasoning traces and task-specific actions in an interleaved manner: reasoning traces help the model induce, track, and update action plans as well as handle exceptions, while actions allow it to interface with and gather additional information from external sources such as knowledge bases or environments.</p>
+<figure>
+<p><img alt="" src="/blog/images/react-example.png" width="100%" />
+  </p>
+<figcaption> Example of ReAct from Yao et al. (2022)</figcaption>
+</figure>
+<p>ReAct framework can select one of the available tools (such as Search engine, calculator, SQL agent), apply it and analyze the result to decide on the next action.</p>
+<div class="admonition info">
+<p class="admonition-title">What problem ReAct solves?</p>
+<p>ReAct overcomes prevalent issues of hallucination and error propagation in chain-of-thought reasoning by interacting with a simple Wikipedia API, and generating human-like task-solving trajectories that are more interpretable than baselines without reasoning traces (Yao et al. (2022)).</p>
+</div>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/amarjitdhillon" alt="Amarjit Dhillon">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-07-20 00:00:00">July 20, 2024</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="category/prompt-engineering/" class="md-meta__link">Prompt Engineering</a>, 
+              <a href="category/genai/" class="md-meta__link">GenAI</a>, 
+              <a href="category/llms/" class="md-meta__link">LLMS</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              4 min read
+            
+          </li>
+        
+      </ul>
+      
+        <span class="md-draft">
+          Draft
+        </span>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="prompt-engineering"><a class="toclink" href="2024/07/20/prompt-engineering-/">Prompt Engineering 🎹</a></h2>
+<!-- Link: https://www.confident-ai.com/blog/why-llm-as-a-judge-is-the-best-llm-evaluation-method#chain-of-thought-prompting -->
+
+<!-- https://medium.com/@amiraryani/8-types-of-prompt-engineering-5322fff77bdf -->
+
+<!-- https://medium.com/the-modern-scientist/prompt-engineering-classification-of-techniques-and-prompt-tuning-6d4247b9b64c -->
+
+<h3 id="best-practices"><a class="toclink" href="2024/07/20/prompt-engineering-/#best-practices">Best practices</a></h3>
+<ul>
+<li>
+<p>Be precise in saying what to do (write, summarize, extract information).</p>
+</li>
+<li>
+<p>Avoid saying what <code>not to do</code> and say <code>what to do instead</code></p>
+</li>
+<li>
+<p>Be specific: instead of saying “in a few sentences”, say “in 2–3 sentences”.</p>
+</li>
+<li>
+<p><mark>Add tags or delimiters</mark> to structurize the prompt.</p>
+</li>
+<li>
+<p>Ask for a structured output (JSON. HTML) if needed.</p>
+</li>
+<li>
+<p>Ask the model to verify whether the conditions are satisfied (e.g. “if you do not know the answer. say “No information”).</p>
+</li>
+<li>
+<p>Ask a model to first explain and then provide the answer (otherwise a model may try to justify an incorrect answer).</p>
+</li>
+</ul>
+<h3 id="single-prompting"><a class="toclink" href="2024/07/20/prompt-engineering-/#single-prompting">Single Prompting</a></h3>
+<h4 id="zero-shot-learning-0"><a class="toclink" href="2024/07/20/prompt-engineering-/#zero-shot-learning-0">Zero-Shot Learning 0️⃣</a></h4>
+<p>This involves giving the AI a task without any prior examples. You describe what you want in detail, assuming the AI has no prior knowledge of the task.</p>
+<h4 id="one-shot-learning-1"><a class="toclink" href="2024/07/20/prompt-engineering-/#one-shot-learning-1">One-Shot Learning 1️⃣</a></h4>
+<p>You provide one example along with your prompt. This helps the AI understand the context or format you’re expecting.</p>
+<h4 id="few-shot-prompting"><a class="toclink" href="2024/07/20/prompt-engineering-/#few-shot-prompting">Few-Shot Prompting 💉</a></h4>
+<p>This involves providing a few examples (usually 2–5) to help the AI understand the pattern or style of the response you’re looking for.</p>
+<p>It is definitely more computationally expensive as you’ll be <mark>including more input tokens</mark> </p>
+<h4 id="chain-of-thought-prompting"><a class="toclink" href="2024/07/20/prompt-engineering-/#chain-of-thought-prompting">Chain of Thought Prompting 🧠</a></h4>
+<p><code>Chain-of-thought (CoT) prompting</code> is an approach where the model is prompted to <mark>articulate its reasoning process</mark>. CoT is used either with zero-shot or few-shot learning. The idea of Zero-shot CoT is to suggest a model to think step by step in order to come to the solution.</p>
+<figure>
+<p><img alt="" src="/blog/images/cot-example.png" width="100%" />
+  </p>
+<figcaption>Zero-shot, Few-shot and Chain-of-Thought prompting techniques. Example is from Kojima et al. (2022)</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>In the context of using <code>CoTs</code> for <code>LLM judges</code>, it involves including detailed evaluation steps in the prompt instead of vague, high-level criteria to help a judge LLM perform more accurate and reliable evaluations.</p>
+</div>
+<h4 id="iterative-prompting"><a class="toclink" href="2024/07/20/prompt-engineering-/#iterative-prompting">Iterative Prompting 🔂</a></h4>
+<p>This is a process where you refine your prompt based on the outputs you get, slowly guiding the AI to the desired answer or style of answer.</p>
+<h4 id="negative-prompting"><a class="toclink" href="2024/07/20/prompt-engineering-/#negative-prompting">Negative Prompting ⛔️</a></h4>
+<p>In this method, you tell the AI what not to do. For instance, you might specify that you don’t want a certain type of content in the response.</p>
+<h4 id="hybrid-prompting"><a class="toclink" href="2024/07/20/prompt-engineering-/#hybrid-prompting">Hybrid Prompting 🚀</a></h4>
+<p>Combining different methods, like few-shot with chain-of-thought, to get more precise or creative outputs.</p>
+<h4 id="prompt-chaining"><a class="toclink" href="2024/07/20/prompt-engineering-/#prompt-chaining">Prompt Chaining ⛓️‍💥</a></h4>
+<p>Breaking down a complex task into smaller prompts and then chaining the outputs together to form a final response.</p>
+<hr />
+<h3 id="multiple-prompting"><a class="toclink" href="2024/07/20/prompt-engineering-/#multiple-prompting">Multiple Prompting</a></h3>
+<h4 id="voting-self-consistancy"><a class="toclink" href="2024/07/20/prompt-engineering-/#voting-self-consistancy">Voting: Self Consistancy 🗳️</a></h4>
+<h4 id="divide-n-conquer-prompting"><a class="toclink" href="2024/07/20/prompt-engineering-/#divide-n-conquer-prompting">Divide n Conquer Prompting ⌹</a></h4>
+<p>The <a href="https://arxiv.org/abs/2402.05359">Divide-and-Conquer Prompting in Large Language Models Paper</a> paper proposes a "Divide-and-Conquer" (D&amp;C) program to guide large language models (LLMs) in solving complex problems. The key idea is to break down a problem into smaller, more manageable sub-problems that can be solved individually before combining the results.</p>
+<p>The D&amp;C program consists of three main components:</p>
+<ul>
+<li>
+<p><strong>Problem Decomposer</strong>: This module takes a complex problem and divides it into a series of smaller, more focused sub-problems.</p>
+</li>
+<li>
+<p><strong>Sub-Problem Solver</strong>: This component uses the LLM to solve each of the sub-problems generated by the Problem Decomposer.</p>
+</li>
+<li>
+<p><strong>Solution Composer</strong>: The final module combines the solutions to the sub-problems to arrive at the overall solution to the original complex problem.</p>
+</li>
+</ul>
+<p>The researchers evaluate their D&amp;C approach on a range of tasks, including introductory computer science problems and other multi-step reasoning challenges. They find that the D&amp;C program consistently outperforms standard LLM-based approaches, particularly on more complex problems that require structured reasoning and problem-solving skills.</p>
+<hr />
+<h3 id="external-tools"><a class="toclink" href="2024/07/20/prompt-engineering-/#external-tools">External tools</a></h3>
+<h4 id="rag"><a class="toclink" href="2024/07/20/prompt-engineering-/#rag">RAG 🧮</a></h4>
+<p>Checkout <a href="2024/06/10/rag-framework/">Rag Types</a> blog post for more info</p>
+<h4 id="react"><a class="toclink" href="2024/07/20/prompt-engineering-/#react">ReAct 🧩</a></h4>
+<!-- https://bluetickconsultants.medium.com/react-integrating-reasoning-and-acting-with-retrieval-augmented-generation-rag-a6c2e869f763 -->
+
+<p><a href="https://arxiv.org/abs/2210.03629">Yao et al. 2022</a> introduced a framework named ReAct where LLMs are used to generate both reasoning traces and task-specific actions in an interleaved manner: reasoning traces help the model induce, track, and update action plans as well as handle exceptions, while actions allow it to interface with and gather additional information from external sources such as knowledge bases or environments.</p>
+<figure>
+<p><img alt="" src="/blog/images/react-example.png" width="100%" />
+  </p>
+<figcaption> Example of ReAct from Yao et al. (2022)</figcaption>
+</figure>
+<p>ReAct framework can select one of the available tools (such as Search engine, calculator, SQL agent), apply it and analyze the result to decide on the next action.</p>
+<div class="admonition info">
+<p class="admonition-title">What problem ReAct solves?</p>
+<p>ReAct overcomes prevalent issues of hallucination and error propagation in chain-of-thought reasoning by interacting with a simple Wikipedia API, and generating human-like task-solving trajectories that are more interpretable than baselines without reasoning traces (Yao et al. (2022)).</p>
+</div>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/amarjitdhillon" alt="Amarjit Dhillon">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-07-20 00:00:00">July 20, 2024</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
               <a href="category/sagemaker/" class="md-meta__link">SageMaker</a>, 
               <a href="category/ai/" class="md-meta__link">AI</a></li>
         
@@ -11330,281 +11606,6 @@ improve its output <mark>without altering the initial prompt</mark>.</p>
 <li>Vector Database runs a similarity search to find the related content</li>
 <li>Question + Context is our final prompt which is sent to LLM</li>
 </ul>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/amarjitdhillon" alt="Amarjit Dhillon">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-10 00:00:00">June 10, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/sagemaker/" class="md-meta__link">SageMaker</a>, 
-              <a href="category/ai/" class="md-meta__link">AI</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              8 min read
-            
-          </li>
-        
-      </ul>
-      
-        <span class="md-draft">
-          Draft
-        </span>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="sagemaker-deployment-options"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/">SageMaker Deployment Options</a></h2>
-<h3 id="basics"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#basics">Basics</a></h3>
-<h4 id="sagemaker-domain"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#sagemaker-domain">Sagemaker Domain</a></h4>
-<p>Amazon SageMaker uses domains to organize user profiles, applications, and their associated resources. An Amazon SageMaker domain consists of the following:</p>
-<ul>
-<li>An associated Amazon <code>Elastic File System</code> (Amazon EFS) volume.</li>
-<li>A list of authorized users.</li>
-<li>A variety of security, application, policy, and Amazon Virtual Private Cloud (Amazon VPC) configurations.</li>
-</ul>
-<h4 id="user-profile"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#user-profile">User Profile 👨‍🦰</a></h4>
-<!-- https://www.youtube.com/watch?v=Bxo_DrPSJgI -->
-
-<h3 id="studio-vs-notebook-instance"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#studio-vs-notebook-instance">Studio vs Notebook Instance 🗒️</a></h3>
-<ul>
-<li>
-<p>Notebooks are jupyter notebook where resource allocation are done by AWS. <mark>So they are fully managed</mark></p>
-</li>
-<li>
-<p>Studio is IDE which is not fully managed</p>
-</li>
-</ul>
-<h3 id="features"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#features"><strong>Features</strong></a></h3>
-<h4 id="prepare"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#prepare">Prepare 🧑‍🍳</a></h4>
-<ul>
-<li><strong>Ground Truth</strong>: Enable DS to label jobs, datasets and workforces.</li>
-<li><strong>Clarify</strong>: Detect bias and understand model predictions.</li>
-<li><strong>Data wrangler</strong>: Filtering, joining and other data preparation tasks. </li>
-</ul>
-<h4 id="build"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#build">Build 👷</a></h4>
-<ul>
-<li><strong>Autopilot</strong>: Automatically create models</li>
-<li><strong>Built-in</strong>: </li>
-<li><strong>JumpStart</strong>:</li>
-</ul>
-<h4 id="train"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#train">Train 🚊</a></h4>
-<ul>
-<li><strong>Experiments</strong>:</li>
-<li><strong>Managed Train</strong>: Fully managed training by AWS to reduce the cost.</li>
-<li><strong>Distributed training</strong>:  </li>
-</ul>
-<h4 id="deploy"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#deploy">Deploy 🚟</a></h4>
-<ul>
-<li><strong>Model Monitoring</strong>:</li>
-<li><strong>Endpoints</strong>: Multi model endpoint, Multi container endpoint.</li>
-<li><strong>Inference</strong>: Based on traffic patterns, we can have following </li>
-<li><em>Real time</em>: For persistent, one prediction at time</li>
-<li><em>Serverless</em>: Workloads which can tolerate idle periods between spikes and can tolerate cold starts</li>
-<li><em>Batch</em>: To get predictions for an entire dataset, use SageMaker batch transform</li>
-<li><em>Async</em>: Requests with large payload sizes up to 1GB, long processing times, and near real-time latency requirements, use Amazon SageMaker Asynchronous Inference</li>
-</ul>
-<h3 id="inference-types"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#inference-types">Inference Types</a></h3>
-<p><center> 
-<img src='/blog/images/dfd-mme-sagemaker.png' width="100%">
-</center></p>
-<h4 id="batch-inference"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#batch-inference">Batch Inference 📦</a></h4>
-<p>Batch inference refers to model inference performed on data that is in batches, often large batches, and asynchronous in nature. It fits use cases that collect data infrequently, that focus on group statistics rather than individual inference, and that do not need to have inference results right away for downstream processes. </p>
-<p>Projects that are <code>research oriented</code>, for example, do not require model inference to be returned for a data point right away. Researchers often collect a chunk of data for testing and evaluation purposes and <mark>care about overall statistics and performance rather than individual predictions</mark>. They can conduct the inference in batches and wait for the prediction for the whole batch to complete before they move on</p>
-<div class="admonition tip">
-<p class="admonition-title">Doing batch transform in S3 🪣</p>
-<p>Depending on how you organize the data, <mark>SageMaker batch transform can split a single large text file in S3 by lines into a small and manageable size (mini-batch) that would fit into the memory before making inference against the model</mark>; it can also distribute the files by S3 key into compute instances for efficient computation.</p>
-<p>SageMaker batch transform saves the results after assembly to the specified S3 location with <code>.out</code> appended to the input filename.</p>
-</div>
-<h4 id="async-transformation"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#async-transformation">Async Transformation ⚙️</a></h4>
-<p>Amazon SageMaker Asynchronous Inference is a capability in SageMaker that queues incoming requests and processes them asynchronously. This option is ideal for requests with large payload sizes (up to 1GB), long processing times (up to one hour), and near real-time latency requirements. Asynchronous Inference enables you to save on costs by <mark>autoscaling the instance count to zero when there are no requests to process</mark>, so you only pay when your endpoint is processing requests.</p>
-<h4 id="real-time-inference"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#real-time-inference">Real-time Inference ⏳</a></h4>
-<p>In today's fast-paced digital environment, receiving inference results for incoming data points in real-time is crucial for effective decision-making. </p>
-<p>Take interactive chatbots, for instance; they rely on live inference capabilities to operate effectively. Users expect instant responses during their conversations—waiting until the discussion is over or enduring delays of even a few seconds is simply not acceptable. </p>
-<p>For companies striving to deliver top-notch customer experiences, ensuring that inferences are generated and communicated to customers instantly is a top priority.</p>
-<h5 id="host-real-time-endpoints"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#host-real-time-endpoints">Host real-time endpoints</a></h5>
-<p>The deployment process consists of the following steps:</p>
-<ol>
-<li>
-<p>Create a <code>model</code>, <code>container</code>, and associated <code>inference code</code> in SageMaker. The model refers to the training artifact, model.tar.gz. The container is the runtime environment for the code and the model.</p>
-</li>
-<li>
-<p>Create an HTTPS endpoint configuration. This configuration carries information about <code>compute instance type</code> and quantity, models, and traffic patterns to model variants.</p>
-</li>
-<li>
-<p>Create ML instances and an HTTPS endpoint. SageMaker creates a fleet of ML instances and an HTTPS endpoint that handles the traffic and authentication. The final step is to put everything together for a working HTTPS endpoint that can interact with client-side requests.</p>
-</li>
-</ol>
-<h4 id="serverless-inference"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#serverless-inference">Serverless Inference 🖥️</a></h4>
-<p>On-demand Serverless Inference is ideal for workloads which have <strong>idle periods</strong> between traffic spurts and <strong>can tolerate cold starts</strong>. Serverless endpoints automatically launch compute resources and scale them in and out depending on traffic, eliminating the need to choose instance types or manage scaling policies. This takes away the undifferentiated heavy lifting of selecting and managing servers.</p>
-<p>Serverless Inference integrates with AWS Lambda to offer you high availability, built-in fault tolerance and automatic scaling. With a pay-per-use model, Serverless Inference is a cost-effective option if you have an infrequent or unpredictable traffic pattern.</p>
-<p>During times when there are no requests, Serverless Inference scales your endpoint down to 0, helping you to minimize your costs. </p>
-<div class="highlight"><span class="filename">Invoke Serverless Endpoint</span><pre><span></span><code><span class="n">runtime</span> <span class="o">=</span> <span class="n">boto3</span><span class="o">.</span><span class="n">client</span><span class="p">(</span><span class="s2">&quot;sagemaker-runtime&quot;</span><span class="p">)</span>
-
-<span class="n">endpoint_name</span> <span class="o">=</span> <span class="s2">&quot;&lt;your-endpoint-name&gt;&quot;</span>
-<span class="n">content_type</span> <span class="o">=</span> <span class="s2">&quot;&lt;request-mime-type&gt;&quot;</span>
-<span class="n">payload</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">your</span><span class="o">-</span><span class="n">request</span><span class="o">-</span><span class="n">body</span><span class="o">&gt;</span>
-
-<span class="n">response</span> <span class="o">=</span> <span class="n">runtime</span><span class="o">.</span><span class="n">invoke_endpoint</span><span class="p">(</span>
-    <span class="n">EndpointName</span><span class="o">=</span><span class="n">endpoint_name</span><span class="p">,</span>
-    <span class="n">ContentType</span><span class="o">=</span><span class="n">content_type</span><span class="p">,</span>
-    <span class="n">Body</span><span class="o">=</span><span class="n">payload</span>
-<span class="p">)</span>
-</code></pre></div>
-<div class="admonition warning">
-<p class="admonition-title">Possible cold-start during updating serverless endpoint</p>
-<p>Note that when updating your endpoint, you can experience cold starts when making requests to the endpoint because SageMaker must re-initialize your container and model.</p>
-<div class="highlight"><pre><span></span><code><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">update_endpoint</span><span class="p">(</span>
-  <span class="n">EndpointName</span><span class="o">=</span><span class="s2">&quot;&lt;your-endpoint-name&gt;&quot;</span><span class="p">,</span>
-  <span class="n">EndpointConfigName</span><span class="o">=</span><span class="s2">&quot;&lt;new-endpoint-config&gt;&quot;</span><span class="p">,</span>
-<span class="p">)</span>
-</code></pre></div>
-</div>
-<h5 id="use-provisioned-concurrency"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#use-provisioned-concurrency">Use Provisioned Concurrency</a></h5>
-<p>Amazon SageMaker automatically scales in or out on-demand serverless endpoints. For serverless endpoints with Provisioned Concurrency you can use Application Auto Scaling to scale up or down the Provisioned Concurrency based on your traffic profile, thus optimizing costs. </p>
-<h3 id="optimizations"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#optimizations">Optimizations</a></h3>
-<h4 id="multi-model-endpoints"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#multi-model-endpoints">Multi Model Endpoints ⟜</a></h4>
-<p>Amazon SageMaker multi-model endpoint (MME) enables you to cost-effectively deploy and host multiple models in a single endpoint and then horizontally scale the endpoint to achieve scale. </p>
-<div class="admonition tldr">
-<p class="admonition-title">When to use MME?</p>
-<p>Multi-model endpoints are suitable for use cases where you have models that are built in the same framework (XGBoost in this example), and where it is tolerable to have latency on less frequently used models.</p>
-</div>
-<p>As illustrated in the following figure, this is an effective technique to implement multi-tenancy of models within your machine learning (ML) infrastructure. </p>
-<p><center> 
-<img src=
-"/blog/images/sagemaker-multi-model-endpoint.png" 
-width="100%">
- </center></p>
-<div class="admonition info">
-<p class="admonition-title">Use Cases</p>
-<p><strong>Shared tenancy</strong>: <code>SageMaker multi-model endpoints</code> are well suited for hosting a large number of models that you can serve through a shared serving container and you don’t need to access all the models at the same time. Depending on the size of the endpoint instance memory, a model may occasionally be <mark>unloaded from memory in favor of loading a new model to maximize efficient use of memory</mark>, therefore your application needs to be tolerant of occasional latency spikes on unloaded models.</p>
-<p><strong>Co host models</strong>: MME is also designed for co-hosting models that use the same ML framework because they use the shared container to load multiple models. Therefore, if you have a mix of ML frameworks in your model fleet (such as PyTorch and TensorFlow), SageMaker dedicated endpoints or multi-container hosting is a better choice.</p>
-<p><strong>Ability to handle cold starts</strong>: Finally, MME is suited for applications that can tolerate an occasional cold start latency penalty, because models are loaded on first invocation and infrequently used models can be offloaded from memory in favor of loading new models. Therefore, if you have a mix of frequently and infrequently accessed models, a multi-model endpoint can efficiently serve this traffic with fewer resources and higher cost savings.</p>
-<p><strong>Host both CPU and GPU</strong>: Multi-model endpoints support hosting both CPU and GPU backed models. By using GPU backed models, you can lower your model deployment costs through increased usage of the endpoint and its underlying accelerated compute instances.</p>
-</div>
-<h5 id="advanced-configs"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#advanced-configs">Advanced Configs</a></h5>
-<p><strong>Increase inference parallelism per model</strong></p>
-<p>MMS creates one or more Python worker processes per model based on the value of the <code>default_workers_per_model</code> configuration parameter. These Python workers handle each individual inference request by running any preprocessing, prediction, and post processing functions you provide. </p>
-<p><strong>Design for spikes</strong></p>
-<p>Each MMS process within an endpoint instance has a request queue that can be configured with the job_queue_size parameter (default is 100). This determines the number of requests MMS will queue when all worker processes are busy. Use this parameter to fine-tune the responsiveness of your endpoint instances after you’ve decided on the optimal number of workers per model.</p>
-<p><strong>Setup AutoScaling</strong></p>
-<p>Before you can use auto scaling, you must have already created an <code>Amazon SageMaker model endpoint</code>. <mark>You can have multiple model versions for the same endpoit</mark>. Each model is referred to as a production (model) variant.</p>
-<p><strong>Setup cooldown policy</strong></p>
-<p>A cooldown period is used to protect against over-scaling when your model is scaling in (reducing capacity) or scaling out (increasing capacity). It does this by slowing down subsequent scaling activities until the period expires. Specifically, it blocks the deletion of instances for scale-in requests, and limits the creation of instances for scale-out requests. </p>
-<h4 id="muti-container-endpoints"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#muti-container-endpoints">Muti-container Endpoints ⋺</a></h4>
-<p>SageMaker multi-container endpoints enable customers to deploy multiple containers, that use different models or frameworks (XGBoost, Pytorch, TensorFlow), on a <code>single SageMaker endpoint</code>. </p>
-<p>The containers can be run in a sequence as an inference pipeline, or each container can be accessed individually by using direct invocation to improve endpoint utilization and optimize costs.</p>
-<h4 id="load-testing"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#load-testing">Load Testing 🚛</a></h4>
-<p>Load testing is a technique that allows us to understand how our ML model hosted in an endpoint with a compute resource configuration responds to online traffic. </p>
-<p>There are factors such as model size, ML framework, number of CPUs, amount of RAM, autoscaling policy, and traffic size that affect how your ML model performs in the cloud. Understandably, it's not easy to predict how many requests can come to an endpoint over time. </p>
-<p>It is prudent to understand how your model and endpoint behave in this complex situation. Load testing creates artificial traffic and requests to your endpoint and stress tests how your model and endpoint respond in terms of model latency, instance CPU utilization, memory footprint, and so on.</p>
-<h4 id="elastic-interface-ei"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#elastic-interface-ei">Elastic Interface (EI)</a></h4>
-<p>EI attaches fractional GPUs to a SageMaker hosted endpoint. It increases the inference throughput and decreases the model latency for your deep learning models that can benefit from GPU acceleration</p>
-<h4 id="sagemaker-neo"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#sagemaker-neo">SageMaker Neo 👾</a></h4>
-<p>Neo is a capability of Amazon SageMaker that enables machine learning models to train once and run anywhere in the cloud and at the edge. </p>
-<div class="admonition info">
-<p class="admonition-title">Why use NEO</p>
-<p><strong>Problem Statement</strong></p>
-<p>Generally, optimizing machine learning models for inference on multiple platforms is difficult because you need to hand-tune models for the specific hardware and software configuration of each platform. If you want to get optimal performance for a given workload, you need to know the hardware architecture, instruction set, memory access patterns, and input data shapes, among other factors. For traditional software development, tools such as compilers and profilers simplify the process. For machine learning, most tools are specific to the framework or to the hardware. This forces you into a manual trial-and-error process that is unreliable and unproductive.</p>
-<hr />
-<p><strong>Solution</strong></p>
-<p>Neo automatically optimizes Gluon, Keras, MXNet, PyTorch, TensorFlow, TensorFlow-Lite, and ONNX models for inference on Android, Linux, and Windows machines based on processors from Ambarella, ARM, Intel, Nvidia, NXP, Qualcomm, Texas Instruments, and Xilinx. Neo is tested with computer vision models available in the model zoos across the frameworks. SageMaker Neo supports compilation and deployment for two main platforms:</p>
-<ul>
-<li>Cloud instances (including Inferentia)</li>
-<li>Edge devices.</li>
-</ul>
-</div>
-<h4 id="ec2-inf1-instances"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#ec2-inf1-instances">EC2 inf1 instances 🍪</a></h4>
-<p>Inf1 provide high performance and low cost in thecloud with AWS Inferentia chips designed and built by AWS for ML inference purposes.You can compile supported ML models using SageMaker Neo and select Inf1 instances todeploy the compiled model in a SageMaker hosted endpoint.</p>
-<h3 id="optimize-llms-on-sagemaker"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#optimize-llms-on-sagemaker">Optimize LLM's on Sagemaker</a></h3>
-<h4 id="lmi-containers"><a class="toclink" href="2024/06/10/sagemaker-deployment-options/#lmi-containers">LMI containers 🚢</a></h4>
-<p>LMI containers are a set of high-performance Docker Containers purpose built for large language model (LLM) inference.</p>
-<p>With these containers, you can leverage high performance open-source inference libraries like vLLM, TensorRT-LLM, Transformers NeuronX to deploy LLMs on AWS SageMaker Endpoints. These containers bundle together a model server with open-source inference libraries to deliver an all-in-one LLM serving solution.</p>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/amarjitdhillon" alt="Amarjit Dhillon">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-10 00:00:00">June 10, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="category/rag/" class="md-meta__link">RAG</a>, 
-              <a href="category/genai/" class="md-meta__link">GenAI</a>, 
-              <a href="category/vector-db/" class="md-meta__link">Vector DB</a>, 
-              <a href="category/embeddings/" class="md-meta__link">Embeddings</a>, 
-              <a href="category/llm/" class="md-meta__link">LLM</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-        <span class="md-draft">
-          Draft
-        </span>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="vector-databases"><a class="toclink" href="2024/06/10/vector-databases-/">Vector Databases ➾</a></h2>
-<p>A <code>vector database</code> is specifically designed to operate on <code>embedding vectors</code>. As the popularity of LLMs and generative AI has grown recently, <mark>so has the use of embeddings to encode unstructured data</mark>. Vector databases have emerged as an effective solution for enterprises to deliver and scale these use cases.</p>
-<div class="admonition tldr">
-<p class="admonition-title">What is Vector DB?</p>
-<p>Vector databases are specialized databases that store data as high-dimensional vectors and their original content. They offer the capabilities of both <code>vector indexes</code> and <code>traditional databases</code>, such as optimized storage, scalability, flexibility, and query language support. They allow users to find and retrieve similar or relevant data based on their semantic or contextual meaning.</p>
-</div>
-<p>Vector databases can help RAG models quickly find the most similar documents or
-passages to a given query and use them as additional context for the LLM.</p>
-<h3 id="vector-index"><a class="toclink" href="2024/06/10/vector-databases-/#vector-index">Vector Index</a></h3>
-<p>A vector index is a data structure in a vector database designed to enhance the efficiency of processing, and it is particularly suited for the high-dimensional vector dataencountered with LLMs. Its function is to streamline the search and retrieval processes within the database.</p>
-<p>By implementing a vector index, the system is capable ofconducting quick similarity searches, identifying vectors that closely match or aremost similar to a given input vector. </p>
-<div class="admonition tip">
-<p class="admonition-title">How to convert embedding to vector index?</p>
-<p>To create vector indexes for your embeddings, there are many options, such as exact or approximate nearest neighbor algorithms (e.g., HNSW or IVF), different distance metrics (e.g., cosine or Euclidean), or various compression techniques (e.g.,quantization or pruning). </p>
-</div>
-<h3 id="vector-search"><a class="toclink" href="2024/06/10/vector-databases-/#vector-search">Vector Search</a></h3>
-<p>A vector search is used to find the most relevant documents or passages to the query based on the similarity between the query vector and the document vectors in the index.</p>
-<div class="admonition info">
-<p>Similarity measures are mathematical methods that compare two vectors and compute a distance value between them. This distance value indicates how dissimilar or similar the two vectors are in terms of their semantic meaning</p>
-</div>
     
   </div>
 </article>
