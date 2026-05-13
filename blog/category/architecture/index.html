@@ -929,6 +929,10 @@ const initKapa = function () {
       
         
       
+        
+      
+        
+      
     
     
       
@@ -964,6 +968,29 @@ const initKapa = function () {
             Categories
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../a2a/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    A2A
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1114,6 +1141,15 @@ const initKapa = function () {
       On this page
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#agentic-ai-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agentic AI Patterns
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#6rs-of-cloud-migration" class="md-nav__link">
@@ -1335,6 +1371,29 @@ const initKapa = function () {
   
   <span class="md-ellipsis">
     LLMS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../mcp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MCP
   </span>
   
 
@@ -10481,6 +10540,15 @@ const initKapa = function () {
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#agentic-ai-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agentic AI Patterns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#6rs-of-cloud-migration" class="md-nav__link">
     <span class="md-ellipsis">
       6R's of Cloud Migration 🧭
@@ -10530,6 +10598,329 @@ const initKapa = function () {
       <header class="md-typeset">
         <h1 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Link to this section">&para;</a></h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/amarjitdhillon" alt="Amarjit Dhillon">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2025-08-10 00:00:00">August 10, 2025</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../agentic-ai/" class="md-meta__link">Agentic AI</a>, 
+              <a href="../genai/" class="md-meta__link">GenAI</a>, 
+              <a href="../llm/" class="md-meta__link">LLM</a>, 
+              <a href="./" class="md-meta__link">Architecture</a>, 
+              <a href="../mcp/" class="md-meta__link">MCP</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              9 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="agentic-ai-patterns"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/">Agentic AI Patterns</a></h2>
+<p>Over the last year I’ve been building and reviewing a lot of agentic AI systems. Some were internal copilots. Some were multi-agent workflows. Some looked amazing in demos and completely collapsed once real users started interacting with them 😄</p>
+<p>After a while I noticed the same patterns showing up again and again  </p>
+<p>Not just prompt patterns. Actual architecture patterns  </p>
+<p>Things like:
+- how agents access tools
+- how agents communicate
+- where guardrails should sit
+- how evaluations should run
+- how memory should work</p>
+<p>This post is basically a collection of notes and patterns that I keep coming back to while designing production-grade systems  </p>
+<p>It is not meant to be a perfect academic explanation. Think of it more like architecture notes from someone trying to make these systems survive production traffic, weird user behavior and enterprise security reviews 😄</p>
+<hr />
+<h3 id="high-level-agentic-ai-architecture"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#high-level-agentic-ai-architecture">High Level Agentic AI Architecture 🏗️</a></h3>
+<p>When people first hear the term <em>Agentic AI</em>, they often imagine a chatbot with a few tools attached to it  </p>
+<p>In reality, once you start building enterprise systems, the architecture becomes much bigger very quickly  </p>
+<p>The diagram below is roughly how I think about a modern enterprise agentic AI stack today</p>
+<p><center> 
+<img src='/blog/images/agentic-ai-patterns/hlc-agentic-ai-architecture.jpeg' width="100%">
+</center></p>
+<p>At the center, you still have LLMs and agents. But around them, there are many supporting layers:
+- orchestration
+- memory
+- tools
+- evaluations
+- observability</p>
+<p>The user may come from Teams, Streamlit, a web app or even another MCP client. The request usually lands behind an API gateway and then reaches some kind of supervisor or orchestrator  </p>
+<p>That orchestrator becomes the brain of the system. It decides whether the request should go to a RAG agent, a reasoning agent or perhaps a review agent  </p>
+<div class="admonition note">
+<p class="admonition-title">Important shift</p>
+<p>Most enterprise AI systems are no longer "single chatbot" systems.<br />
+They are slowly becoming distributed AI workflows with multiple cooperating components</p>
+</div>
+<p>One thing I learned pretty early is that orchestration becomes more important than the prompt itself. A great model with weak orchestration still behaves badly in production  </p>
+<hr />
+<h3 id="why-mcp-matters"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#why-mcp-matters">Why MCP Matters 🔌</a></h3>
+<p>Once the orchestrator starts delegating work, another problem appears very quickly  </p>
+<p>How does the agent safely interact with external systems?</p>
+<p>Most teams initially hardcode integrations directly into orchestration logic. That works for demos. It becomes painful very quickly once you have dozens of tools and APIs  </p>
+<p>That is where MCP starts becoming useful</p>
+<p><center> 
+<img src='/blog/images/agentic-ai-patterns/mcp.png' width="100%">
+</center></p>
+<p>The way I think about MCP is pretty simple  </p>
+<p>The host application contains your AI logic. This could be something like Claude Desktop, Cursor or your own internal AI portal  </p>
+<p>Inside the host application, you run an MCP client. That MCP client becomes the standardized bridge between your AI system and external services  </p>
+<p>Those external services are exposed through MCP servers  </p>
+<p>For example:
+- a GitHub MCP server
+- a file MCP server
+- an EKS MCP server</p>
+<p>Instead of the LLM directly talking to everything in your enterprise, it goes through a controlled layer  </p>
+<p>That controlled layer becomes extremely important because now you can apply:
+- permissions
+- logging
+- policy checks</p>
+<div class="admonition info">
+<p class="admonition-title">Why this matters</p>
+<p>In enterprise environments, the hardest problem is usually not model intelligence.<br />
+It is controlled and auditable access to enterprise systems</p>
+</div>
+<hr />
+<h3 id="mcp-starts-looking-like-a-tool-operating-system"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#mcp-starts-looking-like-a-tool-operating-system">MCP Starts Looking Like a Tool Operating System 🧰</a></h3>
+<p>After building a few systems with MCP, I slowly stopped thinking about it as just a protocol  </p>
+<p>It started feeling more like a lightweight operating system for tools  </p>
+<p>The agent handles reasoning. MCP handles capabilities  </p>
+<p>The agent might decide:</p>
+<blockquote>
+<p>"I need to fetch a Kubernetes deployment"</p>
+</blockquote>
+<p>Or:</p>
+<blockquote>
+<p>"I need to update a GitHub issue"</p>
+</blockquote>
+<p>But the actual execution happens through MCP servers  </p>
+<p>This separation becomes very useful because your reasoning layer and tool layer evolve independently  </p>
+<div class="admonition warning">
+<p class="admonition-title">Common mistake</p>
+<p>Many teams expose overly powerful tools directly to agents.<br />
+Start with narrow scoped tools first and slowly expand capabilities</p>
+</div>
+<hr />
+<h3 id="a2a-agents-talking-to-other-agents"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#a2a-agents-talking-to-other-agents">A2A: Agents Talking to Other Agents 🤝</a></h3>
+<p>Once agents become more specialized, another challenge appears  </p>
+<p>How do agents collaborate with each other?</p>
+<p>This is where A2A becomes interesting</p>
+<p><center> 
+<img src='/blog/images/agentic-ai-patterns/a2a.png' width="100%">
+</center></p>
+<p>When I first looked at A2A, I thought it was competing with MCP. After building a few systems, I realized they solve completely different problems  </p>
+<p>MCP is mostly about agents talking to tools  </p>
+<p>A2A is about agents talking to other agents  </p>
+<p>An agent card is one of the most important concepts here. Think of it like a public profile for an agent  </p>
+<p>It tells other agents:
+- what the agent can do
+- where it lives
+- how to authenticate</p>
+<p>Once another agent discovers this information, it can delegate work using tasks and messages  </p>
+<p>A travel agent may ask a hotel agent to handle accommodations. That hotel agent may then call tools through MCP  </p>
+<p>This is why MCP and A2A usually end up existing together inside larger systems  </p>
+<div class="admonition tip">
+<p class="admonition-title">Practical advice</p>
+<p>Start with a single orchestrator first.<br />
+Multi-agent collaboration sounds exciting but debugging distributed reasoning flows can become chaotic very quickly 😄</p>
+</div>
+<hr />
+<h3 id="rag-is-still-one-of-the-most-useful-patterns"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#rag-is-still-one-of-the-most-useful-patterns">RAG Is Still One of the Most Useful Patterns 📚</a></h3>
+<p>Even with all the excitement around agents, RAG is still one of the most practical patterns in enterprise AI  </p>
+<p>But there is a lot of confusion around what RAG actually solves  </p>
+<p>RAG is not memory<br />
+RAG is not orchestration<br />
+RAG is mostly retrieval + grounding</p>
+<p><center> 
+<img src='/blog/images/agentic-ai-patterns/native-rag.png' width="100%">
+</center></p>
+<p>The basic flow is straightforward  </p>
+<p>Documents are ingested, chunked, embedded and stored inside a vector database  </p>
+<p>When the user asks a question, the query gets converted into embeddings. The system retrieves the most similar chunks and injects them into the LLM prompt  </p>
+<p>That grounding step is what helps reduce hallucinations  </p>
+<p>A lot of teams underestimate how far simple RAG can take them. To be honest, many systems do not need complicated memory architectures on day one  </p>
+<div class="admonition warning">
+<p class="admonition-title">Common misconception</p>
+<p>Many people treat RAG as memory.<br />
+RAG retrieves information. Memory usually evolves over time and becomes stateful</p>
+</div>
+<hr />
+<h3 id="graph-rag-and-multi-modal-retrieval"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#graph-rag-and-multi-modal-retrieval">Graph RAG and Multi-Modal Retrieval 🕸️</a></h3>
+<p>Simple vector retrieval works well for many use cases. But eventually you run into situations where semantic similarity alone is not enough  </p>
+<p>That is where Graph RAG becomes interesting</p>
+<p><center> 
+<img src='/blog/images/agentic-ai-patterns/graph-rag.png' width="100%">
+</center></p>
+<p>The big idea behind Graph RAG is relationship awareness  </p>
+<p>Instead of only retrieving similar chunks, the system also understands how entities connect with each other  </p>
+<p>A good example is airline disruption management  </p>
+<p>A vector database may retrieve compensation policy chunks. But a graph-aware system can additionally reason over relationships between:
+- customer tier
+- disruption type
+- route history</p>
+<p>That extra relationship context becomes extremely valuable in reasoning-heavy workflows  </p>
+<div class="admonition note">
+<p class="admonition-title">Reality check</p>
+<p>Graph RAG is powerful but it also increases operational complexity significantly.<br />
+Most teams should start with simple vector RAG first</p>
+</div>
+<hr />
+<h3 id="prompt-engineering-vs-rag-vs-fine-tuning"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#prompt-engineering-vs-rag-vs-fine-tuning">Prompt Engineering vs RAG vs Fine-Tuning 🧪</a></h3>
+<p>This is probably one of the most misunderstood topics in GenAI right now  </p>
+<p>People often use these terms interchangeably even though they solve very different problems</p>
+<p><center> 
+<img src='/blog/images/agentic-ai-patterns/pe-vs-rag-vs-ft.png' width="100%">
+</center></p>
+<p>Prompt engineering is mainly about improving instructions  </p>
+<p>RAG is about injecting external knowledge dynamically  </p>
+<p>Fine-tuning is about changing model behavior through training data  </p>
+<p>I usually explain it like this:</p>
+<ul>
+<li>If the model needs better guidance → prompt engineering</li>
+<li>If the model needs enterprise knowledge → RAG</li>
+<li>If the model needs behavioral adaptation → fine-tuning</li>
+</ul>
+<p>In real enterprise systems, RAG is usually the first practical step because enterprise knowledge changes constantly. Nobody wants to retrain a model every time a policy document changes 😄</p>
+<hr />
+<h3 id="guardrails-need-multiple-layers"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#guardrails-need-multiple-layers">Guardrails Need Multiple Layers 🛡️</a></h3>
+<p>One thing that becomes obvious very quickly in production is that a single moderation layer is not enough  </p>
+<p>Guardrails need to exist throughout the entire workflow</p>
+<p><center> 
+<img src='/blog/images/agentic-ai-patterns/guardrails.png' width="100%">
+</center></p>
+<p>Input guardrails help filter malicious prompts and sensitive data before the request reaches the agent  </p>
+<p>Internal guardrails monitor reasoning quality and policy alignment while the agent is thinking  </p>
+<p>Execution guardrails validate tool permissions and parameter safety before actions happen  </p>
+<p>Output guardrails validate hallucinations, confidentiality leakage and harmful responses before anything reaches the user  </p>
+<div class="admonition warning">
+<p class="admonition-title">Important</p>
+<p>Most dangerous failures happen during tool execution and not during text generation</p>
+</div>
+<p>One of the biggest mistakes teams make is focusing entirely on output filtering while ignoring execution safety  </p>
+<hr />
+<h3 id="agent-mesh-defense-with-gateways-and-sidecars"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#agent-mesh-defense-with-gateways-and-sidecars">Agent Mesh Defense with Gateways and Sidecars 🧱</a></h3>
+<p>As systems become more distributed, service mesh style thinking starts becoming useful for agents too</p>
+<p><center> 
+<img src='/blog/images/agentic-ai-patterns/agent-mesh-defense.png' width="75%">
+</center></p>
+<p>The sidecar acts like local protection near each agent  </p>
+<p>It can:
+- inspect payloads
+- enforce outbound policy
+- maintain local audit logs</p>
+<p>The gateway acts like centralized protection between agents and tools  </p>
+<p>It verifies:
+- sender identity
+- requested action
+- authorization</p>
+<p>This becomes especially important once multiple agents start calling each other dynamically  </p>
+<p>Without this kind of architecture, one badly behaving agent can create problems across the entire system very quickly  </p>
+<hr />
+<h3 id="sandboxing-and-least-privilege"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#sandboxing-and-least-privilege">Sandboxing and Least Privilege 🧯</a></h3>
+<p>This pattern sounds boring in diagrams but becomes incredibly important in production  </p>
+<p>Especially once agents start generating code or executing actions</p>
+<p><center> 
+<img src='/blog/images/agentic-ai-patterns/sandboxing-least-privilege.png' width="80%">
+</center></p>
+<p>The idea is simple  </p>
+<p>Before running risky operations, create a temporary isolated execution environment  </p>
+<p>This could be:
+- Docker containers
+- microVMs
+- isolated runtimes</p>
+<p>The sandbox should have strict policies with minimal filesystem access and tightly scoped permissions  </p>
+<p>If the execution violates policy or exceeds limits, terminate the process immediately and raise an alert  </p>
+<div class="admonition danger">
+<p class="admonition-title">Never trust generated code blindly</p>
+<p>Even if the generated code looks harmless, always assume the execution path can become unsafe</p>
+</div>
+<hr />
+<h3 id="fallback-model-invocation-for-reliability"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#fallback-model-invocation-for-reliability">Fallback Model Invocation for Reliability 🔁</a></h3>
+<p>Sooner or later every model provider fails 😄</p>
+<p>There will be:
+- outages
+- invalid outputs
+- latency spikes</p>
+<p>That is why fallback strategies become important</p>
+<p><center> 
+<img src='/blog/images/agentic-ai-patterns/fallback-model-invocation.png' width="75%">
+</center></p>
+<p>The simplest flow is:
+- call the primary model
+- validate the output
+- fallback if needed</p>
+<p>The important part is validation  </p>
+<p>Fallback should not only trigger on API failure. It can also trigger when:
+- schema validation fails
+- grounding fails
+- safety checks fail</p>
+<p>This prevents your entire platform from becoming dependent on a single provider  </p>
+<div class="admonition tip">
+<p class="admonition-title">Practical production advice</p>
+<p>Keep backup prompts optimized separately.<br />
+Different models often behave very differently with the same prompt</p>
+</div>
+<hr />
+<h3 id="evaluations-are-the-real-engineering-loop"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#evaluations-are-the-real-engineering-loop">Evaluations Are the Real Engineering Loop 📊</a></h3>
+<p>One thing I’ve learned while building GenAI systems is this:</p>
+<p>Most teams spend too much time building and not enough time evaluating  </p>
+<p>Without evaluations, improvement becomes guesswork</p>
+<p><center> 
+<img src='/blog/images/agentic-ai-patterns/evals.png' width="75%">
+</center></p>
+<p>A proper evaluation setup usually starts with datasets containing:
+- user inputs
+- expected outputs
+- scoring rubrics</p>
+<p>Then the application under test runs against those datasets  </p>
+<p>The evaluation itself can happen through:
+- humans
+- heuristics
+- LLM judges</p>
+<p>The output should not just be a score. It should explain why the system failed and what category the failure belongs to  </p>
+<p>That feedback loop is where most of the real engineering work happens  </p>
+<p>Sometimes the issue is prompt quality. Sometimes retrieval is weak. Sometimes the wrong tool gets selected. And sometimes the model itself is simply not good enough for the task  </p>
+<div class="admonition note">
+<p class="admonition-title">My personal opinion</p>
+<p>Evaluation pipelines are becoming more important than prompt engineering itself</p>
+</div>
+<hr />
+<h3 id="bringing-everything-together"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#bringing-everything-together">Bringing Everything Together 🧩</a></h3>
+<p>After working on enough enterprise AI systems, the architecture starts looking less like a chatbot and more like a distributed operating system for intelligence  </p>
+<p>You have:
+- orchestration layers
+- retrieval systems
+- communication protocols
+- safety controls
+- evaluation pipelines</p>
+<p>The LLM is obviously important. But honestly, it is only one piece of the overall system  </p>
+<p>The real engineering challenge is building everything around the model so the system remains:
+- reliable
+- observable
+- secure</p>
+<p>That is where most of the hard work starts  </p>
+<p>I think that is where the next generation of AI engineering is heading 🚀</p>
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
