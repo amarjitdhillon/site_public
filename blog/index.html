@@ -10458,7 +10458,7 @@ const initKapa = function () {
         <li class="md-nav__item">
   <a href="#building-agentic-applications-using-agentcore" class="md-nav__link">
     <span class="md-ellipsis">
-      Building Agentic Applications using Agentcore
+      Building Agentic applications using Agentcore
     </span>
   </a>
   
@@ -10612,34 +10612,37 @@ Big Data
 <p>Over the last year I’ve been building and reviewing a lot of agentic AI systems. Some were internal copilots. Some were multi-agent workflows. Some looked amazing in demos and completely collapsed once real users started interacting with them 😄</p>
 <p>After a while I noticed the same patterns showing up again and again  </p>
 <p>Not just prompt patterns. Actual architecture patterns  </p>
-<p>Things like:
-- how agents access tools
-- how agents communicate
-- where guardrails should sit
-- how evaluations should run
-- how memory should work</p>
+<p>Things like:</p>
+<ul>
+<li>how agents access tools ?</li>
+<li>how agents communicate ?</li>
+<li>where guardrails should sit ?</li>
+<li>how evaluations should run ?</li>
+<li>how memory should work ?</li>
+</ul>
 <p>This post is basically a collection of notes and patterns that I keep coming back to while designing production-grade systems  </p>
-<p>It is not meant to be a perfect academic explanation. Think of it more like architecture notes from someone trying to make these systems survive production traffic, weird user behavior and enterprise security reviews 😄</p>
+<p>I will say that it is not meant to be a perfect academic explanation. Think of it more like architecture notes from someone trying to make these systems survive production traffic, weird user behavior and enterprise security reviews 😄</p>
 <hr />
 <h3 id="high-level-agentic-ai-architecture"><a class="toclink" href="2025/08/10/agentic-ai-patterns/#high-level-agentic-ai-architecture">High Level Agentic AI Architecture 🏗️</a></h3>
 <p>When people first hear the term <em>Agentic AI</em>, they often imagine a chatbot with a few tools attached to it  </p>
 <p>In reality, once you start building enterprise systems, the architecture becomes much bigger very quickly  </p>
 <p>The diagram below is roughly how I think about a modern enterprise agentic AI stack today</p>
 <p><center> 
-<img src='/blog/images/agentic-ai-patterns/hlc-agentic-ai-architecture.jpeg' width="100%">
+<img src='/blog/images/agentic-ai-patterns/hlc-agentic-ai-architecture.png' width="100%">
 </center></p>
-<p>At the center, you still have LLMs and agents. But around them, there are many supporting layers:
-- orchestration
-- memory
-- tools
-- evaluations
-- observability</p>
+<p>At the center, you still have LLMs and agents. But around them, there are many supporting layers:</p>
+<ul>
+<li>Orchestration</li>
+<li>Memory</li>
+<li>Tools</li>
+<li>Evaluations</li>
+<li>Observability</li>
+</ul>
 <p>The user may come from Teams, Streamlit, a web app or even another MCP client. The request usually lands behind an API gateway and then reaches some kind of supervisor or orchestrator  </p>
-<p>That orchestrator becomes the brain of the system. It decides whether the request should go to a RAG agent, a reasoning agent or perhaps a review agent  </p>
+<p>That orchestrator becomes the <code>brain of the system</code>. It decides whether the request should go to a RAG agent, a reasoning agent or perhaps a review agent  </p>
 <div class="admonition note">
 <p class="admonition-title">Important shift</p>
-<p>Most enterprise AI systems are no longer "single chatbot" systems.<br />
-They are slowly becoming distributed AI workflows with multiple cooperating components</p>
+<p>Most enterprise AI systems are no longer "single chatbot" systems. They are slowly becoming distributed AI workflows with multiple cooperating components</p>
 </div>
 <p>One thing I learned pretty early is that orchestration becomes more important than the prompt itself. A great model with weak orchestration still behaves badly in production  </p>
 <hr />
@@ -10655,15 +10658,19 @@ They are slowly becoming distributed AI workflows with multiple cooperating comp
 <p>The host application contains your AI logic. This could be something like Claude Desktop, Cursor or your own internal AI portal  </p>
 <p>Inside the host application, you run an MCP client. That MCP client becomes the standardized bridge between your AI system and external services  </p>
 <p>Those external services are exposed through MCP servers  </p>
-<p>For example:
-- a GitHub MCP server
-- a file MCP server
-- an EKS MCP server</p>
+<p>For example:</p>
+<ul>
+<li>a GitHub MCP server</li>
+<li>a file MCP server</li>
+<li>an EKS MCP server</li>
+</ul>
 <p>Instead of the LLM directly talking to everything in your enterprise, it goes through a controlled layer  </p>
-<p>That controlled layer becomes extremely important because now you can apply:
-- permissions
-- logging
-- policy checks</p>
+<p>That controlled layer becomes extremely important because now you can apply:</p>
+<ul>
+<li>permissions</li>
+<li>logging</li>
+<li>policy checks</li>
+</ul>
 <div class="admonition info">
 <p class="admonition-title">Why this matters</p>
 <p>In enterprise environments, the hardest problem is usually not model intelligence.<br />
@@ -10701,10 +10708,12 @@ Start with narrow scoped tools first and slowly expand capabilities</p>
 <p>MCP is mostly about agents talking to tools  </p>
 <p>A2A is about agents talking to other agents  </p>
 <p>An agent card is one of the most important concepts here. Think of it like a public profile for an agent  </p>
-<p>It tells other agents:
-- what the agent can do
-- where it lives
-- how to authenticate</p>
+<p>It tells other agents:</p>
+<ul>
+<li>what the agent can do</li>
+<li>where it lives</li>
+<li>how to authenticate</li>
+</ul>
 <p>Once another agent discovers this information, it can delegate work using tasks and messages  </p>
 <p>A travel agent may ask a hotel agent to handle accommodations. That hotel agent may then call tools through MCP  </p>
 <p>This is why MCP and A2A usually end up existing together inside larger systems  </p>
@@ -10743,10 +10752,12 @@ RAG retrieves information. Memory usually evolves over time and becomes stateful
 <p>The big idea behind Graph RAG is relationship awareness  </p>
 <p>Instead of only retrieving similar chunks, the system also understands how entities connect with each other  </p>
 <p>A good example is airline disruption management  </p>
-<p>A vector database may retrieve compensation policy chunks. But a graph-aware system can additionally reason over relationships between:
-- customer tier
-- disruption type
-- route history</p>
+<p>A vector database may retrieve compensation policy chunks. But a graph-aware system can additionally reason over relationships between:</p>
+<ul>
+<li>customer tier</li>
+<li>disruption type</li>
+<li>route history</li>
+</ul>
 <p>That extra relationship context becomes extremely valuable in reasoning-heavy workflows  </p>
 <div class="admonition note">
 <p class="admonition-title">Reality check</p>
@@ -10921,7 +10932,7 @@ Different models often behave very differently with the same prompt</p>
           
           <li class="md-meta__item">
             
-              1 min read
+              7 min read
             
           </li>
         
@@ -10934,12 +10945,310 @@ Different models often behave very differently with the same prompt</p>
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="building-agentic-applications-using-agentcore"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/">Building Agentic Applications using Agentcore</a></h2>
-<!-- Link: https://www.confident-ai.com/blog/why-llm-as-a-judge-is-the-best-llm-evaluation-method#chain-of-thought-prompting -->
-
-<!-- https://medium.com/@amiraryani/8-types-of-prompt-engineering-5322fff77bdf -->
-
-<!-- https://medium.com/the-modern-scientist/prompt-engineering-classification-of-techniques-and-prompt-tuning-6d4247b9b64c -->
+    <h2 id="building-agentic-applications-using-agentcore"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/">Building Agentic applications using Agentcore</a></h2>
+<p>Over the last few months I spent a lot of time experimenting with AWS AgentCore and comparing it with frameworks like CrewAI and LangGraph  </p>
+<p>Initially I thought AgentCore was simply another managed AI service from AWS. But after building a few proof of concepts and reviewing the architecture deeply, I realized AWS is trying to solve something much bigger  </p>
+<p>They are slowly building a full operating system for AI agents ☁️.Honestly, once you start building real multi-agent systems, you quickly realize why this direction makes sense  </p>
+<p>The difficult part is not the LLM anymore. The difficult part is:</p>
+<ul>
+<li>memory</li>
+<li>orchestration</li>
+<li>governance</li>
+</ul>
+<p>This blog is basically my understanding of how modern agentic systems are evolving and where AWS AgentCore fits into that picture  </p>
+<hr />
+<h2 id="the-first-big-problem-memory"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#the-first-big-problem-memory">The First Big Problem: Memory 🧠</a></h2>
+<p>Most AI demos look impressive during the first interaction. Then the second interaction happens 😄</p>
+<p>The system forgets context<br />
+The agent loses state<br />
+The workflow starts hallucinating  </p>
+<p>That is when you realize memory is one of the hardest problems in agentic AI . A proper AI agent usually needs multiple kinds of memory working together</p>
+<p><center>
+<img src='/blog/images/agent-core/memories-in-agentic.png' width="90%">
+</center></p>
+<p>The way I usually explain this is:</p>
+<ul>
+<li>short-term memory handles active conversations</li>
+<li>long-term memory stores durable knowledge</li>
+<li>procedural memory stores system behavior</li>
+</ul>
+<p>This sounds simple on paper but becomes very interesting in production systems  </p>
+<hr />
+<h3 id="short-term-memory"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#short-term-memory">Short-Term Memory</a></h3>
+<p>Short-term memory is basically the working memory of the agent  </p>
+<p>This is where the active context lives:</p>
+<ul>
+<li>user prompts</li>
+<li>system prompts</li>
+<li>tool states</li>
+</ul>
+<p>In most systems this is closely tied to the model context window. You can think of it like temporary RAM for the agent  </p>
+<p>In the diagram above, the short-term layer is backed by DynamoDB and constantly updated while the user interacts with the AI system. One thing I learned very early is that short-term memory grows extremely fast in enterprise workflows  </p>
+<p>A simple chatbot conversation is manageable. But once agents start:</p>
+<ul>
+<li>calling tools</li>
+<li>invoking APIs</li>
+<li>collaborating with other agents</li>
+</ul>
+<p>The context explodes very quickly  </p>
+<div class="admonition warning">
+<p class="admonition-title">Context windows are not infinite</p>
+<p>Many teams treat the LLM context window like unlimited memory.<br />
+Eventually token limits and latency become serious problems</p>
+</div>
+<hr />
+<h3 id="long-term-memory"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#long-term-memory">Long-Term Memory</a></h3>
+<p>Long-term memory is where things become much more interesting. This memory survives beyond the current session  </p>
+<p><center>
+<img src='/blog/images/agent-core/agentcore-memory-model.png' width="100%">
+</center></p>
+<p>The diagram above shows one of the cleanest ways to think about memory separation in agentic systems. The long-term layer itself usually gets divided into:</p>
+<ul>
+<li>semantic memory</li>
+<li>episodic memory</li>
+<li>procedural memory</li>
+</ul>
+<h4 id="semantic-memory"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#semantic-memory">Semantic Memory</a></h4>
+<p>Semantic memory stores facts and knowledge. This is usually vectorized and stored inside systems like OpenSearch  </p>
+<p>Examples:</p>
+<ul>
+<li>customer preferences</li>
+<li>business rules</li>
+<li>enterprise facts</li>
+</ul>
+<p>A customer support agent may remember:</p>
+<blockquote>
+<p>customer prefers email communication</p>
+</blockquote>
+<p>Or:</p>
+<blockquote>
+<p>user usually books business class</p>
+</blockquote>
+<p>That memory becomes reusable across future interactions  </p>
+<h4 id="episodic-memory"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#episodic-memory">Episodic Memory</a></h4>
+<p>Episodic memory stores conversation history and experiences. This is where summarized interactions and historical flows live  </p>
+<p>In many architectures this ends up inside S3 because the volume grows rapidly over time. I personally think episodic memory is heavily underrated right now  </p>
+<p>It becomes extremely useful for:</p>
+<ul>
+<li>personalization</li>
+<li>audit trails</li>
+<li>agent replay</li>
+</ul>
+<h4 id="procedural-memory"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#procedural-memory">Procedural Memory</a></h4>
+<p>Procedural memory is very different. This memory stores:</p>
+<ul>
+<li>policies</li>
+<li>workflows</li>
+<li>tool definitions</li>
+</ul>
+<p>This is basically the operational behavior of the system. In enterprise environments this layer becomes extremely important because governance teams usually care more about process consistency than raw LLM intelligence 😄</p>
+<div class="admonition note">
+<p class="admonition-title">Important distinction</p>
+<p>RAG is retrieval.<br />
+Memory is persistence and evolving state over time</p>
+</div>
+<hr />
+<h2 id="aws-agentcore-starts-making-more-sense"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#aws-agentcore-starts-making-more-sense">AWS AgentCore Starts Making More Sense 🏗️</a></h2>
+<p>Once memory and orchestration become complicated, you start realizing why AWS introduced AgentCore  </p>
+<p>At a high level, AgentCore is trying to provide managed building blocks for enterprise-grade agentic systems  </p>
+<p><center>
+<img src='/blog/images/agent-core/agentcore-capabilities.png' width="100%">
+</center></p>
+<p>The architecture is actually pretty elegant once you break it down into layers  </p>
+<p>You have:</p>
+<ul>
+<li>build layer</li>
+<li>control plane</li>
+<li>execution plane</li>
+<li>platform services</li>
+</ul>
+<hr />
+<h2 id="build-layer"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#build-layer">Build Layer</a></h2>
+<p>The build layer is where developers create and package agents. This is where SDKs and harness frameworks operate  </p>
+<p>The built artifacts eventually get pushed into ECR. That part immediately reminded me of how containerized microservices evolved a few years ago  </p>
+<p>Agents are slowly becoming deployable runtime artifacts  </p>
+<div class="admonition info">
+<p class="admonition-title">Interesting shift</p>
+<p>We are slowly moving from "prompt engineering" toward "agent lifecycle management"</p>
+</div>
+<hr />
+<h2 id="control-plane"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#control-plane">Control Plane</a></h2>
+<p>The control plane is probably one of the most important parts of AgentCore. This layer handles:</p>
+<ul>
+<li>identity</li>
+<li>policy</li>
+<li>registry</li>
+</ul>
+<p>The registry concept is extremely important because modern AI systems may eventually have:</p>
+<ul>
+<li>agents</li>
+<li>MCP servers</li>
+<li>tools</li>
+</ul>
+<p>all dynamically discoverable inside the ecosystem  </p>
+<p>The identity layer controls inbound and outbound authentication while the policy layer controls authorization boundaries. This becomes very important once autonomous agents start interacting with enterprise systems  </p>
+<hr />
+<h2 id="execution-plane"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#execution-plane">Execution Plane</a></h2>
+<p>The execution plane is where the actual runtime behavior happens  </p>
+<p><center>
+<img src='/blog/images/agent-core/agentcore-anatomy.png' width="100%">
+</center></p>
+<p>This diagram is probably one of my favorite ways to visualize AgentCore internally  </p>
+<p>The runtime becomes the operational heart of the system  </p>
+<p>It interacts with:</p>
+<ul>
+<li>memory</li>
+<li>gateways</li>
+<li>MCP servers</li>
+<li>external tools</li>
+</ul>
+<p>One thing I liked here is the separation between local MCP servers and remote MCP servers. This creates a very clean abstraction model for tool access  </p>
+<p>The AI agent itself does not need direct awareness of underlying infrastructure complexity. Instead, the agent interacts through standardized interfaces  </p>
+<p>That separation becomes incredibly useful for governance and scalability  </p>
+<div class="admonition warning">
+<p class="admonition-title">Big enterprise challenge</p>
+<p>Tool governance becomes much harder than prompt governance once agents start executing actions</p>
+</div>
+<hr />
+<h2 id="mcp-and-tool-access"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#mcp-and-tool-access">MCP and Tool Access 🔌</a></h2>
+<p>One thing becoming increasingly obvious across the industry is this:</p>
+<p>Agents need standardized access to tools. Without standardization, every framework creates its own integration model and eventually the architecture becomes messy  </p>
+<p>The MCP layer in AgentCore solves a very important problem:</p>
+<ul>
+<li>tool discovery</li>
+<li>tool invocation</li>
+<li>tool isolation</li>
+</ul>
+<p>This starts making agent ecosystems much more modular. A GitHub MCP server can expose repository operations  </p>
+<p>A database MCP server can expose query operations. The AI agent only needs to understand capabilities and not infrastructure internals  </p>
+<p>That is a massive architectural improvement  </p>
+<hr />
+<h2 id="agent-memory-flow"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#agent-memory-flow">Agent Memory Flow</a></h2>
+<p>The memory flow inside AgentCore is actually very elegant once you visualize it properly  </p>
+<p><center>
+<img src='/blog/images/agent-core/agentcore-anatomy.png' width="95%">
+</center></p>
+<p>Sensory memory first enters the short-term layer. Then selected information gets persisted into long-term memory strategies  </p>
+<p>That persistence path is extremely important because not everything should become permanent memory. If every interaction becomes persistent memory:</p>
+<ul>
+<li>costs increase</li>
+<li>retrieval quality decreases</li>
+<li>hallucinations become worse</li>
+</ul>
+<p>Good memory engineering is often about deciding what NOT to remember 😄</p>
+<hr />
+<h2 id="multi-agent-patterns"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#multi-agent-patterns">Multi-Agent Patterns 🤖</a></h2>
+<p>As systems become larger, single-agent architectures start becoming limiting. That is where orchestration patterns become useful</p>
+<p><center>
+<img src='/blog/images/agent-core/patterns-mas.png' width="100%">
+</center></p>
+<p>Some patterns I repeatedly see in production systems are:</p>
+<h4 id="prompt-chaining"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#prompt-chaining">Prompt Chaining</a></h4>
+<p>One agent produces output and another agent refines it. This is one of the safest patterns because control flow remains predictable  </p>
+<h4 id="routing"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#routing">Routing</a></h4>
+<p>A lightweight router selects the correct model or chain based on task complexity. This is extremely useful for cost optimization  </p>
+<p>Not every request needs GPT-5 level reasoning 😄</p>
+<h4 id="orchestrator-worker"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#orchestrator-worker">Orchestrator-Worker</a></h4>
+<p>This is probably my favorite enterprise pattern  </p>
+<p>A supervisor agent delegates specialized work to multiple worker chains and then synthesizes the final response. This pattern maps extremely well to:</p>
+<ul>
+<li>customer service</li>
+<li>enterprise search</li>
+<li>operational workflows</li>
+</ul>
+<h4 id="evaluator-optimizer"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#evaluator-optimizer">Evaluator-Optimizer</a></h4>
+<p>This pattern becomes powerful when paired with evaluations  </p>
+<p>One component generates while another critiques and improves. This starts resembling iterative reasoning systems  </p>
+<div class="admonition note">
+<p class="admonition-title">Production reality</p>
+<p>Simpler orchestration patterns are usually more stable than overly autonomous systems</p>
+</div>
+<hr />
+<h2 id="crewai-vs-langgraph-vs-agentcore"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#crewai-vs-langgraph-vs-agentcore">CrewAI vs LangGraph vs AgentCore ⚔️</a></h2>
+<p>A question I get a lot is:</p>
+<blockquote>
+<p>Which framework should we choose?</p>
+</blockquote>
+<p>Honestly, they solve different problems  </p>
+<hr />
+<h3 id="crewai"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#crewai">CrewAI</a></h3>
+<p>CrewAI feels very natural when building collaborative agent systems  </p>
+<p><center>
+<img src='/blog/images/agent-core/crew-ai.png' width="90%">
+</center></p>
+<p>The framework focuses heavily on:</p>
+<ul>
+<li>role-based agents</li>
+<li>delegation</li>
+<li>collaboration</li>
+</ul>
+<p>It feels intuitive because the architecture resembles human teams  </p>
+<p>You define:</p>
+<ul>
+<li>researcher agent</li>
+<li>writer agent</li>
+<li>reviewer agent</li>
+</ul>
+<p>Then coordinate workflows between them. CrewAI is very good for fast experimentation and collaborative workflows  </p>
+<p>I personally think it is one of the easiest frameworks for demonstrating multi-agent concepts quickly  </p>
+<hr />
+<h3 id="langgraph"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#langgraph">LangGraph</a></h3>
+<p>LangGraph feels much more deterministic and engineering-oriented  </p>
+<p><center>
+<img src='/blog/images/agent-core/lang-graph.png' width="90%">
+</center></p>
+<p>This framework focuses heavily on:</p>
+<ul>
+<li>state management</li>
+<li>graph execution</li>
+<li>reliability</li>
+</ul>
+<p>What I really like about LangGraph is explicit control. The developer controls nodes, edges and execution flow directly  </p>
+<p>This makes it extremely useful for:
+- long-running workflows
+- HITL systems
+- checkpointing</p>
+<p>The time-travel debugging capability is honestly very powerful for enterprise troubleshooting  </p>
+<div class="admonition tip">
+<p class="admonition-title">My practical view</p>
+<p>CrewAI feels closer to collaborative reasoning.<br />
+LangGraph feels closer to workflow orchestration engineering</p>
+</div>
+<hr />
+<h2 id="where-aws-agentcore-fits"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#where-aws-agentcore-fits">Where AWS AgentCore Fits</a></h2>
+<p>This is where things become interesting  </p>
+<p>AgentCore is not really trying to replace CrewAI or LangGraph completely. Instead, AWS appears to be building the enterprise runtime layer around these patterns  </p>
+<p>You can still use:</p>
+<ul>
+<li>CrewAI</li>
+<li>LangGraph</li>
+<li>custom orchestrators</li>
+</ul>
+<p>But AgentCore tries to provide:</p>
+<ul>
+<li>governance</li>
+<li>observability</li>
+<li>identity</li>
+<li>runtime services</li>
+</ul>
+<p>This is actually a smart strategy from AWS  </p>
+<p>Because enterprises usually care more about:</p>
+<ul>
+<li>Security</li>
+<li>Auditability</li>
+<li>Scalability</li>
+</ul>
+<p>than framework popularity itself  </p>
+<hr />
+<h2 id="final-thoughts"><a class="toclink" href="2025/01/17/building-agentic-applications-using-agentcore/#final-thoughts">Final Thoughts 🚀</a></h2>
+<p>The industry is slowly moving beyond simple chatbots. We are entering a phase where AI systems behave more like distributed software platforms with:</p>
+<ul>
+<li>Memory</li>
+<li>Orchestration</li>
+<li>Governance</li>
+</ul>
+<p>Honestly, I think memory architecture will become one of the biggest differentiators in future agentic systems, Not model size or the prompt engineering  </p>
+<p>Memory quality and orchestration quality. AWS AgentCore is interesting because it acknowledges this reality directly. Instead of focusing only on models, it focuses on the operational ecosystem around agents. I think that is exactly where enterprise AI is heading next</p>
     
   </div>
 </article>

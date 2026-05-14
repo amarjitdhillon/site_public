@@ -10685,34 +10685,37 @@ as the main headline.
 <p>Over the last year I’ve been building and reviewing a lot of agentic AI systems. Some were internal copilots. Some were multi-agent workflows. Some looked amazing in demos and completely collapsed once real users started interacting with them 😄</p>
 <p>After a while I noticed the same patterns showing up again and again  </p>
 <p>Not just prompt patterns. Actual architecture patterns  </p>
-<p>Things like:
-- how agents access tools
-- how agents communicate
-- where guardrails should sit
-- how evaluations should run
-- how memory should work</p>
+<p>Things like:</p>
+<ul>
+<li>how agents access tools ?</li>
+<li>how agents communicate ?</li>
+<li>where guardrails should sit ?</li>
+<li>how evaluations should run ?</li>
+<li>how memory should work ?</li>
+</ul>
 <p>This post is basically a collection of notes and patterns that I keep coming back to while designing production-grade systems  </p>
-<p>It is not meant to be a perfect academic explanation. Think of it more like architecture notes from someone trying to make these systems survive production traffic, weird user behavior and enterprise security reviews 😄</p>
+<p>I will say that it is not meant to be a perfect academic explanation. Think of it more like architecture notes from someone trying to make these systems survive production traffic, weird user behavior and enterprise security reviews 😄</p>
 <hr />
 <h2 id="high-level-agentic-ai-architecture">High Level Agentic AI Architecture 🏗️<a class="headerlink" href="#high-level-agentic-ai-architecture" title="Link to this section">&para;</a></h2>
 <p>When people first hear the term <em>Agentic AI</em>, they often imagine a chatbot with a few tools attached to it  </p>
 <p>In reality, once you start building enterprise systems, the architecture becomes much bigger very quickly  </p>
 <p>The diagram below is roughly how I think about a modern enterprise agentic AI stack today</p>
 <p><center> 
-<img src='/blog/images/agentic-ai-patterns/hlc-agentic-ai-architecture.jpeg' width="100%">
+<img src='/blog/images/agentic-ai-patterns/hlc-agentic-ai-architecture.png' width="100%">
 </center></p>
-<p>At the center, you still have LLMs and agents. But around them, there are many supporting layers:
-- orchestration
-- memory
-- tools
-- evaluations
-- observability</p>
+<p>At the center, you still have LLMs and agents. But around them, there are many supporting layers:</p>
+<ul>
+<li>Orchestration</li>
+<li>Memory</li>
+<li>Tools</li>
+<li>Evaluations</li>
+<li>Observability</li>
+</ul>
 <p>The user may come from Teams, Streamlit, a web app or even another MCP client. The request usually lands behind an API gateway and then reaches some kind of supervisor or orchestrator  </p>
-<p>That orchestrator becomes the brain of the system. It decides whether the request should go to a RAG agent, a reasoning agent or perhaps a review agent  </p>
+<p>That orchestrator becomes the <code>brain of the system</code>. It decides whether the request should go to a RAG agent, a reasoning agent or perhaps a review agent  </p>
 <div class="admonition note">
 <p class="admonition-title">Important shift</p>
-<p>Most enterprise AI systems are no longer "single chatbot" systems.<br />
-They are slowly becoming distributed AI workflows with multiple cooperating components</p>
+<p>Most enterprise AI systems are no longer "single chatbot" systems. They are slowly becoming distributed AI workflows with multiple cooperating components</p>
 </div>
 <p>One thing I learned pretty early is that orchestration becomes more important than the prompt itself. A great model with weak orchestration still behaves badly in production  </p>
 <hr />
@@ -10728,15 +10731,19 @@ They are slowly becoming distributed AI workflows with multiple cooperating comp
 <p>The host application contains your AI logic. This could be something like Claude Desktop, Cursor or your own internal AI portal  </p>
 <p>Inside the host application, you run an MCP client. That MCP client becomes the standardized bridge between your AI system and external services  </p>
 <p>Those external services are exposed through MCP servers  </p>
-<p>For example:
-- a GitHub MCP server
-- a file MCP server
-- an EKS MCP server</p>
+<p>For example:</p>
+<ul>
+<li>a GitHub MCP server</li>
+<li>a file MCP server</li>
+<li>an EKS MCP server</li>
+</ul>
 <p>Instead of the LLM directly talking to everything in your enterprise, it goes through a controlled layer  </p>
-<p>That controlled layer becomes extremely important because now you can apply:
-- permissions
-- logging
-- policy checks</p>
+<p>That controlled layer becomes extremely important because now you can apply:</p>
+<ul>
+<li>permissions</li>
+<li>logging</li>
+<li>policy checks</li>
+</ul>
 <div class="admonition info">
 <p class="admonition-title">Why this matters</p>
 <p>In enterprise environments, the hardest problem is usually not model intelligence.<br />
@@ -10774,10 +10781,12 @@ Start with narrow scoped tools first and slowly expand capabilities</p>
 <p>MCP is mostly about agents talking to tools  </p>
 <p>A2A is about agents talking to other agents  </p>
 <p>An agent card is one of the most important concepts here. Think of it like a public profile for an agent  </p>
-<p>It tells other agents:
-- what the agent can do
-- where it lives
-- how to authenticate</p>
+<p>It tells other agents:</p>
+<ul>
+<li>what the agent can do</li>
+<li>where it lives</li>
+<li>how to authenticate</li>
+</ul>
 <p>Once another agent discovers this information, it can delegate work using tasks and messages  </p>
 <p>A travel agent may ask a hotel agent to handle accommodations. That hotel agent may then call tools through MCP  </p>
 <p>This is why MCP and A2A usually end up existing together inside larger systems  </p>
@@ -10816,10 +10825,12 @@ RAG retrieves information. Memory usually evolves over time and becomes stateful
 <p>The big idea behind Graph RAG is relationship awareness  </p>
 <p>Instead of only retrieving similar chunks, the system also understands how entities connect with each other  </p>
 <p>A good example is airline disruption management  </p>
-<p>A vector database may retrieve compensation policy chunks. But a graph-aware system can additionally reason over relationships between:
-- customer tier
-- disruption type
-- route history</p>
+<p>A vector database may retrieve compensation policy chunks. But a graph-aware system can additionally reason over relationships between:</p>
+<ul>
+<li>customer tier</li>
+<li>disruption type</li>
+<li>route history</li>
+</ul>
 <p>That extra relationship context becomes extremely valuable in reasoning-heavy workflows  </p>
 <div class="admonition note">
 <p class="admonition-title">Reality check</p>
