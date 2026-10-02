@@ -1,0 +1,25 @@
+# Bulk scrapers and AI training crawlers: no access
+User-agent: Timpibot
+User-agent: Bytespider
+User-agent: CCBot
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: Amazonbot
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: MJ12bot
+User-agent: DotBot
+User-agent: PetalBot
+User-agent: DataForSeoBot
+User-agent: ImagesiftBot
+Disallow: /
+
+# Everyone else (Google, Bing, AI search assistants): welcome, slowly
+User-agent: *
+Disallow: /404.html
+Crawl-delay: 10
+
+Sitemap: https://www.amarjitdhillon.com/sitemap.xml
