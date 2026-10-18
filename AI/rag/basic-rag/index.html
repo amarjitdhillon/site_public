@@ -10871,23 +10871,23 @@ If you wanna keep internal data off the public internet:</p>
 </thead>
 <tbody>
 <tr>
-<td>🧑‍⚖️ <strong>Knowledge curation</strong></td>
+<td><strong>Knowledge curation</strong></td>
 <td>A nightly <abbr title="A time-based job scheduler">CRON</abbr> job drafts <abbr title="Knowledge Base">KB</abbr> articles from resolved tickets, then a human signs off before they go into the doc store</td>
 </tr>
 <tr>
-<td>📄 <strong>Documents</strong></td>
+<td><strong>Documents</strong></td>
 <td>The raw stuff lives in S3, RDS or JSON</td>
 </tr>
 <tr>
-<td>🅰️ <strong>Ingest + chunk</strong></td>
-<td>A scheduled job on <strong>AWS Fargate</strong> pulls the docs, scrapes web pages (headless browser, HTML → Markdown) and chops everything into chunks ✂️</td>
+<td><strong>A. Ingest + chunk</strong></td>
+<td>A scheduled job on <strong>AWS Fargate</strong> pulls the docs, scrapes web pages (headless browser, HTML → Markdown) and chops everything into chunks</td>
 </tr>
 <tr>
-<td>🧬 <strong>Embed</strong></td>
+<td><strong>Embed</strong></td>
 <td>Every chunk goes through an <strong>embeddings model</strong> (Cohere) and comes out as a vector</td>
 </tr>
 <tr>
-<td>🅱️ <strong>Store</strong></td>
+<td><strong>B. Store</strong></td>
 <td>Embeddings + chunk text + metadata land in the <strong>vector DB</strong> (OpenSearch or Postgres with pgvector)</td>
 </tr>
 </tbody>
@@ -10904,28 +10904,28 @@ If you wanna keep internal data off the public internet:</p>
 </thead>
 <tbody>
 <tr>
-<td>1️⃣</td>
-<td>User fires a prompt at the app (the orchestrator) 💬</td>
+<td><strong>1</strong></td>
+<td>User fires a prompt at the app (the orchestrator)</td>
 </tr>
 <tr>
-<td>2️⃣</td>
-<td>App <strong>encodes</strong> the prompt with the <em>same</em> embeddings model → query vector 🧬</td>
+<td><strong>2</strong></td>
+<td>App <strong>encodes</strong> the prompt with the <em>same</em> embeddings model → query vector</td>
 </tr>
 <tr>
-<td>3️⃣</td>
-<td>App does a <strong>similarity search</strong> in the vector DB and pulls back the top X similar chunks 🔎</td>
+<td><strong>3</strong></td>
+<td>App does a <strong>similarity search</strong> in the vector DB and pulls back the top X similar chunks</td>
 </tr>
 <tr>
-<td>4️⃣</td>
-<td>Those chunks + the prompt go to the <strong>re-ranker + filter</strong>, which keeps only the best top K 🏆</td>
+<td><strong>4</strong></td>
+<td>Those chunks + the prompt go to the <strong>re-ranker + filter</strong>, which keeps only the best top K</td>
 </tr>
 <tr>
-<td>5️⃣</td>
-<td>App sends <strong>prompt + top K context</strong> to the <abbr title="Large Language Model">LLM</abbr> (Anthropic Claude) 🤖</td>
+<td><strong>5</strong></td>
+<td>App sends <strong>prompt + top K context</strong> to the <abbr title="Large Language Model">LLM</abbr> (Anthropic Claude)</td>
 </tr>
 <tr>
-<td>6️⃣</td>
-<td>Grounded answer goes back to the user 🎉</td>
+<td><strong>6</strong></td>
+<td>Grounded answer goes back to the user</td>
 </tr>
 </tbody>
 </table>
@@ -11038,34 +11038,34 @@ If you wanna keep internal data off the public internet:</p>
 </thead>
 <tbody>
 <tr>
-<td>📏 Fixed size</td>
+<td>Fixed size</td>
 <td>Dead simple</td>
 <td>Fast, easy</td>
-<td>Chops ideas in half, that's why it's crossed out in the diagram ❌</td>
+<td>Chops ideas in half, that's why it's crossed out in the diagram</td>
 </tr>
 <tr>
-<td>🧠 Semantic</td>
+<td>Semantic</td>
 <td>Splits where meaning changes</td>
 <td>Better context</td>
-<td>Slower to index 🐢</td>
+<td>Slower to index</td>
 </tr>
 <tr>
-<td>🏷️ Metadata-based</td>
+<td>Metadata-based</td>
 <td>Splits on headings / sections</td>
 <td>Great for filtering</td>
 <td>Needs well-structured docs</td>
 </tr>
 <tr>
-<td>👨‍👧 Parent-child</td>
+<td>Parent-child</td>
 <td>Search small, send big</td>
-<td>Precise <em>and</em> enough context 🎯</td>
+<td>Precise <em>and</em> enough context</td>
 <td>More moving parts</td>
 </tr>
 <tr>
-<td>🧭 Context-aware</td>
+<td>Context-aware</td>
 <td>Adds a doc summary to each chunk</td>
 <td>Chunks make sense on their own</td>
-<td>Extra <abbr title="Large Language Model">LLM</abbr> calls at index time 💸</td>
+<td>Extra <abbr title="Large Language Model">LLM</abbr> calls at index time</td>
 </tr>
 </tbody>
 </table>
