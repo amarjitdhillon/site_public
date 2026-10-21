@@ -765,3 +765,14 @@ table code {
 @media screen and (max-width: 76.234375em) {
   .md-sidebar--primary[hidden] { display: block }
 }
+
+/* Animated step-by-step diagrams embedded from docs/**/anim/*.html */
+.md-typeset iframe.anim-diagram {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1660 / 1140;
+  min-height: 380px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: .6rem;
+  background: #fff;
+}
