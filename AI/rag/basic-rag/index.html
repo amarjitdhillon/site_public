@@ -2524,6 +2524,8 @@ const initKapa = function () {
       
         
       
+        
+      
     
     
       
@@ -2640,6 +2642,29 @@ const initKapa = function () {
   
   <span class="md-ellipsis">
     TOGAF Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../togaf/ai-sa-role/" class="md-nav__link">
+        
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4m4 10.54c0 1.06-.28 3.53-2.19 6.29L13 15l.94-1.88c-.62-.07-1.27-.12-1.94-.12s-1.32.05-1.94.12L11 15l-.81 4.83C8.28 17.07 8 14.6 8 13.54c-2.39.7-4 1.96-4 3.46v4h16v-4c0-1.5-1.6-2.76-4-3.46"/></svg>
+  
+  <span class="md-ellipsis">
+    AI Solution Architect Role
   </span>
   
 
@@ -10830,11 +10855,10 @@ as the main headline.
 <h1 id="basic-rag">Basic <abbr title="Retrieval-Augmented Generation">RAG</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.68 12.32a4.49 4.49 0 0 0-6.36.01 4.49 4.49 0 0 0 0 6.36 4.51 4.51 0 0 0 5.57.63L21 22.39 22.39 21l-3.09-3.11c1.13-1.77.87-4.09-.62-5.57m-1.41 4.95c-.98.98-2.56.97-3.54 0-.97-.98-.97-2.56.01-3.54.97-.97 2.55-.97 3.53 0 .97.98.97 2.56 0 3.54M10.9 20.1a6.5 6.5 0 0 1-1.48-2.32C6.27 17.25 4 15.76 4 14v3c0 2.21 3.58 4 8 4-.4-.26-.77-.56-1.1-.9M4 9v3c0 1.68 2.07 3.12 5 3.7v-.2c0-.93.2-1.85.58-2.69C6.34 12.3 4 10.79 4 9m8-6C7.58 3 4 4.79 4 7c0 2 3 3.68 6.85 4h.05c1.2-1.26 2.86-2 4.6-2 .91 0 1.81.19 2.64.56A3.22 3.22 0 0 0 20 7c0-2.21-3.58-4-8-4"/></svg></span><a class="headerlink" href="#basic-rag" title="Link to this section">&para;</a></h1>
 <div class="admonition abstract">
 <p class="admonition-title">TL;DR 🚀</p>
-<p>Your <abbr title="Large Language Model">LLM</abbr> doesn't know your company stuff 🤷 → so at question time you <strong>fetch the right chunks</strong> from your docs 📚 and <strong>stuff them into the prompt</strong> 🧠<br />
-Boom 💥 grounded answers, with sources, and zero retraining 🙌</p>
+<p>Your <abbr title="Large Language Model">LLM</abbr> doesn't know your company stuff 🤷, so at question time you <strong>fetch the right chunks</strong> from your docs 📚 and <strong>stuff them into the prompt</strong> 🧠. Boom 💥 grounded answers, with sources, and zero retraining 🙌</p>
 </div>
 <p><a href="../../images/basic-rag.png" target="_blank"><img alt="Basic RAG architecture" src="../../images/basic-rag.png" width="100%" /></a></p>
-<p><small><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2a7 7 0 0 1 7 7c0 1.57-.5 3-1.39 4.19l.8.81H16l6 6-2 2-6-6v-.59l-.81-.8A6.9 6.9 0 0 1 9 16a7 7 0 0 1-7-7 7 7 0 0 1 7-7M8 5v3H5v2h3v3h2v-3h3V8h-3V5z"/></svg></span> Click the diagram to zoom in</small></p>
+<p><small><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2a7 7 0 0 1 7 7c0 1.57-.5 3-1.39 4.19l.8.81H16l6 6-2 2-6-6v-.59l-.81-.8A6.9 6.9 0 0 1 9 16a7 7 0 0 1-7-7 7 7 0 0 1 7-7M8 5v3H5v2h3v3h2v-3h3V8h-3V5z"/></svg></span> Click the diagram to zoom in, or <a href="https://lucid.app/lucidchart/499caa45-a907-4d83-8a93-252d88eb6884/edit?page=6uGkpr-EV8Hu" target="_blank">open the source <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2z"/></svg></span></a></small></p>
 <h2 id="so-whats-the-problem">So what's the problem? 🤔<a class="headerlink" href="#so-whats-the-problem" title="Link to this section">&para;</a></h2>
 <p>LLMs only know what they saw during training 📅 so they've got zero clue about your policies, tickets or product docs<br />
 Ask them anyway and they'll just confidently make stuff up 🙃🤥</p>
@@ -10842,13 +10866,11 @@ Ask them anyway and they'll just confidently make stuff up 🙃🤥</p>
 The model answers from that context, so you get <mark>grounded, up-to-date answers you can trace back to a source</mark> ✅ and no retraining needed 🙌</p>
 <div class="admonition tip">
 <p class="admonition-title">The big win for enterprises 🏢</p>
-<p><abbr title="Retrieval-Augmented Generation">RAG</abbr> is how you plug an <strong>internal <abbr title="Knowledge Base">KB</abbr></strong> 🔒 into an <abbr title="Large Language Model">LLM</abbr> <strong>without making it public or baking it into the model</strong><br />
-Your docs stay in your own stores (S3, vector DB) 🗄️ and only the few chunks that matter for each question get sent over</p>
+<p><abbr title="Retrieval-Augmented Generation">RAG</abbr> is how you plug an <strong>internal <abbr title="Knowledge Base">KB</abbr></strong> 🔒 into an <abbr title="Large Language Model">LLM</abbr> <strong>without making it public or baking it into the model</strong>. Your docs stay in your own stores (S3, vector DB) 🗄️ and only the few chunks that matter for each question get sent over</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Heads up, <abbr title="Retrieval-Augmented Generation">RAG</abbr> alone doesn't make it private ⚠️</p>
-<p>The retrieved chunks <em>do</em> go to the <abbr title="Large Language Model">LLM</abbr> on every request 📤<br />
-If you wanna keep internal data off the public internet:</p>
+<p>The retrieved chunks <em>do</em> go to the <abbr title="Large Language Model">LLM</abbr> on every request 📤, so if you wanna keep internal data off the public internet:</p>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Host the model privately, e.g. Amazon Bedrock over PrivateLink in your <abbr title="Virtual Private Cloud">VPC</abbr> 🛡️</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Make sure the provider doesn't train on your data 🚫🏋️</li>
@@ -11072,23 +11094,22 @@ If you wanna keep internal data off the public internet:</p>
 <h3 id="other-calls-youll-have-to-make">Other calls you'll have to make 🧐<a class="headerlink" href="#other-calls-youll-have-to-make" title="Link to this section">&para;</a></h3>
 <div class="admonition success">
 <p class="admonition-title">Retrieve wide, re-rank narrow 🎯</p>
-<p>Pull the top X (like 20–50) with vector search, let the re-ranker pick the top K (like 3–5)<br />
-Better relevance <strong>and</strong> a smaller, cheaper prompt 💸</p>
+<p>Pull the top X (like 20–50) with vector search and let the re-ranker pick the top K (like 3–5). You get better relevance <strong>and</strong> a smaller, cheaper prompt 💸</p>
 </div>
 <div class="admonition danger">
 <p class="admonition-title">Same embeddings model on both sides 🔁</p>
-<p>Query and docs <strong>must</strong> use the same model<br />
-Swap the model and you're re-indexing <em>everything</em> 😵</p>
+<p>Query and docs <strong>must</strong> use the same model, swap it and you're re-indexing <em>everything</em> 😵</p>
 </div>
 <details class="info">
 <summary>Offline vs online indexing 🕒</summary>
-<p><strong>Batch on a <abbr title="A time-based job scheduler">CRON</abbr></strong>: cheap and easy, but answers can lag behind the docs<br />
-<strong>Near-real-time</strong> (e.g. on S3 events): fresher answers, more infra and more 💰</p>
+<ul>
+<li><strong>Batch on a <abbr title="A time-based job scheduler">CRON</abbr></strong>: cheap and easy, but answers can lag behind the docs</li>
+<li><strong>Near-real-time</strong> (e.g. on S3 events): fresher answers, more infra and more 💰</li>
+</ul>
 </details>
 <details class="info">
 <summary>Human in the loop 🙋</summary>
-<p>Auto-drafted <abbr title="Knowledge Base">KB</abbr> articles get a human thumbs-up 👍 before indexing<br />
-So junk from old tickets doesn't turn into "facts" 🗑️</p>
+<p>Auto-drafted <abbr title="Knowledge Base">KB</abbr> articles get a human thumbs-up 👍 before indexing, so junk from old tickets doesn't turn into "facts" 🗑️</p>
 </details>
 <h2 id="when-to-use-it-and-when-not-to">When to use it (and when not to) 🚦<a class="headerlink" href="#when-to-use-it-and-when-not-to" title="Link to this section">&para;</a></h2>
 <div class="grid">
@@ -11112,26 +11133,35 @@ So junk from old tickets doesn't turn into "facts" 🗑️</p>
 <h2 id="faqs">FAQs 💬<a class="headerlink" href="#faqs" title="Link to this section">&para;</a></h2>
 <details class="question">
 <summary>Why <abbr title="Retrieval-Augmented Generation">RAG</abbr> and not fine-tuning? 🤷</summary>
-<p>Fine-tuning teaches the model <em>behaviour and style</em> 🎭, <abbr title="Retrieval-Augmented Generation">RAG</abbr> gives it <em>knowledge</em> at query time 📚<br />
-<abbr title="Retrieval-Augmented Generation">RAG</abbr> is cheaper, updates the moment the index does, and can cite sources<br />
-Fine-tuning wins for a fixed output format or domain tone, and tbh a lot of teams do both 🤝</p>
+<ul>
+<li><strong>Fine-tuning</strong> teaches the model <em>behaviour and style</em> 🎭, and wins for a fixed output format or domain tone</li>
+<li><strong><abbr title="Retrieval-Augmented Generation">RAG</abbr></strong> gives it <em>knowledge</em> at query time 📚, is cheaper, updates the moment the index does, and can cite sources</li>
+<li>Tbh a lot of teams do both 🤝</li>
+</ul>
 </details>
 <details class="question">
 <summary>Why a re-ranker if I already have similarity search? 🏆</summary>
-<p>Vector similarity compares two embeddings separately, so it's fast but approximate ⚡<br />
-A re-ranker (cross-encoder) reads the query and each chunk <em>together</em> and scores real relevance 🎯<br />
-Retrieve wide with vectors, re-rank narrow for precision and a smaller prompt</p>
+<ul>
+<li><strong>Vector similarity</strong> compares two embeddings separately, so it's fast but approximate ⚡</li>
+<li><strong>A re-ranker</strong> (cross-encoder) reads the query and each chunk <em>together</em> and scores real relevance 🎯</li>
+<li>So retrieve wide with vectors, then re-rank narrow for precision and a smaller prompt</li>
+</ul>
 </details>
 <details class="question">
 <summary>How big should chunks be? 📏</summary>
-<p>Start around <strong>300–800 tokens</strong> with <strong>10–20% overlap</strong>, then tune it against an eval set 🧪<br />
-Too small and you lose context, too big and relevance gets diluted and you burn tokens 🔥<br />
-Parent-child chunking lets you dodge picking just one size 😎</p>
+<ul>
+<li>Start around <strong>300–800 tokens</strong> with <strong>10–20% overlap</strong>, then tune it against an eval set 🧪</li>
+<li>Too small and you lose context, too big and relevance gets diluted and you burn tokens 🔥</li>
+<li>Parent-child chunking lets you dodge picking just one size 😎</li>
+</ul>
 </details>
 <details class="question">
 <summary>How do I keep the index fresh? 🥬</summary>
-<p>Scheduled re-ingestion (the <abbr title="A time-based job scheduler">CRON</abbr> job here) for batch sources ⏰, plus event-driven updates (e.g. S3 events) for stuff that has to be fresh ⚡<br />
-Keep a doc hash or version in the metadata so you only re-embed what actually changed 🧠</p>
+<ul>
+<li><strong>Scheduled re-ingestion</strong> (the <abbr title="A time-based job scheduler">CRON</abbr> job here) for batch sources ⏰</li>
+<li><strong>Event-driven updates</strong> (e.g. S3 events) for stuff that has to be fresh ⚡</li>
+<li>Keep a doc hash or version in the metadata so you only re-embed what actually changed 🧠</li>
+</ul>
 </details>
 <details class="question">
 <summary>How do I know if my <abbr title="Retrieval-Augmented Generation">RAG</abbr> is any good? 📊</summary>
@@ -11143,9 +11173,11 @@ Keep a doc hash or version in the metadata so you only re-embed what actually ch
 </details>
 <details class="question">
 <summary>Does <abbr title="Retrieval-Augmented Generation">RAG</abbr> keep internal data private? 🔒</summary>
-<p>Kinda 😅 The <abbr title="Knowledge Base">KB</abbr> is never public and never ends up in model weights, but the retrieved chunks get sent to the <abbr title="Large Language Model">LLM</abbr> with every prompt<br />
-Privacy depends on <em>where the model runs</em>, so use a private endpoint (Bedrock with PrivateLink, Azure OpenAI with private networking) with no training on your data 🛡️<br />
-And add doc-level access control at retrieval time, otherwise <abbr title="Retrieval-Augmented Generation">RAG</abbr> can happily leak docs to people who shouldn't see them 🫣</p>
+<p>Kinda 😅 The <abbr title="Knowledge Base">KB</abbr> is never public and never ends up in model weights, but the retrieved chunks get sent to the <abbr title="Large Language Model">LLM</abbr> with every prompt</p>
+<ul>
+<li><strong>Private endpoint</strong>: Bedrock with PrivateLink or Azure OpenAI with private networking, with no training on your data 🛡️</li>
+<li><strong>Doc-level access control</strong> at retrieval time, otherwise <abbr title="Retrieval-Augmented Generation">RAG</abbr> can happily leak docs to people who shouldn't see them 🫣</li>
+</ul>
 </details>
 <details class="question">
 <summary>How do I cut down hallucinations even more? 🤥</summary>
