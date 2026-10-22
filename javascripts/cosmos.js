@@ -157,7 +157,7 @@ document$.subscribe(function () {
     // spiral galaxy, slowly turning
     var gs = galaxy.width / dpr;
     ctx.save();
-    ctx.translate(W * .84 - mx * 6, H * .3 - my * 6);
+    ctx.translate(W * .95 - mx * 6, H * .12 - my * 6); // top-right corner, clear of Shiva
     ctx.rotate(now * .00004);
     ctx.globalAlpha = .75;
     ctx.drawImage(galaxy, -gs / 2, -gs / 2, gs, gs);

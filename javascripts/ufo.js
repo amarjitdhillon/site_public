@@ -28,7 +28,7 @@
     var r = hero.getBoundingClientRect(), W = r.width, H = r.height;
     var size = Math.max(54, Math.min(96, W * .07));
     var ltr = Math.random() < .5, dur = 6500, t0 = null;
-    var yBase = 12 + Math.random() * Math.min(H * .1, 50); // top band of the sky, clear of the headline on any screen
+    var yBase = 8 + Math.random() * Math.min(H * .06, 30); // top band of the sky, above the headline and above Shiva's head
     function ease(t) { return t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2 } // gentle start and stop
     function step(now) {
       if (!t0) t0 = now;

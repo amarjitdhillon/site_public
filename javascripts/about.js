@@ -30,6 +30,29 @@ document$.subscribe(function () {
     a.href = "mailto:" + a.dataset.u + "@" + a.dataset.d + "?subject=" + encodeURIComponent("Hi Amar, from your TechSpace");
   });
 
+  // Faith panel: a <button data-yt> Listen opens an embedded YouTube player (loaded only on click, no cookies until it plays).
+  // The current recording blocks embedding, so the page uses a plain link to YouTube instead; this stays for one that allows it
+  document.querySelectorAll(".faith__listen[data-yt]").forEach(function (btn) {
+    if (btn.dataset.ready) return;
+    btn.dataset.ready = "1";
+    var box = btn.closest(".faith").querySelector(".faith__player");
+    btn.addEventListener("click", function () {
+      var open = box.hidden;
+      if (open && !box.firstChild) {
+        var f = document.createElement("iframe");
+        f.src = "https://www.youtube-nocookie.com/embed/" + btn.dataset.yt + "?autoplay=1&rel=0";
+        f.title = "Nirvana Shatakam";
+        f.allow = "autoplay; encrypted-media; picture-in-picture";
+        f.allowFullscreen = true;
+        box.appendChild(f);
+      }
+      if (!open) box.innerHTML = ""; // closing stops the music
+      box.hidden = !open;
+      btn.setAttribute("aria-expanded", String(open));
+      btn.querySelector(".faith__play").textContent = open ? "■" : "▶";
+    });
+  });
+
   // Rotating role line in the hero
   var rot = document.querySelector(".about-rotator[data-words]");
   if (rot && !rot.dataset.started) {

@@ -82,7 +82,7 @@
   // A content image is zoomable if it's diagram-sized and not an icon/emoji/badge,
   // and it isn't a link to another page (those keep working as links).
   function zoomable(im) {
-    if (!im.closest(".md-typeset") || im.closest(".lb, .twemoji, .emojione, .cert-tile, .cert-badge, .cert-feat, .about-hero")) return false;
+    if (!im.closest(".md-typeset") || im.closest(".lb, .twemoji, .emojione, .cert-tile, .cert-badge, .cert-feat, .about-hero, .faith")) return false;
     var a = im.closest("a");
     if (a && !IMG_RE.test(a.getAttribute("href") || "")) return false;
     return (im.naturalWidth || im.width) >= 240 && im.getBoundingClientRect().width >= 120;
