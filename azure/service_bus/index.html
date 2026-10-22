@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -10992,9 +10995,9 @@ as the main headline.
 <iframe width="1136" height="639" src="https://www.youtube.com/embed/Z6tkZg3cv8Q" title="Enqueue messages to Azure Service Bus" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 <h2 id="architecture">Architecture 🏛️<a class="headerlink" href="#architecture" title="Link to this section">&para;</a></h2>
-<p><center> <img src="../images/sb-arch.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/sb-arch.jpg" alt="Sb arch" width="100%"> </center></p>
 <h2 id="authorization">Authorization 🔐<a class="headerlink" href="#authorization" title="Link to this section">&para;</a></h2>
-<p><center> <img src="../images/sb-auth.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/sb-auth.jpg" alt="Sb auth" width="100%"> </center></p>
 <h2 id="concepts">Concepts<a class="headerlink" href="#concepts" title="Link to this section">&para;</a></h2>
 <h3 id="messages">Messages ✉️<a class="headerlink" href="#messages" title="Link to this section">&para;</a></h3>
 <p>Data is transferred between different applications and services using messages. Messages can be in <code>JSON</code>, <code>XML</code>, <code>Apache Avro</code>, <code>Plain Text</code> format.</p>
@@ -11005,15 +11008,15 @@ as the main headline.
 <li>Once the broker accepts the message, the message is always held durably in triple-redundant storage, spread across availability zones if the namespace is zone-enabled.</li>
 <li><mark>Messages are delivered in pull mode</mark>, only delivering messages when requested. </li>
 </ul>
-<p><center> <img src="../images/sb-queue-1.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/sb-queue-1.jpg" alt="Sb queue 1" width="100%"> </center></p>
 <p>Dead letter queue and rejected  queues are shown below
-<center> <img src="../images/sb-queue-2.jpg" width="100%"> </center></p>
-<p><center> <img src="../images/sb-queue-3.jpg" width="100%"> </center></p>
+<center> <img src="../images/sb-queue-2.jpg" alt="Sb queue 2" width="100%"> </center></p>
+<p><center> <img src="../images/sb-queue-3.jpg" alt="Sb queue 3" width="100%"> </center></p>
 <h3 id="topics">Topics 📋<a class="headerlink" href="#topics" title="Link to this section">&para;</a></h3>
 <ul>
 <li>While a queue is often used for <code>point-to-point communication</code>, topics are useful in <code>publish/subscribe scenarios</code>.</li>
 </ul>
-<p><center> <img src="../images/sb-topic-1.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/sb-topic-1.jpg" alt="Sb topic 1" width="100%"> </center></p>
 <h3 id="subscriptions">Subscriptions ✅<a class="headerlink" href="#subscriptions" title="Link to this section">&para;</a></h3>
 <ul>
 <li>Subscriptions are <code>named entities</code>. Subscriptions are durable by default, but can be configured to expire and then be automatically deleted.</li>
@@ -11028,12 +11031,12 @@ as the main headline.
 <li>A Service Bus namespace is your own capacity slice of a large cluster made up of dozens of all-active virtual machines.</li>
 <li>Multiple <code>queues</code> and <code>topics</code> can be in a single namespace, and namespaces often serve as application containers.</li>
 </ul>
-<p><center> <img src="../images/sb-ns.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/sb-ns.jpg" alt="Sb ns" width="100%"> </center></p>
 <h3 id="partitioned">Partitioned 🗂️<a class="headerlink" href="#partitioned" title="Link to this section">&para;</a></h3>
 <p>Service Bus partitions enable queues and topics, or messaging entities, to be partitioned across multiple message brokers and messaging stores. Partitioning means that the overall throughput of a partitioned entity is no longer limited by the performance of a single message broker or messaging store. In addition, a temporary outage of a messaging store does not render a partitioned queue or topic unavailable</p>
 <h3 id="message-sessions">Message sessions 📨<a class="headerlink" href="#message-sessions" title="Link to this section">&para;</a></h3>
 <p>To realize a <code>first-in, first-out</code> (FIFO) guarantee in processing messages in Service Bus queue or subscriptions, use sessions. Sessions can also be used in implementing request-response patterns. The request-response pattern enables the sender application to send a request and provides a way for the receiver to correctly send a response back to the sender application.</p>
-<p><center> <img src="../images/sb-queue-sessions.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/sb-queue-sessions.jpg" alt="Sb queue sessions" width="100%"> </center></p>
 <h3 id="auto-forwarding">Auto-forwarding 📤<a class="headerlink" href="#auto-forwarding" title="Link to this section">&para;</a></h3>
 <p>The Auto-forwarding feature enables you to chain a queue or subscription to another queue or topic that is part of the same namespace. When auto-forwarding is enabled, Service Bus automatically removes messages that are placed in the first queue or subscription (source) and puts them in the second queue or topic (destination).</p>
 <h3 id="dead-lettering">Dead-lettering 💀<a class="headerlink" href="#dead-lettering" title="Link to this section">&para;</a></h3>
@@ -11178,13 +11181,13 @@ as the main headline.
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -10943,7 +10946,7 @@ as the main headline.
 </ul>
 </li>
 </ul>
-<p><center> <img src="../images/app-gw-components.jpg" width=97%"> </center></p>
+<p><center> <img src="../images/app-gw-components.jpg" alt="App gw components" width=97%"> </center></p>
 <h3 id="frontend-ip">Frontend IP<a class="headerlink" href="#frontend-ip" title="Link to this section">&para;</a></h3>
 <p>The IP address connected to an application gateway is known as the “frontend IP address.” You can set up an application gateway to have a private IP address, a public IP address, or both. An application gateway supports one private or one public IP address.</p>
 <h3 id="listener">Listener<a class="headerlink" href="#listener" title="Link to this section">&para;</a></h3>
@@ -10965,12 +10968,12 @@ as the main headline.
 <h2 id="routing-methods">Routing methods<a class="headerlink" href="#routing-methods" title="Link to this section">&para;</a></h2>
 <h3 id="pathurl-based">Path/URL based<a class="headerlink" href="#pathurl-based" title="Link to this section">&para;</a></h3>
 <p>As shown in the below image, for path-based routing, the <code>Application Gateway</code> inspects the URL paths and then  routes the traffic to the different backend pools. For example, you can direct the requests with the path <code>/images/*</code> to the backend pool containing the image documents. Similarly, all URLs containing the path <code>/videos/*</code> can be routed to the backend servers optimized for video streaming.</p>
-<p><center> <img src="../images/path-based-routing.jpg" width="90%"> </center></p>
+<p><center> <img src="../images/path-based-routing.jpg" alt="Path based routing" width="90%"> </center></p>
 <h3 id="re-write-http-headers-url">Re-write HTTP headers + URL<a class="headerlink" href="#re-write-http-headers-url" title="Link to this section">&para;</a></h3>
 <p>Application Gateway allows you to rewrite selected content of requests and responses. With this feature, you can translate URLs, query string parameters as well as modify request and response headers. It also allows you to add conditions to ensure that the URL or the specified headers are rewritten only when certain conditions are met. </p>
 <h3 id="multi-site-hosting">Multi-site hosting<a class="headerlink" href="#multi-site-hosting" title="Link to this section">&para;</a></h3>
 <p>Multiple site hosting enables you to configure more than one web application on the same port of application gateways using public-facing listeners. It allows you to configure a more efficient topology for your deployments by adding up to 100+ websites to one application gateway. Each website can be directed to its own backend pool. For example, three domains, contoso.com, fabrikam.com, and adatum.com, point to the IP address of the application gateway. You'd create three multi-site listeners and configure each listener for the respective port and protocol setting.</p>
-<p><center> <img src="../images/multi-site-hosting.jpg" width="90%"> </center></p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Load Balancer<span class="rn__time"> · 5 min read</span></p><p class="rn__title"><a href="../../azure/azlb/">Load Balancer (L4) →</a></p></li><li><p class="rn__kicker">Load Balancer<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../azure/front-door/">Front Door →</a></p></li></ul></div>
+<p><center> <img src="../images/multi-site-hosting.jpg" alt="Multi site hosting" width="90%"> </center></p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Load Balancer<span class="rn__time"> · 5 min read</span></p><p class="rn__title"><a href="../../azure/azlb/">Load Balancer (L4) →</a></p></li><li><p class="rn__kicker">Load Balancer<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../azure/front-door/">Front Door →</a></p></li></ul></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -11107,13 +11110,13 @@ as the main headline.
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

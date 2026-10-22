@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -10727,14 +10730,14 @@ as the main headline.
 <p>AWS Direct Connect links your internal network to an AWS Direct Connect location over a standard Ethernet fiber-optic cable. </p>
 <p>One end of the cable is connected to your router, the other to an AWS Direct Connect router. With this connection, you can create virtual interfaces directly to public AWS services (for example, to Amazon <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr>) or to Amazon <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>, bypassing internet service providers in your network path. An AWS Direct Connect location provides access to AWS in the Region with which it is associated. </p>
 <p><center>
-<img width="100%" src="../images/direct-connect-overview.png"></p>
+<img width="100%" src="../images/direct-connect-overview.png" alt="Direct connect overview"></p>
 <figcaption>DC Example</figcaption>
 <p></center></p>
 <div class="admonition exmaple">
 <p>Suppose that there is an apartment building with a hallway directly linking the building to the coffee shop. Only the residents of the apartment building can travel through this hallway. </p>
 <p>This private hallway provides the same type of dedicated connection as <code>AWS Direct Connect</code>. Residents are able to get into the coffee shop without needing to use the public road shared with other customers. </p>
 <p><center>
-<img width="100%" src="../images/dc-resp.jpeg">
+<img width="100%" src="../images/dc-resp.jpeg" alt="Dc resp">
 <figcaption>DC Responsibility</figcaption>
 </center></p>
 </div>
@@ -10742,13 +10745,13 @@ as the main headline.
 <p>The customer then works with their communications or networking partner to make the connection to the Direct Connect port from their data center. Unlike a <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> connection, Direct Connect requires physical connectivity to a specific DX location and it could take weeks or even months to run the required cabling between the DX location and the customer data center. With that said, let's get an overview of AWS Direct Connect architecture. An AWS Direct Connect typically involves three entities. </p>
 <p>The DX location is usually a large regional colocation facility in which AWS rents space. Within its space, AWS has deployed some number of AWS-managed routers which are used as the endpoints of the DX service. To connect to the authorized DX port, a customer can rent space within this colocation facility to install their own routers. Or to avoid deploying equipment within this colocation facility, the customer can connect to the AWS DX port using routers provided by a DX partner. </p>
 <p><center>
-<img width="100%" src="../images/dc-arch.png"></p>
+<img width="100%" src="../images/dc-arch.png" alt="Dc arch"></p>
 <figcaption>DC Architecture</figcaption>
 <p></center></p>
 <h2 id="vif">VIF<a class="headerlink" href="#vif" title="Link to this section">&para;</a></h2>
 <p>With these connections, you can create virtual interfaces directly to public AWS services (for example, to Amazon Simple Storage Service (Amazon <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr>) or Amazon Connect) or to Amazon <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>, bypassing internet service providers in your network path. An AWS Direct Connect point-of-presence (AWS DX POP), carrier interconnection, and data center interconnection provides access to AWS in the Region with which it is associated. You can use a single connection in an AWS Region or AWS GovCloud (US) to access public AWS services in all other Regions. </p>
 <p><center>
-<img width="90%" src="../images/vif-types.png"></p>
+<img width="90%" src="../images/vif-types.png" alt="Vif types"></p>
 <figcaption>VIF Types</figcaption>
 <p></center></p>
 <ol>
@@ -10757,7 +10760,7 @@ as the main headline.
 <li>A transit virtual interface (transit VIF) is used to access one or more Amazon Transit Gateways associated with Direct Connect gateways. </li>
 </ol>
 <p><center>
-<img width="100%" src="../images/vif-propogation.png"></p>
+<img width="100%" src="../images/vif-propogation.png" alt="Vif propogation"></p>
 <figcaption>VIF Reference daigram over BGP</figcaption>
 <p></center></p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Gateways<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../aws/transit-gateway/">Transit Gateway →</a></p></li><li><p class="rn__kicker">Gateways<span class="rn__time"> · 2 min read</span></p><p class="rn__title"><a href="../../aws/natgw/">NAT Gateway →</a></p></li></ul></div>
 
@@ -10896,13 +10899,13 @@ as the main headline.
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

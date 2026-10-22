@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -11057,7 +11060,7 @@ as the main headline.
 <p>All resources in a <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> can communicate outbound to the internet, by default. You can communicate inbound to a resource by assigning a public IP address or a public Load Balancer.</p>
 </div>
 <h2 id="vnet-components"><abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> components<a class="headerlink" href="#vnet-components" title="Link to this section">&para;</a></h2>
-<p><center> <img src="../images/vnet_basic.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/vnet_basic.jpg" alt="Vnet basic" width="100%"> </center></p>
 <h3 id="address-space">Address space<a class="headerlink" href="#address-space" title="Link to this section">&para;</a></h3>
 <p>When creating a <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr>, you must specify a <code>custom private IP address</code> space using public and private addresses. Azure assigns resources in a virtual network a private IP address from the address space that you assign. For example, if you deploy a VM in a <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> with address space, <code>10.0.0.0/16</code>, the VM will be assigned a private IP like <code>10.0.0.4</code>.</p>
 <div class="admonition remember">
@@ -11077,7 +11080,7 @@ as the main headline.
 </ul>
 <h4 id="a-dmz-subnet-use-case">A DMZ subnet use case<a class="headerlink" href="#a-dmz-subnet-use-case" title="Link to this section">&para;</a></h4>
 <p><mark>In this typical use case, our goal is to make sure that all traffic coming from the public subnet should be routed to the DMZ before it gets routed to the private subnet.</mark></p>
-<p><center> <img src="../images/use-case-subnet.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/use-case-subnet.jpg" alt="Use case subnet" width="100%"> </center></p>
 <p>The reason for this is that a public subnet contains workloads that are Internet facing, and a <code>private subnet</code> contains workloads that are not exposed to the Internet, such as <code>databases, application logic, backend servers, etc</code>. By default, the communication from the public subnet is allowed to the private subnet; however, we need to make sure that the traffic is filtered before it reaches the private subnet. This will help us to protect the private workloads, as all traffic is matched against the rules that you have set up in the <code>NVA (WAF in this case)</code>. If there is any attack or malicious traffic, <code>NVA</code> will take care of it. </p>
 <p>Now, the question is, how can we implement this? As you can see in above diagram, we have used the routing table with User Defined Route (UDR) to accomplish this task. By default, the traffic from the public subnet to the private subnet is allowed, but using UDR, you are forcing the packets to go through the <code>DMZ subnet</code>.</p>
 <h3 id="regions">Regions<a class="headerlink" href="#regions" title="Link to this section">&para;</a></h3>
@@ -11093,12 +11096,12 @@ as the main headline.
 <div class="admonition danger">
 <p class="admonition-title">VNET non-reciprocal and non-trasitive connection</p>
 <p>If we setup a connection between 2 VNets, that connection is non-reciprocal as shown in the diagram below. That is why we have to setup 2 connections in this case.
-<center> <img src="../images/vnet-peering-non-reciprical.jpg" width="90%"> </center></p>
+<center> <img src="../images/vnet-peering-non-reciprical.jpg" alt="Vnet peering non reciprical" width="90%"> </center></p>
 <p>The connction between different VNETS is non-trasitive as shown below.
-<center> <img src="../images/vnet-peering-non-transitive.jpg" width="90%"> </center></p>
+<center> <img src="../images/vnet-peering-non-transitive.jpg" alt="Vnet peering non transitive" width="90%"> </center></p>
 </div>
 <p><code>Active-passive</code> and <code>active-active</code> peering are possible. Lets take an example of on-site and cloud peering with <code>active-passive</code> mode as shown below</p>
-<p><center> <img src="../images/active-passive-tunnelling.jpg" width="90%"> </center></p>
+<p><center> <img src="../images/active-passive-tunnelling.jpg" alt="Active passive tunnelling" width="90%"> </center></p>
 <p>Azure supports the following types of peering:</p>
 <ol>
 <li><code>Virtual network peering</code>: Connecting virtual networks within the same Azure region.</li>
@@ -11121,7 +11124,7 @@ as the main headline.
 <ol>
 <li><strong>ExpresRoute Circuit</strong>: It uses a <code>service provider</code>.   </li>
 </ol>
-<p><center> <img src="../images/express-route.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/express-route.jpg" alt="Express route" width="100%"> </center></p>
 <div class="admonition example">
 <p class="admonition-title">Points to remember</p>
 <ul>
@@ -11154,7 +11157,7 @@ as the main headline.
 <h2 id="basics">Basics<a class="headerlink" href="#basics" title="Link to this section">&para;</a></h2>
 <h3 id="nic">NIC<a class="headerlink" href="#nic" title="Link to this section">&para;</a></h3>
 <p><code>Virtual machines</code> have one or more <code>network interface cards (NICs)</code> that exist in the same region as the virtual network. You assign an IP address (either statically or dynamically) from a subnet in the virtual network. This action allows the virtual machine to communicate with other resources in the virtual network (and any peered network).</p>
-<p><center> <img src="../images/nic.jpg" width="80%"> </center></p>
+<p><center> <img src="../images/nic.jpg" alt="Nic" width="80%"> </center></p>
 <h3 id="public-ips">Public IPs<a class="headerlink" href="#public-ips" title="Link to this section">&para;</a></h3>
 <p>Public IP addresses are associated with a virtual machine NIC, public load balancer, <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> gateways, application gateways, and any other resource that can be accessed from the Internet. </p>
 <p>Here also we can choose the allocation method to be <code>static or dynamic</code>. However, the availability of allocation methods depends on which SKU of public IP address we are using. <mark>The SKU is more like a pricing tier, where you will find different prices based on which SKU you are selecting</mark></p>
@@ -11162,7 +11165,7 @@ as the main headline.
 <li><strong>Basic SKU</strong>: Static or Dynamic IP that is <code>accessible by default</code> and needs NSG to configure</li>
 <li><strong>Standard SKU</strong>: Static PIP, that is <code>not accessible by defult</code> and needs NSG to allow traffic</li>
 </ul>
-<p><center> <img src="../images/ip_standard_basic.jpg" width="60%"> </center></p>
+<p><center> <img src="../images/ip_standard_basic.jpg" alt="Ip standard basic" width="60%"> </center></p>
 <h3 id="private-endpoint">Private Endpoint<a class="headerlink" href="#private-endpoint" title="Link to this section">&para;</a></h3>
 <p>Before defining private endpoint, lets clear some basics terms:</p>
 <div class="admonition info">
@@ -11173,7 +11176,7 @@ as the main headline.
 <li>A <code>private-link resource</code> is the destination target of a specified private endpoint.</li>
 <li>A <code>private endpoint</code> is a <code>network interface</code> that uses a private IP address from your virtual network. This network interface connects you privately and securely to a service that's powered by Azure Private Link. By enabling a private endpoint, you're bringing the service into your virtual network. <mark>Private endpoint has NIC attached to it.</mark></li>
 </ol>
-<p><center> <img src="../images/priv-endpoint-config-general.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/priv-endpoint-config-general.jpg" alt="Priv endpoint config general" width="100%"> </center></p>
 </div>
 <ul>
 <li>The value of the <code>private IP address</code> remains unchanged for the entire lifecycle of the private endpoint.</li>
@@ -11185,10 +11188,10 @@ as the main headline.
 <p>Imgine that there is a virtual network using the address range 10.10.0.0/16. Inside this virtual network are two subnets, SubnetA (<code>10.10.5.0/24</code>) and SubnetB (<code>10.10.6.0/24</code>).</p>
 <p>One or more virtual machines reside in <code>SubnetA</code>. A storage account has a private endpoint with an IP address of <code>10.10.6.5</code> inside <code>SubnetB</code>. The virtual machines inside <code>SubnetA</code> access the storage account through the storage account’s private endpoint IP address located in <code>SubnetB</code>.</p>
 <p>Resources in other networks can access the <code>storage account</code> through the private endpoint IP address.</p>
-<p><center> <img src="../images/private_endpoint_diagram.webp" width="80%"> </center></p>
+<p><center> <img src="../images/private_endpoint_diagram.webp" alt="Private endpoint diagram" width="80%"> </center></p>
 </div>
 <p>Using private endpoints we can drill down to a sub-resource as shown below. This can't be done using <code>Service Endpoint</code> as it will allow access to the resource level instead of sub-resource level.
-<center> <img src="../images/priv-endpoint-resource-drilldown.jpg" width="100%"> </center></p>
+<center> <img src="../images/priv-endpoint-resource-drilldown.jpg" alt="Priv endpoint resource drilldown" width="100%"> </center></p>
 <div class="admonition question">
 <p class="admonition-title">When to use Private endpoint?</p>
 <p>Private endpoints enable connectivity between the customers from the same:</p>
@@ -11202,7 +11205,7 @@ as the main headline.
 </div>
 <h4 id="private-link-service">Private Link Service<a class="headerlink" href="#private-link-service" title="Link to this section">&para;</a></h4>
 <p>Azure <code>Private Link service</code> is the reference to your own service that is powered by <code>Azure Private Link</code>. Your service that is running behind Azure Standard Load Balancer can be enabled for Private Link access so that consumers to your service can access it privately from their own VNets. Your customers can create a <code>private endpoint</code> inside their virtual network and map it to this service. </p>
-<p><center> <img src="../images/private-link-service-workflow.png" width="100%"> </center></p>
+<p><center> <img src="../images/private-link-service-workflow.png" alt="Private link service workflow" width="100%"> </center></p>
 <h3 id="service-endpoint">Service Endpoint<a class="headerlink" href="#service-endpoint" title="Link to this section">&para;</a></h3>
 <ul>
 <li>Service endpoints direct <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> traffic <code>off the public Internet</code> and to the <code>Azure backbone network</code>. </li>
@@ -11215,11 +11218,11 @@ as the main headline.
 <p class="admonition-title">Example of service endpoint</p>
 <p>Review the image below representing service endpoints in action. In this example, you have enabled a service endpoint for the <code>Microsoft.SQL service</code> on <code>SubnetA</code>. A virtual machine in <code>SubnetA</code> uses its private IP address to access a <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> server hosting several databases. The virtual machine connects using the public IP addresses associated with the <code>Microsoft.SQL service</code></p>
 <p>Notice that Subnet B does not have service endpoints enabled for its subnet for the <code>Microsoft.SQL service</code>. Compute resources in this subnet use the public IP address for the virtual network to connect to the public IP address of the Azure service.</p>
-<p><center> <img src="../images/service_endpoint_diagram.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/service_endpoint_diagram.jpg" alt="Service endpoint diagram" width="100%"> </center></p>
 </div>
 <h4 id="service-endpoint-policies">Service Endpoint Policies<a class="headerlink" href="#service-endpoint-policies" title="Link to this section">&para;</a></h4>
 <p>Virtual Network (<abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr>) <code>service endpoint policies</code> allow you to filter egress virtual network traffic to Azure <code>Storage accounts</code> over <code>service endpoint</code>, and allow data exfiltration to only specific Azure Storage accounts. Endpoint policies provide granular access control for virtual network traffic to Azure Storage when connecting over service endpoint.</p>
-<p><center> <img src="../images/service-endpoint-policy.jpg" width="95%"> </center></p>
+<p><center> <img src="../images/service-endpoint-policy.jpg" alt="Service endpoint policy" width="95%"> </center></p>
 <h3 id="private-vs-service-endpoints">Private Vs Service Endpoints<a class="headerlink" href="#private-vs-service-endpoints" title="Link to this section">&para;</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Public and Private IPs in service/private endpoints</p>
@@ -11252,7 +11255,7 @@ as the main headline.
 <div class="admonition tip">
 <p class="admonition-title">Block access to public internet</p>
 <p>We can block access to public internet by adding a custom route from <code>0.0.0.0/0</code> to <code>None</code> as shown below</p>
-<p><center> <img src="../images/user-route.jpg" width="60%"> </center></p>
+<p><center> <img src="../images/user-route.jpg" alt="User route" width="60%"> </center></p>
 </div>
 <h3 id="nsg-l3-and-l4">NSG (L3 and L4)<a class="headerlink" href="#nsg-l3-and-l4" title="Link to this section">&para;</a></h3>
 <div class="admonition tldr">
@@ -11264,7 +11267,7 @@ as the main headline.
 <p class="admonition-title">Is NSG associted with subnet?</p>
 <p>As shown in the diagram, NSG can be associated with a <code>subnet</code>, or a <code>NIC</code> based on your requirement. NSGs are reusable, which means you can have multiple NICs or subnet associations to a single NSG. </p>
 <p>NSG as no effect unless its associated with either NIC or a Subnet.</p>
-<p><center> <img src="../images/nsg-levels.jpg" width="90%"> </center></p>
+<p><center> <img src="../images/nsg-levels.jpg" alt="Nsg levels" width="90%"> </center></p>
 </div>
 <p>Priorities are used in NSG to evaluate; lower the number, higher the priority.</p>
 <h4 id="nsg-effective-rules">NSG Effective rules<a class="headerlink" href="#nsg-effective-rules" title="Link to this section">&para;</a></h4>
@@ -11279,7 +11282,7 @@ as the main headline.
 <h3 id="azure-firewall-l7-and-l4">Azure Firewall (L7 and L4)<a class="headerlink" href="#azure-firewall-l7-and-l4" title="Link to this section">&para;</a></h3>
 <p>Using Azure Firewall, we can create, enforce, and manage <code>network policies</code> across virtual networks and subscriptions. Azure Firewall provides more features then NSG. Also, Azure firewall is different than <abbr title="Web Application Firewall: blocks common web attacks like SQL injection">WAF</abbr></p>
 <p>Setting for Azure firewall is shown below</p>
-<p><center> <img src="../images/azure-firewall-setting.jpg" width="95%"> </center></p>
+<p><center> <img src="../images/azure-firewall-setting.jpg" alt="Azure firewall setting" width="95%"> </center></p>
 <div class="admonition question">
 <p class="admonition-title">Do we need <abbr title="Web Application Firewall: blocks common web attacks like SQL injection">WAF</abbr> in addition to NSG?</p>
 <p>Yes, we need both. The main difference is that <code>NSG</code> operates at layers 3 and 4 of the OSI layer; on the other hand, Azure Firewall works at layers 7 and 4.</p>
@@ -11298,10 +11301,10 @@ as the main headline.
 <p class="admonition-title">How to use service tags?</p>
 <p>You can use service tags to define network access controls on <code>network security groups</code>, <code>Azure Firewall</code>, and <code>user-defined routes</code>. Use <code>service tags</code> in place of specific IP addresses when you create security rules and routes. </p>
 <p>By specifying the service tag name, such as <code>Storage</code>, in the appropriate source or destination field of a security rule, you can allow or deny the traffic for the corresponding service. 2 tags are used in the below diagram in the destination fields </p>
-<p><center> <img src="../images/service-tag.jpg" width="90%"> </center></p>
+<p><center> <img src="../images/service-tag.jpg" alt="Service tag" width="90%"> </center></p>
 </div>
 <h4 id="firewall-policyrules">Firewall Policy/Rules<a class="headerlink" href="#firewall-policyrules" title="Link to this section">&para;</a></h4>
-<p><center> <img src="../images/firewall-policy.jpg" width="80%"> </center></p>
+<p><center> <img src="../images/firewall-policy.jpg" alt="Firewall policy" width="80%"> </center></p>
 <ul>
 <li><code>Rule collection group</code>: It is used to group rule collections. They're the first unit to be processed by the Azure Firewall and they follow a priority order based on values</li>
 <li><code>Rule collection</code>: it belongs to a rule collection group, and it contains one or multiple rules. They're the second unit processed by the firewall and they follow a priority order based on values. Rule collections must have a defined action (allow or deny) and a priority value</li>
@@ -11319,7 +11322,7 @@ as the main headline.
 <div class="admonition abstract">
 <p class="admonition-title"><abbr title="Network Address Translation: lets private machines reach the internet without being reachable">NAT</abbr> example using VM</p>
 <p>Assume you have a <code>Ubuntu server</code> with private IP address, say, <code>10.0.0.2</code>, and the SSH server is available on port 22. Instead of exposing this port and IP to the Internet, you can create a <abbr title="Network Address Translation: lets private machines reach the internet without being reachable">NAT</abbr> rule on the firewall. Using the public IP of the firewall and a random port, you can set up a <abbr title="Network Address Translation: lets private machines reach the internet without being reachable">NAT</abbr> rule. Let’s assume that the public IP address of the firewall is <code>66.142.43.02</code>; using <abbr title="Network Address Translation: lets private machines reach the internet without being reachable">NAT</abbr> rule you can redirect all traffic hitting port 5000 of the firewall to be translated to <code>10.0.0.2</code> and port 22. In short, translate <code>66.142.43.02:5000</code> to <code>10.0.0.2:22</code>. In this way, you can translate the public IP address and port to a private IP address and port.</p>
-<p><center> <img src="../images/nat-translation.jpg" width="90%"> </center></p>
+<p><center> <img src="../images/nat-translation.jpg" alt="Nat translation" width="90%"> </center></p>
 </div>
 <h6 id="inbound-dnat">Inbound DNAT<a class="headerlink" href="#inbound-dnat" title="Link to this section">&para;</a></h6>
 <p>Inbound Internet network traffic to your firewall public IP address is translated (<em>Destination Network Address Translation</em>) and filtered to the private IP addresses on your virtual networks.</p>
@@ -11474,13 +11477,13 @@ as the main headline.
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

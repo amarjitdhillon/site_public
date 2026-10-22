@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -11344,7 +11347,7 @@ as the main headline.
 <p class="admonition-title">Remember</p>
 <p>A Virtual Machine can be attached to more than one Application Security Group. This helps in cases of multi-application servers.</p>
 </div>
-<p><center> <img src="../images/amardhillon_diagrams-asg.drawio.png" width="100%"> </center></p>
+<p><center> <img src="../images/amardhillon_diagrams-asg.drawio.png" alt="Amardhillon diagrams asg.drawio" width="100%"> </center></p>
 <p><mark>As per the rules defined in NSG, the WebServer and AppServer <abbr title="Auto Scaling Group: a set of servers that grows and shrinks with demand">ASG</abbr> are able to communicate with one another while the  WebServer and DbServer <abbr title="Auto Scaling Group: a set of servers that grows and shrinks with demand">ASG</abbr> are not.</mark></p>
 <div class="admonition tldr">
 <p class="admonition-title">Tldr</p>
@@ -11370,7 +11373,7 @@ as the main headline.
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>As shown in the below diagram the address for VMs in the VNET are <code>10.0.0.*</code>. As we know that this address are not accessible on the internet (they are private). A <abbr title="Network Address Translation: lets private machines reach the internet without being reachable">NAT</abbr> translates the <code>private IP address</code> into a <code>public IP address</code>. In other words, the <abbr title="Network Address Translation: lets private machines reach the internet without being reachable">NAT</abbr> device has both a <code>private IP</code> address as well as a <code>public IP</code> </p>
-<p><center> <img src="../images/amardhillon_diagrams-nat.drawio.png" width="90%"> </center></p>
+<p><center> <img src="../images/amardhillon_diagrams-nat.drawio.png" alt="Amardhillon diagrams nat.drawio" width="90%"> </center></p>
 <p>How does the router know the response from browser that has the destination address that is now 155.35.25.26 needs to be directed to <code>10.0.0.4</code>? The answer is found by digging into a socket.</p>
 <p>A <code>socket</code> is the combination of an <code>IP address:port number</code>. More specifically, it has a source IP address, source port, destination IP address, and destination port    </p>
 </div>
@@ -11514,13 +11517,13 @@ as the main headline.
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

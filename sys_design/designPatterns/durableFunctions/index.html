@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -10750,7 +10753,7 @@ as the main headline.
 <p><code>Durable Functions</code> is an extension of <code>Azure Functions</code> that lets you write stateful functions in a serverless compute environment. The extension lets you define stateful workflows by writing orchestrator functions and stateful entities by writing entity functions using the <code>Azure Functions</code> programming model.</p>
 <h2 id="patterns">Patterns<a class="headerlink" href="#patterns" title="Link to this section">&para;</a></h2>
 <h3 id="function-chaining">Function chaining<a class="headerlink" href="#function-chaining" title="Link to this section">&para;</a></h3>
-<p><center> <img src="../../images/fn_chain.jpg" width="100%"> </center></p>
+<p><center> <img src="../../images/fn_chain.jpg" alt="Fn chain" width="100%"> </center></p>
 <ul>
 <li>In the function chaining pattern, a sequence of functions executes in a specific order. </li>
 <li>In this pattern, the output of one function is applied to the input of another function.</li>
@@ -10760,14 +10763,14 @@ as the main headline.
 <p>In this example, the values F1, F2, F3, and F4 are the names of other functions in the same function app. You can implement control flow by using normal imperative coding constructs. Code executes from the top down.</p>
 </div>
 <h3 id="fan-outfan-in">Fan-out/fan-in<a class="headerlink" href="#fan-outfan-in" title="Link to this section">&para;</a></h3>
-<p><center> <img src="../../images/faninout.jpg" width="90%"> </center></p>
+<p><center> <img src="../../images/faninout.jpg" alt="Faninout" width="90%"> </center></p>
 <p>In the fan out/fan in pattern, you execute multiple functions in parallel and then wait for all functions to finish. Often, some <code>aggregation work</code> is done on the results that are returned from the functions.</p>
 <div class="admonition tip">
 <p class="admonition-title">How to do fan in?</p>
 <p>Fanning back in is much more challenging. To fan in, in a normal function, you write code to track when the queue-triggered functions end, and then store function outputs</p>
 </div>
 <h3 id="async-http-apis">Async HTTP APIs<a class="headerlink" href="#async-http-apis" title="Link to this section">&para;</a></h3>
-<p><center> <img src="../../images/asyncio_pattern.jpg" width="90%"> </center></p>
+<p><center> <img src="../../images/asyncio_pattern.jpg" alt="Asyncio pattern" width="90%"> </center></p>
 <p>The async HTTP <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> pattern addresses the problem of coordinating the state of long-running operations with external clients. A common way to implement this pattern is by having an HTTP endpoint trigger the long-running action. Then, redirect the client to a status endpoint that the client polls to learn when the operation is finished.</p>
 <h2 id="http-reference">HTTP reference<a class="headerlink" href="#http-reference" title="Link to this section">&para;</a></h2>
 <p><a href="https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-http-api">reference docs</a></p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Design Patterns<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../../sys_design/designPatterns/sidecar/">Sidecar →</a></p></li><li><p class="rn__kicker">Design Patterns<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../../sys_design/designPatterns/serverless-migration/">Serverless Migration →</a></p></li></ul></div>
@@ -10907,13 +10910,13 @@ as the main headline.
       
         <script src="../../../javascripts/cosmos.js"></script>
       
+        <script src="../../../javascripts/ufo.js"></script>
+      
         <script src="../../../javascripts/totop.js"></script>
       
         <script src="../../../javascripts/claps.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

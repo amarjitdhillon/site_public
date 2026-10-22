@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
 
     
@@ -111,7 +114,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -160,7 +163,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -10731,7 +10734,7 @@ as the main headline.
 <p>The following diagram summarizes all the available deployment modes for Cloud Load Balancing.</p>
 <p><center> 
 <img width="100%" 
-src="../images/lb-product-tree.svg">
+src="../images/lb-product-tree.svg" alt="Lb product tree">
 </center></p>
 <p>To determine which Cloud Load Balancing product to use, you must first determine what traffic type your load balancers must handle. </p>
 <p>As a general rule, you'd choose an Application Load Balancer when you need a flexible feature set for your applications with HTTP(S) traffic. You'd choose a proxy <code>Network Load Balancer</code> to implement TCP proxy load balancing to backends in one or more regions. And, you'd choose a passthrough Network Load Balancer to preserve client source IP addresses, avoid the overhead of proxies, and to support additional protocols like UDP, ESP, and ICMP.</p>
@@ -10742,14 +10745,14 @@ src="../images/lb-product-tree.svg">
 <p>You want to build a publicly accessible website.  The website needs to have multiple instances running on Compute Engine.  And the VMs need to be hosted in the US, Europe, and China.  </p>
 <p><center> 
 <img width="100%" 
-src="../images/lb-uc-1.png">
+src="../images/lb-uc-1.png" alt="Lb uc 1">
 </center></p>
 <p>Okay, so since this website is going to be public, we need an external load balancer.  And because it is a website, that means we are going to need to be using HTTP and/or HTTPS.  We are using VMs in multiple regions, so it can’t be regional.  So in this case, you would select the Global external HTTP(S) load balancer.</p>
 <h3 id="use-case-2">Use Case #2<a class="headerlink" href="#use-case-2" title="Link to this section">&para;</a></h3>
 <p>You are building a private, internal web service.  All backend instances will be running on Compute Engine and you will connect to them via <abbr title="A common style for web APIs using HTTP verbs like GET and POST">REST</abbr> <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr>.  All client connections are expected to originate from a specific Google <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>. </p>
 <p><center> 
 <img width="100%" 
-src="../images/lb-uc-2.png">
+src="../images/lb-uc-2.png" alt="Lb uc 2">
 </center></p>
 <p>Okay, since this is a private service, you are going to choose an internal load balancer.  The <abbr title="A common style for web APIs using HTTP verbs like GET and POST">REST</abbr> <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> means we will be using HTTP and/or HTTPS.  So your best choice here is the Internal HTTP(S) load balancer.</p>
 <h3 id="use-case-3">Use Case #3<a class="headerlink" href="#use-case-3" title="Link to this section">&para;</a></h3>
@@ -10757,7 +10760,7 @@ src="../images/lb-uc-2.png">
 <p>Now, for your employees to be able to connect to the service, your load balancer needs to be external.  And you know you need to support the UDP protocol.  So, the right choice should be the External TCP/UDP network load balancer.</p>
 <p><center> 
 <img width="100%" 
-src="../images/lb-uc-3.png">
+src="../images/lb-uc-3.png" alt="Lb uc 3">
 </center></p>
 <p>Alright, so now you should have a good understanding of the available load balancing options on Google Cloud Platform.  If you can remember the four main attributes, you should have no problem identifying the correct load balancer for any scenario.</p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Networking<span class="rn__time"> · 3 min read</span></p><p class="rn__title"><a href="../../gcp/vpc-gcp/">VPC →</a></p></li><li><p class="rn__kicker">Networking<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../gcp/cloud-dns/">Cloud DNS →</a></p></li></ul></div>
 
@@ -10844,13 +10847,13 @@ src="../images/lb-uc-3.png">
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

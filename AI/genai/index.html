@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -11115,7 +11118,7 @@ as the main headline.
 <h3 id="prompt-engineering">Prompt Engineering<a class="headerlink" href="#prompt-engineering" title="Link to this section">&para;</a></h3>
 <p><code>Prompt engineering</code> is a practice used to guide an <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr>’s response by querying the model in a more specific way. For example, instead of merely asking a model to “create a quarterly report,” a user could provide specific figures or data in their input, providing context and leading the <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> to a more relevant and accurate output. However, copying large amounts of information into an <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr>’s input is not only cumbersome but is also limited by constraints on the amount of text that can be inputted into these models at once.</p>
 <p>This is where the concept of “search and retrieval” can enhance <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> capabilities. By pairing LLMs with an efficient search and retrieval system that has access to your proprietary data, you can overcome the limitations of both static training data and manual input. This approach is the best of both worlds, combining the expansive knowledge of LLMs with the specificity and relevance of your own data, all in real-time.</p>
-<p><center> <img src="../images/rag-how-it-works.png" width="100%"> </center></p>
+<p><center> <img src="../images/rag-how-it-works.png" alt="Rag how it works" width="100%"> </center></p>
 <h3 id="tokens">Tokens 🍪<a class="headerlink" href="#tokens" title="Link to this section">&para;</a></h3>
 <p>It’s important to note that while <code>text-based prompts</code> and <code>completions</code> are implemented and interpreted by humans as natural language sentences, generative models convert them into <code>sequences of tokens</code>. </p>
 <p>By combining many of these tokens in different ways, the model is capable of representing an exponential number of words using a relatively small number of tokens often on the order of 30,000–100,000 tokens in the model’s vocabulary.</p>
@@ -11126,7 +11129,7 @@ as the main headline.
 <p>We see embeddings as fundamental to AI and deep learning. Embeddings are the core of how deep learning models represent structures, mappings, hierarchy and manifolds that are learned by models. </p>
 <p>They proliferate modern deep learning from transformers to encoders, decoders, auto-encoders, recommendation engines, matrix decomposition, SVD, graph neural networks, and generative models — they are simply everywhere.</p>
 <p>Embeddings are dense, low-dimensional representations of high-dimensional data. They are an extremely powerful tool for input data representation, compression, and cross-team collaboration. They show you relationships in unstructured data, such as the example below showing that from word embeddings we learn man is to woman as king is to queen (from the corpus the vectors were trained on).</p>
-<p><center> <img src="../images/blog-king-queen-embeddings.webp" width="100%"> </center></p>
+<p><center> <img src="../images/blog-king-queen-embeddings.webp" alt="Blog king queen embeddings" width="100%"> </center></p>
 <p>Embeddings are foundational because:</p>
 <ul>
 <li>They provide a common mathematical representation of your data</li>
@@ -11164,12 +11167,12 @@ Frameworks like <code>LlamaIndex</code> and <code>LangChain</code> are great for
  2.Constructs a command
  3.Executes the action </p>
 <h3 id="rag"><abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr><a class="headerlink" href="#rag" title="Link to this section">&para;</a></h3>
-<p><center> <img src="../images/retrieval-augmented-generation-roadmap-diagram-technical.png" width="100%"> </center></p>
+<p><center> <img src="../images/retrieval-augmented-generation-roadmap-diagram-technical.png" alt="Retrieval augmented generation roadmap diagram technical" width="100%"> </center></p>
 <p>LLMs are trained on vast datasets, but these will not include your specific data (things like company knowledge bases and documentation). Retrieval-Augmented Generation (<abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr>) addresses this by dynamically incorporating your data as <code>context</code> during the generation process. </p>
 <p><mark>This is done not by altering the training data of the LLMs but by allowing the model to access and utilize your data in real-time to provide more tailored and contextually relevant responses.</mark></p>
 <p>In <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr>, your data is loaded and prepared for queries. This process is called indexing. User queries act on this index, which filters your data down to the most relevant context. This context and your query then are sent to the <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> along with a prompt, and the <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> provides a response.</p>
 <p><code>RAG</code> is a critical component for building applications such a <code>chatbots</code> or agents and you will want to know <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> techniques on how to get data into your application.</p>
-<p><center> <img src="../images/llm-rag-technical-drawing.png" width="100%"> </center></p>
+<p><center> <img src="../images/llm-rag-technical-drawing.png" alt="Llm rag technical drawing" width="100%"> </center></p>
 <h3 id="context-aware-rag">Context Aware <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr><a class="headerlink" href="#context-aware-rag" title="Link to this section">&para;</a></h3>
 <h3 id="rag-steps"><abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> Steps<a class="headerlink" href="#rag-steps" title="Link to this section">&para;</a></h3>
 <p>To ensure accuracy and relevance, there are six stages to follow within <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> that will in turn be a part of any larger <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> application.</p>
@@ -11200,7 +11203,7 @@ Frameworks like <code>LlamaIndex</code> and <code>LangChain</code> are great for
 - Amazon OpenSearch Serverless
 - Amazon Kendra</p>
 <h2 id="genai-project-lifecycle"><abbr title="Generative AI: models that create new text, images, code or audio">GenAI</abbr> Project Lifecycle ♼<a class="headerlink" href="#genai-project-lifecycle" title="Link to this section">&para;</a></h2>
-<p><center> <img src="../images/gen-ai-project-lifecycle.png" width="100%"> </center></p>
+<p><center> <img src="../images/gen-ai-project-lifecycle.png" alt="Gen ai project lifecycle" width="100%"> </center></p>
 <h2 id="deployment-optimization">Deployment Optimization 📦<a class="headerlink" href="#deployment-optimization" title="Link to this section">&para;</a></h2>
 <h3 id="pruning">Pruning 🎄<a class="headerlink" href="#pruning" title="Link to this section">&para;</a></h3>
 <p>Pruning is a technique that focuses on removing redundant, or low-impact, parameters that do not contribute, or contribute little, to the model’s performance. Pruning reduces the size of the model, but also increases performance by reducing the number of computations during inference.</p>
@@ -11358,13 +11361,13 @@ Frameworks like <code>LlamaIndex</code> and <code>LangChain</code> are great for
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

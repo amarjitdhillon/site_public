@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -11148,7 +11151,7 @@ as the main headline.
 <p><strong>GZRS (Geo Zone Redundant Storage)</strong>: In GZRS you replicate the data synchronously in the primary region using ZRS, and then this data is replicated to the secondary region (as 3 copies in the same <abbr title="Availability Zone: a separate data center within a cloud region">AZ</abbr>).</p>
 </li>
 </ul>
-<p><center> <img src="../images/zones.jpg" width="90%"> </center></p>
+<p><center> <img src="../images/zones.jpg" alt="Zones" width="90%"> </center></p>
 <h2 id="sku">SKU<a class="headerlink" href="#sku" title="Link to this section">&para;</a></h2>
 <p>SKU is short for <code>Stock-keeping-Unit</code>.  Each SKU is catered toward a specific scenario and has differences in scale, features, and pricing. In layman's language, SKU refers to an Item ready for sale. </p>
 <div class="admonition tip">
@@ -11213,7 +11216,7 @@ as the main headline.
 <p>The SAS token is a string that you generate on the client side, for example by using one of the Azure Storage client libraries. The SAS token is not tracked by Azure Storage in any way. You can create an unlimited number of SAS tokens on the client side. After you create a SAS, you can distribute it to client applications that require access to resources in your storage account.</p>
 </div>
 <p>Client applications provide the SAS URI to Azure Storage as part of a request. Then, the service checks the SAS parameters and the signature to verify that it is valid. If the service verifies that the signature is valid, then the request is authorized. Otherwise, the request is declined with error code 403 (Forbidden).</p>
-<p><center> <img src="../images/Demystifying_SAS_Token.png" width="90%"> </center></p>
+<p><center> <img src="../images/Demystifying_SAS_Token.png" alt="Demystifying SAS Token" width="90%"> </center></p>
 <h2 id="acu">ACU<a class="headerlink" href="#acu" title="Link to this section">&para;</a></h2>
 <p>The <code>Azure Compute Unit</code> (ACU) is used to help understand the relative compute performance between different Azure series and size VMs. It is based on the <code>A0</code> (extra small) having a value of 50. A VM with an ACU of 100 has twice the compute of a VM with an ACU of 50. </p>
 <h2 id="dr"><abbr title="Disaster Recovery: getting systems back after a major outage">DR</abbr><a class="headerlink" href="#dr" title="Link to this section">&para;</a></h2>
@@ -11225,7 +11228,7 @@ as the main headline.
 </ul>
 <div class="admonition question">
 <p class="admonition-title">Difference between <abbr title="Disaster Recovery: getting systems back after a major outage">DR</abbr>, <abbr title="High Availability: designed to keep running when parts fail">HA</abbr> and Backup</p>
-<p><center> <img src="../images/ha-options.jpg" width="95%"> </center></p>
+<p><center> <img src="../images/ha-options.jpg" alt="Ha options" width="95%"> </center></p>
 </div>
 <h3 id="rpo"><abbr title="Recovery Point Objective: how much data loss (in time) is acceptable">RPO</abbr><a class="headerlink" href="#rpo" title="Link to this section">&para;</a></h3>
 <p>A <code>recovery point objective (RPO)</code> is the maximum length of time permitted that data can be restored from, which may or may not mean data loss. It is the age of the files or data in backup storage required to resume normal operations if a computer system or network failure occurs.</p>
@@ -11278,9 +11281,9 @@ as the main headline.
 <h4 id="incremental-backup">Incremental Backup<a class="headerlink" href="#incremental-backup" title="Link to this section">&para;</a></h4>
 <p>An incremental backup stores only the blocks of data that changed since the previous backup. High storage and network efficiency.</p>
 <h3 id="backup-process">Backup Process<a class="headerlink" href="#backup-process" title="Link to this section">&para;</a></h3>
-<p><center> <img src="../images/backup-process.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/backup-process.jpg" alt="Backup process" width="100%"> </center></p>
 <p>Backup for on-prem and Cloud is done as shown below:</p>
-<p><center> <img src="../images/abs.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/abs.jpg" alt="Abs" width="100%"> </center></p>
 <h4 id="on-premises-machines">on-premises machines:<a class="headerlink" href="#on-premises-machines" title="Link to this section">&para;</a></h4>
 <p>You can back up <code>on-premises Windows machines</code> directly to Azure by using the<code>Microsoft Azure Recovery Services (MARS)</code> agent. <mark>Linux machines aren't supported.</mark></p>
 <p>You can back up on-premises machines to a backup server - either System Center <code>Data Protection Manager (DPM)</code> or <code>Microsoft Azure Backup Server (MABS)</code>. You can then back up the backup server to a <code>Recovery Services vault</code> in Azure.</p>
@@ -11298,7 +11301,7 @@ as the main headline.
 </ul>
 <h3 id="azure-site-recovery">Azure Site recovery<a class="headerlink" href="#azure-site-recovery" title="Link to this section">&para;</a></h3>
 <p><code>Azure Site Recovery (ASR)</code> It is a disaster recovery solution that can be used to replicate your VMs to a secondary region and fire them up during a regional outage. You can fail over from the Azure portal, and the infrastructure will be created in a secondary region within a few minutes.</p>
-<p><center> <img src="../images/asr.jpg" width="95%"> </center></p>
+<p><center> <img src="../images/asr.jpg" alt="Asr" width="95%"> </center></p>
 <h3 id="snapshots">Snapshots<a class="headerlink" href="#snapshots" title="Link to this section">&para;</a></h3>
 <p>When it comes to development and testing, <code>managed disk snapshots</code> offer a reliable and simple option to back up your VMs. Snapshots are independent read-only copies of the managed disk and can be used to create new managed disks.</p>
 <h3 id="image">Image<a class="headerlink" href="#image" title="Link to this section">&para;</a></h3>
@@ -11443,13 +11446,13 @@ as the main headline.
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

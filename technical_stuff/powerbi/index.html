@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -11257,7 +11260,7 @@ as the main headline.
 <p>A workspace is like a shared folder between a team of users. This can be a place to share some of the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> content</p>
 </div>
 <p>There are two types of licenses for Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr>; capacity-based and user-based licensing. The capacity-based licensing is usually better for organizations with more than hundreds of users, and user-based licensing is good for small to medium size businesses</p>
-<p><center> <img src="../images/workspace.jpg" width="80%"> </center></p>
+<p><center> <img src="../images/workspace.jpg" alt="Workspace" width="80%"> </center></p>
 <p>There are two types of workspaces: </p>
 <ul>
 <li>My workspace (user based)</li>
@@ -11289,7 +11292,7 @@ as the main headline.
 </ul>
 <div class="admonition remember">
 <p>The visualizations on a dashboard come from reports and each report is based on one dataset. In fact, one way to think of a dashboard is as an entryway into the underlying reports and datasets. Selecting a visualization takes you to the report that was used to create it.
-<center> <img src="../images/power-bi-diagram.png" width="70%"> </center></p>
+<center> <img src="../images/power-bi-diagram.png" alt="Power bi diagram" width="70%"> </center></p>
 </div>
 <h3 id="visualization">Visualization:<a class="headerlink" href="#visualization" title="Link to this section">&para;</a></h3>
 <p>It is a type of chart built by Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> designers. The visuals display the data from reports and datasets.</p>
@@ -11340,7 +11343,7 @@ as the main headline.
 <p>Today PowerBI offers 4 different storage modes for tables:</p>
 <h4 id="import-mode">Import mode<a class="headerlink" href="#import-mode" title="Link to this section">&para;</a></h4>
 <p>In this mode, Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> connects with underlying data source &amp; downloads entire data from the datasource. This data is stored in Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> model (in an in-memory cache). Fresh copy of this data can be downloaded by pressing Refresh button. <code>PBIX file</code> internally stores model data in compressed format. This published datset model on Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> Service, internally is stored on Common Data Model, which is sort of <code>Azure Managed SQL Server</code> instance in the backend.</p>
-<p><center> <img src="../images/import.jpg" width="90%"> </center></p>
+<p><center> <img src="../images/import.jpg" alt="Import" width="90%"> </center></p>
 <div class="admonition question">
 <p class="admonition-title">Which is the fastest method</p>
 <p>The fastest method is <code>Import mode</code>. Essentially, this mode allows you to load the data once into Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr>, where it is then stored. Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> uses the <code>in-memory VertiPaq/xVelocity engine</code>, which is exceptionally fast and delivers results almost immediately. It offers <code>full DAX and PowerQuery support</code>. A quick rule of thumb is that you can typically expect about 10x compression when importing data into Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr></p>
@@ -11348,7 +11351,7 @@ as the main headline.
 <p><mark>The drawback is that it only permits you to refresh data 8 times per day.</mark></p>
 <h4 id="directquery-mode">DirectQuery mode<a class="headerlink" href="#directquery-mode" title="Link to this section">&para;</a></h4>
 <p>With <code>DirectQuery datasets</code>, no data is imported into Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr>. Instead, your Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> dataset is simply metadata (e.g., tables, relationships) of how your model is structured to query the data source. <mark>Data is only brought into Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> reports and dashboards at query-time (e.g., a user runs a report, or changes filters).</mark></p>
-<p><center> <img src="../images/directquery.jpg" width="90%"> </center></p>
+<p><center> <img src="../images/directquery.jpg" alt="Directquery" width="90%"> </center></p>
 <p><strong>Pros:</strong>
 - Dataset size limits do not apply as all data still resides in the underlying database.
 - Datasets do not require a scheduled refresh as data is only retrieved at query-time.</p>
@@ -11368,9 +11371,9 @@ as the main headline.
 <li>Incremental Refresh doesn’t need a Premium or PPU license. You can even set it up using a Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> Pro license. However, Hybrid tables require a Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> Premium capacity or PPU.</li>
 </ul>
 </div>
-<p><center> <img src="../images/hybrid_tables_example.webp" width="90%"> </center></p>
+<p><center> <img src="../images/hybrid_tables_example.webp" alt="Hybrid tables example" width="90%"> </center></p>
 <p><code>Composite models aka hybid tables</code> attempt to combine the best aspects from <code>Import and DirectQuery modes</code> into a single dataset. With Composite models, data modelers can configure the storage mode for each table in the model</p>
-<p><center> <img src="../images/composite.jpg" width="90%"> </center></p>
+<p><center> <img src="../images/composite.jpg" alt="Composite" width="90%"> </center></p>
 <hr />
 <h2 id="powerbi-architecture">PowerBI Architecture<a class="headerlink" href="#powerbi-architecture" title="Link to this section">&para;</a></h2>
 <h3 id="front-end-cluster">Front-end cluster<a class="headerlink" href="#front-end-cluster" title="Link to this section">&para;</a></h3>
@@ -11379,7 +11382,7 @@ as the main headline.
 <li>a Web Front End (WFE) cluster </li>
 <li>a Back End cluster</li>
 </ul>
-<p><center> <img src="../images/fte.jpg" width="80%"> </center></p>
+<p><center> <img src="../images/fte.jpg" alt="Fte" width="80%"> </center></p>
 <h4 id="aad">AAD<a class="headerlink" href="#aad" title="Link to this section">&para;</a></h4>
 <p>The WFE cluster manages connectivity and authentication. Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> relies on Azure Active Directory (AAD) to manage account authentication and management. </p>
 <h4 id="atm">ATM<a class="headerlink" href="#atm" title="Link to this section">&para;</a></h4>
@@ -11392,7 +11395,7 @@ as the main headline.
 <p>Once a user is authenticated, subsequent client interactions occur with the backend cluster directly and the WFE cluster is not used.</p>
 </div>
 <h3 id="back-end-cluster">Back-end cluster<a class="headerlink" href="#back-end-cluster" title="Link to this section">&para;</a></h3>
-<p><center> <img src="../images/backend_powerbi.jpg" width="80%"> </center></p>
+<p><center> <img src="../images/backend_powerbi.jpg" alt="Backend powerbi" width="80%"> </center></p>
 <p>The backend cluster manages all actions the user does in Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> Service, including visualizations, dashboards,datasets, reports, data storage, data connections, data refresh, and others. </p>
 <h4 id="gateway-and-apim">Gateway and APIM<a class="headerlink" href="#gateway-and-apim" title="Link to this section">&para;</a></h4>
 <p>The Gateway Role acts as a gateway between user requests and the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> service. As you can see in the diagram, only the Gateway Role and Azure <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> Management (APIM) services are accessible from the public Internet.</p>
@@ -11496,7 +11499,7 @@ as the main headline.
 <p class="admonition-title">Data storage mode</p>
 <p>For larger datasets, <code>DirectQuery</code> and <code>Hybrid tables</code> is a good option. Snowflake will handle the heavy lifting. </p>
 </div>
-<p><center> <img src="../images/power_snow_example.jpg" width="80%"> </center></p>
+<p><center> <img src="../images/power_snow_example.jpg" alt="Power snow example" width="80%"> </center></p>
 <h3 id="best-practices-when-using-dw-with-powerbi">Best Practices when using DW with PowerBI<a class="headerlink" href="#best-practices-when-using-dw-with-powerbi" title="Link to this section">&para;</a></h3>
 <ul>
 <li>Make sure the data visualizations are use case driven, this includes the timing of the data, number of visualizations and other components.</li>
@@ -11529,7 +11532,7 @@ as the main headline.
 </li>
 </ul>
 <h3 id="auth-flow">Auth flow<a class="headerlink" href="#auth-flow" title="Link to this section">&para;</a></h3>
-<p><center> <img src="../images/oauth-powerbi-sso.jpg" width="80%"> </center></p>
+<p><center> <img src="../images/oauth-powerbi-sso.jpg" alt="Oauth powerbi sso" width="80%"> </center></p>
 <ol>
 <li>The user logs into Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> service using Microsoft Azure Active Directory (Azure AD).</li>
 <li>(Optional) If the identity provider is not Azure AD, then Azure AD verifies the user through SAML authentication before logging the user into the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> service.</li>
@@ -11673,13 +11676,13 @@ as the main headline.
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

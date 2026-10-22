@@ -27,6 +27,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="/assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
 
     
@@ -100,7 +103,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="/." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="/." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -10653,13 +10656,13 @@
       
         <script src="/javascripts/cosmos.js"></script>
       
+        <script src="/javascripts/ufo.js"></script>
+      
         <script src="/javascripts/totop.js"></script>
       
         <script src="/javascripts/claps.js"></script>
       
         <script src="/javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

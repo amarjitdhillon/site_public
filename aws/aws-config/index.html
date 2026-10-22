@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -10781,11 +10784,11 @@ as the main headline.
 <p class="admonition-title">What is AWS Config?</p>
 <p><code>AWS Config</code> provides a detailed view of the resources associated with your <em>AWS account</em>, <mark>including how they are configured, how they are related to one another, and how the configurations and their relationships have changed over time.</mark></p>
 <p><center> 
-<img width="100%" src="../images/aws-config.png">
+<img width="100%" src="../images/aws-config.png" alt="Aws config">
 </center></p>
 <p>Below diagram shown the various servers which we need to configure</p>
 <p><center> 
-<img width="100%" src="../images/aws-config-issue.jpeg">
+<img width="100%" src="../images/aws-config-issue.jpeg" alt="Aws config issue">
 </center></p>
 </div>
 <p>You can use AWS Config rules to represent your <code>desired configuration settings</code> for specific AWS resources or for an <em>entire AWS account</em>. If a resource violates a rule, AWS Config flags the resource and the rule as noncompliant and notifies you through Amazon <abbr title="Simple Notification Service: AWS pub/sub messaging and notifications">SNS</abbr></p>
@@ -10803,34 +10806,34 @@ as the main headline.
 </ul>
 <p>Use an aggregator to view the resource configuration and compliance data recorded in AWS Config. An aggregator uses an Amazon <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr> bucket to store aggregated data. It periodically retrieves configuration snapshots from the source accounts and stores them in the designated <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr> bucket.</p>
 <p><center> 
-<img width="100%" src="../images/config-aggregators.jpeg">
+<img width="100%" src="../images/config-aggregators.jpeg" alt="Config aggregators">
 </center></p>
 <h2 id="config-recorder">Config Recorder 🎥<a class="headerlink" href="#config-recorder" title="Link to this section">&para;</a></h2>
 <p>The configuration recorder stores the configurations of the supported resources in your account as configuration items. You must first create and then start the configuration recorder before you can start recording. You can stop and restart the configuration recorder at any time.</p>
 <p><center> 
-<img width="100%" src="../images/config-recorder.jpeg">
+<img width="100%" src="../images/config-recorder.jpeg" alt="Config recorder">
 </center></p>
 <h2 id="config-snapshot">Config Snapshot 📷<a class="headerlink" href="#config-snapshot" title="Link to this section">&para;</a></h2>
 <p>A configuration snapshot is a collection of the configuration items for the supported resources that exist in your account. This configuration snapshot is a complete picture of the resources that are being recorded and their configurations. The configuration snapshot can be a useful tool for validating your configuration.</p>
 <p><center> 
-<img width="100%" src="../images/config-snapshot.png">
+<img width="100%" src="../images/config-snapshot.png" alt="Config snapshot">
 </center></p>
 <h2 id="config-history">Config History ⌚️<a class="headerlink" href="#config-history" title="Link to this section">&para;</a></h2>
 <p>A configuration history is a collection of the configuration items for a given resource over any time period. A configuration history can help you answer questions about, for example, when the resource was first created, how the resource has been configured over the last month, and what configuration changes were introduced yesterday at 9 AM. </p>
 <p><center> 
-<img width="100%" src="../images/config-history.jpeg">
+<img width="100%" src="../images/config-history.jpeg" alt="Config history">
 </center></p>
 <div class="admonition info">
 <p class="admonition-title">Difference between Config History and Config Snapshot</p>
 <p><center> 
-<img width="100%" src="../images/config-hist-snap.png">
+<img width="100%" src="../images/config-hist-snap.png" alt="Config hist snap">
 </center></p>
 </div>
 <h2 id="config-rule">Config Rule 👮<a class="headerlink" href="#config-rule" title="Link to this section">&para;</a></h2>
 <p>AWS Config provides AWS managed rules, which are predefined, customizable rules that AWS Config uses to evaluate whether your AWS resources comply with common best practices. </p>
 <p>For example, you could use a managed rule to quickly start assessing whether your Amazon Elastic Block Store (Amazon <abbr title="Elastic Block Store: disks you attach to EC2 servers">EBS</abbr>) volumes are encrypted or whether specific tags are applied to your resources.</p>
 <p><center> 
-<img width="100%" src="../images/config-rule.jpeg">
+<img width="100%" src="../images/config-rule.jpeg" alt="Config rule">
 </center></p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Configuration<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../aws/parameter-store/">Parameter Store →</a></p></li><li><p class="rn__kicker">Migration<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../aws/well-architected/">Well Architected →</a></p></li></ul></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
@@ -10968,13 +10971,13 @@ as the main headline.
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

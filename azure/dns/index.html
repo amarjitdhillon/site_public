@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -11009,9 +11012,9 @@ as the main headline.
 <p><code>Authoritative nameserver</code> -  The authoritative nameserver is the last stop in the nameserver query. <mark>If the authoritative name server has access to the requested record, it will return the <code>IP address</code> for the requested hostname back to the <code>DNS Recursor/Resolver</code> that made the initial request.</mark></p>
 </li>
 </ol>
-<p><center> <img src="../images/dns-zones.jpg" width="80%"> </center></p>
+<p><center> <img src="../images/dns-zones.jpg" alt="Dns zones" width="80%"> </center></p>
 <p>Various steps taken to resovle the <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> quey are shown below</p>
-<p><center> <img src="../images/dns-steps.jpg" width="80%"> </center></p>
+<p><center> <img src="../images/dns-steps.jpg" alt="Dns steps" width="80%"> </center></p>
 <h2 id="basics">Basics<a class="headerlink" href="#basics" title="Link to this section">&para;</a></h2>
 <h3 id="dns-zones"><abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> zones<a class="headerlink" href="#dns-zones" title="Link to this section">&para;</a></h3>
 <p>A <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> zone is used to host the <code>DNS records</code> for a particular domain. To start hosting your domain in Azure <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr>, you need to create a <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> zone for that domain name. <mark>Each <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> record for your domain is then created inside this <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> zone.</mark></p>
@@ -11038,7 +11041,7 @@ as the main headline.
 <div class="highlight"><span class="filename">record set example</span><pre><span></span><code><span class="nx">www</span><span class="p">.</span><span class="nx">amarjitdhillon</span><span class="p">.</span><span class="nx">com</span><span class="w">    </span><span class="mi">3600</span><span class="w">    </span><span class="nx">IN</span><span class="w">    </span><span class="nx">A</span><span class="w">    </span><span class="mf">134.170.185.46</span>
 <span class="nx">www</span><span class="p">.</span><span class="nx">amarjitdhillon</span><span class="p">.</span><span class="nx">com</span><span class="w">    </span><span class="mi">3600</span><span class="w">    </span><span class="nx">IN</span><span class="w">    </span><span class="nx">A</span><span class="w">    </span><span class="mf">134.170.188.221</span>
 </code></pre></div>
-<p><center> <img src="../images/dns-record-set.jpg" width="60%"> </center></p>
+<p><center> <img src="../images/dns-record-set.jpg" alt="Dns record set" width="60%"> </center></p>
 <div class="admonition danger">
 <p class="admonition-title">Exception in record set</p>
 <p>The <code>SOA</code> and <code>CNAME</code> record types are exceptions. The <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> standards don't permit multiple records with the same name for these types, therefore these record sets can only contain a single record.</p>
@@ -11340,13 +11343,13 @@ contoso.com
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

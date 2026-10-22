@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -10792,13 +10795,13 @@ as the main headline.
 <p>AWS CloudTrail is an AWS service that helps you enable operational and risk auditing, governance, and compliance of your AWS account. Actions taken by a user, role, or an AWS service are recorded as events in CloudTrail.</p>
 <p>AWS CloudTrail records <code>API calls</code> for your account. The recorded information includes the identity of the <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> caller, the time of the <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> call, the source IP address of the <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> caller, and more. </p>
 <p><center> 
-<img width="100%" src="../images/cloudtrail-basics.jpeg">
+<img width="100%" src="../images/cloudtrail-basics.jpeg" alt="Cloudtrail basics">
 </center></p>
 <p>Events are typically updated in CloudTrail within <code>15 minutes after an API call</code>. </p>
 <h2 id="type-of-trails">Type of Trails 🛣️<a class="headerlink" href="#type-of-trails" title="Link to this section">&para;</a></h2>
 <p>A trail is a configuration that enables delivery of CloudTrail events to an <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr> bucket, with optional delivery to CloudWatch Logs and Amazon EventBridge. You can use a trail to choose the CloudTrail events you want delivered, encrypt your CloudTrail event log files with an AWS <abbr title="Key Management Service: creates and guards encryption keys">KMS</abbr> key, and set up Amazon <abbr title="Simple Notification Service: AWS pub/sub messaging and notifications">SNS</abbr> notifications for log file delivery.</p>
 <p><center> 
-<img width="100%" src="../images/cloudtrail-trails.jpeg">
+<img width="100%" src="../images/cloudtrail-trails.jpeg" alt="Cloudtrail trails">
 </center></p>
 <h3 id="multi-region-trail">Multi-Region trail 🌎<a class="headerlink" href="#multi-region-trail" title="Link to this section">&para;</a></h3>
 <p>When you create a multi-Region trail, CloudTrail records events in all AWS Regions in the AWS partition in which you are working and delivers the CloudTrail event log files to an <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr> bucket that you specify.</p>
@@ -10813,7 +10816,7 @@ as the main headline.
 <p>AWS CloudTrail Lake lets you run <code>SQL-based queries</code> on your events. <strong>CloudTrail Lake converts existing events in row-based <abbr title="JavaScript Object Notation: a common text format for data">JSON</abbr> format to Apache ORC format</strong>. ORC is a <code>columnar storage</code> format that is optimized for fast retrieval of data. Events are aggregated into event data stores, which are immutable collections of events based on criteria that you select by applying advanced event selectors. </p>
 <p>You can keep the event data in an event data store for up to 3,653 days (about 10 years) if you choose the One-year extendable retention pricing option, or up to 2,557 days (about 7 years) if you choose the Seven-year retention pricing option.</p>
 <p><center> 
-<img width="100%" src="../images/cloudtrail-lake.jpeg">
+<img width="100%" src="../images/cloudtrail-lake.jpeg" alt="Cloudtrail lake">
 </center></p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Monitoring<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../aws/xray/">X-Ray →</a></p></li><li><p class="rn__kicker">Monitoring<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../aws/control-tower/">Control Tower →</a></p></li></ul></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
@@ -10951,13 +10954,13 @@ as the main headline.
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

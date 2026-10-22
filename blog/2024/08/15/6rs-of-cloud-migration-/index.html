@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../../../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../../../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../../../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../../../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../../../../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../../../../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -10784,7 +10787,7 @@ as the main headline.
 <span data-reveal-page hidden></span>
 <h1 id="6rs-of-cloud-migration">6R's of Cloud Migration 🧭<a class="headerlink" href="#6rs-of-cloud-migration" title="Link to this section">&para;</a></h1>
 <p>Here are the 6 R's of cloud migration</p>
-<p><center> <img src="/blog/images/6rs.gif" width="95%"> </center></p>
+<p><center> <img src="/blog/images/6rs.gif" alt="6rs" width="95%"> </center></p>
 <h2 id="6rs">6R's<a class="headerlink" href="#6rs" title="Link to this section">&para;</a></h2>
 <h3 id="retire">Retire 👴<a class="headerlink" href="#retire" title="Link to this section">&para;</a></h3>
 <p>Decommissioning of the unnecessary workloads</p>
@@ -10796,7 +10799,7 @@ as the main headline.
 </div>
 <p>Migrate your applications first using the rehosting approach ("lift-and-shift"). With rehosting, you move an existing application to the cloud as-is and modernize it later.</p>
 <p><center> 
-<img width="100%" src="/blog/images/rehost.jpeg"></p>
+<img width="100%" src="/blog/images/rehost.jpeg" alt="Rehost"></p>
 <figcaption>Re-host example</figcaption>
 <p></center></p>
 <p>Rehosting has four major benefits:</p>
@@ -10809,7 +10812,7 @@ as the main headline.
 <h3 id="re-purchasing-saas">Re-purchasing (<abbr title="Software as a Service: ready-to-use software you just sign into">SaaS</abbr>) 💰<a class="headerlink" href="#re-purchasing-saas" title="Link to this section">&para;</a></h3>
 <p>To buy <abbr title="Software as a Service: ready-to-use software you just sign into">SaaS</abbr> alternatives.Most organizations replace about 15% of their applications with software-as-a-service (<abbr title="Software as a Service: ready-to-use software you just sign into">SaaS</abbr>) and low-code solutions. They see the value in moving "from" technologies with management overhead ("control") and moving "to" solutions that let them focus on achieving their objectives ("productivity").</p>
 <p><center> 
-<img width="100%" src="/blog/images/re-purchase.jpeg"></p>
+<img width="100%" src="/blog/images/re-purchase.jpeg" alt="Re purchase"></p>
 <figcaption>Re-purchase example</figcaption>
 <p></center></p>
 <h3 id="re-platforming-paas">Re-platforming (<abbr title="Platform as a Service: the provider runs the platform, you bring the code">PaaS</abbr>) 📦<a class="headerlink" href="#re-platforming-paas" title="Link to this section">&para;</a></h3>
@@ -10817,30 +10820,30 @@ as the main headline.
 <p>It means lift and shift + some tuning. Replatforming, also known as “lift, tinker, and shift,” involves making a few cloud optimizations to realize a tangible benefit. Optimization is achieved without changing the core architecture of the application.</p>
 </div>
 <p><center> 
-<img width="100%" src="/blog/images/re-platform.jpeg"></p>
+<img width="100%" src="/blog/images/re-platform.jpeg" alt="Re platform"></p>
 <figcaption>Re-platform example</figcaption>
 <p></center></p>
 <p>Modernize or re-platform your applications first. In this approach, you change parts of an application during the migration process.</p>
 <h3 id="refactoring">Refactoring 🏭<a class="headerlink" href="#refactoring" title="Link to this section">&para;</a></h3>
 <p>Rebuilding the apps from scratch. it's very expensive but being able to use all max benefits of the cloud</p>
 <p><center> 
-<img width="100%" src="/blog/images/re-factor.jpeg"></p>
+<img width="100%" src="/blog/images/re-factor.jpeg" alt="Re factor"></p>
 <figcaption>Re-factor example</figcaption>
 <p></center></p>
 <h3 id="retire_1">Retire<a class="headerlink" href="#retire_1" title="Link to this section">&para;</a></h3>
 <p>We recommend retiring any workloads your organization doesn't need. You'll need to do some discovery and inventory to find applications and environments that aren't worth the investment to keep. The goal of retiring is to be cost and time efficient. Shrinking your portfolio before you move to the cloud allows your team to focus on the most important assets.</p>
 <p><center> 
-<img width="100%" src="/blog/images/retire.jpeg"></p>
+<img width="100%" src="/blog/images/retire.jpeg" alt="Retire"></p>
 <figcaption>Retire example</figcaption>
 <p></center></p>
 <h2 id="aws-migration-evaluator">AWS Migration Evaluator 🤔<a class="headerlink" href="#aws-migration-evaluator" title="Link to this section">&para;</a></h2>
 <p><center> 
-<img width="100%" src="/blog/images/migration-evaluator.jpeg"></p>
+<img width="100%" src="/blog/images/migration-evaluator.jpeg" alt="Migration evaluator"></p>
 <figcaption>Migration Evaluator</figcaption>
 <p></center></p>
 <h2 id="migration-hub">Migration Hub 🏛️<a class="headerlink" href="#migration-hub" title="Link to this section">&para;</a></h2>
 <p><center> 
-<img width="100%" src="/blog/images/migration-hub.png"></p>
+<img width="100%" src="/blog/images/migration-hub.png" alt="Migration hub"></p>
 <figcaption>Migration Evaluator</figcaption>
 <p></center></p>
 <p>AWS <code>Migration Hub</code> provides a single place to <mark>discover your existing servers, plan migrations, and track the status of each application migration</mark>. Before migrating you can discover information about your <code>on-premises server</code> and application resources to help you build a business case for migrating or to build a <em>migration plan</em>.</p>
@@ -10854,7 +10857,7 @@ as the main headline.
 <li><strong>Application Discovery Service Agentless Collector</strong> – Agentless Collector is an <code>on-premises application</code> that collects information through agentless methods about your on-premises environment, including server profile information (for example, OS, number of CPUs, amount of RAM), database metadata (for example, version, edition, numbers of tables and schemas), and server utilization metrics. </li>
 </ul>
 <p><center> 
-<img width="100%" src="/blog/images/agentless.png"></p>
+<img width="100%" src="/blog/images/agentless.png" alt="Agentless"></p>
 <figcaption>Agentless</figcaption>
 <p></center></p>
 <p>You install the Agentless Collector as a virtual machine (VM) in your VMware vCenter Server environment using an Open Virtualization Archive (OVA) file. </p>
@@ -10862,7 +10865,7 @@ as the main headline.
 <li><strong>AWS Application Discovery Agent</strong> – The Discovery Agent is AWS software that you install on your on-premises servers and VMs to capture system configuration, system performance, running processes, and details of the network connections between systems.</li>
 </ul>
 <p><center> 
-<img width="100%" src="/blog/images/agent-based.png"></p>
+<img width="100%" src="/blog/images/agent-based.png" alt="Agent based"></p>
 <figcaption>Agent Based</figcaption>
 <p></center></p>
 <p>Agents support most Linux and Windows operating systems, and you can deploy them on physical on-premises servers, Amazon <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instances, and virtual machines. </p>
@@ -11010,13 +11013,13 @@ as the main headline.
       
         <script src="../../../../../javascripts/cosmos.js"></script>
       
+        <script src="../../../../../javascripts/ufo.js"></script>
+      
         <script src="../../../../../javascripts/totop.js"></script>
       
         <script src="../../../../../javascripts/claps.js"></script>
       
         <script src="../../../../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

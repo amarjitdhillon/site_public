@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -10985,7 +10988,7 @@ In <code>image recognition</code>, a machine learning model can be taught to rec
 <h2 id="model-training">Model Training<a class="headerlink" href="#model-training" title="Link to this section">&para;</a></h2>
 <p>The process of running a machine learning algorithm on a dataset (called <code>training data</code>) and optimizing the algorithm to find certain patterns or outputs is called <code>model training</code>. The resulting function with rules and data structures is called the <code>trained machine learning model</code>.</p>
 <h2 id="ml-types">Ml Types<a class="headerlink" href="#ml-types" title="Link to this section">&para;</a></h2>
-<p><center> <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/glossary/data-science/xgboost/img-1.png" width="95%"> </center></p>
+<p><center> <img src="https://www.nvidia.com/content/dam/en-zz/Solutions/glossary/data-science/xgboost/img-1.png" alt="Img 1" width="95%"> </center></p>
 <h3 id="supervised">Supervised<a class="headerlink" href="#supervised" title="Link to this section">&para;</a></h3>
 <p>In supervised machine learning, the algorithm is provided an input dataset, and is rewarded or optimized to meet a set of specific outputs.</p>
 <ul>
@@ -11011,20 +11014,20 @@ In <code>image recognition</code>, a machine learning model can be taught to rec
 <h2 id="model-techniques">Model techniques<a class="headerlink" href="#model-techniques" title="Link to this section">&para;</a></h2>
 <h3 id="regression">Regression<a class="headerlink" href="#regression" title="Link to this section">&para;</a></h3>
 <p>Regression in data science and machine learning is a statistical method that enables predicting outcomes based on a set of input variables. The outcome is often a variable that depends on a combination of the input variables.</p>
-<p><center> <img src="https://cms.databricks.com/sites/default/files/inline-images/figure-2a.png" width="95%"> </center></p>
+<p><center> <img src="https://cms.databricks.com/sites/default/files/inline-images/figure-2a.png" alt="Figure 2a" width="95%"> </center></p>
 <p>Linear, polynomial, ridge, lasso, quantile, and Bayesian regression</p>
 <h3 id="classification">Classification<a class="headerlink" href="#classification" title="Link to this section">&para;</a></h3>
 <p>Binary and multi-label classification</p>
 <h3 id="decision-trees">Decision Trees<a class="headerlink" href="#decision-trees" title="Link to this section">&para;</a></h3>
 <p>A Decision Tree is a predictive approach in ML to determine what class an object belongs to. As the name suggests, a decision tree is a tree-like flow chart where the class of an object is determined step-by-step using certain known conditions.</p>
-<p><center> <img src="https://cms.databricks.com/sites/default/files/inline-images/visualizing-the-model.png" width="95%"> </center></p>
+<p><center> <img src="https://cms.databricks.com/sites/default/files/inline-images/visualizing-the-model.png" alt="Visualizing the model" width="95%"> </center></p>
 <h3 id="random-forests">Random Forests<a class="headerlink" href="#random-forests" title="Link to this section">&para;</a></h3>
 <h3 id="xgboost">XGBoost<a class="headerlink" href="#xgboost" title="Link to this section">&para;</a></h3>
 <p>XGBoost, which stands for Extreme Gradient Boosting, is a scalable, distributed gradient-boosted decision tree (GBDT) machine learning library. It provides parallel tree boosting and is the leading machine learning library for regression, classification, and ranking problems.</p>
 <p><mark>A Gradient Boosting Decision Trees (GBDT) is a decision tree ensemble learning algorithm similar to random forest, for classification and regression. Ensemble learning algorithms combine multiple machine learning algorithms to obtain a better model.</mark></p>
 <h3 id="deep-learning">Deep Learning<a class="headerlink" href="#deep-learning" title="Link to this section">&para;</a></h3>
 <p>Deep learning models are a class of ML models that imitate the way humans process information. The model consists of several layers of processing (hence the term 'deep') to extract high-level features from the data provided. Each processing layer passes on a more abstract representation of the data to the next layer, with the final layer providing a more human-like insight.</p>
-<p><center> <img src="https://cms.databricks.com/sites/default/files/inline-images/03-panda-min.png" width="95%"> </center></p>
+<p><center> <img src="https://cms.databricks.com/sites/default/files/inline-images/03-panda-min.png" alt="03 panda min" width="95%"> </center></p>
 <div class="admonition info">
 <p>Unlike traditional ML models which require data to be labeled, deep learning models can ingest large amounts of unstructured data. </p>
 </div>
@@ -11188,13 +11191,13 @@ In <code>image recognition</code>, a machine learning model can be taught to rec
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

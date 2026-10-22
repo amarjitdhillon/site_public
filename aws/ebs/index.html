@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -10830,7 +10833,7 @@ as the main headline.
 <p>When you're using Amazon <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> to run your business applications, those applications need access to CPU, memory, network, and storage. <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instances give you access to all those different components, and right now, let's focus on the storage access. As applications run, they will oftentimes need access to block-level storage. </p>
 <p>You can think of block-level storage as a place to store files. A file being a series of bytes that are stored in blocks on disc. When a file is updated, the whole series of blocks aren't all overwritten. Instead, it updates just the pieces that change. This makes it an efficient storage type when working with applications like databases, enterprise software, or file systems. </p>
 <p>When you use your laptop or personal computer, you are accessing block-level storage. All block-level storage is, in this case, is your hard drive. <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instances have hard drives as well. And there are a few different types.</p>
-<p><center> <img src="../images/ebs/ebs-basic.jpg" width="90%"> </center></p>
+<p><center> <img src="../images/ebs/ebs-basic.jpg" alt="Ebs basic" width="90%"> </center></p>
 <p>When you launch an <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instance, depending on the type of the <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instance you launched, it might provide you with local storage called instance store volumes. These volumes are physically attached to the host, your <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instances running on top of. And you can write to it just like a normal hard drive. The catch here is that since this volume is attached to the underlying physical host, if you stop or terminate your <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instance, all data written to the instance store volume will be deleted. The reason for this, is that if you start your instance from a stop state, it's likely that <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instance will start up on another host. A host where that volume does not exist. Remember <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instances are virtual machines, and therefore the underlying host can change between stopping and starting an instance. </p>
 </div>
 <ul>
@@ -10842,7 +10845,7 @@ as the main headline.
 </ul>
 <hr />
 <p>As shown in the image below, the <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instance storage is locked to <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instance while <abbr title="Elastic Block Store: disks you attach to EC2 servers">EBS</abbr> are not locked to an <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr>. We can also create snapshot from <abbr title="Elastic Block Store: disks you attach to EC2 servers">EBS</abbr></p>
-<p><center> <img src="../images/ebs/ebs-basic.jpg" width="90%"> </center></p>
+<p><center> <img src="../images/ebs/ebs-basic.jpg" alt="Ebs basic" width="90%"> </center></p>
 <p>!!! question 'Why do we need snapshots?'
     - Cost effective backup stragegy
     - To share data-sets with others users/accounts
@@ -11065,13 +11068,13 @@ as the main headline.
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

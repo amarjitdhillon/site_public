@@ -31,6 +31,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../../../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../../../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../../../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../../../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -129,7 +132,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../../../../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../../../../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -178,7 +181,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -10825,7 +10828,7 @@ as the main headline.
 <p>In reality, once you start building enterprise systems, the architecture becomes much bigger very quickly  </p>
 <p>The diagram below is roughly how I think about a modern enterprise agentic AI stack today</p>
 <p><center> 
-<img src='/blog/images/agentic-ai-patterns/hlc-agentic-ai-architecture.png' width="100%">
+<img src="/blog/images/agentic-ai-patterns/hlc-agentic-ai-architecture.png" alt="Hlc agentic ai architecture" width="100%">
 </center></p>
 <p>At the center, you still have LLMs and agents. But around them, there are many supporting layers:</p>
 <ul>
@@ -10849,7 +10852,7 @@ as the main headline.
 <p>Most teams initially hardcode integrations directly into orchestration logic. That works for demos. It becomes painful very quickly once you have dozens of tools and APIs  </p>
 <p>That is where <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr> starts becoming useful</p>
 <p><center> 
-<img src='/blog/images/agentic-ai-patterns/mcp.png' width="100%">
+<img src="/blog/images/agentic-ai-patterns/mcp.png" alt="Mcp" width="100%">
 </center></p>
 <p>The way I think about <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr> is pretty simple  </p>
 <p>The host application contains your AI logic. This could be something like Claude Desktop, Cursor or your own internal AI portal  </p>
@@ -10899,7 +10902,7 @@ Start with narrow scoped tools first and slowly expand capabilities</p>
 <p>How do agents collaborate with each other?</p>
 <p>This is where A2A becomes interesting</p>
 <p><center> 
-<img src='/blog/images/agentic-ai-patterns/a2a.png' width="100%">
+<img src="/blog/images/agentic-ai-patterns/a2a.png" alt="A2a" width="100%">
 </center></p>
 <p>When I first looked at A2A, I thought it was competing with <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr>. After building a few systems, I realized they solve completely different problems  </p>
 <p><abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr> is mostly about agents talking to tools  </p>
@@ -10927,7 +10930,7 @@ Multi-agent collaboration sounds exciting but debugging distributed reasoning fl
 <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> is not orchestration<br />
 <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> is mostly retrieval + grounding</p>
 <p><center> 
-<img src='/blog/images/agentic-ai-patterns/native-rag.png' width="100%">
+<img src="/blog/images/agentic-ai-patterns/native-rag.png" alt="Native rag" width="100%">
 </center></p>
 <p>The basic flow is straightforward  </p>
 <p>Documents are ingested, chunked, embedded and stored inside a vector database  </p>
@@ -10944,7 +10947,7 @@ Multi-agent collaboration sounds exciting but debugging distributed reasoning fl
 <p>Simple vector retrieval works well for many use cases. But eventually you run into situations where semantic similarity alone is not enough  </p>
 <p>That is where Graph <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> becomes interesting</p>
 <p><center> 
-<img src='/blog/images/agentic-ai-patterns/graph-rag.png' width="100%">
+<img src="/blog/images/agentic-ai-patterns/graph-rag.png" alt="Graph rag" width="100%">
 </center></p>
 <p>The big idea behind Graph <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> is relationship awareness  </p>
 <p>Instead of only retrieving similar chunks, the system also understands how entities connect with each other  </p>
@@ -10966,7 +10969,7 @@ Most teams should start with simple vector <abbr title="Retrieval-Augmented Gene
 <p>This is probably one of the most misunderstood topics in <abbr title="Generative AI: models that create new text, images, code or audio">GenAI</abbr> right now  </p>
 <p>People often use these terms interchangeably even though they solve very different problems</p>
 <p><center> 
-<img src='/blog/images/agentic-ai-patterns/pe-vs-rag-vs-ft.png' width="100%">
+<img src="/blog/images/agentic-ai-patterns/pe-vs-rag-vs-ft.png" alt="Pe vs rag vs ft" width="100%">
 </center></p>
 <p>Prompt engineering is mainly about improving instructions  </p>
 <p><abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> is about injecting external knowledge dynamically  </p>
@@ -10983,7 +10986,7 @@ Most teams should start with simple vector <abbr title="Retrieval-Augmented Gene
 <p>One thing that becomes obvious very quickly in production is that a single moderation layer is not enough  </p>
 <p>Guardrails need to exist throughout the entire workflow</p>
 <p><center> 
-<img src='/blog/images/agentic-ai-patterns/guardrails.png' width="100%">
+<img src="/blog/images/agentic-ai-patterns/guardrails.png" alt="Guardrails" width="100%">
 </center></p>
 <p>Input guardrails help filter malicious prompts and sensitive data before the request reaches the agent  </p>
 <p>Internal guardrails monitor reasoning quality and policy alignment while the agent is thinking  </p>
@@ -10998,7 +11001,7 @@ Most teams should start with simple vector <abbr title="Retrieval-Augmented Gene
 <h2 id="agent-mesh-defense-with-gateways-and-sidecars">Agent Mesh Defense with Gateways and Sidecars 🧱<a class="headerlink" href="#agent-mesh-defense-with-gateways-and-sidecars" title="Link to this section">&para;</a></h2>
 <p>As systems become more distributed, service mesh style thinking starts becoming useful for agents too</p>
 <p><center> 
-<img src='/blog/images/agentic-ai-patterns/agent-mesh-defense.png' width="75%">
+<img src="/blog/images/agentic-ai-patterns/agent-mesh-defense.png" alt="Agent mesh defense" width="75%">
 </center></p>
 <p>The sidecar acts like local protection near each agent  </p>
 <p>It can:
@@ -11017,7 +11020,7 @@ Most teams should start with simple vector <abbr title="Retrieval-Augmented Gene
 <p>This pattern sounds boring in diagrams but becomes incredibly important in production  </p>
 <p>Especially once agents start generating code or executing actions</p>
 <p><center> 
-<img src='/blog/images/agentic-ai-patterns/sandboxing-least-privilege.png' width="80%">
+<img src="/blog/images/agentic-ai-patterns/sandboxing-least-privilege.png" alt="Sandboxing least privilege" width="80%">
 </center></p>
 <p>The idea is simple  </p>
 <p>Before running risky operations, create a temporary isolated execution environment  </p>
@@ -11040,7 +11043,7 @@ Most teams should start with simple vector <abbr title="Retrieval-Augmented Gene
 - latency spikes</p>
 <p>That is why fallback strategies become important</p>
 <p><center> 
-<img src='/blog/images/agentic-ai-patterns/fallback-model-invocation.png' width="75%">
+<img src="/blog/images/agentic-ai-patterns/fallback-model-invocation.png" alt="Fallback model invocation" width="75%">
 </center></p>
 <p>The simplest flow is:
 - call the primary model
@@ -11063,7 +11066,7 @@ Different models often behave very differently with the same prompt</p>
 <p>Most teams spend too much time building and not enough time evaluating  </p>
 <p>Without evaluations, improvement becomes guesswork</p>
 <p><center> 
-<img src='/blog/images/agentic-ai-patterns/evals.png' width="75%">
+<img src="/blog/images/agentic-ai-patterns/evals.png" alt="Evals" width="75%">
 </center></p>
 <p>A proper evaluation setup usually starts with datasets containing:
 - user inputs
@@ -11233,13 +11236,13 @@ Different models often behave very differently with the same prompt</p>
       
         <script src="../../../../../javascripts/cosmos.js"></script>
       
+        <script src="../../../../../javascripts/ufo.js"></script>
+      
         <script src="../../../../../javascripts/totop.js"></script>
       
         <script src="../../../../../javascripts/claps.js"></script>
       
         <script src="../../../../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

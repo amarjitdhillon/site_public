@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -11020,7 +11023,7 @@ as the main headline.
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
 <h1 id="event-hub-pull-based">Event Hub (Pull based) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 6.5c-1.7 0-3 1.3-3 3v.2l-2 .7c-.6-1.2-1.8-2.1-3.2-2.3V5.9C14 5.6 15 4.4 15 3c0-1.7-1.3-3-3-3S9 1.3 9 3c0 1.4 1 2.6 2.2 2.9v2.2c-1.3.2-2.5 1.1-3.2 2.3l-2-.7v-.2c0-1.7-1.3-3-3-3s-3 1.3-3 3 1.3 3 3 3c1.1 0 2-.6 2.5-1.4l2 .7c-.2 1.3.2 2.7 1.1 3.7l-1.4 1.8Q6.6 17 6 17c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3q0-1.05-.6-1.8l1.4-1.8c1.4.8 3 .8 4.4 0l1.4 1.8q-.6.75-.6 1.8c0 1.7 1.3 3 3 3s3-1.3 3-3-1.3-3-3-3c-.4 0-.9.1-1.2.3l-1.4-1.8c.9-1 1.3-2.4 1.1-3.7l2-.7c.5.8 1.5 1.4 2.5 1.4 1.7 0 3-1.3 3-3s-1.3-3-3-3m-18 4c-.5 0-1-.4-1-1s.5-1 1-1 1 .4 1 1-.5 1-1 1M6 21c-.6 0-1-.5-1-1s.4-1 1-1 1 .5 1 1-.4 1-1 1m5-18c0-.5.4-1 1-1s1 .5 1 1-.4 1-1 1-1-.5-1-1m1 12c-1.4 0-2.5-1.1-2.5-2.5S10.6 10 12 10s2.5 1.1 2.5 2.5S13.4 15 12 15m6 4c.5 0 1 .5 1 1s-.5 1-1 1-1-.5-1-1 .5-1 1-1m3-8.5c-.5 0-1-.4-1-1s.5-1 1-1 1 .4 1 1-.5 1-1 1"/></svg></span><a class="headerlink" href="#event-hub-pull-based" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 7 min read</p>
-<p><center> <img src="../images/eh1.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/eh1.jpg" alt="Eh1" width="100%"> </center></p>
 <h2 id="event-grid-vs-event-hub">Event Grid Vs Event Hub<a class="headerlink" href="#event-grid-vs-event-hub" title="Link to this section">&para;</a></h2>
 <p>A key difference between <code>Event Grid</code> and <code>Event Hubs</code> is in the way event data is made available to the subscribers. <mark>Event Grid <code>pushes</code> the ingested data to the subscribers whereas Event Hub makes the data available in a <code>pull model</code>.</mark> </p>
 <div class="admonition question">
@@ -11033,28 +11036,28 @@ as the main headline.
 </ul>
 </div>
 <h2 id="event-hub-vs-kafka">Event Hub Vs Kafka ⚖️<a class="headerlink" href="#event-hub-vs-kafka" title="Link to this section">&para;</a></h2>
-<p><center> <img src="../images/kafka_and_event_hub.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/kafka_and_event_hub.jpg" alt="Kafka and event hub" width="100%"> </center></p>
 <h2 id="what-event-hub-is-not">What Event hub is not?<a class="headerlink" href="#what-event-hub-is-not" title="Link to this section">&para;</a></h2>
-<p><center> <img src="../images/eh-not.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/eh-not.jpg" alt="Eh not" width="100%"> </center></p>
 <h2 id="event-hub-architecture">Event-hub Architecture 🏛️<a class="headerlink" href="#event-hub-architecture" title="Link to this section">&para;</a></h2>
-<p><center> <img src="../images/eh-arch.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/eh-arch.jpg" alt="Eh arch" width="100%"> </center></p>
 <h2 id="concepts">Concepts 📕<a class="headerlink" href="#concepts" title="Link to this section">&para;</a></h2>
 <div class="admonition remember">
 <p>Azure Event Hubs is part of a fleet of services, which also includes <code>Azure Service Bus</code>, and <code>Azure Event Grid</code>.</p>
 </div>
 <h3 id="namespaces">Namespaces 📇<a class="headerlink" href="#namespaces" title="Link to this section">&para;</a></h3>
-<p><center> <img src="../images/hub-ns.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/hub-ns.jpg" alt="Hub ns" width="100%"> </center></p>
 <h3 id="event-hub-capture">Event hub capture<a class="headerlink" href="#event-hub-capture" title="Link to this section">&para;</a></h3>
-<p><center> <img src="../images/eh-capture.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/eh-capture.jpg" alt="Eh capture" width="100%"> </center></p>
 <p>Usign the AVRO schemas as shown below
-<center> <img src="../images/eh-capture-avro.jpg" width="100%"> </center></p>
+<center> <img src="../images/eh-capture-avro.jpg" alt="Eh capture avro" width="100%"> </center></p>
 <h3 id="stream-processing">Stream Processing 🎰<a class="headerlink" href="#stream-processing" title="Link to this section">&para;</a></h3>
 <p>When it comes to stream processing, there are generally two approaches to working through the infinite stream of input data (or tuples): </p>
 <ul>
 <li><code>Tuple at a time</code> :You can process one tuple at a time with downstream processing applications, </li>
 <li><code>Micro batching</code> : You can create small batches (consisting of a few hundred or a few thousand tuples) and process these micro-batches with your downstream applications.</li>
 </ul>
-<p><center> <img src="../images/ehub.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/ehub.jpg" alt="Ehub" width="100%"> </center></p>
 <h3 id="kafka-and-event-hub-mapping">Kafka and Event hub mapping<a class="headerlink" href="#kafka-and-event-hub-mapping" title="Link to this section">&para;</a></h3>
 <table>
 <thead>
@@ -11087,7 +11090,7 @@ as the main headline.
 </tbody>
 </table>
 <h3 id="pubsub">Pubsub 🚄<a class="headerlink" href="#pubsub" title="Link to this section">&para;</a></h3>
-<p><center> <img src="../images/pubsub.jpg" width="70%"> </center></p>
+<p><center> <img src="../images/pubsub.jpg" alt="Pubsub" width="70%"> </center></p>
 <p>The producer (known as the publisher in this context) has no expectations that the events will result in any action.</p>
 <p>Interested <code>consumer(s)</code>, can subscribe, listen for events, and take actions depending on their consumption scenario. <code>Events</code> can have multiple <code>subscribers</code> or no subscribers at all. Two different subscribers can react to an event with different actions and not be aware of one another.</p>
 <p>The producer and consumer are <code>loosely coupled</code> and managed independently. The consumer isn't expected to acknowledge the event back to the producer. A consumer that is no longer interested in the events, can unsubscribe. The consumer is removed from the pipeline without affecting the producer or the overall functionality of the system.</p>
@@ -11105,7 +11108,7 @@ as the main headline.
 <p>The logical group of consumers that receive messages from each Event Hub partition is called a <code>consumer group</code>. The intention of a consumer group is to represent a single downstream processing application, where that application consists of multiple parallel processes, each consuming and processing messages from a partition.</p>
 <p>All consumers must belong to a consumer group. The consumer group also acts to limit concurrent access to a given partition by multiple consumers, which is desired for most applications, because two consumers could mean data is being redundantly processed by downstream components and could have unintended consequences.</p>
 <p>A diagam of non-competing consumers is shown below:
-<center> <img src="../images/non_competing_consumers.jpg" width="90%"> </center></p>
+<center> <img src="../images/non_competing_consumers.jpg" alt="Non competing consumers" width="90%"> </center></p>
 <div class="admonition question">
 <p class="admonition-title">Whos responsibility to state management?</p>
 <p>In competing consumers, the queue system itself keeps track of the delivery state of every message. In Event Hubs, no such state is tracked, so managing the state of progress through the queue becomes the responsibility of the individual consumer.</p>
@@ -11130,7 +11133,7 @@ as the main headline.
 <p>Event Hubs Capture uses Avro format for the data it captures. Avro is a row-oriented format that is suitable for various data types, it's compact, fast, binary, and enables efficient and fast serialization of data. </p>
 <h3 id="partitions">Partitions 📥<a class="headerlink" href="#partitions" title="Link to this section">&para;</a></h3>
 <p>Event Hubs organizes sequences of events sent to an event hub into one or more partitions. As newer events arrive, they're added to the end of this sequence.</p>
-<p><center> <img src="../images/paartitions.jpg" width="20%"> </center></p>
+<p><center> <img src="../images/paartitions.jpg" alt="Paartitions" width="20%"> </center></p>
 <div class="admonition warning">
 <p>You can't change the partition count for an event hub after its creation except for the event hub in a dedicated cluster and premium tier</p>
 </div>
@@ -11292,13 +11295,13 @@ as the main headline.
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -11080,7 +11083,7 @@ as the main headline.
 <p>DB Instance
 A DB instance is an isolated database environment in the AWS Cloud. The basic building block of Amazon <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> is the DB instance. Your DB instance can contain one or more user-created databases. The following diagram shows a virtual private cloud (<abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>) that contains two Availability Zones, with each <abbr title="Availability Zone: a separate data center within a cloud region">AZ</abbr> containing two DB instances.</p>
 <p><center> 
-<img width="80%" src="../images/db-instances.png"></p>
+<img width="80%" src="../images/db-instances.png" alt="Db instances"></p>
 <figcaption>DB Instance Example</figcaption>
 <p></center></p>
 <h2 id="rds-proxy"><abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> Proxy ⚡️<a class="headerlink" href="#rds-proxy" title="Link to this section">&para;</a></h2>
@@ -11092,7 +11095,7 @@ A DB instance is an isolated database environment in the AWS Cloud. The basic bu
 <p><abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> Proxy <strong>queues or throttles</strong> application connections that <em>can't be served immediately</em> from the connection pool. Although latencies might increase, your application can continue to scale without abruptly failing or overwhelming the database. If connection requests exceed the limits you specify, <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> Proxy rejects application connections (that is, it sheds load). At the same time, it maintains predictable performance for the load that <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> can serve with the available capacity. </p>
 </div>
 <p><center> 
-<img width="80%" src="../images/Proxy_How-it-works.png"></p>
+<img width="80%" src="../images/Proxy_How-it-works.png" alt="Proxy How it works"></p>
 <figcaption>RDS Proxy Architecture</figcaption>
 <p></center></p>
 <h3 id="basics">Basics 📝<a class="headerlink" href="#basics" title="Link to this section">&para;</a></h3>
@@ -11146,14 +11149,14 @@ A DB instance is an isolated database environment in the AWS Cloud. The basic bu
 <h3 id="database-snapshots">Database Snapshots 📸<a class="headerlink" href="#database-snapshots" title="Link to this section">&para;</a></h3>
 <p>Database snapshots are <em>user-initiated backups</em> of your instance stored in Amazon <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr> that are kept until you explicitly delete them. You can create a new instance from a database snapshots whenever you desire. <mark>Although database snapshots serve operationally as full backups, you are billed only for incremental storage use</mark>.</p>
 <p><center> 
-<img width="80%" src="../images/rds-snapshot.jpeg"></p>
+<img width="80%" src="../images/rds-snapshot.jpeg" alt="Rds snapshot"></p>
 <figcaption>RDS Snapshots</figcaption>
 <p></center></p>
 <p>If you copy a snapshot to a different region then you must ensure that the target region supports cross-region snapshot copies.</p>
 <div class="admonition example">
 <p class="admonition-title">Copy an encrypted database</p>
 <p><center> 
-<img width="80%" src="../images/rds-snapshot-encrypted.jpeg">
+<img width="80%" src="../images/rds-snapshot-encrypted.jpeg" alt="Rds snapshot encrypted">
 <figcaption><abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> Snapshots</figcaption>
 </center></p>
 <p>If you are working with an encrypted snapshot then there are a few things you need to be aware of.  If a snapshot is taken from an encrypted database, then the snapshot will also be encrypted through the use of a <abbr title="Key Management Service: creates and guards encryption keys">KMS</abbr> key.  If you copy the snapshot to the same region as the source snapshot, then you can use the same <abbr title="Key Management Service: creates and guards encryption keys">KMS</abbr> encryption key.  However, if you copy the encrypted snapshot to a different region, then during the copy configuration you will need to specify a new <abbr title="Key Management Service: creates and guards encryption keys">KMS</abbr> key in the target region, this is because <abbr title="Key Management Service: creates and guards encryption keys">KMS</abbr> is a regional service, and <abbr title="Key Management Service: creates and guards encryption keys">KMS</abbr> keys only exist in one region.  </p>
@@ -11168,13 +11171,13 @@ A DB instance is an isolated database environment in the AWS Cloud. The basic bu
 <h2 id="ha"><abbr title="High Availability: designed to keep running when parts fail">HA</abbr> 🎛️<a class="headerlink" href="#ha" title="Link to this section">&para;</a></h2>
 <p>You can get <code>high availability</code> with a <em>primary DB</em> instance and a <em>synchronous secondary DB</em> instance that you can fail over to when problems occur. <mark>You can also use read replicas to increase read scaling</mark>.</p>
 <p><center> 
-<img width="80%" src="../images/aws-cloud-deployment-architecture.png"></p>
+<img width="80%" src="../images/aws-cloud-deployment-architecture.png" alt="Aws cloud deployment architecture"></p>
 <figcaption>Highly Available Architecture for RDS</figcaption>
 <p></center></p>
 <h3 id="multi-region-deployment">Multi-Region deployment 🌍<a class="headerlink" href="#multi-region-deployment" title="Link to this section">&para;</a></h3>
 <p>The following scenario shows an <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> DB instance in one Region that replicates asynchronously to a standby DB instance in a different Region. If one Region becomes unavailable, the instance in the other Region is still available.</p>
 <p><center> 
-<img width="80%" src="../images/read-replica-cross-region.png"></p>
+<img width="80%" src="../images/read-replica-cross-region.png" alt="Read replica cross region"></p>
 <figcaption>HA in another region with Async replication for RDS</figcaption>
 <p></center></p>
 <h3 id="multi-az-deployment">Multi-<abbr title="Availability Zone: a separate data center within a cloud region">AZ</abbr> deployment 🌐<a class="headerlink" href="#multi-az-deployment" title="Link to this section">&para;</a></h3>
@@ -11187,7 +11190,7 @@ A DB instance is an isolated database environment in the AWS Cloud. The basic bu
 <li>Serving read traffic on secondary DB instances (Multi-<abbr title="Availability Zone: a separate data center within a cloud region">AZ</abbr> DB clusters deployment only)</li>
 </ul>
 <p><center> 
-<img width="80%" src="../images/con-multi-AZ.png"></p>
+<img width="80%" src="../images/con-multi-AZ.png" alt="Con multi AZ"></p>
 <figcaption>HA in same region with Sync replication</figcaption>
 <p></center></p>
 <h2 id="database-performance">Database Performance 📊<a class="headerlink" href="#database-performance" title="Link to this section">&para;</a></h2>
@@ -11197,12 +11200,12 @@ A DB instance is an isolated database environment in the AWS Cloud. The basic bu
 </ul>
 <p>Every active session is either running on the CPU or waiting. For example, sessions consume CPU when they search memory for a buffer, perform a calculation, or run procedural code. When sessions aren't consuming CPU, they might be waiting for a memory buffer to become free, a data file to be read, or a log to be written to. The more time that a session waits for resources, the less time it runs on the CPU. </p>
 <p><center> 
-<img width="80%" src="../images/db-performance-concepts.png"></p>
+<img width="80%" src="../images/db-performance-concepts.png" alt="Db performance concepts"></p>
 <figcaption>Performance Insights Concepts</figcaption>
 <p></center></p>
 <p>Example of CPU saturation is shown below</p>
 <p><center> 
-<img width="90%" src="../images/cpu-saturation.png"></p>
+<img width="90%" src="../images/cpu-saturation.png" alt="Cpu saturation"></p>
 <figcaption>CPU Saturation Example</figcaption>
 <p></center></p>
 <h3 id="performance-insights">Performance Insights<a class="headerlink" href="#performance-insights" title="Link to this section">&para;</a></h3>
@@ -11343,13 +11346,13 @@ A DB instance is an isolated database environment in the AWS Cloud. The basic bu
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

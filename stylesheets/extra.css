@@ -1418,3 +1418,15 @@ table code {
 .md-typeset .blog-rss .md-button { margin: 0; padding: .4em 1.1em; border-radius: .5rem; font-size: .72rem }
 .md-typeset .blog-rss span { font-size: .7rem; color: var(--md-default-fg-color--light) }
 .md-header__title a.wordmark { color: inherit; display: block } /* the wordmark links home, like the planet */
+
+/* ---------- Homepage UFO fly-by (javascripts/ufo.js) ---------- */
+.ufo { position: absolute; left: 0; top: 0; pointer-events: none; filter: drop-shadow(0 0 10px rgba(124, 231, 255, .45)); will-change: transform }
+.ufo svg { display: block; width: 100%; height: auto; overflow: visible }
+.ufo__beam { opacity: 0; transition: opacity .25s }
+.ufo--beam .ufo__beam { opacity: 1; animation: ufo-beam .18s steps(2) 4 }
+.ufo__lights circle { fill: #ffd166; animation: ufo-lights 1.2s ease-in-out infinite }
+.ufo__lights circle:nth-child(2n) { fill: #ff7eb6; animation-delay: -.6s }
+.ufo__lights circle:nth-child(3) { fill: #7ce7ff; animation-delay: -.3s }
+@keyframes ufo-lights { 0%, 100% { opacity: .35 } 50% { opacity: 1 } }
+@keyframes ufo-beam { 50% { opacity: .35 } }
+.md-typeset .highlight .nv { color: var(--md-code-fg-color) } /* variable names in code were too faint to read */

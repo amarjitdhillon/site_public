@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../../../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../../../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -10754,7 +10757,7 @@ as the main headline.
 <span data-reveal-page hidden></span>
 <h1 id="how-to-clone-a-private-github-repo-into-cpanel">How to clone a private Github repo into Cpanel <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.586 9.346a.54.54 0 0 0-.34.113.56.56 0 0 0-.197.299L2.74 14.654h.922a.53.53 0 0 0 .332-.113.56.56 0 0 0 .2-.291l.968-3.604h.744a.7.7 0 0 1 .317.077.7.7 0 0 1 .24.199.7.7 0 0 1 .129.281.65.65 0 0 1-.01.326.7.7 0 0 1-.676.526h-.385a.54.54 0 0 0-.337.113.56.56 0 0 0-.2.291l-.24.896h1.201a1.94 1.94 0 0 0 1.62-.867 2 2 0 0 0 .265-.586l.027-.1a1.85 1.85 0 0 0 .026-.907 1.97 1.97 0 0 0-1.031-1.34 1.9 1.9 0 0 0-.88-.21zm18.447 0a.4.4 0 0 0-.25.082.38.38 0 0 0-.14.217l-1.334 5.01a1.7 1.7 0 0 0 .57-.096 1.8 1.8 0 0 0 .496-.266 1.7 1.7 0 0 0 .385-.408 1.7 1.7 0 0 0 .234-.531l.996-3.696a.23.23 0 0 0-.045-.217.25.25 0 0 0-.2-.095zM8.381 10.643l-.133.503a.6.6 0 0 0-.006.26.54.54 0 0 0 .1.221.55.55 0 0 0 .185.154.5.5 0 0 0 .252.06h2.157a.1.1 0 0 1 .084.038.1.1 0 0 1 .015.088l-.02.072-.324 1.201-.013.055a.17.17 0 0 1-.067.105.2.2 0 0 1-.127.04H9.178a.15.15 0 0 1-.12-.057.14.14 0 0 1-.027-.13q.033-.112.147-.112h.808a.53.53 0 0 0 .332-.112.56.56 0 0 0 .2-.293l.132-.498H8.84a1.1 1.1 0 0 0-.38.065 1.2 1.2 0 0 0-.323.176 1.2 1.2 0 0 0-.256.271 1 1 0 0 0-.156.346l-.028.1a1.1 1.1 0 0 0-.013.533 1.2 1.2 0 0 0 .212.464 1.14 1.14 0 0 0 .918.453l2.157.006a.9.9 0 0 0 .875-.67l.525-1.95a1.1 1.1 0 0 0 .01-.514 1.1 1.1 0 0 0-.205-.444 1.15 1.15 0 0 0-.377-.312 1.05 1.05 0 0 0-.498-.12zm-6.397.01a1.9 1.9 0 0 0-.638.107 2 2 0 0 0-.553.295 1.96 1.96 0 0 0-.7 1.045l-.027.1a1.94 1.94 0 0 0-.023.905 1.96 1.96 0 0 0 .361.786 2 2 0 0 0 .668.554 1.9 1.9 0 0 0 .88.21h.464l.266-.983a.23.23 0 0 0-.043-.215.24.24 0 0 0-.198-.096h-.423a.7.7 0 0 1-.319-.074.7.7 0 0 1-.24-.195.7.7 0 0 1-.127-.281.7.7 0 0 1 .01-.34.73.73 0 0 1 .256-.377.68.68 0 0 1 .42-.14h.697a.54.54 0 0 0 .338-.114.56.56 0 0 0 .199-.297l.232-.89zm11.08 0-.982 3.689a.23.23 0 0 0 .045.217.24.24 0 0 0 .195.095h.711a.4.4 0 0 0 .248-.08.36.36 0 0 0 .143-.21l.644-2.41h.745a.7.7 0 0 1 .318.075.7.7 0 0 1 .238.2.7.7 0 0 1 .129.28.65.65 0 0 1-.01.327l-.398 1.506a.243.243 0 0 0 .24.312h.713a.4.4 0 0 0 .244-.08.37.37 0 0 0 .143-.213l.332-1.248a1.9 1.9 0 0 0 .029-.908 1.96 1.96 0 0 0-.361-.79 2 2 0 0 0-.668-.554 1.9 1.9 0 0 0-.885-.209h-1.813zm5.793 0a1.5 1.5 0 0 0-.488.081 1.5 1.5 0 0 0-.752.58 1.5 1.5 0 0 0-.205.454l-.406 1.505a1 1 0 0 0-.016.508 1.1 1.1 0 0 0 .205.446 1.1 1.1 0 0 0 .377.312 1.1 1.1 0 0 0 .498.115h2.502a.53.53 0 0 0 .332-.113.56.56 0 0 0 .2-.291l.21-.791h-2.748a.2.2 0 0 1-.191-.252l.299-1.127a.34.34 0 0 1 .113-.162.28.28 0 0 1 .18-.064h1.232a.153.153 0 0 1 .147.193l-.026.1q-.033.113-.146.113h-.81a.54.54 0 0 0-.339.111.53.53 0 0 0-.191.293l-.133.49h2.004a.9.9 0 0 0 .547-.181.86.86 0 0 0 .32-.483l.12-.45a1.1 1.1 0 0 0 .013-.513 1.1 1.1 0 0 0-.203-.443 1.15 1.15 0 0 0-.375-.313 1.05 1.05 0 0 0-.498-.119h-1.772Z"/></svg></span><a class="headerlink" href="#how-to-clone-a-private-github-repo-into-cpanel" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 2 min read</p>
 <p>The goal of this blog post is to help you in setting up your Github private repo on Cpanel, so that when you make a push to your blog post, then those changes are synced automatically. </p>
-<p><center><img src="../images/header.png" width="100%"></center></p>
+<p><center><img src="../images/header.png" alt="Header" width="100%"></center></p>
 <p>So let's get started 😀</p>
 <h3 id="generate-a-key-in-cpanel">Generate a key in Cpanel<a class="headerlink" href="#generate-a-key-in-cpanel" title="Link to this section">&para;</a></h3>
 <p>The goal is the create a public and private key pair. Then copy the public key and save it in Github. First we will create a pair in Cpanel. For this go to <code>Cpanel</code> &rarr; <code>Security</code> &rarr; <code>SSH Access</code> &rarr; <code>Manage Keys</code> &rarr; <code>Generate New Key</code> (enter a strong password) </p>
@@ -10788,7 +10791,7 @@ ls<span class="w"> </span>-a
 </code></pre></div>
 <p>The <code>Repository Path</code> and <code>Repo Name</code> will be autofilled. Then hit create.</p>
 <h3 id="pull-from-the-sources">Pull from the sources.<a class="headerlink" href="#pull-from-the-sources" title="Link to this section">&para;</a></h3>
-<p><center><img src="../images/a.png" width="100%"></center></p>
+<p><center><img src="../images/a.png" alt="A" width="100%"></center></p>
 <p>Manage repository from list &rarr; <code>Manage</code> &rarr; pull or deploy from Github &rarr; Click on <code>Update from Remote</code>: works perfectly (any files edit or delete you fetch/pull from GitHub now)</p>
 <p>Cheers 🍻</p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Misc<span class="rn__time"> · 2 min read</span></p><p class="rn__title"><a href="../../../../technical_stuff/wso2/h2/wso2/">H2 Db in WSO2 →</a></p></li><li><p class="rn__kicker">Misc<span class="rn__time"> · 4 min read</span></p><p class="rn__title"><a href="../../../../technical_stuff/mysql/JdbcStatements/">JDBC Statements →</a></p></li></ul></div>
 
@@ -10927,13 +10930,13 @@ ls<span class="w"> </span>-a
       
         <script src="../../../../javascripts/cosmos.js"></script>
       
+        <script src="../../../../javascripts/ufo.js"></script>
+      
         <script src="../../../../javascripts/totop.js"></script>
       
         <script src="../../../../javascripts/claps.js"></script>
       
         <script src="../../../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

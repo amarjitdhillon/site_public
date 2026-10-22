@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -10840,7 +10843,7 @@ as the main headline.
 <p>I was struggling for few days to get JMS queue up-and-running in <code>WSO2 IoT Server</code>. In my experience, setting the queue is easy in programming, but when it comes to complicated systems, sometime small mistakes can consume lot of time. So, without any further ado, lets get going. Please make sure the <code>WSO2 IoT server</code> is in off state. I will let you know when to turn it on.</p>
 <h2 id="knowing-the-configuration-file-paths">Knowing the configuration file paths<a class="headerlink" href="#knowing-the-configuration-file-paths" title="Link to this section">&para;</a></h2>
 <p>The WSO2 IoT server consists of 3 tiers: <code>Broker</code>, <code>Core</code> and <code>Analytics</code> as shown below</p>
-<p><center><img src="../images/1.png" width="70%"></center></p>
+<p><center><img src="../images/1.png" alt="1" width="70%"></center></p>
 <p>Now, for using the JMS there are 3 options in WSO2 IoT server, which are</p>
 <ol>
 <li>Using Apache ActiveMQ</li>
@@ -10931,7 +10934,7 @@ As you have noticed, I have made some additional changes in given code, one of w
 <p>While the products are starting, run a find search in terminal for jms keyword. This way you will know if there is some issue related to JMS. Message broker should say that jms sender started as shown below <center><img alt="" src="../images/6.png" /></center></p>
 <h2 id="make-pipeline">Make pipeline<a class="headerlink" href="#make-pipeline" title="Link to this section">&para;</a></h2>
 <p>First make the basic pipeline so that you have the streaming data arriving at IoT server to a particular stream say <code>stream A</code>. Now we will add the <code>stream A</code> to JMS queue publisher. Then we need the JMS receiver to get the data from JMS publisher and further sends it to a logger. Lets understand it by below figure.</p>
-<p><center><img src="../images/7.png" width="90%"></center></p>
+<p><center><img src="../images/7.png" alt="7" width="90%"></center></p>
 <p>As shows in the above figure the JMS publisher receives the <code>stream A</code> and en-queues the tuples/events in <code>queue1</code>. Further the JMS Subscriber subscribes to queue1 and send it to <code>Stream C</code> . Further <code>Stream C</code> is published to Logger publisher which shows the logs in Analytics terminal console .</p>
 <p>Setting for JMS publisher is given below</p>
 <div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
@@ -11105,13 +11108,13 @@ Now add the logger and send some events to <code>stream A</code>. If all went ri
       
         <script src="../../../javascripts/cosmos.js"></script>
       
+        <script src="../../../javascripts/ufo.js"></script>
+      
         <script src="../../../javascripts/totop.js"></script>
       
         <script src="../../../javascripts/claps.js"></script>
       
         <script src="../../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

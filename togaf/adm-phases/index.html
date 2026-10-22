@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -10866,18 +10869,18 @@ as the main headline.
 <span data-reveal-page hidden></span>
 <h1 id="adm-phases"><abbr title="Architecture Development Method: TOGAF's step-by-step cycle for building architecture">ADM</abbr> Phases <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 19c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-18c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2M6 16c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m-3-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m3-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m12 12c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m3-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m-3-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2"/></svg></span><a class="headerlink" href="#adm-phases" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 17 min read</p>
 <h2 id="mapping-of-adm-and-agile">Mapping of <abbr title="Architecture Development Method: TOGAF's step-by-step cycle for building architecture">ADM</abbr> and Agile<a class="headerlink" href="#mapping-of-adm-and-agile" title="Link to this section">&para;</a></h2>
-<p><center> <img src="../images/ADMLev_mapped_AgileDel-portrait.png" width="95%"> </center></p>
+<p><center> <img src="../images/ADMLev_mapped_AgileDel-portrait.png" alt="ADMLev mapped AgileDel portrait" width="95%"> </center></p>
 <h2 id="adm-phases_1"><abbr title="Architecture Development Method: TOGAF's step-by-step cycle for building architecture">ADM</abbr> Phases<a class="headerlink" href="#adm-phases_1" title="Link to this section">&para;</a></h2>
-<p><center> <img src="../images/togaf-adm.png" width="65%"> </center></p>
+<p><center> <img src="../images/togaf-adm.png" alt="Togaf adm" width="65%"> </center></p>
 <p>More detailed view is shown below</p>
-<p><center> <img src="../images/togaf-steps-and-deliverables.png" width="100%"> </center></p>
+<p><center> <img src="../images/togaf-steps-and-deliverables.png" alt="Togaf steps and deliverables" width="100%"> </center></p>
 <p>The <abbr title="The Open Group Architecture Framework: a standard method for enterprise architecture">TOGAF</abbr> Architecture Development Method (<abbr title="Architecture Development Method: TOGAF's step-by-step cycle for building architecture">ADM</abbr>) is a central feature of the <abbr title="The Open Group Architecture Framework: a standard method for enterprise architecture">TOGAF</abbr> standard. The <abbr title="Architecture Development Method: TOGAF's step-by-step cycle for building architecture">ADM</abbr> cycle describes an incremental and iterative method for designing Business, Data, Applications, and Technology architectures. It progresses from <code>high-level concept diagrams</code>, to detailed domain architectures, all the way to the development of solution architectures, architecture roadmaps and implementation plans.</p>
-<p><center> <img src="../images/adm-steps-detailed.png" width="100%"> </center></p>
+<p><center> <img src="../images/adm-steps-detailed.png" alt="Adm steps detailed" width="100%"> </center></p>
 <div class="admonition info">
 <p class="admonition-title">What is Architmate?</p>
 <p>The ArchiMate® language is an Open Group standard that provides an Enterprise Architecture modeling language. The Archimate® language views the model as a set of layers (Business, Application, and Technology) as well as some specialized extensions (Motivation, and Implementation and Migration</p>
 </div>
-<p><center> <img src="../images/adm-overview.png" width="90%"> </center></p>
+<p><center> <img src="../images/adm-overview.png" alt="Adm overview" width="90%"> </center></p>
 <h3 id="preliminary-phase">Preliminary Phase<a class="headerlink" href="#preliminary-phase" title="Link to this section">&para;</a></h3>
 <p><code>Requests for Architecture Work</code> is a document that is sent from the <em>sponsoring organization</em> to the <em>architecture organization</em> to trigger the start of an architecture development cycle. <em>Requests for Architecture Work</em> can be created as an output of the <em>Preliminary Phase</em>, a result of approved architecture <em>Change Requests</em>, or terms of reference for architecture work originating from migration planning.</p>
 <p>The <code>Statement of Architecture Work</code> defines the scope and approach that will be used to complete an architecture development cycle. The Statement of Architecture Work is typically the document against which successful execution of the architecture project will be measured and may form the basis for a contractual agreement between the supplier and consumer of architecture services.</p>
@@ -11068,7 +11071,7 @@ practitioners and benefits the enterprise by:</p>
 <li>The Architecture Requirements Specification provides a quantitative view of the solution, stating measurable criteria that must be met during the implementation of the architecture.</li>
 </ul>
 <h4 id="architecture-roadmap">Architecture Roadmap<a class="headerlink" href="#architecture-roadmap" title="Link to this section">&para;</a></h4>
-<p><center> <img src="../images/arch-roadmap.png" width="100%"> </center></p>
+<p><center> <img src="../images/arch-roadmap.png" alt="Arch roadmap" width="100%"> </center></p>
 <ul>
 <li>The Architecture Roadmap lists individual work packages that will realize the Target Architecture and lays them out on a timeline to show progression from the Baseline Architecture to the Target Architecture.</li>
 <li>The Architecture Roadmap highlights individual <code>work packages'</code> business value at each stage.</li>
@@ -11361,13 +11364,13 @@ This is a signed statement of intent to conform with the enterprise architecture
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

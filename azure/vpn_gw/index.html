@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -10828,12 +10831,12 @@ as the main headline.
 </div>
 <h2 id="gateway-subnet">Gateway Subnet<a class="headerlink" href="#gateway-subnet" title="Link to this section">&para;</a></h2>
 <p>Before you deploy the <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> gateway, you need to add a dedicated subnet to the vnet you want to connect. This subnet is for hosting the <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> gateway instances, and a <abbr title="Classless Inter-Domain Routing: a way to write IP ranges, like 10.0.0.0/16">CIDR</abbr> block of <code>/27</code> or <code>/28</code> would suffice. The name of the subnet should be <code>GatewaySubnet</code>.</p>
-<p><center> <img src="../images/vnet_gateway_peering.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/vnet_gateway_peering.jpg" alt="Vnet gateway peering" width="100%"> </center></p>
 <h2 id="ha-modes"><abbr title="High Availability: designed to keep running when parts fail">HA</abbr> modes<a class="headerlink" href="#ha-modes" title="Link to this section">&para;</a></h2>
 <h3 id="active-active">Active-Active<a class="headerlink" href="#active-active" title="Link to this section">&para;</a></h3>
-<p><center> <img src="../images/active-active-vgateway.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/active-active-vgateway.jpg" alt="Active active vgateway" width="100%"> </center></p>
 <h3 id="active-standby">Active-StandBy<a class="headerlink" href="#active-standby" title="Link to this section">&para;</a></h3>
-<p><center> <img src="../images/active-standby-vgateway.jpg" width="100%"> </center></p>
+<p><center> <img src="../images/active-standby-vgateway.jpg" alt="Active standby vgateway" width="100%"> </center></p>
 <h2 id="types-of-vpn-gw">Types of <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> GW<a class="headerlink" href="#types-of-vpn-gw" title="Link to this section">&para;</a></h2>
 <p>There are 2 types of <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> gateways:</p>
 <ol>
@@ -10990,13 +10993,13 @@ as the main headline.
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

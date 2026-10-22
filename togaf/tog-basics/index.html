@@ -33,6 +33,9 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
     <meta name="theme-color" content="#10123a">
+    <!-- start the two main fonts right away instead of after the CSS is read (faster first text) -->
+    <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
     <script type="application/ld+json">
         {
@@ -131,7 +134,7 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+          <a href="../.." class="md-ellipsis wordmark">
             Amar's <b>TechSpace</b>
           </a>
         </div>
@@ -180,7 +183,7 @@
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -11255,7 +11258,7 @@ as the main headline.
 <p>Tactical architecture as “temporary” architecture that gets the business to a reasonable target state given a set of significant constraints that demand the architecture address a relatively immediate need without a significant amount of resources (money, time, workers)</p>
 </div>
 <h2 id="diagram-examples">Diagram examples<a class="headerlink" href="#diagram-examples" title="Link to this section">&para;</a></h2>
-<p><center> <img src="../images/diagram-types.png" width="100%"> </center></p>
+<p><center> <img src="../images/diagram-types.png" alt="Diagram types" width="100%"> </center></p>
 <h2 id="techniques">Techniques<a class="headerlink" href="#techniques" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Contextual: Why</li>
@@ -11266,13 +11269,13 @@ as the main headline.
 <h2 id="terms">Terms<a class="headerlink" href="#terms" title="Link to this section">&para;</a></h2>
 <h3 id="cross-cutting-concern">Cross Cutting Concern 🔀<a class="headerlink" href="#cross-cutting-concern" title="Link to this section">&para;</a></h3>
 <p>Security Architecture is a cross-cutting concern pervasive through the whole Enterprise Architecture. It can be described as a coherent collection of views, viewpoints, and artifacts, including security, privacy, and operational risk perspectives, along with related topics like security objectives and security services.</p>
-<p><center> <img src="../images/cross-cutting.png" width="60%"> </center></p>
+<p><center> <img src="../images/cross-cutting.png" alt="Cross cutting" width="60%"> </center></p>
 <p>The Security Architecture is more than a dataset; it is based on the Information Security Management (ISM) and Enterprise Risk Management (ERM) processes.</p>
 <h3 id="architecture-board">Architecture Board 🏛️<a class="headerlink" href="#architecture-board" title="Link to this section">&para;</a></h3>
 <p>An <em>Architecture Board</em> is responsible for operational items and must be capable of making decisions in situations of possible conflict and be accountable for taking those decisions. It should therefore be a representation of all the key stakeholders in the architecture, and will typically comprise a group of executives responsible for the review and maintenance of the overall architecture. It is important that the members of the Architecture Board cover architecture, business, and program management areas.</p>
 <h3 id="abbs-and-sbbs">ABB's and SBB's 🧱<a class="headerlink" href="#abbs-and-sbbs" title="Link to this section">&para;</a></h3>
 <p>For instance, at an early stage, a building block can simply consist of a grouping of functionality such as a customer database and some retrieval tools. Building blocks at this functional level of definition are described in <abbr title="The Open Group Architecture Framework: a standard method for enterprise architecture">TOGAF</abbr> as Architecture Building Blocks (ABBs). Later on, real products or specific custom developments replace these simple definitions of functionality, and the building blocks are then described as Solution Building Blocks (SBBs).</p>
-<p><center> <img src="../images/adm-bbs.png" width="100%"> </center></p>
+<p><center> <img src="../images/adm-bbs.png" alt="Adm bbs" width="100%"> </center></p>
 <div class="admonition remember">
 <p>A building block's boundary and specification should be <code>loosely coupled</code> to its implementation; i.e., it should be possible to realize a building block in several different ways without impacting the boundary or specification of the building block.</p>
 </div>
@@ -11321,7 +11324,7 @@ interfaces are either chosen or supplied</p>
 </ol>
 <h3 id="architecture-capability">Architecture Capability 💪<a class="headerlink" href="#architecture-capability" title="Link to this section">&para;</a></h3>
 <p>Creating architecture for an enterprise requires the organization to have the business capability to support the architecture through structures, roles, responsibilities, skills, and processes.</p>
-<p><center> <img src="../images/architecture-capability-ov.png" width="100%"> </center></p>
+<p><center> <img src="../images/architecture-capability-ov.png" alt="Architecture capability ov" width="100%"> </center></p>
 <p><abbr title="The Open Group Architecture Framework: a standard method for enterprise architecture">TOGAF</abbr> architecture capability builds on the Architecture Repository and Enterprise Continuum by identifying the architecture components providing the capability and their relationships to each other.</p>
 <p>The components include:</p>
 <ul>
@@ -11343,7 +11346,7 @@ interfaces are either chosen or supplied</p>
 </ul>
 <p>Architecture Repository can be used to store different classes of architectural output at different levels of abstraction, created by the <abbr title="Architecture Development Method: TOGAF's step-by-step cycle for building architecture">ADM</abbr>.</p>
 </div>
-<p><center> <img src="../images/enterprise-repository.png" width="100%"> </center></p>
+<p><center> <img src="../images/enterprise-repository.png" alt="Enterprise repository" width="100%"> </center></p>
 <p>At a high level, six classes of architectural information are expected to be held within an Architecture Repository:</p>
 <ul>
 <li><code>Architecture Metamodel</code>: It describes the organizationally tailored application of an architecture framework, including a method for architecture development and a metamodel for architecture content.</li>
@@ -11357,7 +11360,7 @@ interfaces are either chosen or supplied</p>
 <p>A model for structuring a virtual repository and methods for classifying architecture and solution artifacts.</p>
 <h3 id="architecture-landscape">Architecture Landscape 🏞️<a class="headerlink" href="#architecture-landscape" title="Link to this section">&para;</a></h3>
 <p>The Architecture Landscape holds architectural views of the state of the enterprise at particular points in time. Due to the sheer volume and the diverse stakeholder needs throughout an entire enterprise, the Architecture Landscape is divided into three levels of granularity</p>
-<p><center> <img src="../images/architecture-landscape-levels.png" width="64%"> </center></p>
+<p><center> <img src="../images/architecture-landscape-levels.png" alt="Architecture landscape levels" width="64%"> </center></p>
 <ol>
 <li>
 <p><strong>Strategic Architecture</strong> provides an organizing framework for operational and change activity and allows for direction setting at an executive level.</p>
@@ -11369,10 +11372,10 @@ interfaces are either chosen or supplied</p>
 <p><strong>Capability Architecture</strong> provides an organizing framework for change activity and the development of effective architecture roadmaps realizing capability increments.</p>
 </li>
 </ol>
-<p><center> <img src="../images/20_adm_hierarchy.png" width="74%"> </center></p>
+<p><center> <img src="../images/20_adm_hierarchy.png" alt="20 adm hierarchy" width="74%"> </center></p>
 <h3 id="content-metamodel">Content MetaModel 🧬<a class="headerlink" href="#content-metamodel" title="Link to this section">&para;</a></h3>
 <p>The content metamodel provides a definition of all the types of building blocks that may exist within an architecture, showing how these building blocks can be described and related to one another. For example, when creating an architecture, an architect will identify applications, "data entities" held within applications, and technologies that implement those applications. These applications will in turn support particular groups of business user or actor, and will be used to fulfil "business services".</p>
-<p><center> <img src="../images/content-meta.png" width="85%"> </center></p>
+<p><center> <img src="../images/content-meta.png" alt="Content meta" width="85%"> </center></p>
 <h3 id="content-framework">Content Framework 🗂️<a class="headerlink" href="#content-framework" title="Link to this section">&para;</a></h3>
 <div class="admonition info">
 <p>Architects executing the <abbr title="Architecture Development Method: TOGAF's step-by-step cycle for building architecture">ADM</abbr> will produce a number of outputs as a result of their efforts, such as process flows, architectural requirements, project plans, or project compliance assessments.</p>
@@ -11386,7 +11389,7 @@ interfaces are either chosen or supplied</p>
 <li>Help an enterprise mandate standard architecture concepts, terms, and deliverables</li>
 </ul>
 <p>The <code>Content Framework</code> provided supports the use of the <abbr title="The Open Group Architecture Framework: a standard method for enterprise architecture">TOGAF</abbr> framework as a stand-alone framework for architecture within an enterprise. However, other Content Frameworks exist (for example, that provided by the ArchiMate Specification) and it is expected that some enterprises will use an external framework in conjunction with the <abbr title="Architecture Development Method: TOGAF's step-by-step cycle for building architecture">ADM</abbr> instead. In such cases, the <em><abbr title="The Open Group Architecture Framework: a standard method for enterprise architecture">TOGAF</abbr> Content Framework</em> provides a useful reference and starting point for <abbr title="The Open Group Architecture Framework: a standard method for enterprise architecture">TOGAF</abbr> content to be mapped to the metamodels of other frameworks.</p>
-<p><center> <img src="../images/content-framework-overview-portrait.png" width="95%"> </center></p>
+<p><center> <img src="../images/content-framework-overview-portrait.png" alt="Content framework overview portrait" width="95%"> </center></p>
 <h3 id="organizational-model-for-ea">Organizational Model for EA 🏢<a class="headerlink" href="#organizational-model-for-ea" title="Link to this section">&para;</a></h3>
 <p>The <em>Organizational Model for Enterprise Architecture</em> demonstrates the organization, roles
 and responsibility within the enterprise.</p>
@@ -11449,7 +11452,7 @@ architecture project.</p>
 <p>An Enterprise Architecture Capability is the ability to develop, use, and maintain the architecture of a particular enterprise, and use the architecture to govern change.</p>
 <p>The term “capability” is defined differently by different practitioners, most commonly when it is used as part of a formal analysis technique when the definition must be precise and constrained. The term EA Capability is used as a management concept that facilitates planning improvements in the ability to do something that leads to enhanced outcomes enabled by the capability.</p>
 <p>While every organization can benefit from an EA Capability, each organization will require a different EA Capability.</p>
-<p><center> <img src="../images/decomposition-of-ea-capability-model.png" width="100%"> </center></p>
+<p><center> <img src="../images/decomposition-of-ea-capability-model.png" alt="Decomposition of ea capability model" width="100%"> </center></p>
 <h4 id="architecture-capability-framework">Architecture Capability Framework<a class="headerlink" href="#architecture-capability-framework" title="Link to this section">&para;</a></h4>
 <p>A structured definition of the organisations, skills, roles and responsibilities to establish and operate an Enterprise Architecture</p>
 <h3 id="capability-assessment">Capability Assessment 📊<a class="headerlink" href="#capability-assessment" title="Link to this section">&para;</a></h3>
@@ -11466,14 +11469,14 @@ architecture project.</p>
 <p>There is often more than one possible Target Architecture that would conform to the Architecture Vision, Architecture Principles, and Requirements.</p>
 <p>It is important to identify alternative Target Architectures and build understanding of different possibilities and identify trade-offs between the alternatives. Creating an architecture normally requires trade-offs among competing forces.</p>
 <p>Presenting different alternatives and trade-offs to stakeholders helps architects to extract hidden agendas, principles, and requirements that could impact the final Target Architecture. Below Figure illustrates the architecture trade-off method.</p>
-<p><center> <img src="../images/alternative-and-trade-offs.png" width="80%"> </center></p>
+<p><center> <img src="../images/alternative-and-trade-offs.png" alt="Alternative and trade offs" width="80%"> </center></p>
 <h3 id="value-stream">Value Stream 🌊<a class="headerlink" href="#value-stream" title="Link to this section">&para;</a></h3>
 <p>A value stream is depicted as an end-to-end collection of value-adding activities that create an overall result for a customer, stakeholder, or end user. In modeling terms, those value-adding activities are known as value stream stages, each of which creates and adds incremental stakeholder value from one stage to the next.</p>
-<p><center> <img src="../images/value-stream-ex.png" width="80%"> </center></p>
+<p><center> <img src="../images/value-stream-ex.png" alt="Value stream ex" width="80%"> </center></p>
 <div class="admonition info">
 <p><em>Value</em> in a <em>value stream</em>, is achieved through a series of sequential and/or parallel actions, known as value <em>stream stages</em>, that incrementally create and add stakeholder value from one stage to the next.</p>
 </div>
-<p><center> <img src="../images/value-stream-capability-heatmap-ex.png" width="100%"> </center></p>
+<p><center> <img src="../images/value-stream-capability-heatmap-ex.png" alt="Value stream capability heatmap ex" width="100%"> </center></p>
 <h3 id="business-capability-model">Business Capability Model 💼<a class="headerlink" href="#business-capability-model" title="Link to this section">&para;</a></h3>
 <p>A <em>business capability model</em> represents the currently active, stable set of business capabilities (along with all of their defining characteristics) that cover the business, enterprise, or organizational unit in question.</p>
 <p>The first task of <em>business capability modeling</em> is to capture and document all of the business capabilities that represent the full scope of what the business segment under consideration does today (irrespective of how well it does it) or what it desires to be able to do in the future. The second task is to organize that information in a logical manner.</p>
@@ -11626,13 +11629,13 @@ architecture project.</p>
       
         <script src="../../javascripts/cosmos.js"></script>
       
+        <script src="../../javascripts/ufo.js"></script>
+      
         <script src="../../javascripts/totop.js"></script>
       
         <script src="../../javascripts/claps.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
-      
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
