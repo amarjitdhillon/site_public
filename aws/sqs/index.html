@@ -22,10 +22,17 @@
         <link rel="next" href="../sns/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.ico">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/images/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     <meta name="google-site-verification" content="UHLjtoO7DV30dx3hVhwTOIWguEUr_VzS41msmq-uYKA" />
+    <!-- PNG fallback for browsers without SVG favicons, and the iOS home-screen icon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
+    <meta name="theme-color" content="#10123a">
     
     <script type="application/ld+json">
         {
@@ -50,7 +57,7 @@
 
     
       
-        <title>SQS - Amar's TechSpace 🛸</title>
+        <title>SQS - Amar's TechSpace</title>
       
     
     
@@ -79,7 +86,7 @@
     
     
     
-  </head>
+  <meta property="og:type" content="article"><meta property="og:site_name" content="Amar&#x27;s TechSpace"><meta property="og:title" content="SQS - Amar&#x27;s TechSpace"><meta property="og:description" content="Developer resources for Azure, AWS, K8S and more."><meta property="og:url" content="https://www.amarjitdhillon.com/aws/sqs/"><meta property="og:image" content="https://www.amarjitdhillon.com/assets/cards/aws/sqs.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="SQS - Amar&#x27;s TechSpace"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="SQS - Amar&#x27;s TechSpace"><meta name="twitter:description" content="Developer resources for Azure, AWS, K8S and more."><meta name="twitter:image" content="https://www.amarjitdhillon.com/assets/cards/aws/sqs.png"></head>
   
   
     
@@ -89,7 +96,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -112,9 +119,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Amar&#39;s TechSpace 🛸" class="md-header__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../.." title="Amar&#39;s TechSpace" class="md-header__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../assets/images/menu.png" alt="logo">
+  <img src="../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -124,9 +131,9 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Amar's TechSpace 🛸
-          </span>
+          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+            Amar's <b>TechSpace</b>
+          </a>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
@@ -144,7 +151,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -154,7 +161,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -512,12 +519,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Amar&#39;s TechSpace 🛸" class="md-nav__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../.." title="Amar&#39;s TechSpace" class="md-nav__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../assets/images/menu.png" alt="logo">
+  <img src="../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
-    Amar's TechSpace 🛸
+    Amar's TechSpace
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -2509,7 +2516,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.66 13.07c-1.74 0-3.16-1.41-3.16-3.14 0-.71.26-1.39.69-1.93-.42-.54-.69-1.22-.69-1.93 0-1.73 1.43-3.14 3.16-3.14l.43.03A3.15 3.15 0 0 1 12 1c1.31 0 2.44.81 2.91 1.96l.43-.03c1.73 0 3.16 1.41 3.16 3.14 0 .71-.26 1.39-.69 1.93.42.54.69 1.22.69 1.93 0 1.73-1.43 3.14-3.16 3.14l-.43-.03A3.15 3.15 0 0 1 12 15a3.15 3.15 0 0 1-2.91-1.96zM12 13c.62 0 1.12-.5 1.14-1.1l-.11-1.09c-.32.12-.67.19-1.03.19s-.7-.07-1-.19l-.14 1.09c.02.6.52 1.1 1.14 1.1m3.34-1.93c.63 0 1.16-.51 1.16-1.15 0-.42-.27-.84-.67-1.03l-.88-.42c-.12.74-.51 1.38-1.06 1.83l.81.57c.18.13.4.2.64.2m-.65-5.94-.82.56c.56.45.95 1.09 1.07 1.81l.88-.4c.41-.2.68-.6.68-1.03 0-.63-.53-1.14-1.16-1.14-.23 0-.45.07-.65.2M12 3c-.62 0-1.12.5-1.14 1.1L11 5.19c.3-.12.64-.19 1-.19s.71.07 1.03.19l.11-1.09C13.12 3.5 12.62 3 12 3M8.66 4.93c-.63 0-1.16.51-1.16 1.14 0 .43.27.83.67 1.03l.88.4c.12-.72.51-1.36 1.06-1.81l-.81-.56c-.18-.13-.4-.2-.64-.2M8.17 8.9c-.4.2-.67.6-.67 1.02 0 .63.53 1.14 1.16 1.14.23 0 .45-.06.65-.2l.81-.55c-.56-.45-.95-1.09-1.07-1.81zM12 22a9 9 0 0 1-9-9 9 9 0 0 1 9 9 9 9 0 0 1 9-9 9 9 0 0 1-9 9m2.44-2.44a7.04 7.04 0 0 0 4.12-4.12c-1.9.7-3.41 2.22-4.12 4.12m-9-4.12a7.04 7.04 0 0 0 4.12 4.12c-.7-1.9-2.22-3.41-4.12-4.12"/></svg>
   
   <span class="md-ellipsis">
-    Arch Continums
+    Arch Continuums
   </span>
   
 
@@ -3103,7 +3110,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"/></svg>
   
   <span class="md-ellipsis">
-    Elasti Cache
+    ElastiCache
   </span>
   
 
@@ -3540,7 +3547,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"/></svg>
   
   <span class="md-ellipsis">
-    Athnea
+    Athena
   </span>
   
 
@@ -5540,7 +5547,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12z"/></svg>
   
   <span class="md-ellipsis">
-    Read Replics
+    Read Replicas
   </span>
   
 
@@ -8578,7 +8585,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c-.89 2.18-1.43 3.61-2.42 5.73.61.64 1.35 1.39 2.56 2.24-1.3-.54-2.19-1.07-2.85-1.63C8 11 6.03 14.75 2 22c3.17-1.83 5.63-2.96 7.92-3.39-.1-.42-.16-.88-.15-1.36v-.1c.05-2.03 1.11-3.59 2.36-3.48 1.25.1 2.22 1.83 2.17 3.87-.01.38-.05.75-.12 1.09 2.26.44 4.69 1.56 7.82 3.37-.62-1.14-1.17-2.16-1.69-3.13-.81-.64-1.7-1.48-3.46-2.37 1.21.3 2.08.66 2.76 1.07C14.26 7.62 13.83 6.3 12 2"/></svg>
   
   <span class="md-ellipsis">
-    Cluster Architecutre
+    Cluster Architecture
   </span>
   
 
@@ -8947,7 +8954,7 @@
         
   
   <span class="md-ellipsis">
-    DeamonSet
+    DaemonSet
   </span>
   
 
@@ -9031,7 +9038,7 @@
         
   
   <span class="md-ellipsis">
-    Replia Set
+    ReplicaSet
   </span>
   
 
@@ -10863,12 +10870,12 @@ as the main headline.
 -->
 
 
-<!-- Markdown content (marker turns on scroll-reveal for pages with `reveal: true`) -->
-
-<h1 id="sqs">SQS <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m7.164 13.58 1.287-1.27a.425.425 0 0 0 .002-.603L7.166 10.42l-.608.601.552.552H5.147v.852h1.97l-.557.55Zm9.82.04 1.715-1.28a.427.427 0 0 0 0-.682l-1.716-1.277-.515.682.686.51H15.44v.853h1.715l-.686.511ZM9.945 12c0 .905-.156 1.758-.449 2.5a7.1 7.1 0 0 1 2.511-.445c.87 0 1.74.148 2.51.445a6.9 6.9 0 0 1-.448-2.5c0-.905.157-1.757.449-2.5-1.543.593-3.479.593-5.022 0 .293.743.45 1.595.45 2.5Zm-2.1 4.136a.424.424 0 0 1 0-.602c.778-.774 1.243-2.095 1.243-3.534s-.465-2.76-1.244-3.534a.424.424 0 0 1 0-.602.43.43 0 0 1 .607 0c1.662 1.65 5.45 1.65 7.113 0a.43.43 0 0 1 .732.301.42.42 0 0 1-.126.301c-.778.774-1.243 2.095-1.243 3.534s.465 2.76 1.243 3.534a.424.424 0 0 1 0 .602.43.43 0 0 1-.606 0c-1.662-1.65-5.451-1.65-7.113 0a.43.43 0 0 1-.607 0Zm15.299-4.134c0-.397-.155-.77-.438-1.051a1.5 1.5 0 0 0-1.058-.435c-.383 0-.766.145-1.058.435a1.48 1.48 0 0 0 0 2.102c.583.58 1.532.58 2.116 0 .283-.28.438-.654.438-1.05Zm.168 1.654a2.35 2.35 0 0 1-1.664.684 2.35 2.35 0 0 1-1.664-.684 2.33 2.33 0 0 1 0-3.308 2.366 2.366 0 0 1 3.328 0 2.33 2.33 0 0 1 0 3.308M3.85 12.012a1.49 1.49 0 0 0-1.496-1.487 1.493 1.493 0 0 0-1.496 1.487c0 .397.155.77.437 1.051.566.561 1.551.561 2.116 0 .283-.281.439-.654.439-1.051m.168 1.654a2.35 2.35 0 0 1-1.665.684 2.36 2.36 0 0 1-1.664-.684 2.33 2.33 0 0 1 0-3.308 2.367 2.367 0 0 1 3.329 0 2.33 2.33 0 0 1 0 3.308m14.367 4.7a9.03 9.03 0 0 1-6.41 2.639 9.03 9.03 0 0 1-6.41-2.638c-1.175-1.166-1.82-2.56-2.156-3.524l-.81.28c.364 1.047 1.07 2.566 2.36 3.846a9.9 9.9 0 0 0 7.016 2.888 9.9 9.9 0 0 0 7.016-2.888 10.2 10.2 0 0 0 2.43-3.848l-.812-.276a9.4 9.4 0 0 1-2.224 3.522ZM3.407 9.158l-.81-.28c.52-1.484 1.358-2.851 2.363-3.849a9.89 9.89 0 0 1 7.014-2.885 9.89 9.89 0 0 1 7.014 2.885 10.5 10.5 0 0 1 2.43 3.85l-.809.279a9.6 9.6 0 0 0-2.228-3.526 9.03 9.03 0 0 0-6.407-2.636 9.03 9.03 0 0 0-6.408 2.636c-.914.909-1.681 2.161-2.159 3.526"/></svg></span><a class="headerlink" href="#sqs" title="Link to this section">&para;</a></h1>
+<!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
+<span data-reveal-page hidden></span>
+<h1 id="sqs"><abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m7.164 13.58 1.287-1.27a.425.425 0 0 0 .002-.603L7.166 10.42l-.608.601.552.552H5.147v.852h1.97l-.557.55Zm9.82.04 1.715-1.28a.427.427 0 0 0 0-.682l-1.716-1.277-.515.682.686.51H15.44v.853h1.715l-.686.511ZM9.945 12c0 .905-.156 1.758-.449 2.5a7.1 7.1 0 0 1 2.511-.445c.87 0 1.74.148 2.51.445a6.9 6.9 0 0 1-.448-2.5c0-.905.157-1.757.449-2.5-1.543.593-3.479.593-5.022 0 .293.743.45 1.595.45 2.5Zm-2.1 4.136a.424.424 0 0 1 0-.602c.778-.774 1.243-2.095 1.243-3.534s-.465-2.76-1.244-3.534a.424.424 0 0 1 0-.602.43.43 0 0 1 .607 0c1.662 1.65 5.45 1.65 7.113 0a.43.43 0 0 1 .732.301.42.42 0 0 1-.126.301c-.778.774-1.243 2.095-1.243 3.534s.465 2.76 1.243 3.534a.424.424 0 0 1 0 .602.43.43 0 0 1-.606 0c-1.662-1.65-5.451-1.65-7.113 0a.43.43 0 0 1-.607 0Zm15.299-4.134c0-.397-.155-.77-.438-1.051a1.5 1.5 0 0 0-1.058-.435c-.383 0-.766.145-1.058.435a1.48 1.48 0 0 0 0 2.102c.583.58 1.532.58 2.116 0 .283-.28.438-.654.438-1.05Zm.168 1.654a2.35 2.35 0 0 1-1.664.684 2.35 2.35 0 0 1-1.664-.684 2.33 2.33 0 0 1 0-3.308 2.366 2.366 0 0 1 3.328 0 2.33 2.33 0 0 1 0 3.308M3.85 12.012a1.49 1.49 0 0 0-1.496-1.487 1.493 1.493 0 0 0-1.496 1.487c0 .397.155.77.437 1.051.566.561 1.551.561 2.116 0 .283-.281.439-.654.439-1.051m.168 1.654a2.35 2.35 0 0 1-1.665.684 2.36 2.36 0 0 1-1.664-.684 2.33 2.33 0 0 1 0-3.308 2.367 2.367 0 0 1 3.329 0 2.33 2.33 0 0 1 0 3.308m14.367 4.7a9.03 9.03 0 0 1-6.41 2.639 9.03 9.03 0 0 1-6.41-2.638c-1.175-1.166-1.82-2.56-2.156-3.524l-.81.28c.364 1.047 1.07 2.566 2.36 3.846a9.9 9.9 0 0 0 7.016 2.888 9.9 9.9 0 0 0 7.016-2.888 10.2 10.2 0 0 0 2.43-3.848l-.812-.276a9.4 9.4 0 0 1-2.224 3.522ZM3.407 9.158l-.81-.28c.52-1.484 1.358-2.851 2.363-3.849a9.89 9.89 0 0 1 7.014-2.885 9.89 9.89 0 0 1 7.014 2.885 10.5 10.5 0 0 1 2.43 3.85l-.809.279a9.6 9.6 0 0 0-2.228-3.526 9.03 9.03 0 0 0-6.407-2.636 9.03 9.03 0 0 0-6.408 2.636c-.914.909-1.681 2.161-2.159 3.526"/></svg></span><a class="headerlink" href="#sqs" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 3 min read</p>
 <div class="admonition tldr">
 <p class="admonition-title">Tldr</p>
-<p>Using <code>Amazon SQS</code>, you can send, store, and receive messages between software components, without losing messages or requiring other services to be available. In Amazon SQS, an application sends messages into a queue. </p>
+<p>Using <code>Amazon SQS</code>, you can send, store, and receive messages between software components, without losing messages or requiring other services to be available. In Amazon <abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr>, an application sends messages into a queue. </p>
 <p><mark>A user or service retrieves a message from the queue, processes it, and then deletes it from the queue (as its a pull-based system).</mark></p>
 </div>
 <p><center>
@@ -10876,22 +10883,22 @@ as the main headline.
 "../images/sqs-arch.webp"></p>
 <figcaption>SQS pull-based architecture</figcaption>
 <p></center></p>
-<p>SQS will guarantee that a message is delivered <code>at least once</code>, but that message may be redelivered.</p>
-<p>SQS queues only make an “attempt” to deliver messages in order (more or less a FIFO approach) but do not guarantee FIFO. If strict FIFO is needed, that option can be selected.</p>
+<p><abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr> will guarantee that a message is delivered <code>at least once</code>, but that message may be redelivered.</p>
+<p><abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr> queues only make an “attempt” to deliver messages in order (more or less a FIFO approach) but do not guarantee FIFO. If strict FIFO is needed, that option can be selected.</p>
 <div class="admonition question">
-<p class="admonition-title">SNS vs SQS</p>
+<p class="admonition-title"><abbr title="Simple Notification Service: AWS pub/sub messaging and notifications">SNS</abbr> vs <abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr></p>
 <ul>
-<li>SNS manages notifications and SQS manages messages</li>
-<li>SNS is a <code>push-based system</code> while SQS is a <code>pull-based system</code></li>
+<li><abbr title="Simple Notification Service: AWS pub/sub messaging and notifications">SNS</abbr> manages notifications and <abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr> manages messages</li>
+<li><abbr title="Simple Notification Service: AWS pub/sub messaging and notifications">SNS</abbr> is a <code>push-based system</code> while <abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr> is a <code>pull-based system</code></li>
 </ul>
 </div>
 <h2 id="longshort-polling">Long/Short Polling<a class="headerlink" href="#longshort-polling" title="Link to this section">&para;</a></h2>
-<p>Amazon SQS offers short and long polling options for receiving messages from a queue. Consider your application's requirements for responsiveness and cost efficiency when choosing between these two polling options:</p>
+<p>Amazon <abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr> offers short and long polling options for receiving messages from a queue. Consider your application's requirements for responsiveness and cost efficiency when choosing between these two polling options:</p>
 <p><strong>Short polling (default)</strong> – The <code>ReceiveMessage</code> request queries a subset of servers (based on a weighted random distribution) to find available messages and sends an immediate response, even if no messages are found.</p>
 <p><center> 
 <img width="100%" src="../images/sqs-short-polling.jpeg">
 </center></p>
-<p>The following diagram shows the short-polling behavior of messages returned from a standard queue after one of your system components makes a receive request. Amazon SQS samples several of its servers (in gray) and returns messages A, C, D, and B from these servers. Message E isn't returned for this request, but is returned for a subsequent request.</p>
+<p>The following diagram shows the short-polling behavior of messages returned from a standard queue after one of your system components makes a receive request. Amazon <abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr> samples several of its servers (in gray) and returns messages A, C, D, and B from these servers. Message E isn't returned for this request, but is returned for a subsequent request.</p>
 <p><center> 
 <img width="100%" src="../images/sqs-short-polling-example.png">
 </center></p>
@@ -10899,25 +10906,25 @@ as the main headline.
 <p><center> 
 <img width="100%" src="../images/sqs-long-polling.jpeg">
 </center></p>
-<h2 id="types-of-sqs">Types of SQS<a class="headerlink" href="#types-of-sqs" title="Link to this section">&para;</a></h2>
+<h2 id="types-of-sqs">Types of <abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr><a class="headerlink" href="#types-of-sqs" title="Link to this section">&para;</a></h2>
 <h3 id="standard-default">Standard (Default)<a class="headerlink" href="#standard-default" title="Link to this section">&para;</a></h3>
-<p>Amazon SQS offers standard as the <code>default queue</code> type. Standard queues support a nearly unlimited number of API calls per second, per API action (<code>SendMessage</code>, <code>ReceiveMessage</code>, or <code>DeleteMessage</code>). Standard queues support <code>at-least-once</code> message delivery. </p>
+<p>Amazon <abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr> offers standard as the <code>default queue</code> type. Standard queues support a nearly unlimited number of <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> calls per second, per <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> action (<code>SendMessage</code>, <code>ReceiveMessage</code>, or <code>DeleteMessage</code>). Standard queues support <code>at-least-once</code> message delivery. </p>
 <div class="admonition warning">
 <p class="admonition-title">Messages delivered out of order</p>
 <p>However, occasionally (because of the highly distributed architecture that allows nearly unlimited throughput), more than one copy of a message might be delivered <code>out-of-order</code>. Standard queues provide best-effort ordering which ensures that messages are generally delivered in the same order as they're sent.</p>
 </div>
 <h3 id="fifo">FIFO<a class="headerlink" href="#fifo" title="Link to this section">&para;</a></h3>
 <p><code>FIFO (First-In-First-Out) queues</code> have all the capabilities of the standard queues, but are designed to enhance messaging between applications when the order of operations and events is critical, or where duplicates can't be tolerated.</p>
-<h2 id="sns-vs-sqs">SNS vs SQS<a class="headerlink" href="#sns-vs-sqs" title="Link to this section">&para;</a></h2>
+<h2 id="sns-vs-sqs"><abbr title="Simple Notification Service: AWS pub/sub messaging and notifications">SNS</abbr> vs <abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr><a class="headerlink" href="#sns-vs-sqs" title="Link to this section">&para;</a></h2>
 <p><center> 
 <img width="100%" src="../images/sqs-and-sns.jpeg">
 </center></p>
-<p>There are some key distinctions between SNS and SQS:</p>
+<p>There are some key distinctions between <abbr title="Simple Notification Service: AWS pub/sub messaging and notifications">SNS</abbr> and <abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr>:</p>
 <ul>
-<li>SNS is a <code>pub/sub system</code>, while SQS is a <code>queueing system</code>. You'd typically use SNS to send the same message to multiple consumers via topics. In comparison, in most scenarios, each message in an SQS queue is processed by only one consumer.</li>
-<li>With SQS, messages are delivered through a <code>long polling (pull)</code> mechanism, while SNS uses a push mechanism to immediately deliver(push) messages to subscribed endpoints.</li>
-<li>SNS is typically used for applications that need realtime notifications, while SQS is more suited for message processing use cases.</li>
-<li>SNS does not persist messages - it delivers them to subscribers that are present, and then deletes them. In comparison, SQS can persist messages (from 1 minute to 14 days).</li>
+<li><abbr title="Simple Notification Service: AWS pub/sub messaging and notifications">SNS</abbr> is a <code>pub/sub system</code>, while <abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr> is a <code>queueing system</code>. You'd typically use <abbr title="Simple Notification Service: AWS pub/sub messaging and notifications">SNS</abbr> to send the same message to multiple consumers via topics. In comparison, in most scenarios, each message in an <abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr> queue is processed by only one consumer.</li>
+<li>With <abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr>, messages are delivered through a <code>long polling (pull)</code> mechanism, while <abbr title="Simple Notification Service: AWS pub/sub messaging and notifications">SNS</abbr> uses a push mechanism to immediately deliver(push) messages to subscribed endpoints.</li>
+<li><abbr title="Simple Notification Service: AWS pub/sub messaging and notifications">SNS</abbr> is typically used for applications that need realtime notifications, while <abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr> is more suited for message processing use cases.</li>
+<li><abbr title="Simple Notification Service: AWS pub/sub messaging and notifications">SNS</abbr> does not persist messages - it delivers them to subscribers that are present, and then deletes them. In comparison, <abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr> can persist messages (from 1 minute to 14 days).</li>
 </ul>
 <h2 id="features">Features<a class="headerlink" href="#features" title="Link to this section">&para;</a></h2>
 <h3 id="dlq">DLQ<a class="headerlink" href="#dlq" title="Link to this section">&para;</a></h3>
@@ -10930,9 +10937,9 @@ as the main headline.
 </center></p>
 <h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Link to this section">&para;</a></h2>
 <ul>
-<li>It is a best practice to set the visibility timeout on your SQS queue to 6x the Lambda function timeout to allow for retries if the function is getting throttled.</li>
+<li>It is a best practice to set the visibility timeout on your <abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr> queue to 6x the Lambda function timeout to allow for retries if the function is getting throttled.</li>
 <li>Retries – Use the maxReceiveCount on the queue's policy to limit the number of times Lambda will retry to process a failed execution.</li>
-</ul>
+</ul><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Orchestrate<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../aws/sns/">SNS →</a></p></li><li><p class="rn__kicker">Orchestrate<span class="rn__time"> · 4 min read</span></p><p class="rn__title"><a href="../../aws/event-bridge/">EventBridge →</a></p></li></ul></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10975,6 +10982,13 @@ as the main headline.
     };
     var s = document.querySelector("script[src*='giscus.app/client.js']");
     if (s) s.setAttribute("data-theme", themeFor());
+    // Giscus titles its frame "Comments" and Material turns every title into a floating tooltip,
+    // so move it to aria-label (screen readers still hear it, no stray tooltip)
+    var wrap = s && s.parentNode;
+    if (wrap) new MutationObserver(function (_, obs) {
+      var f = wrap.querySelector("iframe.giscus-frame[title]");
+      if (f) { f.setAttribute("aria-label", f.title); f.removeAttribute("title"); obs.disconnect(); }
+    }).observe(wrap, { childList: true, subtree: true });
     var ref = document.querySelector("[data-md-component=palette]");
     if (ref && !ref.dataset.giscusSync) {
       ref.dataset.giscusSync = "1";
@@ -11008,13 +11022,9 @@ as the main headline.
         
       </main>
       
-        <!-- Footer -->
-
-<!-- <footer class="md-footer">
-	<!-- Further information -->
-	<div class="md-footer-meta md-typeset">
-	  <div class="md-footer-meta__inner md-grid">
-		<div class="md-copyright">
+        <div class="md-footer-meta md-typeset">
+  <div class="md-footer-meta__inner md-grid">
+    <div class="md-copyright">
   
     <div class="md-copyright__highlight">
       Copyright &copy; 2026 Amarjit Singh Dhillon
@@ -11022,13 +11032,8 @@ as the main headline.
   
   
 </div>
-		<!-- Footer links -->
-		<!-- Social links -->
-		
-	  </div>
-	</div>
-	</div>
-  </footer> -->
+  </div>
+</div>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -11065,7 +11070,11 @@ as the main headline.
       
         <script src="../../javascripts/magnetic.js"></script>
       
+        <script src="../../javascripts/transitions.js"></script>
+      
         <script src="../../javascripts/hero.js"></script>
+      
+        <script src="../../javascripts/cosmos.js"></script>
       
         <script src="../../javascripts/totop.js"></script>
       

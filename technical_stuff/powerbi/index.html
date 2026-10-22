@@ -22,10 +22,17 @@
         <link rel="next" href="../linux/android_device/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.ico">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/images/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     <meta name="google-site-verification" content="UHLjtoO7DV30dx3hVhwTOIWguEUr_VzS41msmq-uYKA" />
+    <!-- PNG fallback for browsers without SVG favicons, and the iOS home-screen icon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
+    <meta name="theme-color" content="#10123a">
     
     <script type="application/ld+json">
         {
@@ -50,7 +57,7 @@
 
     
       
-        <title>Power BI - Amar's TechSpace 🛸</title>
+        <title>Power BI - Amar's TechSpace</title>
       
     
     
@@ -79,7 +86,7 @@
     
     
     
-  </head>
+  <meta property="og:type" content="article"><meta property="og:site_name" content="Amar&#x27;s TechSpace"><meta property="og:title" content="Power BI - Amar&#x27;s TechSpace"><meta property="og:description" content="Developer resources for Azure, AWS, K8S and more."><meta property="og:url" content="https://www.amarjitdhillon.com/technical_stuff/powerbi/"><meta property="og:image" content="https://www.amarjitdhillon.com/assets/cards/technical_stuff/powerbi.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Power BI - Amar&#x27;s TechSpace"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Power BI - Amar&#x27;s TechSpace"><meta name="twitter:description" content="Developer resources for Azure, AWS, K8S and more."><meta name="twitter:image" content="https://www.amarjitdhillon.com/assets/cards/technical_stuff/powerbi.png"></head>
   
   
     
@@ -89,7 +96,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -112,9 +119,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Amar&#39;s TechSpace 🛸" class="md-header__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../.." title="Amar&#39;s TechSpace" class="md-header__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../assets/images/menu.png" alt="logo">
+  <img src="../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -124,9 +131,9 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Amar's TechSpace 🛸
-          </span>
+          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+            Amar's <b>TechSpace</b>
+          </a>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
@@ -144,7 +151,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -154,7 +161,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -512,12 +519,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Amar&#39;s TechSpace 🛸" class="md-nav__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../.." title="Amar&#39;s TechSpace" class="md-nav__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../assets/images/menu.png" alt="logo">
+  <img src="../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
-    Amar's TechSpace 🛸
+    Amar's TechSpace
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -2509,7 +2516,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.66 13.07c-1.74 0-3.16-1.41-3.16-3.14 0-.71.26-1.39.69-1.93-.42-.54-.69-1.22-.69-1.93 0-1.73 1.43-3.14 3.16-3.14l.43.03A3.15 3.15 0 0 1 12 1c1.31 0 2.44.81 2.91 1.96l.43-.03c1.73 0 3.16 1.41 3.16 3.14 0 .71-.26 1.39-.69 1.93.42.54.69 1.22.69 1.93 0 1.73-1.43 3.14-3.16 3.14l-.43-.03A3.15 3.15 0 0 1 12 15a3.15 3.15 0 0 1-2.91-1.96zM12 13c.62 0 1.12-.5 1.14-1.1l-.11-1.09c-.32.12-.67.19-1.03.19s-.7-.07-1-.19l-.14 1.09c.02.6.52 1.1 1.14 1.1m3.34-1.93c.63 0 1.16-.51 1.16-1.15 0-.42-.27-.84-.67-1.03l-.88-.42c-.12.74-.51 1.38-1.06 1.83l.81.57c.18.13.4.2.64.2m-.65-5.94-.82.56c.56.45.95 1.09 1.07 1.81l.88-.4c.41-.2.68-.6.68-1.03 0-.63-.53-1.14-1.16-1.14-.23 0-.45.07-.65.2M12 3c-.62 0-1.12.5-1.14 1.1L11 5.19c.3-.12.64-.19 1-.19s.71.07 1.03.19l.11-1.09C13.12 3.5 12.62 3 12 3M8.66 4.93c-.63 0-1.16.51-1.16 1.14 0 .43.27.83.67 1.03l.88.4c.12-.72.51-1.36 1.06-1.81l-.81-.56c-.18-.13-.4-.2-.64-.2M8.17 8.9c-.4.2-.67.6-.67 1.02 0 .63.53 1.14 1.16 1.14.23 0 .45-.06.65-.2l.81-.55c-.56-.45-.95-1.09-1.07-1.81zM12 22a9 9 0 0 1-9-9 9 9 0 0 1 9 9 9 9 0 0 1 9-9 9 9 0 0 1-9 9m2.44-2.44a7.04 7.04 0 0 0 4.12-4.12c-1.9.7-3.41 2.22-4.12 4.12m-9-4.12a7.04 7.04 0 0 0 4.12 4.12c-.7-1.9-2.22-3.41-4.12-4.12"/></svg>
   
   <span class="md-ellipsis">
-    Arch Continums
+    Arch Continuums
   </span>
   
 
@@ -3092,7 +3099,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"/></svg>
   
   <span class="md-ellipsis">
-    Elasti Cache
+    ElastiCache
   </span>
   
 
@@ -3517,7 +3524,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"/></svg>
   
   <span class="md-ellipsis">
-    Athnea
+    Athena
   </span>
   
 
@@ -5348,7 +5355,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12z"/></svg>
   
   <span class="md-ellipsis">
-    Read Replics
+    Read Replicas
   </span>
   
 
@@ -8386,7 +8393,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c-.89 2.18-1.43 3.61-2.42 5.73.61.64 1.35 1.39 2.56 2.24-1.3-.54-2.19-1.07-2.85-1.63C8 11 6.03 14.75 2 22c3.17-1.83 5.63-2.96 7.92-3.39-.1-.42-.16-.88-.15-1.36v-.1c.05-2.03 1.11-3.59 2.36-3.48 1.25.1 2.22 1.83 2.17 3.87-.01.38-.05.75-.12 1.09 2.26.44 4.69 1.56 7.82 3.37-.62-1.14-1.17-2.16-1.69-3.13-.81-.64-1.7-1.48-3.46-2.37 1.21.3 2.08.66 2.76 1.07C14.26 7.62 13.83 6.3 12 2"/></svg>
   
   <span class="md-ellipsis">
-    Cluster Architecutre
+    Cluster Architecture
   </span>
   
 
@@ -8755,7 +8762,7 @@
         
   
   <span class="md-ellipsis">
-    DeamonSet
+    DaemonSet
   </span>
   
 
@@ -8839,7 +8846,7 @@
         
   
   <span class="md-ellipsis">
-    Replia Set
+    ReplicaSet
   </span>
   
 
@@ -9591,9 +9598,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dimentional-modelling" class="md-nav__link">
+  <a href="#dimensional-modelling" class="md-nav__link">
     <span class="md-ellipsis">
-      Dimentional modelling
+      Dimensional modelling
     </span>
   </a>
   
@@ -11152,9 +11159,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dimentional-modelling" class="md-nav__link">
+  <a href="#dimensional-modelling" class="md-nav__link">
     <span class="md-ellipsis">
-      Dimentional modelling
+      Dimensional modelling
     </span>
   </a>
   
@@ -11223,16 +11230,16 @@ as the main headline.
 -->
 
 
-<!-- Markdown content (marker turns on scroll-reveal for pages with `reveal: true`) -->
-
-<h1 id="power-bi">Power BI <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 21H2V3h2v16h2v-9h4v9h2V6h4v13h2v-5h4z"/></svg></span><a class="headerlink" href="#power-bi" title="Link to this section">&para;</a></h1>
+<!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
+<span data-reveal-page hidden></span>
+<h1 id="power-bi">Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 21H2V3h2v16h2v-9h4v9h2V6h4v13h2v-5h4z"/></svg></span><a class="headerlink" href="#power-bi" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 17 min read</p>
 <!-- https://radacad.com/why-do-you-need-power-bi-service -->
 
 <!-- https://www.bluegranite.com/blog/creating-efficient-power-bi-datasets-over-snowflake -->
 
 <!-- https://venu-chakrapani.medium.com/creating-efficient-power-bi-data-visualizations-using-snowflake-3e2198bbc786 -->
 <h2 id="concepts">Concepts<a class="headerlink" href="#concepts" title="Link to this section">&para;</a></h2>
-<p>The five major building blocks of Power BI are: </p>
+<p>The five major building blocks of Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> are: </p>
 <ul>
 <li>Dashboards</li>
 <li>Reports</li>
@@ -11242,14 +11249,14 @@ as the main headline.
 </ul>
 <p>They're all organized into <code>workspaces</code>, and they're created on <code>capacities</code>. It's important to understand capacities and workspaces before we dig into the five building blocks, so let's start there.</p>
 <h3 id="capacity">Capacity<a class="headerlink" href="#capacity" title="Link to this section">&para;</a></h3>
-<p>Capacities are a core Power BI concept representing a set of resources (storage, processor, and memory) used to host and deliver your Power BI content. Capacities are either <code>shared</code> or <code>reserved</code>.</p>
+<p>Capacities are a core Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> concept representing a set of resources (storage, processor, and memory) used to host and deliver your Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> content. Capacities are either <code>shared</code> or <code>reserved</code>.</p>
 <p>A shared capacity is shared with other Microsoft customers, while a reserved capacity is reserved for a single customer.</p>
 <h3 id="workspaces">Workspaces<a class="headerlink" href="#workspaces" title="Link to this section">&para;</a></h3>
 <div class="admonition question">
 <p class="admonition-title">How to share powerBI content?</p>
-<p>A workspace is like a shared folder between a team of users. This can be a place to share some of the Power BI content</p>
+<p>A workspace is like a shared folder between a team of users. This can be a place to share some of the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> content</p>
 </div>
-<p>There are two types of licenses for Power BI; capacity-based and user-based licensing. The capacity-based licensing is usually better for organizations with more than hundreds of users, and user-based licensing is good for small to medium size businesses</p>
+<p>There are two types of licenses for Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr>; capacity-based and user-based licensing. The capacity-based licensing is usually better for organizations with more than hundreds of users, and user-based licensing is good for small to medium size businesses</p>
 <p><center> <img src="../images/workspace.jpg" width="80%"> </center></p>
 <p>There are two types of workspaces: </p>
 <ul>
@@ -11257,17 +11264,17 @@ as the main headline.
 <li>Workspaces (Capacity based)</li>
 </ul>
 <h4 id="my-workspace">My workspace<a class="headerlink" href="#my-workspace" title="Link to this section">&para;</a></h4>
-<p>It is the personal workspace for any Power BI customer to work with your own content. Only you have access to your My workspace. You can share dashboards and reports from your My Workspace. </p>
+<p>It is the personal workspace for any Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> customer to work with your own content. Only you have access to your My workspace. You can share dashboards and reports from your My Workspace. </p>
 <h4 id="workspaces_1">Workspaces<a class="headerlink" href="#workspaces_1" title="Link to this section">&para;</a></h4>
 <p>Workspaces are used to collaborate and share content with colleagues. You can add colleagues to your workspaces and collaborate on dashboards, reports, workbooks, and datasets. </p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Each workspace member needs a Power BI Pro or Premium Per User (PPU) license. </p>
+<p>Each workspace member needs a Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> Pro or Premium Per User (PPU) license. </p>
 </div>
 <h3 id="dashboard">Dashboard<a class="headerlink" href="#dashboard" title="Link to this section">&para;</a></h3>
 <div class="admonition tldr">
 <p class="admonition-title">Tldr</p>
-<p>A Power BI dashboard is a single page, often called a canvas, that uses visualizations to tell a story. Because it is limited to one page, a well-designed dashboard contains only the most-important elements of that story.</p>
+<p>A Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> dashboard is a single page, often called a canvas, that uses visualizations to tell a story. Because it is limited to one page, a well-designed dashboard contains only the most-important elements of that story.</p>
 </div>
 <ul>
 <li>
@@ -11285,30 +11292,30 @@ as the main headline.
 <center> <img src="../images/power-bi-diagram.png" width="70%"> </center></p>
 </div>
 <h3 id="visualization">Visualization:<a class="headerlink" href="#visualization" title="Link to this section">&para;</a></h3>
-<p>It is a type of chart built by Power BI designers. The visuals display the data from reports and datasets.</p>
+<p>It is a type of chart built by Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> designers. The visuals display the data from reports and datasets.</p>
 <div class="admonition tip">
 <p class="admonition-title">How many datasets are feasible?</p>
-<p>All of the visualizations in a report come from a single dataset.  Power BI Desktop can combine more than one data source into a single dataset in a report, and that report can be imported into Power BI.</p>
+<p>All of the visualizations in a report come from a single dataset.  Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> Desktop can combine more than one data source into a single dataset in a report, and that report can be imported into Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr>.</p>
 </div>
 <h3 id="report">Report<a class="headerlink" href="#report" title="Link to this section">&para;</a></h3>
-<p>Report is one or more pages of interactive visuals, text, and graphics that together make up a single report. Power BI bases a report on a single dataset.</p>
+<p>Report is one or more pages of interactive visuals, text, and graphics that together make up a single report. Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> bases a report on a single dataset.</p>
 <h3 id="tile">Tile<a class="headerlink" href="#tile" title="Link to this section">&para;</a></h3>
-<p>A tile is a snapshot of your data, pinned to a dashboard by a designer. Designers can create tiles from a report, dataset, dashboard, the Q&amp;A question box, Excel, SQL Server Reporting Services (SSRS), and more.</p>
+<p>A tile is a snapshot of your data, pinned to a dashboard by a designer. Designers can create tiles from a report, dataset, dashboard, the Q&amp;A question box, Excel, <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> Server Reporting Services (SSRS), and more.</p>
 <h3 id="dax">DAX<a class="headerlink" href="#dax" title="Link to this section">&para;</a></h3>
-<p>Data Analysis Expressions (DAX) is a programming language that is used throughout Microsoft Power BI for creating calculated columns, measures, and custom tables. It is a collection of functions, operators, and constants that can be used in a formula, or expression, to calculate and return one or more values.</p>
+<p>Data Analysis Expressions (DAX) is a programming language that is used throughout Microsoft Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> for creating calculated columns, measures, and custom tables. It is a collection of functions, operators, and constants that can be used in a formula, or expression, to calculate and return one or more values.</p>
 <div class="admonition error">
 <p class="admonition-title">using DAX to calculate columns</p>
 <p>DAX allows you to augment the data that you bring in from different data sources by creating a calculated column that didn't originally exist in the data source. <mark>This feature should be used sparingly</mark></p>
 </div>
 <h3 id="dax-and-mscript">DAX and MScript<a class="headerlink" href="#dax-and-mscript" title="Link to this section">&para;</a></h3>
-<p>Power BI has 2 mighty hands, DAX (powered by <code>SQL Server Analysis Service</code>) and <code>M Script</code> (powered by <code>Power Query</code>), to perform the ETL jobs and visualization related calculations. Both of these engines are efficient with their way of performing calculations. </p>
+<p>Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> has 2 mighty hands, DAX (powered by <code>SQL Server Analysis Service</code>) and <code>M Script</code> (powered by <code>Power Query</code>), to perform the <abbr title="Extract, Transform, Load: moving data from sources, cleaning it, then storing it">ETL</abbr> jobs and visualization related calculations. Both of these engines are efficient with their way of performing calculations. </p>
 <div class="admonition warning">
 <p class="admonition-title">where not to use DAX and MScript?</p>
 <p>When it comes to performing calculations in an optimized way, both under-perform compared to database engines, since they are <code>in-memory calculation engines</code> best suited to play with data. <mark>They lack indexing of data, which database handles while storing of data.</mark> Also, database engine re-uses query results of last few queries, by keeping track of changing data, which is something complex for both DAX &amp; Power Query. As the data size grows, performance difference is quite noticeable.</p>
 </div>
 <h3 id="calculated-column-and-measure">Calculated column and measure<a class="headerlink" href="#calculated-column-and-measure" title="Link to this section">&para;</a></h3>
-<p>The fundamental difference between a <code>calculated column</code> and a <code>measure</code> is that a calculated column creates a value for each row in a table. For example, if the table has 1,000 rows, it will have 1,000 values in the calculated column. Calculated column values are stored in the Power BI .pbix file. Each calculated column will increase the space that is used in that file and potentially increase the refresh time.</p>
-<p><strong>Measures</strong> are calculated on demand. Power BI calculates the correct value when the user requests it. <mark>Measures do not add to the overall disk space of the Power BI <code>.pbix file</code></mark>.</p>
+<p>The fundamental difference between a <code>calculated column</code> and a <code>measure</code> is that a calculated column creates a value for each row in a table. For example, if the table has 1,000 rows, it will have 1,000 values in the calculated column. Calculated column values are stored in the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> .pbix file. Each calculated column will increase the space that is used in that file and potentially increase the refresh time.</p>
+<p><strong>Measures</strong> are calculated on demand. Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> calculates the correct value when the user requests it. <mark>Measures do not add to the overall disk space of the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> <code>.pbix file</code></mark>.</p>
 <h3 id="dataflow">Dataflow<a class="headerlink" href="#dataflow" title="Link to this section">&para;</a></h3>
 <div class="admonition tldr">
 <p class="admonition-title">Tldr</p>
@@ -11319,7 +11326,7 @@ as the main headline.
 <p><code>Query folding</code> is the ability for a <code>Power Query query</code> to generate a single query statement that retrieves and transforms source data.</p>
 <p>Query folding may occur for an entire Power Query query, or for a subset of its steps. When query folding cannot be achieved—either partially or fully—the Power Query mashup engine must compensate by processing data transformations itself. This process can involve retrieving source query results, which for large datasets is very resource intensive and slow.</p>
 <h3 id="powerbi-service">PowerBI Service<a class="headerlink" href="#powerbi-service" title="Link to this section">&para;</a></h3>
-<p>There are two hosting options for Power BI reports</p>
+<p>There are two hosting options for Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> reports</p>
 <ol>
 <li>
 <p>Cloud-based hosting (called <code>Power BI Service</code> or website): In the <code>Power BI Service</code>, organizations are separated using <code>Tenants</code>. Tenants can be managed by <code>Azure Active Directory</code> or <code>Office 365</code>. Under tenants, there will be users. These users are Azure Active Directory users.</p>
@@ -11332,15 +11339,15 @@ as the main headline.
 <h3 id="storage-mode">Storage mode<a class="headerlink" href="#storage-mode" title="Link to this section">&para;</a></h3>
 <p>Today PowerBI offers 4 different storage modes for tables:</p>
 <h4 id="import-mode">Import mode<a class="headerlink" href="#import-mode" title="Link to this section">&para;</a></h4>
-<p>In this mode, Power BI connects with underlying data source &amp; downloads entire data from the datasource. This data is stored in Power BI model (in an in-memory cache). Fresh copy of this data can be downloaded by pressing Refresh button. <code>PBIX file</code> internally stores model data in compressed format. This published datset model on Power BI Service, internally is stored on Common Data Model, which is sort of <code>Azure Managed SQL Server</code> instance in the backend.</p>
+<p>In this mode, Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> connects with underlying data source &amp; downloads entire data from the datasource. This data is stored in Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> model (in an in-memory cache). Fresh copy of this data can be downloaded by pressing Refresh button. <code>PBIX file</code> internally stores model data in compressed format. This published datset model on Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> Service, internally is stored on Common Data Model, which is sort of <code>Azure Managed SQL Server</code> instance in the backend.</p>
 <p><center> <img src="../images/import.jpg" width="90%"> </center></p>
 <div class="admonition question">
 <p class="admonition-title">Which is the fastest method</p>
-<p>The fastest method is <code>Import mode</code>. Essentially, this mode allows you to load the data once into Power BI, where it is then stored. Power BI uses the <code>in-memory VertiPaq/xVelocity engine</code>, which is exceptionally fast and delivers results almost immediately. It offers <code>full DAX and PowerQuery support</code>. A quick rule of thumb is that you can typically expect about 10x compression when importing data into Power BI</p>
+<p>The fastest method is <code>Import mode</code>. Essentially, this mode allows you to load the data once into Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr>, where it is then stored. Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> uses the <code>in-memory VertiPaq/xVelocity engine</code>, which is exceptionally fast and delivers results almost immediately. It offers <code>full DAX and PowerQuery support</code>. A quick rule of thumb is that you can typically expect about 10x compression when importing data into Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr></p>
 </div>
 <p><mark>The drawback is that it only permits you to refresh data 8 times per day.</mark></p>
 <h4 id="directquery-mode">DirectQuery mode<a class="headerlink" href="#directquery-mode" title="Link to this section">&para;</a></h4>
-<p>With <code>DirectQuery datasets</code>, no data is imported into Power BI. Instead, your Power BI dataset is simply metadata (e.g., tables, relationships) of how your model is structured to query the data source. <mark>Data is only brought into Power BI reports and dashboards at query-time (e.g., a user runs a report, or changes filters).</mark></p>
+<p>With <code>DirectQuery datasets</code>, no data is imported into Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr>. Instead, your Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> dataset is simply metadata (e.g., tables, relationships) of how your model is structured to query the data source. <mark>Data is only brought into Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> reports and dashboards at query-time (e.g., a user runs a report, or changes filters).</mark></p>
 <p><center> <img src="../images/directquery.jpg" width="90%"> </center></p>
 <p><strong>Pros:</strong>
 - Dataset size limits do not apply as all data still resides in the underlying database.
@@ -11357,8 +11364,8 @@ as the main headline.
 <li>Cold data in <code>Import mode</code>, Hot data in <code>DirectQuery</code>. </li>
 <li>Hybrid tables can only be applied on a table that incremental refresh is set on it.</li>
 <li>Hybrid tables are partitioned, so their most recent partition is a DirectQuery from the data source, and their historical data is imported into other partitions.</li>
-<li>If your data source doesn’t support query folding, For example, it is a CSV file. Then Power BI, when connected to it, reads the entire data anyway.</li>
-<li>Incremental Refresh doesn’t need a Premium or PPU license. You can even set it up using a Power BI Pro license. However, Hybrid tables require a Power BI Premium capacity or PPU.</li>
+<li>If your data source doesn’t support query folding, For example, it is a CSV file. Then Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr>, when connected to it, reads the entire data anyway.</li>
+<li>Incremental Refresh doesn’t need a Premium or PPU license. You can even set it up using a Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> Pro license. However, Hybrid tables require a Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> Premium capacity or PPU.</li>
 </ul>
 </div>
 <p><center> <img src="../images/hybrid_tables_example.webp" width="90%"> </center></p>
@@ -11374,46 +11381,46 @@ as the main headline.
 </ul>
 <p><center> <img src="../images/fte.jpg" width="80%"> </center></p>
 <h4 id="aad">AAD<a class="headerlink" href="#aad" title="Link to this section">&para;</a></h4>
-<p>The WFE cluster manages connectivity and authentication. Power BI relies on Azure Active Directory (AAD) to manage account authentication and management. </p>
+<p>The WFE cluster manages connectivity and authentication. Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> relies on Azure Active Directory (AAD) to manage account authentication and management. </p>
 <h4 id="atm">ATM<a class="headerlink" href="#atm" title="Link to this section">&para;</a></h4>
-<p>Power BI uses the Azure Traffic Manager (ATM) to direct user traffic to the nearest data center. Which data center is used is determined by the DNS record of the client attempting to connect. The DNS Service can communicate with the Azure Traffic Manager to find the nearest data center with a Power BI deployment</p>
-<h4 id="cdn">CDN<a class="headerlink" href="#cdn" title="Link to this section">&para;</a></h4>
-<p>Power BI uses the Azure Content Delivery Network (CDN) to deliver the necessary static content and files to end users based on their geographical locale. The WFE cluster nearest to the user manages the user login and authentication and provides an access token to the user once authentication is successful. The ASP.NET component within the WFE cluster parses the request to determine which organization the user belongs to, and then consults the Power BI Global Service</p>
+<p>Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> uses the Azure Traffic Manager (ATM) to direct user traffic to the nearest data center. Which data center is used is determined by the <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> record of the client attempting to connect. The <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> Service can communicate with the Azure Traffic Manager to find the nearest data center with a Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> deployment</p>
+<h4 id="cdn"><abbr title="Content Delivery Network: caches content close to users so it loads fast">CDN</abbr><a class="headerlink" href="#cdn" title="Link to this section">&para;</a></h4>
+<p>Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> uses the Azure Content Delivery Network (<abbr title="Content Delivery Network: caches content close to users so it loads fast">CDN</abbr>) to deliver the necessary static content and files to end users based on their geographical locale. The WFE cluster nearest to the user manages the user login and authentication and provides an access token to the user once authentication is successful. The ASP.NET component within the WFE cluster parses the request to determine which organization the user belongs to, and then consults the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> Global Service</p>
 <h4 id="global-service">Global Service<a class="headerlink" href="#global-service" title="Link to this section">&para;</a></h4>
-<p>The Global Service is implemented as a single Azure Table that is shared among all worldwide WFE and Back End clusters. This service maps users and customer organizations to the datacenter that hosts their Power BI tenant. The WFE specifies to the browser which backend cluster houses the organization's tenant. </p>
+<p>The Global Service is implemented as a single Azure Table that is shared among all worldwide WFE and Back End clusters. This service maps users and customer organizations to the datacenter that hosts their Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> tenant. The WFE specifies to the browser which backend cluster houses the organization's tenant. </p>
 <div class="admonition tip">
 <p>Once a user is authenticated, subsequent client interactions occur with the backend cluster directly and the WFE cluster is not used.</p>
 </div>
 <h3 id="back-end-cluster">Back-end cluster<a class="headerlink" href="#back-end-cluster" title="Link to this section">&para;</a></h3>
 <p><center> <img src="../images/backend_powerbi.jpg" width="80%"> </center></p>
-<p>The backend cluster manages all actions the user does in Power BI Service, including visualizations, dashboards,datasets, reports, data storage, data connections, data refresh, and others. </p>
+<p>The backend cluster manages all actions the user does in Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> Service, including visualizations, dashboards,datasets, reports, data storage, data connections, data refresh, and others. </p>
 <h4 id="gateway-and-apim">Gateway and APIM<a class="headerlink" href="#gateway-and-apim" title="Link to this section">&para;</a></h4>
-<p>The Gateway Role acts as a gateway between user requests and the Power BI service. As you can see in the diagram, only the Gateway Role and Azure API Management (APIM) services are accessible from the public Internet.</p>
-<p>When an authenticated user connects to the Power BI Service, the connection and any request by the client is accepted and managed by the Gateway Role, which then interacts on the user's behalf with the rest of the Power BI Service. For example, when a client attempts to view a dashboard, the Gateway Role accepts that request, and then sends a request to the Presentation Role to retrieve the data needed by the browser to render the dashboard.</p>
+<p>The Gateway Role acts as a gateway between user requests and the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> service. As you can see in the diagram, only the Gateway Role and Azure <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> Management (APIM) services are accessible from the public Internet.</p>
+<p>When an authenticated user connects to the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> Service, the connection and any request by the client is accepted and managed by the Gateway Role, which then interacts on the user's behalf with the rest of the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> Service. For example, when a client attempts to view a dashboard, the Gateway Role accepts that request, and then sends a request to the Presentation Role to retrieve the data needed by the browser to render the dashboard.</p>
 <h4 id="data-storage">Data Storage<a class="headerlink" href="#data-storage" title="Link to this section">&para;</a></h4>
-<p>As far as data storage in the cloud goes, Power BI uses two primary repositories for storing and managing data. Data that is uploaded from users or generated by dataflows is stored in Azure BLOB storage, but all the metadata definitions (dashboards, reports, recent data sources, workspaces, organizational information, tenant information) are stored in Azure SQL Database.</p>
+<p>As far as data storage in the cloud goes, Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> uses two primary repositories for storing and managing data. Data that is uploaded from users or generated by dataflows is stored in Azure BLOB storage, but all the metadata definitions (dashboards, reports, recent data sources, workspaces, organizational information, tenant information) are stored in Azure <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> Database.</p>
 <hr />
 <h2 id="performance-optimization-of-powerbi">Performance Optimization of PowerBI<a class="headerlink" href="#performance-optimization-of-powerbi" title="Link to this section">&para;</a></h2>
 <p><a href="https://zebrabi.com/power-bi-performance-optimization/#:~:text=3%20simple%20steps%20to%20Power%20BI%20performance%20optimization&amp;text=Analyze%20your%20performance%20by%20identifying,that%20they%20run%20more%20smoothly.">check this ZerbaBI report</a></p>
 <h3 id="analyze-the-results">Analyze the results<a class="headerlink" href="#analyze-the-results" title="Link to this section">&para;</a></h3>
 <ul>
 <li>
-<p><code>Power BI Performance Analyzer</code>: The natural starting point is Power BI Performance Analyzer, a built-in feature of Power BI Desktop. Select the View ribbon, and then select Performance Analyzer to display the Performance Analyzer pane.</p>
+<p><code>Power BI Performance Analyzer</code>: The natural starting point is Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> Performance Analyzer, a built-in feature of Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> Desktop. Select the View ribbon, and then select Performance Analyzer to display the Performance Analyzer pane.</p>
 </li>
 <li>
 <p><code>DAX Studio</code>: You can analyze performance using in another tool called <code>DAX Studio</code>. This is a a great tool for performance analysis.</p>
 </li>
 </ul>
 <h3 id="using-direct-query">Using direct query?<a class="headerlink" href="#using-direct-query" title="Link to this section">&para;</a></h3>
-<p>There's another situation that can slow down your report. You might be creating tables that use <code>DirectQuery as the connection mode</code>. This means that the data is not loaded into Power BI. Instead, it is loaded using a query that runs on a database server. This means additional time to fetch the data.</p>
-<p>This shows up as another item on the report, since Power BI first needs to fetch the data, process it using a <code>PowerQuery</code> and pass it on to a <code>DAX command</code>.</p>
+<p>There's another situation that can slow down your report. You might be creating tables that use <code>DirectQuery as the connection mode</code>. This means that the data is not loaded into Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr>. Instead, it is loaded using a query that runs on a database server. This means additional time to fetch the data.</p>
+<p>This shows up as another item on the report, since Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> first needs to fetch the data, process it using a <code>PowerQuery</code> and pass it on to a <code>DAX command</code>.</p>
 <h3 id="avoid-joins">Avoid Joins<a class="headerlink" href="#avoid-joins" title="Link to this section">&para;</a></h3>
-<p>People essentially just load all the tables into <code>Power BI</code> and start creating relationships. Then, they need to write <code>complex DAX formulas</code> to tie everything together. <mark>To make everything run faster, however, you need to combine tables and merge them before you even load them into Power BI.</mark></p>
+<p>People essentially just load all the tables into <code>Power BI</code> and start creating relationships. Then, they need to write <code>complex DAX formulas</code> to tie everything together. <mark>To make everything run faster, however, you need to combine tables and merge them before you even load them into Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr>.</mark></p>
 <h3 id="de-normalize-data-model">De-normalize data model<a class="headerlink" href="#de-normalize-data-model" title="Link to this section">&para;</a></h3>
 <p>Combine or append the tables that are similar in structure and used for the same purpose. For example, fact tables like sales, actuals, plan and different forecasts can be combined or appended into a single table.</p>
 <h3 id="incremental-refresh">Incremental Refresh<a class="headerlink" href="#incremental-refresh" title="Link to this section">&para;</a></h3>
-<p>When you load data from the source into the destination (Power BI), there are two methods: Full Load or Incremental Refresh. Full Load means fetching the entire dataset each time and wiping out the previous data. </p>
-<p>Incremental refresh is an important feature to consider when working with large tables that you would like to import into memory. With Incremental Refresh, partitions are automatically created on your Power BI table based on the amount of history to retain, as well as the partition size you would like to set. Since data modelers can define the size of each partition, refreshes will be faster, more reliable, and able to build history over time.</p>
+<p>When you load data from the source into the destination (Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr>), there are two methods: Full Load or Incremental Refresh. Full Load means fetching the entire dataset each time and wiping out the previous data. </p>
+<p>Incremental refresh is an important feature to consider when working with large tables that you would like to import into memory. With Incremental Refresh, partitions are automatically created on your Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> table based on the amount of history to retain, as well as the partition size you would like to set. Since data modelers can define the size of each partition, refreshes will be faster, more reliable, and able to build history over time.</p>
 <div class="admonition tip">
 <p class="admonition-title">When to use incremental refresh/</p>
 <p>Consider you have a large dataset including 20 years of data. From that dataset, probably the data from 20 years ago won’t change anymore, or even the data from 5 years ago, sometimes even a year ago. So why re-processing it again? Why re-loading data that doesn’t update? Incremental Refresh is the process of loading only part of the data that might change and adding it to the previous dataset, which is no longer changing.</p>
@@ -11421,7 +11428,7 @@ as the main headline.
 <p>When setting up Incremental Refresh, keep in mind the following:</p>
 <ul>
 <li>You must create RangeStart and RangeEnd date/time parameters.  These parameters must be set to a date/time data type and must be named RangeStart and RangeEnd.</li>
-<li>The initial refresh in the Power BI service will take the longest due to the creation of partitions and loading of historical data.  Subsequent refreshes will only process the latest partition(s) based on how the feature was configured.</li>
+<li>The initial refresh in the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> service will take the longest due to the creation of partitions and loading of historical data.  Subsequent refreshes will only process the latest partition(s) based on how the feature was configured.</li>
 </ul>
 <h4 id="partitioning">Partitioning<a class="headerlink" href="#partitioning" title="Link to this section">&para;</a></h4>
 <p>Incremental Load will split the table into partitions. The quantity of the partitions will be based on the settings applied at the time of Incremental refresh. For example, if you want to have the last year’s data refreshed only, a yearly partition will likely be created for every year, and the one for the current year will be refreshed on a scheduled basis.</p>
@@ -11432,7 +11439,7 @@ as the main headline.
 <h3 id="avoid-row-level-security">Avoid row-level security<a class="headerlink" href="#avoid-row-level-security" title="Link to this section">&para;</a></h3>
 <p>Last but not least, avoid row-level security, which can be a performance killer.</p>
 <hr />
-<h3 id="dimentional-modelling">Dimentional modelling<a class="headerlink" href="#dimentional-modelling" title="Link to this section">&para;</a></h3>
+<h3 id="dimensional-modelling">Dimensional modelling<a class="headerlink" href="#dimensional-modelling" title="Link to this section">&para;</a></h3>
 <p>It is a set of guidelines to design database table structure for easier and faster data retrieval.</p>
 <div class="admonition remember">
 <p class="admonition-title">Remember</p>
@@ -11494,16 +11501,16 @@ as the main headline.
 <ul>
 <li>Make sure the data visualizations are use case driven, this includes the timing of the data, number of visualizations and other components.</li>
 <li>
-<p>Data Model Design: How you design your data model will have a major impact on query performance in Power BI.</p>
+<p>Data Model Design: How you design your data model will have a major impact on query performance in Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr>.</p>
 </li>
 <li>
-<p>Ideally, use a <code>Star Schema Design</code> for your data in Power BI with <code>Facts and Dimensions</code>. It is also important to have a more relational, normalized Data Vault type of an ODS model in Snowflake to get the best performance in Power BI.</p>
+<p>Ideally, use a <code>Star Schema Design</code> for your data in Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> with <code>Facts and Dimensions</code>. It is also important to have a more relational, normalized Data Vault type of an ODS model in Snowflake to get the best performance in Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr>.</p>
 </li>
 <li>
 <p>Use <code>Import mode</code> for dimension tables and <code>Direct query</code> mode for Fact tables.</p>
 </li>
 <li>
-<p>Use <code>aggregations</code> in Power BI for pre-aggregated data to get <mark>better query performance</mark></p>
+<p>Use <code>aggregations</code> in Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> for pre-aggregated data to get <mark>better query performance</mark></p>
 </li>
 <li>
 <p>Keep the dashboard simple by limiting the number of data points, visuals and queries in a page to a minimum. This will also help query performance as there will be lesser number of queries to run while refreshing the visualization.</p>
@@ -11512,10 +11519,10 @@ as the main headline.
 <p>Use <code>Query reduction</code> to limit the number of queries generated. This is especially helpful when using slicers in your visualization, where you only want the filters applied when the “Apply” button is used.</p>
 </li>
 <li>
-<p>To make modeling easier, use the <code>Assume referential integrity</code> property on relationships. While the default property on a relationship in Power BI is to generate a <code>left outer join</code>, by using the “Assume referential integrity” property, you can force an inner join. This can make the queries faster. <mark>This property is available only in a Direct Query mode.</mark></p>
+<p>To make modeling easier, use the <code>Assume referential integrity</code> property on relationships. While the default property on a relationship in Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> is to generate a <code>left outer join</code>, by using the “Assume referential integrity” property, you can force an inner join. This can make the queries faster. <mark>This property is available only in a Direct Query mode.</mark></p>
 </li>
 <li>
-<p>Use bi-directional filter on relationships with discretion. More bi-directional filters mean you will generate more SQL queries. These can increase the complexity of the model and increase compute costs in Snowflake.</p>
+<p>Use bi-directional filter on relationships with discretion. More bi-directional filters mean you will generate more <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> queries. These can increase the complexity of the model and increase compute costs in Snowflake.</p>
 </li>
 <li>
 <p>Pruning micro partitions on large data sets in Snowflake, creating additional tables with larger data with alternate sets of keys driven by the end users ad-hoc query needs can result in better performance</p>
@@ -11524,12 +11531,12 @@ as the main headline.
 <h3 id="auth-flow">Auth flow<a class="headerlink" href="#auth-flow" title="Link to this section">&para;</a></h3>
 <p><center> <img src="../images/oauth-powerbi-sso.jpg" width="80%"> </center></p>
 <ol>
-<li>The user logs into Power BI service using Microsoft Azure Active Directory (Azure AD).</li>
-<li>(Optional) If the identity provider is not Azure AD, then Azure AD verifies the user through SAML authentication before logging the user into the Power BI service.</li>
-<li>When the user connects to Snowflake, the Power BI service asks Azure AD to give it a token for Snowflake</li>
+<li>The user logs into Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> service using Microsoft Azure Active Directory (Azure AD).</li>
+<li>(Optional) If the identity provider is not Azure AD, then Azure AD verifies the user through SAML authentication before logging the user into the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> service.</li>
+<li>When the user connects to Snowflake, the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> service asks Azure AD to give it a token for Snowflake</li>
 <li>The <code>Power BI</code> service uses the embedded Snowflake driver to send the Azure AD token to Snowflake as part of the connection string.</li>
-<li><code>Snowflake</code> validates the token, extracts the username from the token, maps it to the Snowflake user, and creates a Snowflake session for the Power BI service using the user’s default role.</li>
-</ol>
+<li><code>Snowflake</code> validates the token, extracts the username from the token, maps it to the Snowflake user, and creates a Snowflake session for the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> service using the user’s default role.</li>
+</ol><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Data/Analytics<span class="rn__time"> · 7 min read</span></p><p class="rn__title"><a href="../../technical_stuff/sql_and_nosql/">DB, DW and Data Lake →</a></p></li><li><p class="rn__kicker">Data/Analytics<span class="rn__time"> · 5 min read</span></p><p class="rn__title"><a href="../../technical_stuff/snowflake/">Snowflake →</a></p></li></ul></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -11572,6 +11579,13 @@ as the main headline.
     };
     var s = document.querySelector("script[src*='giscus.app/client.js']");
     if (s) s.setAttribute("data-theme", themeFor());
+    // Giscus titles its frame "Comments" and Material turns every title into a floating tooltip,
+    // so move it to aria-label (screen readers still hear it, no stray tooltip)
+    var wrap = s && s.parentNode;
+    if (wrap) new MutationObserver(function (_, obs) {
+      var f = wrap.querySelector("iframe.giscus-frame[title]");
+      if (f) { f.setAttribute("aria-label", f.title); f.removeAttribute("title"); obs.disconnect(); }
+    }).observe(wrap, { childList: true, subtree: true });
     var ref = document.querySelector("[data-md-component=palette]");
     if (ref && !ref.dataset.giscusSync) {
       ref.dataset.giscusSync = "1";
@@ -11605,13 +11619,9 @@ as the main headline.
         
       </main>
       
-        <!-- Footer -->
-
-<!-- <footer class="md-footer">
-	<!-- Further information -->
-	<div class="md-footer-meta md-typeset">
-	  <div class="md-footer-meta__inner md-grid">
-		<div class="md-copyright">
+        <div class="md-footer-meta md-typeset">
+  <div class="md-footer-meta__inner md-grid">
+    <div class="md-copyright">
   
     <div class="md-copyright__highlight">
       Copyright &copy; 2026 Amarjit Singh Dhillon
@@ -11619,13 +11629,8 @@ as the main headline.
   
   
 </div>
-		<!-- Footer links -->
-		<!-- Social links -->
-		
-	  </div>
-	</div>
-	</div>
-  </footer> -->
+  </div>
+</div>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -11662,7 +11667,11 @@ as the main headline.
       
         <script src="../../javascripts/magnetic.js"></script>
       
+        <script src="../../javascripts/transitions.js"></script>
+      
         <script src="../../javascripts/hero.js"></script>
+      
+        <script src="../../javascripts/cosmos.js"></script>
       
         <script src="../../javascripts/totop.js"></script>
       

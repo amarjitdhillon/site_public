@@ -22,10 +22,17 @@
         <link rel="next" href="../ecs/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.ico">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/images/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     <meta name="google-site-verification" content="UHLjtoO7DV30dx3hVhwTOIWguEUr_VzS41msmq-uYKA" />
+    <!-- PNG fallback for browsers without SVG favicons, and the iOS home-screen icon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
+    <meta name="theme-color" content="#10123a">
     
     <script type="application/ld+json">
         {
@@ -50,7 +57,7 @@
 
     
       
-        <title>EKS - Amar's TechSpace 🛸</title>
+        <title>EKS - Amar's TechSpace</title>
       
     
     
@@ -79,7 +86,7 @@
     
     
     
-  </head>
+  <meta property="og:type" content="article"><meta property="og:site_name" content="Amar&#x27;s TechSpace"><meta property="og:title" content="EKS - Amar&#x27;s TechSpace"><meta property="og:description" content="Developer resources for Azure, AWS, K8S and more."><meta property="og:url" content="https://www.amarjitdhillon.com/aws/eks/"><meta property="og:image" content="https://www.amarjitdhillon.com/assets/cards/aws/eks.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="EKS - Amar&#x27;s TechSpace"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="EKS - Amar&#x27;s TechSpace"><meta name="twitter:description" content="Developer resources for Azure, AWS, K8S and more."><meta name="twitter:image" content="https://www.amarjitdhillon.com/assets/cards/aws/eks.png"></head>
   
   
     
@@ -89,7 +96,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -112,9 +119,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Amar&#39;s TechSpace 🛸" class="md-header__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../.." title="Amar&#39;s TechSpace" class="md-header__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../assets/images/menu.png" alt="logo">
+  <img src="../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -124,9 +131,9 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Amar's TechSpace 🛸
-          </span>
+          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+            Amar's <b>TechSpace</b>
+          </a>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
@@ -144,7 +151,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -154,7 +161,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -512,12 +519,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Amar&#39;s TechSpace 🛸" class="md-nav__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../.." title="Amar&#39;s TechSpace" class="md-nav__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../assets/images/menu.png" alt="logo">
+  <img src="../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
-    Amar's TechSpace 🛸
+    Amar's TechSpace
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -2509,7 +2516,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.66 13.07c-1.74 0-3.16-1.41-3.16-3.14 0-.71.26-1.39.69-1.93-.42-.54-.69-1.22-.69-1.93 0-1.73 1.43-3.14 3.16-3.14l.43.03A3.15 3.15 0 0 1 12 1c1.31 0 2.44.81 2.91 1.96l.43-.03c1.73 0 3.16 1.41 3.16 3.14 0 .71-.26 1.39-.69 1.93.42.54.69 1.22.69 1.93 0 1.73-1.43 3.14-3.16 3.14l-.43-.03A3.15 3.15 0 0 1 12 15a3.15 3.15 0 0 1-2.91-1.96zM12 13c.62 0 1.12-.5 1.14-1.1l-.11-1.09c-.32.12-.67.19-1.03.19s-.7-.07-1-.19l-.14 1.09c.02.6.52 1.1 1.14 1.1m3.34-1.93c.63 0 1.16-.51 1.16-1.15 0-.42-.27-.84-.67-1.03l-.88-.42c-.12.74-.51 1.38-1.06 1.83l.81.57c.18.13.4.2.64.2m-.65-5.94-.82.56c.56.45.95 1.09 1.07 1.81l.88-.4c.41-.2.68-.6.68-1.03 0-.63-.53-1.14-1.16-1.14-.23 0-.45.07-.65.2M12 3c-.62 0-1.12.5-1.14 1.1L11 5.19c.3-.12.64-.19 1-.19s.71.07 1.03.19l.11-1.09C13.12 3.5 12.62 3 12 3M8.66 4.93c-.63 0-1.16.51-1.16 1.14 0 .43.27.83.67 1.03l.88.4c.12-.72.51-1.36 1.06-1.81l-.81-.56c-.18-.13-.4-.2-.64-.2M8.17 8.9c-.4.2-.67.6-.67 1.02 0 .63.53 1.14 1.16 1.14.23 0 .45-.06.65-.2l.81-.55c-.56-.45-.95-1.09-1.07-1.81zM12 22a9 9 0 0 1-9-9 9 9 0 0 1 9 9 9 9 0 0 1 9-9 9 9 0 0 1-9 9m2.44-2.44a7.04 7.04 0 0 0 4.12-4.12c-1.9.7-3.41 2.22-4.12 4.12m-9-4.12a7.04 7.04 0 0 0 4.12 4.12c-.7-1.9-2.22-3.41-4.12-4.12"/></svg>
   
   <span class="md-ellipsis">
-    Arch Continums
+    Arch Continuums
   </span>
   
 
@@ -3176,7 +3183,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"/></svg>
   
   <span class="md-ellipsis">
-    Elasti Cache
+    ElastiCache
   </span>
   
 
@@ -3613,7 +3620,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"/></svg>
   
   <span class="md-ellipsis">
-    Athnea
+    Athena
   </span>
   
 
@@ -5474,7 +5481,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12z"/></svg>
   
   <span class="md-ellipsis">
-    Read Replics
+    Read Replicas
   </span>
   
 
@@ -8512,7 +8519,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c-.89 2.18-1.43 3.61-2.42 5.73.61.64 1.35 1.39 2.56 2.24-1.3-.54-2.19-1.07-2.85-1.63C8 11 6.03 14.75 2 22c3.17-1.83 5.63-2.96 7.92-3.39-.1-.42-.16-.88-.15-1.36v-.1c.05-2.03 1.11-3.59 2.36-3.48 1.25.1 2.22 1.83 2.17 3.87-.01.38-.05.75-.12 1.09 2.26.44 4.69 1.56 7.82 3.37-.62-1.14-1.17-2.16-1.69-3.13-.81-.64-1.7-1.48-3.46-2.37 1.21.3 2.08.66 2.76 1.07C14.26 7.62 13.83 6.3 12 2"/></svg>
   
   <span class="md-ellipsis">
-    Cluster Architecutre
+    Cluster Architecture
   </span>
   
 
@@ -8881,7 +8888,7 @@
         
   
   <span class="md-ellipsis">
-    DeamonSet
+    DaemonSet
   </span>
   
 
@@ -8965,7 +8972,7 @@
         
   
   <span class="md-ellipsis">
-    Replia Set
+    ReplicaSet
   </span>
   
 
@@ -10731,36 +10738,36 @@ as the main headline.
 -->
 
 
-<!-- Markdown content (marker turns on scroll-reveal for pages with `reveal: true`) -->
-
-<h1 id="eks">EKS <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.67 8.505-2.875 3.335 3.128 3.648h-1.168l-2.808-3.277v3.368h-.842V8.421h.842v2.947l2.603-2.863Zm7.225 6.751-3.369-2.021V8.421a.42.42 0 0 0-.209-.364l-4.843-2.825V1.159l8.42 4.976Zm.635-9.724L13.267.06a.422.422 0 0 0-.635.362v5.053c0 .15.08.288.208.363l4.844 2.826v4.81a.42.42 0 0 0 .205.362l4.21 2.526a.42.42 0 0 0 .638-.361V5.895a.42.42 0 0 0-.207-.363M11.977 23.1l-9.872-5.248V6.135l8.421-4.976v4.084L6.09 8.066a.42.42 0 0 0-.195.355v7.158a.42.42 0 0 0 .226.373l5.665 2.948a.42.42 0 0 0 .387 0l5.496-2.84 3.382 2.03Zm10.135-5.356-4.21-2.526a.42.42 0 0 0-.411-.013l-5.51 2.847-5.244-2.729v-6.67l4.436-2.824a.42.42 0 0 0 .195-.355V.42a.421.421 0 0 0-.635-.362L1.47 5.532a.42.42 0 0 0-.207.363v12.21c0 .156.086.299.223.372l10.297 5.474a.42.42 0 0 0 .401-.004l9.915-5.473a.422.422 0 0 0 .013-.73"/></svg></span><a class="headerlink" href="#eks" title="Link to this section">&para;</a></h1>
-<p>Amazon Elastic Kubernetes Service (Amazon EKS) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80px" height="80px" viewBox="0 0 80 80"><title>Icon-Architecture/64/Arch_Amazon-EKS-Cloud_64</title><defs><linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1"><stop stop-color="#C8511B" offset="0%"></stop><stop stop-color="#FF9900" offset="100%"></stop></linearGradient></defs><g id="Icon-Architecture/64/Arch_Amazon-EKS-Cloud_64" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Rectangle" fill="url(#linearGradient-1)"><rect x="0" y="0" width="80" height="80"></rect></g><g id="Icon-Service/64/Amazon-EKS-Cloud_64" transform="translate(8.000000, 8.000000)" fill="#FFFFFF"><path d="M53.239,53.377026 L31.737,53.355026 C29.133,53.352026 26.906,51.416026 26.667,48.949026 C26.647,48.743026 26.636,48.528026 26.636,48.305026 C26.636,44.929026 28.968,43.798026 30.391,43.422026 C30.849,43.328026 31.189,42.922026 31.189,42.441026 C31.189,42.394026 31.186,42.347026 31.179,42.300026 C31.145,42.004026 31.128,41.702026 31.128,41.396026 C31.128,38.613026 33.046,35.621026 35.494,34.584026 C39.745,32.786026 42.754,35.151026 43.852,36.253026 C44.751,37.154026 45.453,38.309026 45.938,39.684026 C46.062,40.033026 46.368,40.286026 46.734,40.340026 C47.097,40.394026 47.467,40.243026 47.686,39.945026 C48.322,39.085026 49.352,38.708026 50.307,38.988026 C51.477,39.330026 52.253,40.541026 52.393,42.238026 C52.342,42.756026 52.7,43.231026 53.218,43.320026 C54.587,43.556026 57.769,44.517026 57.769,48.356026 C57.769,52.839026 53.626,53.338026 53.239,53.377026 L53.239,53.377026 Z M29.444,57.862026 L6,45.398026 L6,18.570026 L26,6.75202604 L26,16.451026 L15.463,23.156026 C15.175,23.339026 15,23.658026 15,24.000026 L15,40.000026 C15,40.373026 15.208,40.714026 15.538,40.887026 L24.901,45.758026 L25.04,45.835026 C24.784,46.592026 24.636,47.415026 24.636,48.305026 C24.636,48.594026 24.651,48.872026 24.677,49.140026 C25.012,52.621026 28.113,55.351026 31.735,55.355026 L33.982,55.356026 L29.444,57.862026 Z M44.504,23.136026 L33,16.425026 L33,6.75202604 L53,18.570026 L53,38.467026 C52.431,37.803026 51.716,37.316026 50.868,37.068026 C49.616,36.703026 48.308,36.926026 47.245,37.637026 C46.718,36.567026 46.056,35.631026 45.268,34.841026 C45.182,34.755026 45.088,34.689026 45,34.606026 L45,24.000026 C45,23.644026 44.811,23.315026 44.504,23.136026 L44.504,23.136026 Z M55,41.726026 L55,18.000026 C55,17.646026 54.813,17.318026 54.509,17.139026 L32.509,4.13902604 C32.199,3.95602604 31.817,3.95402604 31.504,4.13102604 C31.192,4.30902604 31,4.64102604 31,5.00002604 L31,17.000026 C31,17.355026 31.188,17.684026 31.496,17.863026 L43,24.574026 L43,33.118026 C40.483,31.714026 37.537,31.548026 34.715,32.742026 C33.725,33.161026 32.827,33.828026 32.037,34.629026 L29.011,31.120026 L35.842,23.199026 L33.18,23.199026 L27,30.000026 L27,23.000026 L25,23.000026 L25,40.000026 L27,40.000026 L27,32.000026 L30.682,36.311026 C29.714,37.841026 29.128,39.633026 29.128,41.396026 C29.128,41.505026 29.13,41.614026 29.133,41.723026 C27.785,42.216026 26.712,43.027026 25.946,44.073026 L17,39.393026 L17,24.548026 L27.537,17.843026 C27.825,17.660026 28,17.341026 28,17.000026 L28,5.00002604 C28,4.64102604 27.807,4.30902604 27.496,4.13102604 C27.183,3.95402604 26.802,3.95602604 26.491,4.13902604 L4.491,17.139026 C4.186,17.318026 4,17.646026 4,18.000026 L4,46.000026 C4,46.369026 4.204,46.709026 4.53,46.882026 L28.983,59.882026 C29.131,59.960026 29.292,60.000026 29.453,60.000026 C29.62,60.000026 29.786,59.958026 29.936,59.875026 L38.114,55.360026 L53.319,55.374026 C55.551,55.192026 59.769,53.492026 59.769,48.356026 C59.769,44.678026 57.505,42.603026 55,41.726026 L55,41.726026 Z" id="Fill-1"></path></g></g></svg></span> is a fully managed service that you can use to run <code>Kubernetes on AWS</code>. Kubernetes is a <code>single tenant orchestrator</code>, i.e. a single instance of the <code>control plane</code> is shared among all the tenants within a cluster.</p>
+<!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
+<span data-reveal-page hidden></span>
+<h1 id="eks"><abbr title="Elastic Kubernetes Service: managed Kubernetes on AWS">EKS</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.67 8.505-2.875 3.335 3.128 3.648h-1.168l-2.808-3.277v3.368h-.842V8.421h.842v2.947l2.603-2.863Zm7.225 6.751-3.369-2.021V8.421a.42.42 0 0 0-.209-.364l-4.843-2.825V1.159l8.42 4.976Zm.635-9.724L13.267.06a.422.422 0 0 0-.635.362v5.053c0 .15.08.288.208.363l4.844 2.826v4.81a.42.42 0 0 0 .205.362l4.21 2.526a.42.42 0 0 0 .638-.361V5.895a.42.42 0 0 0-.207-.363M11.977 23.1l-9.872-5.248V6.135l8.421-4.976v4.084L6.09 8.066a.42.42 0 0 0-.195.355v7.158a.42.42 0 0 0 .226.373l5.665 2.948a.42.42 0 0 0 .387 0l5.496-2.84 3.382 2.03Zm10.135-5.356-4.21-2.526a.42.42 0 0 0-.411-.013l-5.51 2.847-5.244-2.729v-6.67l4.436-2.824a.42.42 0 0 0 .195-.355V.42a.421.421 0 0 0-.635-.362L1.47 5.532a.42.42 0 0 0-.207.363v12.21c0 .156.086.299.223.372l10.297 5.474a.42.42 0 0 0 .401-.004l9.915-5.473a.422.422 0 0 0 .013-.73"/></svg></span><a class="headerlink" href="#eks" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 2 min read</p>
+<p>Amazon Elastic Kubernetes Service (Amazon <abbr title="Elastic Kubernetes Service: managed Kubernetes on AWS">EKS</abbr>) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80px" height="80px" viewBox="0 0 80 80"><title>Icon-Architecture/64/Arch_Amazon-EKS-Cloud_64</title><defs><linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1"><stop stop-color="#C8511B" offset="0%"></stop><stop stop-color="#FF9900" offset="100%"></stop></linearGradient></defs><g id="Icon-Architecture/64/Arch_Amazon-EKS-Cloud_64" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Rectangle" fill="url(#linearGradient-1)"><rect x="0" y="0" width="80" height="80"></rect></g><g id="Icon-Service/64/Amazon-EKS-Cloud_64" transform="translate(8.000000, 8.000000)" fill="#FFFFFF"><path d="M53.239,53.377026 L31.737,53.355026 C29.133,53.352026 26.906,51.416026 26.667,48.949026 C26.647,48.743026 26.636,48.528026 26.636,48.305026 C26.636,44.929026 28.968,43.798026 30.391,43.422026 C30.849,43.328026 31.189,42.922026 31.189,42.441026 C31.189,42.394026 31.186,42.347026 31.179,42.300026 C31.145,42.004026 31.128,41.702026 31.128,41.396026 C31.128,38.613026 33.046,35.621026 35.494,34.584026 C39.745,32.786026 42.754,35.151026 43.852,36.253026 C44.751,37.154026 45.453,38.309026 45.938,39.684026 C46.062,40.033026 46.368,40.286026 46.734,40.340026 C47.097,40.394026 47.467,40.243026 47.686,39.945026 C48.322,39.085026 49.352,38.708026 50.307,38.988026 C51.477,39.330026 52.253,40.541026 52.393,42.238026 C52.342,42.756026 52.7,43.231026 53.218,43.320026 C54.587,43.556026 57.769,44.517026 57.769,48.356026 C57.769,52.839026 53.626,53.338026 53.239,53.377026 L53.239,53.377026 Z M29.444,57.862026 L6,45.398026 L6,18.570026 L26,6.75202604 L26,16.451026 L15.463,23.156026 C15.175,23.339026 15,23.658026 15,24.000026 L15,40.000026 C15,40.373026 15.208,40.714026 15.538,40.887026 L24.901,45.758026 L25.04,45.835026 C24.784,46.592026 24.636,47.415026 24.636,48.305026 C24.636,48.594026 24.651,48.872026 24.677,49.140026 C25.012,52.621026 28.113,55.351026 31.735,55.355026 L33.982,55.356026 L29.444,57.862026 Z M44.504,23.136026 L33,16.425026 L33,6.75202604 L53,18.570026 L53,38.467026 C52.431,37.803026 51.716,37.316026 50.868,37.068026 C49.616,36.703026 48.308,36.926026 47.245,37.637026 C46.718,36.567026 46.056,35.631026 45.268,34.841026 C45.182,34.755026 45.088,34.689026 45,34.606026 L45,24.000026 C45,23.644026 44.811,23.315026 44.504,23.136026 L44.504,23.136026 Z M55,41.726026 L55,18.000026 C55,17.646026 54.813,17.318026 54.509,17.139026 L32.509,4.13902604 C32.199,3.95602604 31.817,3.95402604 31.504,4.13102604 C31.192,4.30902604 31,4.64102604 31,5.00002604 L31,17.000026 C31,17.355026 31.188,17.684026 31.496,17.863026 L43,24.574026 L43,33.118026 C40.483,31.714026 37.537,31.548026 34.715,32.742026 C33.725,33.161026 32.827,33.828026 32.037,34.629026 L29.011,31.120026 L35.842,23.199026 L33.18,23.199026 L27,30.000026 L27,23.000026 L25,23.000026 L25,40.000026 L27,40.000026 L27,32.000026 L30.682,36.311026 C29.714,37.841026 29.128,39.633026 29.128,41.396026 C29.128,41.505026 29.13,41.614026 29.133,41.723026 C27.785,42.216026 26.712,43.027026 25.946,44.073026 L17,39.393026 L17,24.548026 L27.537,17.843026 C27.825,17.660026 28,17.341026 28,17.000026 L28,5.00002604 C28,4.64102604 27.807,4.30902604 27.496,4.13102604 C27.183,3.95402604 26.802,3.95602604 26.491,4.13902604 L4.491,17.139026 C4.186,17.318026 4,17.646026 4,18.000026 L4,46.000026 C4,46.369026 4.204,46.709026 4.53,46.882026 L28.983,59.882026 C29.131,59.960026 29.292,60.000026 29.453,60.000026 C29.62,60.000026 29.786,59.958026 29.936,59.875026 L38.114,55.360026 L53.319,55.374026 C55.551,55.192026 59.769,53.492026 59.769,48.356026 C59.769,44.678026 57.505,42.603026 55,41.726026 L55,41.726026 Z" id="Fill-1"></path></g></g></svg></span> is a fully managed service that you can use to run <code>Kubernetes on AWS</code>. Kubernetes is a <code>single tenant orchestrator</code>, i.e. a single instance of the <code>control plane</code> is shared among all the tenants within a cluster.</p>
 <div class="admonition tip">
 <p class="admonition-title">How auth is managed?</p>
-<p>In AWS, any auth-related stuff is handled with <code>Identity &amp; Access Management (IAM)</code>, and EKS is no exception. The EKS relies on IAM for the authentication flow, meaning that the user/bot's identity needs to be present in the IAM to be allowed to talk to Kubernetes' control plane.Jan 30, 2023</p>
+<p>In AWS, any auth-related stuff is handled with <code>Identity &amp; Access Management (IAM)</code>, and <abbr title="Elastic Kubernetes Service: managed Kubernetes on AWS">EKS</abbr> is no exception. The <abbr title="Elastic Kubernetes Service: managed Kubernetes on AWS">EKS</abbr> relies on <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr> for the authentication flow, meaning that the user/bot's identity needs to be present in the <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr> to be allowed to talk to Kubernetes' control plane.Jan 30, 2023</p>
 </div>
-<h2 id="clis-used">CLI's used<a class="headerlink" href="#clis-used" title="Link to this section">&para;</a></h2>
+<h2 id="clis-used"><abbr title="Command Line Interface: controlling a tool by typing commands">CLI</abbr>'s used<a class="headerlink" href="#clis-used" title="Link to this section">&para;</a></h2>
 <p><code>kubectl</code> – A command line tool for working with Kubernetes clusters.</p>
-<p><code>eksctl</code> – A command line tool for working with EKS clusters that automates many individual tasks. </p>
-<h2 id="types-of-nodes-in-eks">Types of nodes in EKS<a class="headerlink" href="#types-of-nodes-in-eks" title="Link to this section">&para;</a></h2>
-<p><code>Fargate – Linux</code>: Select this type of node if you want to run Linux applications on AWS Fargate. Fargate is a serverless compute engine that l ets you deploy Kubernetes pods without managing Amazon EC2 instances.</p>
-<p><code>self-managed nodes – Linux</code> : Select this type of node if you want to run Amazon Linux applications on Amazon EC2 instances.</p>
+<p><code>eksctl</code> – A command line tool for working with <abbr title="Elastic Kubernetes Service: managed Kubernetes on AWS">EKS</abbr> clusters that automates many individual tasks. </p>
+<h2 id="types-of-nodes-in-eks">Types of nodes in <abbr title="Elastic Kubernetes Service: managed Kubernetes on AWS">EKS</abbr><a class="headerlink" href="#types-of-nodes-in-eks" title="Link to this section">&para;</a></h2>
+<p><code>Fargate – Linux</code>: Select this type of node if you want to run Linux applications on AWS Fargate. Fargate is a serverless compute engine that l ets you deploy Kubernetes pods without managing Amazon <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instances.</p>
+<p><code>self-managed nodes – Linux</code> : Select this type of node if you want to run Amazon Linux applications on Amazon <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instances.</p>
 <div class="highlight"><pre><span></span><code>eksctl<span class="w"> </span>create<span class="w"> </span>cluster<span class="w"> </span>--name<span class="w"> </span>my-cluster<span class="w"> </span>--region<span class="w"> </span>region-code<span class="w"> </span>--fargate
 
 kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>-o<span class="w"> </span>wide<span class="w"> </span><span class="c1"># view nodes</span>
 </code></pre></div>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Link to this section">&para;</a></h2>
 <ul>
-<li><code>GuardDuty EKS Protection</code> is a GuardDuty feature that <em>monitors Amazon EKS cluster control plane activity</em> by analyzing Amazon EKS audit logs.</li>
+<li><code>GuardDuty EKS Protection</code> is a GuardDuty feature that <em>monitors Amazon <abbr title="Elastic Kubernetes Service: managed Kubernetes on AWS">EKS</abbr> cluster control plane activity</em> by analyzing Amazon <abbr title="Elastic Kubernetes Service: managed Kubernetes on AWS">EKS</abbr> audit logs.</li>
 <li><code>Amazon ECR</code> integrates with <code>Amazon Inspector</code> to provide automated, continuous scanning of your repositories. <strong>Your container images are scanned for both operating systems and programing language package vulnerabilities.</strong></li>
-<li>The Amazon <code>VPC CNI plugin</code> for Kubernetes add-on is deployed on each Amazon EC2 node in your Amazon EKS cluster.</li>
-<li>The add-on creates <code>elastic network interfaces</code> and attaches them to your Amazon EC2 nodes. The add-on also assigns a private IPv4 or IPv6 address from your VPC to each Pod and service.</li>
-<li>It comes pre-installed with EKS</li>
+<li>The Amazon <code>VPC CNI plugin</code> for Kubernetes add-on is deployed on each Amazon <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> node in your Amazon <abbr title="Elastic Kubernetes Service: managed Kubernetes on AWS">EKS</abbr> cluster.</li>
+<li>The add-on creates <code>elastic network interfaces</code> and attaches them to your Amazon <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> nodes. The add-on also assigns a private IPv4 or IPv6 address from your <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> to each Pod and service.</li>
+<li>It comes pre-installed with <abbr title="Elastic Kubernetes Service: managed Kubernetes on AWS">EKS</abbr></li>
 <li>Runs as DeamonSet named <code>aws-node</code></li>
 <li><strong>CoreDNS</strong>: </li>
-<li>It assigns DNS names to Services</li>
+<li>It assigns <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> names to Services</li>
 <li>Comes pre-installed </li>
-</ul>
+</ul><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Compute<span class="rn__time"> · 2 min read</span></p><p class="rn__title"><a href="../../aws/ecs/">ECS →</a></p></li><li><p class="rn__kicker">Compute<span class="rn__time"> · 2 min read</span></p><p class="rn__title"><a href="../../aws/outposts/">Outposts →</a></p></li></ul></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10803,6 +10810,13 @@ kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> 
     };
     var s = document.querySelector("script[src*='giscus.app/client.js']");
     if (s) s.setAttribute("data-theme", themeFor());
+    // Giscus titles its frame "Comments" and Material turns every title into a floating tooltip,
+    // so move it to aria-label (screen readers still hear it, no stray tooltip)
+    var wrap = s && s.parentNode;
+    if (wrap) new MutationObserver(function (_, obs) {
+      var f = wrap.querySelector("iframe.giscus-frame[title]");
+      if (f) { f.setAttribute("aria-label", f.title); f.removeAttribute("title"); obs.disconnect(); }
+    }).observe(wrap, { childList: true, subtree: true });
     var ref = document.querySelector("[data-md-component=palette]");
     if (ref && !ref.dataset.giscusSync) {
       ref.dataset.giscusSync = "1";
@@ -10836,13 +10850,9 @@ kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> 
         
       </main>
       
-        <!-- Footer -->
-
-<!-- <footer class="md-footer">
-	<!-- Further information -->
-	<div class="md-footer-meta md-typeset">
-	  <div class="md-footer-meta__inner md-grid">
-		<div class="md-copyright">
+        <div class="md-footer-meta md-typeset">
+  <div class="md-footer-meta__inner md-grid">
+    <div class="md-copyright">
   
     <div class="md-copyright__highlight">
       Copyright &copy; 2026 Amarjit Singh Dhillon
@@ -10850,13 +10860,8 @@ kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> 
   
   
 </div>
-		<!-- Footer links -->
-		<!-- Social links -->
-		
-	  </div>
-	</div>
-	</div>
-  </footer> -->
+  </div>
+</div>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -10893,7 +10898,11 @@ kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> 
       
         <script src="../../javascripts/magnetic.js"></script>
       
+        <script src="../../javascripts/transitions.js"></script>
+      
         <script src="../../javascripts/hero.js"></script>
+      
+        <script src="../../javascripts/cosmos.js"></script>
       
         <script src="../../javascripts/totop.js"></script>
       

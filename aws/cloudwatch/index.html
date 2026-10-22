@@ -22,10 +22,17 @@
         <link rel="next" href="../cloudtrail/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.ico">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/images/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     <meta name="google-site-verification" content="UHLjtoO7DV30dx3hVhwTOIWguEUr_VzS41msmq-uYKA" />
+    <!-- PNG fallback for browsers without SVG favicons, and the iOS home-screen icon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
+    <meta name="theme-color" content="#10123a">
     
     <script type="application/ld+json">
         {
@@ -50,7 +57,7 @@
 
     
       
-        <title>Cloud Watch - Amar's TechSpace 🛸</title>
+        <title>Cloud Watch - Amar's TechSpace</title>
       
     
     
@@ -79,7 +86,7 @@
     
     
     
-  </head>
+  <meta property="og:type" content="article"><meta property="og:site_name" content="Amar&#x27;s TechSpace"><meta property="og:title" content="Cloudwatch - Amar&#x27;s TechSpace"><meta property="og:description" content="Developer resources for Azure, AWS, K8S and more."><meta property="og:url" content="https://www.amarjitdhillon.com/aws/cloudwatch/"><meta property="og:image" content="https://www.amarjitdhillon.com/assets/cards/aws/cloudwatch.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Cloudwatch - Amar&#x27;s TechSpace"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Cloudwatch - Amar&#x27;s TechSpace"><meta name="twitter:description" content="Developer resources for Azure, AWS, K8S and more."><meta name="twitter:image" content="https://www.amarjitdhillon.com/assets/cards/aws/cloudwatch.png"></head>
   
   
     
@@ -89,7 +96,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -112,9 +119,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Amar&#39;s TechSpace 🛸" class="md-header__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../.." title="Amar&#39;s TechSpace" class="md-header__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../assets/images/menu.png" alt="logo">
+  <img src="../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -124,9 +131,9 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Amar's TechSpace 🛸
-          </span>
+          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+            Amar's <b>TechSpace</b>
+          </a>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
@@ -144,7 +151,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -154,7 +161,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -512,12 +519,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Amar&#39;s TechSpace 🛸" class="md-nav__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../.." title="Amar&#39;s TechSpace" class="md-nav__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../assets/images/menu.png" alt="logo">
+  <img src="../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
-    Amar's TechSpace 🛸
+    Amar's TechSpace
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -2509,7 +2516,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.66 13.07c-1.74 0-3.16-1.41-3.16-3.14 0-.71.26-1.39.69-1.93-.42-.54-.69-1.22-.69-1.93 0-1.73 1.43-3.14 3.16-3.14l.43.03A3.15 3.15 0 0 1 12 1c1.31 0 2.44.81 2.91 1.96l.43-.03c1.73 0 3.16 1.41 3.16 3.14 0 .71-.26 1.39-.69 1.93.42.54.69 1.22.69 1.93 0 1.73-1.43 3.14-3.16 3.14l-.43-.03A3.15 3.15 0 0 1 12 15a3.15 3.15 0 0 1-2.91-1.96zM12 13c.62 0 1.12-.5 1.14-1.1l-.11-1.09c-.32.12-.67.19-1.03.19s-.7-.07-1-.19l-.14 1.09c.02.6.52 1.1 1.14 1.1m3.34-1.93c.63 0 1.16-.51 1.16-1.15 0-.42-.27-.84-.67-1.03l-.88-.42c-.12.74-.51 1.38-1.06 1.83l.81.57c.18.13.4.2.64.2m-.65-5.94-.82.56c.56.45.95 1.09 1.07 1.81l.88-.4c.41-.2.68-.6.68-1.03 0-.63-.53-1.14-1.16-1.14-.23 0-.45.07-.65.2M12 3c-.62 0-1.12.5-1.14 1.1L11 5.19c.3-.12.64-.19 1-.19s.71.07 1.03.19l.11-1.09C13.12 3.5 12.62 3 12 3M8.66 4.93c-.63 0-1.16.51-1.16 1.14 0 .43.27.83.67 1.03l.88.4c.12-.72.51-1.36 1.06-1.81l-.81-.56c-.18-.13-.4-.2-.64-.2M8.17 8.9c-.4.2-.67.6-.67 1.02 0 .63.53 1.14 1.16 1.14.23 0 .45-.06.65-.2l.81-.55c-.56-.45-.95-1.09-1.07-1.81zM12 22a9 9 0 0 1-9-9 9 9 0 0 1 9 9 9 9 0 0 1 9-9 9 9 0 0 1-9 9m2.44-2.44a7.04 7.04 0 0 0 4.12-4.12c-1.9.7-3.41 2.22-4.12 4.12m-9-4.12a7.04 7.04 0 0 0 4.12 4.12c-.7-1.9-2.22-3.41-4.12-4.12"/></svg>
   
   <span class="md-ellipsis">
-    Arch Continums
+    Arch Continuums
   </span>
   
 
@@ -3103,7 +3110,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"/></svg>
   
   <span class="md-ellipsis">
-    Elasti Cache
+    ElastiCache
   </span>
   
 
@@ -3540,7 +3547,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"/></svg>
   
   <span class="md-ellipsis">
-    Athnea
+    Athena
   </span>
   
 
@@ -4548,9 +4555,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dimentions" class="md-nav__link">
+  <a href="#dimensions" class="md-nav__link">
     <span class="md-ellipsis">
-      Dimentions ⌱
+      Dimensions ⌱
     </span>
   </a>
   
@@ -5516,7 +5523,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12z"/></svg>
   
   <span class="md-ellipsis">
-    Read Replics
+    Read Replicas
   </span>
   
 
@@ -8554,7 +8561,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c-.89 2.18-1.43 3.61-2.42 5.73.61.64 1.35 1.39 2.56 2.24-1.3-.54-2.19-1.07-2.85-1.63C8 11 6.03 14.75 2 22c3.17-1.83 5.63-2.96 7.92-3.39-.1-.42-.16-.88-.15-1.36v-.1c.05-2.03 1.11-3.59 2.36-3.48 1.25.1 2.22 1.83 2.17 3.87-.01.38-.05.75-.12 1.09 2.26.44 4.69 1.56 7.82 3.37-.62-1.14-1.17-2.16-1.69-3.13-.81-.64-1.7-1.48-3.46-2.37 1.21.3 2.08.66 2.76 1.07C14.26 7.62 13.83 6.3 12 2"/></svg>
   
   <span class="md-ellipsis">
-    Cluster Architecutre
+    Cluster Architecture
   </span>
   
 
@@ -8923,7 +8930,7 @@
         
   
   <span class="md-ellipsis">
-    DeamonSet
+    DaemonSet
   </span>
   
 
@@ -9007,7 +9014,7 @@
         
   
   <span class="md-ellipsis">
-    Replia Set
+    ReplicaSet
   </span>
   
 
@@ -10741,9 +10748,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#dimentions" class="md-nav__link">
+  <a href="#dimensions" class="md-nav__link">
     <span class="md-ellipsis">
-      Dimentions ⌱
+      Dimensions ⌱
     </span>
   </a>
   
@@ -10815,9 +10822,9 @@ as the main headline.
 -->
 
 
-<!-- Markdown content (marker turns on scroll-reveal for pages with `reveal: true`) -->
-
-<h1 id="cloudwatch">Cloudwatch <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.454 14.905c0-1.676-1.372-3.039-3.059-3.039-1.686 0-3.058 1.363-3.058 3.039 0 1.675 1.372 3.038 3.058 3.038 1.687 0 3.059-1.363 3.059-3.038m.862 0c0 2.147-1.759 3.894-3.92 3.894s-3.92-1.747-3.92-3.894 1.758-3.895 3.92-3.895 3.92 1.747 3.92 3.895m3.617 5.87-3.004-2.688c-.242.34-.523.649-.834.926l2.999 2.687c.256.23.654.208.885-.046a.623.623 0 0 0-.046-.88Zm-7.538-1.206c2.59 0 4.696-2.092 4.696-4.664 0-2.573-2.106-4.665-4.696-4.665s-4.696 2.092-4.696 4.665 2.107 4.664 4.696 4.664m8.224 2.658c-.293.323-.7.487-1.107.487a1.5 1.5 0 0 1-.995-.378l-3.118-2.794a5.54 5.54 0 0 1-3.004.883c-3.064 0-5.557-2.476-5.557-5.52s2.493-5.521 5.557-5.521 5.558 2.477 5.558 5.52c0 .874-.21 1.697-.576 2.432l3.133 2.803c.608.546.657 1.482.11 2.088ZM3.977 7.454q0 .335.04.659a.426.426 0 0 1-.352.473C2.605 8.858.862 9.681.862 12.148c0 1.863 1.034 2.892 1.902 3.427.297.185.647.284 1.017.288l5.195.005v.856l-5.2-.005a2.8 2.8 0 0 1-1.469-.418C1.447 15.77 0 14.524 0 12.148c0-2.864 1.971-3.923 3.129-4.297a6 6 0 0 1-.013-.397c0-2.34 1.598-4.767 3.716-5.645 2.478-1.031 5.104-.52 7.022 1.367a7 7 0 0 1 1.459 2.116 2.8 2.8 0 0 1 1.78-.644c1.287 0 2.735.97 2.993 3.092 1.205.276 3.751 1.24 3.751 4.441 0 1.278-.403 2.333-1.199 3.137l-.614-.6c.632-.638.952-1.491.952-2.537 0-2.8-2.36-3.495-3.374-3.664a.43.43 0 0 1-.353-.496c-.141-1.738-1.18-2.517-2.156-2.517-.616 0-1.193.298-1.584.818a.431.431 0 0 1-.75-.111c-.353-.971-.861-1.788-1.511-2.426-1.663-1.636-3.936-2.079-6.084-1.186-1.787.74-3.187 2.873-3.187 4.855"/></svg></span><a class="headerlink" href="#cloudwatch" title="Link to this section">&para;</a></h1>
+<!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
+<span data-reveal-page hidden></span>
+<h1 id="cloudwatch">Cloudwatch <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.454 14.905c0-1.676-1.372-3.039-3.059-3.039-1.686 0-3.058 1.363-3.058 3.039 0 1.675 1.372 3.038 3.058 3.038 1.687 0 3.059-1.363 3.059-3.038m.862 0c0 2.147-1.759 3.894-3.92 3.894s-3.92-1.747-3.92-3.894 1.758-3.895 3.92-3.895 3.92 1.747 3.92 3.895m3.617 5.87-3.004-2.688c-.242.34-.523.649-.834.926l2.999 2.687c.256.23.654.208.885-.046a.623.623 0 0 0-.046-.88Zm-7.538-1.206c2.59 0 4.696-2.092 4.696-4.664 0-2.573-2.106-4.665-4.696-4.665s-4.696 2.092-4.696 4.665 2.107 4.664 4.696 4.664m8.224 2.658c-.293.323-.7.487-1.107.487a1.5 1.5 0 0 1-.995-.378l-3.118-2.794a5.54 5.54 0 0 1-3.004.883c-3.064 0-5.557-2.476-5.557-5.52s2.493-5.521 5.557-5.521 5.558 2.477 5.558 5.52c0 .874-.21 1.697-.576 2.432l3.133 2.803c.608.546.657 1.482.11 2.088ZM3.977 7.454q0 .335.04.659a.426.426 0 0 1-.352.473C2.605 8.858.862 9.681.862 12.148c0 1.863 1.034 2.892 1.902 3.427.297.185.647.284 1.017.288l5.195.005v.856l-5.2-.005a2.8 2.8 0 0 1-1.469-.418C1.447 15.77 0 14.524 0 12.148c0-2.864 1.971-3.923 3.129-4.297a6 6 0 0 1-.013-.397c0-2.34 1.598-4.767 3.716-5.645 2.478-1.031 5.104-.52 7.022 1.367a7 7 0 0 1 1.459 2.116 2.8 2.8 0 0 1 1.78-.644c1.287 0 2.735.97 2.993 3.092 1.205.276 3.751 1.24 3.751 4.441 0 1.278-.403 2.333-1.199 3.137l-.614-.6c.632-.638.952-1.491.952-2.537 0-2.8-2.36-3.495-3.374-3.664a.43.43 0 0 1-.353-.496c-.141-1.738-1.18-2.517-2.156-2.517-.616 0-1.193.298-1.584.818a.431.431 0 0 1-.75-.111c-.353-.971-.861-1.788-1.511-2.426-1.663-1.636-3.936-2.079-6.084-1.186-1.787.74-3.187 2.873-3.187 4.855"/></svg></span><a class="headerlink" href="#cloudwatch" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 3 min read</p>
 <p>Cloudwatch monitors performance. Standard monitoring is <code>5 mins</code> while detailed monitoring is <code>1 minute</code>.</p>
 <p>AWS services send metrics to CloudWatch. CloudWatch then uses these metrics to create graphs automatically that show how performance has changed over time. </p>
 <p><center> 
@@ -10826,11 +10833,11 @@ as the main headline.
 <p></center></p>
 <p>Cloudwatch can monitor</p>
 <ul>
-<li>EC2</li>
+<li><abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr></li>
 <li>Autoscaling groups</li>
 <li>Elastic Load Balancers</li>
 <li>Route 53 checks</li>
-<li>EBS</li>
+<li><abbr title="Elastic Block Store: disks you attach to EC2 servers">EBS</abbr></li>
 <li>CloudFront</li>
 </ul>
 <p><center> 
@@ -10846,7 +10853,7 @@ as the main headline.
 <h3 id="namespaces">Namespaces 🪐<a class="headerlink" href="#namespaces" title="Link to this section">&para;</a></h3>
 <p>A namespace is a container for CloudWatch metrics. <mark>Metrics in different namespaces are isolated from each other, so that metrics from different applications are not mistakenly aggregated into the same statistics</mark>.</p>
 <p><strong>There is no default namespace</strong>. You must specify a namespace for each data point you publish to CloudWatch. You can specify a namespace name when you create a metric.</p>
-<h3 id="dimentions">Dimentions ⌱<a class="headerlink" href="#dimentions" title="Link to this section">&para;</a></h3>
+<h3 id="dimensions">Dimensions ⌱<a class="headerlink" href="#dimensions" title="Link to this section">&para;</a></h3>
 <p>A dimension is a name/value pair that is part of the identity of a metric. You can assign up to 30 dimensions to a metric.</p>
 <p>Every metric has specific characteristics that describe it, and you can think of dimensions as categories for those characteristics. Dimensions help you design a structure for your statistics plan. Because dime</p>
 <div class="highlight"><pre><span></span><code><span class="err">Dime</span><span class="kc">ns</span><span class="err">io</span><span class="kc">ns</span><span class="p">:</span><span class="w"> </span><span class="err">Server=Prod</span><span class="p">,</span><span class="w"> </span><span class="err">Domai</span><span class="kc">n</span><span class="err">=Fra</span><span class="kc">n</span><span class="err">k</span><span class="kc">furt</span><span class="p">,</span><span class="w"> </span><span class="err">U</span><span class="kc">n</span><span class="err">i</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="err">Cou</span><span class="kc">nt</span><span class="p">,</span><span class="w"> </span><span class="err">Times</span><span class="kc">ta</span><span class="err">mp</span><span class="p">:</span><span class="w"> </span><span class="mi">2016-10-31</span><span class="err">T</span><span class="mi">12</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">00</span><span class="err">Z</span><span class="p">,</span><span class="w"> </span><span class="err">Value</span><span class="p">:</span><span class="w"> </span><span class="mi">105</span>
@@ -10870,11 +10877,11 @@ as the main headline.
 <p></center></p>
 <div class="admonition example">
 <p class="admonition-title">Save 💶 by using Alarms</p>
-<p>For example, suppose that your company’s developers use Amazon EC2 instances for application development or testing purposes. If the developers occasionally forget to stop the instances, the instances will continue to run and incur charges. </p>
-<p>In this scenario, you could create a CloudWatch alarm that automatically stops an Amazon EC2 instance when the CPU utilization percentage has remained below a certain threshold for a specified period. When configuring the alarm, you can specify to receive a notification whenever this alarm is triggered.</p>
+<p>For example, suppose that your company’s developers use Amazon <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instances for application development or testing purposes. If the developers occasionally forget to stop the instances, the instances will continue to run and incur charges. </p>
+<p>In this scenario, you could create a CloudWatch alarm that automatically stops an Amazon <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instance when the CPU utilization percentage has remained below a certain threshold for a specified period. When configuring the alarm, you can specify to receive a notification whenever this alarm is triggered.</p>
 </div>
 <h2 id="cloudwatch-logs-insights">CloudWatch Logs Insights 💹<a class="headerlink" href="#cloudwatch-logs-insights" title="Link to this section">&para;</a></h2>
-<p><code>CloudWatch Logs Insights</code> enables you to <mark>interactively query your log data in CloudWatch Logs</mark>. If a team wants to search and query their logs for their API, CloudWatch Logs Insights would be the best option.</p>
+<p><code>CloudWatch Logs Insights</code> enables you to <mark>interactively query your log data in CloudWatch Logs</mark>. If a team wants to search and query their logs for their <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr>, CloudWatch Logs Insights would be the best option.</p>
 <p><center> 
 <img width="100%" src="../images/cw-log-insights.jpeg"></p>
 <figcaption>CloudWatch Log Insghts </figcaption>
@@ -10883,7 +10890,7 @@ as the main headline.
 <p><center> 
 <img width="100%" src="../images/cw-anomaly.jpeg"></p>
 <figcaption>CloudWatch Anomaly</figcaption>
-<p></center></p>
+<p></center></p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Monitoring<span class="rn__time"> · 2 min read</span></p><p class="rn__title"><a href="../../aws/cloudtrail/">Cloud Trail →</a></p></li><li><p class="rn__kicker">Monitoring<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../aws/xray/">X-Ray →</a></p></li></ul></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10926,6 +10933,13 @@ as the main headline.
     };
     var s = document.querySelector("script[src*='giscus.app/client.js']");
     if (s) s.setAttribute("data-theme", themeFor());
+    // Giscus titles its frame "Comments" and Material turns every title into a floating tooltip,
+    // so move it to aria-label (screen readers still hear it, no stray tooltip)
+    var wrap = s && s.parentNode;
+    if (wrap) new MutationObserver(function (_, obs) {
+      var f = wrap.querySelector("iframe.giscus-frame[title]");
+      if (f) { f.setAttribute("aria-label", f.title); f.removeAttribute("title"); obs.disconnect(); }
+    }).observe(wrap, { childList: true, subtree: true });
     var ref = document.querySelector("[data-md-component=palette]");
     if (ref && !ref.dataset.giscusSync) {
       ref.dataset.giscusSync = "1";
@@ -10959,13 +10973,9 @@ as the main headline.
         
       </main>
       
-        <!-- Footer -->
-
-<!-- <footer class="md-footer">
-	<!-- Further information -->
-	<div class="md-footer-meta md-typeset">
-	  <div class="md-footer-meta__inner md-grid">
-		<div class="md-copyright">
+        <div class="md-footer-meta md-typeset">
+  <div class="md-footer-meta__inner md-grid">
+    <div class="md-copyright">
   
     <div class="md-copyright__highlight">
       Copyright &copy; 2026 Amarjit Singh Dhillon
@@ -10973,13 +10983,8 @@ as the main headline.
   
   
 </div>
-		<!-- Footer links -->
-		<!-- Social links -->
-		
-	  </div>
-	</div>
-	</div>
-  </footer> -->
+  </div>
+</div>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -11016,7 +11021,11 @@ as the main headline.
       
         <script src="../../javascripts/magnetic.js"></script>
       
+        <script src="../../javascripts/transitions.js"></script>
+      
         <script src="../../javascripts/hero.js"></script>
+      
+        <script src="../../javascripts/cosmos.js"></script>
       
         <script src="../../javascripts/totop.js"></script>
       

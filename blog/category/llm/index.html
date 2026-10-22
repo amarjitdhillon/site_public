@@ -22,10 +22,17 @@
         <link rel="next" href="../llms/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.ico">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../assets/images/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     <meta name="google-site-verification" content="UHLjtoO7DV30dx3hVhwTOIWguEUr_VzS41msmq-uYKA" />
+    <!-- PNG fallback for browsers without SVG favicons, and the iOS home-screen icon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="../../../assets/images/favicon-96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/images/apple-touch-icon.png">
+    <meta name="theme-color" content="#10123a">
     
     <script type="application/ld+json">
         {
@@ -50,7 +57,7 @@
 
     
       
-        <title>LLM - Amar's TechSpace 🛸</title>
+        <title>LLM - Amar's TechSpace</title>
       
     
     
@@ -79,7 +86,7 @@
     
     
     
-  </head>
+  <meta property="og:type" content="article"><meta property="og:site_name" content="Amar&#x27;s TechSpace"><meta property="og:title" content="LLM - Amar&#x27;s TechSpace"><meta property="og:description" content="Developer resources for Azure, AWS, K8S and more."><meta property="og:url" content="https://www.amarjitdhillon.com/blog/category/llm/"><meta property="og:image" content="https://www.amarjitdhillon.com/assets/cards/blog/category/llm.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="LLM - Amar&#x27;s TechSpace"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="LLM - Amar&#x27;s TechSpace"><meta name="twitter:description" content="Developer resources for Azure, AWS, K8S and more."><meta name="twitter:image" content="https://www.amarjitdhillon.com/assets/cards/blog/category/llm.png"></head>
   
   
     
@@ -89,7 +96,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -112,9 +119,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Amar&#39;s TechSpace 🛸" class="md-header__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../../.." title="Amar&#39;s TechSpace" class="md-header__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../../assets/images/menu.png" alt="logo">
+  <img src="../../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -124,9 +131,9 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Amar's TechSpace 🛸
-          </span>
+          <a href="../../.." class="md-ellipsis wordmark" aria-label="Home">
+            Amar's <b>TechSpace</b>
+          </a>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
@@ -144,7 +151,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -154,7 +161,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -512,12 +519,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Amar&#39;s TechSpace 🛸" class="md-nav__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../../.." title="Amar&#39;s TechSpace" class="md-nav__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../../assets/images/menu.png" alt="logo">
+  <img src="../../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
-    Amar's TechSpace 🛸
+    Amar's TechSpace
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -2602,7 +2609,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.66 13.07c-1.74 0-3.16-1.41-3.16-3.14 0-.71.26-1.39.69-1.93-.42-.54-.69-1.22-.69-1.93 0-1.73 1.43-3.14 3.16-3.14l.43.03A3.15 3.15 0 0 1 12 1c1.31 0 2.44.81 2.91 1.96l.43-.03c1.73 0 3.16 1.41 3.16 3.14 0 .71-.26 1.39-.69 1.93.42.54.69 1.22.69 1.93 0 1.73-1.43 3.14-3.16 3.14l-.43-.03A3.15 3.15 0 0 1 12 15a3.15 3.15 0 0 1-2.91-1.96zM12 13c.62 0 1.12-.5 1.14-1.1l-.11-1.09c-.32.12-.67.19-1.03.19s-.7-.07-1-.19l-.14 1.09c.02.6.52 1.1 1.14 1.1m3.34-1.93c.63 0 1.16-.51 1.16-1.15 0-.42-.27-.84-.67-1.03l-.88-.42c-.12.74-.51 1.38-1.06 1.83l.81.57c.18.13.4.2.64.2m-.65-5.94-.82.56c.56.45.95 1.09 1.07 1.81l.88-.4c.41-.2.68-.6.68-1.03 0-.63-.53-1.14-1.16-1.14-.23 0-.45.07-.65.2M12 3c-.62 0-1.12.5-1.14 1.1L11 5.19c.3-.12.64-.19 1-.19s.71.07 1.03.19l.11-1.09C13.12 3.5 12.62 3 12 3M8.66 4.93c-.63 0-1.16.51-1.16 1.14 0 .43.27.83.67 1.03l.88.4c.12-.72.51-1.36 1.06-1.81l-.81-.56c-.18-.13-.4-.2-.64-.2M8.17 8.9c-.4.2-.67.6-.67 1.02 0 .63.53 1.14 1.16 1.14.23 0 .45-.06.65-.2l.81-.55c-.56-.45-.95-1.09-1.07-1.81zM12 22a9 9 0 0 1-9-9 9 9 0 0 1 9 9 9 9 0 0 1 9-9 9 9 0 0 1-9 9m2.44-2.44a7.04 7.04 0 0 0 4.12-4.12c-1.9.7-3.41 2.22-4.12 4.12m-9-4.12a7.04 7.04 0 0 0 4.12 4.12c-.7-1.9-2.22-3.41-4.12-4.12"/></svg>
   
   <span class="md-ellipsis">
-    Arch Continums
+    Arch Continuums
   </span>
   
 
@@ -3185,7 +3192,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"/></svg>
   
   <span class="md-ellipsis">
-    Elasti Cache
+    ElastiCache
   </span>
   
 
@@ -3610,7 +3617,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"/></svg>
   
   <span class="md-ellipsis">
-    Athnea
+    Athena
   </span>
   
 
@@ -5441,7 +5448,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12z"/></svg>
   
   <span class="md-ellipsis">
-    Read Replics
+    Read Replicas
   </span>
   
 
@@ -8479,7 +8486,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c-.89 2.18-1.43 3.61-2.42 5.73.61.64 1.35 1.39 2.56 2.24-1.3-.54-2.19-1.07-2.85-1.63C8 11 6.03 14.75 2 22c3.17-1.83 5.63-2.96 7.92-3.39-.1-.42-.16-.88-.15-1.36v-.1c.05-2.03 1.11-3.59 2.36-3.48 1.25.1 2.22 1.83 2.17 3.87-.01.38-.05.75-.12 1.09 2.26.44 4.69 1.56 7.82 3.37-.62-1.14-1.17-2.16-1.69-3.13-.81-.64-1.7-1.48-3.46-2.37 1.21.3 2.08.66 2.76 1.07C14.26 7.62 13.83 6.3 12 2"/></svg>
   
   <span class="md-ellipsis">
-    Cluster Architecutre
+    Cluster Architecture
   </span>
   
 
@@ -8848,7 +8855,7 @@
         
   
   <span class="md-ellipsis">
-    DeamonSet
+    DaemonSet
   </span>
   
 
@@ -8932,7 +8939,7 @@
         
   
   <span class="md-ellipsis">
-    Replia Set
+    ReplicaSet
   </span>
   
 
@@ -10694,7 +10701,7 @@
   <div class="md-content" data-md-component="content">
     <div class="md-content__inner">
       <header class="md-typeset">
-        <h1 id="llm">LLM<a class="headerlink" href="#llm" title="Link to this section">&para;</a></h1>
+        <h1 id="llm"><abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr><a class="headerlink" href="#llm" title="Link to this section">&para;</a></h1>
       </header>
       
         <article class="md-post md-post--excerpt">
@@ -10765,33 +10772,33 @@
 <li>Evaluations</li>
 <li>Observability</li>
 </ul>
-<p>The user may come from Teams, Streamlit, a web app or even another MCP client. The request usually lands behind an API gateway and then reaches some kind of supervisor or orchestrator  </p>
-<p>That orchestrator becomes the <code>brain of the system</code>. It decides whether the request should go to a RAG agent, a reasoning agent or perhaps a review agent  </p>
+<p>The user may come from Teams, Streamlit, a web app or even another <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr> client. The request usually lands behind an <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> gateway and then reaches some kind of supervisor or orchestrator  </p>
+<p>That orchestrator becomes the <code>brain of the system</code>. It decides whether the request should go to a <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> agent, a reasoning agent or perhaps a review agent  </p>
 <div class="admonition note">
 <p class="admonition-title">Important shift</p>
 <p>Most enterprise AI systems are no longer "single chatbot" systems. They are slowly becoming distributed AI workflows with multiple cooperating components</p>
 </div>
 <p>One thing I learned pretty early is that orchestration becomes more important than the prompt itself. A great model with weak orchestration still behaves badly in production  </p>
 <hr />
-<h3 id="why-mcp-matters"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#why-mcp-matters">Why MCP Matters 🔌</a></h3>
+<h3 id="why-mcp-matters"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#why-mcp-matters">Why <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr> Matters 🔌</a></h3>
 <p>Once the orchestrator starts delegating work, another problem appears very quickly  </p>
 <p>How does the agent safely interact with external systems?</p>
 <p>Most teams initially hardcode integrations directly into orchestration logic. That works for demos. It becomes painful very quickly once you have dozens of tools and APIs  </p>
-<p>That is where MCP starts becoming useful</p>
+<p>That is where <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr> starts becoming useful</p>
 <p><center> 
 <img src='/blog/images/agentic-ai-patterns/mcp.png' width="100%">
 </center></p>
-<p>The way I think about MCP is pretty simple  </p>
+<p>The way I think about <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr> is pretty simple  </p>
 <p>The host application contains your AI logic. This could be something like Claude Desktop, Cursor or your own internal AI portal  </p>
-<p>Inside the host application, you run an MCP client. That MCP client becomes the standardized bridge between your AI system and external services  </p>
-<p>Those external services are exposed through MCP servers  </p>
+<p>Inside the host application, you run an <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr> client. That <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr> client becomes the standardized bridge between your AI system and external services  </p>
+<p>Those external services are exposed through <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr> servers  </p>
 <p>For example:</p>
 <ul>
-<li>a GitHub MCP server</li>
-<li>a file MCP server</li>
-<li>an EKS MCP server</li>
+<li>a GitHub <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr> server</li>
+<li>a file <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr> server</li>
+<li>an <abbr title="Elastic Kubernetes Service: managed Kubernetes on AWS">EKS</abbr> <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr> server</li>
 </ul>
-<p>Instead of the LLM directly talking to everything in your enterprise, it goes through a controlled layer  </p>
+<p>Instead of the <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> directly talking to everything in your enterprise, it goes through a controlled layer  </p>
 <p>That controlled layer becomes extremely important because now you can apply:</p>
 <ul>
 <li>permissions</li>
@@ -10804,10 +10811,10 @@
 It is controlled and auditable access to enterprise systems</p>
 </div>
 <hr />
-<h3 id="mcp-starts-looking-like-a-tool-operating-system"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#mcp-starts-looking-like-a-tool-operating-system">MCP Starts Looking Like a Tool Operating System 🧰</a></h3>
-<p>After building a few systems with MCP, I slowly stopped thinking about it as just a protocol  </p>
+<h3 id="mcp-starts-looking-like-a-tool-operating-system"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#mcp-starts-looking-like-a-tool-operating-system"><abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr> Starts Looking Like a Tool Operating System 🧰</a></h3>
+<p>After building a few systems with <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr>, I slowly stopped thinking about it as just a protocol  </p>
 <p>It started feeling more like a lightweight operating system for tools  </p>
-<p>The agent handles reasoning. MCP handles capabilities  </p>
+<p>The agent handles reasoning. <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr> handles capabilities  </p>
 <p>The agent might decide:</p>
 <blockquote>
 <p>"I need to fetch a Kubernetes deployment"</p>
@@ -10816,7 +10823,7 @@ It is controlled and auditable access to enterprise systems</p>
 <blockquote>
 <p>"I need to update a GitHub issue"</p>
 </blockquote>
-<p>But the actual execution happens through MCP servers  </p>
+<p>But the actual execution happens through <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr> servers  </p>
 <p>This separation becomes very useful because your reasoning layer and tool layer evolve independently  </p>
 <div class="admonition warning">
 <p class="admonition-title">Common mistake</p>
@@ -10831,8 +10838,8 @@ Start with narrow scoped tools first and slowly expand capabilities</p>
 <p><center> 
 <img src='/blog/images/agentic-ai-patterns/a2a.png' width="100%">
 </center></p>
-<p>When I first looked at A2A, I thought it was competing with MCP. After building a few systems, I realized they solve completely different problems  </p>
-<p>MCP is mostly about agents talking to tools  </p>
+<p>When I first looked at A2A, I thought it was competing with <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr>. After building a few systems, I realized they solve completely different problems  </p>
+<p><abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr> is mostly about agents talking to tools  </p>
 <p>A2A is about agents talking to other agents  </p>
 <p>An agent card is one of the most important concepts here. Think of it like a public profile for an agent  </p>
 <p>It tells other agents:</p>
@@ -10842,41 +10849,41 @@ Start with narrow scoped tools first and slowly expand capabilities</p>
 <li>how to authenticate</li>
 </ul>
 <p>Once another agent discovers this information, it can delegate work using tasks and messages  </p>
-<p>A travel agent may ask a hotel agent to handle accommodations. That hotel agent may then call tools through MCP  </p>
-<p>This is why MCP and A2A usually end up existing together inside larger systems  </p>
+<p>A travel agent may ask a hotel agent to handle accommodations. That hotel agent may then call tools through <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr>  </p>
+<p>This is why <abbr title="Model Context Protocol: an open standard for connecting AI apps to tools and data">MCP</abbr> and A2A usually end up existing together inside larger systems  </p>
 <div class="admonition tip">
 <p class="admonition-title">Practical advice</p>
 <p>Start with a single orchestrator first.<br />
 Multi-agent collaboration sounds exciting but debugging distributed reasoning flows can become chaotic very quickly 😄</p>
 </div>
 <hr />
-<h3 id="rag-is-still-one-of-the-most-useful-patterns"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#rag-is-still-one-of-the-most-useful-patterns">RAG Is Still One of the Most Useful Patterns 📚</a></h3>
-<p>Even with all the excitement around agents, RAG is still one of the most practical patterns in enterprise AI  </p>
-<p>But there is a lot of confusion around what RAG actually solves  </p>
-<p>RAG is not memory<br />
-RAG is not orchestration<br />
-RAG is mostly retrieval + grounding</p>
+<h3 id="rag-is-still-one-of-the-most-useful-patterns"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#rag-is-still-one-of-the-most-useful-patterns"><abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> Is Still One of the Most Useful Patterns 📚</a></h3>
+<p>Even with all the excitement around agents, <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> is still one of the most practical patterns in enterprise AI  </p>
+<p>But there is a lot of confusion around what <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> actually solves  </p>
+<p><abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> is not memory<br />
+<abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> is not orchestration<br />
+<abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> is mostly retrieval + grounding</p>
 <p><center> 
 <img src='/blog/images/agentic-ai-patterns/native-rag.png' width="100%">
 </center></p>
 <p>The basic flow is straightforward  </p>
 <p>Documents are ingested, chunked, embedded and stored inside a vector database  </p>
-<p>When the user asks a question, the query gets converted into embeddings. The system retrieves the most similar chunks and injects them into the LLM prompt  </p>
+<p>When the user asks a question, the query gets converted into embeddings. The system retrieves the most similar chunks and injects them into the <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> prompt  </p>
 <p>That grounding step is what helps reduce hallucinations  </p>
-<p>A lot of teams underestimate how far simple RAG can take them. To be honest, many systems do not need complicated memory architectures on day one  </p>
+<p>A lot of teams underestimate how far simple <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> can take them. To be honest, many systems do not need complicated memory architectures on day one  </p>
 <div class="admonition warning">
 <p class="admonition-title">Common misconception</p>
-<p>Many people treat RAG as memory.<br />
-RAG retrieves information. Memory usually evolves over time and becomes stateful</p>
+<p>Many people treat <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> as memory.<br />
+<abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> retrieves information. Memory usually evolves over time and becomes stateful</p>
 </div>
 <hr />
-<h3 id="graph-rag-and-multi-modal-retrieval"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#graph-rag-and-multi-modal-retrieval">Graph RAG and Multi-Modal Retrieval 🕸️</a></h3>
+<h3 id="graph-rag-and-multi-modal-retrieval"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#graph-rag-and-multi-modal-retrieval">Graph <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> and Multi-Modal Retrieval 🕸️</a></h3>
 <p>Simple vector retrieval works well for many use cases. But eventually you run into situations where semantic similarity alone is not enough  </p>
-<p>That is where Graph RAG becomes interesting</p>
+<p>That is where Graph <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> becomes interesting</p>
 <p><center> 
 <img src='/blog/images/agentic-ai-patterns/graph-rag.png' width="100%">
 </center></p>
-<p>The big idea behind Graph RAG is relationship awareness  </p>
+<p>The big idea behind Graph <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> is relationship awareness  </p>
 <p>Instead of only retrieving similar chunks, the system also understands how entities connect with each other  </p>
 <p>A good example is airline disruption management  </p>
 <p>A vector database may retrieve compensation policy chunks. But a graph-aware system can additionally reason over relationships between:</p>
@@ -10888,26 +10895,26 @@ RAG retrieves information. Memory usually evolves over time and becomes stateful
 <p>That extra relationship context becomes extremely valuable in reasoning-heavy workflows  </p>
 <div class="admonition note">
 <p class="admonition-title">Reality check</p>
-<p>Graph RAG is powerful but it also increases operational complexity significantly.<br />
-Most teams should start with simple vector RAG first</p>
+<p>Graph <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> is powerful but it also increases operational complexity significantly.<br />
+Most teams should start with simple vector <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> first</p>
 </div>
 <hr />
-<h3 id="prompt-engineering-vs-rag-vs-fine-tuning"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#prompt-engineering-vs-rag-vs-fine-tuning">Prompt Engineering vs RAG vs Fine-Tuning 🧪</a></h3>
-<p>This is probably one of the most misunderstood topics in GenAI right now  </p>
+<h3 id="prompt-engineering-vs-rag-vs-fine-tuning"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#prompt-engineering-vs-rag-vs-fine-tuning">Prompt Engineering vs <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> vs Fine-Tuning 🧪</a></h3>
+<p>This is probably one of the most misunderstood topics in <abbr title="Generative AI: models that create new text, images, code or audio">GenAI</abbr> right now  </p>
 <p>People often use these terms interchangeably even though they solve very different problems</p>
 <p><center> 
 <img src='/blog/images/agentic-ai-patterns/pe-vs-rag-vs-ft.png' width="100%">
 </center></p>
 <p>Prompt engineering is mainly about improving instructions  </p>
-<p>RAG is about injecting external knowledge dynamically  </p>
+<p><abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> is about injecting external knowledge dynamically  </p>
 <p>Fine-tuning is about changing model behavior through training data  </p>
 <p>I usually explain it like this:</p>
 <ul>
 <li>If the model needs better guidance → prompt engineering</li>
-<li>If the model needs enterprise knowledge → RAG</li>
+<li>If the model needs enterprise knowledge → <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr></li>
 <li>If the model needs behavioral adaptation → fine-tuning</li>
 </ul>
-<p>In real enterprise systems, RAG is usually the first practical step because enterprise knowledge changes constantly. Nobody wants to retrain a model every time a policy document changes 😄</p>
+<p>In real enterprise systems, <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> is usually the first practical step because enterprise knowledge changes constantly. Nobody wants to retrain a model every time a policy document changes 😄</p>
 <hr />
 <h3 id="guardrails-need-multiple-layers"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#guardrails-need-multiple-layers">Guardrails Need Multiple Layers 🛡️</a></h3>
 <p>One thing that becomes obvious very quickly in production is that a single moderation layer is not enough  </p>
@@ -10977,7 +10984,7 @@ Most teams should start with simple vector RAG first</p>
 - validate the output
 - fallback if needed</p>
 <p>The important part is validation  </p>
-<p>Fallback should not only trigger on API failure. It can also trigger when:
+<p>Fallback should not only trigger on <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> failure. It can also trigger when:
 - schema validation fails
 - grounding fails
 - safety checks fail</p>
@@ -10989,7 +10996,7 @@ Different models often behave very differently with the same prompt</p>
 </div>
 <hr />
 <h3 id="evaluations-are-the-real-engineering-loop"><a class="toclink" href="../../2025/08/10/agentic-ai-patterns/#evaluations-are-the-real-engineering-loop">Evaluations Are the Real Engineering Loop 📊</a></h3>
-<p>One thing I’ve learned while building GenAI systems is this:</p>
+<p>One thing I’ve learned while building <abbr title="Generative AI: models that create new text, images, code or audio">GenAI</abbr> systems is this:</p>
 <p>Most teams spend too much time building and not enough time evaluating  </p>
 <p>Without evaluations, improvement becomes guesswork</p>
 <p><center> 
@@ -11003,7 +11010,7 @@ Different models often behave very differently with the same prompt</p>
 <p>The evaluation itself can happen through:
 - humans
 - heuristics
-- LLM judges</p>
+- <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> judges</p>
 <p>The output should not just be a score. It should explain why the system failed and what category the failure belongs to  </p>
 <p>That feedback loop is where most of the real engineering work happens  </p>
 <p>Sometimes the issue is prompt quality. Sometimes retrieval is weak. Sometimes the wrong tool gets selected. And sometimes the model itself is simply not good enough for the task  </p>
@@ -11020,7 +11027,7 @@ Different models often behave very differently with the same prompt</p>
 - communication protocols
 - safety controls
 - evaluation pipelines</p>
-<p>The LLM is obviously important. But honestly, it is only one piece of the overall system  </p>
+<p>The <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> is obviously important. But honestly, it is only one piece of the overall system  </p>
 <p>The real engineering challenge is building everything around the model so the system remains:
 - reliable
 - observable
@@ -11131,7 +11138,7 @@ Different models often behave very differently with the same prompt</p>
 </div>
 <h3 id="types-of-quantization"><a class="toclink" href="../../2024/10/08/quantization-in-llms-/#types-of-quantization">Types of Quantization</a></h3>
 <h4 id="ptq"><a class="toclink" href="../../2024/10/08/quantization-in-llms-/#ptq">PTQ 🛠️</a></h4>
-<p>As the name suggests, <code>Post Training Quantization (PTQ)</code> occurs after the LLM training phase. </p>
+<p>As the name suggests, <code>Post Training Quantization (PTQ)</code> occurs after the <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> training phase. </p>
 <p>In this process, the model’s weights are converted from higher precision formats to lower precision types, applicable to both weights and activations. While this enhances speed, memory efficiency, and power usage, it comes with an accuracy trade-off.</p>
 <div class="admonition warning">
 <p class="admonition-title">Beware of Quantizaion Error</p>
@@ -11189,12 +11196,12 @@ Different models often behave very differently with the same prompt</p>
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="llm-as-a-judge"><a class="toclink" href="../../2024/08/15/llm-as-a-judge-/">LLM as a Judge 🧑‍⚖️</a></h2>
+    <h2 id="llm-as-a-judge"><a class="toclink" href="../../2024/08/15/llm-as-a-judge-/"><abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> as a Judge 🧑‍⚖️</a></h2>
 <!-- https://www.confident-ai.com/blog/why-llm-as-a-judge-is-the-best-llm-evaluation-method -->
 
-<p>LLM-as-a-Judge is a powerful solution that uses LLMs to <mark>evaluate LLM responses</mark> based on any specific criteria of your choice, which means using LLMs to carry out LLM (system) evaluation.</p>
+<p><abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr>-as-a-Judge is a powerful solution that uses LLMs to <mark>evaluate <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> responses</mark> based on any specific criteria of your choice, which means using LLMs to carry out <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> (system) evaluation.</p>
 <div class="admonition warning">
-<p class="admonition-title">Potential issues with using LLM as a Judge?</p>
+<p class="admonition-title">Potential issues with using <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> as a Judge?</p>
 <p>The <em>non-deterministic nature</em> of LLMs implies that even with controlled parameters, outputs may vary, raising concerns about the reliability of these judgments.</p>
 </div>
 <div class="highlight"><span class="filename">LLM Judge Prompt Example</span><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">prompt = &quot;&quot;&quot;</span>
@@ -11210,7 +11217,7 @@ Different models often behave very differently with the same prompt</p>
 <span class="nt">Score</span><span class="p">:</span>
 <span class="s">&quot;&quot;&quot;</span>
 </code></pre></div>
-<h3 id="llm-metrics"><a class="toclink" href="../../2024/08/15/llm-as-a-judge-/#llm-metrics">LLM Metrics 📊</a></h3>
+<h3 id="llm-metrics"><a class="toclink" href="../../2024/08/15/llm-as-a-judge-/#llm-metrics"><abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> Metrics 📊</a></h3>
 <ul>
 <li>
 <p><code>Recall@k</code>: It measures the <em>proportion of all relevant documents</em> retrieved in the top k results, and is crucial for ensuring the system captures a high percentage of pertinent information. </p>
@@ -11225,8 +11232,8 @@ Different models often behave very differently with the same prompt</p>
 <p><code>Normalized Discounted Cumulative Gain (NDCG)</code>: It is particularly valuable as it considers both the relevance and ranking of retrieved documents.</p>
 </li>
 </ul>
-<h3 id="llm-metric-types"><a class="toclink" href="../../2024/08/15/llm-as-a-judge-/#llm-metric-types">LLM Metric Types ⎐</a></h3>
-<p>Metrics for LLM calls can be broken up into two categories</p>
+<h3 id="llm-metric-types"><a class="toclink" href="../../2024/08/15/llm-as-a-judge-/#llm-metric-types"><abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> Metric Types ⎐</a></h3>
+<p>Metrics for <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> calls can be broken up into two categories</p>
 <ul>
 <li>Absolute</li>
 <li>Subjective</li>
@@ -11240,17 +11247,17 @@ Different models often behave very differently with the same prompt</p>
 <p>Typically, in all the subjective metrics, it requires a level of human reasoning to determine a numeric answer. Techniques used for evaluation are:</p>
 <h5 id="1-human-evaluators"><a class="toclink" href="../../2024/08/15/llm-as-a-judge-/#1-human-evaluators">1. Human Evaluators</a></h5>
 <p>This is a time intensive process although sometimes its considered as gold standard. It requires humans to go through and evaluate your answer. You need to select the humans carefully and make sure their instructions on how to grade are clear</p>
-<p>It’s not unusual for a real-world LLM application to generate approximately 100,000 responses a month. I don’t know about you, but it takes me about 60 seconds on average to read through a few paragraphs and make a judgment about it. That adds up to around 6 million seconds, or about 65 consecutive days each month — without taking lunch breaks — to evaluate every single generated LLM responses.</p>
-<h5 id="2-llms-as-a-judge"><a class="toclink" href="../../2024/08/15/llm-as-a-judge-/#2-llms-as-a-judge">2. LLM's as a Judge</a></h5>
-<p>To use LLM-as-a-judge, you have to iterate on a prompt until the human annotators generally agree with the LLMs grades. An evaluation dataset should be created and graded by a human.</p>
+<p>It’s not unusual for a real-world <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> application to generate approximately 100,000 responses a month. I don’t know about you, but it takes me about 60 seconds on average to read through a few paragraphs and make a judgment about it. That adds up to around 6 million seconds, or about 65 consecutive days each month — without taking lunch breaks — to evaluate every single generated <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> responses.</p>
+<h5 id="2-llms-as-a-judge"><a class="toclink" href="../../2024/08/15/llm-as-a-judge-/#2-llms-as-a-judge">2. <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr>'s as a Judge</a></h5>
+<p>To use <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr>-as-a-judge, you have to iterate on a prompt until the human annotators generally agree with the LLMs grades. An evaluation dataset should be created and graded by a human.</p>
 </div>
 <h3 id="single-layer-judge"><a class="toclink" href="../../2024/08/15/llm-as-a-judge-/#single-layer-judge">Single Layer Judge ·</a></h3>
 <p>The flow for single layer Judge is shown below</p>
 <p><center> 
 <img src='/blog/images/llm-as-a-judge.png' width="100%">
 </center></p>
-<h3 id="muti-layered-judgements"><a class="toclink" href="../../2024/08/15/llm-as-a-judge-/#muti-layered-judgements">Muti Layered Judgements ⵘ</a></h3>
-<p>We can also use a master LLM judge to judge the judgement of First level Judge for getting better recall</p>
+<h3 id="multi-layered-judgements"><a class="toclink" href="../../2024/08/15/llm-as-a-judge-/#multi-layered-judgements">Multi Layered Judgements ⵘ</a></h3>
+<p>We can also use a master <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> judge to judge the judgement of First level Judge for getting better recall</p>
 <p><center> 
 <img src='/blog/images/llm-as-a-master-judge.png' width="100%">
 </center></p>
@@ -11258,7 +11265,7 @@ Different models often behave very differently with the same prompt</p>
 <p class="admonition-title">Why are we using Sampling?</p>
 <p>It is also worth noting that using a random sampling method for evaluation might be a good approach to save resources</p>
 </div>
-<h3 id="how-to-improve-llm-judgements"><a class="toclink" href="../../2024/08/15/llm-as-a-judge-/#how-to-improve-llm-judgements">How to improve LLM Judgements? 📈</a></h3>
+<h3 id="how-to-improve-llm-judgements"><a class="toclink" href="../../2024/08/15/llm-as-a-judge-/#how-to-improve-llm-judgements">How to improve <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> Judgements? 📈</a></h3>
 <ul>
 <li>Use <code>Chain of Thought (CoT)</code> Prompting by asking the reasoning process</li>
 <li>Use <code>Few shot Prompting</code>: This approach can be more computationally expensive</li>
@@ -11304,10 +11311,6 @@ Different models often behave very differently with the same prompt</p>
         
       </ul>
       
-        <span class="md-draft">
-          Draft
-        </span>
-      
     </div>
   </header>
   <div class="md-post__content md-typeset">
@@ -11317,8 +11320,8 @@ Different models often behave very differently with the same prompt</p>
 <p class="admonition-title">What is Vector DB?</p>
 <p>Vector databases are specialized databases that store data as high-dimensional vectors and their original content. They offer the capabilities of both <code>vector indexes</code> and <code>traditional databases</code>, such as optimized storage, scalability, flexibility, and query language support. They allow users to find and retrieve similar or relevant data based on their semantic or contextual meaning.</p>
 </div>
-<p>Vector databases can help RAG models quickly find the most similar documents or
-passages to a given query and use them as additional context for the LLM.</p>
+<p>Vector databases can help <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> models quickly find the most similar documents or
+passages to a given query and use them as additional context for the <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr>.</p>
 <h3 id="vector-index"><a class="toclink" href="../../2024/06/10/vector-databases-/#vector-index">Vector Index</a></h3>
 <p>A vector index is a data structure in a vector database designed to enhance the efficiency of processing, and it is particularly suited for the high-dimensional vector dataencountered with LLMs. Its function is to streamline the search and retrieval processes within the database.</p>
 <p>By implementing a vector index, the system is capable ofconducting quick similarity searches, identifying vectors that closely match or aremost similar to a given input vector. </p>
@@ -11363,13 +11366,9 @@ passages to a given query and use them as additional context for the LLM.</p>
         
       </main>
       
-        <!-- Footer -->
-
-<!-- <footer class="md-footer">
-	<!-- Further information -->
-	<div class="md-footer-meta md-typeset">
-	  <div class="md-footer-meta__inner md-grid">
-		<div class="md-copyright">
+        <div class="md-footer-meta md-typeset">
+  <div class="md-footer-meta__inner md-grid">
+    <div class="md-copyright">
   
     <div class="md-copyright__highlight">
       Copyright &copy; 2026 Amarjit Singh Dhillon
@@ -11377,13 +11376,8 @@ passages to a given query and use them as additional context for the LLM.</p>
   
   
 </div>
-		<!-- Footer links -->
-		<!-- Social links -->
-		
-	  </div>
-	</div>
-	</div>
-  </footer> -->
+  </div>
+</div>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -11420,7 +11414,11 @@ passages to a given query and use them as additional context for the LLM.</p>
       
         <script src="../../../javascripts/magnetic.js"></script>
       
+        <script src="../../../javascripts/transitions.js"></script>
+      
         <script src="../../../javascripts/hero.js"></script>
+      
+        <script src="../../../javascripts/cosmos.js"></script>
       
         <script src="../../../javascripts/totop.js"></script>
       

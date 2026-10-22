@@ -25,6 +25,11 @@ document$.subscribe(function () {
     nums.forEach(function (el) { el.textContent = "0"; io.observe(el); });
   }
 
+  // Email button: the address is put together here so it never sits in the page source for scrapers
+  document.querySelectorAll(".js-mail[data-u][data-d]").forEach(function (a) {
+    a.href = "mailto:" + a.dataset.u + "@" + a.dataset.d + "?subject=" + encodeURIComponent("Hi Amar, from your TechSpace");
+  });
+
   // Rotating role line in the hero
   var rot = document.querySelector(".about-rotator[data-words]");
   if (rot && !rot.dataset.started) {

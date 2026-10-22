@@ -22,10 +22,17 @@
         <link rel="next" href="../subnet/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.ico">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/images/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     <meta name="google-site-verification" content="UHLjtoO7DV30dx3hVhwTOIWguEUr_VzS41msmq-uYKA" />
+    <!-- PNG fallback for browsers without SVG favicons, and the iOS home-screen icon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
+    <meta name="theme-color" content="#10123a">
     
     <script type="application/ld+json">
         {
@@ -50,7 +57,7 @@
 
     
       
-        <title>VPC - Amar's TechSpace 🛸</title>
+        <title>VPC - Amar's TechSpace</title>
       
     
     
@@ -79,7 +86,7 @@
     
     
     
-  </head>
+  <meta property="og:type" content="article"><meta property="og:site_name" content="Amar&#x27;s TechSpace"><meta property="og:title" content="VPC - Amar&#x27;s TechSpace"><meta property="og:description" content="Developer resources for Azure, AWS, K8S and more."><meta property="og:url" content="https://www.amarjitdhillon.com/aws/vpc/"><meta property="og:image" content="https://www.amarjitdhillon.com/assets/cards/aws/vpc.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="VPC - Amar&#x27;s TechSpace"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="VPC - Amar&#x27;s TechSpace"><meta name="twitter:description" content="Developer resources for Azure, AWS, K8S and more."><meta name="twitter:image" content="https://www.amarjitdhillon.com/assets/cards/aws/vpc.png"></head>
   
   
     
@@ -89,7 +96,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -112,9 +119,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Amar&#39;s TechSpace 🛸" class="md-header__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../.." title="Amar&#39;s TechSpace" class="md-header__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../assets/images/menu.png" alt="logo">
+  <img src="../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -124,9 +131,9 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Amar's TechSpace 🛸
-          </span>
+          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+            Amar's <b>TechSpace</b>
+          </a>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
@@ -144,7 +151,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -154,7 +161,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -512,12 +519,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Amar&#39;s TechSpace 🛸" class="md-nav__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../.." title="Amar&#39;s TechSpace" class="md-nav__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../assets/images/menu.png" alt="logo">
+  <img src="../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
-    Amar's TechSpace 🛸
+    Amar's TechSpace
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -2509,7 +2516,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.66 13.07c-1.74 0-3.16-1.41-3.16-3.14 0-.71.26-1.39.69-1.93-.42-.54-.69-1.22-.69-1.93 0-1.73 1.43-3.14 3.16-3.14l.43.03A3.15 3.15 0 0 1 12 1c1.31 0 2.44.81 2.91 1.96l.43-.03c1.73 0 3.16 1.41 3.16 3.14 0 .71-.26 1.39-.69 1.93.42.54.69 1.22.69 1.93 0 1.73-1.43 3.14-3.16 3.14l-.43-.03A3.15 3.15 0 0 1 12 15a3.15 3.15 0 0 1-2.91-1.96zM12 13c.62 0 1.12-.5 1.14-1.1l-.11-1.09c-.32.12-.67.19-1.03.19s-.7-.07-1-.19l-.14 1.09c.02.6.52 1.1 1.14 1.1m3.34-1.93c.63 0 1.16-.51 1.16-1.15 0-.42-.27-.84-.67-1.03l-.88-.42c-.12.74-.51 1.38-1.06 1.83l.81.57c.18.13.4.2.64.2m-.65-5.94-.82.56c.56.45.95 1.09 1.07 1.81l.88-.4c.41-.2.68-.6.68-1.03 0-.63-.53-1.14-1.16-1.14-.23 0-.45.07-.65.2M12 3c-.62 0-1.12.5-1.14 1.1L11 5.19c.3-.12.64-.19 1-.19s.71.07 1.03.19l.11-1.09C13.12 3.5 12.62 3 12 3M8.66 4.93c-.63 0-1.16.51-1.16 1.14 0 .43.27.83.67 1.03l.88.4c.12-.72.51-1.36 1.06-1.81l-.81-.56c-.18-.13-.4-.2-.64-.2M8.17 8.9c-.4.2-.67.6-.67 1.02 0 .63.53 1.14 1.16 1.14.23 0 .45-.06.65-.2l.81-.55c-.56-.45-.95-1.09-1.07-1.81zM12 22a9 9 0 0 1-9-9 9 9 0 0 1 9 9 9 9 0 0 1 9-9 9 9 0 0 1-9 9m2.44-2.44a7.04 7.04 0 0 0 4.12-4.12c-1.9.7-3.41 2.22-4.12 4.12m-9-4.12a7.04 7.04 0 0 0 4.12 4.12c-.7-1.9-2.22-3.41-4.12-4.12"/></svg>
   
   <span class="md-ellipsis">
-    Arch Continums
+    Arch Continuums
   </span>
   
 
@@ -3103,7 +3110,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"/></svg>
   
   <span class="md-ellipsis">
-    Elasti Cache
+    ElastiCache
   </span>
   
 
@@ -3540,7 +3547,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"/></svg>
   
   <span class="md-ellipsis">
-    Athnea
+    Athena
   </span>
   
 
@@ -5597,7 +5604,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12z"/></svg>
   
   <span class="md-ellipsis">
-    Read Replics
+    Read Replicas
   </span>
   
 
@@ -8635,7 +8642,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c-.89 2.18-1.43 3.61-2.42 5.73.61.64 1.35 1.39 2.56 2.24-1.3-.54-2.19-1.07-2.85-1.63C8 11 6.03 14.75 2 22c3.17-1.83 5.63-2.96 7.92-3.39-.1-.42-.16-.88-.15-1.36v-.1c.05-2.03 1.11-3.59 2.36-3.48 1.25.1 2.22 1.83 2.17 3.87-.01.38-.05.75-.12 1.09 2.26.44 4.69 1.56 7.82 3.37-.62-1.14-1.17-2.16-1.69-3.13-.81-.64-1.7-1.48-3.46-2.37 1.21.3 2.08.66 2.76 1.07C14.26 7.62 13.83 6.3 12 2"/></svg>
   
   <span class="md-ellipsis">
-    Cluster Architecutre
+    Cluster Architecture
   </span>
   
 
@@ -9004,7 +9011,7 @@
         
   
   <span class="md-ellipsis">
-    DeamonSet
+    DaemonSet
   </span>
   
 
@@ -9088,7 +9095,7 @@
         
   
   <span class="md-ellipsis">
-    Replia Set
+    ReplicaSet
   </span>
   
 
@@ -10977,9 +10984,9 @@ as the main headline.
 -->
 
 
-<!-- Markdown content (marker turns on scroll-reveal for pages with `reveal: true`) -->
-
-<h1 id="vpc">VPC <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.5 20q-2.28 0-3.89-1.57Q1 16.85 1 14.58q0-1.95 1.17-3.48 1.18-1.53 3.08-1.95.63-2.3 2.5-3.72Q9.63 4 12 4q2.93 0 4.96 2.04Q19 8.07 19 11q1.73.2 2.86 1.5 1.14 1.28 1.14 3 0 1.88-1.31 3.19T18.5 20Z"/></svg></span><a class="headerlink" href="#vpc" title="Link to this section">&para;</a></h1>
+<!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
+<span data-reveal-page hidden></span>
+<h1 id="vpc"><abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.5 20q-2.28 0-3.89-1.57Q1 16.85 1 14.58q0-1.95 1.17-3.48 1.18-1.53 3.08-1.95.63-2.3 2.5-3.72Q9.63 4 12 4q2.93 0 4.96 2.04Q19 8.07 19 11q1.73.2 2.86 1.5 1.14 1.28 1.14 3 0 1.88-1.31 3.19T18.5 20Z"/></svg></span><a class="headerlink" href="#vpc" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 14 min read</p>
 <p>A networking service that you can use to establish boundaries around your AWS resources is Amazon <code>Virtual Private Cloud (VPC)</code> </p>
 <p><center> 
 <img width="95%" src="../images/vpc-01.gif"></p>
@@ -10991,27 +10998,27 @@ as the main headline.
 <img width="95%" src="../images/vpc-subnet.gif"></p>
 <figcaption>Private VPC Example</figcaption>
 <p></center></p>
-<p>The <code>Virtual Private Gateway (VPG)</code> is the component that allows protected internet traffic to enter into the VPC. </p>
+<p>The <code>Virtual Private Gateway (VPG)</code> is the component that allows protected internet traffic to enter into the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>. </p>
 <div class="admonition important">
 <p class="admonition-title">Key Takeaway</p>
-<p>A <code>virtual private gateway</code> enables you to establish a <code>virtual private network (VPN)</code> connection between your VPC and a private network, such as an on-premises data center or internal corporate network.</p>
-<p>A virtual private gateway allows traffic into the VPC only if it is coming from an approved network.</p>
+<p>A <code>virtual private gateway</code> enables you to establish a <code>virtual private network (VPN)</code> connection between your <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> and a private network, such as an on-premises data center or internal corporate network.</p>
+<p>A virtual private gateway allows traffic into the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> only if it is coming from an approved network.</p>
 </div>
 <p>Here is an exmaple of 3 tier web applicaiton</p>
 <p><center> 
 <img width="100%" src="../images/3-tier-wetapp-ha.png"></p>
 <figcaption>3 Tier HA application in AWS</figcaption>
 <p></center></p>
-<h2 id="elements-in-vpc">Elements in VPC 🌐<a class="headerlink" href="#elements-in-vpc" title="Link to this section">&para;</a></h2>
+<h2 id="elements-in-vpc">Elements in <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> 🌐<a class="headerlink" href="#elements-in-vpc" title="Link to this section">&para;</a></h2>
 <h3 id="elastic-network-interface">Elastic Network Interface 🔗<a class="headerlink" href="#elastic-network-interface" title="Link to this section">&para;</a></h3>
-<p>It is a logical networking component in a VPC that represents a virtual network card.</p>
+<p>It is a logical networking component in a <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> that represents a virtual network card.</p>
 <h3 id="subnet">Subnet 🥅<a class="headerlink" href="#subnet" title="Link to this section">&para;</a></h3>
 <ul>
-<li>A range of IP addresses in your VPC. You can add AWS resources to a specified subnet.</li>
+<li>A range of IP addresses in your <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>. You can add AWS resources to a specified subnet.</li>
 <li>Use a <code>public subnet</code> for resources that must connect to the internet, and a <code>private subnet</code> for resources that don't connect to the internet.</li>
 </ul>
 <h3 id="security-group">Security group 🚔<a class="headerlink" href="#security-group" title="Link to this section">&para;</a></h3>
-<p>A security group controls the traffic that is allowed to reach and leave the resources that it is associated with. For example, after you associate a security group with an EC2 instance, it controls the inbound and outbound traffic for the instance.</p>
+<p>A security group controls the traffic that is allowed to reach and leave the resources that it is associated with. For example, after you associate a security group with an <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instance, it controls the inbound and outbound traffic for the instance.</p>
 <div class="admonition abstract">
 <p class="admonition-title">SG are stateful</p>
 <p>Security groups are <code>stateful</code>. </p>
@@ -11038,20 +11045,20 @@ as the main headline.
 <p>The effect of some rule changes can depend on how the traffic is tracked.</p>
 </li>
 <li>
-<p>When you create a security group rule, AWS assigns a <code>unique ID</code> to the rule. You can use the ID of a rule when you use the API or CLI to modify or delete the rule</p>
+<p>When you create a security group rule, AWS assigns a <code>unique ID</code> to the rule. You can use the ID of a rule when you use the <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> or <abbr title="Command Line Interface: controlling a tool by typing commands">CLI</abbr> to modify or delete the rule</p>
 </li>
 </ul>
-<p>When you create a VPC, it comes with a default security group. You can create additional security groups for a VPC, each with their own inbound and outbound rules. You can specify the source, port range, and protocol for each inbound rule. You can specify the destination, port range, and protocol for each outbound rule.</p>
+<p>When you create a <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>, it comes with a default security group. You can create additional security groups for a <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>, each with their own inbound and outbound rules. You can specify the source, port range, and protocol for each inbound rule. You can specify the destination, port range, and protocol for each outbound rule.</p>
 <div class="admonition tip">
 <p class="admonition-title">Security Group naming rules</p>
 <ul>
 <li>
-<p>You can assign a security group only to resources created in the same VPC as the security group. You can assign multiple security groups to a resource.</p>
+<p>You can assign a security group only to resources created in the same <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> as the security group. You can assign multiple security groups to a resource.</p>
 </li>
 <li>
 <p>When you create a security group, you must provide it with a name and a description. The following rules apply:</p>
 <ol>
-<li>A security group name must be unique within the VPC.</li>
+<li>A security group name must be unique within the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>.</li>
 <li>Names and descriptions can be up to 255 characters in length.</li>
 <li>Names and descriptions are limited to the following characters: a-z, A-Z, 0-9, spaces, and ._-:/()#,@[]+=&amp;;{}!$*.</li>
 <li>When the name contains trailing spaces, we trim the space at the end of the name. For example, if you enter "Test Security Group " for the name, we store it as "Test Security Group".</li>
@@ -11061,28 +11068,28 @@ as the main headline.
 </li>
 </ul>
 </div>
-<h3 id="nacl">NACL 📋<a class="headerlink" href="#nacl" title="Link to this section">&para;</a></h3>
-<p>A network access control list (ACL) allows or denies specific inbound or outbound traffic at the subnet level. </p>
-<p>You can use the <code>default network ACL</code> for your VPC, or you can create a <code>custom network ACL</code> for your VPC with rules that are similar to the rules for your security groups in order to add an additional layer of security to your VPC.</p>
+<h3 id="nacl"><abbr title="Network Access Control List: stateless allow/deny rules at the subnet level">NACL</abbr> 📋<a class="headerlink" href="#nacl" title="Link to this section">&para;</a></h3>
+<p>A network access control list (<abbr title="Access Control List: a list of rules saying who can access what">ACL</abbr>) allows or denies specific inbound or outbound traffic at the subnet level. </p>
+<p>You can use the <code>default network ACL</code> for your <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>, or you can create a <code>custom network ACL</code> for your <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> with rules that are similar to the rules for your security groups in order to add an additional layer of security to your <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>.</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p><center> 
 <img width="80%" src="../images/network-acl.png">
-<figcaption>NACL Example</figcaption>
+<figcaption><abbr title="Network Access Control List: stateless allow/deny rules at the subnet level">NACL</abbr> Example</figcaption>
 </center></p>
-<p>The following diagram shows a VPC with two subnets. Each subnet has a network ACL. When traffic enters the VPC (for example, from a peered VPC, VPN connection, or the internet), the router sends the traffic to its destination. </p>
-<p>Network ACL A determines which traffic destined for <code>subnet 1</code> is allowed to enter <code>subnet 1</code>, and which traffic destined for a location outside <code>subnet 1</code> is allowed to leave <code>subnet 1</code>.</p>
-<p>Similarly, network ACL B determines which traffic is allowed to enter and leave <code>subnet 2</code></p>
+<p>The following diagram shows a <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> with two subnets. Each subnet has a network <abbr title="Access Control List: a list of rules saying who can access what">ACL</abbr>. When traffic enters the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> (for example, from a peered <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>, <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> connection, or the internet), the router sends the traffic to its destination. </p>
+<p>Network <abbr title="Access Control List: a list of rules saying who can access what">ACL</abbr> A determines which traffic destined for <code>subnet 1</code> is allowed to enter <code>subnet 1</code>, and which traffic destined for a location outside <code>subnet 1</code> is allowed to leave <code>subnet 1</code>.</p>
+<p>Similarly, network <abbr title="Access Control List: a list of rules saying who can access what">ACL</abbr> B determines which traffic is allowed to enter and leave <code>subnet 2</code></p>
 </div>
 <ul>
 <li>
-<p>A subnet can only be associated with a single NACL at a time.</p>
+<p>A subnet can only be associated with a single <abbr title="Network Access Control List: stateless allow/deny rules at the subnet level">NACL</abbr> at a time.</p>
 </li>
 <li>
-<p>The default subnet ACL allows all inbound and outbound traffic.</p>
+<p>The default subnet <abbr title="Access Control List: a list of rules saying who can access what">ACL</abbr> allows all inbound and outbound traffic.</p>
 </li>
 <li>
-<p>NACL rules have</p>
+<p><abbr title="Network Access Control List: stateless allow/deny rules at the subnet level">NACL</abbr> rules have</p>
 <ul>
 <li>Rule number</li>
 <li>Protocol</li>
@@ -11093,36 +11100,36 @@ as the main headline.
 </li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">Few notes about NACL</p>
+<p class="admonition-title">Few notes about <abbr title="Network Access Control List: stateless allow/deny rules at the subnet level">NACL</abbr></p>
 <p>The following are the basic things that you need to know about network ACLs:</p>
 <ul>
 <li>
-<p>Your VPC automatically comes with a modifiable default network ACL. By default, it allows all inbound and outbound IPv4 traffic and, if applicable, IPv6 traffic.</p>
+<p>Your <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> automatically comes with a modifiable default network <abbr title="Access Control List: a list of rules saying who can access what">ACL</abbr>. By default, it allows all inbound and outbound IPv4 traffic and, if applicable, IPv6 traffic.</p>
 </li>
 <li>
 <p>You can create a <code>custom network ACL</code> and associate it with a subnet to allow or deny specific inbound or outbound traffic at the subnet level.</p>
 </li>
 <li>
-<p>Each subnet in your VPC must be associated with a network ACL. <mark>If you don't explicitly associate a subnet with a network ACL, the subnet is automatically associated with the default network ACL.</mark></p>
+<p>Each subnet in your <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> must be associated with a network <abbr title="Access Control List: a list of rules saying who can access what">ACL</abbr>. <mark>If you don't explicitly associate a subnet with a network <abbr title="Access Control List: a list of rules saying who can access what">ACL</abbr>, the subnet is automatically associated with the default network <abbr title="Access Control List: a list of rules saying who can access what">ACL</abbr>.</mark></p>
 </li>
 <li>
-<p><strong>You can associate a network ACL with multiple subnets. However, a subnet can be associated with only one network ACL at a time.</strong> When you associate a network ACL with a subnet, the previous association is removed.</p>
+<p><strong>You can associate a network <abbr title="Access Control List: a list of rules saying who can access what">ACL</abbr> with multiple subnets. However, a subnet can be associated with only one network <abbr title="Access Control List: a list of rules saying who can access what">ACL</abbr> at a time.</strong> When you associate a network <abbr title="Access Control List: a list of rules saying who can access what">ACL</abbr> with a subnet, the previous association is removed.</p>
 </li>
 <li>
-<p>A network ACL has inbound rules and outbound rules. Each rule can either allow or deny traffic. Each rule has a number from 1 to 32766. We evaluate the rules in order, starting with the lowest numbered rule, when deciding whether allow or deny traffic. If the traffic matches a rule, the rule is applied and we do not evaluate any additional rules. We recommend that you start by creating rules in increments (for example, increments of 10 or 100) so that you can insert new rules later on, if needed.</p>
+<p>A network <abbr title="Access Control List: a list of rules saying who can access what">ACL</abbr> has inbound rules and outbound rules. Each rule can either allow or deny traffic. Each rule has a number from 1 to 32766. We evaluate the rules in order, starting with the lowest numbered rule, when deciding whether allow or deny traffic. If the traffic matches a rule, the rule is applied and we do not evaluate any additional rules. We recommend that you start by creating rules in increments (for example, increments of 10 or 100) so that you can insert new rules later on, if needed.</p>
 </li>
 <li>
-<p>We evaluate the network ACL rules when traffic enters and leaves the subnet, not as it is routed within a subnet.</p>
+<p>We evaluate the network <abbr title="Access Control List: a list of rules saying who can access what">ACL</abbr> rules when traffic enters and leaves the subnet, not as it is routed within a subnet.</p>
 </li>
 <li>
-<p><mark>NACLs are <code>stateless</code>, which means that information about previously sent or received traffic is not saved</mark>. If, for example, you create a NACL rule to allow specific inbound traffic to a subnet, responses to that traffic are not automatically allowed. This is in contrast to how security groups work. Security groups are stateful, which means that information about previously sent or received traffic is saved. If, for example, a security group allows inbound traffic to an EC2 instance, responses are automatically allowed regardless of outbound security group rules.</p>
+<p><mark>NACLs are <code>stateless</code>, which means that information about previously sent or received traffic is not saved</mark>. If, for example, you create a <abbr title="Network Access Control List: stateless allow/deny rules at the subnet level">NACL</abbr> rule to allow specific inbound traffic to a subnet, responses to that traffic are not automatically allowed. This is in contrast to how security groups work. Security groups are stateful, which means that information about previously sent or received traffic is saved. If, for example, a security group allows inbound traffic to an <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instance, responses are automatically allowed regardless of outbound security group rules.</p>
 </li>
 </ul>
 </div>
 <h3 id="route-table">Route table 📑<a class="headerlink" href="#route-table" title="Link to this section">&para;</a></h3>
 <ul>
 <li>
-<p>It contains a set of routes that AWS uses to direct the network traffic for your VPC.</p>
+<p>It contains a set of routes that AWS uses to direct the network traffic for your <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>.</p>
 </li>
 <li>
 <p>You can explicitly associate a subnet with a particular route table. </p>
@@ -11134,54 +11141,54 @@ as the main headline.
 </div>
 <h3 id="route">Route 🛣️<a class="headerlink" href="#route" title="Link to this section">&para;</a></h3>
 <p>Each route in a <code>route table</code> specifies a range of IP addresses and the destination where Lambda sends the traffic for that range. The route also specifies a target, which is the gateway, network interface, or connection through which to send the traffic.</p>
-<h3 id="nat-gateway">NAT gateway 🌉<a class="headerlink" href="#nat-gateway" title="Link to this section">&para;</a></h3>
+<h3 id="nat-gateway"><abbr title="Network Address Translation: lets private machines reach the internet without being reachable">NAT</abbr> gateway 🌉<a class="headerlink" href="#nat-gateway" title="Link to this section">&para;</a></h3>
 <p>An AWS <code>Network Address Translation (NAT)</code> service that controls access from a <code>private VPC</code> private subnet to the Internet.</p>
-<h3 id="vpc-endpoints">VPC endpoints 🖇️<a class="headerlink" href="#vpc-endpoints" title="Link to this section">&para;</a></h3>
-<p>You can use an Amazon VPC endpoint to create private connectivity to services hosted in AWS, without requiring access over the internet or through a NAT device, VPN connection, or AWS Direct Connect connection.</p>
-<h3 id="vpc-flow-logs">VPC flow logs 📕<a class="headerlink" href="#vpc-flow-logs" title="Link to this section">&para;</a></h3>
-<p>VPC Flow Logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces in your VPC.</p>
-<p>We can use them for troubleshooting to see if there is some attack on the VPC. Also, they can let us know why the communication between the VPC’s is not working out.</p>
-<p>You can create a flow log for a VPC, a subnet, or a network interface. If you create a flow log for a subnet or VPC, each network interface in that subnet or VPC is monitored.</p>
-<h2 id="vpc-peering">VPC Peering 🪙<a class="headerlink" href="#vpc-peering" title="Link to this section">&para;</a></h2>
-<p>A VPC peering connection is a networking connection between two VPCs that enables you to route traffic between them using private <code>IPv4 addresses</code> or <code>IPv6 addresses</code>.</p>
-<p>Instances in either VPC can communicate with each other as if they are within the same network. You can create a VPC peering connection between your own VPCs, or with a VPC in another AWS account.</p>
-<p>The VPCs can be in different Regions (also known as an inter-Region VPC peering connection).</p>
+<h3 id="vpc-endpoints"><abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> endpoints 🖇️<a class="headerlink" href="#vpc-endpoints" title="Link to this section">&para;</a></h3>
+<p>You can use an Amazon <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> endpoint to create private connectivity to services hosted in AWS, without requiring access over the internet or through a <abbr title="Network Address Translation: lets private machines reach the internet without being reachable">NAT</abbr> device, <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> connection, or AWS Direct Connect connection.</p>
+<h3 id="vpc-flow-logs"><abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> flow logs 📕<a class="headerlink" href="#vpc-flow-logs" title="Link to this section">&para;</a></h3>
+<p><abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> Flow Logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces in your <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>.</p>
+<p>We can use them for troubleshooting to see if there is some attack on the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>. Also, they can let us know why the communication between the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>’s is not working out.</p>
+<p>You can create a flow log for a <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>, a subnet, or a network interface. If you create a flow log for a subnet or <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>, each network interface in that subnet or <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> is monitored.</p>
+<h2 id="vpc-peering"><abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> Peering 🪙<a class="headerlink" href="#vpc-peering" title="Link to this section">&para;</a></h2>
+<p>A <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> peering connection is a networking connection between two VPCs that enables you to route traffic between them using private <code>IPv4 addresses</code> or <code>IPv6 addresses</code>.</p>
+<p>Instances in either <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> can communicate with each other as if they are within the same network. You can create a <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> peering connection between your own VPCs, or with a <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> in another AWS account.</p>
+<p>The VPCs can be in different Regions (also known as an inter-Region <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> peering connection).</p>
 <p><center> 
 <img width="100%" src="../images/peering-intro-diagram.png"></p>
 <figcaption>VPC Peering</figcaption>
 <p></center></p>
 <div class="admonition remember">
 <p class="admonition-title">No IP Overlap</p>
-<p>AWS uses the existing infrastructure of a VPC to create a VPC peering connection; it is neither a gateway nor a VPN connection, and does not rely on a separate piece of physical hardware. There is no single point of failure for communication or a bandwidth bottleneck. </p>
+<p>AWS uses the existing infrastructure of a <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> to create a <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> peering connection; it is neither a gateway nor a <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> connection, and does not rely on a separate piece of physical hardware. There is no single point of failure for communication or a bandwidth bottleneck. </p>
 <p><center> 
 <img width="100%" src="../images/vpc-peering-example.png">
-<figcaption>VPC Peering Example wihh no IP overlap</figcaption>
+<figcaption><abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> Peering Example wihh no IP overlap</figcaption>
 </center></p>
 </div>
-<h2 id="vpc-sharing">VPC Sharing 🔍<a class="headerlink" href="#vpc-sharing" title="Link to this section">&para;</a></h2>
+<h2 id="vpc-sharing"><abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> Sharing 🔍<a class="headerlink" href="#vpc-sharing" title="Link to this section">&para;</a></h2>
 <div class="admonition question">
-<p class="admonition-title">Why is VPC sharing requried?</p>
-<p>Sharing VPCs is useful when network isolation between teams does not need to be strictly managed by the VPC owner, but the account level users and permissions must be. </p>
-<p>With Shared VPC, multiple AWS accounts create their application resources (such as Amazon EC2 instances) in shared, centrally managed Amazon VPCs.</p>
-<p>In this model, the account that owns the VPC (owner) shares one or more subnets with other accounts (participants). After a subnet is shared, the participants can view, create, modify, and delete their application resources in the subnets shared with them.</p>
-<p><mark>Participants cannot view, modify, or delete resources that belong to other participants or the VPC owner</mark>. Security between resources in shared VPCs is managed using security groups, network access control lists (NACLs), or through a firewall between the subnets.</p>
+<p class="admonition-title">Why is <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> sharing requried?</p>
+<p>Sharing VPCs is useful when network isolation between teams does not need to be strictly managed by the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> owner, but the account level users and permissions must be. </p>
+<p>With Shared <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>, multiple AWS accounts create their application resources (such as Amazon <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instances) in shared, centrally managed Amazon VPCs.</p>
+<p>In this model, the account that owns the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> (owner) shares one or more subnets with other accounts (participants). After a subnet is shared, the participants can view, create, modify, and delete their application resources in the subnets shared with them.</p>
+<p><mark>Participants cannot view, modify, or delete resources that belong to other participants or the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> owner</mark>. Security between resources in shared VPCs is managed using security groups, network access control lists (NACLs), or through a firewall between the subnets.</p>
 </div>
-<p>VPC sharing allows multiple AWS accounts to create their application resources, such as Amazon EC2 instances, Amazon Relational Database Service (RDS) databases, Amazon Redshift clusters, and AWS Lambda functions, into shared, centrally-managed virtual private clouds (VPCs). </p>
+<p><abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> sharing allows multiple AWS accounts to create their application resources, such as Amazon <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instances, Amazon Relational Database Service (<abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr>) databases, Amazon Redshift clusters, and AWS Lambda functions, into shared, centrally-managed virtual private clouds (VPCs). </p>
 <p><center> 
 <img width="100%" src="../images/vpc-sharing-overview.png"></p>
 <figcaption>VPC Sharing with Owner and participants</figcaption>
 <p></center></p>
-<p>In this model, the account that owns the VPC (<code>owner</code>) shares one or more subnets with other accounts (<code>participants</code>) that belong to the same organization from AWS Organizations.</p>
-<p><mark>After a subnet is shared, the participants can view, create, modify, and delete their application resources in the subnets shared with them. Participants cannot view, modify, or delete resources that belong to other participants or the VPC owner.</mark></p>
-<h2 id="vpc-endpoints_1">VPC Endpoints ⚡️<a class="headerlink" href="#vpc-endpoints_1" title="Link to this section">&para;</a></h2>
-<p>A VPC endpoint enables customers to privately connect to supported AWS services and VPC endpoint services powered by AWS PrivateLink. Amazon VPC instances do not require public IP addresses to communicate with resources of the service. Traffic between an Amazon VPC and a service does not leave the Amazon network.</p>
-<p>VPC endpoints are virtual devices. They are horizontally scaled, redundant, and highly available Amazon VPC components that allow communication between instances in an Amazon VPC and services without imposing availability risks or bandwidth constraints on network traffic. There are two types of VPC endpoints:</p>
+<p>In this model, the account that owns the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> (<code>owner</code>) shares one or more subnets with other accounts (<code>participants</code>) that belong to the same organization from AWS Organizations.</p>
+<p><mark>After a subnet is shared, the participants can view, create, modify, and delete their application resources in the subnets shared with them. Participants cannot view, modify, or delete resources that belong to other participants or the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> owner.</mark></p>
+<h2 id="vpc-endpoints_1"><abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> Endpoints ⚡️<a class="headerlink" href="#vpc-endpoints_1" title="Link to this section">&para;</a></h2>
+<p>A <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> endpoint enables customers to privately connect to supported AWS services and <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> endpoint services powered by AWS PrivateLink. Amazon <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> instances do not require public IP addresses to communicate with resources of the service. Traffic between an Amazon <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> and a service does not leave the Amazon network.</p>
+<p><abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> endpoints are virtual devices. They are horizontally scaled, redundant, and highly available Amazon <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> components that allow communication between instances in an Amazon <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> and services without imposing availability risks or bandwidth constraints on network traffic. There are two types of <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> endpoints:</p>
 <ol>
 <li>
 <p><strong>Interface endpoints</strong>:  Interface endpoints enable connectivity to <mark>services over AWS PrivateLink</mark>. These services include some <code>AWS managed services</code>, services hosted by other <code>AWS customers</code> and partners in their own Amazon VPCs (referred to as endpoint services), and supported AWS Marketplace partner services. The owner of a service is a service provider. The principal creating the interface endpoint and using that service is a service consumer. </p>
 </li>
 <li>
-<p><strong>Gateway endpoints</strong>:  A gateway endpoint targets specific IP routes in an Amazon VPC route table, in the form of a prefix-list, used for traffic destined to <code>Amazon DynamoDB</code> or <code>Amazon S3</code>. <mark>Gateway endpoints do not enable AWS PrivateLink.</mark> </p>
+<p><strong>Gateway endpoints</strong>:  A gateway endpoint targets specific IP routes in an Amazon <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> route table, in the form of a prefix-list, used for traffic destined to <code>Amazon DynamoDB</code> or <code>Amazon S3</code>. <mark>Gateway endpoints do not enable AWS PrivateLink.</mark> </p>
 </li>
 </ol>
 <div class="admonition remember">
@@ -11199,53 +11206,53 @@ as the main headline.
 <img width="70%" src="../images/dynamic-routing.jpeg"></p>
 <figcaption>Dynamic Routing support</figcaption>
 <p></center></p>
-<h2 id="customer-managed-s2s-vpn">Customer Managed S2S VPN 🌐<a class="headerlink" href="#customer-managed-s2s-vpn" title="Link to this section">&para;</a></h2>
-<p>One advantage of customer-managed site-to-site VPNs is that you can control the protocols that your connection uses for authentication, integrity checks, and encryption. When using VPC peering, you have no control of security protocols use to secure traffic. </p>
+<h2 id="customer-managed-s2s-vpn">Customer Managed S2S <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> 🌐<a class="headerlink" href="#customer-managed-s2s-vpn" title="Link to this section">&para;</a></h2>
+<p>One advantage of customer-managed site-to-site VPNs is that you can control the protocols that your connection uses for authentication, integrity checks, and encryption. When using <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> peering, you have no control of security protocols use to secure traffic. </p>
 <h2 id="notes">Notes<a class="headerlink" href="#notes" title="Link to this section">&para;</a></h2>
 <div class="admonition example">
-<p class="admonition-title">Some notes on VPC are</p>
+<p class="admonition-title">Some notes on <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> are</p>
 <ul>
 <li>
-<p>NACL applies to all instances in an associated subnet.</p>
+<p><abbr title="Network Access Control List: stateless allow/deny rules at the subnet level">NACL</abbr> applies to all instances in an associated subnet.</p>
 </li>
 <li>
-<p>NACLs are always evaluated first because they exist at the border of a subnet. As <code>security groups</code> are attached to instances, they are not processed until traffic passes through the NACL and into the instance’s subnet.</p>
+<p>NACLs are always evaluated first because they exist at the border of a subnet. As <code>security groups</code> are attached to instances, they are not processed until traffic passes through the <abbr title="Network Access Control List: stateless allow/deny rules at the subnet level">NACL</abbr> and into the instance’s subnet.</p>
 </li>
 <li>
-<p><mark>NACLs are associated with subnets, not VPC</mark>.</p>
+<p><mark>NACLs are associated with subnets, not <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr></mark>.</p>
 </li>
 <li>
-<p>Each rule in an NACL has a number, and those rules are evaluated using those numbers, moving from low to high.</p>
+<p>Each rule in an <abbr title="Network Access Control List: stateless allow/deny rules at the subnet level">NACL</abbr> has a number, and those rules are evaluated using those numbers, moving from low to high.</p>
 </li>
 <li>
-<p>Each subnet in your VPC must be associated with an NACL.</p>
+<p>Each subnet in your <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> must be associated with an <abbr title="Network Access Control List: stateless allow/deny rules at the subnet level">NACL</abbr>.</p>
 </li>
 <li>
-<p>An NACL is associated with a subnet, not an instance or VPC. It can be associated with a single subnet or multiple subnets.</p>
+<p>An <abbr title="Network Access Control List: stateless allow/deny rules at the subnet level">NACL</abbr> is associated with a subnet, not an instance or <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>. It can be associated with a single subnet or multiple subnets.</p>
 </li>
 <li>
-<p><mark>A VPC spans all the availability zones in a region.</mark></p>
+<p><mark>A <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> spans all the availability zones in a region.</mark></p>
 </li>
 <li>
-<p>You must always select a region to create a VPC, and you must always provide a CIDR block. VPCs span all the AZs in a region, so that is not required.</p>
+<p>You must always select a region to create a <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>, and you must always provide a <abbr title="Classless Inter-Domain Routing: a way to write IP ranges, like 10.0.0.0/16">CIDR</abbr> block. VPCs span all the AZs in a region, so that is not required.</p>
 </li>
 <li>
-<p>While you can add secondary IPv4 CIDR blocks, you cannot add additional CIDR blocks for IPv6 at this time.</p>
+<p>While you can add secondary IPv4 <abbr title="Classless Inter-Domain Routing: a way to write IP ranges, like 10.0.0.0/16">CIDR</abbr> blocks, you cannot add additional <abbr title="Classless Inter-Domain Routing: a way to write IP ranges, like 10.0.0.0/16">CIDR</abbr> blocks for IPv6 at this time.</p>
 </li>
 <li>
-<p>When creating a VPC, you can specify an option name (no description needed), a required IPv4 CIDR block, and an optional IPv6 CIDR block.</p>
+<p>When creating a <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>, you can specify an option name (no description needed), a required IPv4 <abbr title="Classless Inter-Domain Routing: a way to write IP ranges, like 10.0.0.0/16">CIDR</abbr> block, and an optional IPv6 <abbr title="Classless Inter-Domain Routing: a way to write IP ranges, like 10.0.0.0/16">CIDR</abbr> block.</p>
 </li>
 <li>
-<p>A VPN-only subnet routes traffic through a virtual private gateway rather than an internet gateway</p>
+<p>A <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr>-only subnet routes traffic through a virtual private gateway rather than an internet gateway</p>
 </li>
 <li>
-<p>At a minimum, a VPC-only subnet must have a routing table routing traffic and a virtual private gateway to which traffic is routed.</p>
+<p>At a minimum, a <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>-only subnet must have a routing table routing traffic and a virtual private gateway to which traffic is routed.</p>
 </li>
 <li>
 <p><mark>You can only create 5 VPCs per region by default</mark>. Creating more requires a request to AWS.</p>
 </li>
 <li>
-<p><mark>You can create 200 subnets per VPC</mark>.</p>
+<p><mark>You can create 200 subnets per <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr></mark>.</p>
 </li>
 <li>
 <p>You’re allowed 5 elastic IP addresses per region unless you have the default limits raised by AWS.</p>
@@ -11254,13 +11261,13 @@ as the main headline.
 <p>A security group denies all traffic unless explicitly allowed. This means it functions as a whitelist.</p>
 </li>
 <li>
-<p>A VPC endpoint is a connection to an AWS service and explicitly does not use internet gateways or VPN connections.</p>
+<p>A <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> endpoint is a connection to an AWS service and explicitly does not use internet gateways or <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> connections.</p>
 </li>
 <li>
 <p>Internet gateways scale horizontally, not vertically. They are also redundant and highly available automatically.</p>
 </li>
 <li>
-<p>Default VPC has an internet gateway automatically attached.</p>
+<p>Default <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> has an internet gateway automatically attached.</p>
 </li>
 <li>
 <p>Load Balancers</p>
@@ -11277,7 +11284,7 @@ as the main headline.
 </ul>
 </li>
 <li>
-<p>A NAT device—network address translation—provides routing for instances to an internet gateway but can prevent undesired inbound traffic.</p>
+<p>A <abbr title="Network Address Translation: lets private machines reach the internet without being reachable">NAT</abbr> device—network address translation—provides routing for instances to an internet gateway but can prevent undesired inbound traffic.</p>
 </li>
 <li>
 <p>A site-to-site connection is going to require a private subnet on the AWS side with private instances within it.</p>
@@ -11286,34 +11293,34 @@ as the main headline.
 <p>An <code>egress-only gateway</code> is for use with IPv6 traffic and only allows outbound traffic. They are stateful.</p>
 </li>
 <li>
-<p>The default VPC has an internet gateway attached by default while custom VPC do not</p>
+<p>The default <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> has an internet gateway attached by default while custom <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> do not</p>
 </li>
 <li>
-<p>The default VPC has a CIDR block of <code>/16</code>, but the default subnet in each AZ is a <code>/20</code>.</p>
+<p>The default <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> has a <abbr title="Classless Inter-Domain Routing: a way to write IP ranges, like 10.0.0.0/16">CIDR</abbr> block of <code>/16</code>, but the default subnet in each <abbr title="Availability Zone: a separate data center within a cloud region">AZ</abbr> is a <code>/20</code>.</p>
 </li>
 <li>
-<p>Default VPC does get a subnet automatically (as well as an internet gateway).</p>
+<p>Default <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> does get a subnet automatically (as well as an internet gateway).</p>
 </li>
 <li>
-<p>While the default VPC automatically creates a subnet, while custom VPCs do not create a subnet. </p>
+<p>While the default <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> automatically creates a subnet, while custom VPCs do not create a subnet. </p>
 </li>
 <li>
-<p>With custom VPC, You do automatically get a security group, route table, and NACL.</p>
+<p>With custom <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>, You do automatically get a security group, route table, and <abbr title="Network Access Control List: stateless allow/deny rules at the subnet level">NACL</abbr>.</p>
 </li>
 <li>
-<p>A VPC endpoint can connect to S3 and DynamoDB, as well as a host of additional AWS services. It does not require an internet gateway or a VPN connection and does not route traffic over the public Internet.</p>
+<p>A <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> endpoint can connect to <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr> and DynamoDB, as well as a host of additional AWS services. It does not require an internet gateway or a <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> connection and does not route traffic over the public Internet.</p>
 </li>
 <li>
-<p>A VPC endpoint is a virtual device that provides redundancy via AWS (and automatically).</p>
+<p>A <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> endpoint is a virtual device that provides redundancy via AWS (and automatically).</p>
 </li>
 <li>
-<p>A VPC endpoint provides a connection over the Amazon network between your VPC and service, such as S3. This avoids leaving the network and routing over the public Internet, which inherently provides greater security for the traffic involved</p>
+<p>A <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> endpoint provides a connection over the Amazon network between your <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> and service, such as <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr>. This avoids leaving the network and routing over the public Internet, which inherently provides greater security for the traffic involved</p>
 </li>
 <li>
 <p>VPCs can peer with other VPCs, in the same account or different ones</p>
 </li>
 </ul>
-</div>
+</div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Network<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../aws/subnet/">Subnet →</a></p></li><li><p class="rn__kicker">Network<span class="rn__time"> · 10 min read</span></p><p class="rn__title"><a href="../../aws/route53/">Route 53 →</a></p></li></ul></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -11356,6 +11363,13 @@ as the main headline.
     };
     var s = document.querySelector("script[src*='giscus.app/client.js']");
     if (s) s.setAttribute("data-theme", themeFor());
+    // Giscus titles its frame "Comments" and Material turns every title into a floating tooltip,
+    // so move it to aria-label (screen readers still hear it, no stray tooltip)
+    var wrap = s && s.parentNode;
+    if (wrap) new MutationObserver(function (_, obs) {
+      var f = wrap.querySelector("iframe.giscus-frame[title]");
+      if (f) { f.setAttribute("aria-label", f.title); f.removeAttribute("title"); obs.disconnect(); }
+    }).observe(wrap, { childList: true, subtree: true });
     var ref = document.querySelector("[data-md-component=palette]");
     if (ref && !ref.dataset.giscusSync) {
       ref.dataset.giscusSync = "1";
@@ -11389,13 +11403,9 @@ as the main headline.
         
       </main>
       
-        <!-- Footer -->
-
-<!-- <footer class="md-footer">
-	<!-- Further information -->
-	<div class="md-footer-meta md-typeset">
-	  <div class="md-footer-meta__inner md-grid">
-		<div class="md-copyright">
+        <div class="md-footer-meta md-typeset">
+  <div class="md-footer-meta__inner md-grid">
+    <div class="md-copyright">
   
     <div class="md-copyright__highlight">
       Copyright &copy; 2026 Amarjit Singh Dhillon
@@ -11403,13 +11413,8 @@ as the main headline.
   
   
 </div>
-		<!-- Footer links -->
-		<!-- Social links -->
-		
-	  </div>
-	</div>
-	</div>
-  </footer> -->
+  </div>
+</div>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -11446,7 +11451,11 @@ as the main headline.
       
         <script src="../../javascripts/magnetic.js"></script>
       
+        <script src="../../javascripts/transitions.js"></script>
+      
         <script src="../../javascripts/hero.js"></script>
+      
+        <script src="../../javascripts/cosmos.js"></script>
       
         <script src="../../javascripts/totop.js"></script>
       

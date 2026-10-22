@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- browser tab icon: the planet mark on a navy tile -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd166"/><stop offset=".5" stop-color="#ff7eb6"/><stop offset="1" stop-color="#7ce7ff"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10123a"/><stop offset=".6" stop-color="#1f2170"/><stop offset="1" stop-color="#2b1150"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <g transform="translate(6 6) scale(.8125) rotate(-22 32 32)" fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round">
+    <path d="M5 32A27 8.5 0 0 1 59 32"/>
+    <circle cx="32" cy="32" r="14.5" fill="url(#g)" stroke="none"/>
+    <path d="M5 32A27 8.5 0 0 0 59 32"/>
+  </g>
+</svg>

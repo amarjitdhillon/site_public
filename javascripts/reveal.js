@@ -1,4 +1,4 @@
-// Scroll-reveal + reading progress for pages with `reveal: true` in their front matter.
+// Scroll-reveal + reading progress on every page (`reveal: false` in the front matter turns it off).
 // Re-runs after Material's instant navigation via document$.
 document$.subscribe(function () {
   var bar = document.getElementById("read-progress");

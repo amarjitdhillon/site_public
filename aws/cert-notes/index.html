@@ -22,10 +22,17 @@
         <link rel="next" href="../../azure/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.ico">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/images/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     <meta name="google-site-verification" content="UHLjtoO7DV30dx3hVhwTOIWguEUr_VzS41msmq-uYKA" />
+    <!-- PNG fallback for browsers without SVG favicons, and the iOS home-screen icon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
+    <meta name="theme-color" content="#10123a">
     
     <script type="application/ld+json">
         {
@@ -50,7 +57,7 @@
 
     
       
-        <title>AWS Cert Notes - Amar's TechSpace 🛸</title>
+        <title>AWS Cert Notes - Amar's TechSpace</title>
       
     
     
@@ -79,7 +86,7 @@
     
     
     
-  </head>
+  <meta property="og:type" content="article"><meta property="og:site_name" content="Amar&#x27;s TechSpace"><meta property="og:title" content="Cert Notes - Amar&#x27;s TechSpace"><meta property="og:description" content="Developer resources for Azure, AWS, K8S and more."><meta property="og:url" content="https://www.amarjitdhillon.com/aws/cert-notes/"><meta property="og:image" content="https://www.amarjitdhillon.com/assets/cards/aws/cert-notes.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Cert Notes - Amar&#x27;s TechSpace"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Cert Notes - Amar&#x27;s TechSpace"><meta name="twitter:description" content="Developer resources for Azure, AWS, K8S and more."><meta name="twitter:image" content="https://www.amarjitdhillon.com/assets/cards/aws/cert-notes.png"></head>
   
   
     
@@ -89,7 +96,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -112,9 +119,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Amar&#39;s TechSpace 🛸" class="md-header__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../.." title="Amar&#39;s TechSpace" class="md-header__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../assets/images/menu.png" alt="logo">
+  <img src="../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -124,9 +131,9 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Amar's TechSpace 🛸
-          </span>
+          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+            Amar's <b>TechSpace</b>
+          </a>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
@@ -144,7 +151,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -154,7 +161,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -512,12 +519,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Amar&#39;s TechSpace 🛸" class="md-nav__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../.." title="Amar&#39;s TechSpace" class="md-nav__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../assets/images/menu.png" alt="logo">
+  <img src="../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
-    Amar's TechSpace 🛸
+    Amar's TechSpace
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -2509,7 +2516,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.66 13.07c-1.74 0-3.16-1.41-3.16-3.14 0-.71.26-1.39.69-1.93-.42-.54-.69-1.22-.69-1.93 0-1.73 1.43-3.14 3.16-3.14l.43.03A3.15 3.15 0 0 1 12 1c1.31 0 2.44.81 2.91 1.96l.43-.03c1.73 0 3.16 1.41 3.16 3.14 0 .71-.26 1.39-.69 1.93.42.54.69 1.22.69 1.93 0 1.73-1.43 3.14-3.16 3.14l-.43-.03A3.15 3.15 0 0 1 12 15a3.15 3.15 0 0 1-2.91-1.96zM12 13c.62 0 1.12-.5 1.14-1.1l-.11-1.09c-.32.12-.67.19-1.03.19s-.7-.07-1-.19l-.14 1.09c.02.6.52 1.1 1.14 1.1m3.34-1.93c.63 0 1.16-.51 1.16-1.15 0-.42-.27-.84-.67-1.03l-.88-.42c-.12.74-.51 1.38-1.06 1.83l.81.57c.18.13.4.2.64.2m-.65-5.94-.82.56c.56.45.95 1.09 1.07 1.81l.88-.4c.41-.2.68-.6.68-1.03 0-.63-.53-1.14-1.16-1.14-.23 0-.45.07-.65.2M12 3c-.62 0-1.12.5-1.14 1.1L11 5.19c.3-.12.64-.19 1-.19s.71.07 1.03.19l.11-1.09C13.12 3.5 12.62 3 12 3M8.66 4.93c-.63 0-1.16.51-1.16 1.14 0 .43.27.83.67 1.03l.88.4c.12-.72.51-1.36 1.06-1.81l-.81-.56c-.18-.13-.4-.2-.64-.2M8.17 8.9c-.4.2-.67.6-.67 1.02 0 .63.53 1.14 1.16 1.14.23 0 .45-.06.65-.2l.81-.55c-.56-.45-.95-1.09-1.07-1.81zM12 22a9 9 0 0 1-9-9 9 9 0 0 1 9 9 9 9 0 0 1 9-9 9 9 0 0 1-9 9m2.44-2.44a7.04 7.04 0 0 0 4.12-4.12c-1.9.7-3.41 2.22-4.12 4.12m-9-4.12a7.04 7.04 0 0 0 4.12 4.12c-.7-1.9-2.22-3.41-4.12-4.12"/></svg>
   
   <span class="md-ellipsis">
-    Arch Continums
+    Arch Continuums
   </span>
   
 
@@ -3103,7 +3110,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"/></svg>
   
   <span class="md-ellipsis">
-    Elasti Cache
+    ElastiCache
   </span>
   
 
@@ -3540,7 +3547,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"/></svg>
   
   <span class="md-ellipsis">
-    Athnea
+    Athena
   </span>
   
 
@@ -5403,7 +5410,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12z"/></svg>
   
   <span class="md-ellipsis">
-    Read Replics
+    Read Replicas
   </span>
   
 
@@ -8494,7 +8501,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c-.89 2.18-1.43 3.61-2.42 5.73.61.64 1.35 1.39 2.56 2.24-1.3-.54-2.19-1.07-2.85-1.63C8 11 6.03 14.75 2 22c3.17-1.83 5.63-2.96 7.92-3.39-.1-.42-.16-.88-.15-1.36v-.1c.05-2.03 1.11-3.59 2.36-3.48 1.25.1 2.22 1.83 2.17 3.87-.01.38-.05.75-.12 1.09 2.26.44 4.69 1.56 7.82 3.37-.62-1.14-1.17-2.16-1.69-3.13-.81-.64-1.7-1.48-3.46-2.37 1.21.3 2.08.66 2.76 1.07C14.26 7.62 13.83 6.3 12 2"/></svg>
   
   <span class="md-ellipsis">
-    Cluster Architecutre
+    Cluster Architecture
   </span>
   
 
@@ -8863,7 +8870,7 @@
         
   
   <span class="md-ellipsis">
-    DeamonSet
+    DaemonSet
   </span>
   
 
@@ -8947,7 +8954,7 @@
         
   
   <span class="md-ellipsis">
-    Replia Set
+    ReplicaSet
   </span>
   
 
@@ -10695,24 +10702,24 @@ as the main headline.
 -->
 
 
-<!-- Markdown content (marker turns on scroll-reveal for pages with `reveal: true`) -->
-
-<h1 id="cert-notes">Cert Notes <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 10h5.5L14 4.5zM5 3h10l6 6v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2m0 2v14h14v-7h-7V5z"/></svg></span><a class="headerlink" href="#cert-notes" title="Link to this section">&para;</a></h1>
+<!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
+<span data-reveal-page hidden></span>
+<h1 id="cert-notes">Cert Notes <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 10h5.5L14 4.5zM5 3h10l6 6v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2m0 2v14h14v-7h-7V5z"/></svg></span><a class="headerlink" href="#cert-notes" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 12 min read</p>
 <h2 id="professional-architect">Professional Architect<a class="headerlink" href="#professional-architect" title="Link to this section">&para;</a></h2>
 <ul>
 <li>
-<p><code>Elastic Beanstalk</code> provides support for running Amazon RDS instances in your Elastic Beanstalk environment. <mark>This works great for development and testing environments, but is not ideal for a production environment</mark> because it ties the lifecycle of the database instance to the lifecycle of your application's environment.  If you terminate the environment, the database instance is terminated as well. An integrated database instance also cannot be removed from your environment once added.</p>
+<p><code>Elastic Beanstalk</code> provides support for running Amazon <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> instances in your Elastic Beanstalk environment. <mark>This works great for development and testing environments, but is not ideal for a production environment</mark> because it ties the lifecycle of the database instance to the lifecycle of your application's environment.  If you terminate the environment, the database instance is terminated as well. An integrated database instance also cannot be removed from your environment once added.</p>
 </li>
 <li>
 <p>The primary goal of caching is typically to offload reads from your database or other primary data source. In most apps, you have hot spots of data that are regularly queried, but only updated periodically. Think of the front page of a blog or news site, or the top 100 leaderboard in an online game. In this type of case, your app can receive dozens, hundreds, or even thousands of requests for the same data before it's updated again. Having your caching layer handle these queries has several advantages. First, it's considerably cheaper to add an in-memory cache than to scale up to a larger database cluster. Second, an in-memory cache is also easier to scale out, because it's easier to distribute an in-memory cache horizontally than a relational database.</p>
 </li>
 <li>
-<p>The <code>EBS-Optimized throughput</code> limits the total IOPS that can be utilized, so using an <code>EBS-Optimized instance</code> that provides larger throughput would help increase the total random I/O performance. By using an instance type that supports higher EBS-Optimized throughput, we can  utilize the increased number of EBS volumes and achieve the desired IOPS performance.</p>
+<p>The <code>EBS-Optimized throughput</code> limits the total <abbr title="Input/Output Operations Per Second: a measure of disk speed">IOPS</abbr> that can be utilized, so using an <code>EBS-Optimized instance</code> that provides larger throughput would help increase the total random I/O performance. By using an instance type that supports higher <abbr title="Elastic Block Store: disks you attach to EC2 servers">EBS</abbr>-Optimized throughput, we can  utilize the increased number of <abbr title="Elastic Block Store: disks you attach to EC2 servers">EBS</abbr> volumes and achieve the desired <abbr title="Input/Output Operations Per Second: a measure of disk speed">IOPS</abbr> performance.</p>
 </li>
 <li>
-<p>Volume gateway provides an iSCSI target, which enables you to create volumes and mount them as iSCSI devices from your on-premises application servers. The volume gateway runs in either a cached or stored mode. In either mode, you can take point-in-time snapshots of your volumes and store them in Amazon S3, enabling you to make space-efficient versioned copies of your volumes for data protection and various data reuse needs. </p>
+<p>Volume gateway provides an iSCSI target, which enables you to create volumes and mount them as iSCSI devices from your on-premises application servers. The volume gateway runs in either a cached or stored mode. In either mode, you can take point-in-time snapshots of your volumes and store them in Amazon <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr>, enabling you to make space-efficient versioned copies of your volumes for data protection and various data reuse needs. </p>
 <ol>
-<li>In the <code>cached mode</code>, your primary data is written to S3, while you retain some portion of it locally in a cache for frequently accessed data.</li>
+<li>In the <code>cached mode</code>, your primary data is written to <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr>, while you retain some portion of it locally in a cache for frequently accessed data.</li>
 <li>In the <code>stored mode</code>, your primary data is stored locally and your entire dataset is available for low-latency access while asynchronously backed up to AWS.</li>
 </ol>
 </li>
@@ -10720,65 +10727,65 @@ as the main headline.
 <p><em>Stateless instances</em> are ideal for scalability since they don't maintain any session information. If one instance fails, users can be directed to another instance without any disruption.</p>
 </li>
 <li>
-<p>The AWS GovCloud (US) Region authentication is completely isolated from Amazon.com. <mark>If the organization is planning to host on EC2 in AWS GovCloud then it will be billed to standard AWS account of organization since AWS GovCloud billing is linked with the standard AWS account and is NOT billed separately.</mark></p>
+<p>The AWS GovCloud (US) Region authentication is completely isolated from Amazon.com. <mark>If the organization is planning to host on <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> in AWS GovCloud then it will be billed to standard AWS account of organization since AWS GovCloud billing is linked with the standard AWS account and is NOT billed separately.</mark></p>
 </li>
 <li>
 <p>In <code>Amazon ElastiCache</code>, in-memory caching improves application performance by storing critical pieces of data in memory for low-latency access. Cached information may include the results of I/O-intensive database queries or the results of computationally intensive calculations.</p>
 </li>
 <li>
-<p><code>Provisioned IOPS</code> volumes are designed to meet the needs of I/O-intensive workloads, particularly database workloads that are sensitive to storage performance and consistency in random access I/O throughput. Provisioned IOPS volumes are designed to meet the needs of I/O-intensive workloads, particularly database workloads, that are sensitive to storage performance and consistency in random access I/O throughput business applications, database workloads, <mark>such as MongoDB, RDBMS</mark></p>
+<p><code>Provisioned IOPS</code> volumes are designed to meet the needs of I/O-intensive workloads, particularly database workloads that are sensitive to storage performance and consistency in random access I/O throughput. Provisioned <abbr title="Input/Output Operations Per Second: a measure of disk speed">IOPS</abbr> volumes are designed to meet the needs of I/O-intensive workloads, particularly database workloads, that are sensitive to storage performance and consistency in random access I/O throughput business applications, database workloads, <mark>such as MongoDB, RDBMS</mark></p>
 </li>
 <li>
-<p><code>As-describe-launch-configs</code> describes all the launch config parameters created by the AWS account in the specified region. Generally, it returns values, such as Launch Config name, Instance Type and AMI ID. If the user wants additional parameters, such as the IAM Profile used in the config, he has to run command:</p>
+<p><code>As-describe-launch-configs</code> describes all the launch config parameters created by the AWS account in the specified region. Generally, it returns values, such as Launch Config name, Instance Type and <abbr title="Amazon Machine Image: a template used to launch EC2 servers">AMI</abbr> ID. If the user wants additional parameters, such as the <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr> Profile used in the config, he has to run command:</p>
 <div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">as-describe-launch-configs –show-long</span>
 </code></pre></div>
 </li>
 <li>
-<p>Amazon EC2 uses an instance profile as a container for an IAM role. When you create an IAM role using the console, the console creates an instance profile automatically and gives it the same name as the role it corresponds to. If you use the AWS CLI, API, or an AWS SDK to create a role, you create the role and instance profile as separate actions, and you might give them different names.</p>
+<p>Amazon <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> uses an instance profile as a container for an <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr> role. When you create an <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr> role using the console, the console creates an instance profile automatically and gives it the same name as the role it corresponds to. If you use the AWS <abbr title="Command Line Interface: controlling a tool by typing commands">CLI</abbr>, <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr>, or an AWS <abbr title="Software Development Kit: libraries for calling a service from code">SDK</abbr> to create a role, you create the role and instance profile as separate actions, and you might give them different names.</p>
 </li>
 <li>
-<p>The Condition element in IAM (or Condition block) lets you specify conditions for when a policy is in effect. <mark>The Condition element is optional.</mark></p>
+<p>The Condition element in <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr> (or Condition block) lets you specify conditions for when a policy is in effect. <mark>The Condition element is optional.</mark></p>
 </li>
 <li>
-<p>Only one role can be assigned to an EC2 instance at a time, and all applications on the instance share the same role and permissions.</p>
+<p>Only one role can be assigned to an <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instance at a time, and all applications on the instance share the same role and permissions.</p>
 </li>
 <li>
-<p>When using string conditions within IAM, short versions of the available comparators can be used instead of the more verbose versions. For instance, <code>streqi</code> is the short version of <code>StringEqualsIgnoreCase</code> that checks for the exact match between two strings ignoring their case.</p>
+<p>When using string conditions within <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr>, short versions of the available comparators can be used instead of the more verbose versions. For instance, <code>streqi</code> is the short version of <code>StringEqualsIgnoreCase</code> that checks for the exact match between two strings ignoring their case.</p>
 </li>
 <li>
-<p>Attempts, one of the three types of items associated with a schedule pipeline in AWS Data Pipeline, provides robust data management. AWS Data Pipeline retries a failed operation. It continues to do so until the task reaches the maximum number of allowed retry attempts. Attempt objects track the various attempts, results, and failure reasons if applicable. Essentially, it is the instance with a counter. AWS Data Pipeline performs retries using the same resources from the previous attempts, such as Amazon EMR clusters and EC2 instances.</p>
+<p>Attempts, one of the three types of items associated with a schedule pipeline in AWS Data Pipeline, provides robust data management. AWS Data Pipeline retries a failed operation. It continues to do so until the task reaches the maximum number of allowed retry attempts. Attempt objects track the various attempts, results, and failure reasons if applicable. Essentially, it is the instance with a counter. AWS Data Pipeline performs retries using the same resources from the previous attempts, such as Amazon EMR clusters and <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instances.</p>
 </li>
 <li>
 <p>AWS Data Pipeline is a web service that helps you reliably process and move data between different AWS compute and storage services as well as on premise data sources at specified intervals. With AWS Data Pipeline, you can regularly access your data where it's stored, transform and process it at scale, and efficiently transfer the results to another AWS. AWS Data Pipeline helps you easily create complex data processing workloads that are fault tolerant, repeatable, and highly available. AWS Data Pipeline also allows you to move and process data that was previously locked up in on premise data silos.</p>
 </li>
 <li>
-<p>AWS Direct Connect itself has no specific resources for you to control access to. Therefore, there are no AWS Direct Connect ARNs for you to use in an IAM policy. You use an asterisk (*) as the resource when writing a policy to control access to AWS Direct Connect actions.</p>
+<p>AWS Direct Connect itself has no specific resources for you to control access to. Therefore, there are no AWS Direct Connect ARNs for you to use in an <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr> policy. You use an asterisk (*) as the resource when writing a policy to control access to AWS Direct Connect actions.</p>
 </li>
 <li>
 <p>A <code>task runner</code> is an <mark>application that polls AWS Data Pipeline</mark> for tasks and then performs those tasks. You can either use Task Runner as provided by <code>AWS Data Pipeline</code>, or create a custom Task Runner application.</p>
 </li>
 <li>
-<p>Regardless of how your Lambda function is invoked, AWS Lambda always executes the function. At the time you create a Lambda function, you specify an IAM role that AWS Lambda can assume to execute your Lambda function on your behalf. This role is also referred to as the <code>execution role</code>.</p>
+<p>Regardless of how your Lambda function is invoked, AWS Lambda always executes the function. At the time you create a Lambda function, you specify an <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr> role that AWS Lambda can assume to execute your Lambda function on your behalf. This role is also referred to as the <code>execution role</code>.</p>
 </li>
 <li>
-<p>Within an IAM policy, <code>IfExists</code> can be added to the end of <em>any condition operator except the Null condition</em>. It can be used to indicate that conditional comparison needs to happen if the policy key is present in the context of a request; otherwise, it can be ignored.</p>
+<p>Within an <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr> policy, <code>IfExists</code> can be added to the end of <em>any condition operator except the Null condition</em>. It can be used to indicate that conditional comparison needs to happen if the policy key is present in the context of a request; otherwise, it can be ignored.</p>
 </li>
 <li>
-<p>A <code>service account</code> is a special Google account that can be used by applications to access Google services programmatically. This account belongs to your application or a virtual machine (VM), instead of to an individual end user. Your application uses the service account to call the Google API of a service, so that the users aren't directly involved.</p>
+<p>A <code>service account</code> is a special Google account that can be used by applications to access Google services programmatically. This account belongs to your application or a virtual machine (VM), instead of to an individual end user. Your application uses the service account to call the Google <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> of a service, so that the users aren't directly involved.</p>
 </li>
 <li>
-<p>Currently the <em>STS API</em> command <code>GetSessionToken</code> is available to every IAM user in your account without previous permission. In contrast, the <code>GetFederationToken</code> command is restricted and explicit permissions need to be granted so a user can issue calls to this particular Action.</p>
+<p>Currently the <em>STS <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr></em> command <code>GetSessionToken</code> is available to every <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr> user in your account without previous permission. In contrast, the <code>GetFederationToken</code> command is restricted and explicit permissions need to be granted so a user can issue calls to this particular Action.</p>
 </li>
 <li>
-<p><em>Example for RDS</em>: Each DB subnet group should have subnets in at least two Availability Zones in a given region. If the RDS instance is required to be accessible from the internet the organization must enable the VPC attributes, DNS hostnames and DNS resolution. For each RDS DB instance that the user runs in a VPC, he should reserve at least one address in each subnet in the DB subnet group for use by Amazon RDS for recovery actions.</p>
+<p><em>Example for <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr></em>: Each DB subnet group should have subnets in at least two Availability Zones in a given region. If the <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> instance is required to be accessible from the internet the organization must enable the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> attributes, <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> hostnames and <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> resolution. For each <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> DB instance that the user runs in a <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>, he should reserve at least one address in each subnet in the DB subnet group for use by Amazon <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> for recovery actions.</p>
 </li>
 <li>
-<p>If you create a VPN connection, you must specify the type of routing that you plan to use, which will depend upon on the make and model of your VPN devices. If your VPN device supports Border Gateway Protocol (BGP), you need to specify <code>dynamic routing</code> when you configure your VPN connection. If your device does not support BGP, you should specify <code>static routing</code>.</p>
+<p>If you create a <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> connection, you must specify the type of routing that you plan to use, which will depend upon on the make and model of your <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> devices. If your <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> device supports Border Gateway Protocol (BGP), you need to specify <code>dynamic routing</code> when you configure your <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> connection. If your device does not support BGP, you should specify <code>static routing</code>.</p>
 </li>
 <li>
-<p>EC2 allows the user to launch On-Demand instances. If the organization is using an application temporarily only for demo purposes the best way to assign an elastic IP would be:</p>
+<p><abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> allows the user to launch On-Demand instances. If the organization is using an application temporarily only for demo purposes the best way to assign an elastic IP would be:</p>
 <ol>
-<li>Launch an instance with a VPC and assign an EIP to the primary network interface. This way on every instance start it will have the same IP</li>
+<li>Launch an instance with a <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> and assign an EIP to the primary network interface. This way on every instance start it will have the same IP</li>
 <li>Create a bootstrapping script and provide it some metadata, such as user data which can be used to assign an EIP</li>
 <li>Create a controller instance which can schedule the start and stop of the instance and provide an EIP as a parameter so that the controller instance can check the instance boot and assign an EIP The instance metadata gives the current instance data, such as the public/private IP. It can be of no use for assigning an EIP.</li>
 </ol>
@@ -10790,31 +10797,31 @@ as the main headline.
 <p>A task runner is an application that <code>polls AWS Data Pipeline</code> for tasks and then performs those tasks. You can either use Task Runner as provided by AWS Data Pipeline, or create a custom Task Runner application.</p>
 </li>
 <li>
-<p>Within an IAM policy, IfExists can be added to the <strong>end of any condition operator except the Null condition</strong>. It can be used to indicate that conditional comparison needs to happen if the policy key is present in the context of a request; otherwise, it can be ignored.</p>
+<p>Within an <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr> policy, IfExists can be added to the <strong>end of any condition operator except the Null condition</strong>. It can be used to indicate that conditional comparison needs to happen if the policy key is present in the context of a request; otherwise, it can be ignored.</p>
 </li>
 <li>
-<p>Currently the STS API command <code>GetSessionToken</code> is available to every IAM user in your account without previous permission.</p>
+<p>Currently the STS <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> command <code>GetSessionToken</code> is available to every <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr> user in your account without previous permission.</p>
 </li>
 <li>
-<p>If you launch an instance into a VPC that has an instance tenancy of dedicated, your instance is automatically a Dedicated instance, regardless of the tenancy of the instance. This is because when you launch an instance into a VPC, the instance tenancy attribute of the VPC determines whether the instance is a Dedicated instance or a Shared tenancy instance. If the VPC has an instance tenancy of dedicated, then all instances launched into the VPC are automatically Dedicated instances, regardless of the tenancy of the instance.</p>
+<p>If you launch an instance into a <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> that has an instance tenancy of dedicated, your instance is automatically a Dedicated instance, regardless of the tenancy of the instance. This is because when you launch an instance into a <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>, the instance tenancy attribute of the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> determines whether the instance is a Dedicated instance or a Shared tenancy instance. If the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> has an instance tenancy of dedicated, then all instances launched into the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> are automatically Dedicated instances, regardless of the tenancy of the instance.</p>
 </li>
 <li>
 <p>Direct Connect link cannot be connected to the Internet directly.</p>
 </li>
 <li>
-<p>The CIDR block of a subnet can be the same as the CIDR block for the VPC (for a single subnet in the VPC), or a subset of the CIDR block for the VPC (to create multiple subnets in the VPC). </p>
+<p>The <abbr title="Classless Inter-Domain Routing: a way to write IP ranges, like 10.0.0.0/16">CIDR</abbr> block of a subnet can be the same as the <abbr title="Classless Inter-Domain Routing: a way to write IP ranges, like 10.0.0.0/16">CIDR</abbr> block for the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> (for a single subnet in the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>), or a subset of the <abbr title="Classless Inter-Domain Routing: a way to write IP ranges, like 10.0.0.0/16">CIDR</abbr> block for the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr> (to create multiple subnets in the <abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>). </p>
 </li>
 <li>
-<p>Using IAM roles to grant permissions to applications that run on EC2 instances requires a bit of extra configuration. Because role credentials are temporary and rotated automatically, you don't have to manage credentials, and you don't have to worry about long-term security risks.</p>
+<p>Using <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr> roles to grant permissions to applications that run on <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instances requires a bit of extra configuration. Because role credentials are temporary and rotated automatically, you don't have to manage credentials, and you don't have to worry about long-term security risks.</p>
 </li>
 <li>
-<p><code>RAID 1+0 (RAID 10)</code> doubles the amount of I/O required from the instance to EBS compared to RAID 0, because you're mirroring all writes to a pair of volumes, limiting how much you can stripe.</p>
+<p><code>RAID 1+0 (RAID 10)</code> doubles the amount of I/O required from the instance to <abbr title="Elastic Block Store: disks you attach to EC2 servers">EBS</abbr> compared to RAID 0, because you're mirroring all writes to a pair of volumes, limiting how much you can stripe.</p>
 </li>
 <li>
 <p>A silent push notification is a push message that is received by your application on a user's device that will not be seen by the user.</p>
 </li>
 <li>
-<p>When using Numeric Conditions within IAM, short versions of the available comparators can be used instead of the more verbose versions. For instance, <code>numIteq</code> is the short version of <code>NumericLessThanEquals</code>.</p>
+<p>When using Numeric Conditions within <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr>, short versions of the available comparators can be used instead of the more verbose versions. For instance, <code>numIteq</code> is the short version of <code>NumericLessThanEquals</code>.</p>
 </li>
 <li>
 <p>To enable running activities using on-premise resources, AWS Data Pipeline does the following: It supply a <code>Task Runner package</code> that can be installed on your on- premise hosts. This package continuously polls the AWS Data Pipeline service for work to perform. When it's time to run a particular activity on your on-premise resources, it will issue the appropriate command to the Task Runner.</p>
@@ -10823,16 +10830,16 @@ as the main headline.
 <p>The <code>NotAction element</code> lets you <mark>specify an exception</mark> to a list of actions.</p>
 </li>
 <li>
-<p><code>aws:MultiFactorAuthAge</code> is one of the predefined keys provided by AWS that can be included within a Condition element of an IAM policy. The key allows to check how long ago (in seconds) the MFA-validated security credentials making the request were issued using Multi-Factor Authentication (MFA).</p>
+<p><code>aws:MultiFactorAuthAge</code> is one of the predefined keys provided by AWS that can be included within a Condition element of an <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr> policy. The key allows to check how long ago (in seconds) the <abbr title="Multi-Factor Authentication: a second proof of identity beyond the password">MFA</abbr>-validated security credentials making the request were issued using Multi-Factor Authentication (<abbr title="Multi-Factor Authentication: a second proof of identity beyond the password">MFA</abbr>).</p>
 </li>
 <li>
-<p>If a user is trying to enable PIOPS with MySQL RDS, the minimum size of storage should be 100 GB and the minimum PIOPS should be <code>1000</code>.</p>
+<p>If a user is trying to enable PIOPS with MySQL <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr>, the minimum size of storage should be 100 GB and the minimum PIOPS should be <code>1000</code>.</p>
 </li>
 <li>
-<p>RAID 5 and RAID 6 are not recommended for Amazon EBS because the parity write operations of these RAID modes consume some of the IOPS available to your volumes.</p>
+<p>RAID 5 and RAID 6 are not recommended for Amazon <abbr title="Elastic Block Store: disks you attach to EC2 servers">EBS</abbr> because the parity write operations of these RAID modes consume some of the <abbr title="Input/Output Operations Per Second: a measure of disk speed">IOPS</abbr> available to your volumes.</p>
 </li>
 <li>
-<p>Amazon ElastiCache cache security groups are only applicable to cache clusters that are not running in an Amazon Virtual Private Cloud environment (VPC).</p>
+<p>Amazon ElastiCache cache security groups are only applicable to cache clusters that are not running in an Amazon Virtual Private Cloud environment (<abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>).</p>
 </li>
 <li>
 <p>Task runners call <code>PollForTask</code> to <mark>receive a task</mark> to perform from AWS Data Pipeline. If tasks are ready in the <code>work queue</code>, PollForTask returns a response immediately. If no tasks are available in the queue, PollForTask uses <em>long-polling</em> and holds on to a poll connection for up to 90 seconds, during which time any newly scheduled tasks are handed to the task agent</p>
@@ -10845,10 +10852,10 @@ as the main headline.
 </ol>
 </li>
 <li>
-<p>For CloudHSM, you launch an Amazon EC2 Client Instance to connect to cloud HSM. To connect to the EC2 instance you need either port 22(SSH) or 3389(RDP) open.</p>
+<p>For CloudHSM, you launch an Amazon <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> Client Instance to connect to cloud HSM. To connect to the <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instance you need either port 22(SSH) or 3389(RDP) open.</p>
 </li>
 <li></li>
-</ul>
+</ul><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Misc<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../aws/failover/">HA and DR →</a></p></li><li><p class="rn__kicker">Misc<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../aws/autoScaling/">Auto Scaling →</a></p></li></ul></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10891,6 +10898,13 @@ as the main headline.
     };
     var s = document.querySelector("script[src*='giscus.app/client.js']");
     if (s) s.setAttribute("data-theme", themeFor());
+    // Giscus titles its frame "Comments" and Material turns every title into a floating tooltip,
+    // so move it to aria-label (screen readers still hear it, no stray tooltip)
+    var wrap = s && s.parentNode;
+    if (wrap) new MutationObserver(function (_, obs) {
+      var f = wrap.querySelector("iframe.giscus-frame[title]");
+      if (f) { f.setAttribute("aria-label", f.title); f.removeAttribute("title"); obs.disconnect(); }
+    }).observe(wrap, { childList: true, subtree: true });
     var ref = document.querySelector("[data-md-component=palette]");
     if (ref && !ref.dataset.giscusSync) {
       ref.dataset.giscusSync = "1";
@@ -10924,13 +10938,9 @@ as the main headline.
         
       </main>
       
-        <!-- Footer -->
-
-<!-- <footer class="md-footer">
-	<!-- Further information -->
-	<div class="md-footer-meta md-typeset">
-	  <div class="md-footer-meta__inner md-grid">
-		<div class="md-copyright">
+        <div class="md-footer-meta md-typeset">
+  <div class="md-footer-meta__inner md-grid">
+    <div class="md-copyright">
   
     <div class="md-copyright__highlight">
       Copyright &copy; 2026 Amarjit Singh Dhillon
@@ -10938,13 +10948,8 @@ as the main headline.
   
   
 </div>
-		<!-- Footer links -->
-		<!-- Social links -->
-		
-	  </div>
-	</div>
-	</div>
-  </footer> -->
+  </div>
+</div>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -10981,7 +10986,11 @@ as the main headline.
       
         <script src="../../javascripts/magnetic.js"></script>
       
+        <script src="../../javascripts/transitions.js"></script>
+      
         <script src="../../javascripts/hero.js"></script>
+      
+        <script src="../../javascripts/cosmos.js"></script>
       
         <script src="../../javascripts/totop.js"></script>
       

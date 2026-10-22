@@ -96,14 +96,21 @@
 
   /* General Colors */
 
-	--md-primary-fg-color:        #1e61f0;
-	--md-primary-fg-color--light: #ECB7B7;
-	--md-primary-fg-color--dark:  #0f4f73;
-  --md-accent-fg-color:         #2f1761;
+  /* Brand palette: the navy of the hero, violet for links, pink for hover. Same colors as the hero and effects */
+	--md-primary-fg-color:        #1f2170;
+	--md-primary-fg-color--light: #5b5bf7;
+	--md-primary-fg-color--dark:  #10123a;
+  --md-primary-bg-color:        #fff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, .75);
+  --md-accent-fg-color:         #d6336c;
+  --md-accent-fg-color--transparent: rgba(214, 51, 108, .1);
   --md-accent-bg-color:         #fff;
   --md-accent-bg-color--light:  #f5d9e1;
-  --banner-bg-color: #2f1761;
-  --md-footer-bg-color: #2f1761;
+  --md-typeset-a-color:         #4b45d6;
+  --brand-navy: linear-gradient(90deg, #10123a 0%, #1f2170 55%, #2b1150 100%);
+  --brand-grad: linear-gradient(90deg, #ffd166, #ff7eb6 50%, #7ce7ff);
+  --banner-bg-color: #10123a;
+  --md-footer-bg-color: #10123a;
   --md-footer-fg-color--lighter: #c9c2f5;
   --heading-color: #3d3d3d;
   --boxes-background: #f3f3f3;
@@ -145,7 +152,7 @@
 
   /* Fonts */
 
-  --md-text-font: "IBM Plex Sans", Arial, sans-serif;
+  --md-text-font: "Inter", "IBM Plex Sans", Arial, sans-serif; /* Inter pairs with the Space Grotesk titles */
   --md-text-code: "IBM Plex Mono", monospace;
   }
 
@@ -164,7 +171,7 @@
 }
 
 .md-footer {
-  background-color: var(--md-accent-fg-color);
+  background: var(--brand-navy);
 }
 
 .md-typeset ol li::marker {
@@ -1260,3 +1267,154 @@ table code {
 .claps__plus { position: absolute; left: 50%; top: -.2rem; font-size: .75rem; font-weight: 800; color: #ff7eb6; pointer-events: none; animation: clap-plus .9s cubic-bezier(.16, 1, .3, 1) forwards }
 @keyframes clap-plus { from { opacity: 1; transform: translate(-50%, 0) } to { opacity: 0; transform: translate(-50%, -1.6rem) } }
 .claps__text { font-size: .72rem; color: var(--md-default-fg-color--light) }
+
+/* ---------- Brand header: navy bar that flows into the hero, wordmark + planet mark ---------- */
+.md-header, .md-tabs { background: var(--brand-navy); color: #fff }
+.md-tabs { box-shadow: inset 0 -1px rgba(255, 255, 255, .08) }
+.md-header--shadow { box-shadow: 0 0 .2rem rgba(0, 0, 0, .1), 0 .2rem .6rem rgba(16, 18, 58, .35) }
+.md-header__button.md-logo { padding: .2rem } .md-header__button.md-logo img { height: 2.3rem; transition: transform .9s cubic-bezier(.16, 1, .3, 1) }
+.md-header__button.md-logo:hover img { transform: rotate(-18deg) scale(1.08) }
+.md-header__title .wordmark { font-weight: 600; letter-spacing: -.01em; font-size: 1rem }
+.md-header__title .wordmark b {
+  font-weight: 800;
+  background: var(--brand-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.md-tabs__link { position: relative; transition: color .3s, opacity .3s }
+.md-tabs__link:hover { color: #ffd166; opacity: 1 }
+.md-tabs__item--active .md-tabs__link { opacity: 1 }
+.md-tabs__item--active .md-tabs__link::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -.35rem; height: 2px;
+  border-radius: 2px; background: var(--brand-grad);
+}
+.md-search__form { background: rgba(255, 255, 255, .1) }
+.md-search__form:hover { background: rgba(255, 255, 255, .16) }
+
+/* dark mode: lighter link and hover colors so they read on the dark background */
+[data-md-color-scheme="slate"] {
+  /* deep navy instead of Material's grey, so pages match the header and hero */
+  --md-hue: 236;
+  --md-default-fg-color:          hsla(236, 30%, 92%, .86);
+  --md-default-fg-color--light:   hsla(236, 25%, 88%, .6);
+  --md-default-fg-color--lighter: hsla(236, 25%, 88%, .34);
+  --md-default-fg-color--lightest: hsla(236, 25%, 88%, .12);
+  --md-default-bg-color:          hsla(236, 38%, 10%, 1);
+  --md-default-bg-color--light:   hsla(236, 38%, 10%, .54);
+  --md-default-bg-color--lighter: hsla(236, 38%, 10%, .26);
+  --md-default-bg-color--lightest: hsla(236, 38%, 10%, .07);
+  --md-code-bg-color:             hsla(236, 32%, 15%, 1);
+  --md-code-fg-color:             hsla(236, 25%, 88%, .86);
+  --md-admonition-bg-color:       hsla(236, 32%, 13%, 1);
+  --md-footer-bg-color--dark:     #0b0c22;
+  --md-typeset-a-color: #a5a3ff;
+  --md-accent-fg-color: #ff7eb6;
+  --md-accent-fg-color--transparent: rgba(255, 126, 182, .12);
+}
+@media screen and (min-width: 76.25em) {
+  /* keep the wordmark right next to the planet */
+  [dir="ltr"] .md-header__button.md-logo { margin-right: 0; padding-right: .1rem }
+  [dir="ltr"] .md-header__title { margin-left: .1rem }
+}
+
+/* dark mode buttons: the navy primary vanishes on the dark background, so use violet */
+[data-md-color-scheme="slate"] .md-typeset .md-button { color: #a5a3ff; border-color: #a5a3ff }
+[data-md-color-scheme="slate"] .md-typeset .md-button--primary { background-color: #5b5bf7; border-color: #5b5bf7; color: #fff }
+[data-md-color-scheme="slate"] .md-typeset .md-button:is(:hover, :focus) { background-color: #ff7eb6; border-color: #ff7eb6; color: #10123a }
+
+/* ---------- Fonts: Inter for reading text, Space Grotesk for titles, wordmark, tabs and big numbers ---------- */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../assets/fonts/inter-latin-wght-normal.woff2") format("woff2-variations"),
+       url("../assets/fonts/inter-latin-wght-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../assets/fonts/inter-latin-wght-italic.woff2") format("woff2-variations"),
+       url("../assets/fonts/inter-latin-wght-italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url("../assets/fonts/space-grotesk-latin-wght.woff2") format("woff2-variations"),
+       url("../assets/fonts/space-grotesk-latin-wght.woff2") format("woff2");
+}
+:root { --brand-display: "Space Grotesk", "Inter", Arial, sans-serif }
+.md-typeset :is(h1, h2, h3, h4),
+.md-header__title, .md-tabs__link, .md-nav__title,
+.hero h1, .hero__pill,
+.md-typeset .about-hero__name, .md-typeset .bento__tile h3,
+.bento__big, .about-stat__num, .home-lead {
+  font-family: var(--brand-display);
+}
+.md-typeset h1 { font-weight: 700; letter-spacing: -.025em }
+.md-typeset :is(h2, h3) { font-weight: 600; letter-spacing: -.015em }
+.md-tabs__link { font-weight: 500; letter-spacing: .01em }
+.md-header__title .wordmark { font-weight: 500 }
+.md-header__title .wordmark b { font-weight: 700 }
+
+/* dark mode surfaces: cards and tiles sit a step lighter than the page, with a faint violet edge */
+[data-md-color-scheme="slate"] .md-typeset :is(.grid.cards > ul > li, .bento__tile, details.proj, a.cert-tile, .admonition, details) {
+  background-color: hsla(236, 32%, 14%, 1);
+  border-color: rgba(165, 163, 255, .14);
+}
+[data-md-color-scheme="slate"] .md-typeset .bento--hero { border: 1px solid rgba(165, 163, 255, .18) }
+[data-md-color-scheme="slate"] .md-typeset :is(table:not([class]), .tabbed-labels) { border-color: rgba(165, 163, 255, .14) }
+[data-md-color-scheme="slate"] .md-typeset h1 { color: #fff }
+
+/* ---------- Page transitions (javascripts/transitions.js): new page fades in and slides up ---------- */
+@keyframes page-in { from { opacity: 0; transform: translateY(32px) } to { opacity: 1; transform: none } }
+@keyframes page-in-side { from { opacity: 0 } to { opacity: 1 } }
+.page-in .md-content { animation: page-in 1.8s cubic-bezier(.16, 1, .3, 1) both }
+.page-in .md-sidebar--secondary { animation: page-in-side 1.8s cubic-bezier(.16, 1, .3, 1) both }
+
+/* ---------- Reading time + "Keep exploring" cards (hooks/read_next.py): 2 compact cards side by side ---------- */
+.md-typeset .readtime { margin: -.6rem 0 1.2rem; font-size: .72rem; color: var(--md-default-fg-color--light); letter-spacing: .01em }
+.md-typeset .read-next__title { margin-top: 2.6rem; font-size: 1.2rem }
+.md-typeset .grid.cards.read-next > ul { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+@media screen and (max-width: 44.9375em) { .md-typeset .grid.cards.read-next > ul { grid-template-columns: 1fr } }
+.md-typeset .read-next > ul > li { position: relative; padding: .55rem .9rem !important }
+.md-typeset .read-next li p { margin: 0 }
+.md-typeset .read-next .rn__kicker { font-size: .58rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #d6336c }
+.md-typeset .read-next .rn__time { font-weight: 400; letter-spacing: .02em; text-transform: none; color: var(--md-default-fg-color--light) }
+.md-typeset .read-next .rn__title { margin-top: .1rem; font-family: var(--brand-display); font-size: .82rem; font-weight: 600 }
+.md-typeset .read-next .rn__title a { color: var(--md-default-fg-color) }
+.md-typeset .read-next .rn__title a::after { content: ""; position: absolute; inset: 0 } /* whole card is the link */
+.md-typeset .read-next li:hover .rn__title a { color: var(--md-typeset-a-color) }
+[data-md-color-scheme="slate"] .md-typeset .read-next .rn__kicker { color: #ffd166 }
+
+/* ---------- Diagram frames: every diagram-sized image (lightbox marks them .lb-zoom) sits in a rounded card.
+   Dark mode tones the bright white down a little; hover brings it back to full brightness ---------- */
+.md-typeset img.lb-zoom:not(:is(.grid, .proof, .featured, .bento, .about-hero) img) {
+  box-sizing: border-box;
+  padding: .45rem;
+  border-radius: .7rem;
+  background: #fff;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  box-shadow: 0 6px 24px rgba(16, 18, 58, .08);
+  transition: filter .5s cubic-bezier(.16, 1, .3, 1), box-shadow .5s cubic-bezier(.16, 1, .3, 1);
+}
+[data-md-color-scheme="slate"] .md-typeset img.lb-zoom:not(:is(.grid, .proof, .featured, .bento, .about-hero) img) {
+  border-color: rgba(165, 163, 255, .28);
+  box-shadow: 0 0 0 1px rgba(165, 163, 255, .08), 0 10px 36px rgba(91, 91, 247, .22);
+  filter: brightness(.9) saturate(.95);
+}
+[data-md-color-scheme="slate"] .md-typeset img.lb-zoom:not(:is(.grid, .proof, .featured, .bento, .about-hero) img):hover {
+  filter: none;
+  box-shadow: 0 0 0 1px rgba(165, 163, 255, .2), 0 12px 44px rgba(91, 91, 247, .35);
+}
+
+/* ---------- Blog page: RSS subscribe button (tools/section_bentos.py) ---------- */
+.md-typeset .blog-rss { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .8rem; margin: -.4rem 0 1.2rem }
+.md-typeset .blog-rss .md-button { margin: 0; padding: .4em 1.1em; border-radius: .5rem; font-size: .72rem }
+.md-typeset .blog-rss span { font-size: .7rem; color: var(--md-default-fg-color--light) }
+.md-header__title a.wordmark { color: inherit; display: block } /* the wordmark links home, like the planet */

@@ -22,10 +22,17 @@
         <link rel="next" href="../redshift/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.ico">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/images/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     <meta name="google-site-verification" content="UHLjtoO7DV30dx3hVhwTOIWguEUr_VzS41msmq-uYKA" />
+    <!-- PNG fallback for browsers without SVG favicons, and the iOS home-screen icon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
+    <meta name="theme-color" content="#10123a">
     
     <script type="application/ld+json">
         {
@@ -50,7 +57,7 @@
 
     
       
-        <title>RDS - Amar's TechSpace 🛸</title>
+        <title>RDS - Amar's TechSpace</title>
       
     
     
@@ -79,7 +86,7 @@
     
     
     
-  </head>
+  <meta property="og:type" content="article"><meta property="og:site_name" content="Amar&#x27;s TechSpace"><meta property="og:title" content="RDS - Amar&#x27;s TechSpace"><meta property="og:description" content="Developer resources for Azure, AWS, K8S and more."><meta property="og:url" content="https://www.amarjitdhillon.com/aws/rds/"><meta property="og:image" content="https://www.amarjitdhillon.com/assets/cards/aws/rds.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="RDS - Amar&#x27;s TechSpace"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="RDS - Amar&#x27;s TechSpace"><meta name="twitter:description" content="Developer resources for Azure, AWS, K8S and more."><meta name="twitter:image" content="https://www.amarjitdhillon.com/assets/cards/aws/rds.png"></head>
   
   
     
@@ -89,7 +96,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -112,9 +119,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Amar&#39;s TechSpace 🛸" class="md-header__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../.." title="Amar&#39;s TechSpace" class="md-header__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../assets/images/menu.png" alt="logo">
+  <img src="../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -124,9 +131,9 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Amar's TechSpace 🛸
-          </span>
+          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+            Amar's <b>TechSpace</b>
+          </a>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
@@ -144,7 +151,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -154,7 +161,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -512,12 +519,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Amar&#39;s TechSpace 🛸" class="md-nav__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../.." title="Amar&#39;s TechSpace" class="md-nav__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../assets/images/menu.png" alt="logo">
+  <img src="../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
-    Amar's TechSpace 🛸
+    Amar's TechSpace
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -2509,7 +2516,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.66 13.07c-1.74 0-3.16-1.41-3.16-3.14 0-.71.26-1.39.69-1.93-.42-.54-.69-1.22-.69-1.93 0-1.73 1.43-3.14 3.16-3.14l.43.03A3.15 3.15 0 0 1 12 1c1.31 0 2.44.81 2.91 1.96l.43-.03c1.73 0 3.16 1.41 3.16 3.14 0 .71-.26 1.39-.69 1.93.42.54.69 1.22.69 1.93 0 1.73-1.43 3.14-3.16 3.14l-.43-.03A3.15 3.15 0 0 1 12 15a3.15 3.15 0 0 1-2.91-1.96zM12 13c.62 0 1.12-.5 1.14-1.1l-.11-1.09c-.32.12-.67.19-1.03.19s-.7-.07-1-.19l-.14 1.09c.02.6.52 1.1 1.14 1.1m3.34-1.93c.63 0 1.16-.51 1.16-1.15 0-.42-.27-.84-.67-1.03l-.88-.42c-.12.74-.51 1.38-1.06 1.83l.81.57c.18.13.4.2.64.2m-.65-5.94-.82.56c.56.45.95 1.09 1.07 1.81l.88-.4c.41-.2.68-.6.68-1.03 0-.63-.53-1.14-1.16-1.14-.23 0-.45.07-.65.2M12 3c-.62 0-1.12.5-1.14 1.1L11 5.19c.3-.12.64-.19 1-.19s.71.07 1.03.19l.11-1.09C13.12 3.5 12.62 3 12 3M8.66 4.93c-.63 0-1.16.51-1.16 1.14 0 .43.27.83.67 1.03l.88.4c.12-.72.51-1.36 1.06-1.81l-.81-.56c-.18-.13-.4-.2-.64-.2M8.17 8.9c-.4.2-.67.6-.67 1.02 0 .63.53 1.14 1.16 1.14.23 0 .45-.06.65-.2l.81-.55c-.56-.45-.95-1.09-1.07-1.81zM12 22a9 9 0 0 1-9-9 9 9 0 0 1 9 9 9 9 0 0 1 9-9 9 9 0 0 1-9 9m2.44-2.44a7.04 7.04 0 0 0 4.12-4.12c-1.9.7-3.41 2.22-4.12 4.12m-9-4.12a7.04 7.04 0 0 0 4.12 4.12c-.7-1.9-2.22-3.41-4.12-4.12"/></svg>
   
   <span class="md-ellipsis">
-    Arch Continums
+    Arch Continuums
   </span>
   
 
@@ -3103,7 +3110,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"/></svg>
   
   <span class="md-ellipsis">
-    Elasti Cache
+    ElastiCache
   </span>
   
 
@@ -3309,9 +3316,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pinnning" class="md-nav__link">
+  <a href="#pinning" class="md-nav__link">
     <span class="md-ellipsis">
-      Pinnning 📌
+      Pinning 📌
     </span>
   </a>
   
@@ -3453,9 +3460,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#performace-insights" class="md-nav__link">
+  <a href="#performance-insights" class="md-nav__link">
     <span class="md-ellipsis">
-      Performace Insights
+      Performance Insights
     </span>
   </a>
   
@@ -3772,7 +3779,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"/></svg>
   
   <span class="md-ellipsis">
-    Athnea
+    Athena
   </span>
   
 
@@ -5633,7 +5640,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12z"/></svg>
   
   <span class="md-ellipsis">
-    Read Replics
+    Read Replicas
   </span>
   
 
@@ -8671,7 +8678,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c-.89 2.18-1.43 3.61-2.42 5.73.61.64 1.35 1.39 2.56 2.24-1.3-.54-2.19-1.07-2.85-1.63C8 11 6.03 14.75 2 22c3.17-1.83 5.63-2.96 7.92-3.39-.1-.42-.16-.88-.15-1.36v-.1c.05-2.03 1.11-3.59 2.36-3.48 1.25.1 2.22 1.83 2.17 3.87-.01.38-.05.75-.12 1.09 2.26.44 4.69 1.56 7.82 3.37-.62-1.14-1.17-2.16-1.69-3.13-.81-.64-1.7-1.48-3.46-2.37 1.21.3 2.08.66 2.76 1.07C14.26 7.62 13.83 6.3 12 2"/></svg>
   
   <span class="md-ellipsis">
-    Cluster Architecutre
+    Cluster Architecture
   </span>
   
 
@@ -9040,7 +9047,7 @@
         
   
   <span class="md-ellipsis">
-    DeamonSet
+    DaemonSet
   </span>
   
 
@@ -9124,7 +9131,7 @@
         
   
   <span class="md-ellipsis">
-    Replia Set
+    ReplicaSet
   </span>
   
 
@@ -10867,9 +10874,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#pinnning" class="md-nav__link">
+  <a href="#pinning" class="md-nav__link">
     <span class="md-ellipsis">
-      Pinnning 📌
+      Pinning 📌
     </span>
   </a>
   
@@ -11011,9 +11018,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#performace-insights" class="md-nav__link">
+  <a href="#performance-insights" class="md-nav__link">
     <span class="md-ellipsis">
-      Performace Insights
+      Performance Insights
     </span>
   </a>
   
@@ -11049,40 +11056,40 @@ as the main headline.
 -->
 
 
-<!-- Markdown content (marker turns on scroll-reveal for pages with `reveal: true`) -->
-
-<h1 id="rds">RDS <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg></span><a class="headerlink" href="#rds" title="Link to this section">&para;</a></h1>
+<!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
+<span data-reveal-page hidden></span>
+<h1 id="rds"><abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7s3.58 4 8 4 8-1.79 8-4-3.58-4-8-4M4 9v3c0 2.21 3.58 4 8 4s8-1.79 8-4V9c0 2.21-3.58 4-8 4s-8-1.79-8-4m0 5v3c0 2.21 3.58 4 8 4s8-1.79 8-4v-3c0 2.21-3.58 4-8 4s-8-1.79-8-4"/></svg></span><a class="headerlink" href="#rds" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 10 min read</p>
 <div class="admonition tldr">
 <p class="admonition-title">Tldr</p>
 <ul>
 <li>Amazon <code>Relational Database Service</code> is a service that enables you to run relational databases in the AWS Cloud.</li>
-<li>Amazon RDS is a managed service that automates tasks such as hardware provisioning, database setup, patching, and backups.</li>
+<li>Amazon <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> is a managed service that automates tasks such as hardware provisioning, database setup, patching, and backups.</li>
 <li>With these capabilities, you can spend less time completing administrative tasks and more time using data to innovate your applications. </li>
 </ul>
 </div>
-<h2 id="rds-offerings">RDS offerings 🕊️<a class="headerlink" href="#rds-offerings" title="Link to this section">&para;</a></h2>
-<p>Amazon RDS is available on 6 database engines, which optimize for memory, performance, or input/output (I/O). Supported database engines include:</p>
+<h2 id="rds-offerings"><abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> offerings 🕊️<a class="headerlink" href="#rds-offerings" title="Link to this section">&para;</a></h2>
+<p>Amazon <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> is available on 6 database engines, which optimize for memory, performance, or input/output (I/O). Supported database engines include:</p>
 <ul>
 <li>Amazon Aurora</li>
 <li>PostgreSQL</li>
 <li>MySQL</li>
 <li>MariaDB</li>
 <li>Oracle Database</li>
-<li>Microsoft SQL Server</li>
+<li>Microsoft <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> Server</li>
 </ul>
 <p>DB Instance
-A DB instance is an isolated database environment in the AWS Cloud. The basic building block of Amazon RDS is the DB instance. Your DB instance can contain one or more user-created databases. The following diagram shows a virtual private cloud (VPC) that contains two Availability Zones, with each AZ containing two DB instances.</p>
+A DB instance is an isolated database environment in the AWS Cloud. The basic building block of Amazon <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> is the DB instance. Your DB instance can contain one or more user-created databases. The following diagram shows a virtual private cloud (<abbr title="Virtual Private Cloud: your own isolated private network inside the cloud">VPC</abbr>) that contains two Availability Zones, with each <abbr title="Availability Zone: a separate data center within a cloud region">AZ</abbr> containing two DB instances.</p>
 <p><center> 
 <img width="80%" src="../images/db-instances.png"></p>
 <figcaption>DB Instance Example</figcaption>
 <p></center></p>
-<h2 id="rds-proxy">RDS Proxy ⚡️<a class="headerlink" href="#rds-proxy" title="Link to this section">&para;</a></h2>
+<h2 id="rds-proxy"><abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> Proxy ⚡️<a class="headerlink" href="#rds-proxy" title="Link to this section">&para;</a></h2>
 <p>Many applications, including those built on modern serverless architectures, can have a large number of open connections to the database server and may open and close database connections at a high rate, exhausting database memory and compute resources.</p>
-<p><mark>Amazon RDS Proxy allows applications to <code>pool</code> and <code>share connections</code> established with the database</mark>, improving database efficiency and application scalability. </p>
+<p><mark>Amazon <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> Proxy allows applications to <code>pool</code> and <code>share connections</code> established with the database</mark>, improving database efficiency and application scalability. </p>
 <div class="admonition question">
 <p class="admonition-title">Handling surge and throttling requests?</p>
-<p>Using RDS Proxy, you can handle unpredictable surges in database traffic. Otherwise, these surges might cause issues due to oversubscribing connections or new connections being created at a fast rate. RDS Proxy establishes a database connection pool and reuses connections in this pool. This approach avoids the memory and CPU overhead of opening a new database connection each time. To protect a database against oversubscription, you can control the number of database connections that are created. </p>
-<p>RDS Proxy <strong>queues or throttles</strong> application connections that <em>can't be served immediately</em> from the connection pool. Although latencies might increase, your application can continue to scale without abruptly failing or overwhelming the database. If connection requests exceed the limits you specify, RDS Proxy rejects application connections (that is, it sheds load). At the same time, it maintains predictable performance for the load that RDS can serve with the available capacity. </p>
+<p>Using <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> Proxy, you can handle unpredictable surges in database traffic. Otherwise, these surges might cause issues due to oversubscribing connections or new connections being created at a fast rate. <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> Proxy establishes a database connection pool and reuses connections in this pool. This approach avoids the memory and CPU overhead of opening a new database connection each time. To protect a database against oversubscription, you can control the number of database connections that are created. </p>
+<p><abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> Proxy <strong>queues or throttles</strong> application connections that <em>can't be served immediately</em> from the connection pool. Although latencies might increase, your application can continue to scale without abruptly failing or overwhelming the database. If connection requests exceed the limits you specify, <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> Proxy rejects application connections (that is, it sheds load). At the same time, it maintains predictable performance for the load that <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> can serve with the available capacity. </p>
 </div>
 <p><center> 
 <img width="80%" src="../images/Proxy_How-it-works.png"></p>
@@ -11092,9 +11099,9 @@ A DB instance is an isolated database environment in the AWS Cloud. The basic bu
 <h4 id="connection-pooling">Connection Pooling 🏊<a class="headerlink" href="#connection-pooling" title="Link to this section">&para;</a></h4>
 <p>Connection pooling is an optimization that enables applications to share and re-use database connections, thus reducing the load on the database itself. Opening and closing a new database connection is CPU-intensive whereas additional memory is needed for each open connection. Connection pooling also removes the need to worry about database connections in the application code.</p>
 <p>Each database transaction uses one underlying database connection which can be reused once the transaction has finished. This transaction-level reuse is called connection multiplexing (or connection reuse).</p>
-<h3 id="pinnning">Pinnning 📌<a class="headerlink" href="#pinnning" title="Link to this section">&para;</a></h3>
-<p>In some cases, RDS proxy can’t safely reuse a database connection outside of the current session. In such scenarios, the same connection is used for the session until the session ends. This behavior is called pinning.</p>
-<p>AWS recommends trying to avoid pinning as much as possible since it makes it harder to share connections and thus reduces the benefits of using RDS proxy.</p>
+<h3 id="pinning">Pinning 📌<a class="headerlink" href="#pinning" title="Link to this section">&para;</a></h3>
+<p>In some cases, <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> proxy can’t safely reuse a database connection outside of the current session. In such scenarios, the same connection is used for the session until the session ends. This behavior is called pinning.</p>
+<p>AWS recommends trying to avoid pinning as much as possible since it makes it harder to share connections and thus reduces the benefits of using <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> proxy.</p>
 <p>Some reasons why a connection might be pinned are:</p>
 <ul>
 <li>Change of session variable</li>
@@ -11103,14 +11110,14 @@ A DB instance is an isolated database environment in the AWS Cloud. The basic bu
 <h3 id="benefits">Benefits 💵<a class="headerlink" href="#benefits" title="Link to this section">&para;</a></h3>
 <ul>
 <li>
-<p><strong>Better Performance</strong>: Your Amazon RDS Proxy instance maintains a pool of established connections to your RDS database instances, reducing the stress on database compute and memory resources that typically occurs when new connections are established. RDS Proxy also shares infrequently used database connections, so that fewer connections access the RDS database. This connection pooling enables your database to efficiently support a large number and frequency of application connections so that your application can scale without compromising performance. </p>
+<p><strong>Better Performance</strong>: Your Amazon <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> Proxy instance maintains a pool of established connections to your <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> database instances, reducing the stress on database compute and memory resources that typically occurs when new connections are established. <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> Proxy also shares infrequently used database connections, so that fewer connections access the <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> database. This connection pooling enables your database to efficiently support a large number and frequency of application connections so that your application can scale without compromising performance. </p>
 </li>
 <li>
-<p><strong>Increased Availability</strong>: RDS Proxy minimizes application disruption from outages affecting the availability of your database by automatically connecting to a new database instance while preserving application connections. When failovers occur, RDS Proxy routes requests directly to the new database instance.</p>
+<p><strong>Increased Availability</strong>: <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> Proxy minimizes application disruption from outages affecting the availability of your database by automatically connecting to a new database instance while preserving application connections. When failovers occur, <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> Proxy routes requests directly to the new database instance.</p>
 </li>
 </ul>
-<h3 id="monitor-rds-proxy">Monitor RDS Proxy 🔭<a class="headerlink" href="#monitor-rds-proxy" title="Link to this section">&para;</a></h3>
-<p>RDS proxy can be monitored by using <em>Amazon CloudWatch</em>. CloudWatch is well integrated with RDS proxy and provides useful metrics that can be used to understanding the performance and behavior of the proxy.</p>
+<h3 id="monitor-rds-proxy">Monitor <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> Proxy 🔭<a class="headerlink" href="#monitor-rds-proxy" title="Link to this section">&para;</a></h3>
+<p><abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> proxy can be monitored by using <em>Amazon CloudWatch</em>. CloudWatch is well integrated with <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> proxy and provides useful metrics that can be used to understanding the performance and behavior of the proxy.</p>
 <p>Some key metrics to keep an eye are:</p>
 <ul>
 <li>
@@ -11120,24 +11127,24 @@ A DB instance is an isolated database environment in the AWS Cloud. The basic bu
 <p><strong>DatabaseConnectionsCurrentlyBorrowed</strong>: Number of connections currently being used by your application. Important to set an alarm on this metric.</p>
 </li>
 <li>
-<p><strong>DatabaseConnectionsCurrentlySessionPinned</strong>: Number of connections in the pinned state. This number should ideally be as low as possible to maximize RDS proxy performance.- </p>
+<p><strong>DatabaseConnectionsCurrentlySessionPinned</strong>: Number of connections in the pinned state. This number should ideally be as low as possible to maximize <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> proxy performance.- </p>
 </li>
 </ul>
 <h2 id="aurora">Aurora 🌟<a class="headerlink" href="#aurora" title="Link to this section">&para;</a></h2>
 <p>Amazon Aurora is an enterprise-class relational database. It is compatible with MySQL and PostgreSQL relational databases. It is up to 5 times faster than <code>standard MySQL databases</code> and up to 3 times faster than <code>standard PostgreSQL databases</code>.</p>
 <p>Amazon Aurora helps to reduce your database costs by reducing unnecessary input/output (I/O) operations, while ensuring that your database resources remain reliable and available. </p>
-<p>Consider Amazon Aurora if your workloads require high availability. It replicates 6 copies of your data across 3 Availability Zones and continuously backs up your data to Amazon S3.</p>
+<p>Consider Amazon Aurora if your workloads require high availability. It replicates 6 copies of your data across 3 Availability Zones and continuously backs up your data to Amazon <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr>.</p>
 <h2 id="backup-and-restore">Backup and Restore 📦<a class="headerlink" href="#backup-and-restore" title="Link to this section">&para;</a></h2>
-<p>You can turn on <code>automated backups</code>, or manually create your own backup snapshots. You can use these backups to restore a database. The Amazon RDS restore process works reliably and efficiently.</p>
-<p>By default, <mark>Amazon RDS creates and saves automated backups of your DB instance securely in Amazon S3</mark> for a user-specified retention period. In addition, you can create snapshots, which are user-initiated backups of your instance that are kept until you explicitly delete them. </p>
+<p>You can turn on <code>automated backups</code>, or manually create your own backup snapshots. You can use these backups to restore a database. The Amazon <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> restore process works reliably and efficiently.</p>
+<p>By default, <mark>Amazon <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> creates and saves automated backups of your DB instance securely in Amazon <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr></mark> for a user-specified retention period. In addition, you can create snapshots, which are user-initiated backups of your instance that are kept until you explicitly delete them. </p>
 <h3 id="automated-backups">Automated Backups 🛺<a class="headerlink" href="#automated-backups" title="Link to this section">&para;</a></h3>
-<p>Turned on by default, the automated backup feature of Amazon RDS will backup your databases and transaction logs. Amazon RDS automatically creates a storage volume snapshot of your DB instance, backing up the entire DB instance and not just individual databases.  </p>
+<p>Turned on by default, the automated backup feature of Amazon <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> will backup your databases and transaction logs. Amazon <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> automatically creates a storage volume snapshot of your DB instance, backing up the entire DB instance and not just individual databases.  </p>
 <p>This backup occurs during a daily user-configurable <code>30 minute</code> period known as the <strong>backup window</strong>. Automated backups are kept for a configurable number of days (called the <code>backup retention period</code>). Your automatic backup retention period can be configured to up to <code>35 days</code>.</p>
 <h3 id="point-in-time-restores">Point-in-time Restores ⏰<a class="headerlink" href="#point-in-time-restores" title="Link to this section">&para;</a></h3>
 <p>You can restore your DB instance to any specific time during the <code>backup retention period</code>, creating a new DB instance. </p>
 <p>To determine the latest restorable time for a DB instance, use the AWS Console or Command Line Interface to look at the value returned in the <code>LatestRestorableTime field</code> for the DB instance. The <em>latest restorable time</em> for a DB instance is typically within 5 minutes of the current time.  </p>
 <h3 id="database-snapshots">Database Snapshots 📸<a class="headerlink" href="#database-snapshots" title="Link to this section">&para;</a></h3>
-<p>Database snapshots are <em>user-initiated backups</em> of your instance stored in Amazon S3 that are kept until you explicitly delete them. You can create a new instance from a database snapshots whenever you desire. <mark>Although database snapshots serve operationally as full backups, you are billed only for incremental storage use</mark>.</p>
+<p>Database snapshots are <em>user-initiated backups</em> of your instance stored in Amazon <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr> that are kept until you explicitly delete them. You can create a new instance from a database snapshots whenever you desire. <mark>Although database snapshots serve operationally as full backups, you are billed only for incremental storage use</mark>.</p>
 <p><center> 
 <img width="80%" src="../images/rds-snapshot.jpeg"></p>
 <figcaption>RDS Snapshots</figcaption>
@@ -11147,37 +11154,37 @@ A DB instance is an isolated database environment in the AWS Cloud. The basic bu
 <p class="admonition-title">Copy an encrypted database</p>
 <p><center> 
 <img width="80%" src="../images/rds-snapshot-encrypted.jpeg">
-<figcaption>RDS Snapshots</figcaption>
+<figcaption><abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> Snapshots</figcaption>
 </center></p>
-<p>If you are working with an encrypted snapshot then there are a few things you need to be aware of.  If a snapshot is taken from an encrypted database, then the snapshot will also be encrypted through the use of a KMS key.  If you copy the snapshot to the same region as the source snapshot, then you can use the same KMS encryption key.  However, if you copy the encrypted snapshot to a different region, then during the copy configuration you will need to specify a new KMS key in the target region, this is because KMS is a regional service, and KMS keys only exist in one region.  </p>
-<p>As a part of the copy process, you can choose to encrypt an unencrypted snapshot by selecting a KMS key.  This provides the opportunity to create an encrypted version of an unencrypted database.  You can take your source database, create a snapshot, copy the snapshot, and select a new KMS key to encrypt it with, and then restore the database using that encrypted snapshot.  This will result in a new encrypted database instance.</p>
+<p>If you are working with an encrypted snapshot then there are a few things you need to be aware of.  If a snapshot is taken from an encrypted database, then the snapshot will also be encrypted through the use of a <abbr title="Key Management Service: creates and guards encryption keys">KMS</abbr> key.  If you copy the snapshot to the same region as the source snapshot, then you can use the same <abbr title="Key Management Service: creates and guards encryption keys">KMS</abbr> encryption key.  However, if you copy the encrypted snapshot to a different region, then during the copy configuration you will need to specify a new <abbr title="Key Management Service: creates and guards encryption keys">KMS</abbr> key in the target region, this is because <abbr title="Key Management Service: creates and guards encryption keys">KMS</abbr> is a regional service, and <abbr title="Key Management Service: creates and guards encryption keys">KMS</abbr> keys only exist in one region.  </p>
+<p>As a part of the copy process, you can choose to encrypt an unencrypted snapshot by selecting a <abbr title="Key Management Service: creates and guards encryption keys">KMS</abbr> key.  This provides the opportunity to create an encrypted version of an unencrypted database.  You can take your source database, create a snapshot, copy the snapshot, and select a new <abbr title="Key Management Service: creates and guards encryption keys">KMS</abbr> key to encrypt it with, and then restore the database using that encrypted snapshot.  This will result in a new encrypted database instance.</p>
 </div>
 <h3 id="snapshot-copies">Snapshot Copies 🗒️<a class="headerlink" href="#snapshot-copies" title="Link to this section">&para;</a></h3>
-<p>With Amazon RDS, you can copy DB snapshots and DB cluster snapshots. You can copy automated or manual snapshots. After you copy a snapshot, the copy is a manual snapshot. You can copy a snapshot within the same AWS Region, you can copy a snapshot across AWS Regions, and you can copy a snapshot across AWS accounts.</p>
+<p>With Amazon <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr>, you can copy DB snapshots and DB cluster snapshots. You can copy automated or manual snapshots. After you copy a snapshot, the copy is a manual snapshot. You can copy a snapshot within the same AWS Region, you can copy a snapshot across AWS Regions, and you can copy a snapshot across AWS accounts.</p>
 <h3 id="snapshot-sharing">Snapshot Sharing 🔗<a class="headerlink" href="#snapshot-sharing" title="Link to this section">&para;</a></h3>
-<p>Using Amazon RDS, you can share a manual DB snapshot or DB cluster snapshot with other AWS accounts. Sharing a manual DB snapshot or DB cluster snapshot, whether encrypted or unencrypted, enables authorized AWS accounts to copy the snapshot.</p>
+<p>Using Amazon <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr>, you can share a manual DB snapshot or DB cluster snapshot with other AWS accounts. Sharing a manual DB snapshot or DB cluster snapshot, whether encrypted or unencrypted, enables authorized AWS accounts to copy the snapshot.</p>
 <p>Sharing an unencrypted manual DB snapshot enables authorized AWS accounts to directly restore a DB instance from the snapshot instead of taking a copy of it and restoring from that. This isn't supported for encrypted manual DB snapshots.</p>
 <p>Sharing a manual DB cluster snapshot, whether encrypted or unencrypted, enables authorized AWS accounts to directly restore a DB cluster from the snapshot instead of taking a copy of it and restoring from that.</p>
-<h2 id="ha">HA 🎛️<a class="headerlink" href="#ha" title="Link to this section">&para;</a></h2>
+<h2 id="ha"><abbr title="High Availability: designed to keep running when parts fail">HA</abbr> 🎛️<a class="headerlink" href="#ha" title="Link to this section">&para;</a></h2>
 <p>You can get <code>high availability</code> with a <em>primary DB</em> instance and a <em>synchronous secondary DB</em> instance that you can fail over to when problems occur. <mark>You can also use read replicas to increase read scaling</mark>.</p>
 <p><center> 
 <img width="80%" src="../images/aws-cloud-deployment-architecture.png"></p>
 <figcaption>Highly Available Architecture for RDS</figcaption>
 <p></center></p>
 <h3 id="multi-region-deployment">Multi-Region deployment 🌍<a class="headerlink" href="#multi-region-deployment" title="Link to this section">&para;</a></h3>
-<p>The following scenario shows an RDS DB instance in one Region that replicates asynchronously to a standby DB instance in a different Region. If one Region becomes unavailable, the instance in the other Region is still available.</p>
+<p>The following scenario shows an <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> DB instance in one Region that replicates asynchronously to a standby DB instance in a different Region. If one Region becomes unavailable, the instance in the other Region is still available.</p>
 <p><center> 
 <img width="80%" src="../images/read-replica-cross-region.png"></p>
 <figcaption>HA in another region with Async replication for RDS</figcaption>
 <p></center></p>
-<h3 id="multi-az-deployment">Multi-AZ deployment 🌐<a class="headerlink" href="#multi-az-deployment" title="Link to this section">&para;</a></h3>
-<p>You can run your DB instance in several Availability Zones, an option called a Multi-AZ deployment. When you choose this option, Amazon automatically provisions and maintains one or more secondary standby DB instances in a different AZ. Your primary DB instance is replicated across Availability Zones to each secondary DB instance.</p>
-<p>A Multi-AZ deployment provides the following advantages:</p>
+<h3 id="multi-az-deployment">Multi-<abbr title="Availability Zone: a separate data center within a cloud region">AZ</abbr> deployment 🌐<a class="headerlink" href="#multi-az-deployment" title="Link to this section">&para;</a></h3>
+<p>You can run your DB instance in several Availability Zones, an option called a Multi-<abbr title="Availability Zone: a separate data center within a cloud region">AZ</abbr> deployment. When you choose this option, Amazon automatically provisions and maintains one or more secondary standby DB instances in a different <abbr title="Availability Zone: a separate data center within a cloud region">AZ</abbr>. Your primary DB instance is replicated across Availability Zones to each secondary DB instance.</p>
+<p>A Multi-<abbr title="Availability Zone: a separate data center within a cloud region">AZ</abbr> deployment provides the following advantages:</p>
 <ul>
 <li>Providing data redundancy and failover support</li>
 <li>Eliminating I/O freezes </li>
 <li>Minimizing latency spikes during system backups</li>
-<li>Serving read traffic on secondary DB instances (Multi-AZ DB clusters deployment only)</li>
+<li>Serving read traffic on secondary DB instances (Multi-<abbr title="Availability Zone: a separate data center within a cloud region">AZ</abbr> DB clusters deployment only)</li>
 </ul>
 <p><center> 
 <img width="80%" src="../images/con-multi-AZ.png"></p>
@@ -11186,7 +11193,7 @@ A DB instance is an isolated database environment in the AWS Cloud. The basic bu
 <h2 id="database-performance">Database Performance 📊<a class="headerlink" href="#database-performance" title="Link to this section">&para;</a></h2>
 <ul>
 <li><code>Average Active Sessions (AAS)</code>: is the unit for the DBLoad metric in Performance Insights. It measures how many sessions are concurrently active on the database.</li>
-<li><code>Wait event</code>: It causes a SQL statement to wait for a specific event to happen before it can continue running. Wait events are an important dimension, or category, for DB load because they indicate where work is impeded.</li>
+<li><code>Wait event</code>: It causes a <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> statement to wait for a specific event to happen before it can continue running. Wait events are an important dimension, or category, for DB load because they indicate where work is impeded.</li>
 </ul>
 <p>Every active session is either running on the CPU or waiting. For example, sessions consume CPU when they search memory for a buffer, perform a calculation, or run procedural code. When sessions aren't consuming CPU, they might be waiting for a memory buffer to become free, a data file to be read, or a log to be written to. The more time that a session waits for resources, the less time it runs on the CPU. </p>
 <p><center> 
@@ -11198,8 +11205,8 @@ A DB instance is an isolated database environment in the AWS Cloud. The basic bu
 <img width="90%" src="../images/cpu-saturation.png"></p>
 <figcaption>CPU Saturation Example</figcaption>
 <p></center></p>
-<h3 id="performace-insights">Performace Insights<a class="headerlink" href="#performace-insights" title="Link to this section">&para;</a></h3>
-<p>With the Performance Insights dashboard, you can visualize the database load on your Amazon RDS DB instance load and filter the load by waits, SQL statements, hosts, or users</p>
+<h3 id="performance-insights">Performance Insights<a class="headerlink" href="#performance-insights" title="Link to this section">&para;</a></h3>
+<p>With the Performance Insights dashboard, you can visualize the database load on your Amazon <abbr title="Relational Database Service: managed SQL databases on AWS">RDS</abbr> DB instance load and filter the load by waits, <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> statements, hosts, or users</p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Database<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../aws/redshift/">Redshift →</a></p></li><li><p class="rn__kicker">Database<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../aws/opensearch/">OpenSearch →</a></p></li></ul></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -11242,6 +11249,13 @@ A DB instance is an isolated database environment in the AWS Cloud. The basic bu
     };
     var s = document.querySelector("script[src*='giscus.app/client.js']");
     if (s) s.setAttribute("data-theme", themeFor());
+    // Giscus titles its frame "Comments" and Material turns every title into a floating tooltip,
+    // so move it to aria-label (screen readers still hear it, no stray tooltip)
+    var wrap = s && s.parentNode;
+    if (wrap) new MutationObserver(function (_, obs) {
+      var f = wrap.querySelector("iframe.giscus-frame[title]");
+      if (f) { f.setAttribute("aria-label", f.title); f.removeAttribute("title"); obs.disconnect(); }
+    }).observe(wrap, { childList: true, subtree: true });
     var ref = document.querySelector("[data-md-component=palette]");
     if (ref && !ref.dataset.giscusSync) {
       ref.dataset.giscusSync = "1";
@@ -11275,13 +11289,9 @@ A DB instance is an isolated database environment in the AWS Cloud. The basic bu
         
       </main>
       
-        <!-- Footer -->
-
-<!-- <footer class="md-footer">
-	<!-- Further information -->
-	<div class="md-footer-meta md-typeset">
-	  <div class="md-footer-meta__inner md-grid">
-		<div class="md-copyright">
+        <div class="md-footer-meta md-typeset">
+  <div class="md-footer-meta__inner md-grid">
+    <div class="md-copyright">
   
     <div class="md-copyright__highlight">
       Copyright &copy; 2026 Amarjit Singh Dhillon
@@ -11289,13 +11299,8 @@ A DB instance is an isolated database environment in the AWS Cloud. The basic bu
   
   
 </div>
-		<!-- Footer links -->
-		<!-- Social links -->
-		
-	  </div>
-	</div>
-	</div>
-  </footer> -->
+  </div>
+</div>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -11332,7 +11337,11 @@ A DB instance is an isolated database environment in the AWS Cloud. The basic bu
       
         <script src="../../javascripts/magnetic.js"></script>
       
+        <script src="../../javascripts/transitions.js"></script>
+      
         <script src="../../javascripts/hero.js"></script>
+      
+        <script src="../../javascripts/cosmos.js"></script>
       
         <script src="../../javascripts/totop.js"></script>
       

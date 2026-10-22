@@ -22,10 +22,17 @@
         <link rel="next" href="../embeddings/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.ico">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../../assets/images/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     <meta name="google-site-verification" content="UHLjtoO7DV30dx3hVhwTOIWguEUr_VzS41msmq-uYKA" />
+    <!-- PNG fallback for browsers without SVG favicons, and the iOS home-screen icon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="../../../assets/images/favicon-96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/images/apple-touch-icon.png">
+    <meta name="theme-color" content="#10123a">
     
     <script type="application/ld+json">
         {
@@ -50,7 +57,7 @@
 
     
       
-        <title>Databricks - Amar's TechSpace 🛸</title>
+        <title>Databricks - Amar's TechSpace</title>
       
     
     
@@ -79,7 +86,7 @@
     
     
     
-  </head>
+  <meta property="og:type" content="article"><meta property="og:site_name" content="Amar&#x27;s TechSpace"><meta property="og:title" content="Databricks - Amar&#x27;s TechSpace"><meta property="og:description" content="Developer resources for Azure, AWS, K8S and more."><meta property="og:url" content="https://www.amarjitdhillon.com/blog/category/databricks/"><meta property="og:image" content="https://www.amarjitdhillon.com/assets/cards/blog/category/databricks.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Databricks - Amar&#x27;s TechSpace"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Databricks - Amar&#x27;s TechSpace"><meta name="twitter:description" content="Developer resources for Azure, AWS, K8S and more."><meta name="twitter:image" content="https://www.amarjitdhillon.com/assets/cards/blog/category/databricks.png"></head>
   
   
     
@@ -89,7 +96,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -112,9 +119,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Amar&#39;s TechSpace 🛸" class="md-header__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../../.." title="Amar&#39;s TechSpace" class="md-header__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../../assets/images/menu.png" alt="logo">
+  <img src="../../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -124,9 +131,9 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Amar's TechSpace 🛸
-          </span>
+          <a href="../../.." class="md-ellipsis wordmark" aria-label="Home">
+            Amar's <b>TechSpace</b>
+          </a>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
@@ -144,7 +151,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -154,7 +161,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -512,12 +519,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Amar&#39;s TechSpace 🛸" class="md-nav__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../../.." title="Amar&#39;s TechSpace" class="md-nav__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../../assets/images/menu.png" alt="logo">
+  <img src="../../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
-    Amar's TechSpace 🛸
+    Amar's TechSpace
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -2584,7 +2591,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.66 13.07c-1.74 0-3.16-1.41-3.16-3.14 0-.71.26-1.39.69-1.93-.42-.54-.69-1.22-.69-1.93 0-1.73 1.43-3.14 3.16-3.14l.43.03A3.15 3.15 0 0 1 12 1c1.31 0 2.44.81 2.91 1.96l.43-.03c1.73 0 3.16 1.41 3.16 3.14 0 .71-.26 1.39-.69 1.93.42.54.69 1.22.69 1.93 0 1.73-1.43 3.14-3.16 3.14l-.43-.03A3.15 3.15 0 0 1 12 15a3.15 3.15 0 0 1-2.91-1.96zM12 13c.62 0 1.12-.5 1.14-1.1l-.11-1.09c-.32.12-.67.19-1.03.19s-.7-.07-1-.19l-.14 1.09c.02.6.52 1.1 1.14 1.1m3.34-1.93c.63 0 1.16-.51 1.16-1.15 0-.42-.27-.84-.67-1.03l-.88-.42c-.12.74-.51 1.38-1.06 1.83l.81.57c.18.13.4.2.64.2m-.65-5.94-.82.56c.56.45.95 1.09 1.07 1.81l.88-.4c.41-.2.68-.6.68-1.03 0-.63-.53-1.14-1.16-1.14-.23 0-.45.07-.65.2M12 3c-.62 0-1.12.5-1.14 1.1L11 5.19c.3-.12.64-.19 1-.19s.71.07 1.03.19l.11-1.09C13.12 3.5 12.62 3 12 3M8.66 4.93c-.63 0-1.16.51-1.16 1.14 0 .43.27.83.67 1.03l.88.4c.12-.72.51-1.36 1.06-1.81l-.81-.56c-.18-.13-.4-.2-.64-.2M8.17 8.9c-.4.2-.67.6-.67 1.02 0 .63.53 1.14 1.16 1.14.23 0 .45-.06.65-.2l.81-.55c-.56-.45-.95-1.09-1.07-1.81zM12 22a9 9 0 0 1-9-9 9 9 0 0 1 9 9 9 9 0 0 1 9-9 9 9 0 0 1-9 9m2.44-2.44a7.04 7.04 0 0 0 4.12-4.12c-1.9.7-3.41 2.22-4.12 4.12m-9-4.12a7.04 7.04 0 0 0 4.12 4.12c-.7-1.9-2.22-3.41-4.12-4.12"/></svg>
   
   <span class="md-ellipsis">
-    Arch Continums
+    Arch Continuums
   </span>
   
 
@@ -3167,7 +3174,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"/></svg>
   
   <span class="md-ellipsis">
-    Elasti Cache
+    ElastiCache
   </span>
   
 
@@ -3592,7 +3599,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"/></svg>
   
   <span class="md-ellipsis">
-    Athnea
+    Athena
   </span>
   
 
@@ -5423,7 +5430,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12z"/></svg>
   
   <span class="md-ellipsis">
-    Read Replics
+    Read Replicas
   </span>
   
 
@@ -8461,7 +8468,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c-.89 2.18-1.43 3.61-2.42 5.73.61.64 1.35 1.39 2.56 2.24-1.3-.54-2.19-1.07-2.85-1.63C8 11 6.03 14.75 2 22c3.17-1.83 5.63-2.96 7.92-3.39-.1-.42-.16-.88-.15-1.36v-.1c.05-2.03 1.11-3.59 2.36-3.48 1.25.1 2.22 1.83 2.17 3.87-.01.38-.05.75-.12 1.09 2.26.44 4.69 1.56 7.82 3.37-.62-1.14-1.17-2.16-1.69-3.13-.81-.64-1.7-1.48-3.46-2.37 1.21.3 2.08.66 2.76 1.07C14.26 7.62 13.83 6.3 12 2"/></svg>
   
   <span class="md-ellipsis">
-    Cluster Architecutre
+    Cluster Architecture
   </span>
   
 
@@ -8830,7 +8837,7 @@
         
   
   <span class="md-ellipsis">
-    DeamonSet
+    DaemonSet
   </span>
   
 
@@ -8914,7 +8921,7 @@
         
   
   <span class="md-ellipsis">
-    Replia Set
+    ReplicaSet
   </span>
   
 
@@ -10693,10 +10700,6 @@
         
       </ul>
       
-        <span class="md-draft">
-          Draft
-        </span>
-      
     </div>
   </header>
   <div class="md-post__content md-typeset">
@@ -10759,7 +10762,7 @@
 <span class="k">assert</span> <span class="n">spark</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;beans&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">dtypes</span> <span class="o">==</span> <span class="p">[(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;grams&quot;</span><span class="p">,</span> <span class="s2">&quot;float&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;delicious&quot;</span><span class="p">,</span> <span class="s2">&quot;boolean&quot;</span><span class="p">)],</span> <span class="s2">&quot;Please make sure the column types are identical to those provided above&quot;</span>
 </code></pre></div>
 <h4 id="insert-data"><a class="toclink" href="../../2023/06/07/manipulating-tables-with-delta-lake-/#insert-data">Insert Data 📇</a></h4>
-<p>Next, let’s populate the table with some data. The following SQL command will insert three records into our table.</p>
+<p>Next, let’s populate the table with some data. The following <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> command will insert three records into our table.</p>
 <div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">beans</span><span class="w"> </span><span class="k">VALUES</span>
 <span class="p">(</span><span class="ss">&quot;black&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;black&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">),</span>
 <span class="p">(</span><span class="ss">&quot;lentils&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;brown&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">),</span>
@@ -10924,22 +10927,22 @@ Verify that the deletion was successful:</p>
 <h4 id="dataframe-and-rdd"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#dataframe-and-rdd">DataFrame and RDD 🧮</a></h4>
 <div class="admonition tldr">
 <p class="admonition-title">Tldr</p>
-<p>A DataFrame is a <code>two-dimensional labeled data structure</code> with columns of potentially different types. You can think of a DataFrame like a spreadsheet, a SQL table, or a dictionary of series objects. Apache Spark DataFrames provide a rich set of functions (select columns, filter, join, aggregate) that allow you to solve common data analysis problems efficiently.</p>
+<p>A DataFrame is a <code>two-dimensional labeled data structure</code> with columns of potentially different types. You can think of a DataFrame like a spreadsheet, a <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> table, or a dictionary of series objects. Apache Spark DataFrames provide a rich set of functions (select columns, filter, join, aggregate) that allow you to solve common data analysis problems efficiently.</p>
 </div>
 <p>Apache Spark DataFrames are an abstraction built on top of Resilient Distributed Datasets (RDDs).</p>
 <div class="admonition question">
 <p class="admonition-title">Use of Lazy loading in Spark Dataframe instead of Pandas</p>
-<p>One of the key differences between <code>Pandas</code> and <code>Spark dataframes</code> is <mark>eager versus lazy execution</mark>. In PySpark, operations are delayed until a result is actually requested in the pipeline. For example, you can specify operations for loading a data set from Amazon S3 and applying a number of transformations to the dataframe, but these operations won’t be applied immediately. Instead, a graph of transformations is recorded, and once the data are actually needed, for example when writing the results back to S3, then the transformations are applied as a single pipeline operation. This approach is used to avoid pulling the full dataframe into memory, and enables more effective processing across a cluster of machines.</p>
+<p>One of the key differences between <code>Pandas</code> and <code>Spark dataframes</code> is <mark>eager versus lazy execution</mark>. In PySpark, operations are delayed until a result is actually requested in the pipeline. For example, you can specify operations for loading a data set from Amazon <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr> and applying a number of transformations to the dataframe, but these operations won’t be applied immediately. Instead, a graph of transformations is recorded, and once the data are actually needed, for example when writing the results back to <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr>, then the transformations are applied as a single pipeline operation. This approach is used to avoid pulling the full dataframe into memory, and enables more effective processing across a cluster of machines.</p>
 </div>
-<h4 id="spark-sql"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#spark-sql">Spark SQL 🌐</a></h4>
-<p>The term Spark SQL technically applies to all operations that use Spark DataFrames. Spark SQL replaced the Spark RDD API in Spark 2.x, introducing support for SQL queries and the DataFrame API for Python, Scala, R, and Java.</p>
+<h4 id="spark-sql"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#spark-sql">Spark <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> 🌐</a></h4>
+<p>The term Spark <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> technically applies to all operations that use Spark DataFrames. Spark <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> replaced the Spark RDD <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> in Spark 2.x, introducing support for <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> queries and the DataFrame <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> for Python, Scala, R, and Java.</p>
 <h4 id="pyspark"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#pyspark">PySpark 🔥</a></h4>
-<p>PySpark is the Python API for Apache Spark, an open source, distributed computing framework and set of libraries for real-time, large-scale data processing. </p>
+<p>PySpark is the Python <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> for Apache Spark, an open source, distributed computing framework and set of libraries for real-time, large-scale data processing. </p>
 <h3 id="databricks-concepts"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#databricks-concepts">Databricks Concepts 🧑‍🏫</a></h3>
 <h4 id="databricks-file-system-dbfs"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#databricks-file-system-dbfs">Databricks File System (DBFS)</a></h4>
 <p>A filesystem abstraction layer over a blob store. It contains directories, which can contain files (data files, libraries, and images), and other directories. DBFS is automatically populated with some datasets that you can use to learn Azure Databricks.</p>
 <div class="admonition info">
-<p>DBFS is an abstraction on top of scalable object storage that maps <code>Unix-like filesystem</code> calls to native cloud storage API calls.</p>
+<p>DBFS is an abstraction on top of scalable object storage that maps <code>Unix-like filesystem</code> calls to native cloud storage <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> calls.</p>
 </div>
 <h5 id="mount-blob-to-dbfs"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#mount-blob-to-dbfs">Mount blob to DBFS 📍</a></h5>
 <p>Mounting object storage to DBFS allows you to access objects in object storage as if they were on the local file system. Mounts store Hadoop configurations necessary for accessing storage, so you do not need to specify these settings in code or during cluster configuration.</p>
@@ -10953,14 +10956,14 @@ Verify that the deletion was successful:</p>
 </div>
 <p>Auto Loader incrementally and efficiently processes new data files as they arrive in cloud storage. Auto Loader can load data files from</p>
 <ul>
-<li>AWS S3 <code>(s3://)</code></li>
+<li>AWS <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr> <code>(s3://)</code></li>
 <li>Azure Data Lake Storage Gen2 (ADLS Gen2, <code>abfss://</code>)</li>
 <li>Google Cloud Storage (GCS, <code>gs://</code>)</li>
 <li>Azure Blob Storage (<code>wasbs://</code>)</li>
 <li>ADLS Gen1 (<code>adl://</code>) </li>
 <li>Databricks File System (DBFS, <code>dbfs:/</code>)</li>
 </ul>
-<p>Auto Loader can ingest JSON, CSV, PARQUET, AVRO, ORC, TEXT, and BINARYFILE file formats.</p>
+<p>Auto Loader can ingest <abbr title="JavaScript Object Notation: a common text format for data">JSON</abbr>, CSV, PARQUET, AVRO, ORC, TEXT, and BINARYFILE file formats.</p>
 <div class="admonition question">
 <p class="admonition-title">How does Auto Loader track ingestion progress?</p>
 <p>As files are discovered, their metadata is persisted in a scalable key-value store (<code>RocksDB</code>) in the checkpoint location of your Auto Loader pipeline. This key-value store ensures that data is processed <mark>exactly once</mark>.</p>
@@ -10996,13 +10999,13 @@ Verify that the deletion was successful:</p>
 <h5 id="user"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#user">User 🧑‍🦰</a></h5>
 <p>A unique individual who has access to the system. User identities are represented by email addresses.</p>
 <h5 id="service-principal"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#service-principal">Service principal ☃️</a></h5>
-<p>A service identity for use with jobs, automated tools, and systems such as scripts, apps, and CI/CD platforms. <mark>Service principals are represented by an application ID.</mark></p>
+<p>A service identity for use with jobs, automated tools, and systems such as scripts, apps, and <abbr title="Continuous Integration and Delivery: automatically test and ship code changes">CI/CD</abbr> platforms. <mark>Service principals are represented by an application ID.</mark></p>
 <h5 id="group"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#group">Group 🏠</a></h5>
 <p>Groups simplify identity management, making it easier to assign access to workspaces, data, and other securable objects. All Databricks identities can be assigned as members of groups.</p>
-<h5 id="acl"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#acl">ACL ⛔️</a></h5>
-<p>A list of permissions attached to the workspace, cluster, job, table, or experiment. An ACL specifies which users or system processes are granted access to the objects, as well as what operations are allowed on the assets</p>
+<h5 id="acl"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#acl"><abbr title="Access Control List: a list of rules saying who can access what">ACL</abbr> ⛔️</a></h5>
+<p>A list of permissions attached to the workspace, cluster, job, table, or experiment. An <abbr title="Access Control List: a list of rules saying who can access what">ACL</abbr> specifies which users or system processes are granted access to the objects, as well as what operations are allowed on the assets</p>
 <h5 id="pat"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#pat">PAT 💳</a></h5>
-<p><code>An opaque string</code> is used to authenticate to the REST API and by tools in the Databricks integrations to connect to SQL warehouses.</p>
+<p><code>An opaque string</code> is used to authenticate to the <abbr title="A common style for web APIs using HTTP verbs like GET and POST">REST</abbr> <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> and by tools in the Databricks integrations to connect to <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> warehouses.</p>
 <h4 id="ds-engineering-space"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#ds-engineering-space">DS &amp; Engineering Space ⚙️</a></h4>
 <h5 id="workspace"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#workspace">Workspace 🪐</a></h5>
 <p>A workspace is an environment for accessing all of your Azure Databricks assets. A workspace organizes objects (notebooks, libraries, dashboards, and experiments) into folders and provides access to data objects and computational resources.</p>
@@ -11012,7 +11015,7 @@ Verify that the deletion was successful:</p>
 <p>A folder whose contents are co-versioned together by syncing them to a remote Git repository.</p>
 <h4 id="databricks-workflow"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#databricks-workflow">Databricks Workflow ⏳</a></h4>
 <p>Azure Databricks Workflows orchestrates data processing, machine learning, and analytics pipelines in the Azure Databricks Lakehouse Platform. </p>
-<p>Workflows has fully managed orchestration services integrated with the Azure Databricks platform, including Azure Databricks Jobs to run non-interactive code in your Azure Databricks workspace and Delta Live Tables to build reliable and maintainable ETL pipelines.</p>
+<p>Workflows has fully managed orchestration services integrated with the Azure Databricks platform, including Azure Databricks Jobs to run non-interactive code in your Azure Databricks workspace and Delta Live Tables to build reliable and maintainable <abbr title="Extract, Transform, Load: moving data from sources, cleaning it, then storing it">ETL</abbr> pipelines.</p>
 <h3 id="sccnpip"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#sccnpip">SCC/NPIP 🎭</a></h3>
 <p>Secure cluster connectivity is also known as No Public IP (NPIP).</p>
 <div class="admonition tldr">
@@ -11021,13 +11024,13 @@ Verify that the deletion was successful:</p>
 </div>
 <ul>
 <li>
-<p>At a network level, each cluster initiates a connection to the control plane secure cluster connectivity relay during cluster creation. The cluster establishes this connection using port 443 (HTTPS) and uses a different IP address than is used for the Web application and REST API.</p>
+<p>At a network level, each cluster initiates a connection to the control plane secure cluster connectivity relay during cluster creation. The cluster establishes this connection using port 443 (HTTPS) and uses a different IP address than is used for the Web application and <abbr title="A common style for web APIs using HTTP verbs like GET and POST">REST</abbr> <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr>.</p>
 </li>
 <li>
 <p>When the control plane logically starts new Databricks Runtime jobs or performs other cluster administration tasks, these requests are sent to the cluster through this tunnel.</p>
 </li>
 <li>
-<p>The compute plane (the VNet) has no open ports, and Databricks Runtime cluster nodes have no public IP addresses.</p>
+<p>The compute plane (the <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr>) has no open ports, and Databricks Runtime cluster nodes have no public IP addresses.</p>
 </li>
 </ul>
 <p><center> <img 
@@ -11048,7 +11051,7 @@ width="95%">
 <h3 id="delta-table_1"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#delta-table_1">Delta Table 🧩</a></h3>
 <p>A Delta table stores data as a directory of files on cloud object storage and registers table metadata to the metastore within a <code>catalog</code> and <code>schema</code>.</p>
 <h3 id="dbfs"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#dbfs">DBFS 🗄️</a></h3>
-<p>The <code>Databricks File System (DBFS)</code> is a ==distributed file system= mounted into an Azure Databricks workspace and available on Azure Databricks clusters. DBFS is an abstraction on top of scalable <code>object storage</code> that maps Unix-like filesystem calls to native cloud storage API calls.</p>
+<p>The <code>Databricks File System (DBFS)</code> is a ==distributed file system= mounted into an Azure Databricks workspace and available on Azure Databricks clusters. DBFS is an abstraction on top of scalable <code>object storage</code> that maps Unix-like filesystem calls to native cloud storage <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> calls.</p>
 <div class="admonition question">
 <p class="admonition-title">So what is DBFS root?</p>
 <p>The DBFS root is the default storage location for an Azure Databricks workspace, provisioned as part of workspace creation in the cloud account containing the Azure Databricks workspace.  it is important to differentiate that DBFS is a file system used for interacting with data in cloud object storage, and the DBFS root is a <code>cloud object storage location</code></p>
@@ -11108,31 +11111,31 @@ width="65%">
 <li>For a workspace to use Unity Catalog, it must have a Unity Catalog metastore attached.</li>
 </ul>
 <h3 id="external-tables"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#external-tables">External tables ‼️</a></h3>
-<p>External tables are tables whose data lifecycle and file layout are not managed by Unity Catalog. Use external tables to register large amounts of existing data in Unity Catalog, or if you require direct access to the data using tools outside of Azure Databricks clusters or Databricks SQL warehouses.</p>
+<p>External tables are tables whose data lifecycle and file layout are not managed by Unity Catalog. Use external tables to register large amounts of existing data in Unity Catalog, or if you require direct access to the data using tools outside of Azure Databricks clusters or Databricks <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> warehouses.</p>
 <div class="admonition warning">
 <p class="admonition-title">Dropping an External Table</p>
 <p>When you <code>drop an external table</code>, Unity Catalog does not delete the underlying data. You can manage privileges on external tables and use them in queries in the same way as managed tables.</p>
 </div>
 <h3 id="ip-access-lists"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#ip-access-lists">IP access lists ⚠️</a></h3>
-<p>IP access lists enable you to restrict access to your Azure Databricks account and workspaces based on a user’s IP address. For example, you can configure IP access lists to allow users to connect only through existing corporate networks with a secure perimeter. If the internal VPN network is authorized, users who are remote or traveling can use the VPN to connect to the corporate network. If a user attempts to connect to Azure Databricks from an insecure network, like from a coffee shop, access is blocked.</p>
+<p>IP access lists enable you to restrict access to your Azure Databricks account and workspaces based on a user’s IP address. For example, you can configure IP access lists to allow users to connect only through existing corporate networks with a secure perimeter. If the internal <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> network is authorized, users who are remote or traveling can use the <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> to connect to the corporate network. If a user attempts to connect to Azure Databricks from an insecure network, like from a coffee shop, access is blocked.</p>
 <p><center> <figure>
 <img width="95%" src=
 "https://learn.microsoft.com/en-us/azure/databricks/_static/images/security/network/ip-access-list-flow.png" ></p>
 <figcaption>IP Access list access check process</figcaption>
 <p></figure> </center></p>
 <h3 id="udr-custom-route"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#udr-custom-route">UDR/ Custom route 🚗</a></h3>
-<p>If your Azure Databricks workspace is deployed to your own virtual network (VNet), you can use custom routes, also known as user-defined routes (UDR), to ensure that network traffic is routed correctly for your workspace. For example, if you connect the virtual network to your on-premises network, traffic may be routed through the on-premises network and unable to reach the Azure Databricks control plane. <mark>User-defined routes can solve that problem</mark></p>
+<p>If your Azure Databricks workspace is deployed to your own virtual network (<abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr>), you can use custom routes, also known as user-defined routes (UDR), to ensure that network traffic is routed correctly for your workspace. For example, if you connect the virtual network to your on-premises network, traffic may be routed through the on-premises network and unable to reach the Azure Databricks control plane. <mark>User-defined routes can solve that problem</mark></p>
 <h3 id="private-link"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#private-link">Private Link 🌐</a></h3>
 <p>Private Link provides private connectivity from Azure VNets and on-premises networks to Azure services without exposing the traffic to the public network. Azure Databricks supports the following Private Link connection types:</p>
 <ol>
 <li>
-<p><strong>Front-end Private Link (also known as user to workspace)</strong>: A front-end Private Link connection allows users to connect to the Azure Databricks web application, REST API, and Databricks Connect API over a VNet interface endpoint. The front-end connection is also used by JDBC/ODBC and PowerBI integrations. The network traffic for a front-end Private Link connection between a transit VNet and the workspace control plane traverses over the Microsoft backbone network.</p>
+<p><strong>Front-end Private Link (also known as user to workspace)</strong>: A front-end Private Link connection allows users to connect to the Azure Databricks web application, <abbr title="A common style for web APIs using HTTP verbs like GET and POST">REST</abbr> <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr>, and Databricks Connect <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> over a <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> interface endpoint. The front-end connection is also used by JDBC/ODBC and PowerBI integrations. The network traffic for a front-end Private Link connection between a transit <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> and the workspace control plane traverses over the Microsoft backbone network.</p>
 </li>
 <li>
-<p><strong>Back-end Private Link (also known as compute plane to control plane)</strong>: Databricks Runtime clusters in a customer-managed VNet (the compute plane) connect to an Azure Databricks workspace’s core services (the control plane) in the Azure Databricks cloud account. This enables private connectivity from the clusters to the secure cluster connectivity relay endpoint and REST API endpoint.</p>
+<p><strong>Back-end Private Link (also known as compute plane to control plane)</strong>: Databricks Runtime clusters in a customer-managed <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> (the compute plane) connect to an Azure Databricks workspace’s core services (the control plane) in the Azure Databricks cloud account. This enables private connectivity from the clusters to the secure cluster connectivity relay endpoint and <abbr title="A common style for web APIs using HTTP verbs like GET and POST">REST</abbr> <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> endpoint.</p>
 </li>
 <li>
-<p><strong>Browser authentication private endpoint</strong>: To support private front-end connections to the Azure Databricks web application for clients that have no public internet connectivity, you must add a browser authentication private endpoint to support single sign-on (SSO) login callbacks to the Azure Databricks web application from Microsoft Entra ID (formerly Azure Active Directory). If you allow connections from your network to the public internet, adding a browser authentication private endpoint is recommended but not required. A browser authentication private endpoint is a private connection with sub-resource type browser_authentication.</p>
+<p><strong>Browser authentication private endpoint</strong>: To support private front-end connections to the Azure Databricks web application for clients that have no public internet connectivity, you must add a browser authentication private endpoint to support single sign-on (<abbr title="Single Sign-On: one login for many apps">SSO</abbr>) login callbacks to the Azure Databricks web application from Microsoft Entra ID (formerly Azure Active Directory). If you allow connections from your network to the public internet, adding a browser authentication private endpoint is recommended but not required. A browser authentication private endpoint is a private connection with sub-resource type browser_authentication.</p>
 </li>
 </ol>
 <p><center> <figure>
@@ -11141,7 +11144,7 @@ width="65%">
 <figcaption>Unity Catalog object model diagram</figcaption>
 <p></figure> </center></p>
 <h3 id="on-prem-connectivity"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#on-prem-connectivity">On-Prem connectivity 🏢</a></h3>
-<p>Traffic is routed via a transit virtual network (VNet) to the on-premises network, using the following hub-and-spoke topology.</p>
+<p>Traffic is routed via a transit virtual network (<abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr>) to the on-premises network, using the following hub-and-spoke topology.</p>
 <p><center> <figure>
 <img width="95%" src=
 "https://learn.microsoft.com/en-us/azure/databricks/_static/images/account-settings/azure-networking-transit-vnet.png" ></p>
@@ -11161,7 +11164,7 @@ width="65%">
 <figcaption>Network object architecture</figcaption>
 <p></figure> </center></p>
 <h3 id="workflows"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#workflows">Workflows ⏳</a></h3>
-<p><code>Azure Databricks Workflows</code> <mark>orchestrates data processing, machine learning, and analytics pipelines</mark> on the Databricks Data Intelligence Platform. Workflows has <code>fully managed orchestration services</code> integrated with the Databricks platform, including Azure Databricks Jobs to run non-interactive code in your Azure Databricks workspace and Delta Live Tables to build reliable and maintainable ETL pipelines.</p>
+<p><code>Azure Databricks Workflows</code> <mark>orchestrates data processing, machine learning, and analytics pipelines</mark> on the Databricks Data Intelligence Platform. Workflows has <code>fully managed orchestration services</code> integrated with the Databricks platform, including Azure Databricks Jobs to run non-interactive code in your Azure Databricks workspace and Delta Live Tables to build reliable and maintainable <abbr title="Extract, Transform, Load: moving data from sources, cleaning it, then storing it">ETL</abbr> pipelines.</p>
 <h3 id="jobs"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#jobs">Jobs 👨‍🎨</a></h3>
 <ul>
 <li>
@@ -11218,13 +11221,9 @@ width="65%">
         
       </main>
       
-        <!-- Footer -->
-
-<!-- <footer class="md-footer">
-	<!-- Further information -->
-	<div class="md-footer-meta md-typeset">
-	  <div class="md-footer-meta__inner md-grid">
-		<div class="md-copyright">
+        <div class="md-footer-meta md-typeset">
+  <div class="md-footer-meta__inner md-grid">
+    <div class="md-copyright">
   
     <div class="md-copyright__highlight">
       Copyright &copy; 2026 Amarjit Singh Dhillon
@@ -11232,13 +11231,8 @@ width="65%">
   
   
 </div>
-		<!-- Footer links -->
-		<!-- Social links -->
-		
-	  </div>
-	</div>
-	</div>
-  </footer> -->
+  </div>
+</div>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -11275,7 +11269,11 @@ width="65%">
       
         <script src="../../../javascripts/magnetic.js"></script>
       
+        <script src="../../../javascripts/transitions.js"></script>
+      
         <script src="../../../javascripts/hero.js"></script>
+      
+        <script src="../../../javascripts/cosmos.js"></script>
       
         <script src="../../../javascripts/totop.js"></script>
       

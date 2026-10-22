@@ -22,10 +22,17 @@
         <link rel="next" href="../frontdoor/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.ico">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../assets/images/favicon.svg">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     <meta name="google-site-verification" content="UHLjtoO7DV30dx3hVhwTOIWguEUr_VzS41msmq-uYKA" />
+    <!-- PNG fallback for browsers without SVG favicons, and the iOS home-screen icon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/favicon-96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../assets/images/apple-touch-icon.png">
+    <meta name="theme-color" content="#10123a">
     
     <script type="application/ld+json">
         {
@@ -50,7 +57,7 @@
 
     
       
-        <title>VNet - Amar's TechSpace 🛸</title>
+        <title>VNet - Amar's TechSpace</title>
       
     
     
@@ -79,7 +86,7 @@
     
     
     
-  </head>
+  <meta property="og:type" content="article"><meta property="og:site_name" content="Amar&#x27;s TechSpace"><meta property="og:title" content="Virtual Network - Amar&#x27;s TechSpace"><meta property="og:description" content="Developer resources for Azure, AWS, K8S and more."><meta property="og:url" content="https://www.amarjitdhillon.com/azure/vnet/"><meta property="og:image" content="https://www.amarjitdhillon.com/assets/cards/azure/vnet.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Virtual Network - Amar&#x27;s TechSpace"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Virtual Network - Amar&#x27;s TechSpace"><meta name="twitter:description" content="Developer resources for Azure, AWS, K8S and more."><meta name="twitter:image" content="https://www.amarjitdhillon.com/assets/cards/azure/vnet.png"></head>
   
   
     
@@ -89,7 +96,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -112,9 +119,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Amar&#39;s TechSpace 🛸" class="md-header__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../.." title="Amar&#39;s TechSpace" class="md-header__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../assets/images/menu.png" alt="logo">
+  <img src="../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -124,9 +131,9 @@
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Amar's TechSpace 🛸
-          </span>
+          <a href="../.." class="md-ellipsis wordmark" aria-label="Home">
+            Amar's <b>TechSpace</b>
+          </a>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
@@ -144,7 +151,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="red"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -154,7 +161,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
@@ -512,12 +519,12 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Amar&#39;s TechSpace 🛸" class="md-nav__button md-logo" aria-label="Amar's TechSpace 🛸" data-md-component="logo">
+    <a href="../.." title="Amar&#39;s TechSpace" class="md-nav__button md-logo" aria-label="Amar's TechSpace" data-md-component="logo">
       
-  <img src="../../assets/images/menu.png" alt="logo">
+  <img src="../../assets/images/planet.svg?v=3" alt="logo">
 
     </a>
-    Amar's TechSpace 🛸
+    Amar's TechSpace
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -2509,7 +2516,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.66 13.07c-1.74 0-3.16-1.41-3.16-3.14 0-.71.26-1.39.69-1.93-.42-.54-.69-1.22-.69-1.93 0-1.73 1.43-3.14 3.16-3.14l.43.03A3.15 3.15 0 0 1 12 1c1.31 0 2.44.81 2.91 1.96l.43-.03c1.73 0 3.16 1.41 3.16 3.14 0 .71-.26 1.39-.69 1.93.42.54.69 1.22.69 1.93 0 1.73-1.43 3.14-3.16 3.14l-.43-.03A3.15 3.15 0 0 1 12 15a3.15 3.15 0 0 1-2.91-1.96zM12 13c.62 0 1.12-.5 1.14-1.1l-.11-1.09c-.32.12-.67.19-1.03.19s-.7-.07-1-.19l-.14 1.09c.02.6.52 1.1 1.14 1.1m3.34-1.93c.63 0 1.16-.51 1.16-1.15 0-.42-.27-.84-.67-1.03l-.88-.42c-.12.74-.51 1.38-1.06 1.83l.81.57c.18.13.4.2.64.2m-.65-5.94-.82.56c.56.45.95 1.09 1.07 1.81l.88-.4c.41-.2.68-.6.68-1.03 0-.63-.53-1.14-1.16-1.14-.23 0-.45.07-.65.2M12 3c-.62 0-1.12.5-1.14 1.1L11 5.19c.3-.12.64-.19 1-.19s.71.07 1.03.19l.11-1.09C13.12 3.5 12.62 3 12 3M8.66 4.93c-.63 0-1.16.51-1.16 1.14 0 .43.27.83.67 1.03l.88.4c.12-.72.51-1.36 1.06-1.81l-.81-.56c-.18-.13-.4-.2-.64-.2M8.17 8.9c-.4.2-.67.6-.67 1.02 0 .63.53 1.14 1.16 1.14.23 0 .45-.06.65-.2l.81-.55c-.56-.45-.95-1.09-1.07-1.81zM12 22a9 9 0 0 1-9-9 9 9 0 0 1 9 9 9 9 0 0 1 9-9 9 9 0 0 1-9 9m2.44-2.44a7.04 7.04 0 0 0 4.12-4.12c-1.9.7-3.41 2.22-4.12 4.12m-9-4.12a7.04 7.04 0 0 0 4.12 4.12c-.7-1.9-2.22-3.41-4.12-4.12"/></svg>
   
   <span class="md-ellipsis">
-    Arch Continums
+    Arch Continuums
   </span>
   
 
@@ -3092,7 +3099,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"/></svg>
   
   <span class="md-ellipsis">
-    Elasti Cache
+    ElastiCache
   </span>
   
 
@@ -3517,7 +3524,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"/></svg>
   
   <span class="md-ellipsis">
-    Athnea
+    Athena
   </span>
   
 
@@ -5348,7 +5355,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12z"/></svg>
   
   <span class="md-ellipsis">
-    Read Replics
+    Read Replicas
   </span>
   
 
@@ -8653,7 +8660,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c-.89 2.18-1.43 3.61-2.42 5.73.61.64 1.35 1.39 2.56 2.24-1.3-.54-2.19-1.07-2.85-1.63C8 11 6.03 14.75 2 22c3.17-1.83 5.63-2.96 7.92-3.39-.1-.42-.16-.88-.15-1.36v-.1c.05-2.03 1.11-3.59 2.36-3.48 1.25.1 2.22 1.83 2.17 3.87-.01.38-.05.75-.12 1.09 2.26.44 4.69 1.56 7.82 3.37-.62-1.14-1.17-2.16-1.69-3.13-.81-.64-1.7-1.48-3.46-2.37 1.21.3 2.08.66 2.76 1.07C14.26 7.62 13.83 6.3 12 2"/></svg>
   
   <span class="md-ellipsis">
-    Cluster Architecutre
+    Cluster Architecture
   </span>
   
 
@@ -9022,7 +9029,7 @@
         
   
   <span class="md-ellipsis">
-    DeamonSet
+    DaemonSet
   </span>
   
 
@@ -9106,7 +9113,7 @@
         
   
   <span class="md-ellipsis">
-    Replia Set
+    ReplicaSet
   </span>
   
 
@@ -11034,12 +11041,12 @@ as the main headline.
 -->
 
 
-<!-- Markdown content (marker turns on scroll-reveal for pages with `reveal: true`) -->
-
-<h1 id="virtual-network">Virtual Network <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21 3.1-.8.8C19 2.8 17.5 2.2 16 2.2s-3 .6-4.2 1.7l-.8-.8C12.4 1.7 14.2 1 16 1s3.6.7 5 2.1m-5 .2c1.2 0 2.4.5 3.3 1.4l-.8.8c-.7-.7-1.6-1-2.5-1s-1.8.3-2.5 1l-.8-.8c.9-.9 2.1-1.4 3.3-1.4m1 6.7h2c.53 0 1.04.21 1.41.59.38.37.59.88.59 1.41v2c0 .53-.21 1.04-.59 1.41-.37.38-.88.59-1.41.59h-6v2h1c.55 0 1 .45 1 1h7v2h-7c0 .55-.45 1-1 1h-4c-.55 0-1-.45-1-1H2v-2h7c0-.55.45-1 1-1h1v-2H5c-.53 0-1.04-.21-1.41-.59C3.21 15.04 3 14.53 3 14v-2c0-.53.21-1.04.59-1.41.37-.38.88-.59 1.41-.59h10V6h2zM5 14h2v-2H5zm3.5 0h2v-2h-2zm3.5 0h2v-2h-2z"/></svg></span><a class="headerlink" href="#virtual-network" title="Link to this section">&para;</a></h1>
+<!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
+<span data-reveal-page hidden></span>
+<h1 id="virtual-network">Virtual Network <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21 3.1-.8.8C19 2.8 17.5 2.2 16 2.2s-3 .6-4.2 1.7l-.8-.8C12.4 1.7 14.2 1 16 1s3.6.7 5 2.1m-5 .2c1.2 0 2.4.5 3.3 1.4l-.8.8c-.7-.7-1.6-1-2.5-1s-1.8.3-2.5 1l-.8-.8c.9-.9 2.1-1.4 3.3-1.4m1 6.7h2c.53 0 1.04.21 1.41.59.38.37.59.88.59 1.41v2c0 .53-.21 1.04-.59 1.41-.37.38-.88.59-1.41.59h-6v2h1c.55 0 1 .45 1 1h7v2h-7c0 .55-.45 1-1 1h-4c-.55 0-1-.45-1-1H2v-2h7c0-.55.45-1 1-1h1v-2H5c-.53 0-1.04-.21-1.41-.59C3.21 15.04 3 14.53 3 14v-2c0-.53.21-1.04.59-1.41.37-.38.88-.59 1.41-.59h10V6h2zM5 14h2v-2H5zm3.5 0h2v-2h-2zm3.5 0h2v-2h-2z"/></svg></span><a class="headerlink" href="#virtual-network" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 18 min read</p>
 <ul>
 <li>
-<p>VNet enables many types of Azure resources, such as Azure Virtual Machines (VM), to securely communicate with each other.</p>
+<p><abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> enables many types of Azure resources, such as Azure Virtual Machines (VM), to securely communicate with each other.</p>
 </li>
 <li>
 <p>Virtual networks and subnets span all availability zones in a region. You don't need to divide them by availability zones to accommodate zonal resources</p>
@@ -11047,12 +11054,12 @@ as the main headline.
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Default communication to Internet</p>
-<p>All resources in a VNet can communicate outbound to the internet, by default. You can communicate inbound to a resource by assigning a public IP address or a public Load Balancer.</p>
+<p>All resources in a <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> can communicate outbound to the internet, by default. You can communicate inbound to a resource by assigning a public IP address or a public Load Balancer.</p>
 </div>
-<h2 id="vnet-components">VNet components<a class="headerlink" href="#vnet-components" title="Link to this section">&para;</a></h2>
+<h2 id="vnet-components"><abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> components<a class="headerlink" href="#vnet-components" title="Link to this section">&para;</a></h2>
 <p><center> <img src="../images/vnet_basic.jpg" width="100%"> </center></p>
 <h3 id="address-space">Address space<a class="headerlink" href="#address-space" title="Link to this section">&para;</a></h3>
-<p>When creating a VNet, you must specify a <code>custom private IP address</code> space using public and private addresses. Azure assigns resources in a virtual network a private IP address from the address space that you assign. For example, if you deploy a VM in a VNet with address space, <code>10.0.0.0/16</code>, the VM will be assigned a private IP like <code>10.0.0.4</code>.</p>
+<p>When creating a <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr>, you must specify a <code>custom private IP address</code> space using public and private addresses. Azure assigns resources in a virtual network a private IP address from the address space that you assign. For example, if you deploy a VM in a <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> with address space, <code>10.0.0.0/16</code>, the VM will be assigned a private IP like <code>10.0.0.4</code>.</p>
 <div class="admonition remember">
 <p class="admonition-title">Address range</p>
 <p>Largest is <code>x.x.x.x/8</code> and smallest is <code>x.x.x.x/29</code></p>
@@ -11074,13 +11081,13 @@ as the main headline.
 <p>The reason for this is that a public subnet contains workloads that are Internet facing, and a <code>private subnet</code> contains workloads that are not exposed to the Internet, such as <code>databases, application logic, backend servers, etc</code>. By default, the communication from the public subnet is allowed to the private subnet; however, we need to make sure that the traffic is filtered before it reaches the private subnet. This will help us to protect the private workloads, as all traffic is matched against the rules that you have set up in the <code>NVA (WAF in this case)</code>. If there is any attack or malicious traffic, <code>NVA</code> will take care of it. </p>
 <p>Now, the question is, how can we implement this? As you can see in above diagram, we have used the routing table with User Defined Route (UDR) to accomplish this task. By default, the traffic from the public subnet to the private subnet is allowed, but using UDR, you are forcing the packets to go through the <code>DMZ subnet</code>.</p>
 <h3 id="regions">Regions<a class="headerlink" href="#regions" title="Link to this section">&para;</a></h3>
-<p><mark>VNet is scoped to a single region/location</mark>; however, multiple virtual networks from different regions can be connected together using peering.</p>
+<p><mark><abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> is scoped to a single region/location</mark>; however, multiple virtual networks from different regions can be connected together using peering.</p>
 <div class="admonition warning">
 <p class="admonition-title">Choose region with care</p>
 <p>When you create a virtual network in Azure, you will get an option to choose the region. Depending on the region you choose, the virtual network will be deployed to the respective region, and the virtual machines deployed to the virtual network will also fall under the same region. </p>
 </div>
 <h3 id="subscription">Subscription<a class="headerlink" href="#subscription" title="Link to this section">&para;</a></h3>
-<p>VNet is scoped to a subscription. You can implement multiple virtual networks within each Azure subscription and Azure region.</p>
+<p><abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> is scoped to a subscription. You can implement multiple virtual networks within each Azure subscription and Azure region.</p>
 <h2 id="vnet-peering">VNET peering<a class="headerlink" href="#vnet-peering" title="Link to this section">&para;</a></h2>
 <p><code>Virtual network peering</code> enables you to seamlessly connect two or more <code>Virtual Networks</code> in Azure. The virtual networks appear as one for connectivity purposes. The traffic between virtual machines in peered virtual networks uses the Microsoft backbone infrastructure. <mark>Like traffic between virtual machines in the same network, traffic is routed through Microsoft's private network only.</mark></p>
 <div class="admonition danger">
@@ -11136,20 +11143,20 @@ as the main headline.
 <li>The service key is the only piece of information exchanged between Microsoft, the connectivity provider, and you (s-key is not a secret for security purposes)</li>
 <li>A circuit consists of 2 connections:<ul>
 <li><code>Primary connection</code>: main</li>
-<li><code>Secondary connection</code>: redundent for HA</li>
+<li><code>Secondary connection</code>: redundent for <abbr title="High Availability: designed to keep running when parts fail">HA</abbr></li>
 </ul>
 </li>
 </ul>
 <h4 id="peering">Peering<a class="headerlink" href="#peering" title="Link to this section">&para;</a></h4>
 <p>A peering is the interconnection between on-premise network and Microsoft cloud services (Azure, Microsoft 365). <code>ExpressRoute</code> circuits can include two independent peerings:
-- <code>Private peering</code>: Azure VNet
+- <code>Private peering</code>: Azure <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr>
 - <code>Microsoft peering</code>: Microsoft 365, Dynamics 365 etc.</p>
 <h2 id="basics">Basics<a class="headerlink" href="#basics" title="Link to this section">&para;</a></h2>
 <h3 id="nic">NIC<a class="headerlink" href="#nic" title="Link to this section">&para;</a></h3>
 <p><code>Virtual machines</code> have one or more <code>network interface cards (NICs)</code> that exist in the same region as the virtual network. You assign an IP address (either statically or dynamically) from a subnet in the virtual network. This action allows the virtual machine to communicate with other resources in the virtual network (and any peered network).</p>
 <p><center> <img src="../images/nic.jpg" width="80%"> </center></p>
 <h3 id="public-ips">Public IPs<a class="headerlink" href="#public-ips" title="Link to this section">&para;</a></h3>
-<p>Public IP addresses are associated with a virtual machine NIC, public load balancer, VPN gateways, application gateways, and any other resource that can be accessed from the Internet. </p>
+<p>Public IP addresses are associated with a virtual machine NIC, public load balancer, <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> gateways, application gateways, and any other resource that can be accessed from the Internet. </p>
 <p>Here also we can choose the allocation method to be <code>static or dynamic</code>. However, the availability of allocation methods depends on which SKU of public IP address we are using. <mark>The SKU is more like a pricing tier, where you will find different prices based on which SKU you are selecting</mark></p>
 <ul>
 <li><strong>Basic SKU</strong>: Static or Dynamic IP that is <code>accessible by default</code> and needs NSG to configure</li>
@@ -11161,7 +11168,7 @@ as the main headline.
 <div class="admonition info">
 <p class="admonition-title"> Some basics: revised</p>
 <ol>
-<li><code>Azure Private Link</code> enables you to access Azure PaaS Services (for example, Azure Storage and SQL Database) and Azure hosted customer-owned/partner services over a Private Endpoint in your virtual network. Traffic between your virtual network and the service traverses over the Microsoft backbone network, eliminating exposure from the public Internet.</li>
+<li><code>Azure Private Link</code> enables you to access Azure <abbr title="Platform as a Service: the provider runs the platform, you bring the code">PaaS</abbr> Services (for example, Azure Storage and <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> Database) and Azure hosted customer-owned/partner services over a Private Endpoint in your virtual network. Traffic between your virtual network and the service traverses over the Microsoft backbone network, eliminating exposure from the public Internet.</li>
 <li><code>Azure Private Link service</code> is the reference to your own service that is powered by Azure Private Link.</li>
 <li>A <code>private-link resource</code> is the destination target of a specified private endpoint.</li>
 <li>A <code>private endpoint</code> is a <code>network interface</code> that uses a private IP address from your virtual network. This network interface connects you privately and securely to a service that's powered by Azure Private Link. By enabling a private endpoint, you're bringing the service into your virtual network. <mark>Private endpoint has NIC attached to it.</mark></li>
@@ -11189,7 +11196,7 @@ as the main headline.
 <li>Virtual network</li>
 <li>Regionally peered virtual networks</li>
 <li>Globally peered virtual networks</li>
-<li>On-premises environments that use VPN or Express Route</li>
+<li>On-premises environments that use <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> or Express Route</li>
 <li>Services that are powered by Private Link</li>
 </ul>
 </div>
@@ -11198,25 +11205,25 @@ as the main headline.
 <p><center> <img src="../images/private-link-service-workflow.png" width="100%"> </center></p>
 <h3 id="service-endpoint">Service Endpoint<a class="headerlink" href="#service-endpoint" title="Link to this section">&para;</a></h3>
 <ul>
-<li>Service endpoints direct VNet traffic <code>off the public Internet</code> and to the <code>Azure backbone network</code>. </li>
+<li>Service endpoints direct <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> traffic <code>off the public Internet</code> and to the <code>Azure backbone network</code>. </li>
 <li>They are enabled per subnet using policies.</li>
 <li>This service does not provide private IPs to the services.</li>
-<li>Service Endpoints enables private IP addresses in the their VNet to reach the endpoint of an Azure service without needing a public IP address on the their VNet. These VM's will connect to public IP of the service though.</li>
+<li>Service Endpoints enables private IP addresses in the their <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> to reach the endpoint of an Azure service without needing a public IP address on the their <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr>. These VM's will connect to public IP of the service though.</li>
 <li><code>Service endpoints</code> apply to all instances of the Azure resource, not just the ones you create. If you want to limit virtual network traffic to specific instances or regions of a resource, you need a service endpoint policy.</li>
 </ul>
 <div class="admonition success">
 <p class="admonition-title">Example of service endpoint</p>
-<p>Review the image below representing service endpoints in action. In this example, you have enabled a service endpoint for the <code>Microsoft.SQL service</code> on <code>SubnetA</code>. A virtual machine in <code>SubnetA</code> uses its private IP address to access a SQL server hosting several databases. The virtual machine connects using the public IP addresses associated with the <code>Microsoft.SQL service</code></p>
+<p>Review the image below representing service endpoints in action. In this example, you have enabled a service endpoint for the <code>Microsoft.SQL service</code> on <code>SubnetA</code>. A virtual machine in <code>SubnetA</code> uses its private IP address to access a <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> server hosting several databases. The virtual machine connects using the public IP addresses associated with the <code>Microsoft.SQL service</code></p>
 <p>Notice that Subnet B does not have service endpoints enabled for its subnet for the <code>Microsoft.SQL service</code>. Compute resources in this subnet use the public IP address for the virtual network to connect to the public IP address of the Azure service.</p>
 <p><center> <img src="../images/service_endpoint_diagram.jpg" width="100%"> </center></p>
 </div>
 <h4 id="service-endpoint-policies">Service Endpoint Policies<a class="headerlink" href="#service-endpoint-policies" title="Link to this section">&para;</a></h4>
-<p>Virtual Network (VNet) <code>service endpoint policies</code> allow you to filter egress virtual network traffic to Azure <code>Storage accounts</code> over <code>service endpoint</code>, and allow data exfiltration to only specific Azure Storage accounts. Endpoint policies provide granular access control for virtual network traffic to Azure Storage when connecting over service endpoint.</p>
+<p>Virtual Network (<abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr>) <code>service endpoint policies</code> allow you to filter egress virtual network traffic to Azure <code>Storage accounts</code> over <code>service endpoint</code>, and allow data exfiltration to only specific Azure Storage accounts. Endpoint policies provide granular access control for virtual network traffic to Azure Storage when connecting over service endpoint.</p>
 <p><center> <img src="../images/service-endpoint-policy.jpg" width="95%"> </center></p>
 <h3 id="private-vs-service-endpoints">Private Vs Service Endpoints<a class="headerlink" href="#private-vs-service-endpoints" title="Link to this section">&para;</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Public and Private IPs in service/private endpoints</p>
-<p>With <code>service endpoints</code>, you're still connecting to the target resource's public endpoint. This effectively extends the identity of the VNet to the target resource. With <code>private endpoints</code>, you're assigning the target resource a private IP address from the VNet, essentially bringing it into the network. <mark>The target resource's public IP address doesn't go away, but you can lock it down so all traffic from the internet is denied.</mark></p>
+<p>With <code>service endpoints</code>, you're still connecting to the target resource's public endpoint. This effectively extends the identity of the <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> to the target resource. With <code>private endpoints</code>, you're assigning the target resource a private IP address from the <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr>, essentially bringing it into the network. <mark>The target resource's public IP address doesn't go away, but you can lock it down so all traffic from the internet is denied.</mark></p>
 </div>
 <p>Here are some tips on when to use which endpint</p>
 <div class="admonition note">
@@ -11224,9 +11231,9 @@ as the main headline.
 <ol>
 <li>If you want to be able to block all internet traffic to a target resource, use a private endpoint.</li>
 <li>If you're dealing with traffic from on-premises, use a private endpoint.</li>
-<li>If you want to secure a specific sub-resource to your VNet resources, use a private endpoint.</li>
-<li>If you want to secure a <code>specific storage account</code> to your VNet resources, you can use a private endpoint, or a service endpoint with a <code>service endpoint policy</code>.</li>
-<li>If you don't need a private IP address at the destination, service endpoints are considerably easier to create and maintain, and they don't require special DNS configuration.</li>
+<li>If you want to secure a specific sub-resource to your <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> resources, use a private endpoint.</li>
+<li>If you want to secure a <code>specific storage account</code> to your <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> resources, you can use a private endpoint, or a service endpoint with a <code>service endpoint policy</code>.</li>
+<li>If you don't need a private IP address at the destination, service endpoints are considerably easier to create and maintain, and they don't require special <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> configuration.</li>
 <li>if cost is a concern, <mark>note that service endpoints are free.</mark></li>
 </ol>
 </div>
@@ -11236,7 +11243,7 @@ as the main headline.
 <p>They are built in routes which <code>cannot be modified</code></p>
 <div class="admonition success">
 <p class="admonition-title">VM's default communicaiton to internet</p>
-<p><mark>Whenever we create a VM in Azure, the VM will be able to communicate with the Internet without setting up any routes</mark>. In AWS, we need to create different gateways like NAT Gateway or Internet Gateway to facilitate the connection from a VM to the Internet. However, in Azure this is enabled by default with the help of <code>system routes</code></p>
+<p><mark>Whenever we create a VM in Azure, the VM will be able to communicate with the Internet without setting up any routes</mark>. In AWS, we need to create different gateways like <abbr title="Network Address Translation: lets private machines reach the internet without being reachable">NAT</abbr> Gateway or Internet Gateway to facilitate the connection from a VM to the Internet. However, in Azure this is enabled by default with the help of <code>system routes</code></p>
 </div>
 <h4 id="custom-user-defined-routes-udr">Custom/ User defined routes (UDR)<a class="headerlink" href="#custom-user-defined-routes-udr" title="Link to this section">&para;</a></h4>
 <p>User defined routes (UDR) or BGP routes which can <code>override the system routes</code>.</p>
@@ -11270,11 +11277,11 @@ as the main headline.
 <h3 id="nva">NVA<a class="headerlink" href="#nva" title="Link to this section">&para;</a></h3>
 <p>Network Virtual Appliance  <code>NVA</code>s are VMs that can optimize our networks with routing and firewall capabilities.</p>
 <h3 id="azure-firewall-l7-and-l4">Azure Firewall (L7 and L4)<a class="headerlink" href="#azure-firewall-l7-and-l4" title="Link to this section">&para;</a></h3>
-<p>Using Azure Firewall, we can create, enforce, and manage <code>network policies</code> across virtual networks and subscriptions. Azure Firewall provides more features then NSG. Also, Azure firewall is different than WAF</p>
+<p>Using Azure Firewall, we can create, enforce, and manage <code>network policies</code> across virtual networks and subscriptions. Azure Firewall provides more features then NSG. Also, Azure firewall is different than <abbr title="Web Application Firewall: blocks common web attacks like SQL injection">WAF</abbr></p>
 <p>Setting for Azure firewall is shown below</p>
 <p><center> <img src="../images/azure-firewall-setting.jpg" width="95%"> </center></p>
 <div class="admonition question">
-<p class="admonition-title">Do we need WAF in addition to NSG?</p>
+<p class="admonition-title">Do we need <abbr title="Web Application Firewall: blocks common web attacks like SQL injection">WAF</abbr> in addition to NSG?</p>
 <p>Yes, we need both. The main difference is that <code>NSG</code> operates at layers 3 and 4 of the OSI layer; on the other hand, Azure Firewall works at layers 7 and 4.</p>
 </div>
 <p>It comes in 3 flavours</p>
@@ -11301,17 +11308,17 @@ as the main headline.
 </ul>
 <p>Rules used in Firewall are of 3 types</p>
 <ol>
-<li>NAT </li>
+<li><abbr title="Network Address Translation: lets private machines reach the internet without being reachable">NAT</abbr> </li>
 <li>Network (L4)</li>
 <li>Application (L7)</li>
 </ol>
 <div class="highlight"><span class="filename">Priority of Firewall rules</span><pre><span></span><code><span class="nx">NAT</span><span class="w"> </span><span class="nx">rule</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="nx">Network</span><span class="w"> </span><span class="nx">rule</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="nx">Application</span><span class="w"> </span><span class="nx">rule</span>
 </code></pre></div>
-<h5 id="nat-rules">NAT rules<a class="headerlink" href="#nat-rules" title="Link to this section">&para;</a></h5>
-<p>Using a NAT rule collection, you will be able to translate a public IP and port to a private IP and port</p>
+<h5 id="nat-rules"><abbr title="Network Address Translation: lets private machines reach the internet without being reachable">NAT</abbr> rules<a class="headerlink" href="#nat-rules" title="Link to this section">&para;</a></h5>
+<p>Using a <abbr title="Network Address Translation: lets private machines reach the internet without being reachable">NAT</abbr> rule collection, you will be able to translate a public IP and port to a private IP and port</p>
 <div class="admonition abstract">
-<p class="admonition-title">NAT example using VM</p>
-<p>Assume you have a <code>Ubuntu server</code> with private IP address, say, <code>10.0.0.2</code>, and the SSH server is available on port 22. Instead of exposing this port and IP to the Internet, you can create a NAT rule on the firewall. Using the public IP of the firewall and a random port, you can set up a NAT rule. Let’s assume that the public IP address of the firewall is <code>66.142.43.02</code>; using NAT rule you can redirect all traffic hitting port 5000 of the firewall to be translated to <code>10.0.0.2</code> and port 22. In short, translate <code>66.142.43.02:5000</code> to <code>10.0.0.2:22</code>. In this way, you can translate the public IP address and port to a private IP address and port.</p>
+<p class="admonition-title"><abbr title="Network Address Translation: lets private machines reach the internet without being reachable">NAT</abbr> example using VM</p>
+<p>Assume you have a <code>Ubuntu server</code> with private IP address, say, <code>10.0.0.2</code>, and the SSH server is available on port 22. Instead of exposing this port and IP to the Internet, you can create a <abbr title="Network Address Translation: lets private machines reach the internet without being reachable">NAT</abbr> rule on the firewall. Using the public IP of the firewall and a random port, you can set up a <abbr title="Network Address Translation: lets private machines reach the internet without being reachable">NAT</abbr> rule. Let’s assume that the public IP address of the firewall is <code>66.142.43.02</code>; using <abbr title="Network Address Translation: lets private machines reach the internet without being reachable">NAT</abbr> rule you can redirect all traffic hitting port 5000 of the firewall to be translated to <code>10.0.0.2</code> and port 22. In short, translate <code>66.142.43.02:5000</code> to <code>10.0.0.2:22</code>. In this way, you can translate the public IP address and port to a private IP address and port.</p>
 <p><center> <img src="../images/nat-translation.jpg" width="90%"> </center></p>
 </div>
 <h6 id="inbound-dnat">Inbound DNAT<a class="headerlink" href="#inbound-dnat" title="Link to this section">&para;</a></h6>
@@ -11329,8 +11336,8 @@ as the main headline.
 <div class="admonition error">
 <p>if you configure network rules and application rules, then network rules are applied in priority order before application rules. The rules are terminating. So, if a match is found in a network rule, no other rules are processed.</p>
 </div>
-<h3 id="asg">ASG<a class="headerlink" href="#asg" title="Link to this section">&para;</a></h3>
-<p><code>Application security groups</code> enable you to configure network security as a natural extension of an application's structure, allowing you to group virtual machines and define network security policies based on those groups. You can reuse your security policy at scale without manual maintenance of explicit IP addresses. </p>
+<h3 id="asg"><abbr title="Auto Scaling Group: a set of servers that grows and shrinks with demand">ASG</abbr><a class="headerlink" href="#asg" title="Link to this section">&para;</a></h3>
+<p><code>Application security groups</code> enable you to configure network security as a natural extension of an application's structure, allowing you to group virtual machines and define network security policies based on those groups. You can reuse your security policy at scale without manual maintenance of explicit IP addresses. </p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Network<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../azure/frontdoor/">Front Door →</a></p></li><li><p class="rn__kicker">Network<span class="rn__time"> · 5 min read</span></p><p class="rn__title"><a href="../../azure/api_gateway/">APIM Gateway →</a></p></li></ul></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -11373,6 +11380,13 @@ as the main headline.
     };
     var s = document.querySelector("script[src*='giscus.app/client.js']");
     if (s) s.setAttribute("data-theme", themeFor());
+    // Giscus titles its frame "Comments" and Material turns every title into a floating tooltip,
+    // so move it to aria-label (screen readers still hear it, no stray tooltip)
+    var wrap = s && s.parentNode;
+    if (wrap) new MutationObserver(function (_, obs) {
+      var f = wrap.querySelector("iframe.giscus-frame[title]");
+      if (f) { f.setAttribute("aria-label", f.title); f.removeAttribute("title"); obs.disconnect(); }
+    }).observe(wrap, { childList: true, subtree: true });
     var ref = document.querySelector("[data-md-component=palette]");
     if (ref && !ref.dataset.giscusSync) {
       ref.dataset.giscusSync = "1";
@@ -11406,13 +11420,9 @@ as the main headline.
         
       </main>
       
-        <!-- Footer -->
-
-<!-- <footer class="md-footer">
-	<!-- Further information -->
-	<div class="md-footer-meta md-typeset">
-	  <div class="md-footer-meta__inner md-grid">
-		<div class="md-copyright">
+        <div class="md-footer-meta md-typeset">
+  <div class="md-footer-meta__inner md-grid">
+    <div class="md-copyright">
   
     <div class="md-copyright__highlight">
       Copyright &copy; 2026 Amarjit Singh Dhillon
@@ -11420,13 +11430,8 @@ as the main headline.
   
   
 </div>
-		<!-- Footer links -->
-		<!-- Social links -->
-		
-	  </div>
-	</div>
-	</div>
-  </footer> -->
+  </div>
+</div>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -11463,7 +11468,11 @@ as the main headline.
       
         <script src="../../javascripts/magnetic.js"></script>
       
+        <script src="../../javascripts/transitions.js"></script>
+      
         <script src="../../javascripts/hero.js"></script>
+      
+        <script src="../../javascripts/cosmos.js"></script>
       
         <script src="../../javascripts/totop.js"></script>
       
