@@ -10066,7 +10066,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="azure-resource-manager">Azure Resource Manager <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.41 4 16 6.41v.18L18.41 9H22v2h-4.41L16 9.41V12h-1a2 2 0 0 1-2-2V7.5H9.86c-.09.37-.24.72-.44 1.05L15.18 19H20a2 2 0 0 1 2 2v1H2v-1a2 2 0 0 1 2-2h6.61l-4.69-8.5a4.006 4.006 0 0 1-3.81-3A4 4 0 0 1 5 2.63c2.13-.55 4.31.73 4.86 2.87H13V3a2 2 0 0 1 2-2h1v2.59L17.59 2H22v2zM6 4.5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span><a class="headerlink" href="#azure-resource-manager" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 4 min read</p>
+<header class="page-head" style="--s1: 13, 148, 136; --s2: 6, 182, 212"><p class="page-head__pill"><span>🔷</span> Azure / Misc</p><h1 id="azure-resource-manager">Azure Resource <span class="page-head__accent">Manager</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.41 4 16 6.41v.18L18.41 9H22v2h-4.41L16 9.41V12h-1a2 2 0 0 1-2-2V7.5H9.86c-.09.37-.24.72-.44 1.05L15.18 19H20a2 2 0 0 1 2 2v1H2v-1a2 2 0 0 1 2-2h6.61l-4.69-8.5a4.006 4.006 0 0 1-3.81-3A4 4 0 0 1 5 2.63c2.13-.55 4.31.73 4.86 2.87H13V3a2 2 0 0 1 2-2h1v2.59L17.59 2H22v2zM6 4.5a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2"/></svg></span><a class="headerlink" href="#azure-resource-manager" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 4 min read</span></p></header>
 <p>For if you are creating  a <code>virtual machine</code>, you will send our inputs to the <code>Azure Resource Manager</code>, and ARM will forward the request to <code>Microsoft.Compute</code> Compute resource provider after validation. The resource provider will deploy the resource and update you with  the status via ARM. Similarly, when you create a networking resource like a virtual network, the resource provisioning is done by the <code>Microsoft.Network</code> resource provider.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -10077,7 +10077,7 @@ as the main headline.
 </div>
 <h2 id="template-file">Template File 📄<a class="headerlink" href="#template-file" title="Link to this section">&para;</a></h2>
 <p>In its simplest structure, a template has the following elements:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="language-json highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -10130,7 +10130,7 @@ as the main headline.
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>To illustrate the difference between incremental and complete modes, consider the following scenario.</p>
-<div class="highlight"><pre><span></span><code>Resource Group contains:
+<div class="language-text highlight"><pre><span></span><code>Resource Group contains:
     -  Resource A
     -  Resource B
     -  Resource C
@@ -10165,7 +10165,7 @@ When deployed in complete mode, Resource C is deleted. The resource group has:
 <p>You can target your deployment to a resource group, subscription, management group, or tenant. Depending on the scope of the deployment, you use different commands. </p>
 <p>There is no resource level scope</p>
 </div>
-<div class="highlight"><span class="filename">create various resources using powershell</span><pre><span></span><code><span class="c1"># To create an Azure resource, such as a website, Azure SQL Database server, or Azure SQL Database, in a resource group use:</span>
+<div class="language-py highlight"><span class="filename">create various resources using powershell</span><pre><span></span><code><span class="c1"># To create an Azure resource, such as a website, Azure SQL Database server, or Azure SQL Database, in a resource group use:</span>
 <span class="n">New</span><span class="o">-</span><span class="n">AzResource</span> 
 
 <span class="c1"># To add a deployment to an existing resource group, use:</span>
@@ -10178,7 +10178,7 @@ When deployed in complete mode, Resource C is deleted. The resource group has:
 <p>ARM provides the <code>what-if</code> operation to let you see how resources will change if you deploy the template. The <code>what-if</code> operation doesn't make any changes to existing resources. Instead, it predicts the changes if the specified template is deployed.</p>
 <h2 id="resource-dependency">Resource Dependency 🔗<a class="headerlink" href="#resource-dependency" title="Link to this section">&para;</a></h2>
 <p>When deploying resources, you may need to make sure some resources exist before other resources. For example, you need a <code>logical SQL server</code> before deploying a <code>database</code>. You establish this relationship by marking one resource as dependent on the other resource. Use the <code>dependsOn</code> element to define an explicit dependency. Use the reference or list functions to define an implicit dependency.</p>
-<div class="highlight"><span class="filename">NIC dependency a VNET, NSG, and public IP</span><pre><span></span><code><span class="p">{</span>
+<div class="language-json highlight"><span class="filename">NIC dependency a VNET, NSG, and public IP</span><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Microsoft.Network/networkInterfaces&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2020-06-01&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;[variables(&#39;networkInterfaceName&#39;)]&quot;</span><span class="p">,</span>
@@ -10190,7 +10190,7 @@ When deployed in complete mode, Resource C is deleted. The resource group has:
 <span class="w">    </span><span class="p">],</span>
 <span class="w">    </span><span class="err">...</span>
 <span class="p">}</span>
-</code></pre></div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Misc<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../azure/synapse/">Synapse →</a></p></li><li><p class="rn__kicker">Misc<span class="rn__time"> · 5 min read</span></p><p class="rn__title"><a href="../../azure/devops/">Devops →</a></p></li></ul></div>
+</code></pre></div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../azure/synapse/" style="--s1: 13, 148, 136; --s2: 6, 182, 212"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 17H7v-7h2zm4 0h-2V7h2zm4 0h-2v-4h2zm2 2H5V5h14v14.1M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🔷</span> Azure / Misc</span><span class="rn-card__title">Synapse</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../azure/devops/" style="--s1: 13, 148, 136; --s2: 6, 182, 212"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m22 18-5 4-8-3v3l-4.19-5.75 12.91 1.05V6.34L22 5.65zM4.81 16.25V8.96l12.91-2.62L10.6 2v2.84L3.97 6.76 2 9.38v5.69z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🔷</span> Azure / Misc</span><span class="rn-card__title">Devops</span><span class="rn-card__meta">⏱️ 5 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10303,6 +10303,8 @@ When deployed in complete mode, Resource C is deleted. The resource group has:
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../javascripts/about.js"></script>
@@ -10318,6 +10320,16 @@ When deployed in complete mode, Resource C is deleted. The resource group has:
         <script src="../../javascripts/tilt.js"></script>
       
         <script src="../../javascripts/headings.js"></script>
+      
+        <script src="../../javascripts/edgeray.js"></script>
+      
+        <script src="../../javascripts/tabs.js"></script>
+      
+        <script src="../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../javascripts/diagram.js"></script>
+      
+        <script src="../../javascripts/postside.js"></script>
       
         <script src="../../javascripts/magnetic.js"></script>
       

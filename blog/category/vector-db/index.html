@@ -9959,70 +9959,11 @@
     <div class="md-content__inner">
       <header class="md-typeset">
         <h1 id="vector-db">Vector DB<a class="headerlink" href="#vector-db" title="Link to this section">&para;</a></h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
+      </header><div class="post-cards post-cards--blog">
         
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/amarjitdhillon" alt="Amarjit Dhillon">
-          </span>
+          <a class="post-card pc-pat-3 pc-tilt" href="../../2024/06/10/vector-databases-/" style="--pc-grad: linear-gradient(135deg, #2b1150 0%, #db2777 100%)"><span class="post-card__cover" aria-hidden="true"><span class="post-card__kicker">RAG</span><span class="post-card__cover-title">Vector Databases</span><span class="post-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2m-6 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2m-6 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2m9 6c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2m-6 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2m6-12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2M7 6c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2"/></svg></span></span><span class="post-card__body"><span class="post-card__meta">Jun 10, 2024, 2 min read</span><span class="post-card__title">Vector Databases</span><span class="post-card__desc">What vector databases are and why GenAI apps need them</span></span></a>
         
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-06-10 00:00:00">June 10, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../rag/" class="md-meta__link">RAG</a>, 
-              <a href="../genai/" class="md-meta__link">GenAI</a>, 
-              <a href="./" class="md-meta__link">Vector DB</a>, 
-              <a href="../embeddings/" class="md-meta__link">Embeddings</a>, 
-              <a href="../llm/" class="md-meta__link">LLM</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              2 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="vector-databases"><a class="toclink" href="../../2024/06/10/vector-databases-/">Vector Databases ➾</a></h2>
-<p>A <code>vector database</code> is specifically designed to operate on <code>embedding vectors</code>. As the popularity of LLMs and generative AI has grown recently, <mark>so has the use of embeddings to encode unstructured data</mark>. Vector databases have emerged as an effective solution for enterprises to deliver and scale these use cases.</p>
-<div class="admonition tldr">
-<p class="admonition-title">What is Vector DB?</p>
-<p>Vector databases are specialized databases that store data as high-dimensional vectors and their original content. They offer the capabilities of both <code>vector indexes</code> and <code>traditional databases</code>, such as optimized storage, scalability, flexibility, and query language support. They allow users to find and retrieve similar or relevant data based on their semantic or contextual meaning.</p>
-</div>
-<p>Vector databases can help <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> models quickly find the most similar documents or
-passages to a given query and use them as additional context for the <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr>.</p>
-<h3 id="vector-index"><a class="toclink" href="../../2024/06/10/vector-databases-/#vector-index">Vector Index 🗂️</a></h3>
-<p>A vector index is a data structure in a vector database designed to enhance the efficiency of processing, and it is particularly suited for the high-dimensional vector data encountered with LLMs. Its function is to streamline the search and retrieval processes within the database.</p>
-<p>By implementing a vector index, the system is capable of conducting quick similarity searches, identifying vectors that closely match or are most similar to a given input vector. </p>
-<div class="admonition tip">
-<p class="admonition-title">How to convert embedding to vector index?</p>
-<p>To create vector indexes for your embeddings, there are many options, such as exact or approximate nearest neighbor algorithms (e.g., HNSW or IVF), different distance metrics (e.g., cosine or Euclidean), or various compression techniques (e.g. quantization or pruning). </p>
-</div>
-<h3 id="vector-search"><a class="toclink" href="../../2024/06/10/vector-databases-/#vector-search">Vector Search 🔎</a></h3>
-<p>A vector search is used to find the most relevant documents or passages to the query based on the similarity between the query vector and the document vectors in the index.</p>
-<div class="admonition info">
-<p>Similarity measures are mathematical methods that compare two vectors and compute a distance value between them. This distance value indicates how dissimilar or similar the two vectors are in terms of their semantic meaning</p>
-</div>
-    
-  </div>
-</article>
-      
+      </div>
       
         
           
@@ -10081,6 +10022,8 @@ passages to a given query and use them as additional context for the <abbr title
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10096,6 +10039,16 @@ passages to a given query and use them as additional context for the <abbr title
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

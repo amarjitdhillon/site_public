@@ -10144,7 +10144,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="az-load-balancer-l4">Az Load Balancer (L4) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3c-1.27 0-2.4.8-2.82 2H3v2h1.95L2 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3L6.05 7h3.12c.33.85.98 1.5 1.83 1.83V20H2v2h20v-2h-9V8.82c.85-.32 1.5-.97 1.82-1.82h3.13L15 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3l-2.95-7H21V5h-6.17C14.4 3.8 13.27 3 12 3m0 2a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-6.5 5.25L7 14H4zm13 0L20 14h-3z"/></svg></span><a class="headerlink" href="#az-load-balancer-l4" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 5 min read</p>
+<header class="page-head" style="--s1: 13, 148, 136; --s2: 6, 182, 212"><p class="page-head__pill"><span>🔷</span> Azure / Load Balancer</p><h1 id="az-load-balancer-l4">Az Load Balancer (L4) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3c-1.27 0-2.4.8-2.82 2H3v2h1.95L2 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3L6.05 7h3.12c.33.85.98 1.5 1.83 1.83V20H2v2h20v-2h-9V8.82c.85-.32 1.5-.97 1.82-1.82h3.13L15 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3l-2.95-7H21V5h-6.17C14.4 3.8 13.27 3 12 3m0 2a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-6.5 5.25L7 14H4zm13 0L20 14h-3z"/></svg></span><a class="headerlink" href="#az-load-balancer-l4" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 5 min read</span></p></header>
 <p>In AWS terms, its a <code>Network Load Balancer (NLB)</code> as Azure Load Balancer operates at layer 4 of the Open Systems Interconnection (OSI) model. It's the single point of contact for clients. </p>
 <p><center></p>
 <table>
@@ -10211,7 +10211,7 @@ as the main headline.
 <p>Without the load balancer rules, the traffic that hits the front end will never reach the backend pool</p>
 </div>
 <p>The hash is used to route traffic to healthy backend instances within the <code>backend pool</code>. The algorithm provides stickiness only within a transport session. When the client starts a new session from the same source IP, the source port changes and causes the traffic to go to a different backend instance.</p>
-<div class="admonition questions">
+<div class="admonition question">
 <p class="admonition-title">key differences</p>
 <ul>
 <li><strong>5 tuple (default)</strong>: Traffic from the same client IP routed to any healthy instance in the <code>backend pool</code>   </li>
@@ -10222,7 +10222,7 @@ as the main headline.
 <h3 id="5-tuple-hash-5">5 tuple Hash 5️⃣<a class="headerlink" href="#5-tuple-hash-5" title="Link to this section">&para;</a></h3>
 <p>Azure Load Balancer uses a five tuple hash based distribution mode by default.</p>
 <p>The five tuple consists of:</p>
-<div class="highlight"><span class="filename">5 tuple hash</span><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">Source IP</span>
+<div class="language-yaml highlight"><span class="filename">5 tuple hash</span><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">Source IP</span>
 <span class="l l-Scalar l-Scalar-Plain">Source port</span>
 
 <span class="l l-Scalar l-Scalar-Plain">Destination IP</span>
@@ -10232,15 +10232,15 @@ as the main headline.
 </code></pre></div>
 <h3 id="3-tuple-hash-3">3 tuple hash 3️⃣<a class="headerlink" href="#3-tuple-hash-3" title="Link to this section">&para;</a></h3>
 <p><strong>Client IP and protocol (3-tuple)</strong> - Specifies that successive requests from the same client IP address and protocol combination will be handled by the same backend instance.</p>
-<div class="highlight"><span class="filename">3 tuple hash</span><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">Source IP</span>
+<div class="language-yaml highlight"><span class="filename">3 tuple hash</span><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">Source IP</span>
 <span class="l l-Scalar l-Scalar-Plain">Destination IP</span>
 <span class="l l-Scalar l-Scalar-Plain">Protocol type</span>
 </code></pre></div>
 <h3 id="2-tuple-hash-2">2 tuple hash 2️⃣<a class="headerlink" href="#2-tuple-hash-2" title="Link to this section">&para;</a></h3>
 <p><strong>Client IP (2-tuple)</strong> - Specifies that successive requests from the same client IP address will be handled by the same backend instance.</p>
-<div class="highlight"><span class="filename">2 tuple hash</span><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">Source IP</span>
+<div class="language-yaml highlight"><span class="filename">2 tuple hash</span><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">Source IP</span>
 <span class="l l-Scalar l-Scalar-Plain">Destination IP</span>
-</code></pre></div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Load Balancer<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../azure/front-door/">Front Door →</a></p></li><li><p class="rn__kicker">Load Balancer<span class="rn__time"> · 2 min read</span></p><p class="rn__title"><a href="../../azure/atm/">Traffic Manager →</a></p></li></ul></div>
+</code></pre></div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../azure/front-door/" style="--s1: 13, 148, 136; --s2: 6, 182, 212"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 3c-1.11 0-2 .89-2 2v16h12V5c0-1.11-.89-2-2-2zm0 2h8v14H8zm5 6v2h2v-2z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🔷</span> Azure / Load Balancer</span><span class="rn-card__title">Front Door</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../azure/atm/" style="--s1: 13, 148, 136; --s2: 6, 182, 212"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a2 2 0 0 1-2-2 2 2 0 0 1 2-2c1.11 0 2 .89 2 2a2 2 0 0 1-2 2m0 5a2 2 0 0 1-2-2 2 2 0 0 1 2-2c1.11 0 2 .89 2 2a2 2 0 0 1-2 2m0 5a2 2 0 0 1-2-2 2 2 0 0 1 2-2c1.11 0 2 .89 2 2a2 2 0 0 1-2 2m8-9h-3V8.86c1.72-.45 3-2 3-3.86h-3V4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v1H4c0 1.86 1.28 3.41 3 3.86V10H4c0 1.86 1.28 3.41 3 3.86V15H4c0 1.86 1.28 3.41 3 3.86V20a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1.14c1.72-.45 3-2 3-3.86h-3v-1.14c1.72-.45 3-2 3-3.86"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🔷</span> Azure / Load Balancer</span><span class="rn-card__title">Traffic Manager</span><span class="rn-card__meta">⏱️ 2 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10353,6 +10353,8 @@ as the main headline.
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../javascripts/about.js"></script>
@@ -10368,6 +10370,16 @@ as the main headline.
         <script src="../../javascripts/tilt.js"></script>
       
         <script src="../../javascripts/headings.js"></script>
+      
+        <script src="../../javascripts/edgeray.js"></script>
+      
+        <script src="../../javascripts/tabs.js"></script>
+      
+        <script src="../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../javascripts/diagram.js"></script>
+      
+        <script src="../../javascripts/postside.js"></script>
       
         <script src="../../javascripts/magnetic.js"></script>
       

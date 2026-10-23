@@ -10114,7 +10114,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="pod">Pod <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-6.7l-6 3.37v6.71z"/></svg></span><a class="headerlink" href="#pod" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 4 min read</p>
+<header class="page-head" style="--s1: 124, 58, 237; --s2: 168, 85, 247"><p class="page-head__pill"><span>☸️</span> Kubernetes / Resources</p><h1 id="pod"><span class="page-head__accent">Pod</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.99.99 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88zM12 4.15 6.04 7.5 12 10.85l5.96-3.35zM5 15.91l6 3.38v-6.71L5 9.21zm14 0v-6.7l-6 3.37v6.71z"/></svg></span><a class="headerlink" href="#pod" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 4 min read</span></p></header>
 <h2 id="static-pods">Static Pods 📌<a class="headerlink" href="#static-pods" title="Link to this section">&para;</a></h2>
 <ul>
 <li>It is possible to create Pods by writing a file to a certain directory watched by Kubelet.</li>
@@ -10132,7 +10132,7 @@ as the main headline.
 <p class="admonition-title">Warning</p>
 <p>Remember, you CANNOT edit specifications of an existing POD other than the below.</p>
 </div>
-<p><div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">spec.containers[*].image</span>
+<p><div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">spec.containers[*].image</span>
 
 <span class="l l-Scalar l-Scalar-Plain">spec.initContainers[*].image</span>
 
@@ -10149,32 +10149,32 @@ For example, you cannot edit the environment variables, service accounts, resour
 <p>A copy of the file with your changes is saved in a temporary location as shown above.</p>
 </blockquote>
 <p>You can then delete the existing pod by running the command:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>webapp
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>webapp
 </code></pre></div>
 <p>Then create a new pod with your changes using the temporary file</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>/tmp/kubectl-edit-ccvrq.yaml
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>/tmp/kubectl-edit-ccvrq.yaml
 </code></pre></div>
 <h3 id="option-b">Option B 🅱️<a class="headerlink" href="#option-b" title="Link to this section">&para;</a></h3>
 <ul>
 <li>The 2<sup>nd</sup> option is to extract the pod definition in YAML format to a file using the command</li>
 </ul>
-<p><div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pod<span class="w"> </span>webapp<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span>&gt;<span class="w"> </span>my-new-pod.yaml
+<p><div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pod<span class="w"> </span>webapp<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span>&gt;<span class="w"> </span>my-new-pod.yaml
 </code></pre></div>
 Then make the changes to the exported file using an editor (vi editor). Save the changes</p>
-<p><div class="highlight"><pre><span></span><code>vi<span class="w"> </span>my-new-pod.yaml
+<p><div class="language-bash highlight"><pre><span></span><code>vi<span class="w"> </span>my-new-pod.yaml
 </code></pre></div>
 Then delete the existing pod</p>
-<p><div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>webapp
+<p><div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>delete<span class="w"> </span>pod<span class="w"> </span>webapp
 </code></pre></div>
 Then create a new pod with the edited file</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>my-new-pod.yaml
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>my-new-pod.yaml
 </code></pre></div>
 <h2 id="multi-container-pods">Multi-container pods 👯<a class="headerlink" href="#multi-container-pods" title="Link to this section">&para;</a></h2>
 <p>In a <code>multi-container pod</code>, each container is expected to run a process that stays alive as long as the POD's lifecycle. For example in the multi-container pod that has a <em>web application</em> and <em>logging agent</em>, both the containers are expected to stay alive at all times. The process running in the <code>log agent container</code> is expected to stay alive as long as the <code>web application</code> is running. <mark>If any of them fails, the POD restarts.</mark></p>
 <p>But at times you may want to run a process that runs to completion in a container. For example a process that pulls a code or binary from a repository that will be used by the main web application. That is a task that will be run only  one time when the pod is first created. Or a process that waits  for an external service or database to be up before the actual application starts. That's where initContainers comes in.</p>
 <h2 id="init-container">Init Container 🐣<a class="headerlink" href="#init-container" title="Link to this section">&para;</a></h2>
 <p>An initContainer is configured in a pod like all other containers, except that it is specified inside a initContainers section,  like this:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">amar-app-pod</span>
@@ -10197,7 +10197,7 @@ Then create a new pod with the edited file</p>
 <h3 id="multiple-init-containers">Multiple init containers 🔢<a class="headerlink" href="#multiple-init-containers" title="Link to this section">&para;</a></h3>
 <p>You can configure multiple such initContainers as well, like how we did for multi-containers pod. In that case each init container is run one at a time in sequential order.</p>
 <p>If any of the initContainers fail to complete, Kubernetes restarts the Pod repeatedly until the Init Container succeeds.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">amar-app-pod</span>
@@ -10215,7 +10215,7 @@ Then create a new pod with the edited file</p>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">init-mydb</span>
 <span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">busybox:1.28</span>
 <span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;sh&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;-c&#39;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&#39;until</span><span class="nv"> </span><span class="s">nslookup</span><span class="nv"> </span><span class="s">mydb;</span><span class="nv"> </span><span class="s">do</span><span class="nv"> </span><span class="s">echo</span><span class="nv"> </span><span class="s">waiting</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">mydb;</span><span class="nv"> </span><span class="s">sleep</span><span class="nv"> </span><span class="s">2;</span><span class="nv"> </span><span class="s">done;&#39;</span><span class="p p-Indicator">]</span>
-</code></pre></div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Resources<span class="rn__time"> · 5 min read</span></p><p class="rn__title"><a href="../../k8s/svc/">Service →</a></p></li><li><p class="rn__kicker">Resources<span class="rn__time"> · 3 min read</span></p><p class="rn__title"><a href="../../k8s/arch/controllermgr/">Controller Manager →</a></p></li></ul></div>
+</code></pre></div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../k8s/svc/" style="--s1: 124, 58, 237; --s2: 168, 85, 247"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 11h-3.18C14.4 9.84 13.3 9 12 9s-2.4.84-2.82 2H6c-.33 0-2-.1-2-2V8c0-1.83 1.54-2 2-2h10.18C16.6 7.16 17.7 8 19 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3c-1.3 0-2.4.84-2.82 2H6C4.39 4 2 5.06 2 8v1c0 2.94 2.39 4 4 4h3.18c.42 1.16 1.52 2 2.82 2s2.4-.84 2.82-2H18c.33 0 2 .1 2 2v1c0 1.83-1.54 2-2 2H7.82C7.4 16.84 6.3 16 5 16a3 3 0 0 0-3 3 3 3 0 0 0 3 3c1.3 0 2.4-.84 2.82-2H18c1.61 0 4-1.07 4-4v-1c0-2.93-2.39-4-4-4m1-7a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1M5 20a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☸️</span> Kubernetes / Resources</span><span class="rn-card__title">Service</span><span class="rn-card__meta">⏱️ 5 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../k8s/arch/controllermgr/" style="--s1: 124, 58, 237; --s2: 168, 85, 247"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.7 20h-.4l-.4-2.6c-1.2-.2-2.2-.9-3-1.8l-2.4 1-.8-1.3 2.1-1.6q-.6-1.8 0-3.6L4.7 8.7l.8-1.3 2.4 1q1.2-1.35 3-1.8l.3-2.6h1.5l.4 2.6c1.2.2 2.3.9 3 1.8l2.4-1 .8 1.3-2.1 1.5q.3.9.3 1.8h.5c.5 0 1 .1 1.5.2V12l-.1-1 2.1-1.6c.2-.2.2-.4.1-.6l-2-3.5c-.1-.3-.3-.3-.6-.3l-2.5 1c-.5-.4-1.1-.7-1.7-1l-.4-2.7c.1-.1-.2-.3-.4-.3h-4c-.2 0-.5.2-.5.4l-.4 2.7c-.6.2-1.1.6-1.7.9L5 5c-.3 0-.5 0-.7.3l-2 3.5c-.1.2 0 .4.2.6L4.6 11l-.1 1 .1 1-2.1 1.7c-.2.2-.2.4-.1.6l2 3.5c.1.2.3.2.6.2l2.5-1c.5.4 1.1.7 1.7 1l.4 2.7c0 .2.2.4.5.4h2.5c-.5-.7-.7-1.4-.9-2.1m4.3-7.7V12c0-2.2-1.8-4-4-4s-4 1.8-4 4 1.8 4 4 4c.7-1.7 2.2-3.1 4-3.7m-6-.3c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2m8 2.5V13l-2.2 2.2 2.2 2.2V16c1.4 0 2.5 1.1 2.5 2.5 0 .4-.1.8-.3 1.1l1.1 1.1c1.2-1.8.7-4.3-1.1-5.5-.6-.5-1.4-.7-2.2-.7m0 6.5c-1.4 0-2.5-1.1-2.5-2.5 0-.4.1-.8.3-1.1l-1.1-1.1c-1.2 1.8-.7 4.3 1.1 5.5.7.4 1.4.7 2.2.7V24l2.2-2.2-2.2-2.3z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☸️</span> Kubernetes / Resources</span><span class="rn-card__title">Controller Manager</span><span class="rn-card__meta">⏱️ 3 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10328,6 +10328,8 @@ Then create a new pod with the edited file</p>
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../javascripts/about.js"></script>
@@ -10343,6 +10345,16 @@ Then create a new pod with the edited file</p>
         <script src="../../javascripts/tilt.js"></script>
       
         <script src="../../javascripts/headings.js"></script>
+      
+        <script src="../../javascripts/edgeray.js"></script>
+      
+        <script src="../../javascripts/tabs.js"></script>
+      
+        <script src="../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../javascripts/diagram.js"></script>
+      
+        <script src="../../javascripts/postside.js"></script>
       
         <script src="../../javascripts/magnetic.js"></script>
       

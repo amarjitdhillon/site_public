@@ -10180,9 +10180,9 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="sqs"><abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m7.164 13.58 1.287-1.27a.425.425 0 0 0 .002-.603L7.166 10.42l-.608.601.552.552H5.147v.852h1.97l-.557.55Zm9.82.04 1.715-1.28a.427.427 0 0 0 0-.682l-1.716-1.277-.515.682.686.51H15.44v.853h1.715l-.686.511ZM9.945 12c0 .905-.156 1.758-.449 2.5a7.1 7.1 0 0 1 2.511-.445c.87 0 1.74.148 2.51.445a6.9 6.9 0 0 1-.448-2.5c0-.905.157-1.757.449-2.5-1.543.593-3.479.593-5.022 0 .293.743.45 1.595.45 2.5Zm-2.1 4.136a.424.424 0 0 1 0-.602c.778-.774 1.243-2.095 1.243-3.534s-.465-2.76-1.244-3.534a.424.424 0 0 1 0-.602.43.43 0 0 1 .607 0c1.662 1.65 5.45 1.65 7.113 0a.43.43 0 0 1 .732.301.42.42 0 0 1-.126.301c-.778.774-1.243 2.095-1.243 3.534s.465 2.76 1.243 3.534a.424.424 0 0 1 0 .602.43.43 0 0 1-.606 0c-1.662-1.65-5.451-1.65-7.113 0a.43.43 0 0 1-.607 0Zm15.299-4.134c0-.397-.155-.77-.438-1.051a1.5 1.5 0 0 0-1.058-.435c-.383 0-.766.145-1.058.435a1.48 1.48 0 0 0 0 2.102c.583.58 1.532.58 2.116 0 .283-.28.438-.654.438-1.05Zm.168 1.654a2.35 2.35 0 0 1-1.664.684 2.35 2.35 0 0 1-1.664-.684 2.33 2.33 0 0 1 0-3.308 2.366 2.366 0 0 1 3.328 0 2.33 2.33 0 0 1 0 3.308M3.85 12.012a1.49 1.49 0 0 0-1.496-1.487 1.493 1.493 0 0 0-1.496 1.487c0 .397.155.77.437 1.051.566.561 1.551.561 2.116 0 .283-.281.439-.654.439-1.051m.168 1.654a2.35 2.35 0 0 1-1.665.684 2.36 2.36 0 0 1-1.664-.684 2.33 2.33 0 0 1 0-3.308 2.367 2.367 0 0 1 3.329 0 2.33 2.33 0 0 1 0 3.308m14.367 4.7a9.03 9.03 0 0 1-6.41 2.639 9.03 9.03 0 0 1-6.41-2.638c-1.175-1.166-1.82-2.56-2.156-3.524l-.81.28c.364 1.047 1.07 2.566 2.36 3.846a9.9 9.9 0 0 0 7.016 2.888 9.9 9.9 0 0 0 7.016-2.888 10.2 10.2 0 0 0 2.43-3.848l-.812-.276a9.4 9.4 0 0 1-2.224 3.522ZM3.407 9.158l-.81-.28c.52-1.484 1.358-2.851 2.363-3.849a9.89 9.89 0 0 1 7.014-2.885 9.89 9.89 0 0 1 7.014 2.885 10.5 10.5 0 0 1 2.43 3.85l-.809.279a9.6 9.6 0 0 0-2.228-3.526 9.03 9.03 0 0 0-6.407-2.636 9.03 9.03 0 0 0-6.408 2.636c-.914.909-1.681 2.161-2.159 3.526"/></svg></span><a class="headerlink" href="#sqs" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 3 min read</p>
+<header class="page-head" style="--s1: 245, 158, 11; --s2: 239, 68, 68"><p class="page-head__pill"><span>☁️</span> AWS / Orchestrate</p><h1 id="sqs"><abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m7.164 13.58 1.287-1.27a.425.425 0 0 0 .002-.603L7.166 10.42l-.608.601.552.552H5.147v.852h1.97l-.557.55Zm9.82.04 1.715-1.28a.427.427 0 0 0 0-.682l-1.716-1.277-.515.682.686.51H15.44v.853h1.715l-.686.511ZM9.945 12c0 .905-.156 1.758-.449 2.5a7.1 7.1 0 0 1 2.511-.445c.87 0 1.74.148 2.51.445a6.9 6.9 0 0 1-.448-2.5c0-.905.157-1.757.449-2.5-1.543.593-3.479.593-5.022 0 .293.743.45 1.595.45 2.5Zm-2.1 4.136a.424.424 0 0 1 0-.602c.778-.774 1.243-2.095 1.243-3.534s-.465-2.76-1.244-3.534a.424.424 0 0 1 0-.602.43.43 0 0 1 .607 0c1.662 1.65 5.45 1.65 7.113 0a.43.43 0 0 1 .732.301.42.42 0 0 1-.126.301c-.778.774-1.243 2.095-1.243 3.534s.465 2.76 1.243 3.534a.424.424 0 0 1 0 .602.43.43 0 0 1-.606 0c-1.662-1.65-5.451-1.65-7.113 0a.43.43 0 0 1-.607 0Zm15.299-4.134c0-.397-.155-.77-.438-1.051a1.5 1.5 0 0 0-1.058-.435c-.383 0-.766.145-1.058.435a1.48 1.48 0 0 0 0 2.102c.583.58 1.532.58 2.116 0 .283-.28.438-.654.438-1.05Zm.168 1.654a2.35 2.35 0 0 1-1.664.684 2.35 2.35 0 0 1-1.664-.684 2.33 2.33 0 0 1 0-3.308 2.366 2.366 0 0 1 3.328 0 2.33 2.33 0 0 1 0 3.308M3.85 12.012a1.49 1.49 0 0 0-1.496-1.487 1.493 1.493 0 0 0-1.496 1.487c0 .397.155.77.437 1.051.566.561 1.551.561 2.116 0 .283-.281.439-.654.439-1.051m.168 1.654a2.35 2.35 0 0 1-1.665.684 2.36 2.36 0 0 1-1.664-.684 2.33 2.33 0 0 1 0-3.308 2.367 2.367 0 0 1 3.329 0 2.33 2.33 0 0 1 0 3.308m14.367 4.7a9.03 9.03 0 0 1-6.41 2.639 9.03 9.03 0 0 1-6.41-2.638c-1.175-1.166-1.82-2.56-2.156-3.524l-.81.28c.364 1.047 1.07 2.566 2.36 3.846a9.9 9.9 0 0 0 7.016 2.888 9.9 9.9 0 0 0 7.016-2.888 10.2 10.2 0 0 0 2.43-3.848l-.812-.276a9.4 9.4 0 0 1-2.224 3.522ZM3.407 9.158l-.81-.28c.52-1.484 1.358-2.851 2.363-3.849a9.89 9.89 0 0 1 7.014-2.885 9.89 9.89 0 0 1 7.014 2.885 10.5 10.5 0 0 1 2.43 3.85l-.809.279a9.6 9.6 0 0 0-2.228-3.526 9.03 9.03 0 0 0-6.407-2.636 9.03 9.03 0 0 0-6.408 2.636c-.914.909-1.681 2.161-2.159 3.526"/></svg></span><a class="headerlink" href="#sqs" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 3 min read</span></p></header>
 <div class="admonition tldr">
-<p class="admonition-title">Tldr</p>
+<p class="admonition-title">TL;<abbr title="Disaster Recovery: getting systems back after a major outage">DR</abbr></p>
 <p>Using <code>Amazon SQS</code>, you can send, store, and receive messages between software components, without losing messages or requiring other services to be available. In Amazon <abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr>, an application sends messages into a queue. </p>
 <p><mark>A user or service retrieves a message from the queue, processes it, and then deletes it from the queue (as its a pull-based system).</mark></p>
 </div>
@@ -10247,7 +10247,7 @@ as the main headline.
 <ul>
 <li>It is a best practice to set the visibility timeout on your <abbr title="Simple Queue Service: a managed message queue on AWS">SQS</abbr> queue to 6x the Lambda function timeout to allow for retries if the function is getting throttled.</li>
 <li>Retries – Use the maxReceiveCount on the queue's policy to limit the number of times Lambda will retry to process a failed execution.</li>
-</ul><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Orchestrate<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../aws/sns/">SNS →</a></p></li><li><p class="rn__kicker">Orchestrate<span class="rn__time"> · 4 min read</span></p><p class="rn__title"><a href="../../aws/event-bridge/">EventBridge →</a></p></li></ul></div>
+</ul><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../aws/sns/" style="--s1: 245, 158, 11; --s2: 239, 68, 68"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 17v-5.2c-.5.1-1 .2-1.5.2H17v6H7v-7c0-2.8 2.2-5 5-5 .1-1.3.7-2.4 1.5-3.3-.3-.4-.9-.7-1.5-.7-1.1 0-2 .9-2 2v.3C7 5.2 5 7.9 5 11v6l-2 2v1h18v-1zm-9 4c0 1.1.9 2 2 2s2-.9 2-2zM21 6.5c0 1.9-1.6 3.5-3.5 3.5S14 8.4 14 6.5 15.6 3 17.5 3 21 4.6 21 6.5"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☁️</span> AWS / Orchestrate</span><span class="rn-card__title">SNS</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../aws/event-bridge/" style="--s1: 245, 158, 11; --s2: 239, 68, 68"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 14v-3.09c-.72-.33-1.39-.73-2-1.2V14zm-2 4H3v-2H1v-2h2V7h2v1.43C6.8 10 9.27 11 12 11s5.2-1 7-2.57V7h2v7h2v2h-2v2h-2v-2H5zm12-7.09V14h2V9.71c-.61.47-1.28.87-2 1.2M16 14v-2.68c-.64.23-1.31.4-2 .52V14zm-3 0v-2.04L12 12l-1-.04V14zm-3 0v-2.16c-.69-.12-1.36-.29-2-.52V14z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☁️</span> AWS / Orchestrate</span><span class="rn-card__title">EventBridge</span><span class="rn-card__meta">⏱️ 4 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10360,6 +10360,8 @@ as the main headline.
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../javascripts/about.js"></script>
@@ -10375,6 +10377,16 @@ as the main headline.
         <script src="../../javascripts/tilt.js"></script>
       
         <script src="../../javascripts/headings.js"></script>
+      
+        <script src="../../javascripts/edgeray.js"></script>
+      
+        <script src="../../javascripts/tabs.js"></script>
+      
+        <script src="../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../javascripts/diagram.js"></script>
+      
+        <script src="../../javascripts/postside.js"></script>
       
         <script src="../../javascripts/magnetic.js"></script>
       

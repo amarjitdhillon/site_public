@@ -10189,7 +10189,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="basic-rag">Basic <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.68 12.32a4.49 4.49 0 0 0-6.36.01 4.49 4.49 0 0 0 0 6.36 4.51 4.51 0 0 0 5.57.63L21 22.39 22.39 21l-3.09-3.11c1.13-1.77.87-4.09-.62-5.57m-1.41 4.95c-.98.98-2.56.97-3.54 0-.97-.98-.97-2.56.01-3.54.97-.97 2.55-.97 3.53 0 .97.98.97 2.56 0 3.54M10.9 20.1a6.5 6.5 0 0 1-1.48-2.32C6.27 17.25 4 15.76 4 14v3c0 2.21 3.58 4 8 4-.4-.26-.77-.56-1.1-.9M4 9v3c0 1.68 2.07 3.12 5 3.7v-.2c0-.93.2-1.85.58-2.69C6.34 12.3 4 10.79 4 9m8-6C7.58 3 4 4.79 4 7c0 2 3 3.68 6.85 4h.05c1.2-1.26 2.86-2 4.6-2 .91 0 1.81.19 2.64.56A3.22 3.22 0 0 0 20 7c0-2.21-3.58-4-8-4"/></svg></span><a class="headerlink" href="#basic-rag" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 7 min read</p>
+<header class="page-head" style="--s1: 219, 39, 119; --s2: 147, 51, 234"><p class="page-head__pill"><span>🤖</span> Artificial Intelligence / RAG Patterns</p><h1 id="basic-rag">Basic <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.68 12.32a4.49 4.49 0 0 0-6.36.01 4.49 4.49 0 0 0 0 6.36 4.51 4.51 0 0 0 5.57.63L21 22.39 22.39 21l-3.09-3.11c1.13-1.77.87-4.09-.62-5.57m-1.41 4.95c-.98.98-2.56.97-3.54 0-.97-.98-.97-2.56.01-3.54.97-.97 2.55-.97 3.53 0 .97.98.97 2.56 0 3.54M10.9 20.1a6.5 6.5 0 0 1-1.48-2.32C6.27 17.25 4 15.76 4 14v3c0 2.21 3.58 4 8 4-.4-.26-.77-.56-1.1-.9M4 9v3c0 1.68 2.07 3.12 5 3.7v-.2c0-.93.2-1.85.58-2.69C6.34 12.3 4 10.79 4 9m8-6C7.58 3 4 4.79 4 7c0 2 3 3.68 6.85 4h.05c1.2-1.26 2.86-2 4.6-2 .91 0 1.81.19 2.64.56A3.22 3.22 0 0 0 20 7c0-2.21-3.58-4-8-4"/></svg></span><a class="headerlink" href="#basic-rag" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 7 min read</span><span class="page-head__chip">🗓️ Updated Oct 2026</span><span class="page-head__chip">▶️ Interactive diagram</span></p></header>
 <div class="admonition abstract">
 <p class="admonition-title">TL;<abbr title="Disaster Recovery: getting systems back after a major outage">DR</abbr> 🚀</p>
 <p>Your <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> doesn't know your company stuff 🤷, so at question time you <strong>fetch the right chunks</strong> from your docs 📚 and <strong>stuff them into the prompt</strong> 🧠. Boom 💥 grounded answers, with sources, and zero retraining 🙌</p>
@@ -10322,7 +10322,7 @@ The model answers from that context, so you get <mark>grounded, up-to-date answe
     A--&gt;&gt;U: Response 🎉</code></pre>
 <h3 id="and-in-code">And in code 👨‍💻<a class="headerlink" href="#and-in-code" title="Link to this section">&para;</a></h3>
 <p>Roughly what the orchestrator does, click the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 13h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg></span> bubbles for the why 👇</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">answer</span><span class="p">(</span><span class="n">question</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="n">User</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<div class="language-python highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">answer</span><span class="p">(</span><span class="n">question</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="n">User</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="n">query_vec</span> <span class="o">=</span> <span class="n">embed</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>  <span class="c1"># (1)!</span>
 
     <span class="n">candidates</span> <span class="o">=</span> <span class="n">vector_db</span><span class="o">.</span><span class="n">search</span><span class="p">(</span>
@@ -10454,7 +10454,7 @@ The model answers from that context, so you get <mark>grounded, up-to-date answe
 <li><strong>Near-real-time</strong> (e.g. on <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr> events): fresher answers, more infra and more 💰</li>
 </ul>
 </details>
-<details class="info">
+<details class="example">
 <summary>Human in the loop 🙋</summary>
 <p>Auto-drafted <abbr title="Knowledge Base">KB</abbr> articles get a human thumbs-up 👍 before indexing, so junk from old tickets doesn't turn into "facts" 🗑️</p>
 </details>
@@ -10486,7 +10486,7 @@ The model answers from that context, so you get <mark>grounded, up-to-date answe
 <li>Tbh a lot of teams do both 🤝</li>
 </ul>
 </details>
-<details class="question">
+<details class="tip">
 <summary>Why a re-ranker if I already have similarity search? 🏆</summary>
 <ul>
 <li><strong>Vector similarity</strong> compares two embeddings separately, so it's fast but approximate ⚡</li>
@@ -10494,7 +10494,7 @@ The model answers from that context, so you get <mark>grounded, up-to-date answe
 <li>So retrieve wide with vectors, then re-rank narrow for precision and a smaller prompt</li>
 </ul>
 </details>
-<details class="question">
+<details class="info">
 <summary>How big should chunks be? 📏</summary>
 <ul>
 <li>Start around <strong>300–800 tokens</strong> with <strong>10–20% overlap</strong>, then tune it against an eval set 🧪</li>
@@ -10502,7 +10502,7 @@ The model answers from that context, so you get <mark>grounded, up-to-date answe
 <li>Parent-child chunking lets you dodge picking just one size 😎</li>
 </ul>
 </details>
-<details class="question">
+<details class="note">
 <summary>How do I keep the index fresh? 🥬</summary>
 <ul>
 <li><strong>Scheduled re-ingestion</strong> (the <abbr title="A time-based job scheduler">CRON</abbr> job here) for batch sources ⏰</li>
@@ -10510,7 +10510,7 @@ The model answers from that context, so you get <mark>grounded, up-to-date answe
 <li>Keep a doc hash or version in the metadata so you only re-embed what actually changed 🧠</li>
 </ul>
 </details>
-<details class="question">
+<details class="remember">
 <summary>How do I know if my <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> is any good? 📊</summary>
 <p>Check retrieval and generation <strong>separately</strong></p>
 <ul>
@@ -10518,7 +10518,7 @@ The model answers from that context, so you get <mark>grounded, up-to-date answe
 <li>✍️ <strong>Generation</strong>: faithfulness (is the answer actually backed by the context?), answer relevance and context precision, using <abbr title="An open-source framework for evaluating RAG pipelines">RAGAS</abbr> or an <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr>-as-judge</li>
 </ul>
 </details>
-<details class="question">
+<details class="danger">
 <summary>Does <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> keep internal data private? 🔒</summary>
 <p>Kinda 😅 The <abbr title="Knowledge Base">KB</abbr> is never public and never ends up in model weights, but the retrieved chunks get sent to the <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> with every prompt</p>
 <ul>
@@ -10526,7 +10526,7 @@ The model answers from that context, so you get <mark>grounded, up-to-date answe
 <li><strong>Doc-level access control</strong> at retrieval time, otherwise <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> can happily leak docs to people who shouldn't see them 🫣</li>
 </ul>
 </details>
-<details class="question">
+<details class="tip">
 <summary>How do I cut down hallucinations even more? 🤥</summary>
 <ul>
 <li>📌 Tell the model to only answer from the context and say "I don't know" otherwise</li>
@@ -10544,7 +10544,7 @@ The model answers from that context, so you get <mark>grounded, up-to-date answe
 <p class="admonition-title">Video walkthrough dropping soon 🎬🍿</p>
 <p>Subscribe so you don't miss it 👇</p>
 </div>
-<p><a class="md-button md-button--primary" href="https://youtube.com/channel/UCbxj-orGrUOhihmOBJzE_Fg" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305m-317.51 213.508V175.185l142.739 81.205z"/></svg></span> Fully Simplified on YouTube</a></p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">RAG Patterns<span class="rn__time"> · 6 min read</span></p><p class="rn__title"><a href="../../../AI/rag/azure-ai-search/">Azure AI Search →</a></p></li><li><p class="rn__kicker">Context Eng.<span class="rn__time"> · 7 min read</span></p><p class="rn__title"><a href="../../../AI/context/artefacts-context/">Artefacts &amp; Context →</a></p></li></ul></div>
+<p><a class="md-button md-button--primary" href="https://youtube.com/channel/UCbxj-orGrUOhihmOBJzE_Fg" target="_blank"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305m-317.51 213.508V175.185l142.739 81.205z"/></svg></span> Fully Simplified on YouTube</a></p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../../AI/rag/azure-ai-search/" style="--s1: 219, 39, 119; --s2: 147, 51, 234"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.86 12.5A4.31 4.31 0 0 0 19 11c0-1.95-.68-3.6-2.04-4.96S13.95 4 12 4c-1.58 0-3 .47-4.25 1.43s-2.08 2.19-2.5 3.72c-1.25.28-2.29.93-3.08 1.95S1 13.28 1 14.58c0 1.51.54 2.8 1.61 3.85C3.69 19.5 5 20 6.5 20h12c1.25 0 2.31-.44 3.19-1.31.87-.88 1.31-1.94 1.31-3.19q0-1.725-1.14-3m-1.59 4.77c-.48.49-1.07.73-1.77.73h-12c-.97 0-1.79-.34-2.47-1C3.34 16.29 3 15.47 3 14.5s.34-1.79 1.03-2.47C4.71 11.34 5.53 11 6.5 11H7c0-1.38.5-2.56 1.46-3.54C9.44 6.5 10.62 6 12 6s2.56.5 3.54 1.46C16.5 8.44 17 9.62 17 11v2h1.5c.7 0 1.29.24 1.77.73S21 14.8 21 15.5s-.24 1.29-.73 1.77M16 12c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4c.74 0 1.43-.21 2-.57L16.57 18 18 16.57 15.43 14c.36-.57.57-1.26.57-2m-4 2c-1.1 0-2-.89-2-2s.9-2 2-2 2 .9 2 2-.89 2-2 2"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🤖</span> Artificial Intelligence / RAG Patterns</span><span class="rn-card__title">Azure AI Search</span><span class="rn-card__meta">⏱️ 6 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../../AI/context/artefacts-context/" style="--s1: 219, 39, 119; --s2: 147, 51, 234"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.96 11.31C10.82 8.1 11.5 6 13 6s2.18 2.1 3.04 5.31C17 14.92 18.1 19 22 19v-2c-2.2 0-3-2.46-4.03-6.2C17.08 7.46 16.15 4 13 4s-4.08 3.46-4.97 6.8C7.03 14.54 6.2 17 4 17V2H2v20h20v-2H4v-1c3.9 0 5-4.08 5.96-7.69"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🤖</span> Artificial Intelligence / Context Eng.</span><span class="rn-card__title">Artefacts &amp; Context</span><span class="rn-card__meta">⏱️ 8 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10657,6 +10657,8 @@ The model answers from that context, so you get <mark>grounded, up-to-date answe
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10672,6 +10674,16 @@ The model answers from that context, so you get <mark>grounded, up-to-date answe
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

@@ -10219,13 +10219,13 @@ as the main headline.
 <div class="admonition important">
 <p class="admonition-title">Indexing Process</p>
 <p>The indexing process works by creating a document for each indexed entity. During indexing, an enrichment pipeline iteratively builds the documents that combine metadata from the data source with enriched fields extracted by cognitive skills. You can think of each indexed document as a <abbr title="JavaScript Object Notation: a common text format for data">JSON</abbr> structure, which initially consists of a document with the index fields you have mapped to fields extracted directly from the source data, like this:</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">document</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">document</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">metadata_storage_name</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">metadata_author</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">content</span>
 </code></pre></div>
 <p>When the documents in the data source contain images, you can configure the indexer to extract the image data and place each image in a normalized_images collection, like this:</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">document</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">document</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">metadata_storage_name</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">metadata_author</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">content</span>
@@ -10235,7 +10235,7 @@ as the main headline.
 </code></pre></div>
 <p>Normalizing the image data in this way enables you to use the collection of images as an input for skills that extract information from image data.</p>
 <p>Each skill adds fields to the document, so for example a skill that detects the language in which a document is written might store its output in a language field, like this:</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">document</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">document</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">metadata_storage_name</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">metadata_author</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">content</span>
@@ -10245,7 +10245,7 @@ as the main headline.
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">language</span>
 </code></pre></div>
 <p>The document is structured hierarchically, and the skills are applied to a specific context within the hierarchy, enabling you to run the skill for each item at a particular level of the document. For example, you could run an optical character recognition (<abbr title="Optical Character Recognition: turning text in images or scans into real text">OCR</abbr>) skill for each image in the normalized images collection to extract any text they contain:</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">document</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">document</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">metadata_storage_name</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">metadata_author</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">content</span>
@@ -10257,7 +10257,7 @@ as the main headline.
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">language</span>
 </code></pre></div>
 <p>The output fields from each skill can be used as inputs for other skills later in the pipeline, which in turn store their outputs in the document structure. For example, we could use a merge skill to combine the original text content with the text extracted from each image to create a new merged_content field that contains all of the text in the document, including image text.</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">document</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">document</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">metadata_storage_name</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">metadata_author</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">content</span>
@@ -10339,7 +10339,7 @@ src=
 <h2 id="custom-skill">Custom Skill 🧩<a class="headerlink" href="#custom-skill" title="Link to this section">&para;</a></h2>
 <p>Your custom skill must implement the expected schema for input and output data that is expected by skills in an Azure AI Search skillset.</p>
 <p>The input schema for a custom skill defines a <abbr title="JavaScript Object Notation: a common text format for data">JSON</abbr> structure containing a record for each document to be processed. Each document has a unique identifier, and a data payload with one or more inputs, like this:</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;values&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">      </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;recordId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;unique_identifier&gt;&quot;</span><span class="p">,</span>
@@ -10364,7 +10364,7 @@ src=
 <span class="p">}</span>
 </code></pre></div>
 <p>The schema for the results returned by your custom skill reflects the input schema. It is assumed that the output contains a record for each input record, with either the results produced by the skill or details of any errors that occurred.</p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<div class="language-json highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;values&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">      </span><span class="p">{</span>
 <span class="w">        </span><span class="nt">&quot;recordId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;unique_identifier_from_input&gt;&quot;</span><span class="p">,</span>
@@ -10398,8 +10398,9 @@ src=
 <li>Having extracted embedded images from documents during the indexing process, you might want to save those images as files.</li>
 </ul>
 <div class="admonition tldr">
-<p>Azure AI Search supports these scenarios by enabling you to define a knowledge store in the skillset that encapsulates your enrichment pipeline. The knowledge store consists of projections of the enriched data, which can be <abbr title="JavaScript Object Notation: a common text format for data">JSON</abbr> objects, tables, or image files. When an indexer runs the pipeline to create or update an index, the projections are generated and persisted in the knowledge store.</p>
-</div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Azure<span class="rn__time"> · 5 min read</span></p><p class="rn__title"><a href="../../../AI/azure/foundry-101/">Foundry 101 →</a></p></li><li><p class="rn__kicker">Azure<span class="rn__time"> · 4 min read</span></p><p class="rn__title"><a href="../../../AI/azure/copilot-harness/">Copilot Studio Harnesses →</a></p></li></ul></div>
+<p>Azure AI Search supports these scenarios by letting you define a knowledge store in the skillset that encapsulates your enrichment pipeline.</p>
+<p>The knowledge store holds projections of the enriched data: <abbr title="JavaScript Object Notation: a common text format for data">JSON</abbr> objects, tables or image files. When an indexer runs the pipeline to create or update an index, the projections are generated and saved in the knowledge store.</p>
+</div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../../AI/azure/foundry-101/" style="--s1: 219, 39, 119; --s2: 147, 51, 234"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.78 15.3 6 6 2.11-2.16-6-6zm3.72-5.2c-.39 0-.81-.05-1.14-.19L4.97 21.25l-2.11-2.11 7.41-7.4L8.5 9.96l-.72.7-1.45-1.41v2.86l-.7.7-3.52-3.56.7-.7h2.81l-1.4-1.41 3.56-3.56a2.976 2.976 0 0 1 4.22 0L9.89 5.74l1.41 1.4-.71.71 1.79 1.78 1.82-1.88c-.14-.33-.2-.75-.2-1.12a3.49 3.49 0 0 1 3.5-3.52c.59 0 1.11.14 1.58.42L16.41 6.2l1.5 1.5 2.67-2.67c.28.47.42.97.42 1.6 0 1.92-1.55 3.47-3.5 3.47"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🤖</span> Artificial Intelligence / Azure</span><span class="rn-card__title">Foundry 101</span><span class="rn-card__meta">⏱️ 5 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../../AI/azure/copilot-harness/" style="--s1: 219, 39, 119; --s2: 147, 51, 234"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.5 15.5c0 1.11-.89 2-2 2s-2-.89-2-2 .9-2 2-2 2 .9 2 2m-9-2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.89 2-2-.89-2-2-2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🤖</span> Artificial Intelligence / Azure</span><span class="rn-card__title">Copilot Studio Harnesses</span><span class="rn-card__meta">⏱️ 4 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10512,6 +10513,8 @@ src=
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10527,6 +10530,16 @@ src=
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

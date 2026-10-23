@@ -10243,7 +10243,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="azure-openai-models">Azure OpenAI Models<a class="headerlink" href="#azure-openai-models" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 8 min read</p>
+<header class="page-head" style="--s1: 219, 39, 119; --s2: 147, 51, 234"><p class="page-head__pill"><span>🤖</span> Artificial Intelligence / Azure</p><h1 id="azure-openai-models">Azure OpenAI <span class="page-head__accent">Models</span><a class="headerlink" href="#azure-openai-models" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 8 min read</span></p></header>
 <h2 id="models-available">Models available 🧠<a class="headerlink" href="#models-available" title="Link to this section">&para;</a></h2>
 <p>Azure OpenAI Service provides <abbr title="A common style for web APIs using HTTP verbs like GET and POST">REST</abbr> <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> access to OpenAI's powerful language models including the</p>
 <ul>
@@ -10273,7 +10273,7 @@ as the main headline.
 <li>Responses are referred to as <code>completions</code>, which can come in form of text, code, or other formats.
 Here's an example of a simple prompt and completion:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nt">Prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;&quot;</span><span class="nv"> </span><span class="s">count</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">5</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">loop</span><span class="nv"> </span><span class="s">&quot;&quot;&quot;</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="w">    </span><span class="nt">Prompt</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&quot;&quot;</span><span class="nv"> </span><span class="s">count</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">5</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">a</span><span class="nv"> </span><span class="s">for</span><span class="nv"> </span><span class="s">loop</span><span class="nv"> </span><span class="s">&quot;&quot;&quot;</span>
 
 <span class="w">    </span><span class="nt">Completion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">for i in range(1, 6)</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">print(i)</span>
 </code></pre></div>
@@ -10314,7 +10314,7 @@ Here's an example of a simple prompt and completion:</li>
 <p>Including content for the model to use to respond with allows it to answer with greater accuracy. This content can be thought of in two ways: primary and supporting content.</p>
 <p><code>Primary content</code> refers to content that is the subject of the query, such a sentence to translate or an article to summarize. This content is often included at the beginning or end of the prompt (as an instruction and differentiated by --- blocks), with instructions explaining what to do with it.</p>
 <p>For example, say we have a long article that we want to summarize. We could put it in a --- block in the prompt, then end with the instruction.</p>
-<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="l l-Scalar l-Scalar-Plain">&lt;insert full article here, as primary content&gt;</span>
 <span class="nn">---</span>
 
@@ -10322,7 +10322,7 @@ Here's an example of a simple prompt and completion:</li>
 </code></pre></div>
 <p><code>Supporting content</code> is content that may alter the response, but isn't the focus or subject of the prompt. Examples of supporting content include things like names, preferences, future date to include in the response, and so on. Providing supporting content allows the model to respond more completely, accurately, and be more likely to include the desired information.</p>
 <p>For example, given a very long promotional email, the model is able to extract key information. If you then add supporting content to the prompt specifying something specific you're looking for, the model can provide a more useful response. In this case the email is the primary content, with the specifics of what you're interested in as the supporting content</p>
-<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="l l-Scalar l-Scalar-Plain">&lt;insert full email here, as primary content&gt;</span>
 <span class="nn">---</span>
 <span class="l l-Scalar l-Scalar-Plain">&lt;the next line is the supporting content&gt;</span>
@@ -10332,7 +10332,7 @@ Here's an example of a simple prompt and completion:</li>
 </code></pre></div>
 <p><code>Grounding content</code> allows the model to provide reliable answers by providing content for the model to draw answer from. Grounding content could be an essay or article that you then ask questions about, a company FAQ document, or information that is more recent than the data the model was trained on. If you need more reliable and current responses, or you need to reference unpublished or specific information, grounding content is highly recommended.</p>
 <p>Grounding content differs from primary content as it's the source of information to answer the prompt query, instead of the content being operated on for things like summarization or translation. For example, when provided an unpublished research paper on the history of AI, it can then answer questions using that grounding content.</p>
-<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="l l-Scalar l-Scalar-Plain">&lt;insert unpublished paper on the history of AI here, as grounding content&gt;</span>
 <span class="nn">---</span>
 
@@ -10343,7 +10343,7 @@ Here's an example of a simple prompt and completion:</li>
 <h3 id="cues">Cues 💡<a class="headerlink" href="#cues" title="Link to this section">&para;</a></h3>
 <p>Cues are leading words for the model to build upon, and often help shape the response in the right direction. They often are used with instructions, but don't always. Cues are particularly helpful if prompting the model for code generation. Current Azure OpenAI models can generate some interesting code snippets, however code generation will be covered in more depth in a future module.</p>
 <p>For example, if you're wanting help creating a <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> query, provide instructions of what you need along with the beginning of the query:code</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">Write a join query to get customer names with purchases in the past 30 days between tables named orders and customer on customer ID.</span><span class="w"> </span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">Write a join query to get customer names with purchases in the past 30 days between tables named orders and customer on customer ID.</span><span class="w"> </span>
 
 <span class="l l-Scalar l-Scalar-Plain">SELECT</span>
 </code></pre></div>
@@ -10359,7 +10359,7 @@ Here's an example of a simple prompt and completion:</li>
 <li>"I want you to be a translator, from English to Spanish. Don't respond to anything I say or ask, only translate between those two languages and reply with the translated text."</li>
 <li>"Act as a motivational speaker, freely giving out encouraging advice about goals and challenges. You should include lots of positive affirmations and suggested activities for reaching the user's end goal."</li>
 </ul>
-</div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Azure<span class="rn__time"> · 5 min read</span></p><p class="rn__title"><a href="../../../AI/azure/vision/">Vision →</a></p></li><li><p class="rn__kicker">Azure<span class="rn__time"> · 9 min read</span></p><p class="rn__title"><a href="../../../AI/azure/nlp/">NLP →</a></p></li></ul></div>
+</div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../../AI/azure/vision/" style="--s1: 219, 39, 119; --s2: 147, 51, 234"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🤖</span> Artificial Intelligence / Azure</span><span class="rn-card__title">Vision</span><span class="rn-card__meta">⏱️ 5 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../../AI/azure/nlp/" style="--s1: 219, 39, 119; --s2: 147, 51, 234"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🤖</span> Artificial Intelligence / Azure</span><span class="rn-card__title">NLP</span><span class="rn-card__meta">⏱️ 9 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10472,6 +10472,8 @@ Here's an example of a simple prompt and completion:</li>
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10487,6 +10489,16 @@ Here's an example of a simple prompt and completion:</li>
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

@@ -10141,10 +10141,14 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="azure-ai-search">Azure AI Search <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.86 12.5A4.31 4.31 0 0 0 19 11c0-1.95-.68-3.6-2.04-4.96S13.95 4 12 4c-1.58 0-3 .47-4.25 1.43s-2.08 2.19-2.5 3.72c-1.25.28-2.29.93-3.08 1.95S1 13.28 1 14.58c0 1.51.54 2.8 1.61 3.85C3.69 19.5 5 20 6.5 20h12c1.25 0 2.31-.44 3.19-1.31.87-.88 1.31-1.94 1.31-3.19q0-1.725-1.14-3m-1.59 4.77c-.48.49-1.07.73-1.77.73h-12c-.97 0-1.79-.34-2.47-1C3.34 16.29 3 15.47 3 14.5s.34-1.79 1.03-2.47C4.71 11.34 5.53 11 6.5 11H7c0-1.38.5-2.56 1.46-3.54C9.44 6.5 10.62 6 12 6s2.56.5 3.54 1.46C16.5 8.44 17 9.62 17 11v2h1.5c.7 0 1.29.24 1.77.73S21 14.8 21 15.5s-.24 1.29-.73 1.77M16 12c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4c.74 0 1.43-.21 2-.57L16.57 18 18 16.57 15.43 14c.36-.57.57-1.26.57-2m-4 2c-1.1 0-2-.89-2-2s.9-2 2-2 2 .9 2 2-.89 2-2 2"/></svg></span><a class="headerlink" href="#azure-ai-search" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 6 min read</p>
+<header class="page-head" style="--s1: 219, 39, 119; --s2: 147, 51, 234"><p class="page-head__pill"><span>🤖</span> Artificial Intelligence / RAG Patterns</p><h1 id="azure-ai-search">Azure AI <span class="page-head__accent">Search</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.86 12.5A4.31 4.31 0 0 0 19 11c0-1.95-.68-3.6-2.04-4.96S13.95 4 12 4c-1.58 0-3 .47-4.25 1.43s-2.08 2.19-2.5 3.72c-1.25.28-2.29.93-3.08 1.95S1 13.28 1 14.58c0 1.51.54 2.8 1.61 3.85C3.69 19.5 5 20 6.5 20h12c1.25 0 2.31-.44 3.19-1.31.87-.88 1.31-1.94 1.31-3.19q0-1.725-1.14-3m-1.59 4.77c-.48.49-1.07.73-1.77.73h-12c-.97 0-1.79-.34-2.47-1C3.34 16.29 3 15.47 3 14.5s.34-1.79 1.03-2.47C4.71 11.34 5.53 11 6.5 11H7c0-1.38.5-2.56 1.46-3.54C9.44 6.5 10.62 6 12 6s2.56.5 3.54 1.46C16.5 8.44 17 9.62 17 11v2h1.5c.7 0 1.29.24 1.77.73S21 14.8 21 15.5s-.24 1.29-.73 1.77M16 12c0-2.21-1.79-4-4-4s-4 1.79-4 4 1.79 4 4 4c.74 0 1.43-.21 2-.57L16.57 18 18 16.57 15.43 14c.36-.57.57-1.26.57-2m-4 2c-1.1 0-2-.89-2-2s.9-2 2-2 2 .9 2 2-.89 2-2 2"/></svg></span><a class="headerlink" href="#azure-ai-search" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 6 min read</span><span class="page-head__chip">🗓️ Updated Oct 2026</span><span class="page-head__chip">▶️ Interactive diagram</span></p></header>
 <div class="admonition abstract">
 <p class="admonition-title">TL;<abbr title="Disaster Recovery: getting systems back after a major outage">DR</abbr> 🚀</p>
-<p>Azure AI Search does two jobs. <strong>Classic retrieval</strong> 🗂️ turns your files and databases into an enriched search index (cracking, AI skills, chunking, embeddings) and answers one query at a time with keyword, vector or hybrid search. <strong>Agentic retrieval</strong> 🤖 sits on top: an <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> breaks a chat question into focused sub-queries, fires them in parallel at your index <em>and</em> live sources like the web or SharePoint, reranks everything and hands back grounded content with citations</p>
+<p>Azure AI Search does two jobs:</p>
+<ul>
+<li><strong>Classic retrieval</strong> 🗂️ turns your files and databases into an enriched search index (cracking, AI skills, chunking, embeddings) and answers one query at a time with keyword, vector or hybrid search</li>
+<li><strong>Agentic retrieval</strong> 🤖 sits on top: an <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> breaks a chat question into focused sub-queries, fires them in parallel at your index <em>and</em> live sources like the web or SharePoint, reranks everything and hands back grounded content with citations</li>
+</ul>
 </div>
 <h2 id="the-architecture">The architecture 🔀<a class="headerlink" href="#the-architecture" title="Link to this section">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">▶️ Step by step</label><label for="__tabbed_1_2">🖼️ Static</label></div>
@@ -10313,6 +10317,13 @@ as the main headline.
 </tr>
 </tbody>
 </table>
+<div class="admonition example">
+<p class="admonition-title">Simple vs chatty questions 💬</p>
+<ul>
+<li>"Error E1042 on the router" → classic hybrid nails it: an exact term, one hop</li>
+<li>"Which EU suppliers changed payment terms last quarter, and what did legal say?" → agentic splits it into sub-queries across sources and merges the answers</li>
+</ul>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Agentic isn't free ⚠️</p>
 <p>The planner adds <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> calls and latency to every question. Use it where questions are genuinely complex, and keep classic hybrid + semantic ranker for the simple stuff</p>
@@ -10335,30 +10346,30 @@ as the main headline.
 </ul>
 </div>
 <h2 id="faqs">FAQs 💬<a class="headerlink" href="#faqs" title="Link to this section">&para;</a></h2>
-<details class="question">
+<details class="note">
 <summary>Is this the same as Azure Cognitive Search? 🏷️</summary>
 <p>Yes. Azure Cognitive Search was renamed <strong>Azure AI Search</strong>, and agentic retrieval was added on top. Older notes on this site under <a href="../../azure/cognitive-search/">Cognitive Search</a> still apply to the classic side</p>
 </details>
-<details class="question">
+<details class="info">
 <summary>Why hybrid instead of pure vector search? 🔀</summary>
 <p>Vectors are great at meaning but weak on exact terms like product codes, error IDs and names. Keyword search is the opposite. Hybrid runs both and fuses the rankings, so you get the best of each, and the semantic ranker then polishes the top results</p>
 </details>
-<details class="question">
+<details class="danger">
 <summary>How do I keep users from seeing documents they shouldn't? 🔐</summary>
 <p>Store access info (groups, users) in filterable fields at indexing time and filter on the caller's identity at query time. Filters run <em>before</em> scoring, so restricted docs never reach the results, or the <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr></p>
 </details>
-<details class="question">
+<details class="tip">
 <summary>What's the knowledge store actually for? 📊</summary>
 <p>It saves the enrichment (entities, key phrases, <abbr title="Optical Character Recognition: turning text in images or scans into real text">OCR</abbr> text, images) to tables and blobs, so analytics and Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> can use it without going through the search index</p>
 </details>
-<details class="question">
+<details class="warning">
 <summary>Does agentic retrieval replace my <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> pipeline? 🤖</summary>
 <p>It replaces the <em>retrieval</em> half: planning, querying, reranking and merging. Your app still owns the prompt and the final answer generation, grounded on what agentic retrieval returns. See <a href="../basic-rag/">Basic <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr></a> for the full loop</p>
 </details>
 <details class="question">
 <summary>When are remote knowledge sources worth it? 🌐</summary>
 <p>When the answer needs data you can't or shouldn't index, like the live web or a SharePoint site that changes hourly. They're fetched at query time, so they add latency, but they're always fresh</p>
-</details><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">RAG Patterns<span class="rn__time"> · 8 min read</span></p><p class="rn__title"><a href="../../../AI/rag/basic-rag/">Basic RAG →</a></p></li><li><p class="rn__kicker">Context Eng.<span class="rn__time"> · 7 min read</span></p><p class="rn__title"><a href="../../../AI/context/artefacts-context/">Artefacts &amp; Context →</a></p></li></ul></div>
+</details><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../../AI/rag/basic-rag/" style="--s1: 219, 39, 119; --s2: 147, 51, 234"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.68 12.32a4.49 4.49 0 0 0-6.36.01 4.49 4.49 0 0 0 0 6.36 4.51 4.51 0 0 0 5.57.63L21 22.39 22.39 21l-3.09-3.11c1.13-1.77.87-4.09-.62-5.57m-1.41 4.95c-.98.98-2.56.97-3.54 0-.97-.98-.97-2.56.01-3.54.97-.97 2.55-.97 3.53 0 .97.98.97 2.56 0 3.54M10.9 20.1a6.5 6.5 0 0 1-1.48-2.32C6.27 17.25 4 15.76 4 14v3c0 2.21 3.58 4 8 4-.4-.26-.77-.56-1.1-.9M4 9v3c0 1.68 2.07 3.12 5 3.7v-.2c0-.93.2-1.85.58-2.69C6.34 12.3 4 10.79 4 9m8-6C7.58 3 4 4.79 4 7c0 2 3 3.68 6.85 4h.05c1.2-1.26 2.86-2 4.6-2 .91 0 1.81.19 2.64.56A3.22 3.22 0 0 0 20 7c0-2.21-3.58-4-8-4"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🤖</span> Artificial Intelligence / RAG Patterns</span><span class="rn-card__title">Basic RAG</span><span class="rn-card__meta">⏱️ 8 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../../AI/context/artefacts-context/" style="--s1: 219, 39, 119; --s2: 147, 51, 234"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.96 11.31C10.82 8.1 11.5 6 13 6s2.18 2.1 3.04 5.31C17 14.92 18.1 19 22 19v-2c-2.2 0-3-2.46-4.03-6.2C17.08 7.46 16.15 4 13 4s-4.08 3.46-4.97 6.8C7.03 14.54 6.2 17 4 17V2H2v20h20v-2H4v-1c3.9 0 5-4.08 5.96-7.69"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🤖</span> Artificial Intelligence / Context Eng.</span><span class="rn-card__title">Artefacts &amp; Context</span><span class="rn-card__meta">⏱️ 8 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10471,6 +10482,8 @@ as the main headline.
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10486,6 +10499,16 @@ as the main headline.
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

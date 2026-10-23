@@ -10018,17 +10018,17 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="find-if-content-exists-in-some-file">Find if content exists in some file <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 13a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3m11 6.59V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12c.45 0 .85-.15 1.19-.4l-4.43-4.43c-.8.52-1.76.83-2.76.83a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5c0 1-.31 1.96-.83 2.75z"/></svg></span><a class="headerlink" href="#find-if-content-exists-in-some-file" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 1 min read</p>
+<header class="page-head" style="--s1: 71, 85, 105; --s2: 100, 116, 139"><p class="page-head__pill"><span>🐧</span> Technical Stuff / Linux</p><h1 id="find-if-content-exists-in-some-file">Find if content exists in some <span class="page-head__accent">file</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 13a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3m11 6.59V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12c.45 0 .85-.15 1.19-.4l-4.43-4.43c-.8.52-1.76.83-2.76.83a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5c0 1-.31 1.96-.83 2.75z"/></svg></span><a class="headerlink" href="#find-if-content-exists-in-some-file" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 1 min read</span></p></header>
 <h2 id="simple-search">Simple Search 🔎<a class="headerlink" href="#simple-search" title="Link to this section">&para;</a></h2>
 <p>Lets say we have to sarch if pluign exists in <code>~/.bashrc</code> file, then we can use</p>
-<div class="highlight"><pre><span></span><code>grep<span class="w"> </span>-r<span class="w"> </span>plugin<span class="w">  </span>~/.bashrc
+<div class="language-bash highlight"><pre><span></span><code>grep<span class="w"> </span>-r<span class="w"> </span>plugin<span class="w">  </span>~/.bashrc
 </code></pre></div>
 <p>the output is </p>
-<div class="highlight"><span class="filename">output</span><pre><span></span><code>/Users/amar/.bashrc:#<span class="w"> </span>Which<span class="w"> </span>plugins<span class="w"> </span>would<span class="w"> </span>you<span class="w"> </span>like<span class="w"> </span>to<span class="w"> </span>load?<span class="w"> </span><span class="o">(</span>plugins<span class="w"> </span>can<span class="w"> </span>be<span class="w"> </span>found<span class="w"> </span><span class="k">in</span><span class="w"> </span>~/.oh-my-bash/plugins/*<span class="o">)</span>
+<div class="language-bash highlight"><span class="filename">output</span><pre><span></span><code>/Users/amar/.bashrc:#<span class="w"> </span>Which<span class="w"> </span>plugins<span class="w"> </span>would<span class="w"> </span>you<span class="w"> </span>like<span class="w"> </span>to<span class="w"> </span>load?<span class="w"> </span><span class="o">(</span>plugins<span class="w"> </span>can<span class="w"> </span>be<span class="w"> </span>found<span class="w"> </span><span class="k">in</span><span class="w"> </span>~/.oh-my-bash/plugins/*<span class="o">)</span>
 /Users/amar/.bashrc:#<span class="w"> </span>Custom<span class="w"> </span>plugins<span class="w"> </span>may<span class="w"> </span>be<span class="w"> </span>added<span class="w"> </span>to<span class="w"> </span>~/.oh-my-bash/custom/plugins/
 </code></pre></div>
 <h2 id="recursive-search">Recursive Search 🔁<a class="headerlink" href="#recursive-search" title="Link to this section">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>grep<span class="w"> </span>-R<span class="w"> </span><span class="s2">&quot;domain&quot;</span><span class="w"> </span>/etc/apache2/httpd.conf
+<div class="language-bash highlight"><pre><span></span><code>grep<span class="w"> </span>-R<span class="w"> </span><span class="s2">&quot;domain&quot;</span><span class="w"> </span>/etc/apache2/httpd.conf
 
 <span class="c1"># (1)</span>
 /etc/apache2/httpd.conf:#<span class="w"> </span>as<span class="w"> </span>error<span class="w"> </span>documents.<span class="w">  </span>e.g.<span class="w"> </span>admin@your-domain.com<span class="w"> </span>
@@ -10040,7 +10040,7 @@ as the main headline.
 <div class="admonition info">
 <p>Lets imagine we have a file named <code>file.txt</code> with below contents</p>
 </div>
-<div class="highlight"><span class="filename">File contents</span><pre><span></span><code>$<span class="w"> </span>cat<span class="w"> </span>file.txt<span class="w"> </span>
+<div class="language-bash highlight"><span class="filename">File contents</span><pre><span></span><code>$<span class="w"> </span>cat<span class="w"> </span>file.txt<span class="w"> </span>
 
 Ottawa
 is
@@ -10053,16 +10053,16 @@ too
 live
 </code></pre></div>
 <p>Below will find all words which have <code>to</code></p>
-<div class="highlight"><span class="filename">Simple search</span><pre><span></span><code>$<span class="w"> </span>grep<span class="w"> </span>to<span class="w"> </span>file.txt<span class="w"> </span>
+<div class="language-bash highlight"><span class="filename">Simple search</span><pre><span></span><code>$<span class="w"> </span>grep<span class="w"> </span>to<span class="w"> </span>file.txt<span class="w"> </span>
 
 to
 too
 </code></pre></div>
 <p>Finding the exact <code>to</code></p>
-<div class="highlight"><span class="filename">Find exact text</span><pre><span></span><code><span class="nv">$grep</span><span class="w"> </span>-w<span class="w"> </span>to<span class="w"> </span>file.txt<span class="w"> </span>
+<div class="language-bash highlight"><span class="filename">Find exact text</span><pre><span></span><code><span class="nv">$grep</span><span class="w"> </span>-w<span class="w"> </span>to<span class="w"> </span>file.txt<span class="w"> </span>
 
 to
-</code></pre></div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Linux<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../Linux/updatePaths/">Update Paths →</a></p></li><li><p class="rn__kicker">Linux<span class="rn__time"> · 22 min read</span></p><p class="rn__title"><a href="../../technical_stuff/linux/linuxCommands/">Commands 101 →</a></p></li></ul></div>
+</code></pre></div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../Linux/updatePaths/" style="--s1: 71, 85, 105; --s2: 100, 116, 139"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 15a3 3 0 0 1 3 3 3 3 0 0 1-3 3 2.99 2.99 0 0 1-2.83-2H14v-2h1.17c.41-1.17 1.52-2 2.83-2m0 2a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m0-9a1.43 1.43 0 0 0 1.43-1.43 1.43 1.43 0 1 0-2.86 0A1.43 1.43 0 0 0 18 8m0-5.43a4 4 0 0 1 4 4C22 9.56 18 14 18 14s-4-4.44-4-7.43a4 4 0 0 1 4-4M8.83 17H10v2H8.83A2.99 2.99 0 0 1 6 21a3 3 0 0 1-3-3c0-1.31.83-2.42 2-2.83V14h2v1.17c.85.3 1.53.98 1.83 1.83M6 17a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1M6 3a3 3 0 0 1 3 3c0 1.31-.83 2.42-2 2.83V10H5V8.83A2.99 2.99 0 0 1 3 6a3 3 0 0 1 3-3m0 2a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m5 14v-2h2v2zm-4-6H5v-2h2z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🐧</span> Technical Stuff / Linux</span><span class="rn-card__title">Update Paths</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../technical_stuff/linux/linuxCommands/" style="--s1: 71, 85, 105; --s2: 100, 116, 139"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🛠️</span> Technical Stuff / Linux</span><span class="rn-card__title">Commands 101</span><span class="rn-card__meta">⏱️ 22 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10175,6 +10175,8 @@ to
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../javascripts/about.js"></script>
@@ -10190,6 +10192,16 @@ to
         <script src="../../javascripts/tilt.js"></script>
       
         <script src="../../javascripts/headings.js"></script>
+      
+        <script src="../../javascripts/edgeray.js"></script>
+      
+        <script src="../../javascripts/tabs.js"></script>
+      
+        <script src="../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../javascripts/diagram.js"></script>
+      
+        <script src="../../javascripts/postside.js"></script>
       
         <script src="../../javascripts/magnetic.js"></script>
       

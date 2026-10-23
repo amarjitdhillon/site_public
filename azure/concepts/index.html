@@ -10424,11 +10424,11 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="azure-concepts">Azure Concepts <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14c0 .53-.21 1.04-.59 1.41-.37.38-.88.59-1.41.59H5c-.53 0-1.04-.21-1.41-.59C3.21 20.04 3 19.53 3 19V5c0-1.11.89-2 2-2m8 6V7h-2v2zm0 8v-6h-2v6z"/></svg></span><a class="headerlink" href="#azure-concepts" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 11 min read</p>
+<header class="page-head" style="--s1: 13, 148, 136; --s2: 6, 182, 212"><p class="page-head__pill"><span>🔷</span> Azure</p><h1 id="azure-concepts">Azure <span class="page-head__accent">Concepts</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14c0 .53-.21 1.04-.59 1.41-.37.38-.88.59-1.41.59H5c-.53 0-1.04-.21-1.41-.59C3.21 20.04 3 19.53 3 19V5c0-1.11.89-2 2-2m8 6V7h-2v2zm0 8v-6h-2v6z"/></svg></span><a class="headerlink" href="#azure-concepts" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 11 min read</span></p></header>
 <h2 id="private-endpoint">Private endpoint 🔒<a class="headerlink" href="#private-endpoint" title="Link to this section">&para;</a></h2>
 <p>A <code>private endpoint</code> is a network interface that uses a private IP address from your virtual network. This network interface connects you privately and securely to a service that's powered by <code>Azure Private Link</code>. By enabling a private endpoint, you're bringing the service into your virtual network.</p>
 <p>The service could be an Azure service such as:</p>
-<div class="highlight"><pre><span></span><code>- Azure Storage
+<div class="language-text highlight"><pre><span></span><code>- Azure Storage
 - Azure Cosmos DB
 - Azure SQL Database
 </code></pre></div>
@@ -10541,7 +10541,7 @@ as the main headline.
 <h3 id="rpo"><abbr title="Recovery Point Objective: how much data loss (in time) is acceptable">RPO</abbr> 🎯<a class="headerlink" href="#rpo" title="Link to this section">&para;</a></h3>
 <p>A <code>recovery point objective (RPO)</code> is the maximum length of time permitted that data can be restored from, which may or may not mean data loss. It is the age of the files or data in backup storage required to resume normal operations if a computer system or network failure occurs.</p>
 <div class="admonition tldr">
-<p class="admonition-title">Tldr</p>
+<p class="admonition-title">TL;<abbr title="Disaster Recovery: getting systems back after a major outage">DR</abbr></p>
 <p><abbr title="Recovery Point Objective: how much data loss (in time) is acceptable">RPO</abbr> is the time from the last data backup until an incident occurred [that may have caused data loss] and <abbr title="Recovery Time Objective: how fast you must be back up after an outage">RTO</abbr> is the time that you set to recover the lost data.</p>
 </div>
 <h3 id="rto"><abbr title="Recovery Time Objective: how fast you must be back up after an outage">RTO</abbr> ⏱️<a class="headerlink" href="#rto" title="Link to this section">&para;</a></h3>
@@ -10617,7 +10617,7 @@ as the main headline.
 <div class="admonition question">
 <p class="admonition-title">Snapshot and Image difference?</p>
 <p>Snapshot applies to a <code>single disk</code>; if you have a VM with multiple disks, then you need to create separate snapshots for each of these disks. In the case of images, all disks are taken into consideration while creating the image.</p>
-</div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Azure<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../azure/az_commands/">Az Commands →</a></p></li><li><p class="rn__kicker">Compute<span class="rn__time"> · 4 min read</span></p><p class="rn__title"><a href="../../azure/appservice/">App Service →</a></p></li></ul></div>
+</div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../azure/az_commands/" style="--s1: 13, 148, 136; --s2: 6, 182, 212"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🔷</span> Azure</span><span class="rn-card__title">Az Commands</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../azure/appservice/" style="--s1: 13, 148, 136; --s2: 6, 182, 212"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.36 14c.08-.66.14-1.32.14-2s-.06-1.34-.14-2h3.38c.16.64.26 1.31.26 2s-.1 1.36-.26 2m-5.15 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56M14.34 14H9.66c-.1-.66-.16-1.32-.16-2s.06-1.35.16-2h4.68c.09.65.16 1.32.16 2s-.07 1.34-.16 2M12 19.96c-.83-1.2-1.5-2.53-1.91-3.96h3.82c-.41 1.43-1.08 2.76-1.91 3.96M8 8H5.08A7.92 7.92 0 0 1 9.4 4.44C8.8 5.55 8.35 6.75 8 8m-2.92 8H8c.35 1.25.8 2.45 1.4 3.56A8 8 0 0 1 5.08 16m-.82-2C4.1 13.36 4 12.69 4 12s.1-1.36.26-2h3.38c-.08.66-.14 1.32-.14 2s.06 1.34.14 2M12 4.03c.83 1.2 1.5 2.54 1.91 3.97h-3.82c.41-1.43 1.08-2.77 1.91-3.97M18.92 8h-2.95a15.7 15.7 0 0 0-1.38-3.56c1.84.63 3.37 1.9 4.33 3.56M12 2C6.47 2 2 6.5 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🔷</span> Azure / Compute</span><span class="rn-card__title">App Service</span><span class="rn-card__meta">⏱️ 4 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10730,6 +10730,8 @@ as the main headline.
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../javascripts/about.js"></script>
@@ -10745,6 +10747,16 @@ as the main headline.
         <script src="../../javascripts/tilt.js"></script>
       
         <script src="../../javascripts/headings.js"></script>
+      
+        <script src="../../javascripts/edgeray.js"></script>
+      
+        <script src="../../javascripts/tabs.js"></script>
+      
+        <script src="../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../javascripts/diagram.js"></script>
+      
+        <script src="../../javascripts/postside.js"></script>
       
         <script src="../../javascripts/magnetic.js"></script>
       

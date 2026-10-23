@@ -10616,17 +10616,17 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="cka-exam-commands"><abbr title="Certified Kubernetes Administrator: the Kubernetes admin certification">CKA</abbr> Exam Commands <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span><a class="headerlink" href="#cka-exam-commands" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 66 min read</p>
+<header class="page-head" style="--s1: 124, 58, 237; --s2: 168, 85, 247"><p class="page-head__pill"><span>☸️</span> Kubernetes</p><h1 id="cka-exam-commands"><abbr title="Certified Kubernetes Administrator: the Kubernetes admin certification">CKA</abbr> Exam <span class="page-head__accent">Commands</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span><a class="headerlink" href="#cka-exam-commands" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 66 min read</span></p></header>
 <h2 id="basics">Basics 📚<a class="headerlink" href="#basics" title="Link to this section">&para;</a></h2>
 <details class="info">
 <summary>Create pod in finance namespace</summary>
-<div class="highlight"><pre><span></span><code>k<span class="w"> </span>run<span class="w"> </span>redis<span class="w"> </span>--image<span class="o">=</span>redis<span class="w"> </span>-n<span class="w"> </span>finance
+<div class="language-shell highlight"><pre><span></span><code>k<span class="w"> </span>run<span class="w"> </span>redis<span class="w"> </span>--image<span class="o">=</span>redis<span class="w"> </span>-n<span class="w"> </span>finance
 </code></pre></div>
 </details>
 <hr />
-<details class="quesiton">
+<details class="question">
 <summary>Create a service and expose it on port 6379</summary>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">redis-service</span>
@@ -10642,7 +10642,7 @@ as the main headline.
 <hr />
 <details class="remember">
 <summary>Create a deployment named webapp using the image kodekloud/webapp-color with 3 replicas</summary>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">webapp</span>
@@ -10668,7 +10668,7 @@ as the main headline.
 <hr />
 <details class="info">
 <summary>Create a new pod called custom-nginx using the nginx image and expose it on container port 8080</summary>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom-nginx</span>
@@ -10683,13 +10683,13 @@ as the main headline.
 </code></pre></div>
 <hr />
 <p>Create a new namespace called dev-ns.</p>
-<div class="highlight"><pre><span></span><code>k<span class="w"> </span>create<span class="w"> </span>ns<span class="w"> </span>dev-ns
+<div class="language-bash highlight"><pre><span></span><code>k<span class="w"> </span>create<span class="w"> </span>ns<span class="w"> </span>dev-ns
 </code></pre></div>
 </details>
 <hr />
 <details class="info">
 <summary>Create a pod called httpd using the image httpd:alpine in the default namespace. Next, create a service of type ClusterIP by the same name (httpd). The target port for the service should be 80</summary>
-<div class="highlight"><pre><span></span><code>k<span class="w"> </span>run<span class="w"> </span>httpd<span class="w"> </span>--image<span class="o">=</span>httpd:alpine<span class="w"> </span>--port<span class="o">=</span><span class="m">80</span><span class="w"> </span>--expose
+<div class="language-bash highlight"><pre><span></span><code>k<span class="w"> </span>run<span class="w"> </span>httpd<span class="w"> </span>--image<span class="o">=</span>httpd:alpine<span class="w"> </span>--port<span class="o">=</span><span class="m">80</span><span class="w"> </span>--expose
 
 service/httpd<span class="w"> </span>created
 pod/httpd<span class="w"> </span>created
@@ -10697,7 +10697,7 @@ pod/httpd<span class="w"> </span>created
 </details>
 <h2 id="scheduling">Scheduling 🗓️<a class="headerlink" href="#scheduling" title="Link to this section">&para;</a></h2>
 <h3 id="node-affinity">Node Affinity 🧲<a class="headerlink" href="#node-affinity" title="Link to this section">&para;</a></h3>
-<div class="highlight"><pre><span></span><code># apply label
+<div class="language-text highlight"><pre><span></span><code># apply label
 k label nodes node01 color=blue
 
 # create a deployment 
@@ -10709,7 +10709,7 @@ kubectl describe node controlplane | grep -i taints
 <hr />
 <details class="info">
 <summary>Create a new deployment named red with the nginx image and 2 replicas, and ensure it gets placed on the controlplane node only. Use the label key <code>node-role.kubernetes.io/control-plane</code> which is already set on the controlplane node.</summary>
-<div class="highlight"><pre><span></span><code><span class="c1"># use the exists operator as shown below</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># use the exists operator as shown below</span>
 <span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">affinity</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">nodeAffinity</span><span class="p">:</span>
@@ -10721,9 +10721,9 @@ kubectl describe node controlplane | grep -i taints
 </code></pre></div>
 </details>
 <h3 id="manual-scheduling">Manual Scheduling ✋<a class="headerlink" href="#manual-scheduling" title="Link to this section">&para;</a></h3>
-<details class="quesiton">
+<details class="question">
 <summary>Manually schedule the pod on node01</summary>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
@@ -10735,7 +10735,7 @@ kubectl describe node controlplane | grep -i taints
 </code></pre></div>
 </details>
 <h3 id="labels-and-selectors">Labels and Selectors 🏷️<a class="headerlink" href="#labels-and-selectors" title="Link to this section">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># count the number of pods with env=dev label</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># count the number of pods with env=dev label</span>
 k<span class="w"> </span>get<span class="w"> </span>po<span class="w"> </span>-l<span class="w"> </span><span class="nv">env</span><span class="o">=</span>dev<span class="w"> </span>--show-labels<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc
 
 <span class="c1"># Identify the POD which is part of the prod environment, the finance BU and of frontend tier?</span>
@@ -10745,7 +10745,7 @@ k<span class="w"> </span>get<span class="w"> </span>pod<span class="w">  </span>
 <p>Node affinity is a property of Pods that attracts them to a set of nodes (either as a preference or a hard requirement). Taints are the opposite -- they allow a node to repel a set of pods.</p>
 <p>Tolerations are applied to pods. Tolerations allow the scheduler to schedule pods with matching taints. Tolerations allow scheduling but don't guarantee scheduling: the scheduler also evaluates other parameters as part of its function.</p>
 <p>Taints and tolerations work together to ensure that pods are not scheduled onto inappropriate nodes. One or more taints are applied to a node; this marks that the node should not accept any pods that do not tolerate the taints.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># You add a taint to a node using kubectl taint. For example,</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># You add a taint to a node using kubectl taint. For example,</span>
 <span class="l l-Scalar l-Scalar-Plain">kubectl taint nodes node1 key1=value1:NoSchedule</span>
 
 
@@ -10785,13 +10785,13 @@ k<span class="w"> </span>get<span class="w"> </span>pod<span class="w">  </span>
 <hr />
 <details class="info">
 <summary>Check taints on the nodes</summary>
-<div class="highlight"><pre><span></span><code>k<span class="w"> </span>describe<span class="w">  </span>nodes<span class="w">  </span>node01<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>taint<span class="w"> </span><span class="c1"># use describe instead of get</span>
+<div class="language-bash highlight"><pre><span></span><code>k<span class="w"> </span>describe<span class="w">  </span>nodes<span class="w">  </span>node01<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>taint<span class="w"> </span><span class="c1"># use describe instead of get</span>
 </code></pre></div>
 </details>
 <hr />
 <details class="info">
 <summary>Create a taint on node01 with key of spray, value of mortein and effect of NoSchedule</summary>
-<div class="highlight"><pre><span></span><code>k<span class="w"> </span>taint<span class="w"> </span>node<span class="w"> </span>node01<span class="w"> </span><span class="nv">spray</span><span class="o">=</span>mortain:NoSchedule
+<div class="language-bash highlight"><pre><span></span><code>k<span class="w"> </span>taint<span class="w"> </span>node<span class="w"> </span>node01<span class="w"> </span><span class="nv">spray</span><span class="o">=</span>mortain:NoSchedule
 </code></pre></div>
 </details>
 <hr />
@@ -10799,7 +10799,7 @@ k<span class="w"> </span>get<span class="w"> </span>pod<span class="w">  </span>
 <summary>Create another pod named bee with the nginx image, which has a toleration set to the taint mortein.</summary>
 <p>First do dry run using </p>
 <p><code>k run bee --image=nginx --dry-run=client -o yaml &gt; test_pod.yaml</code></p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="nt">creationTimestamp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
@@ -10823,7 +10823,7 @@ k<span class="w"> </span>get<span class="w"> </span>pod<span class="w">  </span>
 </details>
 <h3 id="resource-limits">Resource Limits ⚠️<a class="headerlink" href="#resource-limits" title="Link to this section">&para;</a></h3>
 <p>If the node where a Pod is running has enough of a resource available, it's possible (and allowed) for a container to use more resource than its request for that resource specifies. However, a container is not allowed to use more than its resource limit.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># replace the pod using the replace command</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># replace the pod using the replace command</span>
 k<span class="w"> </span>replace<span class="w"> </span>--force<span class="w">  </span>-f<span class="w"> </span>/tmp/kubectl-edit-2304618812.yaml
 
 pod<span class="w"> </span><span class="s2">&quot;elephant&quot;</span><span class="w"> </span>deleted
@@ -10832,13 +10832,13 @@ pod/elephant<span class="w"> </span>replaced
 <h3 id="daemonsets">DaemonSets 😈<a class="headerlink" href="#daemonsets" title="Link to this section">&para;</a></h3>
 <p>A DaemonSet ensures that all (or some) Nodes run a copy of a Pod. As nodes are added to the cluster, Pods are added to them. As nodes are removed from the cluster, those Pods are garbage collected. Deleting a DaemonSet will clean up the Pods it created.</p>
 <p>Some typical uses of a DaemonSet are:</p>
-<div class="highlight"><pre><span></span><code>running a cluster storage daemon on every node
+<div class="language-text highlight"><pre><span></span><code>running a cluster storage daemon on every node
 running a logs collection daemon on every node
 running a node monitoring daemon on every node
 </code></pre></div>
 <details class="question">
 <summary>On how many nodes are the pods scheduled by the DaemonSet kube-proxy?</summary>
-<div class="highlight"><pre><span></span><code>k<span class="w"> </span>-n<span class="w"> </span>kube-system<span class="w"> </span>describe<span class="w"> </span>ds<span class="w"> </span>kube-proxy<span class="w">  </span><span class="c1"># check the pod status</span>
+<div class="language-bash highlight"><pre><span></span><code>k<span class="w"> </span>-n<span class="w"> </span>kube-system<span class="w"> </span>describe<span class="w"> </span>ds<span class="w"> </span>kube-proxy<span class="w">  </span><span class="c1"># check the pod status</span>
 </code></pre></div>
 </details>
 <p>Deploy a DaemonSet for FluentD Logging with Name: elasticsearch, Namespace: kube-system and Image: registry.k8s.io/fluentd-elasticsearch:1.20</p>
@@ -10856,14 +10856,14 @@ running a node monitoring daemon on every node
 <summary>What is the path of the directory holding the static pod definition files?</summary>
 <p><code>/etc/kubernetes/manifests/</code></p>
 </details>
-<details class="qeestion">
+<details class="question">
 <summary>Create a static pod named static-busybox that uses the busybox image and the command sleep 1000</summary>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>run<span class="w"> </span>--restart<span class="o">=</span>Never<span class="w"> </span>--image<span class="o">=</span>busybox<span class="w"> </span>static-busybox<span class="w"> </span>--dry-run<span class="o">=</span>client<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span>--command<span class="w"> </span>--<span class="w"> </span>sleep<span class="w"> </span><span class="m">1000</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/kubernetes/manifests/static-busybox.yaml
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>run<span class="w"> </span>--restart<span class="o">=</span>Never<span class="w"> </span>--image<span class="o">=</span>busybox<span class="w"> </span>static-busybox<span class="w"> </span>--dry-run<span class="o">=</span>client<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span>--command<span class="w"> </span>--<span class="w"> </span>sleep<span class="w"> </span><span class="m">1000</span><span class="w"> </span>&gt;<span class="w"> </span>/etc/kubernetes/manifests/static-busybox.yaml
 </code></pre></div>
 </details>
 <details class="important">
 <summary>The path need not be /etc/kubernetes/manifests. Make sure to check the path configured in the kubelet configuration file.</summary>
-<div class="highlight"><pre><span></span><code>root@controlplane:~#<span class="w"> </span>ssh<span class="w"> </span>node01<span class="w"> </span>
+<div class="language-bash highlight"><pre><span></span><code>root@controlplane:~#<span class="w"> </span>ssh<span class="w"> </span>node01<span class="w"> </span>
 root@node01:~#<span class="w"> </span>ps<span class="w"> </span>-ef<span class="w"> </span><span class="p">|</span><span class="w">  </span>grep<span class="w"> </span>/usr/bin/kubelet<span class="w"> </span>
 root<span class="w">        </span><span class="m">4147</span><span class="w">       </span><span class="m">1</span><span class="w">  </span><span class="m">0</span><span class="w"> </span><span class="m">14</span>:05<span class="w"> </span>?<span class="w">        </span><span class="m">00</span>:00:00<span class="w"> </span>/usr/bin/kubelet<span class="w"> </span>--bootstrap-kubeconfig<span class="o">=</span>/etc/kubernetes/bootstrap-kubelet.conf<span class="w"> </span>--kubeconfig<span class="o">=</span>/etc/kubernetes/kubelet.conf<span class="w"> </span>--config<span class="o">=</span>/var/lib/kubelet/config.yaml<span class="w"> </span>--container-runtime-endpoint<span class="o">=</span>unix:///var/run/containerd/containerd.sock<span class="w"> </span>--pod-infra-container-image<span class="o">=</span>registry.k8s.io/pause:3.9
 root<span class="w">        </span><span class="m">4773</span><span class="w">    </span><span class="m">4733</span><span class="w">  </span><span class="m">0</span><span class="w"> </span><span class="m">14</span>:05<span class="w"> </span>pts/0<span class="w">    </span><span class="m">00</span>:00:00<span class="w"> </span>grep<span class="w"> </span>/usr/bin/kubelet
@@ -10875,7 +10875,7 @@ staticPodPath:<span class="w"> </span>/etc/just-to-mess-with-you
 <h2 id="logging-and-monitoring">Logging and Monitoring 📈<a class="headerlink" href="#logging-and-monitoring" title="Link to this section">&para;</a></h2>
 <details class="info">
 <summary>Identify the POD that consumes the most Memory(bytes) in default namespace.</summary>
-<div class="highlight"><pre><span></span><code>k<span class="w"> </span>top<span class="w"> </span>pod
+<div class="language-bash highlight"><pre><span></span><code>k<span class="w"> </span>top<span class="w"> </span>pod
 NAME<span class="w">       </span>CPU<span class="o">(</span>cores<span class="o">)</span><span class="w">   </span>MEMORY<span class="o">(</span>bytes<span class="o">)</span><span class="w">   </span>
 elephant<span class="w">   </span>19m<span class="w">          </span>32Mi<span class="w">            </span>
 lion<span class="w">       </span>1m<span class="w">           </span>18Mi<span class="w">            </span>
@@ -10886,7 +10886,7 @@ rabbit<span class="w">     </span>129m<span class="w">         </span>252Mi<span
 <h2 id="application-lifecycle-maintenance">Application Lifecycle Maintenance ♻️<a class="headerlink" href="#application-lifecycle-maintenance" title="Link to this section">&para;</a></h2>
 <details class="info">
 <summary>What command is run at container startup?</summary>
-<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.6-alpine</span>
+<div class="language-dockerfile highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">python:3.6-alpine</span>
 
 <span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>flask
 
@@ -10900,7 +10900,7 @@ rabbit<span class="w">     </span>129m<span class="w">         </span>252Mi<span
 </code></pre></div>
 <p>Ans is <code>app.py</code></p>
 <hr />
-<div class="highlight"><pre><span></span><code><span class="c"># Another question</span>
+<div class="language-dockerfile highlight"><pre><span></span><code><span class="c"># Another question</span>
 <span class="k">FROM</span><span class="w"> </span><span class="s">python:3.6-alpine</span>
 
 <span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>flask
@@ -10917,7 +10917,7 @@ rabbit<span class="w">     </span>129m<span class="w">         </span>252Mi<span
 </code></pre></div>
 <p>Ans is <code>python app.py --color red</code></p>
 <hr />
-<div class="highlight"><pre><span></span><code><span class="c1"># Question 3</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Question 3</span>
 
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"> </span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span><span class="w"> </span>
@@ -10952,7 +10952,7 @@ rabbit<span class="w">     </span>129m<span class="w">         </span>252Mi<span
 <hr />
 <details class="info">
 <summary>What command is run at container startup? Assume the image was created from the Dockerfile in this directory</summary>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">FROM python:3.6-alpine</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">FROM python:3.6-alpine</span>
 
 <span class="l l-Scalar l-Scalar-Plain">RUN pip install flask</span>
 
@@ -10985,7 +10985,7 @@ rabbit<span class="w">     </span>129m<span class="w">         </span>252Mi<span
 <hr />
 <details class="question">
 <summary>#Create a pod with the given specifications. By default it displays a blue background. Set the given command line arguments to change it to green. <code>Command line arguments: --color=green</code></summary>
-<div class="highlight"><pre><span></span><code>apiVersion:<span class="w"> </span>v1
+<div class="language-bash highlight"><pre><span></span><code>apiVersion:<span class="w"> </span>v1
 kind:<span class="w"> </span>Pod
 metadata:
 creationTimestamp:<span class="w"> </span>null
@@ -11004,7 +11004,7 @@ status:<span class="w"> </span><span class="o">{}</span>
 </code></pre></div>
 </details>
 <h3 id="env-variables">Env variables 🌱<a class="headerlink" href="#env-variables" title="Link to this section">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># create a cm with 2 params as shown below</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># create a cm with 2 params as shown below</span>
 k<span class="w"> </span>create<span class="w"> </span>cm<span class="w"> </span>webapp-config-map<span class="w"> </span>--from-literal<span class="w"> </span><span class="nv">APP_COLOR</span><span class="o">=</span>darkblue<span class="w">  </span>--from-literal<span class="w"> </span><span class="nv">APP_OTHER</span><span class="o">=</span>disregard
 
 <span class="c1"># Update the environment variable on the POD to use only the APP_COLOR key from the newly created ConfigMap. </span>
@@ -11027,12 +11027,12 @@ spec:
 <span class="w">            </span>key:<span class="w"> </span>APP_COLOR
 </code></pre></div>
 <h3 id="secrets">Secrets 🤫<a class="headerlink" href="#secrets" title="Link to this section">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># The reason the application is failed is because we have not created the secrets yet. Create a new secret named db-secret with the data given below.</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># The reason the application is failed is because we have not created the secrets yet. Create a new secret named db-secret with the data given below.</span>
 k<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>generic<span class="w"> </span>db-secret<span class="w"> </span>--from-literal<span class="w"> </span><span class="nv">DB_Host</span><span class="o">=</span>sql01<span class="w"> </span>--from-literal<span class="w"> </span><span class="nv">DB_User</span><span class="o">=</span>root<span class="w"> </span>--from-literal<span class="w"> </span><span class="nv">DB_Password</span><span class="o">=</span>password123
 </code></pre></div>
 <details class="info">
 <summary>Configure webapp-pod to load environment variables from the newly created secret.</summary>
-<div class="highlight"><pre><span></span><code>apiVersion:<span class="w"> </span>v1
+<div class="language-bash highlight"><pre><span></span><code>apiVersion:<span class="w"> </span>v1
 kind:<span class="w"> </span>Pod
 metadata:
 creationTimestamp:<span class="w"> </span><span class="s2">&quot;2023-11-19T06:03:03Z&quot;</span>
@@ -11053,7 +11053,7 @@ containers:
 <h3 id="multi-container-pods">Multi container pods 👯<a class="headerlink" href="#multi-container-pods" title="Link to this section">&para;</a></h3>
 <details class="question">
 <summary>Create a multi-container pod with 2 containers</summary>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="nt">creationTimestamp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
@@ -11073,7 +11073,7 @@ containers:
 </code></pre></div>
 </details>
 <h2 id="init-containers">Init Containers 🚀<a class="headerlink" href="#init-containers" title="Link to this section">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># Sample</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># Sample</span>
 apiVersion:<span class="w"> </span>v1
 kind:<span class="w"> </span>Pod
 metadata:
@@ -11094,9 +11094,9 @@ spec:
 <span class="w">    </span>command:<span class="w"> </span><span class="o">[</span><span class="s1">&#39;sh&#39;</span>,<span class="w"> </span><span class="s1">&#39;-c&#39;</span>,<span class="w"> </span><span class="s2">&quot;until nslookup mydb.</span><span class="k">$(</span>cat<span class="w"> </span>/var/run/secrets/kubernetes.io/serviceaccount/namespace<span class="k">)</span><span class="s2">.svc.cluster.local; do echo waiting for mydb; sleep 2; done&quot;</span><span class="o">]</span>
 </code></pre></div>
 <h2 id="cluster-maintenance">Cluster Maintenance 🛠️<a class="headerlink" href="#cluster-maintenance" title="Link to this section">&para;</a></h2>
-<details class="quesiton">
+<details class="question">
 <summary>We need to take node01 out for maintenance. Empty the node of all applications and mark it unschedulable.</summary>
-<div class="highlight"><pre><span></span><code>k<span class="w"> </span>drain<span class="w"> </span>node01<span class="w"> </span>--ignore-daemonsets<span class="w"> </span>
+<div class="language-bash highlight"><pre><span></span><code>k<span class="w"> </span>drain<span class="w"> </span>node01<span class="w"> </span>--ignore-daemonsets<span class="w"> </span>
 
 node/node01<span class="w"> </span>cordoned
 Warning:<span class="w"> </span>ignoring<span class="w"> </span>DaemonSet-managed<span class="w"> </span>Pods:<span class="w"> </span>kube-flannel/kube-flannel-ds-f5ttj,<span class="w"> </span>kube-system/kube-proxy-vg6wp
@@ -11110,7 +11110,7 @@ node/node01<span class="w"> </span>drained
 <hr />
 <details class="warning">
 <summary>drain error due to no controller</summary>
-<div class="highlight"><pre><span></span><code>k<span class="w"> </span>drain<span class="w"> </span>node01<span class="w"> </span>--ignore-daemonsets<span class="w"> </span>
+<div class="language-bash highlight"><pre><span></span><code>k<span class="w"> </span>drain<span class="w"> </span>node01<span class="w"> </span>--ignore-daemonsets<span class="w"> </span>
 node/node01<span class="w"> </span>cordoned
 error:<span class="w"> </span>unable<span class="w"> </span>to<span class="w"> </span>drain<span class="w"> </span>node<span class="w"> </span><span class="s2">&quot;node01&quot;</span><span class="w"> </span>due<span class="w"> </span>to<span class="w"> </span>error:cannot<span class="w"> </span>delete<span class="w"> </span>Pods<span class="w"> </span><span class="nb">declare</span><span class="w"> </span>no<span class="w"> </span>controller<span class="w"> </span><span class="o">(</span>use<span class="w"> </span>--force<span class="w"> </span>to<span class="w"> </span>override<span class="o">)</span>:<span class="w"> </span>default/hr-app,<span class="w"> </span>continuing<span class="w"> </span>command...
 There<span class="w"> </span>are<span class="w"> </span>pending<span class="w"> </span>nodes<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>drained:
@@ -11121,13 +11121,13 @@ cannot<span class="w"> </span>delete<span class="w"> </span>Pods<span class="w">
 <hr />
 <details class="question">
 <summary>What is the current version of the cluster?</summary>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>and<span class="w"> </span>look<span class="w"> </span>at<span class="w"> </span>the<span class="w"> </span>VERSION
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>and<span class="w"> </span>look<span class="w"> </span>at<span class="w"> </span>the<span class="w"> </span>VERSION
 </code></pre></div>
 </details>
 <hr />
 <details class="info">
 <summary>What is the latest stable version of Kubernetes as of today?</summary>
-<div class="highlight"><pre><span></span><code>kubeadm<span class="w"> </span>upgrade<span class="w"> </span>plan
+<div class="language-bash highlight"><pre><span></span><code>kubeadm<span class="w"> </span>upgrade<span class="w"> </span>plan
 <span class="o">[</span>upgrade/config<span class="o">]</span><span class="w"> </span>Making<span class="w"> </span>sure<span class="w"> </span>the<span class="w"> </span>configuration<span class="w"> </span>is<span class="w"> </span>correct:
 <span class="o">[</span>upgrade/config<span class="o">]</span><span class="w"> </span>Reading<span class="w"> </span>configuration<span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span>cluster...
 <span class="o">[</span>upgrade/config<span class="o">]</span><span class="w"> </span>FYI:<span class="w"> </span>You<span class="w"> </span>can<span class="w"> </span>look<span class="w"> </span>at<span class="w"> </span>this<span class="w"> </span>config<span class="w"> </span>file<span class="w"> </span>with<span class="w"> </span><span class="s1">&#39;kubectl -n kube-system get cm kubeadm-config -o yaml&#39;</span>
@@ -11161,7 +11161,7 @@ etcd<span class="w">                      </span><span class="m">3</span>.5.6-0<
 <summary>Upgrade the controlplane components to exact version v1.27.0</summary>
 <p>Upgrade the kubeadm tool (if not already), then the controlplane components, and finally the kubelet. Practice referring to the Kubernetes documentation page.</p>
 <p>Note: While upgrading kubelet, if you hit dependency issues while running the apt-get upgrade kubelet command, use the <code>apt install kubelet=1.27</code>.0-00 command instead.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># On the node01 node, run the following commands:</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># On the node01 node, run the following commands:</span>
 <span class="c1"># If you are on the controlplane node</span>
 ssh<span class="w"> </span>node01<span class="w"> </span><span class="c1"># to log in to the node01.</span>
 <span class="c1"># This will update the package lists from the software repository.</span>
@@ -11189,7 +11189,7 @@ systemctl<span class="w"> </span>restart<span class="w"> </span>kubelet
 <hr />
 <details class="info">
 <summary>At what address can you reach the ETCD cluster from the controlplane node? </summary>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">k -n kube-system describe po etcd-controlplane</span><span class="w"> </span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">k -n kube-system describe po etcd-controlplane</span><span class="w"> </span>
 <span class="l l-Scalar l-Scalar-Plain">Name</span><span class="p p-Indicator">:</span><span class="w">                 </span><span class="l l-Scalar l-Scalar-Plain">etcd-controlplane</span>
 <span class="nt">Namespace</span><span class="p">:</span><span class="w">            </span><span class="l l-Scalar l-Scalar-Plain">kube-system</span>
 <span class="nt">Priority</span><span class="p">:</span><span class="w">             </span><span class="l l-Scalar l-Scalar-Plain">2000001000</span>
@@ -11245,7 +11245,7 @@ systemctl<span class="w"> </span>restart<span class="w"> </span>kubelet
 <summary>Backup the Etcd</summary>
 <p>The master node in our cluster is planned for a regular maintenance reboot tonight. While we do not anticipate anything to go wrong, we are required to take the necessary backups. Take a snapshot of the ETCD database using the built-in snapshot functionality.</p>
 <p>Store the backup file at location /opt/snapshot-pre-boot.db</p>
-<div class="highlight"><pre><span></span><code><span class="nv">ETCDCTL_API</span><span class="o">=</span><span class="m">3</span><span class="w"> </span>etcdctl<span class="w"> </span>--endpoints<span class="o">=</span>https://<span class="o">[</span><span class="m">127</span>.0.0.1<span class="o">]</span>:2379<span class="w"> </span><span class="se">\</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="nv">ETCDCTL_API</span><span class="o">=</span><span class="m">3</span><span class="w"> </span>etcdctl<span class="w"> </span>--endpoints<span class="o">=</span>https://<span class="o">[</span><span class="m">127</span>.0.0.1<span class="o">]</span>:2379<span class="w"> </span><span class="se">\</span>
 --cacert<span class="o">=</span>/etc/kubernetes/pki/etcd/ca.crt<span class="w"> </span><span class="se">\</span>
 --cert<span class="o">=</span>/etc/kubernetes/pki/etcd/server.crt<span class="w"> </span><span class="se">\</span>
 --key<span class="o">=</span>/etc/kubernetes/pki/etcd/server.key<span class="w"> </span><span class="se">\</span>
@@ -11255,7 +11255,7 @@ snapshot<span class="w"> </span>save<span class="w"> </span>/opt/snapshot-pre-bo
 <hr />
 <details class="question">
 <summary>How many clusters are defined in the kubeconfig on the student-node?</summary>
-<div class="highlight"><pre><span></span><code>k<span class="w"> </span>config<span class="w"> </span>get-clusters<span class="w"> </span>
+<div class="language-bash highlight"><pre><span></span><code>k<span class="w"> </span>config<span class="w"> </span>get-clusters<span class="w"> </span>
 
 NAME
 cluster2
@@ -11265,9 +11265,9 @@ cluster1
 <hr />
 <details class="info">
 <summary>How to switch from one cluster to another?</summary>
-<div class="highlight"><pre><span></span><code>k<span class="w"> </span>config<span class="w"> </span>use-context<span class="w"> </span>cluster1
+<div class="language-bash highlight"><pre><span></span><code>k<span class="w"> </span>config<span class="w"> </span>use-context<span class="w"> </span>cluster1
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1">#If you check out the pods running in the kube-system namespace in cluster1, you will notice that etcd is running as a pod:</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1">#If you check out the pods running in the kube-system namespace in cluster1, you will notice that etcd is running as a pod:</span>
 
 $<span class="w">  </span>kubectl<span class="w"> </span>config<span class="w"> </span>use-context<span class="w"> </span>cluster1
 Switched<span class="w"> </span>to<span class="w"> </span>context<span class="w"> </span><span class="s2">&quot;cluster1&quot;</span>.
@@ -11278,7 +11278,7 @@ etcd-cluster1-controlplane<span class="w">                      </span><span cla
 
 <span class="c1"># This means that ETCD is set up as a Stacked ETCD Topology where the distributed data storage cluster provided by etcd is stacked on top of the cluster formed by the nodes managed by kubeadm that run control plane components.</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># Using the external etcd</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># Using the external etcd</span>
 
 If<span class="w"> </span>you<span class="w"> </span>check<span class="w"> </span>out<span class="w"> </span>the<span class="w"> </span>pods<span class="w"> </span>running<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>kube-system<span class="w"> </span>namespace<span class="w"> </span><span class="k">in</span><span class="w"> </span>cluster2,<span class="w"> </span>you<span class="w"> </span>will<span class="w"> </span>notice<span class="w"> </span>that<span class="w"> </span>there<span class="w"> </span>are<span class="w"> </span>NO<span class="w"> </span>etcd<span class="w"> </span>pods<span class="w"> </span>running<span class="w"> </span><span class="k">in</span><span class="w"> </span>this<span class="w"> </span>cluster!
 
@@ -11321,7 +11321,7 @@ cluster2-controlplane<span class="w"> </span>~<span class="w"> </span>➜<span c
 <hr />
 <details class="warning">
 <summary>What is the IP address of the External ETCD datastore used in cluster2?</summary>
-<div class="highlight"><pre><span></span><code>ps<span class="w"> </span>-ef<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>etcd<span class="w"> </span><span class="c1"># after doing ssh to controlPlane</span>
+<div class="language-bash highlight"><pre><span></span><code>ps<span class="w"> </span>-ef<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>etcd<span class="w"> </span><span class="c1"># after doing ssh to controlPlane</span>
 root<span class="w">        </span><span class="m">1747</span><span class="w">    </span><span class="m">1383</span><span class="w">  </span><span class="m">0</span><span class="w"> </span><span class="m">20</span>:07<span class="w"> </span>?<span class="w">        </span><span class="m">00</span>:05:56<span class="w"> </span>kube-apiserver<span class="w"> </span>--advertise-address<span class="o">=</span><span class="m">192</span>.28.229.12<span class="w"> </span>--allow-privileged<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--authorization-mode<span class="o">=</span>Node,RBAC<span class="w"> </span>--client-ca-file<span class="o">=</span>/etc/kubernetes/pki/ca.crt<span class="w"> </span>--enable-admission-plugins<span class="o">=</span>NodeRestriction<span class="w"> </span>--enable-bootstrap-token-auth<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--etcd-cafile<span class="o">=</span>/etc/kubernetes/pki/etcd/ca.pem<span class="w"> </span>--etcd-certfile<span class="o">=</span>/etc/kubernetes/pki/etcd/etcd.pem<span class="w"> </span>--etcd-keyfile<span class="o">=</span>/etc/kubernetes/pki/etcd/etcd-key.pem<span class="w"> </span>--etcd-servers<span class="o">=</span>https://192.28.229.24:2379<span class="w"> </span>--kubelet-client-certificate<span class="o">=</span>/etc/kubernetes/pki/apiserver-kubelet-client.crt<span class="w"> </span>--kubelet-client-key<span class="o">=</span>/etc/kubernetes/pki/apiserver-kubelet-client.key<span class="w"> </span>--kubelet-preferred-address-types<span class="o">=</span>InternalIP,ExternalIP,Hostname<span class="w"> </span>--proxy-client-cert-file<span class="o">=</span>/etc/kubernetes/pki/front-proxy-client.crt<span class="w"> </span>--proxy-client-key-file<span class="o">=</span>/etc/kubernetes/pki/front-proxy-client.key<span class="w"> </span>--requestheader-allowed-names<span class="o">=</span>front-proxy-client<span class="w"> </span>--requestheader-client-ca-file<span class="o">=</span>/etc/kubernetes/pki/front-proxy-ca.crt<span class="w"> </span>--requestheader-extra-headers-prefix<span class="o">=</span>X-Remote-Extra-<span class="w"> </span>--requestheader-group-headers<span class="o">=</span>X-Remote-Group<span class="w"> </span>--requestheader-username-headers<span class="o">=</span>X-Remote-User<span class="w"> </span>--secure-port<span class="o">=</span><span class="m">6443</span><span class="w"> </span>--service-account-issuer<span class="o">=</span>https://kubernetes.default.svc.cluster.local<span class="w"> </span>--service-account-key-file<span class="o">=</span>/etc/kubernetes/pki/sa.pub<span class="w"> </span>--service-account-signing-key-file<span class="o">=</span>/etc/kubernetes/pki/sa.key<span class="w"> </span>--service-cluster-ip-range<span class="o">=</span><span class="m">10</span>.96.0.0/12<span class="w"> </span>--tls-cert-file<span class="o">=</span>/etc/kubernetes/pki/apiserver.crt<span class="w"> </span>--tls-private-key-file<span class="o">=</span>/etc/kubernetes/pki/apiserver.key
 </code></pre></div>
 <p>IP is <code>192.28.229.24</code></p>
@@ -11329,7 +11329,7 @@ root<span class="w">        </span><span class="m">1747</span><span class="w">  
 <hr />
 <details class="question">
 <summary>What is the default data directory used the for ETCD datastore used in cluster1?</summary>
-<div class="highlight"><pre><span></span><code>ps<span class="w"> </span>-ef<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>etcd
+<div class="language-bash highlight"><pre><span></span><code>ps<span class="w"> </span>-ef<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>etcd
 root<span class="w">        </span><span class="m">1867</span><span class="w">    </span><span class="m">1383</span><span class="w">  </span><span class="m">0</span><span class="w"> </span><span class="m">20</span>:08<span class="w"> </span>?<span class="w">        </span><span class="m">00</span>:02:25<span class="w"> </span>etcd<span class="w"> </span>--advertise-client-urls<span class="o">=</span>https://192.28.229.9:2379<span class="w"> </span>--cert-file<span class="o">=</span>/etc/kubernetes/pki/etcd/server.crt<span class="w"> </span>--client-cert-auth<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--data-dir<span class="o">=</span>/var/lib/etcd<span class="w"> </span>--experimental-initial-corrupt-check<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--initial-advertise-peer-urls<span class="o">=</span>https://192.28.229.9:2380<span class="w"> </span>--initial-cluster<span class="o">=</span>cluster1-controlplane<span class="o">=</span>https://192.28.229.9:2380<span class="w"> </span>--key-file<span class="o">=</span>/etc/kubernetes/pki/etcd/server.key<span class="w"> </span>--listen-client-urls<span class="o">=</span>https://127.0.0.1:2379,https://192.28.229.9:2379<span class="w"> </span>--listen-metrics-urls<span class="o">=</span>http://127.0.0.1:2381<span class="w"> </span>--listen-peer-urls<span class="o">=</span>https://192.28.229.9:2380<span class="w"> </span>--name<span class="o">=</span>cluster1-controlplane<span class="w"> </span>--peer-cert-file<span class="o">=</span>/etc/kubernetes/pki/etcd/peer.crt<span class="w"> </span>--peer-client-cert-auth<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--peer-key-file<span class="o">=</span>/etc/kubernetes/pki/etcd/peer.key<span class="w"> </span>--peer-trusted-ca-file<span class="o">=</span>/etc/kubernetes/pki/etcd/ca.crt<span class="w"> </span>--snapshot-count<span class="o">=</span><span class="m">10000</span><span class="w"> </span>--trusted-ca-file<span class="o">=</span>/etc/kubernetes/pki/etcd/ca.crt
 </code></pre></div>
 <p>Ans is <code>var/lib/etcd</code></p>
@@ -11337,7 +11337,7 @@ root<span class="w">        </span><span class="m">1867</span><span class="w">  
 <hr />
 <details class="question">
 <summary> --- </summary>
-<div class="highlight"><pre><span></span><code><span class="c1"># First set the context to cluster1:</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># First set the context to cluster1:</span>
 
 $<span class="w">  </span>kubectl<span class="w"> </span>config<span class="w"> </span>use-context<span class="w"> </span>cluster1
 Switched<span class="w"> </span>to<span class="w"> </span>context<span class="w"> </span><span class="s2">&quot;cluster1&quot;</span>.
@@ -11380,7 +11380,7 @@ $<span class="w">  </span>scp<span class="w"> </span>cluster1-controlplane:/opt/
 <hr />
 <details class="question">
 <summary>An ETCD backup for cluster2 is stored at <code>/opt/cluster2.db</code>. Use this snapshot file to carryout a restore on cluster2 to a new path <code>/var/lib/etcd-data-new</code></summary>
-<div class="highlight"><pre><span></span><code><span class="c1"># Step 1. Copy the snapshot file from the student-node to the etcd-server. In the example below, we are copying it to the /root directory:</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># Step 1. Copy the snapshot file from the student-node to the etcd-server. In the example below, we are copying it to the /root directory:</span>
 
 student-node<span class="w"> </span>~<span class="w">  </span>scp<span class="w"> </span>/opt/cluster2.db<span class="w"> </span>etcd-server:/root
 cluster2.db<span class="w">                                                                                                        </span><span class="m">100</span>%<span class="w"> </span>1108KB<span class="w"> </span><span class="m">178</span>.5MB/s<span class="w">   </span><span class="m">00</span>:00<span class="w">    </span>
@@ -11435,9 +11435,9 @@ etcd-server<span class="w"> </span>~<span class="w"> </span>➜<span class="w"> 
 </details>
 <h2 id="security">Security 🔐<a class="headerlink" href="#security" title="Link to this section">&para;</a></h2>
 <h3 id="view-cert-details">View Cert Details 📜<a class="headerlink" href="#view-cert-details" title="Link to this section">&para;</a></h3>
-<details class="ques">
+<details class="question">
 <summary>Identify the certificate file used for the kube-api server and Identify the Certificate file used to authenticate kube-apiserver as a client to ETCD Server</summary>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>/etc/kubernetes/pki<span class="w"> </span>➜<span class="w">  </span>ls<span class="w"> </span>/etc/kubernetes/pki/<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>.crt
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>/etc/kubernetes/pki<span class="w"> </span>➜<span class="w">  </span>ls<span class="w"> </span>/etc/kubernetes/pki/<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>.crt
 apiserver.crt
 apiserver-etcd-client.crt
 apiserver-kubelet-client.crt
@@ -11446,7 +11446,7 @@ front-proxy-ca.crt
 front-proxy-client.crt
 </code></pre></div>
 <p>Ans is <code>apiserver.crt</code> for 1<sup>st</sup> question and <code>apiserver-etcd-client.crt</code> for 2<sup>nd</sup></p>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>/etc/kubernetes/pki<span class="w"> </span>➜<span class="w">  </span>ls<span class="w"> </span>/etc/kubernetes/pki/<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>.key
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>/etc/kubernetes/pki<span class="w"> </span>➜<span class="w">  </span>ls<span class="w"> </span>/etc/kubernetes/pki/<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>.key
 apiserver-etcd-client.key
 apiserver.key
 apiserver-kubelet-client.key<span class="w"> </span><span class="c1"># key used to authenticate kubeapi-server to the kubelet server.</span>
@@ -11459,7 +11459,7 @@ sa.key<span class="w">  </span>
 <hr />
 <details class="question">
 <summary>Identify the ETCD Server Certificate used to host ETCD server</summary>
-<div class="highlight"><pre><span></span><code><span class="c1"># TIP: Look for cert-file option in the file /etc/kubernetes/manifests/etcd.yaml.</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># TIP: Look for cert-file option in the file /etc/kubernetes/manifests/etcd.yaml.</span>
 <span class="l l-Scalar l-Scalar-Plain">controlplane /etc/kubernetes/manifests ➜  cat etcd.yaml | grep -i .crt</span>
 <span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">- --cert-file=/etc/kubernetes/pki/etcd/server.crt</span><span class="w"> </span><span class="c1"># answer</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--peer-cert-file=/etc/kubernetes/pki/etcd/peer.crt</span>
@@ -11471,7 +11471,7 @@ sa.key<span class="w">  </span>
 <details class="note">
 <summary>Identify the ETCD Server CA Root Certificate used to serve ETCD Server</summary>
 <p>ETCD can have its own CA. So this may be a different CA certificate than the one used by kube-api server.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># TIP: Look for CA Certificate (trusted-ca-file) in file /etc/kubernetes/manifests/etcd.yaml.</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># TIP: Look for CA Certificate (trusted-ca-file) in file /etc/kubernetes/manifests/etcd.yaml.</span>
 
 controlplane<span class="w"> </span>/etc/kubernetes/manifests<span class="w"> </span>➜<span class="w">  </span>cat<span class="w"> </span>etcd.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>.crt
 <span class="w">    </span>-<span class="w"> </span>--cert-file<span class="o">=</span>/etc/kubernetes/pki/etcd/server.crt
@@ -11484,7 +11484,7 @@ controlplane<span class="w"> </span>/etc/kubernetes/manifests<span class="w"> </
 <details class="info">
 <summary>What is the Common Name (CN) configured on the Kube <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> Server Certificate?</summary>
 <p>OpenSSL Syntax: openssl x509 -in file-path.crt -text -noout</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># TIP: Run the command openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text and look for Subject CN.</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># TIP: Run the command openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text and look for Subject CN.</span>
 
 controlplane<span class="w"> </span>/etc/kubernetes/pki<span class="w"> </span>✖<span class="w"> </span>openssl<span class="w"> </span>x509<span class="w"> </span>-in<span class="w"> </span>apiserver.crt<span class="w"> </span>-text<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>cn
 <span class="w">        </span>Issuer:<span class="w"> </span><span class="nv">CN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>kubernetes<span class="w">             </span><span class="c1"># Name of CA who issued the cert</span>
@@ -11496,7 +11496,7 @@ nUyXcccNRLfQfrhu9NoD+4Nq7gM99y5QRpD8QimBnv1DBzXk+XWoC2Ka3EpmRzZZ
 <hr />
 <details class="note">
 <summary>Which of the below alternate names is not configured on the Kube <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> Server Certificate?</summary>
-<div class="highlight"><pre><span></span><code><span class="c1">#TIP: Run the command openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text and look at Alternative Names as shown below</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1">#TIP: Run the command openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text and look at Alternative Names as shown below</span>
 
 X509v3<span class="w"> </span>Subject<span class="w"> </span>Alternative<span class="w"> </span>Name:<span class="w"> </span>
 DNS:controlplane,<span class="w"> </span>DNS:kubernetes,<span class="w"> </span>DNS:kubernetes.default,<span class="w"> </span>DNS:kubernetes.default.svc,<span class="w"> </span>DNS:kubernetes.default.svc.cluster.local,<span class="w"> </span>IP<span class="w"> </span>Address:10.96.0.1,<span class="w"> </span>IP<span class="w"> </span>Address:192.2.128.9
@@ -11505,7 +11505,7 @@ DNS:controlplane,<span class="w"> </span>DNS:kubernetes,<span class="w"> </span>
 <hr />
 <details class="info">
 <summary>How long, from the issued date, is the Kube-<abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> Server Certificate valid for?</summary>
-<div class="highlight"><pre><span></span><code><span class="c1">#TIP:  Run the command openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text and check on the Expiry date.</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1">#TIP:  Run the command openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text and check on the Expiry date.</span>
 <span class="w">        </span>Issuer:<span class="w"> </span><span class="nv">CN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>etcd-ca
 <span class="w">        </span>Validity
 <span class="w">            </span>Not<span class="w"> </span>Before:<span class="w"> </span>Nov<span class="w"> </span><span class="m">20</span><span class="w"> </span><span class="m">00</span>:50:29<span class="w"> </span><span class="m">2023</span><span class="w"> </span>GMT
@@ -11515,7 +11515,7 @@ DNS:controlplane,<span class="w"> </span>DNS:kubernetes,<span class="w"> </span>
 <hr />
 <details class="question">
 <summary>How long, from the issued date, is the Root CA Certificate valid for?</summary>
-<div class="highlight"><pre><span></span><code><span class="c1">#TIP: Run the command openssl x509 -in /etc/kubernetes/pki/ca.crt -text and look for the validity.</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1">#TIP: Run the command openssl x509 -in /etc/kubernetes/pki/ca.crt -text and look for the validity.</span>
 <span class="w">    </span>Data:
 <span class="w">        </span>Version:<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">(</span>0x2<span class="o">)</span>
 <span class="w">        </span>Serial<span class="w"> </span>Number:<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>0x0<span class="o">)</span>
@@ -11531,7 +11531,7 @@ DNS:controlplane,<span class="w"> </span>DNS:kubernetes,<span class="w"> </span>
 <details class="error">
 <summary>The kube-api server stopped again! Check it out. Inspect the kube-api server logs and identify the root cause and fix the issue</summary>
 <p>Run crictl ps -a command to identify the kube-api server container. Run crictl logs container-id command to view the logs.</p>
-<div class="highlight"><pre><span></span><code>crictl<span class="w"> </span>ps<span class="w"> </span>-a
+<div class="language-bash highlight"><pre><span></span><code>crictl<span class="w"> </span>ps<span class="w"> </span>-a
 CONTAINER<span class="w">           </span>IMAGE<span class="w">               </span>CREATED<span class="w">              </span>STATE<span class="w">               </span>NAME<span class="w">                      </span>ATTEMPT<span class="w">             </span>POD<span class="w"> </span>ID<span class="w">              </span>POD
 3bac921cb4a5a<span class="w">       </span>6f707f569b572<span class="w">       </span><span class="m">16</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">       </span>Running<span class="w">             </span>kube-apiserver<span class="w">            </span><span class="m">0</span><span class="w">                   </span>fec26f7c6715a<span class="w">       </span>kube-apiserver-controlplane
 33527b14bc1bf<span class="w">       </span>f73f1b39c3fe8<span class="w">       </span><span class="m">22</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">       </span>Running<span class="w">             </span>kube-scheduler<span class="w">            </span><span class="m">2</span><span class="w">                   </span>fb3dc26664afc<span class="w">       </span>kube-scheduler-controlplane
@@ -11546,7 +11546,7 @@ b412cc3976452<span class="w">       </span>8b675dda11bb1<span class="w">       <
 63734700d5255<span class="w">       </span>fcecffc7ad4af<span class="w">       </span><span class="m">35</span><span class="w"> </span>minutes<span class="w"> </span>ago<span class="w">       </span>Exited<span class="w">              </span>install-cni-plugin<span class="w">        </span><span class="m">0</span><span class="w">                   </span>579d556b90be1<span class="w">       </span>kube-flannel-ds-6xdvn
 7c4e662a2827d<span class="w">       </span>5f82fc39fa816<span class="w">       </span><span class="m">35</span><span class="w"> </span>minutes<span class="w"> </span>ago<span class="w">       </span>Running<span class="w">             </span>kube-proxy<span class="w">                </span><span class="m">0</span><span class="w">                   </span>60aabd71d5180<span class="w">       </span>kube-proxy-hs4c4
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>crictl<span class="w"> </span>logs<span class="w"> </span>da40e86464c04
+<div class="language-bash highlight"><pre><span></span><code>crictl<span class="w"> </span>logs<span class="w"> </span>da40e86464c04
 I1120<span class="w"> </span><span class="m">01</span>:29:05.406801<span class="w">       </span><span class="m">1</span><span class="w"> </span>server.go:551<span class="o">]</span><span class="w"> </span>external<span class="w"> </span>host<span class="w"> </span>was<span class="w"> </span>not<span class="w"> </span>specified,<span class="w"> </span>using<span class="w"> </span><span class="m">192</span>.2.128.9
 I1120<span class="w"> </span><span class="m">01</span>:29:05.407768<span class="w">       </span><span class="m">1</span><span class="w"> </span>server.go:165<span class="o">]</span><span class="w"> </span>Version:<span class="w"> </span>v1.27.0
 I1120<span class="w"> </span><span class="m">01</span>:29:05.407793<span class="w">       </span><span class="m">1</span><span class="w"> </span>server.go:167<span class="o">]</span><span class="w"> </span><span class="s2">&quot;Golang settings&quot;</span><span class="w"> </span><span class="nv">GOGC</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="nv">GOMAXPROCS</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="w"> </span><span class="nv">GOTRACEBACK</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
@@ -11575,7 +11575,7 @@ W1120<span class="w"> </span><span class="m">01</span>:29:06.688471<span class="
 <details class="question">
 <summary>A new member akshay joined our team. He requires access to our cluster</summary>
 <p>The Certificate Signing Request is at the /root location.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">Use this command to generate the base64 encoded format as following</span><span class="p">:</span><span class="w"> </span><span class="err">-</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">Use this command to generate the base64 encoded format as following</span><span class="p">:</span><span class="w"> </span><span class="err">-</span>
 
 <span class="l l-Scalar l-Scalar-Plain">cat akshay.csr | base64 -w 0</span>
 
@@ -11598,7 +11598,7 @@ W1120<span class="w"> </span><span class="m">01</span>:29:06.688471<span class="
 <span class="l l-Scalar l-Scalar-Plain">kubectl apply -f akshay-csr.yaml</span>
 </code></pre></div>
 <p>Sample shown below</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  cat csr-mani.yaml</span><span class="w"> </span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  cat csr-mani.yaml</span><span class="w"> </span>
 <span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">certificates.k8s.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CertificateSigningRequest</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -11611,11 +11611,11 @@ W1120<span class="w"> </span><span class="m">01</span>:29:06.688471<span class="
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">client auth</span>
 </code></pre></div>
 <p>csr is created as shown below
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>csr-mani.yaml<span class="w"> </span>
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>csr-mani.yaml<span class="w"> </span>
 certificatesigningrequest.certificates.k8s.io/akshay<span class="w"> </span>created
 </code></pre></div></p>
 <p>check the CSRs
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>get<span class="w"> </span>csr
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>get<span class="w"> </span>csr
 NAME<span class="w">        </span>AGE<span class="w">   </span>SIGNERNAME<span class="w">                                    </span>REQUESTOR<span class="w">                  </span>REQUESTEDDURATION<span class="w">   </span>CONDITION
 akshay<span class="w">      </span>73s<span class="w">   </span>kubernetes.io/kube-apiserver-client<span class="w">           </span>kubernetes-admin<span class="w">           </span>24h<span class="w">                 </span>Pending
 csr-8wnnl<span class="w">   </span>17m<span class="w">   </span>kubernetes.io/kube-apiserver-client-kubelet<span class="w">   </span>system:node:controlplane<span class="w">   </span>&lt;none&gt;<span class="w">              </span>Approved,Issued
@@ -11624,14 +11624,14 @@ csr-8wnnl<span class="w">   </span>17m<span class="w">   </span>kubernetes.io/ku
 <hr />
 <details class="success">
 <summary>Please approve the CSR</summary>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>✖<span class="w"> </span>k<span class="w"> </span>certificate<span class="w"> </span>approve<span class="w"> </span>akshay
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>✖<span class="w"> </span>k<span class="w"> </span>certificate<span class="w"> </span>approve<span class="w"> </span>akshay
 certificatesigningrequest.certificates.k8s.io/akshay<span class="w"> </span>approved
 </code></pre></div>
 </details>
 <hr />
 <details class="warning">
 <summary>Describe the new CSR you got</summary>
-<div class="highlight"><pre><span></span><code><span class="c1"># TIP: use the get -o yaml instead of describe</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># TIP: use the get -o yaml instead of describe</span>
 <span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  k get  csr agent-smith -o yaml</span><span class="w"> </span>
 
 <span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">certificates.k8s.io/v1</span>
@@ -11657,11 +11657,11 @@ certificatesigningrequest.certificates.k8s.io/akshay<span class="w"> </span>appr
 </details>
 <h3 id="kubeconfig">Kubeconfig 🗂️<a class="headerlink" href="#kubeconfig" title="Link to this section">&para;</a></h3>
 <p>Where is the default kubeconfig file located in the current environment?</p>
-<div class="highlight"><pre><span></span><code>/root/.kube/config
+<div class="language-bash highlight"><pre><span></span><code>/root/.kube/config
 </code></pre></div>
 <details class="question">
 <summary>How many clusters are defined in the default kubeconfig file?</summary>
-<div class="highlight"><pre><span></span><code><span class="c1"># Run the kubectl config view command and count the number of clusters.</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Run the kubectl config view command and count the number of clusters.</span>
 <span class="l l-Scalar l-Scalar-Plain">controlplane ~/.kube ➜  k config view</span>
 <span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">clusters</span><span class="p">:</span>
@@ -11684,7 +11684,7 @@ certificatesigningrequest.certificates.k8s.io/akshay<span class="w"> </span>appr
 <span class="w">    </span><span class="nt">client-key-data</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DATA+OMITTED</span>
 </code></pre></div>
 <p>Lets check the kube config file</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">~/.kube ➜  cat /root/my-kube-config</span><span class="w"> </span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">~/.kube ➜  cat /root/my-kube-config</span><span class="w"> </span>
 <span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Config</span>
 
@@ -11749,9 +11749,9 @@ certificatesigningrequest.certificates.k8s.io/akshay<span class="w"> </span>appr
 </code></pre></div>
 </details>
 <hr />
-<details class="quesiton">
+<details class="question">
 <summary>I would like to use the dev-user to access test-cluster-1. Set the current context to the right one so I can do that</summary>
-<div class="highlight"><pre><span></span><code><span class="c1"># TIP: use the right context file as well</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># TIP: use the right context file as well</span>
 controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>config<span class="w"> </span>--kubeconfig<span class="w"> </span>/root/my-kube-config<span class="w"> </span>use-context<span class="w"> </span>research
 Switched<span class="w"> </span>to<span class="w"> </span>context<span class="w"> </span><span class="s2">&quot;research&quot;</span>.
 
@@ -11764,7 +11764,7 @@ research
 <p>Role-based access control (<abbr title="Role-Based Access Control: permissions given to roles, and people get roles">RBAC</abbr>) is a method of regulating access to computer or network resources based on the roles of individual users within your organization.</p>
 <p>The <abbr title="Role-Based Access Control: permissions given to roles, and people get roles">RBAC</abbr> <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> declares four kinds of Kubernetes object: Role, ClusterRole, RoleBinding and ClusterRoleBinding. </p>
 <p>An <abbr title="Role-Based Access Control: permissions given to roles, and people get roles">RBAC</abbr> Role or ClusterRole contains rules that represent a set of permissions. Permissions are purely additive (there are no "deny" rules). A Role always sets permissions within a particular namespace; when you create a Role, you have to specify the namespace it belongs in. ClusterRole, by contrast, is a non-namespaced resource. The resources have different names (Role and ClusterRole) because a Kubernetes object always has to be either namespaced or not namespaced; it can't be both.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Read role</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Read role</span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Role</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -11776,7 +11776,7 @@ research
 <span class="w">  </span><span class="nt">verbs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;get&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;watch&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;list&quot;</span><span class="p p-Indicator">]</span>
 </code></pre></div>
 <p>ClusterRole example shown below</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterRole</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="c1"># &quot;namespace&quot; omitted since ClusterRoles are not namespaced</span>
@@ -11790,7 +11790,7 @@ research
 <span class="w">  </span><span class="nt">verbs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;get&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;watch&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;list&quot;</span><span class="p p-Indicator">]</span>
 </code></pre></div>
 <p>A role binding grants the permissions defined in a role to a user or set of users. It holds a list of subjects (users, groups, or service accounts), and a reference to the role being granted. A RoleBinding grants permissions within a specific namespace whereas a ClusterRoleBinding grants that access cluster-wide.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
 <span class="c1"># This role binding allows &quot;jane&quot; to read pods in the &quot;default&quot; namespace.</span>
 <span class="c1"># You need to already have a Role named &quot;pod-reader&quot; in that namespace.</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RoleBinding</span>
@@ -11813,7 +11813,7 @@ research
 <p>A RoleBinding can also reference a ClusterRole to grant the permissions defined in that ClusterRole to resources inside the RoleBinding's namespace. This kind of reference lets you define a set of common roles across your cluster, then reuse them within multiple namespaces.</p>
 </div>
 <p>To grant permissions across a whole cluster, you can use a ClusterRoleBinding. The following ClusterRoleBinding allows any user in the group "manager" to read secrets in any namespace.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
 <span class="c1"># This cluster role binding allows anyone in the &quot;manager&quot; group to read secrets in any namespace.</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterRoleBinding</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -11832,7 +11832,7 @@ research
 <p class="admonition-title">Question</p>
 <p>Inspect the environment and identify the authorization modes configured on the cluster.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="c1"># Use the command kubectl describe pod kube-apiserver-controlplane -n kube-system and look for --authorization-mode.</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># Use the command kubectl describe pod kube-apiserver-controlplane -n kube-system and look for --authorization-mode.</span>
 
 controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>-n<span class="w"> </span>kube-system<span class="w"> </span>describe<span class="w"> </span>po<span class="w"> </span>kube-apiserver-controlplane<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>auth
 <span class="w">      </span>--authorization-mode<span class="o">=</span>Node,RBAC
@@ -11841,7 +11841,7 @@ controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">
 <hr />
 <details class="question">
 <summary>What are the resources the kube-proxy role in the kube-system namespace is given access to?</summary>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>describe<span class="w"> </span>role<span class="w"> </span>kube-proxy<span class="w"> </span>-n<span class="w"> </span>kube-system<span class="w"> </span>
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>describe<span class="w"> </span>role<span class="w"> </span>kube-proxy<span class="w"> </span>-n<span class="w"> </span>kube-system<span class="w"> </span>
 Name:<span class="w">         </span>kube-proxy
 Labels:<span class="w">       </span>&lt;none&gt;
 Annotations:<span class="w">  </span>&lt;none&gt;
@@ -11854,7 +11854,7 @@ configmaps<span class="w">  </span><span class="o">[]</span><span class="w">    
 <hr />
 <details class="info">
 <summary>Which account is the kube-proxy role assigned to?</summary>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  kubectl describe rolebinding kube-proxy -n kube-system</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  kubectl describe rolebinding kube-proxy -n kube-system</span>
 <span class="l l-Scalar l-Scalar-Plain">Name</span><span class="p p-Indicator">:</span><span class="w">         </span><span class="l l-Scalar l-Scalar-Plain">kube-proxy</span>
 <span class="nt">Labels</span><span class="p">:</span><span class="w">       </span><span class="l l-Scalar l-Scalar-Plain">&lt;none&gt;</span>
 <span class="nt">Annotations</span><span class="p">:</span><span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">&lt;none&gt;</span>
@@ -11870,18 +11870,18 @@ configmaps<span class="w">  </span><span class="o">[]</span><span class="w">    
 <hr />
 <details class="question">
 <summary>A user dev-user is created. User's details have been added to the kubeconfig file. Inspect the permissions granted to the user. Check if the user can list pods in the default namespace.</summary>
-<div class="highlight"><pre><span></span><code>k<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>--as<span class="w"> </span>dev-user
+<div class="language-bash highlight"><pre><span></span><code>k<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>--as<span class="w"> </span>dev-user
 </code></pre></div>
 </details>
 <hr />
 <details class="warning">
 <summary>Create the necessary roles and role bindings required for the dev-user to create, list and delete pods in the default namespace</summary>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>✖<span class="w"> </span>kubectl<span class="w"> </span>create<span class="w"> </span>role<span class="w"> </span>developer<span class="w">  </span>--verb<span class="o">=</span>create<span class="w"> </span>--verb<span class="o">=</span>list<span class="w"> </span>--verb<span class="o">=</span>delete<span class="w"> </span>--resource<span class="o">=</span>pods
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>✖<span class="w"> </span>kubectl<span class="w"> </span>create<span class="w"> </span>role<span class="w"> </span>developer<span class="w">  </span>--verb<span class="o">=</span>create<span class="w"> </span>--verb<span class="o">=</span>list<span class="w"> </span>--verb<span class="o">=</span>delete<span class="w"> </span>--resource<span class="o">=</span>pods
 
 role.rbac.authorization.k8s.io/developer<span class="w"> </span>created
 </code></pre></div>
 <p>Create a binding for it as shown below
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>✖<span class="w"> </span>kubectl<span class="w"> </span>create<span class="w"> </span>rolebinding<span class="w"> </span>dev-user-binding<span class="w"> </span>--role<span class="o">=</span>developer<span class="w"> </span>--user<span class="o">=</span>dev-user<span class="w"> </span>--namespace<span class="o">=</span>default
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>✖<span class="w"> </span>kubectl<span class="w"> </span>create<span class="w"> </span>rolebinding<span class="w"> </span>dev-user-binding<span class="w"> </span>--role<span class="o">=</span>developer<span class="w"> </span>--user<span class="o">=</span>dev-user<span class="w"> </span>--namespace<span class="o">=</span>default
 
 rolebinding.rbac.authorization.k8s.io/dev-user-binding<span class="w"> </span>created
 
@@ -11893,10 +11893,10 @@ red-697496b845-n4zsd<span class="w">   </span><span class="m">1</span>/1<span cl
 </code></pre></div></p>
 </details>
 <hr />
-<details class="quesiton">
+<details class="question">
 <summary>What user/groups are the cluster-admin role bound to?</summary>
 <p>The ClusterRoleBinding for the role is with the same name.</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  k get  clusterrolebindings.rbac.authorization.k8s.io cluster-admin -o yaml</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  k get  clusterrolebindings.rbac.authorization.k8s.io cluster-admin -o yaml</span>
 
 <span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterRoleBinding</span>
@@ -11922,7 +11922,7 @@ red-697496b845-n4zsd<span class="w">   </span><span class="m">1</span>/1<span cl
 <hr />
 <details class="question">
 <summary>What level of permission does the cluster-admin role grant?</summary>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  k get  clusterrole  cluster-admin -o yaml</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  k get  clusterrole  cluster-admin -o yaml</span>
 
 <span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterRole</span>
@@ -11952,7 +11952,7 @@ red-697496b845-n4zsd<span class="w">   </span><span class="m">1</span>/1<span cl
 <hr />
 <details class="note">
 <summary>A new user michelle joined the team. She will be focusing on the nodes in the cluster. Create the required ClusterRoles and ClusterRoleBindings so she gets access to the nodes</summary>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>kubectl<span class="w"> </span>create<span class="w"> </span>clusterrole<span class="w"> </span>node-reader<span class="w"> </span>--verb<span class="o">=</span>get,list,watch<span class="w"> </span>--resource<span class="o">=</span>nodes
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>kubectl<span class="w"> </span>create<span class="w"> </span>clusterrole<span class="w"> </span>node-reader<span class="w"> </span>--verb<span class="o">=</span>get,list,watch<span class="w"> </span>--resource<span class="o">=</span>nodes
 
 clusterrole.rbac.authorization.k8s.io/node-reader<span class="w"> </span>created
 
@@ -11966,7 +11966,7 @@ clusterrolebinding.rbac.authorization.k8s.io/node-reader-cluster-binding<span cl
 <details class="question">
 <summary>Michelle's responsibilities are growing and now she will be responsible for storage as well. Create the required ClusterRoles and ClusterRoleBindings to allow her access to Storage</summary>
 <p>Get the <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> groups and resource names from command kubectl api-resources. Use the given spec:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">ClusterRole</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">storage-admin</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">ClusterRole</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">storage-admin</span>
 <span class="nt">Resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">persistentvolumes</span>
 <span class="nt">Resource</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">storageclasses</span>
 <span class="nt">ClusterRoleBinding</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">michelle-storage-admin</span>
@@ -11974,7 +11974,7 @@ clusterrolebinding.rbac.authorization.k8s.io/node-reader-cluster-binding<span cl
 <span class="nt">ClusterRoleBinding Role</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">storage-admin</span>
 </code></pre></div>
 <p>Answer is shown below</p>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>kubectl<span class="w"> </span>create<span class="w"> </span>clusterrole<span class="w"> </span>storage-admin<span class="w">  </span>--verb<span class="o">=</span>get,list,watch<span class="w"> </span>--resource<span class="o">=</span>persistentvolumes<span class="w"> </span>--verb<span class="o">=</span>get,list<span class="w"> </span>--resource<span class="o">=</span>storageclasses
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>kubectl<span class="w"> </span>create<span class="w"> </span>clusterrole<span class="w"> </span>storage-admin<span class="w">  </span>--verb<span class="o">=</span>get,list,watch<span class="w"> </span>--resource<span class="o">=</span>persistentvolumes<span class="w"> </span>--verb<span class="o">=</span>get,list<span class="w"> </span>--resource<span class="o">=</span>storageclasses
 clusterrole.rbac.authorization.k8s.io/storage-admin<span class="w"> </span>created
 
 controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>kubectl<span class="w"> </span>create<span class="w"> </span>clusterrolebinding<span class="w"> </span>michelle-storage-admin<span class="w">  </span>--clusterrole<span class="o">=</span>storage-admin<span class="w"> </span>--user<span class="o">=</span>michelle
@@ -11998,7 +11998,7 @@ clusterrolebinding.rbac.authorization.k8s.io/michelle-storage-admin<span class="
 <div class="admonition question">
 <p>Which sercive account is used by deployment?</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  k get po web-dashboard-97c9c59f6-x2zdd -o yaml | grep -i service</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  k get po web-dashboard-97c9c59f6-x2zdd -o yaml | grep -i service</span>
 
 <span class="l l-Scalar l-Scalar-Plain">- mountPath</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/run/secrets/kubernetes.io/serviceaccount</span>
 <span class="nt">enableServiceLinks</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
@@ -12008,17 +12008,17 @@ clusterrolebinding.rbac.authorization.k8s.io/michelle-storage-admin<span class="
 </code></pre></div>
 <hr />
 <p>The application needs a ServiceAccount with the Right permissions to be created to authenticate to Kubernetes. The default ServiceAccount has limited access. Create a new ServiceAccount named dashboard-sa.</p>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>create<span class="w"> </span>sa<span class="w"> </span>dashboard-sa
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>create<span class="w"> </span>sa<span class="w"> </span>dashboard-sa
 
 serviceaccount/dashboard-sa<span class="w"> </span>created
 </code></pre></div>
 <hr />
 <p>create a new token for a SA
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>create<span class="w"> </span>token<span class="w"> </span>dashboard-sa<span class="w"> </span>
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>create<span class="w"> </span>token<span class="w"> </span>dashboard-sa<span class="w"> </span>
 </code></pre></div></p>
 <h3 id="image-security">Image Security 🖼️<a class="headerlink" href="#image-security" title="Link to this section">&para;</a></h3>
 <p>What secret type must we choose for docker registry?
-<div class="highlight"><pre><span></span><code>root@controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>--help<span class="w"> </span>
+<div class="language-bash highlight"><pre><span></span><code>root@controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>--help<span class="w"> </span>
 Create<span class="w"> </span>a<span class="w"> </span>secret<span class="w"> </span>using<span class="w"> </span>specified<span class="w"> </span>subcommand.
 
 Available<span class="w"> </span>Commands:
@@ -12031,27 +12031,27 @@ Usage:
 </code></pre></div></p>
 <hr />
 <p>We decided to use a modified version of the application from an internal private registry. Update the image of the deployment to use a new image from myprivateregistry.com:5000</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># update the image as shown below</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># update the image as shown below</span>
 <span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myprivateregistry.com:5000/nginx:alpine</span>
 <span class="w">        </span><span class="nt">imagePullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
 </code></pre></div>
 <p>Create a secret object with the credentials required to access the registry.</p>
-<div class="highlight"><pre><span></span><code><span class="err">Name</span><span class="p">:</span><span class="w"> </span><span class="err">priva</span><span class="kc">te</span><span class="mi">-</span><span class="err">reg</span><span class="mi">-</span><span class="err">cred</span>
+<div class="language-json highlight"><pre><span></span><code><span class="err">Name</span><span class="p">:</span><span class="w"> </span><span class="err">priva</span><span class="kc">te</span><span class="mi">-</span><span class="err">reg</span><span class="mi">-</span><span class="err">cred</span>
 <span class="err">User</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="err">dock_user</span>
 <span class="err">Password</span><span class="p">:</span><span class="w"> </span><span class="err">dock_password</span>
 <span class="err">Server</span><span class="p">:</span><span class="w"> </span><span class="err">mypriva</span><span class="kc">tere</span><span class="err">gis</span><span class="kc">tr</span><span class="err">y.com</span><span class="p">:</span><span class="mi">5000</span>
 <span class="err">Email</span><span class="p">:</span><span class="w"> </span><span class="err">dock_user@mypriva</span><span class="kc">tere</span><span class="err">gis</span><span class="kc">tr</span><span class="err">y.com</span>
 </code></pre></div>
 <p>Create using below
-<div class="highlight"><pre><span></span><code>root@controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>docker-registry<span class="w"> </span>private-reg-cred<span class="w">   </span>--docker-email<span class="o">=</span>dock_user@myprivateregistry.com<span class="w">    </span>--docker-username<span class="o">=</span>dock_user<span class="w">   </span>--docker-password<span class="o">=</span>dock_password<span class="w">   </span>--docker-server<span class="o">=</span>myprivateregistry.com:5000
+<div class="language-bash highlight"><pre><span></span><code>root@controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="w"> </span>docker-registry<span class="w"> </span>private-reg-cred<span class="w">   </span>--docker-email<span class="o">=</span>dock_user@myprivateregistry.com<span class="w">    </span>--docker-username<span class="o">=</span>dock_user<span class="w">   </span>--docker-password<span class="o">=</span>dock_password<span class="w">   </span>--docker-server<span class="o">=</span>myprivateregistry.com:5000
 
 secret/private-reg-cred<span class="w"> </span>created
 </code></pre></div></p>
 <hr />
 <p>Configure the deployment to use credentials from the new secret to pull images from the private registry</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Add the imagepull secret as shown below</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Add the imagepull secret as shown below</span>
 <span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myprivateregistry.com:5000/nginx:alpine</span>
@@ -12066,7 +12066,7 @@ secret/private-reg-cred<span class="w"> </span>created
 </code></pre></div>
 <h3 id="security-contexts">Security Contexts 🛡️<a class="headerlink" href="#security-contexts" title="Link to this section">&para;</a></h3>
 <p>A security context defines privilege and access control settings for a Pod or Container. Security context settings include, but are not limited to:</p>
-<div class="highlight"><pre><span></span><code>Discretionary Access Control: Permission to access an object, like a file, is based on user ID (UID) and group ID (GID).
+<div class="language-text highlight"><pre><span></span><code>Discretionary Access Control: Permission to access an object, like a file, is based on user ID (UID) and group ID (GID).
 
 Security Enhanced Linux (SELinux): Objects are assigned security labels.
 
@@ -12075,7 +12075,7 @@ Running as privileged or unprivileged.
 Linux Capabilities: Give a process some privileges, but not all the privileges of the root user.
 </code></pre></div>
 <hr />
-<div class="highlight"><pre><span></span><code><span class="c1"># Sample Security Context </span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Sample Security Context </span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -12100,7 +12100,7 @@ Linux Capabilities: Give a process some privileges, but not all the privileges o
 </code></pre></div>
 <details class="question">
 <summary>What is the user used to execute the sleep process within the ubuntu-sleeper pod?</summary>
-<div class="highlight"><pre><span></span><code><span class="c1"># Check the user by checking the security context or doing the exec -it</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># Check the user by checking the security context or doing the exec -it</span>
 
 controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>get<span class="w">  </span>po<span class="w"> </span>ubuntu-sleeper<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>securi
 securityContext:<span class="w"> </span><span class="o">{}</span>
@@ -12115,7 +12115,7 @@ root
 <hr />
 <details class="warning">
 <summary>Edit the pod ubuntu-sleeper to run the sleep process with user ID 1010</summary>
-<div class="highlight"><pre><span></span><code>spec:
+<div class="language-bash highlight"><pre><span></span><code>spec:
 containers:
 -<span class="w"> </span>command:
 <span class="w">    </span>-<span class="w"> </span>sleep
@@ -12144,7 +12144,7 @@ securityContext:
 <hr />
 <details class="info">
 <summary>A Pod definition file named multi-pod.yaml is given. With what user are the processes in the web container started?</summary>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  cat multi-pod.yaml</span><span class="w"> </span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  cat multi-pod.yaml</span><span class="w"> </span>
 <span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -12167,7 +12167,7 @@ securityContext:
 <hr />
 <details class="question">
 <summary>Update pod ubuntu-sleeper to run as Root user and with the SYS_TIME capability</summary>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>cat<span class="w"> </span>multi-pod.yaml<span class="w"> </span>
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>cat<span class="w"> </span>multi-pod.yaml<span class="w"> </span>
 
 apiVersion:<span class="w"> </span>v1
 kind:<span class="w"> </span>Pod
@@ -12195,7 +12195,7 @@ containers:
 <p class="admonition-title">Network Plugin</p>
 <p>`Network policies`` are implemented by the network plugin. To use network policies, you must be using a networking solution which supports NetworkPolicy. Creating a NetworkPolicy resource without a controller that implements it will have no effect.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="c1"># Network Policy Example</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># Network Policy Example</span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.k8s.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkPolicy</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -12233,7 +12233,7 @@ containers:
 </code></pre></div>
 <details class="warning">
 <summary>Default deny egress</summary>
-<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.k8s.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkPolicy</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -12247,7 +12247,7 @@ containers:
 <hr />
 <details class="success">
 <summary>Default allow egress</summary>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.k8s.io/v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.k8s.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkPolicy</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">allow-all-egress</span>
@@ -12262,7 +12262,7 @@ containers:
 <hr />
 <details class="error">
 <summary>Default deny all ingress and all egress traffic</summary>
-<div class="highlight"><pre><span></span><code><span class="nn">---</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.k8s.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkPolicy</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -12277,7 +12277,7 @@ containers:
 <hr />
 <details class="info">
 <summary>What is meaning of this policy?</summary>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  k describe networkpolicies.networking.k8s.io payroll-policy</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  k describe networkpolicies.networking.k8s.io payroll-policy</span>
 <span class="l l-Scalar l-Scalar-Plain">Name</span><span class="p p-Indicator">:</span><span class="w">         </span><span class="l l-Scalar l-Scalar-Plain">payroll-policy</span>
 <span class="nt">Namespace</span><span class="p">:</span><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">default</span>
 <span class="nt">Created on</span><span class="p">:</span><span class="w">   </span><span class="l l-Scalar l-Scalar-Plain">2023-11-20 22:47:02 -0500 EST</span>
@@ -12302,7 +12302,7 @@ containers:
 <p>Payroll Port: 8080</p>
 <p>Egress Allow: mysql</p>
 <p>MySQL Port: 3306</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.k8s.io/v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.k8s.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NetworkPolicy</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">internal-policy</span>
@@ -12351,7 +12351,7 @@ containers:
 Image Name: kodekloud/event-simulator
 Volume HostPath: /var/log/webapp
 Volume Mount: /log</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ✖ cat po.yaml</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ✖ cat po.yaml</span>
 
 <span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
@@ -12380,13 +12380,13 @@ Volume Mount: /log</p>
 <hr />
 <details class="info">
 <summary>Create a Persistent Volume with the given specification</summary>
-<div class="highlight"><pre><span></span><code>Volume Name: pv-log
+<div class="language-text highlight"><pre><span></span><code>Volume Name: pv-log
 Storage: 100Mi
 Access Modes: ReadWriteMany
 Host Path: /pv/log
 Reclaim Policy: Retain
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  cat pv1.yaml</span><span class="w"> </span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  cat pv1.yaml</span><span class="w"> </span>
 
 <span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolume</span>
@@ -12408,7 +12408,7 @@ Reclaim Policy: Retain
 <p>Volume Name: claim-log-1
 Storage Request: 50Mi
 Access Modes: ReadWriteOnce</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolumeClaim</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">claim-log-1</span>
@@ -12423,7 +12423,7 @@ Access Modes: ReadWriteOnce</p>
 <hr />
 <details class="question">
 <summary>Check if the claim is bound or not?</summary>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>✖<span class="w"> </span>k<span class="w"> </span>get<span class="w"> </span>pv,pvc
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>✖<span class="w"> </span>k<span class="w"> </span>get<span class="w"> </span>pv,pvc
 NAME<span class="w">                      </span>CAPACITY<span class="w">   </span>ACCESS<span class="w"> </span>MODES<span class="w">   </span>RECLAIM<span class="w"> </span>POLICY<span class="w">   </span>STATUS<span class="w">   </span>CLAIM<span class="w">                 </span>STORAGECLASS<span class="w">   </span>REASON<span class="w">   </span>AGE
 persistentvolume/pv-log<span class="w">   </span>100Mi<span class="w">      </span>RWX<span class="w">            </span>Retain<span class="w">           </span>Bound<span class="w">    </span>default/claim-log-1<span class="w">                           </span>5m56s
 
@@ -12435,7 +12435,7 @@ persistentvolumeclaim/claim-log-1<span class="w">   </span>Bound<span class="w">
 <details class="info">
 <summary>Update the webapp pod to use the persistent volume claim as its storage</summary>
 <p>Replace hostPath configured earlier with the newly created PersistentVolumeClaim.</p>
-<div class="highlight"><pre><span></span><code>Name: webapp
+<div class="language-text highlight"><pre><span></span><code>Name: webapp
 
 Image Name: kodekloud/event-simulator
 
@@ -12443,7 +12443,7 @@ Volume: PersistentVolumeClaim=claim-log-1
 
 Volume Mount: /log
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">webapp</span>
@@ -12467,7 +12467,7 @@ Volume Mount: /log
 <h3 id="storage-class">Storage Class 🗃️<a class="headerlink" href="#storage-class" title="Link to this section">&para;</a></h3>
 <p>A StorageClass provides a way for administrators to describe the "classes" of storage they offer. Different classes might map to quality-of-service levels, or to backup policies, or to arbitrary policies determined by the cluster administrators.</p>
 <p>When a PVC does not specify a storageClassName, the default StorageClass is used. The cluster can only have one default StorageClass</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># SC example</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="c1"># SC example</span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">storage.k8s.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StorageClass</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -12485,7 +12485,7 @@ Volume Mount: /log
 <details class="warning">
 <summary>Create a new PersistentVolumeClaim by the name of local-pvc that should bind to the volume local-pv</summary>
 <p>Inspect the pv local-pv for the specs.</p>
-<div class="highlight"><pre><span></span><code>PVC: local-pvc
+<div class="language-text highlight"><pre><span></span><code>PVC: local-pvc
 
 Correct Access Mode?
 
@@ -12493,7 +12493,7 @@ Correct StorageClass Used?
 
 PVC requests volume size = 500Mi?
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  cat pvc.yaml</span><span class="w"> </span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  cat pvc.yaml</span><span class="w"> </span>
 
 <span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolumeClaim</span>
@@ -12512,7 +12512,7 @@ PVC requests volume size = 500Mi?
 <hr />
 <details>
 <summary>Why is the PVC in a pending state despite making a valid request to claim the volume called local-pv?</summary>
-<div class="highlight"><pre><span></span><code><span class="c1"># The StorageClass used by the PVC uses WaitForFirstConsumer volume binding mode. This means that the persistent volume will not bind to the claim until a pod makes use of the PVC to request storage.</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># The StorageClass used by the PVC uses WaitForFirstConsumer volume binding mode. This means that the persistent volume will not bind to the claim until a pod makes use of the PVC to request storage.</span>
 controlplane<span class="w"> </span>~<span class="w"> </span>✖<span class="w">  </span>k<span class="w"> </span>describe<span class="w"> </span>pvc<span class="w"> </span>local-pvc<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-A4<span class="w"> </span>Events
 Events:
 Type<span class="w">    </span>Reason<span class="w">                </span>Age<span class="w">                   </span>From<span class="w">                         </span>Message
@@ -12524,7 +12524,7 @@ Normal<span class="w">  </span>WaitForFirstConsumer<span class="w">  </span>11s<
 <details class="info">
 <summary>Create a new pod called nginx with the image nginx:alpine. The Pod should make use of the PVC local-pvc and mount the volume at the path /var/www/html</summary>
 <p>The PV local-pv should be in a bound state.</p>
-<div class="highlight"><pre><span></span><code>Pod created with the correct Image?
+<div class="language-text highlight"><pre><span></span><code>Pod created with the correct Image?
 
 Pod uses PVC called local-pvc?
 
@@ -12534,7 +12534,7 @@ nginx pod running?
 
 Volume mounted at the correct path?
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="nt">creationTimestamp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
@@ -12562,7 +12562,7 @@ Volume mounted at the correct path?
 <summary>Create a new Storage Class called delayed-volume-sc that makes use of the below specs:</summary>
 <p>provisioner: kubernetes.io/no-provisioner</p>
 <p>volumeBindingMode: WaitForFirstConsumer</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  cat sc.yaml</span><span class="w"> </span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  cat sc.yaml</span><span class="w"> </span>
 
 <span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">storage.k8s.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StorageClass</span>
@@ -12573,12 +12573,12 @@ Volume mounted at the correct path?
 </code></pre></div>
 </details>
 <h2 id="jq">JQ 🧮<a class="headerlink" href="#jq" title="Link to this section">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>k<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;paths&#39;</span><span class="w">  </span>
+<div class="language-bash highlight"><pre><span></span><code>k<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span><span class="p">|</span><span class="w"> </span>jq<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;paths&#39;</span><span class="w">  </span>
 </code></pre></div>
 <h2 id="networking">Networking 🌐<a class="headerlink" href="#networking" title="Link to this section">&para;</a></h2>
 <details class="warning">
 <summary>What is the network interface configured for cluster connectivity on the controlplane node?</summary>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>✖<span class="w"> </span>k<span class="w"> </span>get<span class="w"> </span>no<span class="w"> </span>-o<span class="w"> </span>wide
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>✖<span class="w"> </span>k<span class="w"> </span>get<span class="w"> </span>no<span class="w"> </span>-o<span class="w"> </span>wide
 NAME<span class="w">           </span>STATUS<span class="w">   </span>ROLES<span class="w">           </span>AGE<span class="w">     </span>VERSION<span class="w">   </span>INTERNAL-IP<span class="w">   </span>EXTERNAL-IP<span class="w">   </span>OS-IMAGE<span class="w">             </span>KERNEL-VERSION<span class="w">   </span>CONTAINER-RUNTIME
 controlplane<span class="w">   </span>Ready<span class="w">    </span>control-plane<span class="w">   </span>9m2s<span class="w">    </span>v1.27.0<span class="w">   </span><span class="m">192</span>.9.180.3<span class="w">   </span>&lt;none&gt;<span class="w">        </span>Ubuntu<span class="w"> </span><span class="m">20</span>.04.5<span class="w"> </span>LTS<span class="w">   </span><span class="m">5</span>.4.0-1106-gcp<span class="w">   </span>containerd://1.6.6<span class="w">  </span><span class="c1"># get the IP for controlPlane</span>
 node01<span class="w">         </span>Ready<span class="w">    </span>&lt;none&gt;<span class="w">          </span>8m37s<span class="w">   </span>v1.27.0<span class="w">   </span><span class="m">192</span>.9.180.6<span class="w">   </span>&lt;none&gt;<span class="w">        </span>Ubuntu<span class="w"> </span><span class="m">20</span>.04.5<span class="w"> </span>LTS<span class="w">   </span><span class="m">5</span>.4.0-1106-gcp<span class="w">   </span>containerd://1.6.6
@@ -12593,7 +12593,7 @@ controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">
 <hr />
 <details class="info">
 <summary>Get the IP of default gateway</summary>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>ip<span class="w"> </span>route<span class="w"> </span>show<span class="w"> </span>default
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>ip<span class="w"> </span>route<span class="w"> </span>show<span class="w"> </span>default
 
 default<span class="w"> </span>via<span class="w"> </span><span class="m">172</span>.25.0.1<span class="w"> </span>dev<span class="w"> </span>eth1<span class="w"> </span>
 </code></pre></div>
@@ -12601,7 +12601,7 @@ default<span class="w"> </span>via<span class="w"> </span><span class="m">172</s
 <hr />
 <details class="question">
 <summary>What is the port the kube-scheduler is listening on in the controlplane node?</summary>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>netstat<span class="w"> </span>-lntp<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>scheduler
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>netstat<span class="w"> </span>-lntp<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>scheduler
 
 tcp<span class="w">        </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w"> </span><span class="m">127</span>.0.0.1:10259<span class="w">         </span><span class="m">0</span>.0.0.0:*<span class="w">               </span>LISTEN<span class="w">      </span><span class="m">3586</span>/kube-scheduler<span class="w"> </span>
 </code></pre></div>
@@ -12609,7 +12609,7 @@ tcp<span class="w">        </span><span class="m">0</span><span class="w">      
 <hr />
 <details class="note">
 <summary>Notice that ETCD is listening on two ports. Which of these have more client connections established?</summary>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>netstat<span class="w"> </span>-lntp<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>etcd
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>netstat<span class="w"> </span>-lntp<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>etcd
 tcp<span class="w">        </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w"> </span><span class="m">192</span>.9.180.3:2379<span class="w">        </span><span class="m">0</span>.0.0.0:*<span class="w">               </span>LISTEN<span class="w">      </span><span class="m">3600</span>/etcd<span class="w">           </span>
 tcp<span class="w">        </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w"> </span><span class="m">127</span>.0.0.1:2379<span class="w">          </span><span class="m">0</span>.0.0.0:*<span class="w">               </span>LISTEN<span class="w">      </span><span class="m">3600</span>/etcd<span class="w">           </span>
 tcp<span class="w">        </span><span class="m">0</span><span class="w">      </span><span class="m">0</span><span class="w"> </span><span class="m">192</span>.9.180.3:2380<span class="w">        </span><span class="m">0</span>.0.0.0:*<span class="w">               </span>LISTEN<span class="w">      </span><span class="m">3600</span>/etcd<span class="w">           </span>
@@ -12618,7 +12618,7 @@ tcp<span class="w">        </span><span class="m">0</span><span class="w">      
 </details>
 <h3 id="cni"><abbr title="Container Network Interface: the plugin that gives pods their networking">CNI</abbr> 🔌<a class="headerlink" href="#cni" title="Link to this section">&para;</a></h3>
 <p>Networking is a central part of Kubernetes, but it can be challenging to understand exactly how it is expected to work. There are 4 distinct networking problems to address:</p>
-<div class="highlight"><pre><span></span><code>Highly-coupled container-to-container communications: this is solved by Pods and localhost communications.
+<div class="language-text highlight"><pre><span></span><code>Highly-coupled container-to-container communications: this is solved by Pods and localhost communications.
 Pod-to-Pod communications: this is the primary focus of this document.
 Pod-to-Service communications: this is covered by Services.
 External-to-Service communications: this is also covered by Services.
@@ -12626,14 +12626,14 @@ External-to-Service communications: this is also covered by Services.
 <p><abbr title="Container Network Interface: the plugin that gives pods their networking">CNI</abbr> (Container Network Interface), a Cloud Native Computing Foundation project, consists of a specification and libraries for writing plugins to configure network interfaces in Linux containers, along with a number of supported plugins. <abbr title="Container Network Interface: the plugin that gives pods their networking">CNI</abbr> concerns itself only with network connectivity of containers and removing allocated resources when the container is deleted. Because of this focus, <abbr title="Container Network Interface: the plugin that gives pods their networking">CNI</abbr> has a wide range of support and the specification is simple to implement.</p>
 <hr />
 <p>Inspect the kubelet service and identify the container runtime endpoint value is set for Kubernetes.</p>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>kubelet<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>endpoint
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>kubelet<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>endpoint
 
 root<span class="w">        </span><span class="m">4567</span><span class="w">  </span><span class="m">0</span>.0<span class="w">  </span><span class="m">0</span>.0<span class="w"> </span><span class="m">3848468</span><span class="w"> </span><span class="m">99736</span><span class="w"> </span>?<span class="w">       </span>Ssl<span class="w">  </span><span class="m">01</span>:06<span class="w">   </span><span class="m">0</span>:06<span class="w"> </span>/usr/bin/kubelet<span class="w"> </span>--bootstrap-kubeconfig<span class="o">=</span>/etc/kubernetes/bootstrap-kubelet.conf<span class="w"> </span>--kubeconfig<span class="o">=</span>/etc/kubernetes/kubelet.conf<span class="w"> </span>--config<span class="o">=</span>/var/lib/kubelet/config.yaml<span class="w"> </span>--container-runtime-endpoint<span class="o">=</span>unix:///var/run/containerd/containerd.sock<span class="w"> </span>--pod-infra-container-image<span class="o">=</span>registry.k8s.io/pause:3.9
 </code></pre></div>
 <hr />
 <details class="question">
 <summary>Identify which of the below plugins is not available in the list of available <abbr title="Container Network Interface: the plugin that gives pods their networking">CNI</abbr> plugins on this host?</summary>
-<div class="highlight"><pre><span></span><code><span class="c1"># check the below path</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># check the below path</span>
 
 controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>ls<span class="w"> </span>/opt/cni/bin/
 bandwidth<span class="w">  </span>dhcp<span class="w">   </span>firewall<span class="w">  </span>host-device<span class="w">  </span>ipvlan<span class="w">    </span>macvlan<span class="w">  </span>ptp<span class="w">  </span>static<span class="w">  </span>vlan
@@ -12643,11 +12643,11 @@ bridge<span class="w">     </span>dummy<span class="w">  </span>flannel<span cla
 <hr />
 <details class="question">
 <summary>What is the <abbr title="Container Network Interface: the plugin that gives pods their networking">CNI</abbr> plugin configured to be used on this kubernetes cluster?</summary>
-<div class="highlight"><pre><span></span><code>Run<span class="w"> </span>the<span class="w"> </span>command:<span class="w"> </span><span class="sb">`</span>ls<span class="w"> </span>/etc/cni/net.d/<span class="sb">``</span><span class="w"> </span>and<span class="w"> </span>identify<span class="w"> </span>the<span class="w"> </span>name<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>plugin.
+<div class="language-bash highlight"><pre><span></span><code>Run<span class="w"> </span>the<span class="w"> </span>command:<span class="w"> </span><span class="sb">`</span>ls<span class="w"> </span>/etc/cni/net.d/<span class="sb">``</span><span class="w"> </span>and<span class="w"> </span>identify<span class="w"> </span>the<span class="w"> </span>name<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>plugin.
 </code></pre></div>
 </details>
 <h2 id="kubeadm">Kubeadm 🏗️<a class="headerlink" href="#kubeadm" title="Link to this section">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>kubeadm<span class="w"> </span>upgrade<span class="w"> </span>plan<span class="w"> </span><span class="o">[</span>version<span class="o">]</span>
+<div class="language-bash highlight"><pre><span></span><code>kubeadm<span class="w"> </span>upgrade<span class="w"> </span>plan<span class="w"> </span><span class="o">[</span>version<span class="o">]</span>
 </code></pre></div>
 <h2 id="lightning-lab">Lightning Lab ⚡<a class="headerlink" href="#lightning-lab" title="Link to this section">&para;</a></h2>
 <details>
@@ -12659,42 +12659,42 @@ On controlplane node
 
 1. Drain node
 
-    <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>drain<span class="w"> </span>controlplane<span class="w"> </span>--ignore-daemonsets
+    <div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>drain<span class="w"> </span>controlplane<span class="w"> </span>--ignore-daemonsets
 </code></pre></div>
 
 2. Upgrade kubeadm
 
-    <div class="highlight"><pre><span></span><code>apt-get<span class="w"> </span>update
+    <div class="language-bash highlight"><pre><span></span><code>apt-get<span class="w"> </span>update
 apt-mark<span class="w"> </span>unhold<span class="w"> </span>kubeadm
 apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span><span class="nv">kubeadm</span><span class="o">=</span><span class="m">1</span>.27.0-00
 </code></pre></div>
 
 3. Plan and apply upgrade
 
-    <div class="highlight"><pre><span></span><code>kubeadm<span class="w"> </span>upgrade<span class="w"> </span>plan
+    <div class="language-bash highlight"><pre><span></span><code>kubeadm<span class="w"> </span>upgrade<span class="w"> </span>plan
 kubeadm<span class="w"> </span>upgrade<span class="w"> </span>apply<span class="w"> </span>v1.27.0
 </code></pre></div>
 
 4. Remove taint on controlplane node. This is the issue described above. As part of the upgrade specifically to 1.26, some taints are added to all controlplane nodes. This will prevent the `gold-nginx` pod from being rescheduled to the controlplane node later on.
 
-    <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>node<span class="w"> </span>controlplane<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-A<span class="w"> </span><span class="m">3</span><span class="w"> </span>taint
+    <div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>node<span class="w"> </span>controlplane<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-A<span class="w"> </span><span class="m">3</span><span class="w"> </span>taint
 </code></pre></div>
 
     Output:
 
-    <div class="highlight"><pre><span></span><code>Taints:<span class="w">   </span>node-role.kubernetes.io/control-plane:NoSchedule
+    <div class="language-bash highlight"><pre><span></span><code>Taints:<span class="w">   </span>node-role.kubernetes.io/control-plane:NoSchedule
 <span class="w">            </span>node.kubernetes.io/unschedulable:NoSchedule
 </code></pre></div>
 
     Let's remove them
 
-    <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>taint<span class="w"> </span>node<span class="w"> </span>controlplane<span class="w"> </span>node-role.kubernetes.io/control-plane:NoSchedule-
+    <div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>taint<span class="w"> </span>node<span class="w"> </span>controlplane<span class="w"> </span>node-role.kubernetes.io/control-plane:NoSchedule-
 kubectl<span class="w"> </span>taint<span class="w"> </span>node<span class="w"> </span>controlplane<span class="w"> </span>node.kubernetes.io/unschedulable:NoSchedule-
 </code></pre></div>
 
 5. Upgrade the kubelet
 
-    <div class="highlight"><pre><span></span><code>apt-mark<span class="w"> </span>unhold<span class="w"> </span>kubelet
+    <div class="language-bash highlight"><pre><span></span><code>apt-mark<span class="w"> </span>unhold<span class="w"> </span>kubelet
 apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span><span class="nv">kubelet</span><span class="o">=</span><span class="m">1</span>.27.0-00
 systemctl<span class="w"> </span>daemon-reload
 systemctl<span class="w"> </span>restart<span class="w"> </span>kubelet
@@ -12702,45 +12702,45 @@ systemctl<span class="w"> </span>restart<span class="w"> </span>kubelet
 
 6. Reinstate controlplane node
 
-    <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>uncordon<span class="w"> </span>controlplane
+    <div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>uncordon<span class="w"> </span>controlplane
 </code></pre></div>
 
 7. Upgrade kubectl
 
-    <div class="highlight"><pre><span></span><code>apt-mark<span class="w"> </span>unhold<span class="w"> </span>kubectl
+    <div class="language-bash highlight"><pre><span></span><code>apt-mark<span class="w"> </span>unhold<span class="w"> </span>kubectl
 apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span><span class="nv">kubectl</span><span class="o">=</span><span class="m">1</span>.27.0-00
 </code></pre></div>
 
 8. Re-hold packages
 
-    <div class="highlight"><pre><span></span><code>apt-mark<span class="w"> </span>hold<span class="w"> </span>kubeadm<span class="w"> </span>kubelet<span class="w"> </span>kubectl
+    <div class="language-bash highlight"><pre><span></span><code>apt-mark<span class="w"> </span>hold<span class="w"> </span>kubeadm<span class="w"> </span>kubelet<span class="w"> </span>kubectl
 </code></pre></div>
 
 9. Drain the worker node
 
-    <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>drain<span class="w"> </span>node01<span class="w"> </span>--ignore-daemonsets
+    <div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>drain<span class="w"> </span>node01<span class="w"> </span>--ignore-daemonsets
 </code></pre></div>
 
 10. Go to worker node
 
-    <div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>node01
+    <div class="language-bash highlight"><pre><span></span><code>ssh<span class="w"> </span>node01
 </code></pre></div>
 
 11. Upgrade kubeadm
 
-    <div class="highlight"><pre><span></span><code>apt-get<span class="w"> </span>update
+    <div class="language-bash highlight"><pre><span></span><code>apt-get<span class="w"> </span>update
 apt-mark<span class="w"> </span>unhold<span class="w"> </span>kubeadm
 apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span><span class="nv">kubeadm</span><span class="o">=</span><span class="m">1</span>.27.0-00
 </code></pre></div>
 
 12. Upgrade node
 
-    <div class="highlight"><pre><span></span><code>kubeadm<span class="w"> </span>upgrade<span class="w"> </span>node
+    <div class="language-bash highlight"><pre><span></span><code>kubeadm<span class="w"> </span>upgrade<span class="w"> </span>node
 </code></pre></div>
 
 13. Upgrade the kubelet
 
-    <div class="highlight"><pre><span></span><code>apt-mark<span class="w"> </span>unhold<span class="w"> </span>kubelet
+    <div class="language-bash highlight"><pre><span></span><code>apt-mark<span class="w"> </span>unhold<span class="w"> </span>kubelet
 apt-get<span class="w"> </span>install<span class="w"> </span><span class="nv">kubelet</span><span class="o">=</span><span class="m">1</span>.27.0-00
 systemctl<span class="w"> </span>daemon-reload
 systemctl<span class="w"> </span>restart<span class="w"> </span>kubelet
@@ -12748,22 +12748,22 @@ systemctl<span class="w"> </span>restart<span class="w"> </span>kubelet
 
 14. Re-hold packages
 
-    <div class="highlight"><pre><span></span><code>apt-mark<span class="w"> </span>hold<span class="w"> </span>kubeadm<span class="w"> </span>kubelet
+    <div class="language-bash highlight"><pre><span></span><code>apt-mark<span class="w"> </span>hold<span class="w"> </span>kubeadm<span class="w"> </span>kubelet
 </code></pre></div>
 
 15. Return to controlplane
 
-    <div class="highlight"><pre><span></span><code><span class="nb">exit</span>
+    <div class="language-bash highlight"><pre><span></span><code><span class="nb">exit</span>
 </code></pre></div>
 
 16. Reinstate worker node
 
-    <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>uncordon<span class="w"> </span>node01
+    <div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>uncordon<span class="w"> </span>node01
 </code></pre></div>
 
 17. Verify `gold-nginx` is scheduled on controlplane node
 
-    <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-o<span class="w"> </span>wide<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>gold-nginx
+    <div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-o<span class="w"> </span>wide<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>gold-nginx
 </code></pre></div>
 </details>
 
@@ -12771,30 +12771,30 @@ systemctl<span class="w"> </span>restart<span class="w"> </span>kubelet
 <details class="warning">
 <summary>Print the names of all deployments in the admin2406 namespace in the following format</summary>
 <p>This is a job for <code>custom-columns</code> output of kubectl</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>admin2406<span class="w"> </span>get<span class="w"> </span>deployment<span class="w"> </span>-o<span class="w"> </span>custom-columns<span class="o">=</span>DEPLOYMENT:.metadata.name,CONTAINER_IMAGE:.spec.template.spec.containers<span class="o">[]</span>.image,READY_REPLICAS:.status.readyReplicas,NAMESPACE:.metadata.namespace<span class="w"> </span>--sort-by<span class="o">=</span>.metadata.name<span class="w"> </span>&gt;<span class="w"> </span>/opt/admin2406_data
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>-n<span class="w"> </span>admin2406<span class="w"> </span>get<span class="w"> </span>deployment<span class="w"> </span>-o<span class="w"> </span>custom-columns<span class="o">=</span>DEPLOYMENT:.metadata.name,CONTAINER_IMAGE:.spec.template.spec.containers<span class="o">[]</span>.image,READY_REPLICAS:.status.readyReplicas,NAMESPACE:.metadata.namespace<span class="w"> </span>--sort-by<span class="o">=</span>.metadata.name<span class="w"> </span>&gt;<span class="w"> </span>/opt/admin2406_data
 </code></pre></div>
 </details>
 <hr />
 <details class="question">
 <summary>A kubeconfig file called admin.kubeconfig has been created in /root/<abbr title="Certified Kubernetes Administrator: the Kubernetes admin certification">CKA</abbr>. There is something wrong with the configuration. Troubleshoot and fix it</summary>
 <p>First, let's test this kubeconfig</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>--kubeconfig<span class="w"> </span>/root/CKA/admin.kubeconfig
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>--kubeconfig<span class="w"> </span>/root/CKA/admin.kubeconfig
 </code></pre></div>
 <p>Notice the error message.</p>
 <p>Now look at the default kubeconfig for the correct setting.</p>
-<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>~/.kube/config
+<div class="language-bash highlight"><pre><span></span><code>cat<span class="w"> </span>~/.kube/config
 </code></pre></div>
 <p>Make the correction</p>
-<div class="highlight"><pre><span></span><code>vi<span class="w"> </span>/root/CKA/admin.kubeconfig
+<div class="language-bash highlight"><pre><span></span><code>vi<span class="w"> </span>/root/CKA/admin.kubeconfig
 </code></pre></div>
 <p>Test</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>--kubeconfig<span class="w"> </span>/root/CKA/admin.kubeconfig
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>--kubeconfig<span class="w"> </span>/root/CKA/admin.kubeconfig
 </code></pre></div>
 </details>
 <hr />
 <details class="note">
 <summary>Create a new deployment called nginx-deploy, with image nginx:1.16 and 1 replica. Next upgrade the deployment to version 1.17 using rolling update.</summary>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>deployment<span class="w"> </span>nginx-deploy<span class="w"> </span>--image<span class="o">=</span>nginx:1.16
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>deployment<span class="w"> </span>nginx-deploy<span class="w"> </span>--image<span class="o">=</span>nginx:1.16
 kubectl<span class="w"> </span><span class="nb">set</span><span class="w"> </span>image<span class="w"> </span>deployment/nginx-deploy<span class="w"> </span><span class="nv">nginx</span><span class="o">=</span>nginx:1.17<span class="w"> </span>--record
 </code></pre></div>
 <p>You may ignore the deprecation warning.</p>
@@ -12805,17 +12805,17 @@ kubectl<span class="w"> </span><span class="nb">set</span><span class="w"> </spa
 <p>The deployment should make use of the persistent volume alpha-pv to be mounted at /var/lib/mysql and should use the environment variable MYSQL_ALLOW_EMPTY_PASSWORD=1 to make use of an empty root password.</p>
 <p>Important: Do not alter the persistent volume.</p>
 <p>Inspect the deployment to check the environment variable is set. Here I'm using <code>yq</code> which is like <code>jq</code> but for YAML to not have to view the <em>entire</em> deployment YAML, just the section beneath <code>containers</code> in the deployment spec.</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>deployment<span class="w"> </span>-n<span class="w"> </span>alpha<span class="w"> </span>alpha-mysql<span class="w">  </span>-o<span class="w"> </span>yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>yq<span class="w"> </span>e<span class="w"> </span>.spec.template.spec.containers<span class="w"> </span>-
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>deployment<span class="w"> </span>-n<span class="w"> </span>alpha<span class="w"> </span>alpha-mysql<span class="w">  </span>-o<span class="w"> </span>yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>yq<span class="w"> </span>e<span class="w"> </span>.spec.template.spec.containers<span class="w"> </span>-
 </code></pre></div>
 <p>Find out why the deployment does not have minimum availability. We'll have to find out the name of the deployment's pod first, then describe the pod to see the error.</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>alpha
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>alpha
 kubectl<span class="w"> </span>describe<span class="w"> </span>pod<span class="w"> </span>-n<span class="w"> </span>alpha<span class="w"> </span>alpha-mysql-xxxxxxxx-xxxxx
 </code></pre></div>
 <p>We find that the requested PVC isn't present, so create it. First, examine the Persistent Volume to find the values for access modes, capacity (storage), and storage class name</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pv<span class="w"> </span>alpha-pv
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pv<span class="w"> </span>alpha-pv
 </code></pre></div>
 <p>Now use <code>vi</code> to create a PVC manifest</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolumeClaim</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mysql-alpha-pvc</span>
@@ -12835,20 +12835,20 @@ kubectl<span class="w"> </span>describe<span class="w"> </span>pod<span class="w
 <p>This question is a bit poorly worded. It requires us to make a backup of etcd and store the backup at the given location.
 Know that the certificates we need for authentication of <code>etcdctl</code> are located in <code>/etc/kubernetes/pki/etcd</code></p>
 <p>Get the certificates as shown below</p>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>-n<span class="w"> </span>kube-system<span class="w"> </span>get<span class="w"> </span>pod<span class="w"> </span>etcd-controlplane<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>crt
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>-n<span class="w"> </span>kube-system<span class="w"> </span>get<span class="w"> </span>pod<span class="w"> </span>etcd-controlplane<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>crt
 -<span class="w"> </span>--cert-file<span class="o">=</span>/etc/kubernetes/pki/etcd/server.crt
 -<span class="w"> </span>--peer-cert-file<span class="o">=</span>/etc/kubernetes/pki/etcd/peer.crt
 -<span class="w"> </span>--peer-trusted-ca-file<span class="o">=</span>/etc/kubernetes/pki/etcd/ca.crt
 -<span class="w"> </span>--trusted-ca-file<span class="o">=</span>/etc/kubernetes/pki/etcd/ca.crt
 </code></pre></div>
 <p>Get the command to take backup from docs</p>
-<div class="highlight"><pre><span></span><code><span class="nv">ETCDCTL_API</span><span class="o">=</span><span class="s1">&#39;3&#39;</span><span class="w"> </span>etcdctl<span class="w"> </span>snapshot<span class="w"> </span>save<span class="w"> </span>/opt/etcd-backup.db<span class="w"> </span><span class="se">\</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="nv">ETCDCTL_API</span><span class="o">=</span><span class="s1">&#39;3&#39;</span><span class="w"> </span>etcdctl<span class="w"> </span>snapshot<span class="w"> </span>save<span class="w"> </span>/opt/etcd-backup.db<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--cacert<span class="o">=</span>/etc/kubernetes/pki/etcd/ca.crt<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--cert<span class="o">=</span>/etc/kubernetes/pki/etcd/server.crt<span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--key<span class="o">=</span>/etc/kubernetes/pki/etcd/server.key<span class="w"> </span>
 </code></pre></div>
 <p>check if backup is taken using
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span><span class="nv">ETCDCTL_API</span><span class="o">=</span><span class="m">3</span><span class="w"> </span>etcdctl<span class="w"> </span>--write-out<span class="o">=</span>table<span class="w"> </span>snapshot<span class="w"> </span>status<span class="w"> </span>/opt/etcd-backup.db<span class="w"> </span>
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span><span class="nv">ETCDCTL_API</span><span class="o">=</span><span class="m">3</span><span class="w"> </span>etcdctl<span class="w"> </span>--write-out<span class="o">=</span>table<span class="w"> </span>snapshot<span class="w"> </span>status<span class="w"> </span>/opt/etcd-backup.db<span class="w"> </span>
 +----------+----------+------------+------------+
 <span class="p">|</span><span class="w">   </span>HASH<span class="w">   </span><span class="p">|</span><span class="w"> </span>REVISION<span class="w"> </span><span class="p">|</span><span class="w"> </span>TOTAL<span class="w"> </span>KEYS<span class="w"> </span><span class="p">|</span><span class="w"> </span>TOTAL<span class="w"> </span>SIZE<span class="w"> </span><span class="p">|</span>
 +----------+----------+------------+------------+
@@ -12864,15 +12864,15 @@ Know that the certificates we need for authentication of <code>etcdctl</code> ar
 <ol>
 <li>
 <p>Use imperative command to get a starter manifest</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>run<span class="w"> </span>secret-1401<span class="w"> </span>-n<span class="w"> </span>admin1401<span class="w"> </span>--image<span class="w"> </span>busybox<span class="w"> </span>--dry-run<span class="o">=</span>client<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span>--command<span class="w"> </span>--<span class="w"> </span>sleep<span class="w"> </span><span class="m">4800</span><span class="w"> </span>&gt;<span class="w"> </span>admin.yaml
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>run<span class="w"> </span>secret-1401<span class="w"> </span>-n<span class="w"> </span>admin1401<span class="w"> </span>--image<span class="w"> </span>busybox<span class="w"> </span>--dry-run<span class="o">=</span>client<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span>--command<span class="w"> </span>--<span class="w"> </span>sleep<span class="w"> </span><span class="m">4800</span><span class="w"> </span>&gt;<span class="w"> </span>admin.yaml
 </code></pre></div>
 </li>
 <li>
 <p>Edit this manifest to add in the details for mounting the secret</p>
-<div class="highlight"><pre><span></span><code>vi<span class="w"> </span>admin.yaml
+<div class="language-bash highlight"><pre><span></span><code>vi<span class="w"> </span>admin.yaml
 </code></pre></div>
 <p>Add in the volume and volume mount sections seen below</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">creationTimestamp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
@@ -12899,7 +12899,7 @@ Know that the certificates we need for authentication of <code>etcdctl</code> ar
 </li>
 <li>
 <p>And create the pod</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>admin.yaml
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>admin.yaml
 </code></pre></div>
 </li>
 </ol>
@@ -12907,7 +12907,7 @@ Know that the certificates we need for authentication of <code>etcdctl</code> ar
 <h2 id="mock-exam">Mock Exam 📝<a class="headerlink" href="#mock-exam" title="Link to this section">&para;</a></h2>
 <details class="note">
 <summary>Deploy a pod named nginx-pod using the nginx:alpine image.</summary>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="nt">creationTimestamp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
@@ -12928,35 +12928,35 @@ Know that the certificates we need for authentication of <code>etcdctl</code> ar
 <details class="important">
 <summary>Deploy a messaging pod using the <code>redis:alpine</code> image with the labels set to <code>tier=msg</code></summary>
 <p>Run below command which create a pod with labels:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>run<span class="w"> </span>messaging<span class="w"> </span>--image<span class="o">=</span>redis:alpine<span class="w"> </span>--labels<span class="o">=</span><span class="nv">tier</span><span class="o">=</span>msg
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>run<span class="w"> </span>messaging<span class="w"> </span>--image<span class="o">=</span>redis:alpine<span class="w"> </span>--labels<span class="o">=</span><span class="nv">tier</span><span class="o">=</span>msg
 </code></pre></div>
 </details>
 <hr />
 <details class="info">
 <summary>Create a namespace named <code>apx-x9984574</code></summary>
 <p>Run below command to create a namespace:</p>
-<div class="highlight"><pre><span></span><code><span class="w">    </span>kubectl<span class="w"> </span>create<span class="w"> </span>namespace<span class="w"> </span>apx-x9984574
+<div class="language-bash highlight"><pre><span></span><code><span class="w">    </span>kubectl<span class="w"> </span>create<span class="w"> </span>namespace<span class="w"> </span>apx-x9984574
 </code></pre></div>
 </details>
 <hr />
 <details class="info">
 <summary>Get the list of nodes in <abbr title="JavaScript Object Notation: a common text format for data">JSON</abbr> format and store it in a file at <code>/opt/outputs/nodes-z3444kd9.json</code></summary>
 <p>Use the below command which will redirect the o/p:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>&gt;<span class="w"> </span>/opt/outputs/nodes-z3444kd9.json
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>&gt;<span class="w"> </span>/opt/outputs/nodes-z3444kd9.json
 </code></pre></div>
 </details>
 <hr />
 <details class="question">
 <summary>Create a service messaging-service to expose the messaging application within the cluster on port 6379.</summary>
 <p>Execute below command which will expose the pod on port 6379:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>expose<span class="w"> </span>pod<span class="w"> </span>messaging<span class="w"> </span>--port<span class="o">=</span><span class="m">6379</span><span class="w"> </span>--name<span class="w"> </span>messaging-service
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>expose<span class="w"> </span>pod<span class="w"> </span>messaging<span class="w"> </span>--port<span class="o">=</span><span class="m">6379</span><span class="w"> </span>--name<span class="w"> </span>messaging-service
 </code></pre></div>
 </details>
 <hr />
 <details class="info">
 <summary>Create a deployment named hr-web-app using the image <code>kodekloud/webapp-color</code> with 2 replicas.</summary>
 <p>In v1.19, we can add <code>--replicas</code> flag with <code>kubectl create deployment</code> command:</p>
-<p><div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>deployment<span class="w"> </span>hr-web-app<span class="w"> </span>--image<span class="o">=</span>kodekloud/webapp-color<span class="w"> </span>--replicas<span class="o">=</span><span class="m">2</span>
+<p><div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>create<span class="w"> </span>deployment<span class="w"> </span>hr-web-app<span class="w"> </span>--image<span class="o">=</span>kodekloud/webapp-color<span class="w"> </span>--replicas<span class="o">=</span><span class="m">2</span>
 </code></pre></div>
  </details></p>
 </details>
@@ -12964,10 +12964,10 @@ Know that the certificates we need for authentication of <code>etcdctl</code> ar
 <details class="question">
 <summary>Create a static pod named static-busybox on the controlplane node that uses the busybox image and the command <code>sleep 1000</code></summary>
 <p>To Create a static pod, copy it to the static pods directory. In this case, it is <code>/etc/kubernetes/manifests</code>. Apply below manifests:</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span>k<span class="w"> </span>run<span class="w"> </span>static-busybox<span class="w"> </span>--image<span class="o">=</span>busybox<span class="w"> </span>--command<span class="w"> </span>sleep<span class="w"> </span><span class="m">1000</span><span class="w"> </span>--dry-run<span class="o">=</span>client<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span>&gt;<span class="w"> </span>static-busybox.yaml
+<div class="language-bash highlight"><pre><span></span><code><span class="w"> </span>k<span class="w"> </span>run<span class="w"> </span>static-busybox<span class="w"> </span>--image<span class="o">=</span>busybox<span class="w"> </span>--command<span class="w"> </span>sleep<span class="w"> </span><span class="m">1000</span><span class="w"> </span>--dry-run<span class="o">=</span>client<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span>&gt;<span class="w"> </span>static-busybox.yaml
 </code></pre></div>
 <p>This will create the below manifest</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">creationTimestamp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
@@ -12991,17 +12991,17 @@ Know that the certificates we need for authentication of <code>etcdctl</code> ar
 <details class="note">
 <summary>Create a POD in the finance namespace named temp-bus with the image redis:alpine.</summary>
 <p>Run below command to create a pod in namespace <code>finance</code>:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>run<span class="w"> </span>temp-bus<span class="w"> </span>--image<span class="o">=</span>redis:alpine<span class="w"> </span>-n<span class="w"> </span>finance
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>run<span class="w"> </span>temp-bus<span class="w"> </span>--image<span class="o">=</span>redis:alpine<span class="w"> </span>-n<span class="w"> </span>finance
 </code></pre></div>
 </details>
 <hr />
 <details class="warning">
 <summary>A new application orange is deployed. There is something wrong with it. Identify and fix the issue.</summary>
 <p>Run below command and troubleshoot step by step:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>pod<span class="w"> </span>orange
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>describe<span class="w"> </span>pod<span class="w"> </span>orange
 </code></pre></div>
 <p>Export the running pod using below command and correct the spelling of the command <strong><code>sleeeep</code></strong> to <strong><code>sleep</code></strong> </p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">kubectl edit pod orange</span><span class="w"> </span><span class="c1"># make changes and save</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">kubectl edit pod orange</span><span class="w"> </span><span class="c1"># make changes and save</span>
 <span class="l l-Scalar l-Scalar-Plain">k replace --force -f temp_file.yaml</span><span class="w"> </span>
 </code></pre></div>
 </details>
@@ -13009,7 +13009,7 @@ Know that the certificates we need for authentication of <code>etcdctl</code> ar
 <details class="info">
 <summary>Expose the <code>hr-web-app</code> as service <code>hr-web-app-service</code> application on port 30082 on the nodes on the cluster.</summary>
 <p>Apply below manifests:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hr-web-app-service</span>
@@ -13027,7 +13027,7 @@ Know that the certificates we need for authentication of <code>etcdctl</code> ar
 <details class="question">
 <summary>Use <abbr title="JavaScript Object Notation: a common text format for data">JSON</abbr> PATH query to retrieve the osImages of all the nodes and store it in a file <code>/opt/outputs/nodes_os_x43kj56.txt</code></summary>
 <p>Run the below command to redirect the o/p:</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>-o<span class="o">=</span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[0].status.nodeInfo.osImage}&#39;</span><span class="w">  </span>&gt;<span class="w"> </span>/opt/outputs/nodes_os_x43kj56.txt
+<div class="language-bash highlight"><pre><span></span><code><span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>-o<span class="o">=</span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[0].status.nodeInfo.osImage}&#39;</span><span class="w">  </span>&gt;<span class="w"> </span>/opt/outputs/nodes_os_x43kj56.txt
 </code></pre></div>
 </details>
 <hr />
@@ -13037,7 +13037,7 @@ Know that the certificates we need for authentication of <code>etcdctl</code> ar
 <p>Storage: 100Mi</p>
 <p>Access mode: ReadWriteMany</p>
 <p>Host path: /pv/data-analytics</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolume</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pv-analytics</span>
@@ -13053,7 +13053,7 @@ Know that the certificates we need for authentication of <code>etcdctl</code> ar
 </details>
 <details class="info">
 <summary>Create a Pod called redis-storage with image: <code>redis:alpine</code> with a Volume of type emptyDir that lasts for the life of the Pod.</summary>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="nt">creationTimestamp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
@@ -13079,7 +13079,7 @@ Know that the certificates we need for authentication of <code>etcdctl</code> ar
 <hr />
 <details class="question">
 <summary>Create a new pod called super-user-pod with image busybox:1.28. Allow the pod to be able to set <code>system_time</code></summary>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="nt">creationTimestamp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
@@ -13107,12 +13107,12 @@ Know that the certificates we need for authentication of <code>etcdctl</code> ar
 <summary>Create a new user called john. Grant him access to the cluster. John should have permission to create, list, get, update and delete pods in the development namespace . The private key exists in the location: <code>/root/CKA/john.key</code> and csr at <code>/root/CKA/john.csr</code></summary>
 <p>Important Note: As of kubernetes 1.19, the CertificateSigningRequest object expects a signerName.</p>
 <p>Please refer the documentation to see an example. The documentation tab is available at the top right of terminal.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">CSR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">john-developer Status:Approved</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">CSR</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">john-developer Status:Approved</span>
 <span class="nt">Role Name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">developer, namespace</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">development, Resource</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pods</span>
 <span class="nt">Access</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">User &#39;john&#39; has appropriate permissions</span>
 </code></pre></div>
 <p>Form the CSR request</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">certificates.k8s.io/v1</span>
+<p><div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">certificates.k8s.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CertificateSigningRequest</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myuser</span>
@@ -13124,13 +13124,13 @@ Know that the certificates we need for authentication of <code>etcdctl</code> ar
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">client auth</span>
 </code></pre></div>
 Create it as shown below</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># create the CSR</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># create the CSR</span>
 controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>csr-john.yaml<span class="w"> </span>
 
 certificatesigningrequest.certificates.k8s.io/john<span class="w"> </span>created
 </code></pre></div>
 <p>View and approve it</p>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>get<span class="w"> </span>csr
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>get<span class="w"> </span>csr
 NAME<span class="w">        </span>AGE<span class="w">     </span>SIGNERNAME<span class="w">                                    </span>REQUESTOR<span class="w">                  </span>REQUESTEDDURATION<span class="w">   </span>CONDITION
 csr-q6l5t<span class="w">   </span>45m<span class="w">     </span>kubernetes.io/kube-apiserver-client-kubelet<span class="w">   </span>system:bootstrap:rsxu7y<span class="w">    </span>&lt;none&gt;<span class="w">              </span>Approved,Issued
 csr-tnnwr<span class="w">   </span>45m<span class="w">     </span>kubernetes.io/kube-apiserver-client-kubelet<span class="w">   </span>system:node:controlplane<span class="w">   </span>&lt;none&gt;<span class="w">              </span>Approved,Issued
@@ -13140,15 +13140,15 @@ controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class=
 certificatesigningrequest.certificates.k8s.io/john<span class="w"> </span>approved
 </code></pre></div>
 <p>Create the role</p>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class="w">  </span>kubectl<span class="w"> </span>create<span class="w"> </span>role<span class="w"> </span>developer<span class="w">  </span>--verb<span class="o">=</span>get,list,create,update,delete<span class="w">  </span>--resource<span class="o">=</span>pods<span class="w"> </span>-n<span class="w"> </span>development
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class="w">  </span>kubectl<span class="w"> </span>create<span class="w"> </span>role<span class="w"> </span>developer<span class="w">  </span>--verb<span class="o">=</span>get,list,create,update,delete<span class="w">  </span>--resource<span class="o">=</span>pods<span class="w"> </span>-n<span class="w"> </span>development
 role.rbac.authorization.k8s.io/developer<span class="w"> </span>created
 </code></pre></div>
 <p>Create a role binding
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class="w">  </span>kubectl<span class="w"> </span>create<span class="w"> </span>rolebinding<span class="w"> </span>developer-rb<span class="w"> </span>--role<span class="o">=</span>developer<span class="w"> </span>--user<span class="o">=</span>john<span class="w"> </span>-n<span class="w"> </span>development<span class="w"> </span>
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class="w">  </span>kubectl<span class="w"> </span>create<span class="w"> </span>rolebinding<span class="w"> </span>developer-rb<span class="w"> </span>--role<span class="o">=</span>developer<span class="w"> </span>--user<span class="o">=</span>john<span class="w"> </span>-n<span class="w"> </span>development<span class="w"> </span>
 rolebinding.rbac.authorization.k8s.io/developer-rb<span class="w"> </span>created
 </code></pre></div></p>
 <p>Check if it worked
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~/CKA<span class="w"> </span>✖<span class="w"> </span>k<span class="w"> </span>auth<span class="w"> </span>can-i<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>development<span class="w"> </span>--as<span class="w"> </span>john
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~/CKA<span class="w"> </span>✖<span class="w"> </span>k<span class="w"> </span>auth<span class="w"> </span>can-i<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>development<span class="w"> </span>--as<span class="w"> </span>john
 
 yes
 </code></pre></div></p>
@@ -13157,15 +13157,15 @@ yes
 <details class="info">
 <summary>Create a nginx pod called <code>nginx-resolver</code> using image nginx, expose it internally with a service called <code>nginx-resolver-service</code>. Test that you are able to look up the service and pod names from within the cluster. Use the <code>image: busybox:1.28</code> for dns lookup. Record results in  <code>/root/CKA/nginx.svc</code> and <code>/root/CKA/nginx.pod</code> </summary>
 <p>Expose the pod after creating it
-<div class="highlight"><pre><span></span><code>/CKA<span class="w"> </span>✖<span class="w"> </span>kubectl<span class="w"> </span>expose<span class="w"> </span>pod<span class="w"> </span>nginx-resolver<span class="w">  </span>--name<span class="o">=</span>nginx-resolver-service<span class="w"> </span>--port<span class="o">=</span><span class="m">8080</span>
+<div class="language-bash highlight"><pre><span></span><code>/CKA<span class="w"> </span>✖<span class="w"> </span>kubectl<span class="w"> </span>expose<span class="w"> </span>pod<span class="w"> </span>nginx-resolver<span class="w">  </span>--name<span class="o">=</span>nginx-resolver-service<span class="w"> </span>--port<span class="o">=</span><span class="m">8080</span>
 service/nginx-resolver-service<span class="w"> </span>exposed
 </code></pre></div></p>
 <p>Create a test pod with sleep time
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>run<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--image<span class="o">=</span>busybox:1.28<span class="w"> </span>--<span class="w"> </span>sleep<span class="w"> </span><span class="m">5000</span>
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>run<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--image<span class="o">=</span>busybox:1.28<span class="w"> </span>--<span class="w"> </span>sleep<span class="w"> </span><span class="m">5000</span>
 pod/test<span class="w"> </span>created
 </code></pre></div></p>
 <p>run it to show the nslookup</p>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span><span class="nb">exec</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span>--<span class="w"> </span>nslookup<span class="w"> </span>nginx-resolver-service
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span><span class="nb">exec</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span>--<span class="w"> </span>nslookup<span class="w"> </span>nginx-resolver-service
 Server:<span class="w">    </span><span class="m">10</span>.96.0.10
 Address<span class="w"> </span><span class="m">1</span>:<span class="w"> </span><span class="m">10</span>.96.0.10<span class="w"> </span>kube-dns.kube-system.svc.cluster.local
 
@@ -13173,7 +13173,7 @@ Name:<span class="w">      </span>nginx-resolver-service
 Address<span class="w"> </span><span class="m">1</span>:<span class="w"> </span><span class="m">10</span>.104.187.189<span class="w"> </span>nginx-resolver-service.default.svc.cluster.local
 </code></pre></div>
 <p>Get the pod records</p>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span><span class="nb">exec</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span>--<span class="w"> </span>nslookup<span class="w"> </span><span class="m">10</span>-244-192-4.default.pod.cluster.local
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span><span class="nb">exec</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span>--<span class="w"> </span>nslookup<span class="w"> </span><span class="m">10</span>-244-192-4.default.pod.cluster.local
 Server:<span class="w">    </span><span class="m">10</span>.96.0.10
 Address<span class="w"> </span><span class="m">1</span>:<span class="w"> </span><span class="m">10</span>.96.0.10<span class="w"> </span>kube-dns.kube-system.svc.cluster.local
 
@@ -13186,7 +13186,7 @@ controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class=
 <hr />
 <details class="warning">
 <summary>Create a static pod on node01 called nginx-critical with image nginx and make sure that it is recreated/restarted automatically in case of a failure.</summary>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  cat static-pod.yaml</span><span class="w"> </span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~ ➜  cat static-pod.yaml</span><span class="w"> </span>
 <span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -13207,17 +13207,17 @@ controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class=
 <hr />
 <details class="question">
 <summary>Create a new service account with the name pvviewer. Grant this Service account access to list all PersistentVolumes in the cluster by creating an appropriate cluster role called <code>pvviewer-role</code> and ClusterRoleBinding called <code>pvviewer-role-binding</code>. Next, create a pod called pvviewer with the image: redis and serviceAccount: <code>pvviewer</code> in the default namespace</summary>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>create<span class="w"> </span>sa<span class="w"> </span>pvviewer
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>create<span class="w"> </span>sa<span class="w"> </span>pvviewer
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">    </span>kubectl<span class="w"> </span>create<span class="w"> </span>clusterrole<span class="w"> </span>pvviewer-role<span class="w">  </span>--verb<span class="o">=</span>list<span class="w"> </span>--resource<span class="o">=</span>persistentvolumes
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">    </span>kubectl<span class="w"> </span>create<span class="w"> </span>clusterrole<span class="w"> </span>pvviewer-role<span class="w">  </span>--verb<span class="o">=</span>list<span class="w"> </span>--resource<span class="o">=</span>persistentvolumes
 clusterrole.rbac.authorization.k8s.io/pvviewer-role<span class="w"> </span>created
 </code></pre></div>
 <p>Create role binding
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">    </span>kubectl<span class="w"> </span>create<span class="w"> </span>clusterrolebinding<span class="w"> </span>pvviewer-role-binding<span class="w">  </span>--clusterrole<span class="o">=</span>pvviewer-role<span class="w">  </span>--serviceaccount<span class="o">=</span>default:pvviewerclusterrolebinding.rbac.authorization.k8s.io/
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">    </span>kubectl<span class="w"> </span>create<span class="w"> </span>clusterrolebinding<span class="w"> </span>pvviewer-role-binding<span class="w">  </span>--clusterrole<span class="o">=</span>pvviewer-role<span class="w">  </span>--serviceaccount<span class="o">=</span>default:pvviewerclusterrolebinding.rbac.authorization.k8s.io/
 
 pvviewer-role-binding<span class="w"> </span>created
 </code></pre></div></p>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>✖<span class="w"> </span>cat<span class="w"> </span>pod-view.yaml<span class="w"> </span>
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>✖<span class="w"> </span>cat<span class="w"> </span>pod-view.yaml<span class="w"> </span>
 apiVersion:<span class="w"> </span>v1
 kind:<span class="w"> </span>Pod
 metadata:
@@ -13240,7 +13240,7 @@ status:<span class="w"> </span><span class="o">{}</span>
 <details class="info">
 <summary>List the <code>InternalIP</code> of all nodes of the cluster. Save the result to a file <code>/root/CKA/node_ips</code></summary>
 <p>Answer should be in the format: InternalIP of controlplane<space>InternalIP of node01 (in a single line)</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>-o<span class="o">=</span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[*].status.addresses[0].address}&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/root/CKA/node_ips
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>-o<span class="o">=</span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[*].status.addresses[0].address}&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/root/CKA/node_ips
 </code></pre></div>
 </details>
 <hr />
@@ -13251,7 +13251,7 @@ container 1:
 name: alpha</p>
 <p>Container 2:
 name: beta</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~/CKA ➜  cat multi-pod.yaml</span><span class="w"> </span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~/CKA ➜  cat multi-pod.yaml</span><span class="w"> </span>
 <span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -13276,7 +13276,7 @@ name: beta</p>
 <hr />
 <details class="info">
 <summary>Create a Pod called non-root-pod , image: redis:alpine, runAsUser: 1000 and fsGroup: 2000</summary>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">non-root-pod</span>
@@ -13292,7 +13292,7 @@ name: beta</p>
 <hr />
 <details class="note">
 <summary>We have deployed a new pod called np-test-1 and a service called np-test-service. Incoming connections to this service are not working. Troubleshoot and fix it. Create NetworkPolicy, by the name ingress-to-nptest that allows incoming connections to the service over port 80</summary>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~/CKA ➜  k apply -f policy-pod.yaml</span><span class="w"> </span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~/CKA ➜  k apply -f policy-pod.yaml</span><span class="w"> </span>
 <span class="l l-Scalar l-Scalar-Plain">networkpolicy.networking.k8s.io/ingress-to-nptest created</span>
 
 <span class="l l-Scalar l-Scalar-Plain">controlplane ~/CKA ➜  cat policy-pod.yaml</span><span class="w"> </span>
@@ -13320,11 +13320,11 @@ name: beta</p>
 <details class="important">
 <summary>Taint the worker node node01 to be Unschedulable. Once done, create a pod called dev-redis, image redis:alpine, to ensure workloads are not scheduled to this worker node. Finally, create a new pod called prod-redis and image: redis:alpine with toleration to be scheduled on node01.</summary>
 <p>key: env_type, value: production, operator: Equal and effect: NoSchedule</p>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class="w">    </span>kubectl<span class="w"> </span>taint<span class="w"> </span>nodes<span class="w"> </span>node01<span class="w">  </span><span class="nv">env_type</span><span class="o">=</span>production:NoSchedule
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class="w">    </span>kubectl<span class="w"> </span>taint<span class="w"> </span>nodes<span class="w"> </span>node01<span class="w">  </span><span class="nv">env_type</span><span class="o">=</span>production:NoSchedule
 node/node01<span class="w"> </span>tainted
 </code></pre></div>
 <p>Create the pod</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~/CKA ➜  cat tolerated-pod.yaml</span><span class="w"> </span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">controlplane ~/CKA ➜  cat tolerated-pod.yaml</span><span class="w"> </span>
 
 <span class="l l-Scalar l-Scalar-Plain">apiVersion</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
@@ -13350,7 +13350,7 @@ node/node01<span class="w"> </span>tainted
 <hr />
 <details class="question">
 <summary>create pod and add 2 labels as shown below</summary>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>-n<span class="w"> </span>hr<span class="w"> </span>label<span class="w"> </span>pod<span class="w"> </span>hr-pod<span class="w"> </span><span class="nv">envionment</span><span class="o">=</span>production
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~/CKA<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>-n<span class="w"> </span>hr<span class="w"> </span>label<span class="w"> </span>pod<span class="w"> </span>hr-pod<span class="w"> </span><span class="nv">envionment</span><span class="o">=</span>production
 pod/hr-pod<span class="w"> </span>labeled
 
 
@@ -13359,7 +13359,7 @@ NAME<span class="w">     </span>READY<span class="w">   </span>STATUS<span class
 hr-pod<span class="w">   </span><span class="m">1</span>/1<span class="w">     </span>Running<span class="w">   </span><span class="m">0</span><span class="w">          </span>69s<span class="w">   </span><span class="nv">envionment</span><span class="o">=</span>production,run<span class="o">=</span>hr-pod,tier<span class="o">=</span>frontend
 </code></pre></div>
 </details>
-<hr /><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Kubernetes<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../k8s/arch/docker/">Docker →</a></p></li><li><p class="rn__kicker">Architecture<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../k8s/arch/apiserver/">API Server →</a></p></li></ul></div>
+<hr /><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../k8s/arch/docker/" style="--s1: 124, 58, 237; --s2: 168, 85, 247"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.81 10.25c-.06-.04-.56-.43-1.64-.43-.28 0-.56.03-.84.08-.21-1.4-1.38-2.11-1.43-2.14l-.29-.17-.18.27c-.24.36-.43.77-.51 1.19-.2.8-.08 1.56.33 2.21-.49.28-1.29.35-1.46.35H2.62c-.34 0-.62.28-.62.63 0 1.15.18 2.3.58 3.38.45 1.19 1.13 2.07 2 2.61.98.6 2.59.94 4.42.94.79 0 1.61-.07 2.42-.22 1.12-.2 2.2-.59 3.19-1.16A8.3 8.3 0 0 0 16.78 16c1.05-1.17 1.67-2.5 2.12-3.65h.19c1.14 0 1.85-.46 2.24-.85.26-.24.45-.53.59-.87l.08-.24zm-17.96.99h1.76c.08 0 .16-.07.16-.16V9.5c0-.08-.07-.16-.16-.16H3.85c-.09 0-.16.07-.16.16v1.58c.01.09.07.16.16.16m2.43 0h1.76c.08 0 .16-.07.16-.16V9.5c0-.08-.07-.16-.16-.16H6.28c-.09 0-.16.07-.16.16v1.58c.01.09.07.16.16.16m2.47 0h1.75c.1 0 .17-.07.17-.16V9.5c0-.08-.06-.16-.17-.16H8.75c-.08 0-.15.07-.15.16v1.58c0 .09.06.16.15.16m2.44 0h1.77c.08 0 .15-.07.15-.16V9.5c0-.08-.06-.16-.15-.16h-1.77c-.08 0-.15.07-.15.16v1.58c0 .09.07.16.15.16M6.28 9h1.76c.08 0 .16-.09.16-.18V7.25c0-.09-.07-.16-.16-.16H6.28c-.09 0-.16.06-.16.16v1.57c.01.09.07.18.16.18m2.47 0h1.75c.1 0 .17-.09.17-.18V7.25c0-.09-.06-.16-.17-.16H8.75c-.08 0-.15.06-.15.16v1.57c0 .09.06.18.15.18m2.44 0h1.77c.08 0 .15-.09.15-.18V7.25c0-.09-.07-.16-.15-.16h-1.77c-.08 0-.15.06-.15.16v1.57c0 .09.07.18.15.18m0-2.28h1.77c.08 0 .15-.07.15-.16V5c0-.1-.07-.17-.15-.17h-1.77c-.08 0-.15.06-.15.17v1.56c0 .08.07.16.15.16m2.46 4.52h1.76c.09 0 .16-.07.16-.16V9.5c0-.08-.07-.16-.16-.16h-1.76c-.08 0-.15.07-.15.16v1.58c0 .09.07.16.15.16"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☸️</span> Kubernetes</span><span class="rn-card__title">Docker</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../k8s/arch/apiserver/" style="--s1: 124, 58, 237; --s2: 168, 85, 247"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 7H5a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2m0 4H5V9h2m7-2h-4v10h2v-4h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2m0 4h-2V9h2m6 0v6h1v2h-4v-2h1V9h-1V7h4v2Z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☸️</span> Kubernetes / Architecture</span><span class="rn-card__title">API Server</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -13472,6 +13472,8 @@ hr-pod<span class="w">   </span><span class="m">1</span>/1<span class="w">     <
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../javascripts/about.js"></script>
@@ -13487,6 +13489,16 @@ hr-pod<span class="w">   </span><span class="m">1</span>/1<span class="w">     <
         <script src="../../javascripts/tilt.js"></script>
       
         <script src="../../javascripts/headings.js"></script>
+      
+        <script src="../../javascripts/edgeray.js"></script>
+      
+        <script src="../../javascripts/tabs.js"></script>
+      
+        <script src="../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../javascripts/diagram.js"></script>
+      
+        <script src="../../javascripts/postside.js"></script>
       
         <script src="../../javascripts/magnetic.js"></script>
       

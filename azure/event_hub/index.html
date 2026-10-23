@@ -10330,7 +10330,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="event-hub-pull-based">Event Hub (Pull based) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 6.5c-1.7 0-3 1.3-3 3v.2l-2 .7c-.6-1.2-1.8-2.1-3.2-2.3V5.9C14 5.6 15 4.4 15 3c0-1.7-1.3-3-3-3S9 1.3 9 3c0 1.4 1 2.6 2.2 2.9v2.2c-1.3.2-2.5 1.1-3.2 2.3l-2-.7v-.2c0-1.7-1.3-3-3-3s-3 1.3-3 3 1.3 3 3 3c1.1 0 2-.6 2.5-1.4l2 .7c-.2 1.3.2 2.7 1.1 3.7l-1.4 1.8Q6.6 17 6 17c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3q0-1.05-.6-1.8l1.4-1.8c1.4.8 3 .8 4.4 0l1.4 1.8q-.6.75-.6 1.8c0 1.7 1.3 3 3 3s3-1.3 3-3-1.3-3-3-3c-.4 0-.9.1-1.2.3l-1.4-1.8c.9-1 1.3-2.4 1.1-3.7l2-.7c.5.8 1.5 1.4 2.5 1.4 1.7 0 3-1.3 3-3s-1.3-3-3-3m-18 4c-.5 0-1-.4-1-1s.5-1 1-1 1 .4 1 1-.5 1-1 1M6 21c-.6 0-1-.5-1-1s.4-1 1-1 1 .5 1 1-.4 1-1 1m5-18c0-.5.4-1 1-1s1 .5 1 1-.4 1-1 1-1-.5-1-1m1 12c-1.4 0-2.5-1.1-2.5-2.5S10.6 10 12 10s2.5 1.1 2.5 2.5S13.4 15 12 15m6 4c.5 0 1 .5 1 1s-.5 1-1 1-1-.5-1-1 .5-1 1-1m3-8.5c-.5 0-1-.4-1-1s.5-1 1-1 1 .4 1 1-.5 1-1 1"/></svg></span><a class="headerlink" href="#event-hub-pull-based" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 7 min read</p>
+<header class="page-head" style="--s1: 13, 148, 136; --s2: 6, 182, 212"><p class="page-head__pill"><span>🔷</span> Azure / Event based</p><h1 id="event-hub-pull-based">Event Hub (Pull based) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 6.5c-1.7 0-3 1.3-3 3v.2l-2 .7c-.6-1.2-1.8-2.1-3.2-2.3V5.9C14 5.6 15 4.4 15 3c0-1.7-1.3-3-3-3S9 1.3 9 3c0 1.4 1 2.6 2.2 2.9v2.2c-1.3.2-2.5 1.1-3.2 2.3l-2-.7v-.2c0-1.7-1.3-3-3-3s-3 1.3-3 3 1.3 3 3 3c1.1 0 2-.6 2.5-1.4l2 .7c-.2 1.3.2 2.7 1.1 3.7l-1.4 1.8Q6.6 17 6 17c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3q0-1.05-.6-1.8l1.4-1.8c1.4.8 3 .8 4.4 0l1.4 1.8q-.6.75-.6 1.8c0 1.7 1.3 3 3 3s3-1.3 3-3-1.3-3-3-3c-.4 0-.9.1-1.2.3l-1.4-1.8c.9-1 1.3-2.4 1.1-3.7l2-.7c.5.8 1.5 1.4 2.5 1.4 1.7 0 3-1.3 3-3s-1.3-3-3-3m-18 4c-.5 0-1-.4-1-1s.5-1 1-1 1 .4 1 1-.5 1-1 1M6 21c-.6 0-1-.5-1-1s.4-1 1-1 1 .5 1 1-.4 1-1 1m5-18c0-.5.4-1 1-1s1 .5 1 1-.4 1-1 1-1-.5-1-1m1 12c-1.4 0-2.5-1.1-2.5-2.5S10.6 10 12 10s2.5 1.1 2.5 2.5S13.4 15 12 15m6 4c.5 0 1 .5 1 1s-.5 1-1 1-1-.5-1-1 .5-1 1-1m3-8.5c-.5 0-1-.4-1-1s.5-1 1-1 1 .4 1 1-.5 1-1 1"/></svg></span><a class="headerlink" href="#event-hub-pull-based" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 7 min read</span></p></header>
 <p><center> <img src="../images/eh1.jpg" alt="Eh1" width="100%"> </center></p>
 <h2 id="event-grid-vs-event-hub">Event Grid Vs Event Hub<a class="headerlink" href="#event-grid-vs-event-hub" title="Link to this section">&para;</a></h2>
 <p>A key difference between <code>Event Grid</code> and <code>Event Hubs</code> is in the way event data is made available to the subscribers. <mark>Event Grid <code>pushes</code> the ingested data to the subscribers whereas Event Hub makes the data available in a <code>pull model</code>.</mark> </p>
@@ -10408,7 +10408,7 @@ as the main headline.
 </div>
 <h3 id="event-publishers">Event publishers<a class="headerlink" href="#event-publishers" title="Link to this section">&para;</a></h3>
 <p>Any entity that sends data to an event hub is an <code>event publisher</code> (synonymously used with <code>event producer</code>). Event publishers can publish events using <code>HTTPS</code> or <code>AMQP 1.0</code> or the <code>Kafka protocol</code>. Event publishers use <code>AAD</code> based authorization with <code>OAuth2-issued JWT tokens</code> or an <code>Event Hub-specific Shared Access Signature (SAS) token</code> to gain publishing access.</p>
-<div class="admonition quesiton">
+<div class="admonition question">
 <p class="admonition-title">HTTPS or AMQP</p>
 <p>AMQP requires the establishment of a persistent bidirectional socket in + transport level security (<abbr title="Transport Layer Security: encrypts data while it travels over the network">TLS</abbr>). AMQP has higher network costs when initializing the session, however HTTPS requires extra <abbr title="Transport Layer Security: encrypts data while it travels over the network">TLS</abbr> overhead for every request. <mark>AMQP has higher performance for frequent publishers and can achieve much lower latencies when used with asynchronous publishing code.</mark></p>
 </div>
@@ -10429,7 +10429,7 @@ as the main headline.
 <li>For Event Hubs Premium and Dedicated, the maximum retention period is 90 days.</li>
 <li>If you change the retention period, it applies to all events including events that are already in the event hub</li>
 </ul>
-<div class="admonition quesiton">
+<div class="admonition question">
 <p class="admonition-title">I need to hold my events</p>
 <p>If you need to archive events beyond the allowed retention period, you can have them automatically stored in Azure Storage or Azure Data Lake by turning on the <code>Event Hubs Capture feature</code>.</p>
 </div>
@@ -10451,7 +10451,7 @@ as the main headline.
 <p><mark>The event publisher is only aware of its partition key, not the partition to which the events are published. This decoupling of key and partition insulates the sender from needing to know too much about the downstream processing.</mark></p>
 <h3 id="throughput-units">Throughput units 📦<a class="headerlink" href="#throughput-units" title="Link to this section">&para;</a></h3>
 <div class="admonition tldr">
-<p class="admonition-title">Tldr</p>
+<p class="admonition-title">TL;<abbr title="Disaster Recovery: getting systems back after a major outage">DR</abbr></p>
 <p>The throughput capacity of Event Hubs is controlled by throughput units. Throughput units are pre-purchased units of capacity. A single throughput unit lets you:</p>
 </div>
 <ul>
@@ -10466,7 +10466,7 @@ as the main headline.
 <li>At least once</li>
 <li>At most once</li>
 <li>Exactly once</li>
-</ul><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Event based<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../azure/event_grid/">Event Grid →</a></p></li><li><p class="rn__kicker">Event based<span class="rn__time"> · 3 min read</span></p><p class="rn__title"><a href="../../azure/service_bus/">Service Bus →</a></p></li></ul></div>
+</ul><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../azure/event_grid/" style="--s1: 13, 148, 136; --s2: 6, 182, 212"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 16c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2M6 16c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m12 12c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2m0-6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🔷</span> Azure / Event based</span><span class="rn-card__title">Event Grid</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../azure/service_bus/" style="--s1: 13, 148, 136; --s2: 6, 182, 212"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 5c-4.42 0-8 .5-8 4v10c0 .85.37 1.66 1 2.22V23c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.63-.56 1-1.37 1-2.22V9c0-3.5-3.58-4-8-4M5.5 20c-.83 0-1.5-.67-1.5-1.5S4.67 17 5.5 17s1.5.67 1.5 1.5S6.33 20 5.5 20m9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5m1.5-6H4V9h12zm6-9v10c0 .85-.37 1.66-1 2.22V19c0 .55-.45 1-1 1h-.12c.07-.32.12-.65.12-1V9c0-6-7-6-10-6-.91 0-2.2 0-3.54.17C7.55 1.32 10.5 1 14 1c4.42 0 8 .5 8 4"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🔷</span> Azure / Event based</span><span class="rn-card__title">Service Bus</span><span class="rn-card__meta">⏱️ 3 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10579,6 +10579,8 @@ as the main headline.
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../javascripts/about.js"></script>
@@ -10594,6 +10596,16 @@ as the main headline.
         <script src="../../javascripts/tilt.js"></script>
       
         <script src="../../javascripts/headings.js"></script>
+      
+        <script src="../../javascripts/edgeray.js"></script>
+      
+        <script src="../../javascripts/tabs.js"></script>
+      
+        <script src="../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../javascripts/diagram.js"></script>
+      
+        <script src="../../javascripts/postside.js"></script>
       
         <script src="../../javascripts/magnetic.js"></script>
       

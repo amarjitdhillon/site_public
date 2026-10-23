@@ -9959,341 +9959,11 @@
     <div class="md-content__inner">
       <header class="md-typeset">
         <h1 id="feature-engineering">Feature Engineering<a class="headerlink" href="#feature-engineering" title="Link to this section">&para;</a></h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
+      </header><div class="post-cards post-cards--blog">
         
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/amarjitdhillon" alt="Amarjit Dhillon">
-          </span>
+          <a class="post-card pc-pat-1 pc-tilt" href="../../2023/06/07/feature-engineering-using-databricks-/" style="--pc-grad: linear-gradient(135deg, #f43f5e 0%, #fb923c 100%)"><span class="post-card__cover" aria-hidden="true"><span class="post-card__kicker">Databricks</span><span class="post-card__cover-title">Feature Engineering using Databricks</span><span class="post-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.95 14.184 12 20.403l9.919-5.55v2.21L12 22.662l-10.484-5.96-.565.308v.77L12 24l11.05-6.218v-4.317l-.515-.309L12 19.118l-9.867-5.653v-2.21L12 16.805l11.05-6.218V6.32l-.515-.308L12 11.974 2.647 6.681 12 1.388l7.76 4.368.668-.411v-.566L12 0 .95 6.27v.72L12 13.207l9.919-5.55v2.26L12 15.52 1.516 9.56l-.565.308Z"/></svg></span></span><span class="post-card__body"><span class="post-card__meta">Jun 7, 2023, 14 min read</span><span class="post-card__title">Feature Engineering using Databricks</span><span class="post-card__desc">Feature engineering on Databricks, step by step</span></span></a>
         
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2023-06-07 00:00:00">June 7, 2023</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../databricks/" class="md-meta__link">Databricks</a>, 
-              <a href="../architecture/" class="md-meta__link">Architecture</a>, 
-              <a href="./" class="md-meta__link">Feature Engineering</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              14 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="feature-engineering-using-databricks"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/">Feature Engineering using Databricks 🧱</a></h2>
-<!-- 
-!!! info "About the Author 🚀"
-    For read more blogs, visit www.amarjitdhillon.com/blog 📄
-
-    Feel free to add me at www.linkedin.com/in/amaardhillon 👤 -->
-
-<p>The Databricks Runtime includes additional optimizations and proprietary features that build upon and extend Apache Spark, including <mark>Photon which is an optimized version of Apache Spark rewritten in C++ using vectorized query processing.</mark></p>
-<div class="admonition tip">
-<p class="admonition-title">Spark Context </p>
-<p>You don’t need to worry about configuring or initializing a Spark context or Spark session, as these are managed for you by Databricks.</p>
-</div>
-<h3 id="architecture"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#architecture">Architecture 🏛️</a></h3>
-<p>Databricks operates out of a control plane and a data plane.</p>
-<figure>
-<p><img alt="" src="/blog/images/adb-arch-diagram.png" width="90%" />
-  </p>
-<figcaption>Image credits: Microsoft Learn</figcaption>
-</figure>
-<h4 id="control-plane"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#control-plane">Control Plane 🧑‍✈️</a></h4>
-<p>The control plane includes the backend services that Azure Databricks manages in its own Azure account. Notebook commands and many other workspace configurations are stored in the control plane and encrypted at rest.</p>
-<h4 id="data-plane"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#data-plane">Data Plane 👷</a></h4>
-<p>Your Azure account manages the data plane, and is where your data resides. This is also where data is processed</p>
-<ul>
-<li>Job results reside in storage in your account.</li>
-<li><code>Interactive notebook results</code> are stored in a combination of the <em>control plane</em> (partial results for presentation in the UI) and your Azure storage. If you want interactive notebook results stored only in your cloud account storage, you can ask your Databricks representative to enable interactive notebook results in the customer account for your workspace.</li>
-</ul>
-<h3 id="spark-concepts"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#spark-concepts">Spark Concepts</a></h3>
-<h4 id="dataframe-and-rdd"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#dataframe-and-rdd">DataFrame and RDD 🧮</a></h4>
-<div class="admonition tldr">
-<p class="admonition-title">Tldr</p>
-<p>A DataFrame is a <code>two-dimensional labeled data structure</code> with columns of potentially different types. You can think of a DataFrame like a spreadsheet, a <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> table, or a dictionary of series objects. Apache Spark DataFrames provide a rich set of functions (select columns, filter, join, aggregate) that allow you to solve common data analysis problems efficiently.</p>
-</div>
-<p>Apache Spark DataFrames are an abstraction built on top of Resilient Distributed Datasets (RDDs).</p>
-<div class="admonition question">
-<p class="admonition-title">Use of Lazy loading in Spark Dataframe instead of Pandas</p>
-<p>One of the key differences between <code>Pandas</code> and <code>Spark dataframes</code> is <mark>eager versus lazy execution</mark>. In PySpark, operations are delayed until a result is actually requested in the pipeline. For example, you can specify operations for loading a data set from Amazon <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr> and applying a number of transformations to the dataframe, but these operations won’t be applied immediately. Instead, a graph of transformations is recorded, and once the data are actually needed, for example when writing the results back to <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr>, then the transformations are applied as a single pipeline operation. This approach is used to avoid pulling the full dataframe into memory, and enables more effective processing across a cluster of machines.</p>
-</div>
-<h4 id="spark-sql"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#spark-sql">Spark <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> 🌐</a></h4>
-<p>The term Spark <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> technically applies to all operations that use Spark DataFrames. Spark <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> replaced the Spark RDD <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> in Spark 2.x, introducing support for <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> queries and the DataFrame <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> for Python, Scala, R, and Java.</p>
-<h4 id="pyspark"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#pyspark">PySpark 🔥</a></h4>
-<p>PySpark is the Python <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> for Apache Spark, an open source, distributed computing framework and set of libraries for real-time, large-scale data processing. </p>
-<h3 id="databricks-concepts"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#databricks-concepts">Databricks Concepts 🧑‍🏫</a></h3>
-<h4 id="databricks-file-system-dbfs"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#databricks-file-system-dbfs">Databricks File System (DBFS)</a></h4>
-<p>A filesystem abstraction layer over a blob store. It contains directories, which can contain files (data files, libraries, and images), and other directories. DBFS is automatically populated with some datasets that you can use to learn Azure Databricks.</p>
-<div class="admonition info">
-<p>DBFS is an abstraction on top of scalable object storage that maps <code>Unix-like filesystem</code> calls to native cloud storage <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> calls.</p>
-</div>
-<h5 id="mount-blob-to-dbfs"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#mount-blob-to-dbfs">Mount blob to DBFS 📍</a></h5>
-<p>Mounting object storage to DBFS allows you to access objects in object storage as if they were on the local file system. Mounts store Hadoop configurations necessary for accessing storage, so you do not need to specify these settings in code or during cluster configuration.</p>
-<h5 id="dbfs-root"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#dbfs-root">DBFS root 🌴</a></h5>
-<p>The DBFS root is the default storage location for a Databricks workspace, provisioned as part of workspace creation in the cloud account containing the Databricks workspace</p>
-<p>It is important to differentiate that DBFS is a file system used for interacting with data in cloud object storage, and the DBFS root is a cloud object storage location.</p>
-<h4 id="auto-loader"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#auto-loader">Auto Loader 🛺</a></h4>
-<div class="admonition tldr">
-<p class="admonition-title">Tldr</p>
-<p>Auto Loader incrementally and efficiently processes new data files as they arrive in cloud storage without any additional setup.</p>
-</div>
-<p>Auto Loader incrementally and efficiently processes new data files as they arrive in cloud storage. Auto Loader can load data files from</p>
-<ul>
-<li>AWS <abbr title="Simple Storage Service: AWS object storage for files of any size">S3</abbr> <code>(s3://)</code></li>
-<li>Azure Data Lake Storage Gen2 (ADLS Gen2, <code>abfss://</code>)</li>
-<li>Google Cloud Storage (GCS, <code>gs://</code>)</li>
-<li>Azure Blob Storage (<code>wasbs://</code>)</li>
-<li>ADLS Gen1 (<code>adl://</code>) </li>
-<li>Databricks File System (DBFS, <code>dbfs:/</code>)</li>
-</ul>
-<p>Auto Loader can ingest <abbr title="JavaScript Object Notation: a common text format for data">JSON</abbr>, CSV, PARQUET, AVRO, ORC, TEXT, and BINARYFILE file formats.</p>
-<div class="admonition question">
-<p class="admonition-title">How does Auto Loader track ingestion progress?</p>
-<p>As files are discovered, their metadata is persisted in a scalable key-value store (<code>RocksDB</code>) in the checkpoint location of your Auto Loader pipeline. This key-value store ensures that data is processed <mark>exactly once</mark>.</p>
-</div>
-<h4 id="delta-lake"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#delta-lake">Delta Lake ⛴️</a></h4>
-<p>Delta Lake is <em>open source software</em> that extends <code>Parquet data files</code> with a file-based transaction log for ACID transactions and scalable metadata handling. </p>
-<p>Delta Lake is fully compatible with Apache Spark APIs, and was developed for tight integration with Structured Streaming, allowing you to easily use a single copy of data for both batch and streaming operations and providing incremental processing at scale.</p>
-<div class="admonition tip">
-<p class="admonition-title">Who created delta lake format?</p>
-<p>Delta Lake is the default storage format for all operations on Databricks. Unless otherwise specified, all tables on Databricks are Delta tables. <mark>Databricks originally developed the Delta Lake protocol and continues to actively contribute to the open source project.</mark></p>
-</div>
-<h4 id="connecting-to-blob-adls"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#connecting-to-blob-adls">Connecting to blob/  ADLS 🔗</a></h4>
-<p>We can use the <code>Azure Blob Filesystem driver</code> (ABFS) to connect to <code>Azure Blob Storage</code> and <code>Azure Data Lake Storage (ADLS) Gen2</code> from Databricks</p>
-<p>The connection can be scoped to either
-1. Databricks cluster
-2. Databricks Notebook</p>
-<div class="admonition warning">
-<p class="admonition-title">ABFS vs WASB</p>
-<p>The legacy <code>Windows Azure Storage Blob</code>driver (WASB) has been deprecated. ABFS has numerous benefits over WASB.</p>
-</div>
-<div class="admonition info">
-<p class="admonition-title">Credentials walkthrough</p>
-<p>When you enable Azure Data Lake Storage <code>credential passthrough</code> for your cluster, commands that you run on that cluster can read and write data in <code>Azure Data Lake Storage</code> without requiring you to configure <code>service principal credentials</code> for access to storage. Azure Data Lake Storage credential passthrough is supported with Azure Data Lake Storage Gen1 and Gen2 only. <mark>Azure Blob storage does not support credential passthrough.</mark></p>
-</div>
-<h4 id="delta-table"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#delta-table">Delta table Δ</a></h4>
-<p>A Delta table stores data as a directory of files on cloud object storage and registers table metadata to the metastore within a catalog and schema.</p>
-<h4 id="hive-metastore"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#hive-metastore">Hive metastore 🐝</a></h4>
-<p>The component that stores all the structure information of the various tables and partitions in the data warehouse including column and column type information, the <code>serializers</code> and <code>deserializers</code> necessary to read and write data, and the corresponding files where the data is stored.</p>
-<h4 id="delta-live-tables"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#delta-live-tables">Delta live tables 🖖</a></h4>
-<p>Instead of defining your data pipelines using a series of separate Apache Spark tasks, <code>Delta Live Tables</code> manages how your data is transformed based on a target schema you define for each processing step.</p>
-<p><mark>You can also enforce data quality with Delta Live Tables expectations. Expectations allow you to define expected data quality and specify how to handle records that fail those expectations.</mark></p>
-<h4 id="authentication-and-authorization"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#authentication-and-authorization">Authentication and authorization 🪪</a></h4>
-<h5 id="user"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#user">User 🧑‍🦰</a></h5>
-<p>A unique individual who has access to the system. User identities are represented by email addresses.</p>
-<h5 id="service-principal"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#service-principal">Service principal ☃️</a></h5>
-<p>A service identity for use with jobs, automated tools, and systems such as scripts, apps, and <abbr title="Continuous Integration and Delivery: automatically test and ship code changes">CI/CD</abbr> platforms. <mark>Service principals are represented by an application ID.</mark></p>
-<h5 id="group"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#group">Group 🏠</a></h5>
-<p>Groups simplify identity management, making it easier to assign access to workspaces, data, and other securable objects. All Databricks identities can be assigned as members of groups.</p>
-<h5 id="acl"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#acl"><abbr title="Access Control List: a list of rules saying who can access what">ACL</abbr> ⛔️</a></h5>
-<p>A list of permissions attached to the workspace, cluster, job, table, or experiment. An <abbr title="Access Control List: a list of rules saying who can access what">ACL</abbr> specifies which users or system processes are granted access to the objects, as well as what operations are allowed on the assets</p>
-<h5 id="pat"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#pat">PAT 💳</a></h5>
-<p><code>An opaque string</code> is used to authenticate to the <abbr title="A common style for web APIs using HTTP verbs like GET and POST">REST</abbr> <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> and by tools in the Databricks integrations to connect to <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> warehouses.</p>
-<h4 id="ds-engineering-space"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#ds-engineering-space">DS &amp; Engineering Space ⚙️</a></h4>
-<h5 id="workspace"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#workspace">Workspace 🪐</a></h5>
-<p>A workspace is an environment for accessing all of your Azure Databricks assets. A workspace organizes objects (notebooks, libraries, dashboards, and experiments) into folders and provides access to data objects and computational resources.</p>
-<h5 id="notebook"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#notebook">Notebook 🔖</a></h5>
-<p>A web-based interface to documents that contain runnable commands, visualizations, and narrative text.</p>
-<h5 id="repo"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#repo">Repo 📦</a></h5>
-<p>A folder whose contents are co-versioned together by syncing them to a remote Git repository.</p>
-<h4 id="databricks-workflow"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#databricks-workflow">Databricks Workflow ⏳</a></h4>
-<p>Azure Databricks Workflows orchestrates data processing, machine learning, and analytics pipelines in the Azure Databricks Lakehouse Platform. </p>
-<p>Workflows has fully managed orchestration services integrated with the Azure Databricks platform, including Azure Databricks Jobs to run non-interactive code in your Azure Databricks workspace and Delta Live Tables to build reliable and maintainable <abbr title="Extract, Transform, Load: moving data from sources, cleaning it, then storing it">ETL</abbr> pipelines.</p>
-<h3 id="sccnpip"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#sccnpip">SCC/NPIP 🎭</a></h3>
-<p>Secure cluster connectivity is also known as No Public IP (NPIP).</p>
-<div class="admonition tldr">
-<p class="admonition-title">Tldr</p>
-<p>With secure cluster connectivity enabled, customer virtual networks have <mark>no open ports</mark> and Databricks Runtime cluster nodes in the <mark>classic compute plane have no public IP addresses</mark>.</p>
-</div>
-<ul>
-<li>
-<p>At a network level, each cluster initiates a connection to the control plane secure cluster connectivity relay during cluster creation. The cluster establishes this connection using port 443 (HTTPS) and uses a different IP address than is used for the Web application and <abbr title="A common style for web APIs using HTTP verbs like GET and POST">REST</abbr> <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr>.</p>
-</li>
-<li>
-<p>When the control plane logically starts new Databricks Runtime jobs or performs other cluster administration tasks, these requests are sent to the cluster through this tunnel.</p>
-</li>
-<li>
-<p>The compute plane (the <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr>) has no open ports, and Databricks Runtime cluster nodes have no public IP addresses.</p>
-</li>
-</ul>
-<p><center> <img 
-src=
-"https://learn.microsoft.com/en-ca/azure/databricks/_static/images/security/secure-cluster-connectivity-azure.png"
-width="95%">
-</center></p>
-<h3 id="delta-lake_1"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#delta-lake_1">Delta Lake 🐟</a></h3>
-<ul>
-<li>Delta Lake is the optimized storage layer that provides the foundation for storing data and tables in the Databricks lakehouse.</li>
-<li>Delta Lake is <code>open source software</code> that extends <code>Parquet data files</code> with a file-based transaction log for ACID transactions and scalable metadata handling.</li>
-<li>Delta Lake is fully compatible with Apache Spark APIs, and was developed for tight integration with Structured Streaming, allowing you to easily use a single copy of data for both batch and streaming operations and providing incremental processing at scale.</li>
-</ul>
-<div class="admonition remember">
-<p class="admonition-title">The default format</p>
-<p>Delta Lake is the <code>default storage format</code> for all operations on Azure Databricks. Unless otherwise specified, all tables on Azure Databricks are Delta tables. Databricks originally developed the Delta Lake protocol and continues to actively contribute to the open source project. </p>
-</div>
-<h3 id="delta-table_1"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#delta-table_1">Delta Table 🧩</a></h3>
-<p>A Delta table stores data as a directory of files on cloud object storage and registers table metadata to the metastore within a <code>catalog</code> and <code>schema</code>.</p>
-<h3 id="dbfs"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#dbfs">DBFS 🗄️</a></h3>
-<p>The <code>Databricks File System (DBFS)</code> is a ==distributed file system= mounted into an Azure Databricks workspace and available on Azure Databricks clusters. DBFS is an abstraction on top of scalable <code>object storage</code> that maps Unix-like filesystem calls to native cloud storage <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> calls.</p>
-<div class="admonition question">
-<p class="admonition-title">So what is DBFS root?</p>
-<p>The DBFS root is the default storage location for an Azure Databricks workspace, provisioned as part of workspace creation in the cloud account containing the Azure Databricks workspace.  it is important to differentiate that DBFS is a file system used for interacting with data in cloud object storage, and the DBFS root is a <code>cloud object storage location</code></p>
-</div>
-<h3 id="unity-catalog-metastore"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#unity-catalog-metastore">Unity Catalog Metastore 🧭</a></h3>
-<p>Unity Catalog provides centralized access control, auditing, lineage, and data discovery capabilities. You create <code>Unity Catalog metastores</code> at the Azure Databricks account level, and a single metastore can be used across multiple workspaces.</p>
-<h3 id="hive-metastore-legacy"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#hive-metastore-legacy">Hive Metastore (Legacy) 📦</a></h3>
-<p>Each Azure Databricks workspace includes a built-in Hive metastore as a managed service. An instance of the metastore deploys to each cluster and securely accesses metadata from a central repository for each customer workspace.</p>
-<p>The Hive metastore provides a less centralized data governance model than Unity Catalog. By default, a cluster allows all users to access all data managed by the workspace’s built-in Hive metastore unless table access control is enabled for that cluster.</p>
-<h3 id="catalog"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#catalog">Catalog 📕</a></h3>
-<ul>
-<li>A <code>catalog</code> is the highest abstraction (or coarsest grain) in the Databricks lakehouse relational model. </li>
-<li>Every database will be associated with a catalog. </li>
-<li>Catalogs exist as objects within a metastore.</li>
-</ul>
-<p>Before the introduction of Unity Catalog, Azure Databricks used a two-tier namespace. Catalogs are the third tier in the Unity Catalog namespacing model:
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">catalog_name.database_name.table_name</span>
-</code></pre></div></p>
-<h3 id="scim"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#scim">SCIM 🔐</a></h3>
-<p>SCIM (<code>System for Cross-domain Identity Management</code>) lets you use an identity provider (IdP) to create users in Azure Databricks, give them the proper level of access, and remove access (deprovision them) when they leave your organization or no longer need access to Azure Databricks.</p>
-<p>You can either configure one SCIM provisioning connector from Microsoft Entra ID (formerly Azure Active Directory) to your Azure Databricks account, using account-level SCIM provisioning, or configure separate SCIM provisioning connectors to each workspace, using workspace-level SCIM provisioning.</p>
-<p><center> <img 
-src=
-"https://learn.microsoft.com/en-us/azure/databricks/_static/images/identity/account-level-scim-diagram-azure.png"
-width="95%">
-</center></p>
-<p><strong>Account-level SCIM provisioning</strong>: Azure Databricks recommends that you use account-level SCIM provisioning to create, update, and delete all users from the account. You manage the assignment of users and groups to workspaces within Databricks. Your workspaces must be enabled for identity federation to manage users’ workspace assignments.</p>
-<p><strong>Workspace-level SCIM provisioning</strong> (public preview): If none of your workspaces is enabled for identity federation, or if you have a mix of workspaces, some enabled for identity federation and others not, you must manage account-level and workspace-level SCIM provisioning in parallel. In a mixed scenario, you don’t need workspace-level SCIM provisioning for any workspaces that are enabled for identity federation.</p>
-<h3 id="unity-catalog"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#unity-catalog">Unity Catalog ⚛️</a></h3>
-<p>Unity Catalog provides centralized access control, auditing, lineage, and data discovery capabilities across Azure Databricks workspaces.</p>
-<p><center> <img 
-src=
-"https://learn.microsoft.com/en-us/azure/databricks/_static/images/unity-catalog/with-unity-catalog.png"
-width="65%">
-</center></p>
-<p>In Unity Catalog, the hierarchy of primary data objects flows from metastore to table or volume:</p>
-<ul>
-<li><strong>Metastore</strong>: The top-level container for metadata. Each metastore exposes a three-level namespace (catalog.schema.table) that organizes your data.</li>
-<li><strong>Catalog</strong>: The first layer of the object hierarchy, used to organize your data assets.</li>
-<li><strong>Schema</strong>: Also known as databases, schemas are the second layer of the object hierarchy and contain tables and views.</li>
-<li><strong>Tables, views, and volumes</strong>: At the lowest level in the object hierarchy are tables, views, and volumes. Volumes provide governance for non-tabular data.</li>
-</ul>
-<p><center> <figure>
-<img width="95%" src=
-"https://learn.microsoft.com/en-us/azure/databricks/_static/images/unity-catalog/object-model.png"></p>
-<figcaption>Unity Catalog object model diagram</figcaption>
-<p></figure> </center></p>
-<div class="admonition remember">
-<p class="admonition-title">3 level namespace</p>
-<p>You reference all data in Unity Catalog using a three-level namespace: catalog.schema.asset, where asset can be a table, view, or volume.</p>
-</div>
-<h3 id="metastores"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#metastores">Metastores 🏬</a></h3>
-<ul>
-<li>A metastore is the top-level container of objects in <code>Unity Catalog</code>.</li>
-<li>It registers metadata about data and AI assets and the permissions that govern access to them.</li>
-<li>Azure Databricks account admins should create one metastore for each region in which they operate and assign them to Azure Databricks workspaces in the same region.</li>
-<li>For a workspace to use Unity Catalog, it must have a Unity Catalog metastore attached.</li>
-</ul>
-<h3 id="external-tables"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#external-tables">External tables ‼️</a></h3>
-<p>External tables are tables whose data lifecycle and file layout are not managed by Unity Catalog. Use external tables to register large amounts of existing data in Unity Catalog, or if you require direct access to the data using tools outside of Azure Databricks clusters or Databricks <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> warehouses.</p>
-<div class="admonition warning">
-<p class="admonition-title">Dropping an External Table</p>
-<p>When you <code>drop an external table</code>, Unity Catalog does not delete the underlying data. You can manage privileges on external tables and use them in queries in the same way as managed tables.</p>
-</div>
-<h3 id="ip-access-lists"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#ip-access-lists">IP access lists ⚠️</a></h3>
-<p>IP access lists enable you to restrict access to your Azure Databricks account and workspaces based on a user’s IP address. For example, you can configure IP access lists to allow users to connect only through existing corporate networks with a secure perimeter. If the internal <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> network is authorized, users who are remote or traveling can use the <abbr title="Virtual Private Network: an encrypted tunnel between networks">VPN</abbr> to connect to the corporate network. If a user attempts to connect to Azure Databricks from an insecure network, like from a coffee shop, access is blocked.</p>
-<p><center> <figure>
-<img width="95%" src=
-"https://learn.microsoft.com/en-us/azure/databricks/_static/images/security/network/ip-access-list-flow.png" ></p>
-<figcaption>IP Access list access check process</figcaption>
-<p></figure> </center></p>
-<h3 id="udr-custom-route"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#udr-custom-route">UDR/ Custom route 🚗</a></h3>
-<p>If your Azure Databricks workspace is deployed to your own virtual network (<abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr>), you can use custom routes, also known as user-defined routes (UDR), to ensure that network traffic is routed correctly for your workspace. For example, if you connect the virtual network to your on-premises network, traffic may be routed through the on-premises network and unable to reach the Azure Databricks control plane. <mark>User-defined routes can solve that problem</mark></p>
-<h3 id="private-link"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#private-link">Private Link 🌐</a></h3>
-<p>Private Link provides private connectivity from Azure VNets and on-premises networks to Azure services without exposing the traffic to the public network. Azure Databricks supports the following Private Link connection types:</p>
-<ol>
-<li>
-<p><strong>Front-end Private Link (also known as user to workspace)</strong>: A front-end Private Link connection allows users to connect to the Azure Databricks web application, <abbr title="A common style for web APIs using HTTP verbs like GET and POST">REST</abbr> <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr>, and Databricks Connect <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> over a <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> interface endpoint. The front-end connection is also used by JDBC/ODBC and PowerBI integrations. The network traffic for a front-end Private Link connection between a transit <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> and the workspace control plane traverses over the Microsoft backbone network.</p>
-</li>
-<li>
-<p><strong>Back-end Private Link (also known as compute plane to control plane)</strong>: Databricks Runtime clusters in a customer-managed <abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr> (the compute plane) connect to an Azure Databricks workspace’s core services (the control plane) in the Azure Databricks cloud account. This enables private connectivity from the clusters to the secure cluster connectivity relay endpoint and <abbr title="A common style for web APIs using HTTP verbs like GET and POST">REST</abbr> <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> endpoint.</p>
-</li>
-<li>
-<p><strong>Browser authentication private endpoint</strong>: To support private front-end connections to the Azure Databricks web application for clients that have no public internet connectivity, you must add a browser authentication private endpoint to support single sign-on (<abbr title="Single Sign-On: one login for many apps">SSO</abbr>) login callbacks to the Azure Databricks web application from Microsoft Entra ID (formerly Azure Active Directory). If you allow connections from your network to the public internet, adding a browser authentication private endpoint is recommended but not required. A browser authentication private endpoint is a private connection with sub-resource type browser_authentication.</p>
-</li>
-</ol>
-<p><center> <figure>
-<img width="95%" src=
-"https://learn.microsoft.com/en-us/azure/databricks/_static/images/administration-guide/cloud-configurations/azure/private-link-network-standard.png" ></p>
-<figcaption>Unity Catalog object model diagram</figcaption>
-<p></figure> </center></p>
-<h3 id="on-prem-connectivity"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#on-prem-connectivity">On-Prem connectivity 🏢</a></h3>
-<p>Traffic is routed via a transit virtual network (<abbr title="Virtual Network: Azure's private network, like a VPC on AWS">VNet</abbr>) to the on-premises network, using the following hub-and-spoke topology.</p>
-<p><center> <figure>
-<img width="95%" src=
-"https://learn.microsoft.com/en-us/azure/databricks/_static/images/account-settings/azure-networking-transit-vnet.png" ></p>
-<figcaption>On Prem connectivity diagram</figcaption>
-<p></figure> </center></p>
-<h3 id="private-link_1"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#private-link_1">Private Link 🔗</a></h3>
-<p>The following diagram shows the network flow in a typical implementation of the Private Link simplified deployment:</p>
-<p><center> <figure>
-<img width="95%" src=
-"https://learn.microsoft.com/en-us/azure/databricks/_static/images/administration-guide/cloud-configurations/azure/private-link-network-simplified.png" ></p>
-<figcaption>Private Link simplified deployment</figcaption>
-<p></figure> </center></p>
-<p>The following diagram shows the network object architecture:</p>
-<p><center> <figure>
-<img width="95%" src=
-"https://learn.microsoft.com/en-us/azure/databricks/_static/images/administration-guide/cloud-configurations/azure/private-link-network-objects-simplified.png" ></p>
-<figcaption>Network object architecture</figcaption>
-<p></figure> </center></p>
-<h3 id="workflows"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#workflows">Workflows ⏳</a></h3>
-<p><code>Azure Databricks Workflows</code> <mark>orchestrates data processing, machine learning, and analytics pipelines</mark> on the Databricks Data Intelligence Platform. Workflows has <code>fully managed orchestration services</code> integrated with the Databricks platform, including Azure Databricks Jobs to run non-interactive code in your Azure Databricks workspace and Delta Live Tables to build reliable and maintainable <abbr title="Extract, Transform, Load: moving data from sources, cleaning it, then storing it">ETL</abbr> pipelines.</p>
-<h3 id="jobs"><a class="toclink" href="../../2023/06/07/feature-engineering-using-databricks-/#jobs">Jobs 👨‍🎨</a></h3>
-<ul>
-<li>
-<p>An Azure Databricks job is a way to run your data processing and analysis applications in an Azure Databricks workspace.</p>
-</li>
-<li>
-<p>Your job can consist of a single task or can be a large, multi-task workflow with complex dependencies. </p>
-</li>
-<li>
-<p>Azure Databricks manages the task orchestration, cluster management, monitoring, and error reporting for all of your jobs.</p>
-</li>
-<li>
-<p>You can run your jobs immediately, periodically through an easy-to-use scheduling system, whenever new files arrive in an external location, or continuously to ensure an instance of the job is always running. </p>
-</li>
-<li>
-<p>You can also run jobs interactively in the notebook UI.</p>
-</li>
-</ul>
-<!-- 
-## Clusters
-
-### Interactive Clusters
-
-### Job Clusters -->
-    
-  </div>
-</article>
-      
+      </div>
       
         
           
@@ -10352,6 +10022,8 @@ width="65%">
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10367,6 +10039,16 @@ width="65%">
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

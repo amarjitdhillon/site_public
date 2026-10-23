@@ -10012,7 +10012,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="cert-notes">Cert Notes <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 10h5.5L14 4.5zM5 3h10l6 6v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2m0 2v14h14v-7h-7V5z"/></svg></span><a class="headerlink" href="#cert-notes" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 12 min read</p>
+<header class="page-head" style="--s1: 245, 158, 11; --s2: 239, 68, 68"><p class="page-head__pill"><span>☁️</span> AWS / Misc</p><h1 id="cert-notes">Cert <span class="page-head__accent">Notes</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 10h5.5L14 4.5zM5 3h10l6 6v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2m0 2v14h14v-7h-7V5z"/></svg></span><a class="headerlink" href="#cert-notes" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 12 min read</span></p></header>
 <h2 id="professional-architect">Professional Architect 🎓<a class="headerlink" href="#professional-architect" title="Link to this section">&para;</a></h2>
 <ul>
 <li>
@@ -10045,7 +10045,7 @@ as the main headline.
 </li>
 <li>
 <p><code>As-describe-launch-configs</code> describes all the launch config parameters created by the AWS account in the specified region. Generally, it returns values, such as Launch Config name, Instance Type and <abbr title="Amazon Machine Image: a template used to launch EC2 servers">AMI</abbr> ID. If the user wants additional parameters, such as the <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr> Profile used in the config, he has to run command:</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">as-describe-launch-configs –show-long</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">as-describe-launch-configs –show-long</span>
 </code></pre></div>
 </li>
 <li>
@@ -10163,7 +10163,7 @@ as the main headline.
 <p>For CloudHSM, you launch an Amazon <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> Client Instance to connect to cloud HSM. To connect to the <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instance you need either port 22(SSH) or 3389(RDP) open.</p>
 </li>
 <li></li>
-</ul><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Misc<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../aws/failover/">HA and DR →</a></p></li><li><p class="rn__kicker">Misc<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../aws/autoScaling/">Auto Scaling →</a></p></li></ul></div>
+</ul><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../aws/failover/" style="--s1: 245, 158, 11; --s2: 239, 68, 68"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 10h-2V6h2zm0 2h-2v2h2zm9-8v12a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2m-2 0H4v13.2L5.2 16H20z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☁️</span> AWS / Misc</span><span class="rn-card__title">HA and DR</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../aws/autoScaling/" style="--s1: 245, 158, 11; --s2: 239, 68, 68"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m16 11.78 4.24-7.33 1.73 1-5.23 9.05-6.51-3.75L5.46 19H22v2H2V3h2v14.54L9.5 8z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☁️</span> AWS / Misc</span><span class="rn-card__title">Auto Scaling</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10276,6 +10276,8 @@ as the main headline.
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../javascripts/about.js"></script>
@@ -10291,6 +10293,16 @@ as the main headline.
         <script src="../../javascripts/tilt.js"></script>
       
         <script src="../../javascripts/headings.js"></script>
+      
+        <script src="../../javascripts/edgeray.js"></script>
+      
+        <script src="../../javascripts/tabs.js"></script>
+      
+        <script src="../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../javascripts/diagram.js"></script>
+      
+        <script src="../../javascripts/postside.js"></script>
       
         <script src="../../javascripts/magnetic.js"></script>
       

@@ -9913,8 +9913,8 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="priority-queue-pattern">Priority Queue Pattern <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 6h12v2H6zm0 4.5h12v2H6zM6 15h12v2H6zm3 4h6l-3 3zM9 2h6l-3 3z"/></svg></span><a class="headerlink" href="#priority-queue-pattern" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 1 min read</p>
-<p>The goal is to prioritize requests sent to services so that requests with a <code>higher priority</code> are received and processed more quickly than those with a <code>lower priority</code>. This pattern is useful in applications that offer different service level guarantees to individual clients.</p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Design Patterns<span class="rn__time"> · 3 min read</span></p><p class="rn__title"><a href="../../../sys_design/designPatterns/saga/">Saga →</a></p></li><li><p class="rn__kicker">Design Patterns<span class="rn__time"> · 4 min read</span></p><p class="rn__title"><a href="../../../sys_design/designPatterns/serviceRegistry/">Service Registry →</a></p></li></ul></div>
+<header class="page-head" style="--s1: 22, 163, 74; --s2: 20, 184, 166"><p class="page-head__pill"><span>🧩</span> System design / Design Patterns</p><h1 id="priority-queue-pattern">Priority Queue <span class="page-head__accent">Pattern</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 6h12v2H6zm0 4.5h12v2H6zM6 15h12v2H6zm3 4h6l-3 3zM9 2h6l-3 3z"/></svg></span><a class="headerlink" href="#priority-queue-pattern" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 1 min read</span></p></header>
+<p>The goal is to prioritize requests sent to services so that requests with a <code>higher priority</code> are received and processed more quickly than those with a <code>lower priority</code>. This pattern is useful in applications that offer different service level guarantees to individual clients.</p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../../sys_design/designPatterns/saga/" style="--s1: 22, 163, 74; --s2: 20, 184, 166"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 11h-3.18C14.4 9.84 13.3 9 12 9s-2.4.84-2.82 2H6c-.33 0-2-.1-2-2V8c0-1.83 1.54-2 2-2h10.18C16.6 7.16 17.7 8 19 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3c-1.3 0-2.4.84-2.82 2H6C4.39 4 2 5.06 2 8v1c0 2.94 2.39 4 4 4h3.18c.42 1.16 1.52 2 2.82 2s2.4-.84 2.82-2H18c.33 0 2 .1 2 2v1c0 1.83-1.54 2-2 2H7.82C7.4 16.84 6.3 16 5 16a3 3 0 0 0-3 3 3 3 0 0 0 3 3c1.3 0 2.4-.84 2.82-2H18c1.61 0 4-1.07 4-4v-1c0-2.93-2.39-4-4-4m1-7a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1M5 20a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🧩</span> System design / Design Patterns</span><span class="rn-card__title">Saga</span><span class="rn-card__meta">⏱️ 3 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../../sys_design/designPatterns/serviceRegistry/" style="--s1: 22, 163, 74; --s2: 20, 184, 166"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.075 12.029a2.506 2.506 0 0 0-2.506-2.507 2.506 2.506 0 0 0-2.505 2.506 2.506 2.506 0 0 0 2.506 2.506 2.506 2.506 0 0 0 2.505-2.506m3.532 0a1.156 1.156 0 0 0-1.156-1.156 1.156 1.156 0 0 0-1.156 1.156 1.156 1.156 0 0 0 1.156 1.155 1.156 1.156 0 0 0 1.156-1.155m4.792 5.51a1.158 1.156 0 0 0-1.158-1.156 1.158 1.156 0 0 0-1.158 1.156 1.158 1.156 0 0 0 1.158 1.156A1.158 1.156 0 0 0 22.4 17.54m-1.651-3.651a1.153 1.157 0 0 0-1.153-1.157 1.153 1.157 0 0 0-1.154 1.157 1.153 1.157 0 0 0 1.154 1.157 1.153 1.157 0 0 0 1.153-1.157m3.251.062a1.154 1.154 0 0 0-1.154-1.154 1.154 1.154 0 0 0-1.154 1.154 1.154 1.154 0 0 0 1.154 1.154 1.154 1.154 0 0 0 1.154-1.154m-3.279-3.883a1.156 1.154 0 0 0-1.156-1.154 1.156 1.154 0 0 0-1.156 1.154 1.156 1.154 0 0 0 1.156 1.153 1.156 1.154 0 0 0 1.156-1.153m3.28.045a1.161 1.157 0 0 0-1.161-1.157 1.161 1.157 0 0 0-1.162 1.157 1.161 1.157 0 0 0 1.162 1.157A1.161 1.157 0 0 0 24 10.112M22.374 6.48a1.158 1.16 0 0 0-1.157-1.16 1.158 1.16 0 0 0-1.158 1.16 1.158 1.16 0 0 0 1.158 1.16 1.158 1.16 0 0 0 1.157-1.16M11.617.383c-3.11 0-6.029 1.207-8.22 3.398A11.58 11.58 0 0 0 0 12c0 3.109 1.207 6.028 3.397 8.22a11.58 11.58 0 0 0 8.22 3.397c2.578 0 5.018-.825 7.055-2.386l-1.42-1.852a9.2 9.2 0 0 1-5.635 1.904 9.26 9.26 0 0 1-6.572-2.715A9.23 9.23 0 0 1 2.334 12c0-2.478.964-4.812 2.715-6.57a9.22 9.22 0 0 1 6.568-2.713c2.058 0 4.007.659 5.637 1.905l1.417-1.854A11.52 11.52 0 0 0 11.617.383Z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🧩</span> System design / Design Patterns</span><span class="rn-card__title">Service Registry</span><span class="rn-card__meta">⏱️ 4 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10027,6 +10027,8 @@ as the main headline.
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10042,6 +10044,16 @@ as the main headline.
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

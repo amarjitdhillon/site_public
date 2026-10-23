@@ -10018,28 +10018,28 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="pre-requisite-dns">Pre-requisite <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2h1v2H2v2h4v2H5c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2h4c1.11 0 2-.89 2-2v-3c0-1.11-.89-2-2-2H8v-2h8v2h-1c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2h4c1.11 0 2-.89 2-2v-3c0-1.11-.89-2-2-2h-1v-2h4v-2h-9V9h1c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2zm0 2h4v3h-4zM5 17h4v3H5zm10 0h4v3h-4z"/></svg></span><a class="headerlink" href="#pre-requisite-dns" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 2 min read</p>
+<header class="page-head" style="--s1: 124, 58, 237; --s2: 168, 85, 247"><p class="page-head__pill"><span>☸️</span> Kubernetes / Admin</p><h1 id="pre-requisite-dns">Pre-requisite <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2h1v2H2v2h4v2H5c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2h4c1.11 0 2-.89 2-2v-3c0-1.11-.89-2-2-2H8v-2h8v2h-1c-1.11 0-2 .89-2 2v3c0 1.11.89 2 2 2h4c1.11 0 2-.89 2-2v-3c0-1.11-.89-2-2-2h-1v-2h4v-2h-9V9h1c1.11 0 2-.89 2-2V4c0-1.11-.89-2-2-2zm0 2h4v3h-4zM5 17h4v3H5zm10 0h4v3h-4z"/></svg></span><a class="headerlink" href="#pre-requisite-dns" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 2 min read</span></p></header>
 <p>In this section, we will take a look at <strong><abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> in the Linux</strong></p>
 <h2 id="name-resolution">Name Resolution 🏷️<a class="headerlink" href="#name-resolution" title="Link to this section">&para;</a></h2>
 <p>With help of the <code>ping</code> command. Checking the reachability of the IP Addr on the Network.</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ping<span class="w"> </span><span class="m">172</span>.17.0.64
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>ping<span class="w"> </span><span class="m">172</span>.17.0.64
 PING<span class="w"> </span><span class="m">172</span>.17.0.64<span class="w"> </span><span class="o">(</span><span class="m">172</span>.17.0.64<span class="o">)</span><span class="w"> </span><span class="m">56</span><span class="o">(</span><span class="m">84</span><span class="o">)</span><span class="w"> </span>bytes<span class="w"> </span>of<span class="w"> </span>data.
 <span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span><span class="m">172</span>.17.0.64:<span class="w"> </span><span class="nv">icmp_seq</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">ttl</span><span class="o">=</span><span class="m">64</span><span class="w"> </span><span class="nv">time</span><span class="o">=</span><span class="m">0</span>.384<span class="w"> </span>ms
 <span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span><span class="m">172</span>.17.0.64:<span class="w"> </span><span class="nv">icmp_seq</span><span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="nv">ttl</span><span class="o">=</span><span class="m">64</span><span class="w"> </span><span class="nv">time</span><span class="o">=</span><span class="m">0</span>.415<span class="w"> </span>ms
 </code></pre></div>
 <p>Checking with their hostname</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ping<span class="w"> </span>web
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>ping<span class="w"> </span>web
 ping:<span class="w"> </span>unknown<span class="w"> </span>host<span class="w"> </span>web
 </code></pre></div>
 <p>Adding entry in the <code>/etc/hosts</code> file to resolve by their hostname.</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>cat<span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/hosts
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>cat<span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/hosts
 <span class="m">172</span>.17.0.64<span class="w">  </span>web
 
 
 <span class="c1"># Ctrl + c to exit</span>
 </code></pre></div>
 <p>It will look into the <code>/etc/hosts</code> file.</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>ping<span class="w"> </span>web
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>ping<span class="w"> </span>web
 PING<span class="w"> </span>web<span class="w"> </span><span class="o">(</span><span class="m">172</span>.17.0.64<span class="o">)</span><span class="w"> </span><span class="m">56</span><span class="o">(</span><span class="m">84</span><span class="o">)</span><span class="w"> </span>bytes<span class="w"> </span>of<span class="w"> </span>data.
 <span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span>web<span class="w"> </span><span class="o">(</span><span class="m">172</span>.17.0.64<span class="o">)</span>:<span class="w"> </span><span class="nv">icmp_seq</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">ttl</span><span class="o">=</span><span class="m">64</span><span class="w"> </span><span class="nv">time</span><span class="o">=</span><span class="m">0</span>.491<span class="w"> </span>ms
 <span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span>web<span class="w"> </span><span class="o">(</span><span class="m">172</span>.17.0.64<span class="o">)</span>:<span class="w"> </span><span class="nv">icmp_seq</span><span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="nv">ttl</span><span class="o">=</span><span class="m">64</span><span class="w"> </span><span class="nv">time</span><span class="o">=</span><span class="m">0</span>.636<span class="w"> </span>ms
@@ -10050,12 +10050,12 @@ $<span class="w"> </span>curl<span class="w"> </span>http://web
 </code></pre></div>
 <h2 id="dns"><abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> 🌐<a class="headerlink" href="#dns" title="Link to this section">&para;</a></h2>
 <p>Every host has a <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> resolution configuration file at <code>/etc/resolv.conf</code>.</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>cat<span class="w"> </span>/etc/resolv.conf
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>cat<span class="w"> </span>/etc/resolv.conf
 nameserver<span class="w"> </span><span class="m">127</span>.0.0.53
 options<span class="w"> </span>edns0
 </code></pre></div>
 <p>To change the order of dns resolution, we need to do changes into the <code>/etc/nsswitch.conf</code> file.</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>cat<span class="w"> </span>/etc/nsswitch.conf
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>cat<span class="w"> </span>/etc/nsswitch.conf
 
 hosts:<span class="w">          </span>files<span class="w"> </span>dns
 networks:<span class="w">       </span>files
@@ -10063,18 +10063,18 @@ networks:<span class="w">       </span>files
 <ul>
 <li>If it fails in some conditions.</li>
 </ul>
-<div class="highlight"><pre><span></span><code>$ ping wwww.github.com
+<div class="language-text highlight"><pre><span></span><code>$ ping wwww.github.com
 ping: www.github.com: Temporary failure in name resolution
 </code></pre></div>
 <ul>
 <li>Adding well known public nameserver in the <code>/etc/resolv.conf</code> file.</li>
 </ul>
-<p><div class="highlight"><pre><span></span><code>$ cat /etc/resolv.conf
+<p><div class="language-text highlight"><pre><span></span><code>$ cat /etc/resolv.conf
 nameserver   127.0.0.53
 nameserver   8.8.8.8
 options edns0
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>$ ping www.github.com
+<div class="language-text highlight"><pre><span></span><code>$ ping www.github.com
 PING github.com (140.82.121.3) 56(84) bytes of data.
 64 bytes from 140.82.121.3 (140.82.121.3): icmp_seq=1 ttl=57 time=7.07 ms
 64 bytes from 140.82.121.3 (140.82.121.3): icmp_seq=2 ttl=57 time=5.42 ms
@@ -10082,7 +10082,7 @@ PING github.com (140.82.121.3) 56(84) bytes of data.
 <h2 id="networking-tools">Networking Tools 🧰<a class="headerlink" href="#networking-tools" title="Link to this section">&para;</a></h2>
 <p>Useful networking tools to test dns name resolution.</p>
 <h4 id="nslookup">nslookup<a class="headerlink" href="#nslookup" title="Link to this section">&para;</a></h4>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>nslookup<span class="w"> </span>www.google.com
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>nslookup<span class="w"> </span>www.google.com
 Server:<span class="w">         </span><span class="m">127</span>.0.0.53
 Address:<span class="w">        </span><span class="m">127</span>.0.0.53#53
 
@@ -10092,7 +10092,7 @@ Address:<span class="w"> </span><span class="m">172</span>.217.18.4
 Name:<span class="w">   </span>www.google.com
 </code></pre></div>
 <h4 id="dig">dig<a class="headerlink" href="#dig" title="Link to this section">&para;</a></h4>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>dig<span class="w"> </span>www.google.com
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>dig<span class="w"> </span>www.google.com
 
 <span class="p">;</span><span class="w"> </span>&lt;&lt;&gt;&gt;<span class="w"> </span>DiG<span class="w"> </span><span class="m">9</span>.11.3-1<span class="w"> </span>...
 <span class="p">;;</span><span class="w"> </span>Got<span class="w"> </span>answer:
@@ -10109,7 +10109,7 @@ www.google.com.<span class="w">         </span><span class="m">63</span><span cl
 
 <span class="p">;;</span><span class="w"> </span>Query<span class="w"> </span>time:<span class="w"> </span><span class="m">6</span><span class="w"> </span>msec
 <span class="p">;;</span><span class="w"> </span>SERVER:<span class="w"> </span><span class="m">127</span>.0.0.53#53<span class="o">(</span><span class="m">127</span>.0.0.53<span class="o">)</span>
-</code></pre></div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Admin<span class="rn__time"> · 3 min read</span></p><p class="rn__title"><a href="../../../k8s/admin/security/">Security →</a></p></li><li><p class="rn__kicker">Admin<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../../k8s/admin/storage/">Storage →</a></p></li></ul></div>
+</code></pre></div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../../k8s/admin/security/" style="--s1: 124, 58, 237; --s2: 168, 85, 247"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 11c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12V5l9-4 9 4zm-9 10c3.75-1 7-5.46 7-9.78V6.3l-7-3.12L5 6.3v4.92C5 15.54 8.25 20 12 21m2.8-10V9.5C14.8 8.1 13.4 7 12 7S9.2 8.1 9.2 9.5V11c-.6 0-1.2.6-1.2 1.2v3.5c0 .7.6 1.3 1.2 1.3h5.5c.7 0 1.3-.6 1.3-1.2v-3.5c0-.7-.6-1.3-1.2-1.3m-1.3 0h-3V9.5c0-.8.7-1.3 1.5-1.3s1.5.5 1.5 1.3z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☸️</span> Kubernetes / Admin</span><span class="rn-card__title">Security</span><span class="rn-card__meta">⏱️ 3 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../../k8s/admin/storage/" style="--s1: 124, 58, 237; --s2: 168, 85, 247"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.59 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4m6 14c0 .5-2.13 2-6 2s-6-1.5-6-2v-2.23c1.61.78 3.72 1.23 6 1.23s4.39-.45 6-1.23zm0-4.55c-1.3.95-3.58 1.55-6 1.55s-4.7-.6-6-1.55V9.64c1.47.83 3.61 1.36 6 1.36s4.53-.53 6-1.36zM12 9C8.13 9 6 7.5 6 7s2.13-2 6-2 6 1.5 6 2-2.13 2-6 2"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☸️</span> Kubernetes / Admin</span><span class="rn-card__title">Storage</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10222,6 +10222,8 @@ www.google.com.<span class="w">         </span><span class="m">63</span><span cl
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10237,6 +10239,16 @@ www.google.com.<span class="w">         </span><span class="m">63</span><span cl
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

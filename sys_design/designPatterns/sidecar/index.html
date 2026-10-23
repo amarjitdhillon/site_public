@@ -9913,15 +9913,15 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="sidecar">Sidecar <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4H5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3l-1 1v1h1l2-2.03L9 18v-5H4V6h9v2h2V7a3 3 0 0 0-3-3M5 14a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m15.57-4.34c-.14-.4-.52-.66-.97-.66h-7.19c-.46 0-.83.26-.98.66L10 13.77v5.51c0 .38.32.72.7.72h.62c.38 0 .68-.38.68-.76V18h8v1.24c0 .38.31.76.69.76h.61c.38 0 .7-.34.7-.72v-5.51zm-8.16.34h7.19l1.03 3h-9.25zM12 16a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m8 0a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"/></svg></span><a class="headerlink" href="#sidecar" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 1 min read</p>
+<header class="page-head" style="--s1: 22, 163, 74; --s2: 20, 184, 166"><p class="page-head__pill"><span>🧩</span> System design / Design Patterns</p><h1 id="sidecar"><span class="page-head__accent">Sidecar</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4H5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3l-1 1v1h1l2-2.03L9 18v-5H4V6h9v2h2V7a3 3 0 0 0-3-3M5 14a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m15.57-4.34c-.14-.4-.52-.66-.97-.66h-7.19c-.46 0-.83.26-.98.66L10 13.77v5.51c0 .38.32.72.7.72h.62c.38 0 .68-.38.68-.76V18h8v1.24c0 .38.31.76.69.76h.61c.38 0 .7-.34.7-.72v-5.51zm-8.16.34h7.19l1.03 3h-9.25zM12 16a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m8 0a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"/></svg></span><a class="headerlink" href="#sidecar" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 1 min read</span></p></header>
 <ul>
 <li>This pattern is named Sidecar because it resembles a sidecar attached to a motorcycle. </li>
 <li>In the pattern, the sidecar is attached to a parent application and provides supporting features for the application. The sidecar also shares the same lifecycle as the parent application, being created and retired alongside the parent. The sidecar pattern is sometimes referred to as the sidekick pattern and is a decomposition pattern.</li>
 </ul>
-<div class="admonition quesiton">
+<div class="admonition question">
 <p class="admonition-title">Why this pattern is needed?</p>
 <p>Applications and services often require cross-cutting-concerns functionality, such as <code>monitoring</code>, <code>logging</code>, <code>configuration</code>, and <code>networking services</code>. These peripheral tasks can be implemented as separate components or services.</p>
-</div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Design Patterns<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../../sys_design/designPatterns/serverless-migration/">Serverless Migration →</a></p></li><li><p class="rn__kicker">Design Patterns<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../../sys_design/designPatterns/bff/">BFF →</a></p></li></ul></div>
+</div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../../sys_design/designPatterns/serverless-migration/" style="--s1: 22, 163, 74; --s2: 20, 184, 166"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 20a2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2 2 2 0 0 1 2 2m8-2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m-9.8-3.37q-.015.06 0 .12a.25.25 0 0 0 .25.25H19v2H7a2 2 0 0 1-2-2c0-.35.07-.69.24-1l1.36-2.41L3 4H1V2h3.27l.94 2H20a1 1 0 0 1 1 1c0 .17-.05.34-.12.5L17.3 12c-.36.62-1.03 1-1.75 1H8.1zM9 9.5h4v2l3-3-3-3v2H9z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🧩</span> System design / Design Patterns</span><span class="rn-card__title">Serverless Migration</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../../sys_design/designPatterns/bff/" style="--s1: 22, 163, 74; --s2: 20, 184, 166"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 4a2 2 0 0 0-2 2v4h2V6h8v3h-2.5l3.5 3.5L20.5 9H18V6a2 2 0 0 0-2-2zm-5 8v2h8v-2zm0 3v2h8v-2zm10 0v2h8v-2zM3 18v2h8v-2zm10 0v2h8v-2z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🧩</span> System design / Design Patterns</span><span class="rn-card__title">BFF</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10034,6 +10034,8 @@ as the main headline.
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10049,6 +10051,16 @@ as the main headline.
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

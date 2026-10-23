@@ -10172,7 +10172,7 @@ as the main headline.
 <p>Once you know all the paths, lets make the required changes in <code>axis2.xml</code> file as shown below</p>
 <h3 id="enable-transport-receiver">Enable Transport Receiver 📥<a class="headerlink" href="#enable-transport-receiver" title="Link to this section">&para;</a></h3>
 <p>Please note that JMS queue has 2 components: receiver and sender. First we will add the receiver part. If you open the <code>axis.xml</code> file and search for <code>jms</code> you will find the three blocks of code related to receiver part. Please uncomment the code related to ApacheMQ.</p>
-<p><div class="highlight"><pre><span></span><code><span class="nt">&lt;transportReceiver</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;jms&quot;</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;org.apache.axis2.transport.jms.JMSListener&quot;</span><span class="nt">&gt;</span>
+<p><div class="language-xml highlight"><pre><span></span><code><span class="nt">&lt;transportReceiver</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;jms&quot;</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;org.apache.axis2.transport.jms.JMSListener&quot;</span><span class="nt">&gt;</span>
 <span class="w">        </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;myTopicConnectionFactory&quot;</span><span class="nt">&gt;</span>
 <span class="w">         </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;java.naming.factory.initial&quot;</span><span class="nt">&gt;</span>org.apache.activemq.jndi.ActiveMQInitialContextFactory<span class="nt">&lt;/parameter&gt;</span>
 <span class="w">         </span><span class="nt">&lt;parameter</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;java.naming.provider.url&quot;</span><span class="w"> </span><span class="na">locked=</span><span class="s">&quot;false&quot;</span><span class="nt">&gt;</span>failover:tcp://localhost:61616<span class="nt">&lt;/parameter&gt;</span>
@@ -10203,12 +10203,12 @@ as the main headline.
 </code></pre></div>
 As you have noticed, I have made some additional changes in given code, one of which is to add failover in front of <code>tcp://localhost:61616</code> and other is to add both <code>username</code> and <code>password</code>. The failover helps to reestablish the connection when connection breaks which often happen in real world scenarios.</p>
 <h3 id="enable-transport-sender">Enable Transport Sender 📤<a class="headerlink" href="#enable-transport-sender" title="Link to this section">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;transportSender</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;jms&quot;</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;org.apache.axis2.transport.jms.JMSSender&quot;</span><span class="nt">/&gt;</span>
+<div class="language-xml highlight"><pre><span></span><code><span class="nt">&lt;transportSender</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;jms&quot;</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;org.apache.axis2.transport.jms.JMSSender&quot;</span><span class="nt">/&gt;</span>
 </code></pre></div>
 <p>Un-comment the above code which is also available in file. Please make sure that there is no error when you un-comment the code. If you think there is some issue, please go ahead and copy paste the below code.</p>
 <h3 id="making-changes-in-axis2_clientxml-file">Making Changes in axis2_client.xml file 📝<a class="headerlink" href="#making-changes-in-axis2_clientxml-file" title="Link to this section">&para;</a></h3>
 <p>Just enable the JMS sender by un-commenting the given sender code as shown below. There are no settings for JMS receiver in this file.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&lt;transportSender</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;jms&quot;</span>
+<div class="language-xml highlight"><pre><span></span><code><span class="nt">&lt;transportSender</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;jms&quot;</span>
 <span class="w">    </span><span class="na">class=</span><span class="s">&quot;org.apache.axis2.transport.jms.JMSSender&quot;</span><span class="nt">/&gt;</span>
 </code></pre></div>
 <h3 id="enable-receiver-and-sender-for-broker-core-and-analytics">Enable Receiver and Sender for Broker, Core and Analytics 🔁<a class="headerlink" href="#enable-receiver-and-sender-for-broker-core-and-analytics" title="Link to this section">&para;</a></h3>
@@ -10249,7 +10249,7 @@ As you have noticed, I have made some additional changes in given code, one of w
 <p>First make the basic pipeline so that you have the streaming data arriving at IoT server to a particular stream say <code>stream A</code>. Now we will add the <code>stream A</code> to JMS queue publisher. Then we need the JMS receiver to get the data from JMS publisher and further sends it to a logger. Lets understand it by below figure.</p>
 <p>As shows in the above figure the JMS publisher receives the <code>stream A</code> and en-queues the tuples/events in <code>queue1</code>. Further the JMS Subscriber subscribes to queue1 and send it to <code>Stream C</code> . Further <code>Stream C</code> is published to Logger publisher which shows the logs in Analytics terminal console .</p>
 <p>Setting for JMS publisher is given below</p>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<div class="language-xml highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="nt">&lt;eventPublisher</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;jms_pub&quot;</span><span class="w"> </span><span class="na">processing=</span><span class="s">&quot;enable&quot;</span><span class="w"> </span><span class="na">statistics=</span><span class="s">&quot;enable&quot;</span>
 <span class="w">  </span><span class="na">trace=</span><span class="s">&quot;enable&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://wso2.org/carbon/eventpublisher&quot;</span><span class="nt">&gt;</span>
 <span class="w">  </span><span class="nt">&lt;from</span><span class="w"> </span><span class="na">streamName=</span><span class="s">&quot;stream1_scep_timestamped&quot;</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;1.0.0&quot;</span><span class="nt">/&gt;</span>
@@ -10267,7 +10267,7 @@ As you have noticed, I have made some additional changes in given code, one of w
 <span class="nt">&lt;/eventPublisher&gt;</span>
 </code></pre></div>
 <p>The username and password are <code>admin</code> and <code>admin</code>. Only the setting you need from here are the configuration setting like url etc. Make sure to use a unique queue name like I used <code>queue1</code>. Take a note of it as we need to subscribe to it in JMS receiver. Also, one more important thing, there are 2 options in JMS i.e. <code>queue</code> or <code>topic</code>. Make sure you use the same in JMS publisher and JMS Receiver. Also as I am using the queue, hence I used <code>QueueConnectionFactory</code>. The code for JMS receiver is also similar as shown below</p>
-<p><div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<p><div class="language-xml highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
 <span class="nt">&lt;eventReceiver</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;jms_sub&quot;</span><span class="w"> </span><span class="na">statistics=</span><span class="s">&quot;disable&quot;</span><span class="w"> </span><span class="na">trace=</span><span class="s">&quot;disable&quot;</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://wso2.org/carbon/eventreceiver&quot;</span><span class="nt">&gt;</span>
 <span class="w">    </span><span class="nt">&lt;from</span><span class="w"> </span><span class="na">eventAdapterType=</span><span class="s">&quot;jms&quot;</span><span class="nt">&gt;</span>
 <span class="w">        </span><span class="nt">&lt;property</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;transport.jms.DestinationType&quot;</span><span class="nt">&gt;</span>queue<span class="nt">&lt;/property&gt;</span>
@@ -10396,6 +10396,8 @@ Now add the logger and send some events to <code>stream A</code>. If all went ri
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10411,6 +10413,16 @@ Now add the logger and send some events to <code>stream A</code>. If all went ri
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

@@ -10684,7 +10684,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="lambda-basics">Lambda basics <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.986 0a.545.545 0 0 0-.534.548l-.006 4.908c0 .145.06.283.159.39a.53.53 0 0 0 .38.155h3.429l8.197 17.68a.54.54 0 0 0 .488.319h5.811a.547.547 0 0 0 .543-.548v-4.908a.543.543 0 0 0-.543-.548h-2.013L12.739.316A.55.55 0 0 0 12.245 0H4.991Zm.54 1.09h6.367l8.16 17.681a.54.54 0 0 0 .489.318h1.817v3.817h-4.922L9.24 5.226a.54.54 0 0 0-.488-.318h-3.23Zm2.013 8.237a.54.54 0 0 0-.486.31L.6 23.213a.55.55 0 0 0 .032.528.53.53 0 0 0 .454.25h6.169a.55.55 0 0 0 .497-.31l3.38-7.165a.54.54 0 0 0-.003-.469l-3.093-6.41a.55.55 0 0 0-.494-.31Zm.006 1.804 2.488 5.152-3.122 6.62H1.947Z"/></svg></span><a class="headerlink" href="#lambda-basics" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 15 min read</p>
+<header class="page-head" style="--s1: 245, 158, 11; --s2: 239, 68, 68"><p class="page-head__pill"><span>☁️</span> AWS / Compute</p><h1 id="lambda-basics">Lambda <span class="page-head__accent">basics</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.986 0a.545.545 0 0 0-.534.548l-.006 4.908c0 .145.06.283.159.39a.53.53 0 0 0 .38.155h3.429l8.197 17.68a.54.54 0 0 0 .488.319h5.811a.547.547 0 0 0 .543-.548v-4.908a.543.543 0 0 0-.543-.548h-2.013L12.739.316A.55.55 0 0 0 12.245 0H4.991Zm.54 1.09h6.367l8.16 17.681a.54.54 0 0 0 .489.318h1.817v3.817h-4.922L9.24 5.226a.54.54 0 0 0-.488-.318h-3.23Zm2.013 8.237a.54.54 0 0 0-.486.31L.6 23.213a.55.55 0 0 0 .032.528.53.53 0 0 0 .454.25h6.169a.55.55 0 0 0 .497-.31l3.38-7.165a.54.54 0 0 0-.003-.469l-3.093-6.41a.55.55 0 0 0-.494-.31Zm.006 1.804 2.488 5.152-3.122 6.62H1.947Z"/></svg></span><a class="headerlink" href="#lambda-basics" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 15 min read</span></p></header>
 <ul>
 <li>Serverless computing allows you to build and run applications and services without thinking about servers 🖥️</li>
 <li>With serverless computing, your application still runs on servers, but all the server management is done by AWS </li>
@@ -10765,7 +10765,7 @@ as the main headline.
 </div>
 <h3 id="event">Event ☄️<a class="headerlink" href="#event" title="Link to this section">&para;</a></h3>
 <p>An event is a <abbr title="JavaScript Object Notation: a common text format for data">JSON</abbr>-formatted document that contains data for a <code>Lambda function</code> to process. The runtime converts the event to an object and passes it to your function code. When you invoke a function, you determine the structure and contents of the event.</p>
-<div class="highlight"><span class="filename">Example custom event – Weather data</span><pre><span></span><code><span class="p">{</span>
+<div class="language-json highlight"><span class="filename">Example custom event – Weather data</span><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;TemperatureK&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">281</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;WindKmh&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">-3</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;HumidityPct&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.55</span><span class="p">,</span>
@@ -10773,7 +10773,7 @@ as the main headline.
 <span class="p">}</span>
 </code></pre></div>
 <p>When an AWS service invokes your function, the service defines the shape of the event.</p>
-<div class="highlight"><span class="filename">Example service event – Amazon SNS notification</span><pre><span></span><code><span class="p">{</span>
+<div class="language-json highlight"><span class="filename">Example service event – Amazon SNS notification</span><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;Records&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">    </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;Sns&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -10861,7 +10861,7 @@ as the main headline.
 </div>
 <p>By default, the layers that you create are private to your AWS account. You can choose to share a layer with other accounts or to make the layer public. If your functions consume a layer that a different account published, your functions can continue to use the layer version after it has been deleted, or after your permission to access the layer is revoked. However, you cannot create a new function or update functions using a deleted layer version.</p>
 <div class="admonition tldr">
-<p class="admonition-title">Tldr</p>
+<p class="admonition-title">TL;<abbr title="Disaster Recovery: getting systems back after a major outage">DR</abbr></p>
 <p>Functions deployed as a container image do not use layers. Instead, you package your preferred runtime, libraries, and other dependencies into the container image when you build the image.</p>
 </div>
 <h3 id="destination">Destination 🗻<a class="headerlink" href="#destination" title="Link to this section">&para;</a></h3>
@@ -10894,7 +10894,7 @@ Throttling occurs when your <code>concurrent execution count</code> &gt; <code>c
 <h3 id="use-iam">Use <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr><a class="headerlink" href="#use-iam" title="Link to this section">&para;</a></h3>
 <p><abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr> is best for clients that are within your AWS environment or can otherwise retrieve <abbr title="Identity and Access Management: who can do what on which resources">IAM</abbr> temporary credentials to access your environment.</p>
 <h3 id="use-custom-authorizer">Use Custom Authorizer<a class="headerlink" href="#use-custom-authorizer" title="Link to this section">&para;</a></h3>
-<div class="admonition warn">
+<div class="admonition warning">
 <p>Use this when you are using other IDP such as AAD</p>
 </div>
 <p><center>
@@ -10904,7 +10904,7 @@ Throttling occurs when your <code>concurrent execution count</code> &gt; <code>c
 <p></center></p>
 <h2 id="function-url">Function URL 🔗<a class="headerlink" href="#function-url" title="Link to this section">&para;</a></h2>
 <p>A function URL is a dedicated HTTP(S) endpoint for your Lambda function. You can create and configure a function URL through the Lambda console or the Lambda <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr>. When you create a function URL, Lambda automatically generates a unique URL endpoint for you. Once you create a function URL, its URL endpoint never changes. Function URL endpoints have the following format:</p>
-<div class="highlight"><pre><span></span><code><span class="err">h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="c1">//&lt;url-id&gt;.lambda-url.&lt;region&gt;.on.aws</span>
+<div class="language-json highlight"><pre><span></span><code><span class="err">h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="c1">//&lt;url-id&gt;.lambda-url.&lt;region&gt;.on.aws</span>
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -11025,7 +11025,7 @@ Throttling occurs when your <code>concurrent execution count</code> &gt; <code>c
 <img width="95%" src=
 "../images/lam-alias-1.gif "></p>
 <figcaption>Alias Deployment</figcaption>
-<p></center></p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Compute<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../aws/fargate/">Fargate →</a></p></li><li><p class="rn__kicker">Compute<span class="rn__time"> · 2 min read</span></p><p class="rn__title"><a href="../../aws/eks/">EKS →</a></p></li></ul></div>
+<p></center></p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../aws/fargate/" style="--s1: 245, 158, 11; --s2: 239, 68, 68"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h12v1h3v2h-3v2h3v2h-3v2h3v2h-3v2h3v2h-3v1H6v-1H3v-2h3v-2H3v-2h3v-2H3V9h3V7H3V5h3zm5 11v3h1v-3zm2 0v3h1v-3zm2 0v3h1v-3z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☁️</span> AWS / Compute</span><span class="rn-card__title">Fargate</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../aws/eks/" style="--s1: 245, 158, 11; --s2: 239, 68, 68"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.67 8.505-2.875 3.335 3.128 3.648h-1.168l-2.808-3.277v3.368h-.842V8.421h.842v2.947l2.603-2.863Zm7.225 6.751-3.369-2.021V8.421a.42.42 0 0 0-.209-.364l-4.843-2.825V1.159l8.42 4.976Zm.635-9.724L13.267.06a.422.422 0 0 0-.635.362v5.053c0 .15.08.288.208.363l4.844 2.826v4.81a.42.42 0 0 0 .205.362l4.21 2.526a.42.42 0 0 0 .638-.361V5.895a.42.42 0 0 0-.207-.363M11.977 23.1l-9.872-5.248V6.135l8.421-4.976v4.084L6.09 8.066a.42.42 0 0 0-.195.355v7.158a.42.42 0 0 0 .226.373l5.665 2.948a.42.42 0 0 0 .387 0l5.496-2.84 3.382 2.03Zm10.135-5.356-4.21-2.526a.42.42 0 0 0-.411-.013l-5.51 2.847-5.244-2.729v-6.67l4.436-2.824a.42.42 0 0 0 .195-.355V.42a.421.421 0 0 0-.635-.362L1.47 5.532a.42.42 0 0 0-.207.363v12.21c0 .156.086.299.223.372l10.297 5.474a.42.42 0 0 0 .401-.004l9.915-5.473a.422.422 0 0 0 .013-.73"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☁️</span> AWS / Compute</span><span class="rn-card__title">EKS</span><span class="rn-card__meta">⏱️ 2 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -11138,6 +11138,8 @@ Throttling occurs when your <code>concurrent execution count</code> &gt; <code>c
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../javascripts/about.js"></script>
@@ -11153,6 +11155,16 @@ Throttling occurs when your <code>concurrent execution count</code> &gt; <code>c
         <script src="../../javascripts/tilt.js"></script>
       
         <script src="../../javascripts/headings.js"></script>
+      
+        <script src="../../javascripts/edgeray.js"></script>
+      
+        <script src="../../javascripts/tabs.js"></script>
+      
+        <script src="../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../javascripts/diagram.js"></script>
+      
+        <script src="../../javascripts/postside.js"></script>
       
         <script src="../../javascripts/magnetic.js"></script>
       

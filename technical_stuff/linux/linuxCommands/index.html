@@ -10630,7 +10630,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="linux-commands">Linux commands <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span><a class="headerlink" href="#linux-commands" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 26 min read</p>
+<header class="page-head" style="--s1: 71, 85, 105; --s2: 100, 116, 139"><p class="page-head__pill"><span>🛠️</span> Technical Stuff / Linux</p><h1 id="linux-commands">Linux <span class="page-head__accent">commands</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 9h2.31l.32-3h2l-.32 3h2l.32-3h2l-.32 3H15v2h-1.9l-.2 2H15v2h-2.31l-.32 3h-2l.32-3h-2l-.32 3h-2l.32-3H5v-2h1.9l.2-2H5zm4.1 2-.2 2h2l.2-2M19 6h-2v8h2m0 2h-2v2h2Z"/></svg></span><a class="headerlink" href="#linux-commands" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 26 min read</span></p></header>
 <p>Linux includes a large number of commands, but I have chosen 37 of the most important ones to present here. Learn these commands, and you’ll be much more at home at the Linux command prompt.</p>
 <p>The below list is presented in alphabetical order. A command’s position in the list is not representative of its usefulness or simplicity. </p>
 <div class="admonition info">
@@ -10639,28 +10639,28 @@ as the main headline.
 </div>
 <h2 id="alias">alias 🏷️<a class="headerlink" href="#alias" title="Link to this section">&para;</a></h2>
 <p>The alias command lets you give your own name to a command or sequence of commands. You can then type your short name, and the shell will execute the command or sequence of commands for you.</p>
-<p><div class="highlight"><pre><span></span><code><span class="nb">alias</span><span class="w"> </span><span class="nv">cls</span><span class="o">=</span>clear
+<p><div class="language-bash highlight"><pre><span></span><code><span class="nb">alias</span><span class="w"> </span><span class="nv">cls</span><span class="o">=</span>clear
 </code></pre></div>
 This sets up an alias called <code>cls</code> . It will be another name for clear . When you type cls, it will clear the screen just as though you had typed clear . Your alias saves a few keystrokes, sure. But, if you frequently move between Windows and Linux command line, you can find yourself typing the Windows <code>cls</code> command on a Linux machine that doesn’t know what you mean. Now it will know.</p>
 <p>Aliases can be much more intricate than that simple example. Here’s an alias called <code>pf</code> (for process find) that is just a little more complex. Note the use of quotation marks around the command sequence. This is required if the command sequence has spaces in it. This alias uses the <code>ps</code> command to list the running processes and then pipes them through the <code>grep</code> command. The grep command looks for entries in the output from ps that match the command line parameter <code>$1</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">alias</span><span class="w"> </span><span class="nv">pf</span><span class="o">=</span><span class="s2">&quot;ps -e | grep </span><span class="nv">$1</span><span class="s2">&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">alias</span><span class="w"> </span><span class="nv">pf</span><span class="o">=</span><span class="s2">&quot;ps -e | grep </span><span class="nv">$1</span><span class="s2">&quot;</span>
 </code></pre></div>
 <div class="admonition note">
 <p>If you wanted to discover the process ID (PID) of the shutter process (or to find out if shutter was even running) you could use the alias like this. Type <code>pf</code> followed by a space, and the name of the process you are intere$$sted in:</p>
 </div>
-<p><div class="highlight"><pre><span></span><code>pf<span class="w"> </span>shutter
+<p><div class="language-bash highlight"><pre><span></span><code>pf<span class="w"> </span>shutter
 </code></pre></div>
 alias command in terminal window</p>
-<div class="admonition warn">
-<p class="admonition-title">Warn</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>Aliases defined on the command line will die with the terminal window. When you close it, they are gone. To make your aliases always be available to you, add them to the <code>.bash_aliases</code> file in your home directory such as <code>.bash_profile</code> and <code>.bashrc</code></p>
 </div>
 <h2 id="cat">cat 🐱<a class="headerlink" href="#cat" title="Link to this section">&para;</a></h2>
 <p>The cat command (short for “concatenate”) lists the contents of files to the terminal window. This is faster than opening the file in an editor, and there’s no chance you can accidentally alter the file. To read the contents of your <code>.bash_log_out</code> file, type the following command while the home directory is your current working directory, as it is by default.</p>
-<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>.bash_logout
+<div class="language-bash highlight"><pre><span></span><code>cat<span class="w"> </span>.bash_logout
 </code></pre></div>
 <p>With files longer than the number of lines in your terminal window, the text will whip past too fast for you to read. You can pipe the output from cat through less to make the process more manageable.  With <code>less</code> you can scroll forward and backward through the file using the Up and Down Arrow keys, the PgUp and PgDn keys, and the Home and End keys. Type <code>q</code> to quit from <code>less</code>.</p>
-<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>.bashrc<span class="w"> </span><span class="p">|</span><span class="w"> </span>less
+<div class="language-bash highlight"><pre><span></span><code>cat<span class="w"> </span>.bashrc<span class="w"> </span><span class="p">|</span><span class="w"> </span>less
 cat<span class="w"> </span>.bashrc<span class="w"> </span><span class="p">|</span><span class="w"> </span>Less<span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>terminal<span class="w"> </span>window
 </code></pre></div>
 <h2 id="cd">cd 📂<a class="headerlink" href="#cd" title="Link to this section">&para;</a></h2>
@@ -10668,26 +10668,26 @@ cat<span class="w"> </span>.bashrc<span class="w"> </span><span class="p">|</spa
 <p class="admonition-title">what is cd command?</p>
 <p>The cd command changes your current directory. In other words, it moves you to a new place in the filesystem.If you are changing to a directory that is within your current directory, you can simply type cd and the name of the other directory.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>work
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>work
 </code></pre></div>
 <p>If you are changing to a directory elsewhere within the filesystem directory tree, provide the path to the directory with a leading <code>/</code></p>
-<p><div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/usr/local/bin
+<p><div class="language-bash highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/usr/local/bin
 </code></pre></div>
 To quickly return to your home directory, use the ~ (tilde) character as the directory name.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>You can use the double dot symbol <code>..</code> to represent the parent of the current directory. You can type the following command to go up a directory:</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>..
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>..
 </code></pre></div>
 <p>Imagine you are in a directory. The parent directory has other directories in it, as well as the directory you’re currently in. To change into one of those other directories, you can use the <code>..</code> symbol to shorten what you have to type.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>../games
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>../games
 </code></pre></div>
 <h2 id="chmod">chmod 🔐<a class="headerlink" href="#chmod" title="Link to this section">&para;</a></h2>
 <p>The chmod command sets the file permissions flags on a file or folder. The flags define who can read, write to or execute the file. When you list files with the <code>-l</code> (long format) option you’ll see a string of characters that look like</p>
-<p><div class="highlight"><pre><span></span><code>-rwxrwxrwx
+<p><div class="language-bash highlight"><pre><span></span><code>-rwxrwxrwx
 </code></pre></div>
 If the first character is a <code>-</code> the item is a file. if it is a <code>d</code> the item is a directory.</p>
 <p>The rest of the string is three sets of three characters. From the left, the first three represent the file permissions of the <code>owner</code>, the middle three represent the file permissions of the <code>group</code> and the rightmost three characters represent the permissions for <code>others</code>. In each set:-</p>
@@ -10700,7 +10700,7 @@ If the first character is a <code>-</code> the item is a file. if it is a <code>
 <div class="admonition info">
 <p class="admonition-title">Permission Levels</p>
 <p>One way to use <code>chmod</code> is to provide the permissions you wish to give to the owner, group, and others as a 3 digit number.  The leftmost digit represents the owner. The middle digit represents the group. The rightmost digit represents the others. The digits you can use and what they represent are listed here:</p>
-<div class="highlight"><pre><span></span><code>0: No permission
+<div class="language-text highlight"><pre><span></span><code>0: No permission
 1: Execute permission
 2: Write permission
 3: Write and execute permissions
@@ -10712,11 +10712,11 @@ If the first character is a <code>-</code> the item is a file. if it is a <code>
 </div>
 <p>Looking at our <code>example.txt</code> file, we can see that all three sets of characters are <code>rwx</code>. That means everyone has read, write and execute rights with the file.</p>
 <p>To set the permission to be read, write, and execute (7 from our list) for the owner; read and write (6 from our list) for the group; and read and execute (5 from our list) for the others we’d need to use the digits 765 with the chmod command:
-<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">765</span><span class="w"> </span>example.txt
+<div class="language-bash highlight"><pre><span></span><code>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">765</span><span class="w"> </span>example.txt
 chmod<span class="w"> </span><span class="nb">command</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>terminal<span class="w"> </span>window
 </code></pre></div>
 To set the permission to be read, write and execute (7 from our list) for the owner, and read and write (6 from our list) for the group and for the others we’d need to use the digits 766 with the chmod command:</p>
-<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span><span class="m">766</span><span class="w"> </span>example.txt
+<div class="language-bash highlight"><pre><span></span><code>chmod<span class="w"> </span><span class="m">766</span><span class="w"> </span>example.txt
 </code></pre></div>
 <h2 id="chown">chown 👤<a class="headerlink" href="#chown" title="Link to this section">&para;</a></h2>
 <p>The <code>chown</code> command allows you to change the owner and group owner of a file. Listing our <code>example.txt</code> file with <code>ls -l</code> we can see <code>amar amar</code> in the file description. </p>
@@ -10728,21 +10728,21 @@ To set the permission to be read, write and execute (7 from our list) for the ow
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>You can use <code>chown</code> to change the owner or group, or both of a file. You must provide the name of the owner and the group, separated by a : character. You will need to use sudo. To retain amar as the owner of the file but to set mary as the group owner, use this command:
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>amar:mary<span class="w"> </span>example.txt
+<div class="language-bash highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>amar:mary<span class="w"> </span>example.txt
 </code></pre></div></p>
 </div>
 <p>To change both the owner and the group owner to mary, you would use the following command;</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>mary:mary<span class="w"> </span>example.txt
+<div class="language-bash highlight"><pre><span></span><code>sudo<span class="w"> </span>chown<span class="w"> </span>mary:mary<span class="w"> </span>example.txt
 </code></pre></div>
 <p>To change the file so that amar is once more the file owner and the group owner, use this command:</p>
-<div class="highlight"><pre><span></span><code>sudo chown amar:amar example.txt
+<div class="language-text highlight"><pre><span></span><code>sudo chown amar:amar example.txt
 </code></pre></div>
 <h2 id="curl">curl 🌐<a class="headerlink" href="#curl" title="Link to this section">&para;</a></h2>
 <p>The <code>curl</code> command is a tool to retrieve information and files from Uniform Resource Locators (URLs) or internet addresses.</p>
 <div class="admonition warning">
 <p class="admonition-title">Not able to find curl on your system?</p>
 <p>The curl command may not be provided as a standard part of your Linux distribution. Use <code>apt-get</code> to install this package onto your system if you’re using Ubuntu or another Debian-based distribution. On other Linux distributions, use your Linux distribution’s package management tool instead.</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>curl
+<div class="language-bash highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>curl
 </code></pre></div>
 </div>
 <p>Suppose you want to retrieve a single file from a GitHub repository. There is no officially supported way to this. You’re forced to clone the entire repository. With curl however, we can retrieve the file we want on its own.</p>
@@ -10751,159 +10751,159 @@ To set the permission to be read, write and execute (7 from our list) for the ow
 <p class="admonition-title">Tip</p>
 <p>If you do not do this, the contents of the file are scrolled rapidly in the terminal window but not saved to your computer.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">curl https://raw.githubusercontent.com/torvalds/linux/master/kernel/events/core.c -o core.c</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">curl https://raw.githubusercontent.com/torvalds/linux/master/kernel/events/core.c -o core.c</span>
 </code></pre></div>
 <p>If you don’t want to see the download progress information use the <code>-s</code> (silent) option.</p>
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">curl -s https://raw.githubusercontent.com/torvalds/linux/master/kernel/events/core.c -o core.c</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">curl -s https://raw.githubusercontent.com/torvalds/linux/master/kernel/events/core.c -o core.c</span>
 </code></pre></div>
 <h2 id="df">df 💽<a class="headerlink" href="#df" title="Link to this section">&para;</a></h2>
 <p>The <code>df</code> command shows the size, used space, and available space on the mounted filesystems of your computer.</p>
 <p>Two of the most useful options are the <code>-h</code> (human readable) and <code>-x</code> (exclude) options. The human-readable option displays the sizes in Mb or Gb instead of in bytes. The exclude option allows you to tell <code>df</code> to discount filesystems you are not interested in. For example, the squashfs pseudo-filesystems that are created when you install an application with the snap command.</p>
-<div class="highlight"><pre><span></span><code>df<span class="w"> </span>-h<span class="w"> </span>-x<span class="w"> </span>squashfs
+<div class="language-bash highlight"><pre><span></span><code>df<span class="w"> </span>-h<span class="w"> </span>-x<span class="w"> </span>squashfs
 </code></pre></div>
 <h2 id="diff">diff 🆚<a class="headerlink" href="#diff" title="Link to this section">&para;</a></h2>
 <p>The <code>diff</code> command compares two text files and shows the differences between them. There are many options to tailor the display to your requirements.</p>
 <p>The <code>-y</code> (side by side) option shows the line differences side by side. The <code>-w</code> (width) option lets you specify the maximum line width to use to avoid wraparound lines. The two files are called <code>alpha1.txt</code> and <code>alpha2.txt</code> in this example. The <code>--suppress-common-lines</code> prevents diff from listing the matching lines, letting you focus on the lines which have differences.</p>
-<div class="highlight"><pre><span></span><code>diff<span class="w"> </span>-y<span class="w"> </span>-W<span class="w"> </span><span class="m">70</span><span class="w"> </span>alpha1.txt<span class="w"> </span>alpha2.txt<span class="w"> </span>--suppress-common-lines
+<div class="language-bash highlight"><pre><span></span><code>diff<span class="w"> </span>-y<span class="w"> </span>-W<span class="w"> </span><span class="m">70</span><span class="w"> </span>alpha1.txt<span class="w"> </span>alpha2.txt<span class="w"> </span>--suppress-common-lines
 </code></pre></div>
 <h2 id="echo">echo 📢<a class="headerlink" href="#echo" title="Link to this section">&para;</a></h2>
 <p>The echo command prints (echoes) a string of text to the terminal window.</p>
 <p>The command below will print the words “A string of text” on the terminal window.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span>A<span class="w"> </span>string<span class="w"> </span>of<span class="w"> </span>text
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span>A<span class="w"> </span>string<span class="w"> </span>of<span class="w"> </span>text
 </code></pre></div>
 <p>The echo command can show the value of environment variables, for example, the $USER, $HOME, and $PATH environment variables. These hold the values of the name of the user, the user’s home directory, and the path searched for matching commands when the user types something on the command line.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$USER</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$USER</span>
 <span class="nb">echo</span><span class="w"> </span><span class="nv">$HOME</span>
 <span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span>
 </code></pre></div>
 <p>The following command will cause a bleep to be issued. The -e (escape code) option interprets the escaped a character as a ‘bell’ character.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;\a&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;\a&quot;</span>
 </code></pre></div>
 <p>The <code>echo</code> command is also invaluable in shell scripts. A script can use this command to generate visible output to indicate the progress or results of the script as it is executed.</p>
 <h2 id="exit">exit 🚪<a class="headerlink" href="#exit" title="Link to this section">&para;</a></h2>
 <p>The exit command will close a terminal window, end the execution of a shell script, or log you out of an SSH remote access session.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">exit</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">exit</span>
 </code></pre></div>
 <h2 id="find">find 🔍<a class="headerlink" href="#find" title="Link to this section">&para;</a></h2>
 <p>Use the find command to track down files that you know exist if you can’t remember where you put them. You must tell find where to start searching from and what it is looking for. In this example, the . matches the current folder and the -name option tells find to look for files with a name that matches the search pattern.</p>
 <p>You can use wildcards, where <code>*</code> represents any sequence of characters and <code>?</code> represents any single character. We’re using <em>ones</em> to match any file name containing the sequence “ones.” This would match words like bones, stones, and lonesome.</p>
-<div class="highlight"><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span>*ones*
+<div class="language-bash highlight"><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span>*ones*
 find<span class="w"> </span><span class="nb">command</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>terminal<span class="w"> </span>window
 </code></pre></div>
 <p>As we can see, find has returned a list of matches. One of them is a directory called Ramones. We can tell find to restrict the search to files only. We do this using the -type option with the f parameter. The f parameter stands for files.</p>
-<p><div class="highlight"><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span>*ones*
+<p><div class="language-bash highlight"><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-type<span class="w"> </span>f<span class="w"> </span>-name<span class="w"> </span>*ones*
 </code></pre></div>
 If you want the search to be case insensitive use the -iname (insensitive name) option.</p>
-<div class="highlight"><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-iname<span class="w"> </span>*wild*
+<div class="language-bash highlight"><pre><span></span><code>find<span class="w"> </span>.<span class="w"> </span>-iname<span class="w"> </span>*wild*
 </code></pre></div>
 <h2 id="finger">finger 👆<a class="headerlink" href="#finger" title="Link to this section">&para;</a></h2>
 <p>The finger command gives you a short dump of information about a user, including the time of the user’s last login, the user’s home directory, and the user account’s full name.</p>
 <h2 id="free">free 🧠<a class="headerlink" href="#free" title="Link to this section">&para;</a></h2>
 <p>The free command gives you a summary of the memory usage with your computer. It does this for both the main Random Access Memory (RAM) and swap memory. The -h (human) option is used to provide human-friendly numbers and units. Without this option, the figures are presented in bytes.</p>
-<div class="highlight"><pre><span></span><code>free<span class="w"> </span>-h
+<div class="language-bash highlight"><pre><span></span><code>free<span class="w"> </span>-h
 </code></pre></div>
 <h2 id="grep">grep 🔎<a class="headerlink" href="#grep" title="Link to this section">&para;</a></h2>
 <p>The grep utility searches for lines which contain a search pattern. When we looked at the alias command, we used grep to search through the output of another program, ps . The grep command can also search the contents of files. Here we’re searching for the word “train” in all text files in the current directory.</p>
-<div class="highlight"><pre><span></span><code>grep<span class="w"> </span>train<span class="w"> </span>*.txt
+<div class="language-bash highlight"><pre><span></span><code>grep<span class="w"> </span>train<span class="w"> </span>*.txt
 </code></pre></div>
 <p>The output lists the name of the file and shows the lines that match. The matching text is highlighted.</p>
 <p>grep command in a terminal window</p>
 <p>The functionality and sheer usefulness of grep definitely warrants you checking out its man page.</p>
 <h2 id="groups">groups 👥<a class="headerlink" href="#groups" title="Link to this section">&para;</a></h2>
 <p>The groups command tells you which groups a user is a member of.</p>
-<div class="highlight"><pre><span></span><code>groups<span class="w"> </span>dave
+<div class="language-bash highlight"><pre><span></span><code>groups<span class="w"> </span>dave
 groups<span class="w"> </span>mary
 </code></pre></div>
 <h2 id="gzip">gzip 🗜️<a class="headerlink" href="#gzip" title="Link to this section">&para;</a></h2>
 <p>The gzip command compresses files. By default, it removes the original file and leaves you with the compressed version. To retain both the original and the compressed version, use the -k (keep) option.</p>
-<div class="highlight"><pre><span></span><code>gzip<span class="w"> </span>-k<span class="w"> </span>core.c
+<div class="language-bash highlight"><pre><span></span><code>gzip<span class="w"> </span>-k<span class="w"> </span>core.c
 </code></pre></div>
 <h2 id="head">head ⬆️<a class="headerlink" href="#head" title="Link to this section">&para;</a></h2>
 <p>The head command gives you a listing of the first 10 lines of a file. If you want to see fewer or more lines, use the -n (number) option. In this example, we use head with its default of 10 lines. We then repeat the command asking for only five lines.</p>
-<div class="highlight"><pre><span></span><code>head<span class="w"> </span>-core.c
+<div class="language-bash highlight"><pre><span></span><code>head<span class="w"> </span>-core.c
 head<span class="w"> </span>-n<span class="w"> </span><span class="m">5</span><span class="w"> </span>core.c
 </code></pre></div>
 <h2 id="history">history 📜<a class="headerlink" href="#history" title="Link to this section">&para;</a></h2>
 <p>The history command lists the commands you have previously issued on the command line. You can repeat any of the commands from your history by typing an exclamation point ! and the number of the command from the history list.</p>
-<p><div class="highlight"><pre><span></span><code>!188
+<p><div class="language-bash highlight"><pre><span></span><code>!188
 </code></pre></div>
 Typing two exclamation points repeats your previous command.</p>
-<div class="highlight"><pre><span></span><code>!!
+<div class="language-bash highlight"><pre><span></span><code>!!
 </code></pre></div>
 <h2 id="kill">kill 💀<a class="headerlink" href="#kill" title="Link to this section">&para;</a></h2>
 <p>The kill command allows you to terminate a process from the command line. You do this by providing the process ID (PID) of the process to kill. Don’t kill processes willy-nilly. You need to have a good reason to do so. In this example, we’ll pretend the shutter program has locked up.</p>
 <p>To find the PID of shutter we’ll use our ps and grep trick from the section about the alias command, above. We can search for the shutter process and obtain its PID as follows:
-<div class="highlight"><pre><span></span><code>ps<span class="w"> </span>-e<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>shutter.
+<div class="language-bash highlight"><pre><span></span><code>ps<span class="w"> </span>-e<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>shutter.
 </code></pre></div>
 Once we have determined the PID (1692 in this case) we can kill it as follows:</p>
-<p><div class="highlight"><pre><span></span><code><span class="nb">kill</span><span class="w"> </span><span class="m">1692</span>
+<p><div class="language-bash highlight"><pre><span></span><code><span class="nb">kill</span><span class="w"> </span><span class="m">1692</span>
 </code></pre></div>
 kill command in a terminal window</p>
 <h2 id="less">less 📖<a class="headerlink" href="#less" title="Link to this section">&para;</a></h2>
 <p>The less command allows you to view files without opening an editor. It’s faster to use, and there’s no chance of you inadvertently modifying the file. With less you can scroll forward and backward through the file using the Up and Down Arrow keys, the PgUp and PgDn keys and the Home and End keys. Press the Q key to quit from less.</p>
 <p>To view a file provide its name to less as follows:</p>
-<p><div class="highlight"><pre><span></span><code>less<span class="w"> </span>core.c
+<p><div class="language-bash highlight"><pre><span></span><code>less<span class="w"> </span>core.c
 </code></pre></div>
 less command in a terminal window</p>
 <p>You can also pipe the output from other commands into less. To see the output from ls for a listing of your entire hard drive, use the following command:</p>
-<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-R<span class="w"> </span>/<span class="w"> </span><span class="p">|</span><span class="w"> </span>less
+<div class="language-bash highlight"><pre><span></span><code>ls<span class="w"> </span>-R<span class="w"> </span>/<span class="w"> </span><span class="p">|</span><span class="w"> </span>less
 </code></pre></div>
 <p>less command in a terminal window</p>
 <p>Use / to search forward in the file and use ? to search backward.</p>
 <h2 id="ls">ls 📋<a class="headerlink" href="#ls" title="Link to this section">&para;</a></h2>
 <p>This might be the first command the majority of Linux users meet. It lists the files and folders in the directory you specify. By default, ls looks in the current directory. There are a great many options you can use with ls , and we strongly advise reviewing its the man page. Some common examples are presented here.</p>
 <p>To list the files and folders in the current directory:</p>
-<div class="highlight"><pre><span></span><code>ls
+<div class="language-bash highlight"><pre><span></span><code>ls
 </code></pre></div>
 <p>To list the files and folders in the current directory with a detailed listing use the -l (long) option:
-<div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-l
+<div class="language-bash highlight"><pre><span></span><code>ls<span class="w"> </span>-l
 </code></pre></div>
 To use human-friendly file sizes include the -h (human) option:</p>
-<p><div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-lh
+<p><div class="language-bash highlight"><pre><span></span><code>ls<span class="w"> </span>-lh
 </code></pre></div>
 To include hidden files use the -a (all files) option:</p>
-<p><div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-lha
+<p><div class="language-bash highlight"><pre><span></span><code>ls<span class="w"> </span>-lha
 </code></pre></div>
 ls command in a terminal window</p>
 <h2 id="man">man 📚<a class="headerlink" href="#man" title="Link to this section">&para;</a></h2>
 <p>The man command displays the “man pages” for a command in less . The man pages are the user manual for that command. Because man uses less to display the man pages, you can use the search capabilities of less.</p>
 <p>For example, to see the man pages for chown, use the following command:</p>
-<p><div class="highlight"><pre><span></span><code>man<span class="w"> </span>chown
+<p><div class="language-bash highlight"><pre><span></span><code>man<span class="w"> </span>chown
 </code></pre></div>
 Use the Up and Down arrow or PgUp and PgDn keys to scroll through the document. Press q to quit the man page or pressh for help.</p>
 <p>man command in a terminal window</p>
 <h2 id="mkdir">mkdir 📁<a class="headerlink" href="#mkdir" title="Link to this section">&para;</a></h2>
 <p>The mkdir command allows you to create new directories in the filesystem. You must provide the name of the new directory to mkdir. If the new directory is not going to be within the current directory, you must provide the path to the new directory.</p>
 <p>To create two new directories in the current directory called “invoices” and “quotes,” use these two commands:</p>
-<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>invoices
+<div class="language-bash highlight"><pre><span></span><code>mkdir<span class="w"> </span>invoices
 mkdir<span class="w"> </span>quotes
 </code></pre></div>
 <p>To create a new directory called “2019” inside the “invoices” directory, use this command:</p>
-<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>invoices/2109
+<div class="language-bash highlight"><pre><span></span><code>mkdir<span class="w"> </span>invoices/2109
 </code></pre></div>
 <p>If you are going to create a directory, but its parent directory does not exist, you can use the -p (parents) option to have mkdir create all of the required parent directories too. In the following command, we are creating the “2019” directory inside the “yearly” directory inside the “quotes” directory. The “yearly” directory does not exist, but we can have mkdir create all the specified directories at once:</p>
-<p><div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>quotes/yearly/2019
+<p><div class="language-bash highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>quotes/yearly/2019
 </code></pre></div>
 The “yearly” directory is also created.</p>
 <h2 id="mv">mv 🚚<a class="headerlink" href="#mv" title="Link to this section">&para;</a></h2>
 <p>The mv command allows you to move files and directories from directory to directory. It also allows you to rename files.</p>
 <p>To move a file you must tell mv where the file is and where you want it to be moved to. In this example, we’re moving a file called apache.pdf from the <code>~/Document/Ukulele</code> directory and placing it in the current directory, represented by the single <code>.</code> character.</p>
-<p><div class="highlight"><pre><span></span><code>mv<span class="w"> </span>~/Documents/Ukulele/Apache.pdf<span class="w"> </span>.
+<p><div class="language-bash highlight"><pre><span></span><code>mv<span class="w"> </span>~/Documents/Ukulele/Apache.pdf<span class="w"> </span>.
 </code></pre></div>
 To rename the file, you “move” it into a new file with the new name.</p>
-<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>Apache.pdf<span class="w"> </span>The_Shadows_Apache.pdf
+<div class="language-bash highlight"><pre><span></span><code>mv<span class="w"> </span>Apache.pdf<span class="w"> </span>The_Shadows_Apache.pdf
 </code></pre></div>
 <p>The file move and rename action could have been achieved in one step:</p>
-<div class="highlight"><pre><span></span><code>mv<span class="w"> </span>~/Documents/Ukulele/Apache.pdf<span class="w"> </span>./The_Shadows_Apache.pdf
+<div class="language-bash highlight"><pre><span></span><code>mv<span class="w"> </span>~/Documents/Ukulele/Apache.pdf<span class="w"> </span>./The_Shadows_Apache.pdf
 </code></pre></div>
 <h2 id="passwd">passwd 🔑<a class="headerlink" href="#passwd" title="Link to this section">&para;</a></h2>
 <p>The <code>passwd</code> command lets you change the password for a user. Just type passwd to change your own password.</p>
 <p>You can also change the password of another user account, but you must use sudo. You will be asked to enter the new password twice.</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>passwd<span class="w"> </span>mary
+<div class="language-bash highlight"><pre><span></span><code>sudo<span class="w"> </span>passwd<span class="w"> </span>mary
 </code></pre></div>
 <h2 id="ping">ping 🏓<a class="headerlink" href="#ping" title="Link to this section">&para;</a></h2>
 <p>The ping command lets you verify that you have network connectivity with another network device. It is commonly used to help troubleshoot networking issues. To use ping, provide the IP address or machine name of the other device.</p>
-<div class="highlight"><pre><span></span><code>ping<span class="w"> </span><span class="m">192</span>.168.4.18
+<div class="language-bash highlight"><pre><span></span><code>ping<span class="w"> </span><span class="m">192</span>.168.4.18
 </code></pre></div>
 <p>The ping command will run until you stop it with <code>Ctrl+C</code>.</p>
 <p>Here’s what’s going on here:</p>
@@ -10914,45 +10914,45 @@ To rename the file, you “move” it into a new file with the new name.</p>
 <li>The time value is the duration of the round trip from your computer to the device and back. Simply put, the lower this time, the better.</li>
 <li>To ask ping to run for a specific number of ping attempts, use the <code>-c</code> (count) option.</li>
 </ul>
-<p><div class="highlight"><pre><span></span><code>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">192</span>.168.4.18
+<p><div class="language-bash highlight"><pre><span></span><code>ping<span class="w"> </span>-c<span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="m">192</span>.168.4.18
 </code></pre></div>
 To hear a ping, use the <code>-a</code> (audible) option.</p>
-<div class="highlight"><pre><span></span><code>ping<span class="w"> </span>-a<span class="w"> </span><span class="m">192</span>.168.4.18
+<div class="language-bash highlight"><pre><span></span><code>ping<span class="w"> </span>-a<span class="w"> </span><span class="m">192</span>.168.4.18
 </code></pre></div>
 <h2 id="ps">ps ⚙️<a class="headerlink" href="#ps" title="Link to this section">&para;</a></h2>
 <p>The ps command lists running processes. Using ps without any options causes it to list the processes running in the current shell.</p>
-<div class="highlight"><pre><span></span><code>ps
+<div class="language-bash highlight"><pre><span></span><code>ps
 </code></pre></div>
 <p>To see all the processes related to a particular user, use the -u (user) option. This is likely to be a long list, so for convenience pipe it through less.</p>
-<div class="highlight"><pre><span></span><code>ps<span class="w"> </span>-u<span class="w"> </span>dave<span class="w"> </span><span class="p">|</span><span class="w"> </span>less
+<div class="language-bash highlight"><pre><span></span><code>ps<span class="w"> </span>-u<span class="w"> </span>dave<span class="w"> </span><span class="p">|</span><span class="w"> </span>less
 </code></pre></div>
 <p>To see every process that is running, use the -e (every process) option:</p>
-<div class="highlight"><pre><span></span><code>ps<span class="w"> </span>-e<span class="w"> </span><span class="p">|</span><span class="w"> </span>less
+<div class="language-bash highlight"><pre><span></span><code>ps<span class="w"> </span>-e<span class="w"> </span><span class="p">|</span><span class="w"> </span>less
 </code></pre></div>
 <h2 id="pwd">pwd 📍<a class="headerlink" href="#pwd" title="Link to this section">&para;</a></h2>
 <p>Nice and simple, the pwd command prints the working directory (the current directory) from the root / directory.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">pwd</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">pwd</span>
 </code></pre></div>
 <p>pwd command in a terminal window</p>
 <h2 id="shutdown">shutdown 🔌<a class="headerlink" href="#shutdown" title="Link to this section">&para;</a></h2>
 <p>The shutdown command lets you shut down or reboot your Linux system.</p>
 <p>Using shutdown with no parameters will shut down your computer in one minute.</p>
-<div class="highlight"><pre><span></span><code>shutdown
+<div class="language-bash highlight"><pre><span></span><code>shutdown
 </code></pre></div>
 <p>To shut down immediately, use the now parameter.</p>
-<div class="highlight"><pre><span></span><code>shutdown<span class="w"> </span>now
+<div class="language-bash highlight"><pre><span></span><code>shutdown<span class="w"> </span>now
 </code></pre></div>
 <p>You can also schedule a shutdown and inform any logged in users of the pending shutdown. To let the shutdown command know when you want it to shut down, you provide it with a time. This can be a set number of minutes from now, such as +90 or a precise time, like 23:00. Any text message you provide is broadcast to logged in users.</p>
-<div class="highlight"><pre><span></span><code>shutdown<span class="w"> </span><span class="m">23</span>:00<span class="w"> </span>Shutdown<span class="w"> </span>tonight<span class="w"> </span>at<span class="w"> </span><span class="m">23</span>:00,<span class="w"> </span>save<span class="w"> </span>your<span class="w"> </span>work<span class="w"> </span>and<span class="w"> </span>log<span class="w"> </span>out<span class="w"> </span>before<span class="w"> </span><span class="k">then</span>!
+<div class="language-bash highlight"><pre><span></span><code>shutdown<span class="w"> </span><span class="m">23</span>:00<span class="w"> </span>Shutdown<span class="w"> </span>tonight<span class="w"> </span>at<span class="w"> </span><span class="m">23</span>:00,<span class="w"> </span>save<span class="w"> </span>your<span class="w"> </span>work<span class="w"> </span>and<span class="w"> </span>log<span class="w"> </span>out<span class="w"> </span>before<span class="w"> </span><span class="k">then</span>!
 </code></pre></div>
 <p>To cancel a shutdown, use the <code>-c</code> (cancel) option. Here we have scheduled a shutdown for fifteen minutes time from now, and then changed our minds.</p>
-<div class="highlight"><pre><span></span><code>shutdown<span class="w"> </span>+15<span class="w"> </span>Shutting<span class="w"> </span>down<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">15</span><span class="w"> </span>minutes!
+<div class="language-bash highlight"><pre><span></span><code>shutdown<span class="w"> </span>+15<span class="w"> </span>Shutting<span class="w"> </span>down<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">15</span><span class="w"> </span>minutes!
 shutdown<span class="w"> </span>-c
 </code></pre></div>
 <p>Shutdown -c cancel command</p>
 <h2 id="ssh">SSH 🔒<a class="headerlink" href="#ssh" title="Link to this section">&para;</a></h2>
 <p>Use the ssh command to make a connection to a remote Linux computer and log into your account. To make a connection, you must provide your user name and the IP address or domain name of the remote computer. In this example, the user mary is logging into the computer at 192.168.4.23. Once the connection is established, she is asked for her password.</p>
-<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>mary@192.168.4.23
+<div class="language-bash highlight"><pre><span></span><code>ssh<span class="w"> </span>mary@192.168.4.23
 ssh<span class="w"> </span><span class="nb">command</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>terminal<span class="w"> </span>window
 </code></pre></div>
 <p>Her user name and password are verified and accepted, and she is logged in. Notice that her prompt has changed from “Nostromo” to “howtogeek.”</p>
@@ -10963,12 +10963,12 @@ ssh<span class="w"> </span><span class="nb">command</span><span class="w"> </spa
 w and exit commands in a terminal window</p>
 <h2 id="sudo">sudo 🦸<a class="headerlink" href="#sudo" title="Link to this section">&para;</a></h2>
 <p>The sudo command is required when performing actions that require root or superuser permissions, such as changing the password for another user.</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>passwd<span class="w"> </span>mary
+<div class="language-bash highlight"><pre><span></span><code>sudo<span class="w"> </span>passwd<span class="w"> </span>mary
 </code></pre></div>
 <p>passwd command in a terminal window</p>
 <h2 id="tail">tail ⬇️<a class="headerlink" href="#tail" title="Link to this section">&para;</a></h2>
 <p>The tail command gives you a listing of the last 10 lines of a file. If you want to see fewer or more lines, use the -n (number) option. In this example, we use tail with its default of 10 lines. We then repeat the command asking for only five lines.</p>
-<div class="highlight"><pre><span></span><code>tail<span class="w"> </span>core.c
+<div class="language-bash highlight"><pre><span></span><code>tail<span class="w"> </span>core.c
 tail<span class="w"> </span>-n<span class="w"> </span><span class="m">5</span><span class="w"> </span>core.c
 tail<span class="w"> </span><span class="nb">command</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>a<span class="w"> </span>terminal<span class="w"> </span>window
 </code></pre></div>
@@ -10978,33 +10978,33 @@ tail<span class="w"> </span><span class="nb">command</span><span class="w"> </sp
 <p>In this example, the user is going to archive all of the files in the Ukulele directory, which is in the current directory.</p>
 <p><code>ls</code> command in the terminal window</p>
 <p>They have used the <code>-c</code> (create) option and the <code>-v</code> (verbose) option. The verbose option gives some visual feedback by listing the files to the terminal window as they are added to the archive. The <code>-f</code> (filename) option is followed by the desired name of the archive. In this case, it is songs.tar.</p>
-<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-cvf<span class="w"> </span>songs.tar<span class="w"> </span>Ukulele/
+<div class="language-bash highlight"><pre><span></span><code>tar<span class="w"> </span>-cvf<span class="w"> </span>songs.tar<span class="w"> </span>Ukulele/
 </code></pre></div>
 <p><code>tar -cvf</code> command in a terminal window</p>
 <p>The files are listed to the terminal window as they are added to the archive file.</p>
 <p>There are two ways to tell tar that you want the archive file to be compressed. The first is with the -z (gzip) option. This tells tar to use the gzip utility to compress the archive once it has been created.</p>
 <p>It is usual to add <code>.gz</code> as suffix to this type of archive. That allows anyone who is extracting files from it to know which commands to pass to tar to correctly retrieve the files.</p>
-<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-cvzf<span class="w"> </span>songs.tar.gz<span class="w"> </span>Ukulele/
+<div class="language-bash highlight"><pre><span></span><code>tar<span class="w"> </span>-cvzf<span class="w"> </span>songs.tar.gz<span class="w"> </span>Ukulele/
 </code></pre></div>
 <p>The files are listed to the terminal window as they are added to the archive file as before, but the creation of the archive will take a little longer because of the time required for the compression.</p>
 <p>To create an archive file that is compressed using a superior compression algorithm giving a smaller archive file use the -j (bzip2) option.</p>
-<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-cvjf<span class="w"> </span>songs.tar.bz2<span class="w"> </span>Ukulele/
+<div class="language-bash highlight"><pre><span></span><code>tar<span class="w"> </span>-cvjf<span class="w"> </span>songs.tar.bz2<span class="w"> </span>Ukulele/
 </code></pre></div>
 <p>Once again, the files are listed as the archive is created. The -j option is noticeably slower than the -z option.</p>
 <p>If you are archiving a great many files, you must choose between the -z option for decent compression and reasonable speed, or the -j option for better compression and slower speed.</p>
 <p>As can be seen in the screenshot below, the “.tar” file is the largest, the “.tar.gz” is smaller, and the “.tar.bz2” is the smallest of the archives.</p>
 <p>To extract files from an archive file use the -x (extract) option. The -v (verbose) and -f (filename) options behave as they do when creating archives. Use ls to confirm which type of archive you are going to extract the files from, then issue the following command.</p>
-<div class="highlight"><pre><span></span><code>ls
+<div class="language-bash highlight"><pre><span></span><code>ls
 tar<span class="w"> </span>-xvf<span class="w"> </span>songs.tar
 </code></pre></div>
 <p>ls and tar -xvf commands in a terminal window</p>
 <p>The files are listed as they are extracted. Note that the Ukulele directory is also recreated for you.</p>
 <p>To extract files from a “.tar.gz” archive, use the -z (gzip) option.</p>
-<p><div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-xvzf<span class="w"> </span>songs.tar.gz
+<p><div class="language-bash highlight"><pre><span></span><code>tar<span class="w"> </span>-xvzf<span class="w"> </span>songs.tar.gz
 </code></pre></div>
 tar -xvzf command in a terminal window</p>
 <p>Finally, to extract files from a “.tar.bz2” archive use the -j option instead of the -z (gzip) option.</p>
-<p><div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-xvjf<span class="w"> </span>songs.tar.bz2
+<p><div class="language-bash highlight"><pre><span></span><code>tar<span class="w"> </span>-xvjf<span class="w"> </span>songs.tar.bz2
 </code></pre></div>
 tar -xvjf command in a terminal window</p>
 <p>RELATED: How to Extract Files From a .tar.gz or .tar.bz2 File on Linux</p>
@@ -11013,7 +11013,7 @@ tar -xvjf command in a terminal window</p>
 <p>The first line shows you the time and how long your computer has been running for, how many users are logged into it, and what the load average has been over the past one, five, and fifteen minutes.</p>
 <p>The second line shows the number of tasks and their states: running, stopped, sleeping and zombie.</p>
 <p>The third line shows CPU information. Here’s what the fields mean:</p>
-<p><div class="highlight"><pre><span></span><code>us: value is the CPU time the CPU spends executing processes for users, in “user space”
+<p><div class="language-text highlight"><pre><span></span><code>us: value is the CPU time the CPU spends executing processes for users, in “user space”
 sy: value is the CPU time spent on running system “kernel space” processes
 ni: value is the CPU time spent on executing processes with a manually set nice value
 id: is the amount of CPU idle time
@@ -11027,7 +11027,7 @@ The fourth line shows the total amount of physical memory, and how much is free,
 <p>top command in a terminal window</p>
 <p>The user has pressed the E key to change the display into more humanly digestible figures instead of long integers representing bytes.</p>
 <p>The columns in the main display are made up of:</p>
-<div class="highlight"><pre><span></span><code>PID: Process ID
+<div class="language-text highlight"><pre><span></span><code>PID: Process ID
 USER: Name of the owner of the process
 PR: Process priority
 NI: The nice value of the process
@@ -11041,7 +11041,7 @@ TIME+: total CPU time used by the task in hundredths of a second
 COMMAND: command name or command line (name + options)
 </code></pre></div>
 <p>The status of the process can be one of:</p>
-<p><div class="highlight"><pre><span></span><code>D:<span class="w"> </span>Uninterruptible<span class="w"> </span>sleep
+<p><div class="language-bash highlight"><pre><span></span><code>D:<span class="w"> </span>Uninterruptible<span class="w"> </span>sleep
 R:<span class="w"> </span>Running
 S:<span class="w"> </span>Sleeping
 T:<span class="w"> </span>Traced<span class="w"> </span><span class="o">(</span>stopped<span class="o">)</span>
@@ -11057,7 +11057,7 @@ RELATED: How to Set Process Priorities With nice and renice on Linux</p>
 <li>Use the <code>-r</code> (kernel release) option to see the kernel release.</li>
 <li>Use the <code>-v</code> (kernel version) option to see the kernel version.</li>
 </ul>
-<div class="highlight"><pre><span></span><code>uname<span class="w"> </span>-a
+<div class="language-bash highlight"><pre><span></span><code>uname<span class="w"> </span>-a
 uname<span class="w"> </span>-s
 uname<span class="w"> </span>-r
 uname<span class="w"> </span>-v
@@ -11065,11 +11065,11 @@ uname<span class="w"> </span>-v
 <p>uname command in a terminal window</p>
 <h2 id="w">w 👀<a class="headerlink" href="#w" title="Link to this section">&para;</a></h2>
 <p>The w command lists the currently logged in users.</p>
-<p><div class="highlight"><pre><span></span><code>w
+<p><div class="language-bash highlight"><pre><span></span><code>w
 </code></pre></div>
 w command in a terminal window</p>
 <h2 id="whoami">whoami 🙋<a class="headerlink" href="#whoami" title="Link to this section">&para;</a></h2>
-<p>Use <code>whoami</code> to find out who you are logged in as or who is logged into an unmanned Linux terminal.</p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Linux<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../../Linux/grepContent/">Grep content →</a></p></li><li><p class="rn__kicker">Linux<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../../Linux/updatePaths/">Update Paths →</a></p></li></ul></div>
+<p>Use <code>whoami</code> to find out who you are logged in as or who is logged into an unmanned Linux terminal.</p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../../Linux/grepContent/" style="--s1: 71, 85, 105; --s2: 100, 116, 139"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 13a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3m11 6.59V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12c.45 0 .85-.15 1.19-.4l-4.43-4.43c-.8.52-1.76.83-2.76.83a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5c0 1-.31 1.96-.83 2.75z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🐧</span> Technical Stuff / Linux</span><span class="rn-card__title">Grep content</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../../Linux/updatePaths/" style="--s1: 71, 85, 105; --s2: 100, 116, 139"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 15a3 3 0 0 1 3 3 3 3 0 0 1-3 3 2.99 2.99 0 0 1-2.83-2H14v-2h1.17c.41-1.17 1.52-2 2.83-2m0 2a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m0-9a1.43 1.43 0 0 0 1.43-1.43 1.43 1.43 0 1 0-2.86 0A1.43 1.43 0 0 0 18 8m0-5.43a4 4 0 0 1 4 4C22 9.56 18 14 18 14s-4-4.44-4-7.43a4 4 0 0 1 4-4M8.83 17H10v2H8.83A2.99 2.99 0 0 1 6 21a3 3 0 0 1-3-3c0-1.31.83-2.42 2-2.83V14h2v1.17c.85.3 1.53.98 1.83 1.83M6 17a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1M6 3a3 3 0 0 1 3 3c0 1.31-.83 2.42-2 2.83V10H5V8.83A2.99 2.99 0 0 1 3 6a3 3 0 0 1 3-3m0 2a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m5 14v-2h2v2zm-4-6H5v-2h2z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🐧</span> Technical Stuff / Linux</span><span class="rn-card__title">Update Paths</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -11182,6 +11182,8 @@ w command in a terminal window</p>
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -11197,6 +11199,16 @@ w command in a terminal window</p>
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

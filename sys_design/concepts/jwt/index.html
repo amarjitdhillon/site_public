@@ -10096,14 +10096,14 @@ as the main headline.
 </div>
 <h3 id="header">Header 🏷️<a class="headerlink" href="#header" title="Link to this section">&para;</a></h3>
 <p>The header typically consists of two parts: the type of the token, which is <abbr title="JSON Web Token: a signed token that proves who you are">JWT</abbr>, and the hashing algorithm such as <code>HMAC SHA256</code> or <code>RSA</code>.</p>
-<div class="highlight"><span class="filename">JWT Header example</span><pre><span></span><code><span class="p">{</span>
+<div class="language-json highlight"><span class="filename">JWT Header example</span><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="err">&#39;alg&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;HS</span><span class="mi">256</span><span class="err">&#39;</span><span class="p">,</span>
 <span class="w">  </span><span class="err">&#39;</span><span class="kc">t</span><span class="err">yp&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;JWT&#39;</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="payload">Payload 📦<a class="headerlink" href="#payload" title="Link to this section">&para;</a></h3>
 <p>The second part of the token is the payload, which contains the claims. Claims are statements about an entity (typically, the user) and additional metadata. </p>
-<div class="highlight"><span class="filename">JWT Payload example (claims + metadata)</span><pre><span></span><code><span class="p">{</span>
+<div class="language-json highlight"><span class="filename">JWT Payload example (claims + metadata)</span><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="err">&#39;sub&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="mi">1234567890</span><span class="err">&#39;</span><span class="p">,</span>
 <span class="w">  </span><span class="err">&#39;</span><span class="kc">na</span><span class="err">me&#39;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;Amarji</span><span class="kc">t</span><span class="w"> </span><span class="err">Si</span><span class="kc">n</span><span class="err">gh&#39;</span><span class="p">,</span>
 <span class="w">  </span><span class="err">&#39;admi</span><span class="kc">n</span><span class="err">&#39;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
@@ -10127,7 +10127,7 @@ as the main headline.
 <h3 id="signature">Signature ✍️<a class="headerlink" href="#signature" title="Link to this section">&para;</a></h3>
 <p>To create the signature part you have to take the encoded header (base64), the encoded payload (base64), a secret, the algorithm specified in the header, and sign that.</p>
 <p>For example if you want to use the <code>HMAC SHA256 algorithm</code>, the signature will be created in the following way.</p>
-<div class="highlight"><span class="filename">JWT Signature example</span><pre><span></span><code><span class="err">HMACSHA</span><span class="mi">256</span><span class="err">(</span>
+<div class="language-json highlight"><span class="filename">JWT Signature example</span><pre><span></span><code><span class="err">HMACSHA</span><span class="mi">256</span><span class="err">(</span>
 <span class="w">  </span><span class="err">base</span><span class="mi">64</span><span class="err">UrlE</span><span class="kc">n</span><span class="err">code(header)</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="err">&#39;.&#39;</span><span class="w"> </span><span class="err">+</span>
 <span class="w">  </span><span class="err">base</span><span class="mi">64</span><span class="err">UrlE</span><span class="kc">n</span><span class="err">code(payload)</span><span class="p">,</span>
 <span class="w">  </span><span class="err">secre</span><span class="kc">t</span><span class="err">)</span>
@@ -10143,7 +10143,7 @@ as the main headline.
 <div class="admonition tip">
 <p class="admonition-title">Sending GET Request with Bearer Token Authorization Header</p>
 <p>To send a <code>GET request</code> with a <code>Bearer Token authorization header</code>, you need to make an HTTP GET request and provide your Bearer Token with the <code>Authorization: Bearer {token}</code> HTTP header. Bearer Authentication (also called token authentication) is an HTTP authentication scheme created as part of <abbr title="An open standard for letting an app act on your behalf without your password">OAuth</abbr> 2.0 but is now used on its own. For security reasons, bearer tokens are only sent over HTTPS (<abbr title="Secure Sockets Layer: the older name for TLS encryption">SSL</abbr>). </p>
-<div class="highlight"><pre><span></span><code><span class="nf">GET</span> <span class="nn">/echo/get/json</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<div class="language-http highlight"><pre><span></span><code><span class="nf">GET</span> <span class="nn">/echo/get/json</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
 <span class="na">Host</span><span class="o">:</span> <span class="l">amarjitdhillon.com</span>
 <span class="na">Accept</span><span class="o">:</span> <span class="l">application/json</span>
 <span class="na">Authorization</span><span class="o">:</span> <span class="l">Bearer {token}</span>
@@ -10209,6 +10209,8 @@ as the main headline.
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10224,6 +10226,16 @@ as the main headline.
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

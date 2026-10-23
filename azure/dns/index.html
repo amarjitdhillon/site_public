@@ -10288,7 +10288,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="dns"><abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 9a2 2 0 0 1-2-2 2 2 0 0 1 2-2 2 2 0 0 1 2 2 2 2 0 0 1-2 2m13-6H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1M7 19a2 2 0 0 1-2-2 2 2 0 0 1 2-2 2 2 0 0 1 2 2 2 2 0 0 1-2 2m13-6H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1"/></svg></span><a class="headerlink" href="#dns" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 9 min read</p>
+<header class="page-head" style="--s1: 13, 148, 136; --s2: 6, 182, 212"><p class="page-head__pill"><span>🔷</span> Azure / Network</p><h1 id="dns"><abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 9a2 2 0 0 1-2-2 2 2 0 0 1 2-2 2 2 0 0 1 2 2 2 2 0 0 1-2 2m13-6H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1M7 19a2 2 0 0 1-2-2 2 2 0 0 1 2-2 2 2 0 0 1 2 2 2 2 0 0 1-2 2m13-6H4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1"/></svg></span><a class="headerlink" href="#dns" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 9 min read</span></p></header>
 <!-- https://www.cloudflare.com/learning/dns/glossary/dns-zone/ -->
 
 <p>In Azure, Azure <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> is used to <code>host DNS zones</code> for providing <code>name resolution</code>. <mark>By using Azure <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr>, we will be able to manage zone and records in the same way we used to do in on-premises; however, the only difference is that everything is managed from the Azure portal</mark></p>
@@ -10297,7 +10297,7 @@ as the main headline.
 <p><abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> domains in Azure <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> are hosted on Azure's global network of <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> name servers, providing resiliency and <abbr title="High Availability: designed to keep running when parts fail">HA</abbr>. Azure <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> uses <code>anycast networking</code>, so each <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> query is answered by the closest available <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> server.</p>
 </div>
 <p>Another most asked question is:</p>
-<div class="admonition questions">
+<div class="admonition question">
 <p class="admonition-title">Can I use my own domain name?</p>
 <p>Azure <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> also supports <code>private DNS domains</code> so that you can use your own custom domain names rather than being stuck with the <code>Azure-provided names</code>.</p>
 </div>
@@ -10326,7 +10326,7 @@ as the main headline.
 <h2 id="basics">Basics 📚<a class="headerlink" href="#basics" title="Link to this section">&para;</a></h2>
 <h3 id="dns-zones"><abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> zones 🗺️<a class="headerlink" href="#dns-zones" title="Link to this section">&para;</a></h3>
 <p>A <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> zone is used to host the <code>DNS records</code> for a particular domain. To start hosting your domain in Azure <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr>, you need to create a <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> zone for that domain name. <mark>Each <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> record for your domain is then created inside this <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> zone.</mark></p>
-<div class="admonition quesiton">
+<div class="admonition question">
 <p class="admonition-title">How zone is managed?</p>
 <p>These zones differentiate between distinctly managed areas in the <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> namespace. A <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> zone is a portion of the <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> namespace that is managed by a <code>specific organization or administrator</code>.</p>
 </div>
@@ -10342,11 +10342,11 @@ as the main headline.
 </div>
 <h3 id="ttl"><abbr title="Time To Live: how long something is cached before it expires">TTL</abbr> ⏲️<a class="headerlink" href="#ttl" title="Link to this section">&para;</a></h3>
 <p>The time to live, or <abbr title="Time To Live: how long something is cached before it expires">TTL</abbr>, specifies how long each record is cached by clients before being requeried. In the below example, the <abbr title="Time To Live: how long something is cached before it expires">TTL</abbr> is <code>3600 seconds or 1 hour</code>.</p>
-<div class="highlight"><span class="filename">record set example</span><pre><span></span><code><span class="nx">www</span><span class="p">.</span><span class="nx">amarjitdhillon</span><span class="p">.</span><span class="nx">com</span><span class="w">    </span><span class="mi">3600</span><span class="w">    </span><span class="nx">IN</span><span class="w">    </span><span class="nx">A</span><span class="w">    </span><span class="mf">134.170.185.46</span>
+<div class="language-go highlight"><span class="filename">record set example</span><pre><span></span><code><span class="nx">www</span><span class="p">.</span><span class="nx">amarjitdhillon</span><span class="p">.</span><span class="nx">com</span><span class="w">    </span><span class="mi">3600</span><span class="w">    </span><span class="nx">IN</span><span class="w">    </span><span class="nx">A</span><span class="w">    </span><span class="mf">134.170.185.46</span>
 </code></pre></div>
 <h3 id="record-set">Record set 📑<a class="headerlink" href="#record-set" title="Link to this section">&para;</a></h3>
 <p><code>Azure DNS</code> manages all <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> records using record sets. A <code>record set</code> (also known as a resource record set) is the collection of <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> records in a zone that have the same name and are of the same type. Most record sets contain a single record.</p>
-<div class="highlight"><span class="filename">record set example</span><pre><span></span><code><span class="nx">www</span><span class="p">.</span><span class="nx">amarjitdhillon</span><span class="p">.</span><span class="nx">com</span><span class="w">    </span><span class="mi">3600</span><span class="w">    </span><span class="nx">IN</span><span class="w">    </span><span class="nx">A</span><span class="w">    </span><span class="mf">134.170.185.46</span>
+<div class="language-go highlight"><span class="filename">record set example</span><pre><span></span><code><span class="nx">www</span><span class="p">.</span><span class="nx">amarjitdhillon</span><span class="p">.</span><span class="nx">com</span><span class="w">    </span><span class="mi">3600</span><span class="w">    </span><span class="nx">IN</span><span class="w">    </span><span class="nx">A</span><span class="w">    </span><span class="mf">134.170.185.46</span>
 <span class="nx">www</span><span class="p">.</span><span class="nx">amarjitdhillon</span><span class="p">.</span><span class="nx">com</span><span class="w">    </span><span class="mi">3600</span><span class="w">    </span><span class="nx">IN</span><span class="w">    </span><span class="nx">A</span><span class="w">    </span><span class="mf">134.170.188.221</span>
 </code></pre></div>
 <p><center> <img src="../images/dns-record-set.jpg" alt="Dns record set" width="60%"> </center></p>
@@ -10378,7 +10378,7 @@ as the main headline.
 </div>
 <h3 id="caa-records">CAA records 🔒<a class="headerlink" href="#caa-records" title="Link to this section">&para;</a></h3>
 <p>CAA records allow domain owners to specify which Certificate Authorities (CAs) are authorized to issue certificates for their domain. This record allows CAs to avoid mis-issuing certificates in some circumstances</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">CAA record for AWS</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<div class="language-bash highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">CAA record for AWS</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
 <span class="normal"> 4</span>
@@ -10428,7 +10428,7 @@ aws.amazon.com.<span class="w">     </span><span class="m">31</span><span class=
 </code></pre></div></td></tr></table></div>
 <h3 id="mx-record">MX record 📧<a class="headerlink" href="#mx-record" title="Link to this section">&para;</a></h3>
 <p>A <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> <code>mail exchange</code> (MX) record directs email to a mail server. The <code>MX record</code> indicates how email messages should be routed in accordance with the Simple Mail Transfer Protocol (SMTP, the standard protocol for all email). </p>
-<div class="highlight"><span class="filename">check MX record for Google</span><pre><span></span><code>$<span class="w"> </span>dig<span class="w"> </span>MX<span class="w"> </span>google.com
+<div class="language-bash highlight"><span class="filename">check MX record for Google</span><pre><span></span><code>$<span class="w"> </span>dig<span class="w"> </span>MX<span class="w"> </span>google.com
 
 <span class="p">;</span><span class="w"> </span>&lt;&lt;&gt;&gt;<span class="w"> </span>DiG<span class="w"> </span><span class="m">9</span>.10.6<span class="w"> </span>&lt;&lt;&gt;&gt;<span class="w"> </span>MX<span class="w"> </span>google.com
 <span class="p">;;</span><span class="w"> </span>global<span class="w"> </span>options:<span class="w"> </span>+cmd
@@ -10461,7 +10461,7 @@ google.com.<span class="w">     </span><span class="m">222</span><span class="w"
 <p>A records only hold <code>IPv4 addresses</code>. If a website has an IPv6 address, it will instead use an <code>AAAA record</code>.</p>
 </div>
 <p>Use dig command to find A record like shown below</p>
-<div class="highlight"><span class="filename">using dig to find dns records</span><pre><span></span><code>$<span class="w"> </span>dig<span class="w"> </span>amarjitdhillon.com
+<div class="language-bash highlight"><span class="filename">using dig to find dns records</span><pre><span></span><code>$<span class="w"> </span>dig<span class="w"> </span>amarjitdhillon.com
 
 <span class="p">;</span><span class="w"> </span>&lt;&lt;&gt;&gt;<span class="w"> </span>DiG<span class="w"> </span><span class="m">9</span>.10.6<span class="w"> </span>&lt;&lt;&gt;&gt;<span class="w"> </span>amarjitdhillon.com
 <span class="p">;;</span><span class="w"> </span>global<span class="w"> </span>options:<span class="w"> </span>+cmd
@@ -10483,7 +10483,7 @@ amarjitdhillon.com.<span class="w"> </span><span class="m">1200</span><span clas
 <span class="p">;;</span><span class="w"> </span>MSG<span class="w"> </span>SIZE<span class="w">  </span>rcvd:<span class="w"> </span><span class="m">63</span>
 </code></pre></div>
 <p>We can also get the IP using the nslookup as shown below</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>nslookup<span class="w"> </span>amarjitdhillon.com
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>nslookup<span class="w"> </span>amarjitdhillon.com
 Server:<span class="w">     </span><span class="m">8</span>.8.8.8
 Address:<span class="w">    </span><span class="m">8</span>.8.8.8#53
 
@@ -10497,7 +10497,7 @@ Address:<span class="w"> </span><span class="m">162</span>.0.232.222
 <p>This record is used to associate text with a domain.</p>
 <h3 id="soa-start-of-authority"><abbr title="Service-Oriented Architecture: systems built from reusable services">SOA</abbr> (Start of authority) 👑<a class="headerlink" href="#soa-start-of-authority" title="Link to this section">&para;</a></h3>
 <p>The <abbr title="Domain Name System: turns names like example.com into IP addresses">DNS</abbr> ‘start of authority’ (<abbr title="Service-Oriented Architecture: systems built from reusable services">SOA</abbr>) record stores important information about a domain or zone such as the email address of the administrator, when the domain was last updated, and how long the server should wait between refreshes.</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>nslookup<span class="w"> </span>-type<span class="o">=</span>SOA<span class="w"> </span>contoso.com
+<div class="language-bash highlight"><pre><span></span><code>$<span class="w"> </span>nslookup<span class="w"> </span>-type<span class="o">=</span>SOA<span class="w"> </span>contoso.com
 Server:<span class="w">     </span><span class="m">8</span>.8.8.8
 Address:<span class="w">    </span><span class="m">8</span>.8.8.8#53
 
@@ -10514,7 +10514,7 @@ contoso.com
 <h3 id="cert-certificate-record">CERT (Certificate record) 📜<a class="headerlink" href="#cert-certificate-record" title="Link to this section">&para;</a></h3>
 <p>It stores public key certificates.</p>
 <h3 id="srv-service-location-record">SRV (Service Location record) 📍<a class="headerlink" href="#srv-service-location-record" title="Link to this section">&para;</a></h3>
-<p>It is used to specify a port for specific services.</p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Network<span class="rn__time"> · 10 min read</span></p><p class="rn__title"><a href="../../azure/networkingInfra/">Networking Infrastructure →</a></p></li><li><p class="rn__kicker">Network<span class="rn__time"> · 2 min read</span></p><p class="rn__title"><a href="../../azure/vpn_gw/">VPN Gateway →</a></p></li></ul></div>
+<p>It is used to specify a port for specific services.</p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../azure/networkingInfra/" style="--s1: 13, 148, 136; --s2: 6, 182, 212"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.5 17c-.14 0-.26 0-.39.04L17.5 13.8c.45-.45.75-1.09.75-1.8a2.5 2.5 0 0 0-2.5-2.5c-.14 0-.25 0-.4.04L13.74 6.3c.47-.46.76-1.09.76-1.8a2.5 2.5 0 0 0-5 0c0 .7.29 1.34.76 1.79L8.65 9.54c-.15-.04-.26-.04-.4-.04a2.5 2.5 0 0 0-2.5 2.5c0 .71.29 1.34.75 1.79l-1.61 3.25C4.76 17 4.64 17 4.5 17a2.5 2.5 0 0 0 0 5A2.5 2.5 0 0 0 7 19.5c0-.7-.29-1.34-.76-1.79l1.62-3.25c.14.04.26.04.39.04s.25 0 .38-.04l1.63 3.25c-.47.45-.76 1.09-.76 1.79a2.5 2.5 0 0 0 5 0A2.5 2.5 0 0 0 12 17c-.13 0-.26 0-.39.04L10 13.8c.45-.45.75-1.09.75-1.8 0-.7-.29-1.33-.75-1.79l1.61-3.25c.13.04.26.04.39.04s.26 0 .39-.04L14 10.21a2.5 2.5 0 0 0 1.75 4.29c.13 0 .25 0 .38-.04l1.63 3.25c-.47.45-.76 1.09-.76 1.79a2.5 2.5 0 0 0 5 0 2.5 2.5 0 0 0-2.5-2.5m-15 3.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1m8.5-1c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1M7.25 12c0-.55.45-1 1-1s1 .45 1 1-.45 1-1 1-1-.45-1-1M11 4.5c0-.55.45-1 1-1s1 .45 1 1-.45 1-1 1-1-.45-1-1m3.75 7.5c0-.55.45-1 1-1s1 .45 1 1-.45 1-1 1-1-.45-1-1m4.75 8.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🔷</span> Azure / Network</span><span class="rn-card__title">Networking Infrastructure</span><span class="rn-card__meta">⏱️ 10 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../azure/vpn_gw/" style="--s1: 13, 148, 136; --s2: 6, 182, 212"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.05 3.5a3.52 3.52 0 0 0 0 4.97l8.49 8.48c.58.59.58 1.55 0 2.12-.59.59-1.54.59-2.13 0l-4.24-4.24 1.06-1.06-3.53-3.54-.36.36-1.41-1.42a1.02 1.02 0 0 0-1.43 0l-1.4 1.42c-.39.41-.39 1.02 0 1.41l1.4 1.41-.34.36L6.7 17.3l1.06-1.06L12 20.5a3.53 3.53 0 0 0 4.95 0c1.37-1.38 1.37-3.6 0-4.96L8.46 7.05c-.58-.59-.58-1.55 0-2.12.59-.59 1.54-.59 2.13 0l4.24 4.24-1.06 1.06 3.53 3.54.36-.36 1.41 1.42c.39.39 1.03.39 1.43 0l1.4-1.42c.39-.41.39-1.02 0-1.41l-1.4-1.41.34-.36L17.3 6.7l-1.06 1.06L12 3.5a3.53 3.53 0 0 0-4.95 0m-4.24 7.79 1.41-1.41 1.42 1.41-1.42 1.42m14.14 0 1.42-1.42 1.41 1.42-1.41 1.41Z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🔷</span> Azure / Network</span><span class="rn-card__title">VPN Gateway</span><span class="rn-card__meta">⏱️ 2 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10627,6 +10627,8 @@ contoso.com
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../javascripts/about.js"></script>
@@ -10642,6 +10644,16 @@ contoso.com
         <script src="../../javascripts/tilt.js"></script>
       
         <script src="../../javascripts/headings.js"></script>
+      
+        <script src="../../javascripts/edgeray.js"></script>
+      
+        <script src="../../javascripts/tabs.js"></script>
+      
+        <script src="../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../javascripts/diagram.js"></script>
+      
+        <script src="../../javascripts/postside.js"></script>
       
         <script src="../../javascripts/magnetic.js"></script>
       

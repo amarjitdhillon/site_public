@@ -10000,49 +10000,49 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="wget">WGET <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg></span><a class="headerlink" href="#wget" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 2 min read</p>
+<header class="page-head" style="--s1: 71, 85, 105; --s2: 100, 116, 139"><p class="page-head__pill"><span>🛠️</span> Technical Stuff / Misc</p><h1 id="wget"><span class="page-head__accent">WGET</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7z"/></svg></span><a class="headerlink" href="#wget" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 2 min read</span></p></header>
 <p>Mac provides <code>curl</code>, however sometime using <code>wget</code> is more handy. This post is for installing <code>wget</code> for Mac. by following the below mentioned steps:</p>
 <h2 id="method-1">Method 1 🛠️<a class="headerlink" href="#method-1" title="Link to this section">&para;</a></h2>
 <p>In most of tutorials, installing <code>wget</code> using <code>curl</code> is recommended . However I ran into several issues using this approach. I will share it with you guys. First you need to install the <code>xcode command line tools</code>, easiest way to do so by running in the Terminal</p>
-<div class="highlight"><pre><span></span><code>xcode-select<span class="w"> </span>--install
+<div class="language-sh highlight"><pre><span></span><code>xcode-select<span class="w"> </span>--install
 </code></pre></div>
 <ol>
 <li>Download <code>wget</code> using <code>curl</code></li>
 </ol>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-O<span class="w"> </span>http://ftp.gnu.org/gnu/wget/wget-1.15.tar.gz
+<div class="language-sh highlight"><pre><span></span><code>curl<span class="w"> </span>-O<span class="w"> </span>http://ftp.gnu.org/gnu/wget/wget-1.15.tar.gz
 </code></pre></div>
 <ol>
 <li>Unpack it using</li>
 </ol>
-<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-zxvf<span class="w"> </span>wget-1.15.tar.gz
+<div class="language-sh highlight"><pre><span></span><code>tar<span class="w"> </span>-zxvf<span class="w"> </span>wget-1.15.tar.gz
 </code></pre></div>
 <ol>
 <li>cd to folder using</li>
 </ol>
-<p><div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>wget-1.15/
+<p><div class="language-sh highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>wget-1.15/
 </code></pre></div>
 4. Then configure</p>
-<div class="highlight"><pre><span></span><code>./configure
+<div class="language-sh highlight"><pre><span></span><code>./configure
 </code></pre></div>
 <p>I have got following error that</p>
 <div class="admonition error">
 <p class="admonition-title">Error</p>
 <p><code>configure: error: --with-ssl=gnutls was given, but GNUTLS is not available.</code></p>
 <p>we can skip this error using</p>
-<div class="highlight"><pre><span></span><code>./configure<span class="w"> </span>--with-ssl<span class="o">=</span>openssl
+<div class="language-sh highlight"><pre><span></span><code>./configure<span class="w"> </span>--with-ssl<span class="o">=</span>openssl
 </code></pre></div>
 <p>However, this also leads to another error shown below</p>
-<div class="highlight"><pre><span></span><code>configure:<span class="w"> </span>error:<span class="w"> </span>--with-ssl<span class="o">=</span>openssl<span class="w"> </span>was<span class="w"> </span>given,<span class="w"> </span>but<span class="w"> </span>SSL<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>available
+<div class="language-sh highlight"><pre><span></span><code>configure:<span class="w"> </span>error:<span class="w"> </span>--with-ssl<span class="o">=</span>openssl<span class="w"> </span>was<span class="w"> </span>given,<span class="w"> </span>but<span class="w"> </span>SSL<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>available
 </code></pre></div>
 </div>
 <h2 id="method-2">Method 2 🍺<a class="headerlink" href="#method-2" title="Link to this section">&para;</a></h2>
 <ol>
 <li>We  can easily go around aforementioned error as <code>brew</code> will automatically install dependencies for<code>wget</code> and <code>openssl</code>. For doing this you must have <code>brew</code> installed</li>
 </ol>
-<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>wget
+<div class="language-sh highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>wget
 </code></pre></div>
 <p>as shown below, it will automatically download the dependency</p>
-<div class="highlight"><pre><span></span><code><span class="o">==</span>&gt;<span class="w"> </span>Installing<span class="w"> </span>dependencies<span class="w"> </span><span class="k">for</span><span class="w"> </span>wget:<span class="w"> </span><span class="nv">openssl</span>
+<div class="language-sh highlight"><pre><span></span><code><span class="o">==</span>&gt;<span class="w"> </span>Installing<span class="w"> </span>dependencies<span class="w"> </span><span class="k">for</span><span class="w"> </span>wget:<span class="w"> </span><span class="nv">openssl</span>
 <span class="o">==</span>&gt;<span class="w"> </span>Installing<span class="w"> </span>wget<span class="w"> </span>dependency:<span class="w"> </span><span class="nv">openssl</span>
 <span class="o">==</span>&gt;<span class="w"> </span>Downloading<span class="w"> </span>https://homebrew.bintray.com/bottles/openssl-1.0.2j.sierra.bottle.tar.gz
 <span class="c1">######################################################################## 100.0%</span>
@@ -10051,13 +10051,13 @@ as the main headline.
 <ol>
 <li>For checking is <code>wget</code> is installed successfully, please <code>cd</code> to particular folder and enter</li>
 </ol>
-<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>-O<span class="w"> </span>sample.txt<span class="w"> </span>http://www.gutenberg.org/cache/epub/1787/pg1787.txt
+<div class="language-sh highlight"><pre><span></span><code>wget<span class="w"> </span>-O<span class="w"> </span>sample.txt<span class="w"> </span>http://www.gutenberg.org/cache/epub/1787/pg1787.txt
 </code></pre></div>
 <p>text will be generated from link <code>http://www.gutenberg.org/cache/epub/1787/pg1787.txt</code> and saved as <code>sample.txt</code></p>
 <div class="admonition success">
 <p class="admonition-title">Success</p>
 <p>Congrats, we have successfully installed wget on mac.If you have some issues or suggestions, please feel free to comment  below.</p>
-</div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Misc<span class="rn__time"> · 2 min read</span></p><p class="rn__title"><a href="../../../technical_stuff/SAP/">SAP →</a></p></li><li><p class="rn__kicker">Misc<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../../technical_stuff/linux/android_device/">Attach Android device →</a></p></li></ul></div>
+</div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../../technical_stuff/SAP/" style="--s1: 71, 85, 105; --s2: 100, 116, 139"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 6.064v11.872h12.13L24 6.064zm3.264 2.208h.005c.863.001 1.915.245 2.676.633l-.82 1.43c-.835-.404-1.255-.442-1.73-.467-.708-.038-1.064.215-1.069.488-.007.332.669.633 1.305.838.964.306 2.19.715 2.377 1.9L7.77 8.437h2.046l2.064 5.576-.007-5.575h2.37c2.257 0 3.318.764 3.318 2.519 0 1.575-1.09 2.514-2.936 2.514h-.763l-.01 2.094-3.588-.003-.25-.908c-.37.122-.787.189-1.23.189-.456 0-.885-.071-1.263-.2l-.358.919-2 .006.09-.462q-.043.038-.087.074c-.535.43-1.208.629-2.037.644l-.213.002a5.1 5.1 0 0 1-2.581-.675l.73-1.448c.79.467 1.286.572 1.956.558.347-.007.598-.07.761-.239a.56.56 0 0 0 .156-.369c.007-.376-.53-.553-1.185-.756-.531-.164-1.135-.389-1.606-.735-.559-.41-.825-.924-.812-1.65a2 2 0 0 1 .566-1.377c.519-.537 1.357-.863 2.363-.863m10.597 1.67v1.904h.521c.694 0 1.247-.23 1.248-.964 0-.709-.554-.94-1.248-.94zm-5.087.767-.748 2.362c.223.085.481.133.757.133.268 0 .52-.047.742-.126l-.736-2.37z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🛠️</span> Technical Stuff / Misc</span><span class="rn-card__title">SAP</span><span class="rn-card__meta">⏱️ 2 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../../technical_stuff/linux/android_device/" style="--s1: 71, 85, 105; --s2: 100, 116, 139"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.61 15.15c-.46 0-.84-.37-.84-.83s.38-.82.84-.82.84.36.84.82-.38.83-.84.83m-9.2 0c-.46 0-.84-.37-.84-.83s.38-.82.84-.82.83.36.83.82-.37.83-.83.83m9.5-5.01 1.67-2.88c.09-.17.03-.38-.13-.47-.17-.1-.38-.04-.45.13l-1.71 2.91A10.15 10.15 0 0 0 12 8.91c-1.53 0-3 .33-4.27.91L6.04 6.91a.334.334 0 0 0-.47-.13c-.17.09-.22.3-.13.47l1.66 2.88C4.25 11.69 2.29 14.58 2 18h20c-.28-3.41-2.23-6.3-5.09-7.86"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🛠️</span> Technical Stuff / Misc</span><span class="rn-card__title">Attach Android device</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10170,6 +10170,8 @@ as the main headline.
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10185,6 +10187,16 @@ as the main headline.
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

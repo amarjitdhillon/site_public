@@ -10552,7 +10552,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="power-bi">Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 21H2V3h2v16h2v-9h4v9h2V6h4v13h2v-5h4z"/></svg></span><a class="headerlink" href="#power-bi" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 17 min read</p>
+<header class="page-head" style="--s1: 71, 85, 105; --s2: 100, 116, 139"><p class="page-head__pill"><span>🛠️</span> Technical Stuff / Data/Analytics</p><h1 id="power-bi">Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 21H2V3h2v16h2v-9h4v9h2V6h4v13h2v-5h4z"/></svg></span><a class="headerlink" href="#power-bi" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 17 min read</span></p></header>
 <!-- https://radacad.com/why-do-you-need-power-bi-service -->
 
 <!-- https://www.bluegranite.com/blog/creating-efficient-power-bi-datasets-over-snowflake -->
@@ -10593,7 +10593,7 @@ as the main headline.
 </div>
 <h3 id="dashboard">Dashboard 📊<a class="headerlink" href="#dashboard" title="Link to this section">&para;</a></h3>
 <div class="admonition tldr">
-<p class="admonition-title">Tldr</p>
+<p class="admonition-title">TL;<abbr title="Disaster Recovery: getting systems back after a major outage">DR</abbr></p>
 <p>A Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> dashboard is a single page, often called a canvas, that uses visualizations to tell a story. Because it is limited to one page, a well-designed dashboard contains only the most-important elements of that story.</p>
 </div>
 <ul>
@@ -10638,7 +10638,7 @@ as the main headline.
 <p><strong>Measures</strong> are calculated on demand. Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> calculates the correct value when the user requests it. <mark>Measures do not add to the overall disk space of the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> <code>.pbix file</code></mark>.</p>
 <h3 id="dataflow">Dataflow 🌊<a class="headerlink" href="#dataflow" title="Link to this section">&para;</a></h3>
 <div class="admonition tldr">
-<p class="admonition-title">Tldr</p>
+<p class="admonition-title">TL;<abbr title="Disaster Recovery: getting systems back after a major outage">DR</abbr></p>
 <p>Dataflow is a collection of Power Query queries that are scheduled and executed together.</p>
 </div>
 <p>It's up to you how you organize the staged data in dataflows. For example, if you need to stage some tables from Dynamics 365, you can create one dataflow that has a query for each table you want to stage. So, dataflows allow you to logically group related Power Query queries</p>
@@ -10683,7 +10683,7 @@ as the main headline.
 <p>In dual mode, data is imported into cache memory, but can also be served directly from the data source at the query time</p>
 <h4 id="hybrid-tables-composite-mode">Hybrid tables/ Composite mode<a class="headerlink" href="#hybrid-tables-composite-mode" title="Link to this section">&para;</a></h4>
 <div class="admonition tldr">
-<p class="admonition-title">Tldr</p>
+<p class="admonition-title">TL;<abbr title="Disaster Recovery: getting systems back after a major outage">DR</abbr></p>
 <ul>
 <li>Cold data in <code>Import mode</code>, Hot data in <code>DirectQuery</code>. </li>
 <li>Hybrid tables can only be applied on a table that incremental refresh is set on it.</li>
@@ -10860,7 +10860,7 @@ as the main headline.
 <li>When the user connects to Snowflake, the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> service asks Azure AD to give it a token for Snowflake</li>
 <li>The <code>Power BI</code> service uses the embedded Snowflake driver to send the Azure AD token to Snowflake as part of the connection string.</li>
 <li><code>Snowflake</code> validates the token, extracts the username from the token, maps it to the Snowflake user, and creates a Snowflake session for the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> service using the user’s default role.</li>
-</ol><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Data/Analytics<span class="rn__time"> · 8 min read</span></p><p class="rn__title"><a href="../../technical_stuff/sql_and_nosql/">DB, DW and Data Lake →</a></p></li><li><p class="rn__kicker">Data/Analytics<span class="rn__time"> · 5 min read</span></p><p class="rn__title"><a href="../../technical_stuff/snowflake/">Snowflake →</a></p></li></ul></div>
+</ol><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../technical_stuff/sql_and_nosql/" style="--s1: 71, 85, 105; --s2: 100, 116, 139"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.12 3.55a2 2 0 0 0-1.92 1.4l-.8 2.55a3 3 0 0 0-1.07.24L11.5 5.77l-1.33-1.48a2 2 0 0 0-.12 2.83l1.81 1.97a3 3 0 0 0-.22.51 3 3 0 0 0-.11.53l-2.61.58-1.96.44a2 2 0 0 0 2.39 1.52l2.61-.59a3 3 0 0 0 .74.81l-.8 2.55-.6 1.91a2 2 0 0 0 2.5-1.31l.81-2.54a3 3 0 0 0 1.07-.24l1.82 1.97 1.33 1.47a2 2 0 0 0 .13-2.82l-1.81-1.97a3 3 0 0 0 .21-.51 3 3 0 0 0 .14-.54l2.59-.58 1.95-.43a2 2 0 0 0-2.38-1.52l-2.61.58a3 3 0 0 0-.74-.8l.8-2.56.6-1.9a2 2 0 0 0-.59-.1M14.56 9a1.5 1.5 0 0 1 .39.07 1.5 1.5 0 0 1 .98 1.88 1.5 1.5 0 0 1-1.88.98 1.5 1.5 0 0 1-.98-1.88A1.5 1.5 0 0 1 14.55 9M8 13.67C6.78 14.53 5.39 15 4 15H2v2h2c1.37 0 2.74-.35 4-1 .77.4 1.58.66 2.41.81l.53-1.67.09-.26c-1.06-.15-2.1-.56-3.03-1.21M20.45 15c.05.7-.12 1.41-.54 2H22v-2zM8 17.67C6.78 18.53 5.39 19 4 19H2v2h2c1.37 0 2.74-.35 4-1 2.5 1.3 5.5 1.3 8 0 1.26.65 2.62 1 4 1h2v-2h-2c-1.39 0-2.78-.47-4-1.33-2.44 1.71-5.56 1.71-8 0"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🛠️</span> Technical Stuff / Data/Analytics</span><span class="rn-card__title">DB, DW and Data Lake</span><span class="rn-card__meta">⏱️ 8 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../technical_stuff/snowflake/" style="--s1: 71, 85, 105; --s2: 100, 116, 139"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M24 3.459c0 .646-.418 1.18-1.141 1.18s-1.142-.534-1.142-1.18c0-.647.419-1.18 1.142-1.18S24 2.812 24 3.459m-.228 0c0-.533-.38-.951-.913-.951s-.913.38-.913.95c0 .533.38.952.913.952.57 0 .913-.419.913-.951m-1.37-.533h.495c.266 0 .456.152.456.38 0 .153-.076.229-.19.305l.19.266v.038h-.266l-.19-.266h-.229v.266h-.266zm.495.228h-.229v.267h.229c.114 0 .152-.038.152-.114.038-.077-.038-.153-.152-.153M7.602 12.4a2 2 0 0 0 .076-.456c0-.114-.038-.228-.038-.342-.114-.343-.304-.647-.646-.838l-4.87-2.777c-.685-.38-1.56-.152-1.94.533-.381.685-.153 1.56.532 1.94l2.701 1.56-2.701 1.56c-.685.38-.913 1.256-.533 1.94.38.685 1.256.914 1.94.533l4.832-2.777c.343-.267.571-.533.647-.876m1.332 2.626c-.266-.038-.57.038-.837.19l-4.832 2.777c-.685.38-.913 1.256-.532 1.94.38.686 1.255.914 1.94.533l2.701-1.56v3.12c0 .8.647 1.408 1.446 1.408s1.407-.647 1.407-1.408v-5.592c0-.761-.57-1.37-1.293-1.408m4.946-6.088c.266.038.57-.038.837-.19l4.832-2.777c.685-.38.913-1.256.532-1.94-.38-.686-1.255-.914-1.94-.533l-2.701 1.56V1.975c0-.799-.647-1.408-1.446-1.408s-1.446.609-1.446 1.408V7.53c0 .76.609 1.37 1.332 1.407zM3.265 5.97l4.832 2.777c.266.152.533.19.837.19.723-.038 1.331-.684 1.331-1.407V1.975c0-.799-.646-1.408-1.407-1.408-.799 0-1.446.647-1.446 1.408v3.12l-2.701-1.56c-.685-.38-1.56-.152-1.94.533-.419.646-.19 1.521.494 1.902m9.093 6.011a.4.4 0 0 0-.114-.266l-.57-.571a.35.35 0 0 0-.267-.114.4.4 0 0 0-.266.114l-.571.57a.4.4 0 0 0-.114.267c0 .076.038.19.114.267l.57.57a.35.35 0 0 0 .267.114.4.4 0 0 0 .266-.114l.571-.57a.4.4 0 0 0 .114-.267m1.598.533L11.94 14.53c-.039.038-.153.114-.229.114h-.608a.4.4 0 0 1-.267-.114L8.82 12.514a.4.4 0 0 1-.076-.229v-.608c0-.076.038-.19.114-.267l2.016-2.016a.4.4 0 0 1 .267-.114h.608a.4.4 0 0 1 .267.114l2.016 2.016a.35.35 0 0 1 .114.267v.608c-.076.077-.114.19-.19.229m5.593 5.44-4.832-2.777c-.266-.152-.57-.19-.837-.152-.723.038-1.332.684-1.332 1.408v5.554c0 .8.647 1.408 1.408 1.408.799 0 1.446-.647 1.446-1.408v-3.12l2.7 1.56c.686.38 1.561.152 1.941-.533.419-.646.19-1.521-.494-1.94m2.549-7.533-2.701 1.56 2.7 1.56c.686.38.914 1.256.533 1.94-.38.685-1.255.913-1.94.533l-4.832-2.778a1.64 1.64 0 0 1-.647-.798c-.037-.153-.076-.305-.076-.457 0-.114.039-.228.039-.342.114-.343.342-.647.646-.837l4.832-2.778c.685-.38 1.56-.152 1.94.533.457.609.19 1.484-.494 1.864"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🛠️</span> Technical Stuff / Data/Analytics</span><span class="rn-card__title">Snowflake</span><span class="rn-card__meta">⏱️ 5 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10973,6 +10973,8 @@ as the main headline.
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../javascripts/about.js"></script>
@@ -10988,6 +10990,16 @@ as the main headline.
         <script src="../../javascripts/tilt.js"></script>
       
         <script src="../../javascripts/headings.js"></script>
+      
+        <script src="../../javascripts/edgeray.js"></script>
+      
+        <script src="../../javascripts/tabs.js"></script>
+      
+        <script src="../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../javascripts/diagram.js"></script>
+      
+        <script src="../../javascripts/postside.js"></script>
       
         <script src="../../javascripts/magnetic.js"></script>
       

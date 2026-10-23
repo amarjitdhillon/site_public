@@ -10288,7 +10288,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="k8s-security">K8S Security <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 11c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12V5l9-4 9 4zm-9 10c3.75-1 7-5.46 7-9.78V6.3l-7-3.12L5 6.3v4.92C5 15.54 8.25 20 12 21m2.8-10V9.5C14.8 8.1 13.4 7 12 7S9.2 8.1 9.2 9.5V11c-.6 0-1.2.6-1.2 1.2v3.5c0 .7.6 1.3 1.2 1.3h5.5c.7 0 1.3-.6 1.3-1.2v-3.5c0-.7-.6-1.3-1.2-1.3m-1.3 0h-3V9.5c0-.8.7-1.3 1.5-1.3s1.5.5 1.5 1.3z"/></svg></span><a class="headerlink" href="#k8s-security" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 7 min read</p>
+<header class="page-head" style="--s1: 124, 58, 237; --s2: 168, 85, 247"><p class="page-head__pill"><span>☸️</span> Kubernetes / Admin</p><h1 id="k8s-security">K8S <span class="page-head__accent">Security</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 11c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12V5l9-4 9 4zm-9 10c3.75-1 7-5.46 7-9.78V6.3l-7-3.12L5 6.3v4.92C5 15.54 8.25 20 12 21m2.8-10V9.5C14.8 8.1 13.4 7 12 7S9.2 8.1 9.2 9.5V11c-.6 0-1.2.6-1.2 1.2v3.5c0 .7.6 1.3 1.2 1.3h5.5c.7 0 1.3-.6 1.3-1.2v-3.5c0-.7-.6-1.3-1.2-1.3m-1.3 0h-3V9.5c0-.8.7-1.3 1.5-1.3s1.5.5 1.5 1.3z"/></svg></span><a class="headerlink" href="#k8s-security" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 7 min read</span></p></header>
 <h2 id="authn-authentication">AuthN (Authentication) 🛂<a class="headerlink" href="#authn-authentication" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Who are you? This is where k8s checks the identity of whoever's calling the <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr></li>
@@ -10320,7 +10320,7 @@ as the main headline.
 <p>ClusterRole, by contrast, is a non-namespaced resource. The resources have different names (Role and ClusterRole) because a Kubernetes object always has to be either namespaced or not namespaced; it can't be both.</p>
 </div>
 <h4 id="role">Role<a class="headerlink" href="#role" title="Link to this section">&para;</a></h4>
-<div class="highlight"><span class="filename">Role in the default namespace that can be used to grant read access to pods</span><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<div class="language-yaml highlight"><span class="filename">Role in the default namespace that can be used to grant read access to pods</span><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Role</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
@@ -10331,7 +10331,7 @@ as the main headline.
 <span class="w">  </span><span class="nt">verbs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;get&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;watch&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;list&quot;</span><span class="p p-Indicator">]</span>
 </code></pre></div>
 <h4 id="rolebinding">Rolebinding<a class="headerlink" href="#rolebinding" title="Link to this section">&para;</a></h4>
-<div class="highlight"><span class="filename">allows 'amar' to read pods in the default namespace.</span><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<div class="language-yaml highlight"><span class="filename">allows 'amar' to read pods in the default namespace.</span><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
 <span class="c1"># This role binding allows &quot;amar&quot; to read pods in the &quot;default&quot; namespace.</span>
 <span class="c1"># You need to already have a Role named &quot;pod-reader&quot; in that namespace.</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RoleBinding</span>
@@ -10374,7 +10374,7 @@ as the main headline.
 <p>Put it all together
 <center> <img src="../../images/cert3.jpg" alt="Cert3" width="90%"> </center></p>
 <h3 id="viewapprove-csrs">View/Approve CSRs 🖊️<a class="headerlink" href="#viewapprove-csrs" title="Link to this section">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1"># View CSRs using</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="c1"># View CSRs using</span>
 k<span class="w"> </span>get<span class="w"> </span>csr
 
 <span class="c1"># See more details for CSR</span>
@@ -10389,32 +10389,32 @@ kubectl<span class="w"> </span>certificate<span class="w"> </span>deny<span clas
 <span class="c1"># Delete CSR using</span>
 kubectl<span class="w">  </span>delete<span class="w"> </span>csr<span class="w"> </span>&lt;certificate-name&gt;
 </code></pre></div>
-<div class="highlight"><span class="filename">Delete CSR</span><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>delete<span class="w"> </span>csr<span class="w"> </span>agent-smith<span class="w"> </span>
+<div class="language-bash highlight"><span class="filename">Delete CSR</span><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>delete<span class="w"> </span>csr<span class="w"> </span>agent-smith<span class="w"> </span>
 certificatesigningrequest.certificates.k8s.io<span class="w"> </span><span class="s2">&quot;agent-smith&quot;</span><span class="w"> </span>deleted
 </code></pre></div>
 <h3 id="view-certificates-in-k8s">View Certificates in K8s 📄<a class="headerlink" href="#view-certificates-in-k8s" title="Link to this section">&para;</a></h3>
 <p>run the below command</p>
-<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>/etc/kubernetes/manifests/kube-apiserver.yaml
+<div class="language-bash highlight"><pre><span></span><code>cat<span class="w"> </span>/etc/kubernetes/manifests/kube-apiserver.yaml
 <span class="c1"># look for the below `--tls-cert-file` line</span>
 </code></pre></div>
 <p>Below is the example to see cert file used by Kube <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> Server</p>
-<div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>cat<span class="w"> </span>/etc/kubernetes/manifests/kube-apiserver.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>tls
+<div class="language-bash highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>cat<span class="w"> </span>/etc/kubernetes/manifests/kube-apiserver.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>tls
 <span class="w">    </span>-<span class="w"> </span>--tls-cert-file<span class="o">=</span>/etc/kubernetes/pki/apiserver.crt
 <span class="w">    </span>-<span class="w"> </span>--tls-private-key-file<span class="o">=</span>/etc/kubernetes/pki/apiserver.key
 </code></pre></div>
-<div class="highlight"><span class="filename">Identify the Certificate file used to authenticate kube-apiserver as a client to ETCD Server.</span><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>cat<span class="w"> </span>/etc/kubernetes/manifests/kube-apiserver.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>etcd
+<div class="language-bash highlight"><span class="filename">Identify the Certificate file used to authenticate kube-apiserver as a client to ETCD Server.</span><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>cat<span class="w"> </span>/etc/kubernetes/manifests/kube-apiserver.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>etcd
 <span class="w">    </span>-<span class="w"> </span>--etcd-cafile<span class="o">=</span>/etc/kubernetes/pki/etcd/ca.crt
 <span class="w">    </span>-<span class="w"> </span>--etcd-certfile<span class="o">=</span>/etc/kubernetes/pki/apiserver-etcd-client.crt
 <span class="w">    </span>-<span class="w"> </span>--etcd-keyfile<span class="o">=</span>/etc/kubernetes/pki/apiserver-etcd-client.key
 <span class="w">    </span>-<span class="w"> </span>--etcd-servers<span class="o">=</span>https://127.0.0.1:2379
 </code></pre></div>
-<div class="highlight"><span class="filename">Identify the key used to authenticate kubeapi-server to the kubelet server.</span><pre><span></span><code><span class="c1"># Look for the certs in the api-server file</span>
+<div class="language-shell highlight"><span class="filename">Identify the key used to authenticate kubeapi-server to the kubelet server.</span><pre><span></span><code><span class="c1"># Look for the certs in the api-server file</span>
 controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>cat<span class="w"> </span>/etc/kubernetes/manifests/kube-apiserver.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>kubelet
 <span class="w">    </span>-<span class="w"> </span>--kubelet-client-certificate<span class="o">=</span>/etc/kubernetes/pki/apiserver-kubelet-client.crt
 <span class="w">    </span>-<span class="w"> </span>--kubelet-client-key<span class="o">=</span>/etc/kubernetes/pki/apiserver-kubelet-client.key
 <span class="w">    </span>-<span class="w"> </span>--kubelet-preferred-address-types<span class="o">=</span>InternalIP,ExternalIP,Hostname
 </code></pre></div>
-<div class="highlight"><span class="filename">Identify the ETCD Server Certificate used to host ETCD server.</span><pre><span></span><code><span class="c1"># Look for the certs in the etcd `cert-file`</span>
+<div class="language-bash highlight"><span class="filename">Identify the ETCD Server Certificate used to host ETCD server.</span><pre><span></span><code><span class="c1"># Look for the certs in the etcd `cert-file`</span>
 controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>cat<span class="w"> </span>/etc/kubernetes/manifests/etcd.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>cert
 <span class="w">    </span>-<span class="w"> </span>--cert-file<span class="o">=</span>/etc/kubernetes/pki/etcd/server.crt
 <span class="w">    </span>-<span class="w"> </span>--client-cert-auth<span class="o">=</span><span class="nb">true</span>
@@ -10427,22 +10427,22 @@ controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">
 <p class="admonition-title">Warning</p>
 <p>ETCD can have its own CA. So this may be a different CA certificate than the one used by kube-api server.</p>
 </div>
-<div class="highlight"><span class="filename">Identify the ETCD Server CA Root Certificate used to serve ETCD Server.</span><pre><span></span><code><span class="c1"># Cert file is shown below as `peer-trusted-ca-file` property</span>
+<div class="language-bash highlight"><span class="filename">Identify the ETCD Server CA Root Certificate used to serve ETCD Server.</span><pre><span></span><code><span class="c1"># Cert file is shown below as `peer-trusted-ca-file` property</span>
 controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>cat<span class="w"> </span>/etc/kubernetes/manifests/etcd.yaml<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>ca
 <span class="w">    </span>-<span class="w"> </span>--peer-trusted-ca-file<span class="o">=</span>/etc/kubernetes/pki/etcd/ca.crt
 <span class="w">    </span>-<span class="w"> </span>--trusted-ca-file<span class="o">=</span>/etc/kubernetes/pki/etcd/ca.crt
 <span class="w">  </span>priorityClassName:<span class="w"> </span>system-node-critical
 </code></pre></div>
-<div class="highlight"><span class="filename">check for issuer of certificate</span><pre><span></span><code><span class="c1"># check for issuer in this command</span>
+<div class="language-bash highlight"><span class="filename">check for issuer of certificate</span><pre><span></span><code><span class="c1"># check for issuer in this command</span>
 <span class="w"> </span>openssl<span class="w"> </span>x509<span class="w"> </span>-in<span class="w"> </span>/etc/kubernetes/pki/apiserver.crt<span class="w"> </span>-text
 </code></pre></div>
-<div class="highlight"><span class="filename">Which of the below alternate names is not configured on the Kube API Server Certificate?</span><pre><span></span><code><span class="c1"># Look at Alternative Names.</span>
+<div class="language-bash highlight"><span class="filename">Which of the below alternate names is not configured on the Kube API Server Certificate?</span><pre><span></span><code><span class="c1"># Look at Alternative Names.</span>
 openssl<span class="w"> </span>x509<span class="w"> </span>-in<span class="w"> </span>/etc/kubernetes/pki/apiserver.crt<span class="w"> </span>-text
 </code></pre></div>
-<div class="highlight"><span class="filename">What is the Common Name (CN) configured on the ETCD Server certificate?</span><pre><span></span><code><span class="c1"># check for Subject CN here</span>
+<div class="language-bash highlight"><span class="filename">What is the Common Name (CN) configured on the ETCD Server certificate?</span><pre><span></span><code><span class="c1"># check for Subject CN here</span>
 openssl<span class="w"> </span>x509<span class="w"> </span>-in<span class="w"> </span>/etc/kubernetes/pki/etcd/server.crt<span class="w"> </span>--text
 </code></pre></div>
-<div class="highlight"><span class="filename">How long, from the issued date, is the Kube-API Server Certificate valid for?</span><pre><span></span><code><span class="c1"># Check expiry date in this file </span>
+<div class="language-bash highlight"><span class="filename">How long, from the issued date, is the Kube-API Server Certificate valid for?</span><pre><span></span><code><span class="c1"># Check expiry date in this file </span>
 openssl<span class="w"> </span>x509<span class="w"> </span>-in<span class="w"> </span>/etc/kubernetes/pki/apiserver.crt<span class="w">  </span>--text
 </code></pre></div>
 <h2 id="check-kube-api-server-logs">Check Kube <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> Server logs 📋<a class="headerlink" href="#check-kube-api-server-logs" title="Link to this section">&para;</a></h2>
@@ -10450,19 +10450,19 @@ openssl<span class="w"> </span>x509<span class="w"> </span>-in<span class="w"> <
 <h2 id="kubeconfig">Kubeconfig 🗂️<a class="headerlink" href="#kubeconfig" title="Link to this section">&para;</a></h2>
 <p>A Kubeconfig is a YAML file with all the Kubernetes cluster details, certificates, and secret token to authenticate the cluster. You might get this config file directly from the cluster administrator or from a cloud platform if you are using managed Kubernetes cluster.</p>
 <p><center> <img src="../../images/kube-config-file.jpg" alt="Kube config file" width="70%"> </center></p>
-<div class="highlight"><span class="filename">Default location for kubeconfig is</span><pre><span></span><code>~/.kube/config
+<div class="language-bash highlight"><span class="filename">Default location for kubeconfig is</span><pre><span></span><code>~/.kube/config
 </code></pre></div>
-<div class="highlight"><span class="filename">See current context</span><pre><span></span><code>kubectl<span class="w"> </span>config<span class="w"> </span>--kubeconfig<span class="o">=</span>/root/my-kube-config<span class="w"> </span>current-context
+<div class="language-bash highlight"><span class="filename">See current context</span><pre><span></span><code>kubectl<span class="w"> </span>config<span class="w"> </span>--kubeconfig<span class="o">=</span>/root/my-kube-config<span class="w"> </span>current-context
 </code></pre></div>
 <h3 id="update-context">update context 🔀<a class="headerlink" href="#update-context" title="Link to this section">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>config<span class="w"> </span>--kubeconfig<span class="o">=</span>/root/my-kube-config<span class="w"> </span>use-context<span class="w"> </span>research
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>config<span class="w"> </span>--kubeconfig<span class="o">=</span>/root/my-kube-config<span class="w"> </span>use-context<span class="w"> </span>research
 
 <span class="c1"># if using the default context file, then</span>
 kubectl<span class="w"> </span>config<span class="w"> </span>use-context<span class="w"> </span>&lt;amar-dev-cluster&gt;
 </code></pre></div>
 <h3 id="using-the-kubeconfig-file-with-kubectl">Using the Kubeconfig File With Kubectl ⌨️<a class="headerlink" href="#using-the-kubeconfig-file-with-kubectl" title="Link to this section">&para;</a></h3>
 <p>You can pass the Kubeconfig file with the Kubectl command to override the current context and KUBECONFIG env variable.</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>--kubeconfig<span class="o">=</span><span class="nv">$HOME</span>/.kube/dev_cluster_config
+<div class="language-bash highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>--kubeconfig<span class="o">=</span><span class="nv">$HOME</span>/.kube/dev_cluster_config
 </code></pre></div>
 <h2 id="network-policy">Network Policy 🧱<a class="headerlink" href="#network-policy" title="Link to this section">&para;</a></h2>
 <ul>
@@ -10479,7 +10479,7 @@ kubectl<span class="w"> </span>config<span class="w"> </span>use-context<span cl
 Meanwhile, when IP based NetworkPolicies are created, we define policies based on IP blocks (<abbr title="Classless Inter-Domain Routing: a way to write IP ranges, like 10.0.0.0/16">CIDR</abbr> ranges).</p>
 </div>
 <p>A sample Network policy is shown below</p>
-<div class="highlight"><pre><span></span><code>apiVersion:<span class="w"> </span>networking.k8s.io/v1
+<div class="language-bash highlight"><pre><span></span><code>apiVersion:<span class="w"> </span>networking.k8s.io/v1
 kind:<span class="w"> </span>NetworkPolicy
 metadata:
 <span class="w">  </span>name:<span class="w"> </span>internal-policy
@@ -10505,7 +10505,7 @@ spec:
 <span class="w">      </span>ports:
 <span class="w">        </span>-<span class="w"> </span>protocol:<span class="w"> </span>TCP
 <span class="w">          </span>port:<span class="w"> </span><span class="m">3306</span>
-</code></pre></div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Admin<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../../k8s/admin/storage/">Storage →</a></p></li><li><p class="rn__kicker">Admin<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../../k8s/admin/scheduler/">Scheduler →</a></p></li></ul></div>
+</code></pre></div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../../k8s/admin/storage/" style="--s1: 124, 58, 237; --s2: 168, 85, 247"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3C7.58 3 4 4.79 4 7v10c0 2.21 3.59 4 8 4s8-1.79 8-4V7c0-2.21-3.58-4-8-4m6 14c0 .5-2.13 2-6 2s-6-1.5-6-2v-2.23c1.61.78 3.72 1.23 6 1.23s4.39-.45 6-1.23zm0-4.55c-1.3.95-3.58 1.55-6 1.55s-4.7-.6-6-1.55V9.64c1.47.83 3.61 1.36 6 1.36s4.53-.53 6-1.36zM12 9C8.13 9 6 7.5 6 7s2.13-2 6-2 6 1.5 6 2-2.13 2-6 2"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☸️</span> Kubernetes / Admin</span><span class="rn-card__title">Storage</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../../k8s/admin/scheduler/" style="--s1: 124, 58, 237; --s2: 168, 85, 247"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 13h1.5v2.82l2.44 1.41-.75 1.3L15 16.69zm4-5H5v11h4.67c-.43-.91-.67-1.93-.67-3a7 7 0 0 1 7-7c1.07 0 2.09.24 3 .67zM5 21a2 2 0 0 1-2-2V5c0-1.11.89-2 2-2h1V1h2v2h8V1h2v2h1a2 2 0 0 1 2 2v6.1c1.24 1.26 2 2.99 2 4.9a7 7 0 0 1-7 7c-1.91 0-3.64-.76-4.9-2zm11-9.85A4.85 4.85 0 0 0 11.15 16c0 2.68 2.17 4.85 4.85 4.85A4.85 4.85 0 0 0 20.85 16c0-2.68-2.17-4.85-4.85-4.85"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☸️</span> Kubernetes / Admin</span><span class="rn-card__title">Scheduler</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10618,6 +10618,8 @@ spec:
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10633,6 +10635,16 @@ spec:
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

@@ -9922,12 +9922,12 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="kube-proxy">Kube Proxy<a class="headerlink" href="#kube-proxy" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 1 min read</p>
+<header class="page-head" style="--s1: 124, 58, 237; --s2: 168, 85, 247"><p class="page-head__pill"><span>☸️</span> Kubernetes / Architecture</p><h1 id="kube-proxy">Kube <span class="page-head__accent">Proxy</span><a class="headerlink" href="#kube-proxy" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 1 min read</span></p></header>
 <ul>
 <li>The Kubernetes network proxy runs on each node.</li>
 <li>It is used to setup the pod network, which is an internal network</li>
 <li>Kube proxy create an <code>iptable</code> route for each service, so that the traffic to the service is directed to the right pod.</li>
-</ul><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Architecture<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../../k8s/arch/scheduler/">Scheduler →</a></p></li><li><p class="rn__kicker">Architecture<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../../k8s/arch/apiserver/">API Server →</a></p></li></ul></div>
+</ul><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../../k8s/arch/scheduler/" style="--s1: 124, 58, 237; --s2: 168, 85, 247"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16v-3c0-1.11-.89-2-2-2h-6V8h2V2H9v6h2v3H5c-1.11 0-2 .89-2 2v3H1v6h6v-6H5v-3h6v3H9v6h6v-6h-2v-3h6v3h-2v6h6v-6zM11 4h2v2h-2zM5 20H3v-2h2zm8 0h-2v-2h2zm8 0h-2v-2h2z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☸️</span> Kubernetes / Architecture</span><span class="rn-card__title">Scheduler</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../../k8s/arch/apiserver/" style="--s1: 124, 58, 237; --s2: 168, 85, 247"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 7H5a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2m0 4H5V9h2m7-2h-4v10h2v-4h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2m0 4h-2V9h2m6 0v6h1v2h-4v-2h1V9h-1V7h4v2Z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☸️</span> Kubernetes / Architecture</span><span class="rn-card__title">API Server</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10040,6 +10040,8 @@ as the main headline.
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10055,6 +10057,16 @@ as the main headline.
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

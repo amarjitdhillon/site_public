@@ -10000,7 +10000,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="replica-set">Replica Set <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 16.54 7.37-5.74L21 12.07l-9 7-9-7 1.62-1.26zM12 14 3 7l9-7 9 7zm0-11.47L6.26 7 12 11.47 17.74 7zm0 18.94 7.37-5.74L21 17l-9 7-9-7 1.62-1.26z"/></svg></span><a class="headerlink" href="#replica-set" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 1 min read</p>
+<header class="page-head" style="--s1: 124, 58, 237; --s2: 168, 85, 247"><p class="page-head__pill"><span>☸️</span> Kubernetes / Resources</p><h1 id="replica-set">Replica <span class="page-head__accent">Set</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 16.54 7.37-5.74L21 12.07l-9 7-9-7 1.62-1.26zM12 14 3 7l9-7 9 7zm0-11.47L6.26 7 12 11.47 17.74 7zm0 18.94 7.37-5.74L21 17l-9 7-9-7 1.62-1.26z"/></svg></span><a class="headerlink" href="#replica-set" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 1 min read</span></p></header>
 <ul>
 <li>Replication controller (RC) is the old tech while Replica Set (RS) is the new one.</li>
 <li>A ReplicaSet's purpose is to maintain a stable set of replica Pods running at any given time. As such, it is often used to guarantee the availability of <mark>a specified number of identical Pods</mark>.</li>
@@ -10012,13 +10012,13 @@ as the main headline.
 <p><code>ReplicaSet</code> ensures that a specified number of pod replicas are running at any given time. However, a Deployment is a higher-level concept that manages ReplicaSets and provides declarative updates to Pods along with a lot of other useful features.</p>
 </div>
 <h2 id="imperative-create">Imperative create ✍️<a class="headerlink" href="#imperative-create" title="Link to this section">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>k<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>RS-FILE.YAML
+<div class="language-shell highlight"><pre><span></span><code>k<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>RS-FILE.YAML
 
 <span class="c1"># or use this one</span>
 k<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>RS-FILE.YAML
 </code></pre></div>
 <p>A sample file is given below
-<div class="highlight"><pre><span></span><code>apiVersion:<span class="w"> </span>apps/v1
+<div class="language-shell highlight"><pre><span></span><code>apiVersion:<span class="w"> </span>apps/v1
 kind:<span class="w"> </span>ReplicaSet
 metadata:
 <span class="w">  </span>name:<span class="w"> </span>frontend
@@ -10041,7 +10041,7 @@ spec:
 <span class="w">        </span>image:<span class="w"> </span>gcr.io/google_samples/gb-frontend:v3
 </code></pre></div></p>
 <h2 id="scaling-an-rs">Scaling an RS 📏<a class="headerlink" href="#scaling-an-rs" title="Link to this section">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="c1"># Get the values from the file</span>
+<div class="language-shell highlight"><pre><span></span><code><span class="c1"># Get the values from the file</span>
 k<span class="w"> </span>replace<span class="w"> </span>-f<span class="w"> </span>RS-FILE.YAML
 
 <span class="c1"># the file will be used while replicas will be replaced by the number you specify</span>
@@ -10049,7 +10049,7 @@ k<span class="w"> </span>scale<span class="w"> </span>--replicas<span class="o">
 
 <span class="c1"># this one is recommended if already existing</span>
 k<span class="w"> </span>scale<span class="w"> </span>--replicas<span class="o">=</span><span class="m">6</span><span class="w"> </span>rs<span class="w"> </span>RS-NAME
-</code></pre></div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Resources<span class="rn__time"> · 2 min read</span></p><p class="rn__title"><a href="../../k8s/ns/">Namespace →</a></p></li><li><p class="rn__kicker">Resources<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../k8s/node-affinity/">Node Affinity →</a></p></li></ul></div>
+</code></pre></div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../k8s/ns/" style="--s1: 124, 58, 237; --s2: 168, 85, 247"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h6l2 2zM2 6v14h18v2H2a2 2 0 0 1-2-2V6zm4 0v10h16V6z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☸️</span> Kubernetes / Resources</span><span class="rn-card__title">Namespace</span><span class="rn-card__meta">⏱️ 2 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../k8s/node-affinity/" style="--s1: 124, 58, 237; --s2: 168, 85, 247"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 7v6a9 9 0 0 0 9 9 9 9 0 0 0 9-9V7h-4v6a5 5 0 0 1-5 5 5 5 0 0 1-5-5V7m10-2h4V2h-4M3 5h4V2H3"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☸️</span> Kubernetes / Resources</span><span class="rn-card__title">Node Affinity</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10162,6 +10162,8 @@ k<span class="w"> </span>scale<span class="w"> </span>--replicas<span class="o">
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../javascripts/about.js"></script>
@@ -10177,6 +10179,16 @@ k<span class="w"> </span>scale<span class="w"> </span>--replicas<span class="o">
         <script src="../../javascripts/tilt.js"></script>
       
         <script src="../../javascripts/headings.js"></script>
+      
+        <script src="../../javascripts/edgeray.js"></script>
+      
+        <script src="../../javascripts/tabs.js"></script>
+      
+        <script src="../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../javascripts/diagram.js"></script>
+      
+        <script src="../../javascripts/postside.js"></script>
       
         <script src="../../javascripts/magnetic.js"></script>
       

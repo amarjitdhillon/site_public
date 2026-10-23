@@ -9959,139 +9959,11 @@
     <div class="md-content__inner">
       <header class="md-typeset">
         <h1 id="migration">Migration<a class="headerlink" href="#migration" title="Link to this section">&para;</a></h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
+      </header><div class="post-cards post-cards--blog">
         
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/amarjitdhillon" alt="Amarjit Dhillon">
-          </span>
+          <a class="post-card pc-pat-0 " href="../../2024/08/15/6rs-of-cloud-migration-/" style="--pc-grad: linear-gradient(135deg, #0ea5e9 0%, #4f46e5 100%)"><span class="post-card__cover" aria-hidden="true"><span class="post-card__kicker">Migration</span><span class="post-card__cover-title">6R&#x27;s of Cloud Migration</span><span class="post-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 19c0 .34.04.67.09 1H6.5c-1.5 0-2.81-.5-3.89-1.57C1.54 17.38 1 16.09 1 14.58q0-1.95 1.17-3.48C3.34 9.57 4 9.43 5.25 9.15c.42-1.53 1.25-2.77 2.5-3.72S10.42 4 12 4c1.95 0 3.6.68 4.96 2.04S19 9.05 19 11c1.15.13 2.1.63 2.86 1.5.51.57.84 1.21 1 1.92A5.9 5.9 0 0 0 19 13h-2v-2c0-1.38-.5-2.56-1.46-3.54C14.56 6.5 13.38 6 12 6s-2.56.5-3.54 1.46C7.5 8.44 7 9.62 7 11h-.5c-.97 0-1.79.34-2.47 1.03-.69.68-1.03 1.5-1.03 2.47s.34 1.79 1.03 2.5c.68.66 1.5 1 2.47 1h6.59c-.05.33-.09.66-.09 1m5-3-3 3 3 3v-2h4v-2h-4z"/></svg></span></span><span class="post-card__body"><span class="post-card__meta">Aug 15, 2024, 5 min read</span><span class="post-card__title">6R&#x27;s of Cloud Migration</span><span class="post-card__desc">Rehost, replatform, refactor and friends: the six ways to move an app to the cloud</span></span></a>
         
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-08-15 00:00:00">August 15, 2024</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="./" class="md-meta__link">Migration</a>, 
-              <a href="../architecture/" class="md-meta__link">Architecture</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              5 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="6rs-of-cloud-migration"><a class="toclink" href="../../2024/08/15/6rs-of-cloud-migration-/">6R's of Cloud Migration 🧭</a></h2>
-<p>Here are the 6 R's of cloud migration</p>
-<p><center> <img src="/blog/images/6rs.gif" alt="6rs" width="95%"> </center></p>
-<h3 id="6rs"><a class="toclink" href="../../2024/08/15/6rs-of-cloud-migration-/#6rs">6R's</a></h3>
-<h4 id="retire"><a class="toclink" href="../../2024/08/15/6rs-of-cloud-migration-/#retire">Retire 👴</a></h4>
-<p>Decommissioning of the unnecessary workloads</p>
-<h4 id="retaining"><a class="toclink" href="../../2024/08/15/6rs-of-cloud-migration-/#retaining">Retaining 📝</a></h4>
-<p>Don’t move something to the cloud while move some pieces</p>
-<h4 id="rehost-lift-and-shift-using-iaas"><a class="toclink" href="../../2024/08/15/6rs-of-cloud-migration-/#rehost-lift-and-shift-using-iaas">Rehost (lift and shift using <abbr title="Infrastructure as a Service: you rent servers, storage and networks">IaaS</abbr>) 🏚️</a></h4>
-<div class="admonition remember">
-<p>No re-factoring or code changes needed</p>
-</div>
-<p>Migrate your applications first using the rehosting approach ("lift-and-shift"). With rehosting, you move an existing application to the cloud as-is and modernize it later.</p>
-<p><center> 
-<img width="100%" src="/blog/images/rehost.jpeg" alt="Rehost"></p>
-<figcaption>Re-host example</figcaption>
-<p></center></p>
-<p>Rehosting has four major benefits:</p>
-<ul>
-<li><code>Immediate sustainability</code>: The lift-and-shift approach is the fastest way to reduce your data center footprint. </li>
-<li><code>Immediate cost savings</code>: Using comparable cloud solutions will let you trade capital expenses with operational expenses. Pay-as-you-go and only pay for what you use. </li>
-<li><code>IaaS solutions</code>: <abbr title="Infrastructure as a Service: you rent servers, storage and networks">IaaS</abbr> virtual machines (VMs) provide immediate compatibility with existing on-premises applications. Migrate your workloads to Azure Virtual Machines and modernize while in the cloud. Some on-premises applications can move to an application platform with minimal effort. We recommend Azure App Service as a first option with <abbr title="Infrastructure as a Service: you rent servers, storage and networks">IaaS</abbr> solutions able to host all applications. </li>
-<li><code>Immediate cloud-readiness test</code>: Test your migration to ensure your organization has the people and processes in place to adopt the cloud. Migrating a minimum viable product is a great approach to test the cloud readiness of your organization.</li>
-</ul>
-<h4 id="re-purchasing-saas"><a class="toclink" href="../../2024/08/15/6rs-of-cloud-migration-/#re-purchasing-saas">Re-purchasing (<abbr title="Software as a Service: ready-to-use software you just sign into">SaaS</abbr>) 💰</a></h4>
-<p>To buy <abbr title="Software as a Service: ready-to-use software you just sign into">SaaS</abbr> alternatives.Most organizations replace about 15% of their applications with software-as-a-service (<abbr title="Software as a Service: ready-to-use software you just sign into">SaaS</abbr>) and low-code solutions. They see the value in moving "from" technologies with management overhead ("control") and moving "to" solutions that let them focus on achieving their objectives ("productivity").</p>
-<p><center> 
-<img width="100%" src="/blog/images/re-purchase.jpeg" alt="Re purchase"></p>
-<figcaption>Re-purchase example</figcaption>
-<p></center></p>
-<h4 id="re-platforming-paas"><a class="toclink" href="../../2024/08/15/6rs-of-cloud-migration-/#re-platforming-paas">Re-platforming (<abbr title="Platform as a Service: the provider runs the platform, you bring the code">PaaS</abbr>) 📦</a></h4>
-<div class="admonition warning">
-<p>It means lift and shift + some tuning. Replatforming, also known as “lift, tinker, and shift,” involves making a few cloud optimizations to realize a tangible benefit. Optimization is achieved without changing the core architecture of the application.</p>
-</div>
-<p><center> 
-<img width="100%" src="/blog/images/re-platform.jpeg" alt="Re platform"></p>
-<figcaption>Re-platform example</figcaption>
-<p></center></p>
-<p>Modernize or re-platform your applications first. In this approach, you change parts of an application during the migration process.</p>
-<h4 id="refactoring"><a class="toclink" href="../../2024/08/15/6rs-of-cloud-migration-/#refactoring">Refactoring 🏭</a></h4>
-<p>Rebuilding the apps from scratch. it's very expensive but being able to use all max benefits of the cloud</p>
-<p><center> 
-<img width="100%" src="/blog/images/re-factor.jpeg" alt="Re factor"></p>
-<figcaption>Re-factor example</figcaption>
-<p></center></p>
-<h4 id="retire_1"><a class="toclink" href="../../2024/08/15/6rs-of-cloud-migration-/#retire_1">Retire</a></h4>
-<p>We recommend retiring any workloads your organization doesn't need. You'll need to do some discovery and inventory to find applications and environments that aren't worth the investment to keep. The goal of retiring is to be cost and time efficient. Shrinking your portfolio before you move to the cloud allows your team to focus on the most important assets.</p>
-<p><center> 
-<img width="100%" src="/blog/images/retire.jpeg" alt="Retire"></p>
-<figcaption>Retire example</figcaption>
-<p></center></p>
-<h3 id="aws-migration-evaluator"><a class="toclink" href="../../2024/08/15/6rs-of-cloud-migration-/#aws-migration-evaluator">AWS Migration Evaluator 🤔</a></h3>
-<p><center> 
-<img width="100%" src="/blog/images/migration-evaluator.jpeg" alt="Migration evaluator"></p>
-<figcaption>Migration Evaluator</figcaption>
-<p></center></p>
-<h3 id="migration-hub"><a class="toclink" href="../../2024/08/15/6rs-of-cloud-migration-/#migration-hub">Migration Hub 🏛️</a></h3>
-<p><center> 
-<img width="100%" src="/blog/images/migration-hub.png" alt="Migration hub"></p>
-<figcaption>Migration Evaluator</figcaption>
-<p></center></p>
-<p>AWS <code>Migration Hub</code> provides a single place to <mark>discover your existing servers, plan migrations, and track the status of each application migration</mark>. Before migrating you can discover information about your <code>on-premises server</code> and application resources to help you build a business case for migrating or to build a <em>migration plan</em>.</p>
-<p>Discovering your servers first is an optional starting point for migrations, gathering detailed server information, and then grouping the discovered servers into applications to be migrated and tracked. Migration Hub also gives you the choice to start migrating right away and to group servers during migration.</p>
-<div class="admonition important">
-<p class="admonition-title">Partners get exclusive tools 🖥️</p>
-<p>Using <code>Migration Hub</code> allows you to choose the AWS and <strong>partner migration tools</strong> that best fit your needs, while providing visibility into the status of migrations across your application portfolio.</p>
-</div>
-<p>You get the data about your servers and applications into the <code>AWS Migration Hub console</code> by using the following discovery tools.</p>
-<ul>
-<li><strong>Application Discovery Service Agentless Collector</strong> – Agentless Collector is an <code>on-premises application</code> that collects information through agentless methods about your on-premises environment, including server profile information (for example, OS, number of CPUs, amount of RAM), database metadata (for example, version, edition, numbers of tables and schemas), and server utilization metrics. </li>
-</ul>
-<p><center> 
-<img width="100%" src="/blog/images/agentless.png" alt="Agentless"></p>
-<figcaption>Agentless</figcaption>
-<p></center></p>
-<p>You install the Agentless Collector as a virtual machine (VM) in your VMware vCenter Server environment using an Open Virtualization Archive (OVA) file. </p>
-<ul>
-<li><strong>AWS Application Discovery Agent</strong> – The Discovery Agent is AWS software that you install on your on-premises servers and VMs to capture system configuration, system performance, running processes, and details of the network connections between systems.</li>
-</ul>
-<p><center> 
-<img width="100%" src="/blog/images/agent-based.png" alt="Agent based"></p>
-<figcaption>Agent Based</figcaption>
-<p></center></p>
-<p>Agents support most Linux and Windows operating systems, and you can deploy them on physical on-premises servers, Amazon <abbr title="Elastic Compute Cloud: virtual servers on AWS">EC2</abbr> instances, and virtual machines. </p>
-<ul>
-<li>
-<p><strong>Migration Evaluator Collector</strong> – Migration Evaluator is a migration assessment service that helps you create a directional business case for AWS cloud planning and migration. The information that the Migration Evaluator collects includes server profile information (for example, OS, number of CPUs, amount of RAM), <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> Server metadata (for example, version and edition), utilization metrics, and network connections. </p>
-</li>
-<li>
-<p><strong>Migration Hub import</strong> – With Migration Hub import, you can import information about your on-premises servers and applications into Migration Hub, including server specifications and utilization data. You can also use this data to track the status of application migrations. </p>
-</li>
-</ul>
-    
-  </div>
-</article>
-      
+      </div>
       
         
           
@@ -10150,6 +10022,8 @@
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10165,6 +10039,16 @@
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

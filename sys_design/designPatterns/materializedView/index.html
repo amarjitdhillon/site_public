@@ -9991,9 +9991,9 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="materialized-view">Materialized View <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 20c0-.55-.45-1-1-1h-1v-2h6c1.11 0 2-.89 2-2V3a2 2 0 0 0-2-2H5c-1.1 0-2 .9-2 2v12a2 2 0 0 0 2 2h6v2h-1c-.55 0-1 .45-1 1H2v2h7c0 .55.45 1 1 1h4c.55 0 1-.45 1-1h7v-2zM13 5h6v4h-6zm0 6h6v4h-6zM5 5h6v4H5zm0 10v-4h6v4z"/></svg></span><a class="headerlink" href="#materialized-view" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 2 min read</p>
+<header class="page-head" style="--s1: 22, 163, 74; --s2: 20, 184, 166"><p class="page-head__pill"><span>🧩</span> System design / Design Patterns</p><h1 id="materialized-view">Materialized <span class="page-head__accent">View</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 20c0-.55-.45-1-1-1h-1v-2h6c1.11 0 2-.89 2-2V3a2 2 0 0 0-2-2H5c-1.1 0-2 .9-2 2v12a2 2 0 0 0 2 2h6v2h-1c-.55 0-1 .45-1 1H2v2h7c0 .55.45 1 1 1h4c.55 0 1-.45 1-1h7v-2zM13 5h6v4h-6zm0 6h6v4h-6zM5 5h6v4H5zm0 10v-4h6v4z"/></svg></span><a class="headerlink" href="#materialized-view" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 2 min read</span></p></header>
 <div class="admonition tldr">
-<p class="admonition-title">Tldr</p>
+<p class="admonition-title">TL;<abbr title="Disaster Recovery: getting systems back after a major outage">DR</abbr></p>
 <p>Generate <code>prepopulated views</code> over the data in one or more data stores when the data is formatted in a way that does not favor the required query operations. This pattern can help to support efficient querying and data extraction, and improve application performance.</p>
 </div>
 <h2 id="problem-context">Problem Context ❓<a class="headerlink" href="#problem-context" title="Link to this section">&para;</a></h2>
@@ -10004,7 +10004,7 @@ as the main headline.
 <p>To support efficient querying, a common solution is to generate, in advance, a view that materializes the data in a format most suited to the required results set. The Materialized View pattern describes generating prepopulated views of data in environments where the source data is not in a format that is suitable for querying, where generating a suitable query is difficult, or where query performance is poor due to the nature of the data or the data store.</p>
 <p>These <code>materialized views</code>, which contain only data required by a query, allow applications to quickly obtain the information they need. In additionto joining tables or combining data entities, materialized views may include the current values of calculated columns or data items, the results of combining values or executing transformations on the data items, and values specified as part of the query. A materialized view may even be optimized for just a single query.</p>
 <p>A key point is that a materialized view and the data it contains is completely disposable because it can be entirely rebuilt from the source data stores. A materialized view is never updated directly by an application, and so it is effectively a specialized cache.</p>
-<p>When the source data for the view changes, the view must be updated to include the new information. This may occur automatically on an appropriate schedule, or when the system detects a change to the original data. In other cases it may be necessary to regenerate the view manually.</p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Design Patterns<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../../sys_design/designPatterns/priority_queue/">Priority Queue →</a></p></li><li><p class="rn__kicker">Design Patterns<span class="rn__time"> · 3 min read</span></p><p class="rn__title"><a href="../../../sys_design/designPatterns/saga/">Saga →</a></p></li></ul></div>
+<p>When the source data for the view changes, the view must be updated to include the new information. This may occur automatically on an appropriate schedule, or when the system detects a change to the original data. In other cases it may be necessary to regenerate the view manually.</p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../../sys_design/designPatterns/priority_queue/" style="--s1: 22, 163, 74; --s2: 20, 184, 166"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 6h12v2H6zm0 4.5h12v2H6zM6 15h12v2H6zm3 4h6l-3 3zM9 2h6l-3 3z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🧩</span> System design / Design Patterns</span><span class="rn-card__title">Priority Queue</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../../sys_design/designPatterns/saga/" style="--s1: 22, 163, 74; --s2: 20, 184, 166"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 11h-3.18C14.4 9.84 13.3 9 12 9s-2.4.84-2.82 2H6c-.33 0-2-.1-2-2V8c0-1.83 1.54-2 2-2h10.18C16.6 7.16 17.7 8 19 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3c-1.3 0-2.4.84-2.82 2H6C4.39 4 2 5.06 2 8v1c0 2.94 2.39 4 4 4h3.18c.42 1.16 1.52 2 2.82 2s2.4-.84 2.82-2H18c.33 0 2 .1 2 2v1c0 1.83-1.54 2-2 2H7.82C7.4 16.84 6.3 16 5 16a3 3 0 0 0-3 3 3 3 0 0 0 3 3c1.3 0 2.4-.84 2.82-2H18c1.61 0 4-1.07 4-4v-1c0-2.93-2.39-4-4-4m1-7a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1M5 20a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🧩</span> System design / Design Patterns</span><span class="rn-card__title">Saga</span><span class="rn-card__meta">⏱️ 3 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10117,6 +10117,8 @@ as the main headline.
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10132,6 +10134,16 @@ as the main headline.
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

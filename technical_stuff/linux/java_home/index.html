@@ -9930,29 +9930,29 @@ as the main headline.
 <ol>
 <li>
 <p>Open the <code>/etc/environment</code> file as</p>
-<div class="highlight"><pre><span></span><code>vim<span class="w"> </span>/etc/environment
+<div class="language-bash highlight"><pre><span></span><code>vim<span class="w"> </span>/etc/environment
 </code></pre></div>
 </li>
 <li>
 <p>Then set <code>java_home</code> using</p>
-<div class="highlight"><pre><span></span><code><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="s2">&quot;/usr/lib/jvm/java-8-oracle&quot;</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="nv">JAVA_HOME</span><span class="o">=</span><span class="s2">&quot;/usr/lib/jvm/java-8-oracle&quot;</span>
 <span class="nb">export</span><span class="w"> </span>JAVA_HOME
 </code></pre></div>
 </li>
 <li>
 <p>Open bash profile as</p>
-<div class="highlight"><pre><span></span><code>vim<span class="w"> </span>~<span class="se">\.</span>bash_profile
+<div class="language-bash highlight"><pre><span></span><code>vim<span class="w"> </span>~<span class="se">\.</span>bash_profile
 </code></pre></div>
 </li>
 <li>
 <p>Then add the following,</p>
-<div class="highlight"><pre><span></span><code>.<span class="w">  </span>/etc/environment
+<div class="language-bash highlight"><pre><span></span><code>.<span class="w">  </span>/etc/environment
 </code></pre></div>
 <p>It will load the <code>/etc/environment</code> every time terminal is started</p>
 </li>
 <li>
 <p>Then confirm the path using</p>
-<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$JAVA_HOME</span>
+<div class="language-bash highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span><span class="nv">$JAVA_HOME</span>
 </code></pre></div>
 </li>
 </ol>
@@ -10068,6 +10068,8 @@ as the main headline.
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10083,6 +10085,16 @@ as the main headline.
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

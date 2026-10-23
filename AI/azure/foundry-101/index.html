@@ -10069,10 +10069,15 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="foundry-101">Foundry 101 <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.78 15.3 6 6 2.11-2.16-6-6zm3.72-5.2c-.39 0-.81-.05-1.14-.19L4.97 21.25l-2.11-2.11 7.41-7.4L8.5 9.96l-.72.7-1.45-1.41v2.86l-.7.7-3.52-3.56.7-.7h2.81l-1.4-1.41 3.56-3.56a2.976 2.976 0 0 1 4.22 0L9.89 5.74l1.41 1.4-.71.71 1.79 1.78 1.82-1.88c-.14-.33-.2-.75-.2-1.12a3.49 3.49 0 0 1 3.5-3.52c.59 0 1.11.14 1.58.42L16.41 6.2l1.5 1.5 2.67-2.67c.28.47.42.97.42 1.6 0 1.92-1.55 3.47-3.5 3.47"/></svg></span><a class="headerlink" href="#foundry-101" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 4 min read</p>
+<header class="page-head" style="--s1: 219, 39, 119; --s2: 147, 51, 234"><p class="page-head__pill"><span>🤖</span> Artificial Intelligence / Azure</p><h1 id="foundry-101">Foundry <span class="page-head__accent">101</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m13.78 15.3 6 6 2.11-2.16-6-6zm3.72-5.2c-.39 0-.81-.05-1.14-.19L4.97 21.25l-2.11-2.11 7.41-7.4L8.5 9.96l-.72.7-1.45-1.41v2.86l-.7.7-3.52-3.56.7-.7h2.81l-1.4-1.41 3.56-3.56a2.976 2.976 0 0 1 4.22 0L9.89 5.74l1.41 1.4-.71.71 1.79 1.78 1.82-1.88c-.14-.33-.2-.75-.2-1.12a3.49 3.49 0 0 1 3.5-3.52c.59 0 1.11.14 1.58.42L16.41 6.2l1.5 1.5 2.67-2.67c.28.47.42.97.42 1.6 0 1.92-1.55 3.47-3.5 3.47"/></svg></span><a class="headerlink" href="#foundry-101" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 4 min read</span><span class="page-head__chip">🗓️ Updated Oct 2026</span><span class="page-head__chip">▶️ Interactive diagram</span></p></header>
 <div class="admonition abstract">
 <p class="admonition-title">TL;<abbr title="Disaster Recovery: getting systems back after a major outage">DR</abbr> 🚀</p>
-<p><strong>Microsoft Foundry</strong> (formerly Azure AI Foundry) is one Azure resource that holds everything for building AI apps and agents 🏗️ The <strong>resource</strong> is the governance boundary: networking, <abbr title="Role-Based Access Control: permissions given to roles, and people get roles">RBAC</abbr>, encryption, model deployments and connections are set once there. <strong>Projects</strong> inside it give each team its own files, agents and evaluations without new infrastructure. On top sit six capability layers, from Tools and Models up to Foundry <abbr title="Foundry IQ: the knowledge and retrieval layer for agents">IQ</abbr>, Agent Service and the Control Plane 🧱</p>
+<p><strong>Microsoft Foundry</strong> (formerly Azure AI Foundry) is one Azure resource that holds everything for building AI apps and agents 🏗️</p>
+<ul>
+<li>The <strong>resource</strong> is the governance boundary: networking, <abbr title="Role-Based Access Control: permissions given to roles, and people get roles">RBAC</abbr>, encryption, model deployments and connections are set once there</li>
+<li><strong>Projects</strong> inside it give each team its own files, agents and evaluations without new infrastructure</li>
+</ul>
+<p>On top sit six capability layers, from Tools and Models up to Foundry <abbr title="Foundry IQ: the knowledge and retrieval layer for agents">IQ</abbr>, Agent Service and the Control Plane 🧱</p>
 </div>
 <h2 id="the-resource-model">The resource model 🏢<a class="headerlink" href="#the-resource-model" title="Link to this section">&para;</a></h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">▶️ Step by step</label><label for="__tabbed_1_2">🖼️ Static</label></div>
@@ -10171,6 +10176,10 @@ as the main headline.
 <li>Split into <strong>separate Foundry resources</strong> only when the governance must differ: another region for data residency, a different network setup, or a separate billing owner</li>
 </ul>
 </div>
+<div class="admonition example">
+<p class="admonition-title">Three teams, one resource 🏢</p>
+<p>HR, finance and support each get a project on the same Foundry resource: shared model deployments and content filters, separate agents and evals. Then a fourth team needs its data kept in the EU... that's when you spin up a second resource in an EU region</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Things to watch ⚠️</p>
 <ul>
@@ -10179,12 +10188,16 @@ as the main headline.
 <li>Model counts, names and features move fast. Numbers here are as of Oct 2026, so check the Foundry docs before you quote them</li>
 </ul>
 </div>
+<div class="admonition remember">
+<p class="admonition-title">Resource governs, project isolates 📌</p>
+<p>Security and networking live on the <strong>resource</strong>. Team separation lives in <strong>projects</strong>. Mix those two up and you'll either over-build or under-secure</p>
+</div>
 <h2 id="faqs">FAQs 💬<a class="headerlink" href="#faqs" title="Link to this section">&para;</a></h2>
-<details class="question">
+<details class="info">
 <summary>Is a project a separate Azure resource? 🤔</summary>
 <p>No. A project is a sub-resource of the Foundry resource (<code>accounts/projects</code>). It doesn't get its own networking or <abbr title="Role-Based Access Control: permissions given to roles, and people get roles">RBAC</abbr> boundary, it inherits the resource's, which is exactly why projects are cheap to create</p>
 </details>
-<details class="question">
+<details class="tip">
 <summary>When do I need a second Foundry resource? 🏢</summary>
 <p>When something at the governance level has to differ: data residency in another region, a different private networking setup, different encryption keys or a separate cost owner. Different teams alone isn't a reason, that's what projects are for</p>
 </details>
@@ -10192,10 +10205,10 @@ as the main headline.
 <summary>How is Foundry <abbr title="Foundry IQ: the knowledge and retrieval layer for agents">IQ</abbr> different from plain <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr>? 🔎</summary>
 <p>Plain <abbr title="Retrieval-Augmented Generation: fetch the right chunks from your own docs and give them to the LLM with the question">RAG</abbr> runs one search and stuffs the results into the prompt. Foundry <abbr title="Foundry IQ: the knowledge and retrieval layer for agents">IQ</abbr> uses agentic retrieval: an <abbr title="Large Language Model: an AI model trained on huge amounts of text to read and write language">LLM</abbr> plans focused sub-queries, runs them across your knowledge sources, checks what came back and then answers with citations. It's built on Azure AI Search</p>
 </details>
-<details class="question">
+<details class="note">
 <summary>Is Azure AI Foundry the same thing? 🏷️</summary>
 <p>Yes, Microsoft Foundry is the newer name for Azure AI Foundry. Older docs and the underlying resource type (<code>Microsoft.CognitiveServices/accounts</code>) still use the earlier names</p>
-</details><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Azure<span class="rn__time"> · 4 min read</span></p><p class="rn__title"><a href="../../../AI/azure/copilot-harness/">Copilot Studio Harnesses →</a></p></li><li><p class="rn__kicker">Azure<span class="rn__time"> · 9 min read</span></p><p class="rn__title"><a href="../../../AI/azure/azure_ai_101/">AI-900 Notes →</a></p></li></ul></div>
+</details><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../../AI/azure/copilot-harness/" style="--s1: 219, 39, 119; --s2: 147, 51, 234"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.5 15.5c0 1.11-.89 2-2 2s-2-.89-2-2 .9-2 2-2 2 .9 2 2m-9-2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.89 2-2-.89-2-2-2M23 15v3c0 .55-.45 1-1 1h-1v1c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2v-1H2c-.55 0-1-.45-1-1v-3c0-.55.45-1 1-1h1c0-3.87 3.13-7 7-7h1V5.73c-.6-.34-1-.99-1-1.73 0-1.1.9-2 2-2s2 .9 2 2c0 .74-.4 1.39-1 1.73V7h1c3.87 0 7 3.13 7 7h1c.55 0 1 .45 1 1m-2 1h-2v-2c0-2.76-2.24-5-5-5h-4c-2.76 0-5 2.24-5 5v2H3v1h2v3h14v-3h2z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🤖</span> Artificial Intelligence / Azure</span><span class="rn-card__title">Copilot Studio Harnesses</span><span class="rn-card__meta">⏱️ 4 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../../AI/azure/azure_ai_101/" style="--s1: 219, 39, 119; --s2: 147, 51, 234"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9zm6.82 6L12 12.72 5.18 9 12 5.28zM17 16l-5 2.72L7 16v-3.73L12 15l5-2.73z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🤖</span> Artificial Intelligence / Azure</span><span class="rn-card__title">AI-900 Notes</span><span class="rn-card__meta">⏱️ 9 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10308,6 +10321,8 @@ as the main headline.
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10323,6 +10338,16 @@ as the main headline.
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

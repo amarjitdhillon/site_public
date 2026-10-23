@@ -9952,7 +9952,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="parameter-store">Parameter Store <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.06 3c-.43 0-.84.14-1.22.42s-.6.64-.7 1.08L2.11 8.91c-.25 1.09-.05 2.01.58 2.82.12.12.24.24.35.34.59.57 1.24.93 2.18.93s1.69-.41 2.25-.95c.63.62 1.39.95 2.33.95.84 0 1.64-.37 2.2-.93.68.63 1.45.93 2.3.93.87 0 1.61-.33 2.24-.95.57.57 1.32.95 2.27.95s1.62-.35 2.19-.94c.09-.09.18-.19.28-.29.66-.82.86-1.77.61-2.86L20.86 4.5c-.13-.44-.36-.8-.73-1.08A1.88 1.88 0 0 0 18.94 3m-.05 1.97 1.08 4.41c.09.43 0 .82-.28 1.17-.25.31-.56.45-.94.45-.31 0-.58-.1-.8-.34-.22-.23-.34-.5-.37-.82L16.97 5M5.06 5h1.97l-.61 4.84C6.3 10.63 5.91 11 5.25 11c-.41 0-.72-.14-.94-.45-.28-.35-.37-.74-.28-1.17M9.05 5H11v4.7c0 .35-.11.65-.36.92-.25.26-.56.38-.94.38-.34 0-.63-.12-.86-.41S8.5 10 8.5 9.66V9.5M13 5h1.95l.55 4.5c.08.42 0 .77-.29 1.07-.26.3-.6.43-1.01.43-.31 0-.59-.12-.84-.38A1.3 1.3 0 0 1 13 9.7M3 14.03V19c0 1.11.89 2 2 2h14a2 2 0 0 0 2-2v-4.95c-.55.58-1.25.91-2 .95-1 .03-1.75-.26-2.46-.95-.6.6-1.4.95-2.24.95-.9 0-1.7-.36-2.3-.93-.57.57-1.35.93-2.22.93-.91 0-1.71-.35-2.31-.95-.58.59-1.37.95-2.24.95-.9 0-1.57-.35-2.23-.97"/></svg></span><a class="headerlink" href="#parameter-store" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 1 min read</p>
+<header class="page-head" style="--s1: 245, 158, 11; --s2: 239, 68, 68"><p class="page-head__pill"><span>☁️</span> AWS / Configuration</p><h1 id="parameter-store">Parameter <span class="page-head__accent">Store</span> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.06 3c-.43 0-.84.14-1.22.42s-.6.64-.7 1.08L2.11 8.91c-.25 1.09-.05 2.01.58 2.82.12.12.24.24.35.34.59.57 1.24.93 2.18.93s1.69-.41 2.25-.95c.63.62 1.39.95 2.33.95.84 0 1.64-.37 2.2-.93.68.63 1.45.93 2.3.93.87 0 1.61-.33 2.24-.95.57.57 1.32.95 2.27.95s1.62-.35 2.19-.94c.09-.09.18-.19.28-.29.66-.82.86-1.77.61-2.86L20.86 4.5c-.13-.44-.36-.8-.73-1.08A1.88 1.88 0 0 0 18.94 3m-.05 1.97 1.08 4.41c.09.43 0 .82-.28 1.17-.25.31-.56.45-.94.45-.31 0-.58-.1-.8-.34-.22-.23-.34-.5-.37-.82L16.97 5M5.06 5h1.97l-.61 4.84C6.3 10.63 5.91 11 5.25 11c-.41 0-.72-.14-.94-.45-.28-.35-.37-.74-.28-1.17M9.05 5H11v4.7c0 .35-.11.65-.36.92-.25.26-.56.38-.94.38-.34 0-.63-.12-.86-.41S8.5 10 8.5 9.66V9.5M13 5h1.95l.55 4.5c.08.42 0 .77-.29 1.07-.26.3-.6.43-1.01.43-.31 0-.59-.12-.84-.38A1.3 1.3 0 0 1 13 9.7M3 14.03V19c0 1.11.89 2 2 2h14a2 2 0 0 0 2-2v-4.95c-.55.58-1.25.91-2 .95-1 .03-1.75-.26-2.46-.95-.6.6-1.4.95-2.24.95-.9 0-1.7-.36-2.3-.93-.57.57-1.35.93-2.22.93-.91 0-1.71-.35-2.31-.95-.58.59-1.37.95-2.24.95-.9 0-1.57-.35-2.23-.97"/></svg></span><a class="headerlink" href="#parameter-store" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 1 min read</span></p></header>
 <div class="admonition info">
 <p class="admonition-title">Why to use Param Store?</p>
 <p><code>AWS Systems Manager</code> has an additional capability called <code>Parameter Store</code> that provides you with secure, <mark>hierarchical storage for configuration data management and secrets management</mark>. You can store data such as <em>passwords, database strings, Amazon Machine Image (<abbr title="Amazon Machine Image: a template used to launch EC2 servers">AMI</abbr>) IDs</em>, and license codes as parameter values.</p>
@@ -9962,7 +9962,7 @@ as the main headline.
 <li>Free, fully managed, centralized storage system for configuration data and secret management.</li>
 <li>Data can be stored in plain text or also encrypted with AWS Key Management System (AWS <abbr title="Key Management Service: creates and guards encryption keys">KMS</abbr>).</li>
 <li>Parameter Store <em>tracks all parameter changes</em> through versioning, so if you need to roll back your deployment, you can also choose to use an earlier version of your configuration data.</li>
-</ul><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Configuration<span class="rn__time"> · 2 min read</span></p><p class="rn__title"><a href="../../aws/aws-config/">AWS Config →</a></p></li><li><p class="rn__kicker">Migration<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../aws/well-architected/">Well Architected →</a></p></li></ul></div>
+</ul><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../aws/aws-config/" style="--s1: 245, 158, 11; --s2: 239, 68, 68"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m18 2 1.5 1.5L21 2v7.13l-2 2V4.91H5v14.18h5.5v1.41L9 22l-1.5-1.5L6 22l-1.5-1.5L3 22V2l1.5 1.5L6 2l1.5 1.5L9 2l1.5 1.5L12 2l1.5 1.5L15 2l1.5 1.5zm-5 17.96 6.13-6.13 2.04 2.04L15.04 22H13zm6.83-6.83.98-.98.02-.02c.05-.04.11-.08.17-.1a.5.5 0 0 1 .53.12l1.32 1.32c.2.2.2.53 0 .72l-.98.98zm-1.83-1-.87.87H6v-2h12zM15.13 15l-2 2H6v-2zM18 9V7H6v2z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☁️</span> AWS / Configuration</span><span class="rn-card__title">AWS Config</span><span class="rn-card__meta">⏱️ 2 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../aws/well-architected/" style="--s1: 245, 158, 11; --s2: 239, 68, 68"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 5h12a1 1 0 0 1 1 1 1 1 0 0 1-1 1H6a1 1 0 0 1-1-1 1 1 0 0 1 1-1m15-3v2H3V2zm-6 6h2v14h-2zM7 8h2v14H7zm4 0h2v14h-2z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>☁️</span> AWS / Migration</span><span class="rn-card__title">Well Architected</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10075,6 +10075,8 @@ as the main headline.
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../javascripts/about.js"></script>
@@ -10090,6 +10092,16 @@ as the main headline.
         <script src="../../javascripts/tilt.js"></script>
       
         <script src="../../javascripts/headings.js"></script>
+      
+        <script src="../../javascripts/edgeray.js"></script>
+      
+        <script src="../../javascripts/tabs.js"></script>
+      
+        <script src="../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../javascripts/diagram.js"></script>
+      
+        <script src="../../javascripts/postside.js"></script>
       
         <script src="../../javascripts/magnetic.js"></script>
       

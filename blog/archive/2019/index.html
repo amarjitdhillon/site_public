@@ -9959,111 +9959,11 @@
     <div class="md-content__inner">
       <header class="md-typeset">
         <h1 id="2019">2019<a class="headerlink" href="#2019" title="Link to this section">&para;</a></h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
+      </header><div class="post-cards post-cards--blog">
         
-          <span class="md-author">
-            <img src="https://avatars.githubusercontent.com/amarjitdhillon" alt="Amarjit Dhillon">
-          </span>
+          <a class="post-card pc-pat-2 " href="../../2019/03/07/apache-flink-/" style="--pc-grad: linear-gradient(135deg, #059669 0%, #06b6d4 100%)"><span class="post-card__cover" aria-hidden="true"><span class="post-card__kicker">Big Data</span><span class="post-card__cover-title">Apache Flink</span><span class="post-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12h2v2h-2c-1.38 0-2.74-.35-4-1-2.5 1.3-5.5 1.3-8 0-1.26.65-2.63 1-4 1H2v-2h2c1.39 0 2.78-.47 4-1.33 2.44 1.71 5.56 1.71 8 0 1.22.86 2.61 1.33 4 1.33m0-6h2v2h-2c-1.38 0-2.74-.35-4-1-2.5 1.3-5.5 1.3-8 0-1.26.65-2.63 1-4 1H2V6h2c1.39 0 2.78-.47 4-1.33 2.44 1.71 5.56 1.71 8 0C17.22 5.53 18.61 6 20 6m0 12h2v2h-2c-1.38 0-2.74-.35-4-1-2.5 1.3-5.5 1.3-8 0-1.26.65-2.63 1-4 1H2v-2h2c1.39 0 2.78-.47 4-1.33 2.44 1.71 5.56 1.71 8 0 1.22.86 2.61 1.33 4 1.33"/></svg></span></span><span class="post-card__body"><span class="post-card__meta">Mar 7, 2019, 3 min read</span><span class="post-card__title">Apache Flink</span><span class="post-card__desc">Getting started with Apache Flink for streaming and batch data</span></span></a>
         
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2019-03-07 00:00:00">March 7, 2019</time></li>
-        
-          <li class="md-meta__item">
-            in
-            
-              <a href="../../category/architecture/" class="md-meta__link">Architecture</a>, 
-              <a href="../../category/big-data/" class="md-meta__link">Big Data</a>, 
-              <a href="../../category/apache-flink/" class="md-meta__link">Apache Flink</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min read
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="apache-flink"><a class="toclink" href="../../2019/03/07/apache-flink-/">Apache Flink 🚀</a></h2>
-<p>Apache Flink is a powerful framework and distributed processing engine that helps manage massive data streams and batch data. Whether you're just getting started or already familiar with stream processing, Flink has a place in your data pipeline. Let's walk through the process of installing Apache Flink on a Unix-like environment, specifically for Mac or Ubuntu users.</p>
-<h3 id="installing-apache-flink"><a class="toclink" href="../../2019/03/07/apache-flink-/#installing-apache-flink">Installing Apache Flink ⚙️</a></h3>
-<p>Building Apache Flink on your machine can seem daunting, but with the right steps, you can get it up and running in no time. Typically, the installation process takes about 30 minutes.</p>
-<h3 id="steps-for-installing-apache-flink-on-macubuntu"><a class="toclink" href="../../2019/03/07/apache-flink-/#steps-for-installing-apache-flink-on-macubuntu">Steps for Installing Apache Flink on Mac/Ubuntu 🛠️</a></h3>
-<p>To set up Apache Flink on your system, follow these steps:</p>
-<ul>
-<li><strong>Prepare a Unix-like environment</strong>  </li>
-</ul>
-<p>Ensure you're working in a Unix-like environment such as Linux, Mac OS X, or Cygwin.</p>
-<ul>
-<li><strong>Install Git</strong>  </li>
-</ul>
-<p>If Git is not installed, you'll need it to clone the Flink repository.</p>
-<ul>
-<li><strong>Verify Java installation</strong>  </li>
-</ul>
-<p>Apache Flink requires Java. Check if Java is installed by running the following command in your terminal:</p>
-<div class="highlight"><pre><span></span><code>java<span class="w"> </span>-version
-</code></pre></div>
-<p>If it's not installed, you'll need to install it before proceeding.</p>
-<ul>
-<li><strong>Install Maven</strong>  </li>
-</ul>
-<p>Maven is the build tool required for Flink. If Maven is not already installed, you can install it using Homebrew:</p>
-<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>maven
-</code></pre></div>
-<p>Maven plays a crucial role in the build process, so make sure this step is completed successfully.</p>
-<ul>
-<li><strong>Download Apache Flink</strong>  </li>
-</ul>
-<p>Go to the <a href="https://flink.apache.org/downloads.html">Apache Flink downloads page</a> and download the source version. Alternatively, you can clone the Flink repository from GitHub by executing the following command in your terminal:</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/apache/flink
-</code></pre></div>
-<ul>
-<li><strong>Unpack the downloaded file</strong><br />
-After downloading, navigate to the directory where the file is located and unpack the <code>.tgz</code> file using the following command:</li>
-</ul>
-<div class="highlight"><pre><span></span><code>tar<span class="w"> </span>xzf<span class="w"> </span>*.tgz
-</code></pre></div>
-<p>Here, <code>*</code> represents the downloaded file name. On Mac, you can also double-click the tar file to unzip it.</p>
-<ul>
-<li><strong>Build Apache Flink</strong>  </li>
-</ul>
-<p>Once the file is unpacked, change to the directory of the extracted content and start the build process by running the command:</p>
-<div class="highlight"><pre><span></span><code>mvn<span class="w"> </span>clean<span class="w"> </span>install<span class="w"> </span>-DskipTests
-</code></pre></div>
-<p>The build process will take around 30 minutes. Once complete, if everything runs smoothly, you'll see a success message indicating that Apache Flink has been built successfully.</p>
-<p><center><img alt="Installation Success" src="/blog/images/flink.png" /></center></p>
-<ul>
-<li><strong>Check the Installation Path</strong>  </li>
-</ul>
-<p>After installation, you can find Apache Flink installed at the following location on your system (replace <code>YOUR_USER_NAME</code> with your actual username):</p>
-<div class="highlight"><pre><span></span><code>/Users/YOUR_USER_NAME/.m2/repository/org/apache/flink
-</code></pre></div>
-<div class="admonition success">
-<p class="admonition-title">Success</p>
-<p>Congratulations! You've successfully built Apache Flink on your system. 🎉</p>
-</div>
-<h3 id="final-thoughts"><a class="toclink" href="../../2019/03/07/apache-flink-/#final-thoughts">Final Thoughts 💡</a></h3>
-<p>Installing Apache Flink may seem complex at first, but by following these steps carefully, you’ll have a fully functional setup in no time. Flink's powerful data processing capabilities can now be harnessed to tackle real-time and batch data workloads. </p>
-<p>Whether you're processing event streams or managing large-scale batch processing jobs, Flink is now at your fingertips to help you transform your data pipelines. </p>
-<p>Happy coding! 🚀</p>
-    
-  </div>
-</article>
-      
+      </div>
       
         
           
@@ -10122,6 +10022,8 @@ After downloading, navigate to the directory where the file is located and unpac
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10137,6 +10039,16 @@ After downloading, navigate to the directory where the file is located and unpac
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

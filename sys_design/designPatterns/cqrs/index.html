@@ -9973,7 +9973,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="cqrs"><abbr title="Command Query Responsibility Segregation: separate models for writes and reads">CQRS</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 20H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2M4 6v12h16V6zm2 3h12v2H6zm0 4h10v2H6z"/></svg></span><a class="headerlink" href="#cqrs" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 2 min read</p>
+<header class="page-head" style="--s1: 22, 163, 74; --s2: 20, 184, 166"><p class="page-head__pill"><span>🧩</span> System design / Design Patterns</p><h1 id="cqrs"><abbr title="Command Query Responsibility Segregation: separate models for writes and reads">CQRS</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 20H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2M4 6v12h16V6zm2 3h12v2H6zm0 4h10v2H6z"/></svg></span><a class="headerlink" href="#cqrs" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 2 min read</span></p></header>
 <p>This pattern is used to solve an issue of how to implement a query that retrieves data from multiple services in a microservice architecture?</p>
 <h2 id="solution">Solution 💡<a class="headerlink" href="#solution" title="Link to this section">&para;</a></h2>
 <p>The command query responsibility segregation (<abbr title="Command Query Responsibility Segregation: separate models for writes and reads">CQRS</abbr>) pattern separates the data mutation, or the command part of a system, from the query part. You can use the <abbr title="Command Query Responsibility Segregation: separate models for writes and reads">CQRS</abbr> pattern to separate updates and queries if they have different requirements for throughput, latency, or consistency.</p>
@@ -10001,7 +10001,7 @@ as the main headline.
 "../../images/cqrs-ex2.png">
 <figcaption><abbr title="Command Query Responsibility Segregation: separate models for writes and reads">CQRS</abbr> Example</figcaption>
 </figure> </center></p>
-</div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Design Patterns<span class="rn__time"> · 2 min read</span></p><p class="rn__title"><a href="../../../sys_design/designPatterns/materializedView/">Materialized View →</a></p></li><li><p class="rn__kicker">Design Patterns<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../../sys_design/designPatterns/priority_queue/">Priority Queue →</a></p></li></ul></div>
+</div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../../sys_design/designPatterns/materializedView/" style="--s1: 22, 163, 74; --s2: 20, 184, 166"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 20c0-.55-.45-1-1-1h-1v-2h6c1.11 0 2-.89 2-2V3a2 2 0 0 0-2-2H5c-1.1 0-2 .9-2 2v12a2 2 0 0 0 2 2h6v2h-1c-.55 0-1 .45-1 1H2v2h7c0 .55.45 1 1 1h4c.55 0 1-.45 1-1h7v-2zM13 5h6v4h-6zm0 6h6v4h-6zM5 5h6v4H5zm0 10v-4h6v4z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🧩</span> System design / Design Patterns</span><span class="rn-card__title">Materialized View</span><span class="rn-card__meta">⏱️ 2 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../../sys_design/designPatterns/priority_queue/" style="--s1: 22, 163, 74; --s2: 20, 184, 166"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 6h12v2H6zm0 4.5h12v2H6zM6 15h12v2H6zm3 4h6l-3 3zM9 2h6l-3 3z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🧩</span> System design / Design Patterns</span><span class="rn-card__title">Priority Queue</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10114,6 +10114,8 @@ as the main headline.
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10129,6 +10131,16 @@ as the main headline.
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

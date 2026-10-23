@@ -9894,22 +9894,22 @@ as the main headline.
 <span data-reveal-page hidden></span>
 <h1 id="downgrading-maven-version-in-brew">Downgrading maven version in brew<a class="headerlink" href="#downgrading-maven-version-in-brew" title="Link to this section">&para;</a></h1>
 <p>Check current version of <code>maven</code> using</p>
-<div class="highlight"><pre><span></span><code>mvn -verison
+<div class="language-text highlight"><pre><span></span><code>mvn -verison
 </code></pre></div>
 <p>This will give you current version and the installation path as well. In my case current version is 3.5.0 as shown below</p>
 <p><center><img src="images/1.png" alt="1" width="90%"></center></p>
 <p>Then search for available versions of maven using</p>
-<div class="highlight"><pre><span></span><code>brew search maven
+<div class="language-text highlight"><pre><span></span><code>brew search maven
 </code></pre></div>
 <p>This will show you all the available versions as shown below</p>
 <p><center><img src="images/2.png" alt="2" width="90%"></center></p>
 <p>If you want to install maven 3.0 for instance, then type</p>
-<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>maven@3.0
+<div class="language-bash highlight"><pre><span></span><code>brew<span class="w"> </span>install<span class="w"> </span>maven@3.0
 </code></pre></div>
 <p>This will install the downgraded version and show some caveats as well</p>
 <p><center><img src="images/3.png" alt="3" width="90%"></center></p>
 <p>Now the next step is to unlink older maven version and then overwrite it with version you just installed</p>
-<div class="highlight"><pre><span></span><code>brew<span class="w"> </span>unlink<span class="w"> </span>maven
+<div class="language-bash highlight"><pre><span></span><code>brew<span class="w"> </span>unlink<span class="w"> </span>maven
 brew<span class="w"> </span>link<span class="w"> </span>--overwrite<span class="w"> </span>maven@3.0
 </code></pre></div>
 <p>Now check version of maven again. if everything went well ,then you will see that version has been downgraded.</p>
@@ -9974,6 +9974,8 @@ brew<span class="w"> </span>link<span class="w"> </span>--overwrite<span class="
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -9989,6 +9991,16 @@ brew<span class="w"> </span>link<span class="w"> </span>--overwrite<span class="
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       

@@ -7,7 +7,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Developer resources for Azure, AWS, K8S and more.">
+        <meta name="description" content="Hands-on: create, update and delete records in Delta Lake tables">
       
       
         <meta name="author" content="Amarjit Dhillon">
@@ -42,7 +42,7 @@
             "@context": "https://schema.org",
             "@type": "Article",
             "headline": "Manipulating Tables with Delta Lake \ud83d\udc1f",
-            "description": "Developer resources for Azure, AWS, K8S and more.",
+            "description": "Hands-on: create, update and delete records in Delta Lake tables",
             "url": "https://www.amarjitdhillon.com/blog/2023/06/07/manipulating-tables-with-delta-lake-/",
             "author": {
                 "@type": "Person",
@@ -89,7 +89,7 @@
     
     
     
-  <meta property="og:type" content="article"><meta property="og:site_name" content="Amar&#x27;s TechSpace"><meta property="og:title" content="Manipulating Tables with Delta Lake - Amar&#x27;s TechSpace"><meta property="og:description" content="Developer resources for Azure, AWS, K8S and more."><meta property="og:url" content="https://www.amarjitdhillon.com/blog/2023/06/07/manipulating-tables-with-delta-lake-/"><meta property="og:image" content="https://www.amarjitdhillon.com/assets/cards/blog/2023/06/07/manipulating-tables-with-delta-lake-.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Manipulating Tables with Delta Lake - Amar&#x27;s TechSpace"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Manipulating Tables with Delta Lake - Amar&#x27;s TechSpace"><meta name="twitter:description" content="Developer resources for Azure, AWS, K8S and more."><meta name="twitter:image" content="https://www.amarjitdhillon.com/assets/cards/blog/2023/06/07/manipulating-tables-with-delta-lake-.png"></head>
+  <meta property="og:type" content="article"><meta property="og:site_name" content="Amar&#x27;s TechSpace"><meta property="og:title" content="Manipulating Tables with Delta Lake - Amar&#x27;s TechSpace"><meta property="og:description" content="Hands-on: create, update and delete records in Delta Lake tables"><meta property="og:url" content="https://www.amarjitdhillon.com/blog/2023/06/07/manipulating-tables-with-delta-lake-/"><meta property="og:image" content="https://www.amarjitdhillon.com/assets/cards/blog/2023/06/07/manipulating-tables-with-delta-lake-.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Manipulating Tables with Delta Lake - Amar&#x27;s TechSpace"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Manipulating Tables with Delta Lake - Amar&#x27;s TechSpace"><meta name="twitter:description" content="Hands-on: create, update and delete records in Delta Lake tables"><meta name="twitter:image" content="https://www.amarjitdhillon.com/assets/cards/blog/2023/06/07/manipulating-tables-with-delta-lake-.png"></head>
   
   
     
@@ -9982,86 +9982,94 @@
             
           
           
+  
   <div class="md-content md-content--post" data-md-component="content">
     <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
       <div class="md-sidebar__scrollwrap">
-        <div class="md-sidebar__inner md-post">
-          <nav class="md-nav md-nav--primary">
-            <div class="md-post__back">
-              <div class="md-nav__title md-nav__container">
-                <a href="../../../../" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-                  <span class="md-ellipsis">
-                    Back to index
-                  </span>
-                </a>
-              </div>
-            </div>
+        <div class="md-sidebar__inner md-post postside" style="--pc-grad: linear-gradient(135deg, #0ea5e9 0%, #4f46e5 100%); --pc1: #0ea5e9">
+          <nav class="md-nav md-nav--primary" aria-label="About this post">
+            <a class="postside__back" href="../../../../">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg><span>Back to blog</span>
+            </a>
             
-              <div class="md-post__authors md-typeset">
-                
-                  <div class="md-profile md-post__profile">
-                    <span class="md-author md-author--long">
-                      <img src="https://avatars.githubusercontent.com/amarjitdhillon" alt="Amarjit Dhillon">
-                    </span>
-                    <span class="md-profile__description">
-                      <strong>
-                        
-                          Amarjit Dhillon
-                        
-                      </strong>
-                      <br>
-                      AI Solution Architect
-                    </span>
-                  </div>
-                
+              <div class="postside__author">
+                <span class="postside__avatar"><img src="https://avatars.githubusercontent.com/amarjitdhillon" alt="Amarjit Dhillon"></span>
+                <strong>Amarjit Dhillon</strong>
+                <span class="postside__role">AI Solution Architect</span>
+                <span class="postside__links">
+                  <a href="https://www.linkedin.com/in/amaardhillon/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg></a>
+                  <a href="#" class="js-mail" data-u="amarjit314" data-d="gmail.com" aria-label="Email" title="Email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0-8 5-8-5zm0 12H4V8l8 5 8-5z"/></svg></a>
+                  <a href="../../../../../about/about/" aria-label="About Amar" title="About"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 2a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2m0 7c2.67 0 8 1.33 8 4v3H4v-3c0-2.67 5.33-4 8-4m0 1.9c-2.97 0-6.1 1.46-6.1 2.1v1.1h12.2V17c0-.64-3.13-2.1-6.1-2.1"/></svg></a>
+                </span>
               </div>
             
-            <ul class="md-post__meta md-nav__list">
-              <li class="md-nav__item md-nav__item--section">
-                <div class="md-post__title">
-                  <span class="md-ellipsis">
-                    Metadata
-                  </span>
-                </div>
-                <nav class="md-nav">
-                  <ul class="md-nav__list">
-                    <li class="md-nav__item">
-                      <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
-                        <time datetime="2023-06-07 00:00:00" class="md-ellipsis">June 7, 2023</time>
-                      </div>
-                    </li>
-                    
-                    
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
-                          <span class="md-ellipsis">
-                            in
-                            
-                              <a href="../../../../category/architecture/">Architecture</a>, 
-                              <a href="../../../../category/databricks/">Databricks</a></span>
-                        </div>
-                      </li>
-                    
-                    
-                      
-                      <li class="md-nav__item">
-                        <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
-                          <span class="md-ellipsis">
-                            
-                              5 min read
-                            
-                          </span>
-                        </div>
-                      </li>
-                    
-                  </ul>
-                </nav>
+            
+              <div class="postside__nutshell">
+                <p class="postside__title">In a nutshell</p>
+                <p>Hands-on: create, update and delete records in Delta Lake tables</p>
+              </div>
+            
+            
+            <p class="postside__title">At a glance</p>
+            <ul class="postside__rows">
+              <li>
+                <span class="postside__tile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg></span>
+                <span><small>Published</small><time datetime="2023-06-07 00:00:00">Jun 7, 2023</time></span>
               </li>
+              
+              <li>
+                <span class="postside__tile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg></span>
+                <span><small>Read time</small>5 min, 629 words</span>
+              </li>
+              
+                <li>
+                  <span class="postside__tile"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 3a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H3v2h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2v-2H8v-5a2 2 0 0 0-2-2 2 2 0 0 0 2-2V5h2V3m6 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3z"/></svg></span>
+                  <span><small>Inside</small>17 code samples, 1 image</span>
+                </li>
+              
             </ul>
+            
+            
+              <p class="postside__title">Related posts</p>
+              <div class="postside__related">
+                
+                  <a href="../feature-engineering-using-databricks-/" style="--pc-grad: linear-gradient(135deg, #f43f5e 0%, #fb923c 100%)">
+                    <span class="postside__rel-ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.95 14.184 12 20.403l9.919-5.55v2.21L12 22.662l-10.484-5.96-.565.308v.77L12 24l11.05-6.218v-4.317l-.515-.309L12 19.118l-9.867-5.653v-2.21L12 16.805l11.05-6.218V6.32l-.515-.308L12 11.974 2.647 6.681 12 1.388l7.76 4.368.668-.411v-.566L12 0 .95 6.27v.72L12 13.207l9.919-5.55v2.26L12 15.52 1.516 9.56l-.565.308Z"/></svg></span>
+                    <span><strong>Feature Engineering using Databricks</strong><small>14 min read</small></span>
+                  </a>
+                
+                  <a href="../../../../2025/08/10/agentic-ai-patterns/" style="--pc-grad: linear-gradient(135deg, #a855f7 0%, #ec4899 100%)">
+                    <span class="postside__rel-ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 16v-3c0-1.11-.89-2-2-2h-6V8h2V2H9v6h2v3H5c-1.11 0-2 .89-2 2v3H1v6h6v-6H5v-3h6v3H9v6h6v-6h-2v-3h6v3h-2v6h6v-6zM11 4h2v2h-2zM5 20H3v-2h2zm8 0h-2v-2h2zm8 0h-2v-2h2z"/></svg></span>
+                    <span><strong>Agentic AI Patterns</strong><small>9 min read</small></span>
+                  </a>
+                
+                  <a href="../../../../2024/08/15/6rs-of-cloud-migration-/" style="--pc-grad: linear-gradient(135deg, #0ea5e9 0%, #4f46e5 100%)">
+                    <span class="postside__rel-ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 19c0 .34.04.67.09 1H6.5c-1.5 0-2.81-.5-3.89-1.57C1.54 17.38 1 16.09 1 14.58q0-1.95 1.17-3.48C3.34 9.57 4 9.43 5.25 9.15c.42-1.53 1.25-2.77 2.5-3.72S10.42 4 12 4c1.95 0 3.6.68 4.96 2.04S19 9.05 19 11c1.15.13 2.1.63 2.86 1.5.51.57.84 1.21 1 1.92A5.9 5.9 0 0 0 19 13h-2v-2c0-1.38-.5-2.56-1.46-3.54C14.56 6.5 13.38 6 12 6s-2.56.5-3.54 1.46C7.5 8.44 7 9.62 7 11h-.5c-.97 0-1.79.34-2.47 1.03-.69.68-1.03 1.5-1.03 2.47s.34 1.79 1.03 2.5c.68.66 1.5 1 2.47 1h6.59c-.05.33-.09.66-.09 1m5-3-3 3 3 3v-2h4v-2h-4z"/></svg></span>
+                    <span><strong>6R's of Cloud Migration</strong><small>5 min read</small></span>
+                  </a>
+                
+              </div>
+            
+            
+              <p class="postside__title">Topics</p>
+              <div class="postside__chips">
+                
+                  <a href="../../../../category/architecture/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"/></svg>Architecture</a>
+                
+                  <a href="../../../../category/databricks/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m21.41 11.58-9-9A2 2 0 0 0 11 2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 .59 1.42l9 9A2 2 0 0 0 13 22a2 2 0 0 0 1.41-.59l7-7A2 2 0 0 0 22 13a2 2 0 0 0-.59-1.42M13 20l-9-9V4h7l9 9M6.5 5A1.5 1.5 0 1 1 5 6.5 1.5 1.5 0 0 1 6.5 5"/></svg>Databricks</a>
+                
+              </div>
+            
+            <p class="postside__title">Share</p>
+            <div class="postside__share">
+              <button type="button" class="js-copy-link" aria-label="Copy the link to this post">
+                <span class="postside__ico"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.59 13.41c.41.39.41 1.03 0 1.42-.39.39-1.03.39-1.42 0a5.003 5.003 0 0 1 0-7.07l3.54-3.54a5.003 5.003 0 0 1 7.07 0 5.003 5.003 0 0 1 0 7.07l-1.49 1.49c.01-.82-.12-1.64-.4-2.42l.47-.48a2.98 2.98 0 0 0 0-4.24 2.98 2.98 0 0 0-4.24 0l-3.53 3.53a2.98 2.98 0 0 0 0 4.24m2.82-4.24c.39-.39 1.03-.39 1.42 0a5.003 5.003 0 0 1 0 7.07l-3.54 3.54a5.003 5.003 0 0 1-7.07 0 5.003 5.003 0 0 1 0-7.07l1.49-1.49c-.01.82.12 1.64.4 2.43l-.47.47a2.98 2.98 0 0 0 0 4.24 2.98 2.98 0 0 0 4.24 0l3.53-3.53a2.98 2.98 0 0 0 0-4.24.973.973 0 0 1 0-1.42"/></svg></span>
+                <span class="postside__ok"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 7 9 19l-5.5-5.5 1.41-1.41L9 16.17 19.59 5.59z"/></svg></span>
+                <span class="postside__copy-label">Copy link</span>
+              </button>
+              <a class="js-share" data-to="linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn" title="Share on LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg></a>
+              <a class="js-share" data-to="x" href="#" target="_blank" rel="noopener" aria-label="Share on X" title="Share on X"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg></a>
+            </div>
           </nav>
           
         </div>
@@ -10084,7 +10092,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="manipulating-tables-with-delta-lake">Manipulating Tables with Delta Lake 🐟<a class="headerlink" href="#manipulating-tables-with-delta-lake" title="Link to this section">&para;</a></h1>
+<header class="post-hero pc-pat-0" style="--pc-grad: linear-gradient(135deg, #0ea5e9 0%, #4f46e5 100%); --s1: 14, 165, 233; --s2: 79, 70, 229"><span class="post-card__kicker">Databricks</span><h1 id="manipulating-tables-with-delta-lake">Manipulating Tables with Delta Lake 🐟<a class="headerlink" href="#manipulating-tables-with-delta-lake" title="Link to this section">&para;</a></h1><span class="post-hero__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7.77 18.39 18H5.61zM12 4 2 20h20"/></svg></span><span class="post-hero__chips"><span class="post-hero__chip post-hero__author"><img src="https://avatars.githubusercontent.com/amarjitdhillon" alt="">Amarjit Dhillon</span><span class="post-hero__chip">🗓️ Jun 7, 2023</span><span class="post-hero__chip">⏱️ 5 min read</span></span></header>
 <p>In this blog post, we’re going to explore how to effectively manage and manipulate tables using Delta Lake. Whether you're new to Delta Lake or need a refresher, this hands-on guide will take you through the essential operations needed to work with Delta tables. </p>
 <p>From creating tables to updating and deleting records, we’ve got you covered! So, let’s dive in and get started! 🚀</p>
 <h2 id="learning-objectives">Learning Objectives 🧩<a class="headerlink" href="#learning-objectives" title="Link to this section">&para;</a></h2>
@@ -10100,7 +10108,7 @@ as the main headline.
 </ul>
 <h2 id="setup">Setup ⚙️<a class="headerlink" href="#setup" title="Link to this section">&para;</a></h2>
 <p>Before we jump into the fun part, let’s clear out any previous runs of this notebook and set up the necessary environment. Run the script below to reset and prepare everything.</p>
-<div class="highlight"><pre><span></span><code><span class="k">%</span><span class="n">run</span> <span class="p">../</span><span class="n">Includes</span><span class="p">/</span><span class="n">Classroom-Setup</span><span class="p">-</span><span class="n">2</span><span class="p">.</span><span class="n">2L</span>
+<div class="language-powershell highlight"><pre><span></span><code><span class="k">%</span><span class="n">run</span> <span class="p">../</span><span class="n">Includes</span><span class="p">/</span><span class="n">Classroom-Setup</span><span class="p">-</span><span class="n">2</span><span class="p">.</span><span class="n">2L</span>
 </code></pre></div>
 <h3 id="create-table">Create Table ➕<a class="headerlink" href="#create-table" title="Link to this section">&para;</a></h3>
 <p>We'll kick things off by creating a Delta Lake table that will track our favorite beans collection. The table will include a few basic fields to describe each bean.</p>
@@ -10131,51 +10139,51 @@ as the main headline.
 </tbody>
 </table>
 <p>Let’s go ahead and create the beans table with the following schema:</p>
-<div class="highlight"><pre><span></span><code><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">beans</span><span class="w"> </span>
+<div class="language-sql highlight"><pre><span></span><code><span class="k">create</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">beans</span><span class="w"> </span>
 <span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">grams</span><span class="w"> </span><span class="nb">float</span><span class="p">,</span><span class="w"> </span><span class="n">delicious</span><span class="w"> </span><span class="nb">boolean</span><span class="p">)</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>We'll use Python to run checks occasionally throughout the lab. The following cell will return as error with a message on what needs to change if you have not followed instructions. No output from cell execution means that you have completed this step.</p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">spark</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;beans&quot;</span><span class="p">),</span> <span class="s2">&quot;Table named `beans` does not exist&quot;</span>
+<div class="language-python highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">spark</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;beans&quot;</span><span class="p">),</span> <span class="s2">&quot;Table named `beans` does not exist&quot;</span>
 <span class="k">assert</span> <span class="n">spark</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;beans&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">columns</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="s2">&quot;grams&quot;</span><span class="p">,</span> <span class="s2">&quot;delicious&quot;</span><span class="p">],</span> <span class="s2">&quot;Please name the columns in the order provided above&quot;</span>
 <span class="k">assert</span> <span class="n">spark</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;beans&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">dtypes</span> <span class="o">==</span> <span class="p">[(</span><span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="s2">&quot;string&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;grams&quot;</span><span class="p">,</span> <span class="s2">&quot;float&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;delicious&quot;</span><span class="p">,</span> <span class="s2">&quot;boolean&quot;</span><span class="p">)],</span> <span class="s2">&quot;Please make sure the column types are identical to those provided above&quot;</span>
 </code></pre></div>
 <h3 id="insert-data">Insert Data 📇<a class="headerlink" href="#insert-data" title="Link to this section">&para;</a></h3>
 <p>Next, let’s populate the table with some data. The following <abbr title="Structured Query Language: the language for querying relational databases">SQL</abbr> command will insert three records into our table.</p>
-<div class="highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">beans</span><span class="w"> </span><span class="k">VALUES</span>
+<div class="language-SQL highlight"><pre><span></span><code><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">beans</span><span class="w"> </span><span class="k">VALUES</span>
 <span class="p">(</span><span class="ss">&quot;black&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;black&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">),</span>
 <span class="p">(</span><span class="ss">&quot;lentils&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;brown&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">),</span>
 <span class="p">(</span><span class="ss">&quot;jelly&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;rainbow&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">42</span><span class="p">.</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="k">false</span><span class="p">)</span>
 </code></pre></div>
 <p>To make sure that the data was inserted correctly, let’s query the table to review the contents:</p>
-<div class="highlight"><pre><span></span><code><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">beans</span>
+<div class="language-sql highlight"><pre><span></span><code><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">beans</span>
 </code></pre></div>
 <p>Now, let’s add a few more records in one transaction:</p>
-<div class="highlight"><pre><span></span><code><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">beans</span><span class="w"> </span><span class="k">values</span>
+<div class="language-sql highlight"><pre><span></span><code><span class="k">insert</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">beans</span><span class="w"> </span><span class="k">values</span>
 <span class="p">(</span><span class="s1">&#39;pinto&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;brown&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">.</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">),</span>
 <span class="p">(</span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">178</span><span class="p">.</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">),</span>
 <span class="p">(</span><span class="s1">&#39;beanbag chair&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;white&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">40000</span><span class="p">,</span><span class="w"> </span><span class="k">false</span><span class="p">)</span>
 </code></pre></div>
 <p>Verify the data is in the correct state using the cell below:</p>
-<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">spark</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;spark.databricks.delta.lastCommitVersionInSession&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;Only 3 commits should have been made to the table&quot;</span>
+<div class="language-python highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">spark</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;spark.databricks.delta.lastCommitVersionInSession&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;Only 3 commits should have been made to the table&quot;</span>
 <span class="k">assert</span> <span class="n">spark</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;beans&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;The table should have 6 records&quot;</span>
 <span class="k">assert</span> <span class="nb">set</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">spark</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;beans&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">collect</span><span class="p">())</span> <span class="o">==</span> <span class="p">{</span><span class="s1">&#39;beanbag chair&#39;</span><span class="p">,</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;jelly&#39;</span><span class="p">,</span> <span class="s1">&#39;lentils&#39;</span><span class="p">,</span> <span class="s1">&#39;pinto&#39;</span><span class="p">},</span> <span class="s2">&quot;Make sure you have not modified the data provided&quot;</span>
 </code></pre></div>
 <h3 id="update-records">Update Records 📢<a class="headerlink" href="#update-records" title="Link to this section">&para;</a></h3>
 <p>Now, let's update some of our data. A friend pointed out that jelly beans are, in fact, delicious. Let’s update the delicious column for jelly beans to reflect this new information.</p>
-<div class="highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">beans</span>
+<div class="language-sql highlight"><pre><span></span><code><span class="k">UPDATE</span><span class="w"> </span><span class="n">beans</span>
 <span class="k">SET</span><span class="w"> </span><span class="n">delicious</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span>
 <span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;jelly&quot;</span>
 </code></pre></div>
 <p>You also realize that the weight for the pinto beans was entered incorrectly. Let’s update the weight to the correct value of <code>1500 grams</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="k">update</span><span class="w"> </span><span class="n">beans</span><span class="w"> </span>
+<div class="language-sql highlight"><pre><span></span><code><span class="k">update</span><span class="w"> </span><span class="n">beans</span><span class="w"> </span>
 <span class="k">set</span><span class="w"> </span><span class="n">grams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1500</span>
 <span class="k">where</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;pinto&#39;</span>
 </code></pre></div>
 <p>Ensure everything is updated correctly by running the cell below:</p>
-<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">spark</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;beans&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;name=&#39;pinto&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;There should only be 1 entry for pinto beans&quot;</span>
+<div class="language-python highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">spark</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;beans&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;name=&#39;pinto&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;There should only be 1 entry for pinto beans&quot;</span>
 <span class="n">row</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;beans&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;name=&#39;pinto&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()</span>
 <span class="k">assert</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;brown&quot;</span><span class="p">,</span> <span class="s2">&quot;The pinto bean should be labeled as the color brown&quot;</span>
 <span class="k">assert</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;grams&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1500</span><span class="p">,</span> <span class="s2">&quot;Make sure you correctly specified the `grams` as 1500&quot;</span>
@@ -10183,18 +10191,18 @@ as the main headline.
 </code></pre></div>
 <h3 id="delete-records">Delete Records ❌<a class="headerlink" href="#delete-records" title="Link to this section">&para;</a></h3>
 <p>Let’s say you’ve decided that only delicious beans are worth tracking. Use the query below to remove any non-delicious beans from the table.</p>
-<p><div class="highlight"><pre><span></span><code><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">beans</span>
+<p><div class="language-sql highlight"><pre><span></span><code><span class="k">delete</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">beans</span>
 <span class="k">where</span><span class="w"> </span><span class="n">delicious</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">false</span>
 </code></pre></div>
 Verify that the deletion was successful:</p>
 <p>Run the following cell to confirm this operation was successful.</p>
-<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">spark</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;beans&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;delicious=true&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;There should be 5 delicious beans in your table&quot;</span>
+<div class="language-python highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">spark</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;beans&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;delicious=true&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;There should be 5 delicious beans in your table&quot;</span>
 <span class="k">assert</span> <span class="n">spark</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;beans&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;delicious=false&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;There should be 0 delicious beans in your table&quot;</span>
 <span class="k">assert</span> <span class="n">spark</span><span class="o">.</span><span class="n">table</span><span class="p">(</span><span class="s2">&quot;beans&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s2">&quot;name=&#39;beanbag chair&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Make sure your logic deletes non-delicious beans&quot;</span>
 </code></pre></div>
 <h3 id="merge-records">Merge Records ⛙<a class="headerlink" href="#merge-records" title="Link to this section">&para;</a></h3>
 <p>Your friend brought some new beans! We’ll register these new beans as a temporary view and merge them with our existing table.</p>
-<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="n">TEMP</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">new_beans</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">,</span><span class="w"> </span><span class="n">grams</span><span class="p">,</span><span class="w"> </span><span class="n">delicious</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">VALUES</span>
+<div class="language-sql highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="k">REPLACE</span><span class="w"> </span><span class="n">TEMP</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">new_beans</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="p">,</span><span class="w"> </span><span class="n">grams</span><span class="p">,</span><span class="w"> </span><span class="n">delicious</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">VALUES</span>
 <span class="p">(</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">.</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">),</span>
 <span class="p">(</span><span class="s1">&#39;lentils&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;green&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">),</span>
 <span class="p">(</span><span class="s1">&#39;kidney&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="w"> </span><span class="mi">387</span><span class="p">.</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="k">true</span><span class="p">),</span>
@@ -10208,7 +10216,7 @@ Verify that the deletion was successful:</p>
 - Match beans by name <strong>and</strong> color
 - Updates existing beans by adding the new weight to the existing weight
 - Inserts new beans only if they are delicious</p>
-<div class="highlight"><pre><span></span><code><span class="n">merge</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">beans</span><span class="w"> </span><span class="n">a</span>
+<div class="language-sql highlight"><pre><span></span><code><span class="n">merge</span><span class="w"> </span><span class="k">into</span><span class="w"> </span><span class="n">beans</span><span class="w"> </span><span class="n">a</span>
 <span class="k">using</span><span class="w"> </span><span class="n">new_beans</span><span class="w"> </span><span class="n">b</span>
 <span class="k">on</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">name</span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="n">color</span>
 <span class="k">when</span><span class="w"> </span><span class="n">matched</span><span class="w"> </span><span class="k">then</span><span class="w"> </span>
@@ -10217,7 +10225,7 @@ Verify that the deletion was successful:</p>
 <span class="k">insert</span><span class="w"> </span><span class="o">*</span>
 </code></pre></div>
 <p>Check your work by running the following:</p>
-<div class="highlight"><pre><span></span><code><span class="n">version</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;DESCRIBE HISTORY beans&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">selectExpr</span><span class="p">(</span><span class="s2">&quot;max(version)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<div class="language-python highlight"><pre><span></span><code><span class="n">version</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;DESCRIBE HISTORY beans&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">selectExpr</span><span class="p">(</span><span class="s2">&quot;max(version)&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
 <span class="n">last_tx</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;DESCRIBE HISTORY beans&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;version=</span><span class="si">{</span><span class="n">version</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="k">assert</span> <span class="n">last_tx</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;operation&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;MERGE&quot;</span><span class="p">,</span> <span class="s2">&quot;Transaction should be completed as a merge&quot;</span>
 <span class="n">metrics</span> <span class="o">=</span> <span class="n">last_tx</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;operationMetrics&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
@@ -10228,10 +10236,10 @@ Verify that the deletion was successful:</p>
 </code></pre></div>
 <h3 id="dropping-tables">Dropping Tables 📍<a class="headerlink" href="#dropping-tables" title="Link to this section">&para;</a></h3>
 <p>Finally, when you're done with a managed Delta Lake table, you can drop it, which permanently deletes the table and its underlying data. Let’s write a query to drop the beans table.</p>
-<div class="highlight"><pre><span></span><code><span class="k">drop</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">beans</span>
+<div class="language-sql highlight"><pre><span></span><code><span class="k">drop</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">beans</span>
 </code></pre></div>
 <p>Run the following cell to confirm the table is gone:</p>
-<div class="highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SHOW TABLES LIKE &#39;beans&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span> <span class="o">==</span> <span class="p">[],</span> <span class="s2">&quot;Confirm that you have dropped the `beans` table from your current database&quot;</span>
+<div class="language-python highlight"><pre><span></span><code><span class="k">assert</span> <span class="n">spark</span><span class="o">.</span><span class="n">sql</span><span class="p">(</span><span class="s2">&quot;SHOW TABLES LIKE &#39;beans&#39;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">collect</span><span class="p">()</span> <span class="o">==</span> <span class="p">[],</span> <span class="s2">&quot;Confirm that you have dropped the `beans` table from your current database&quot;</span>
 </code></pre></div>
 <hr />
 <h2 id="final-thoughts">Final Thoughts 🤔<a class="headerlink" href="#final-thoughts" title="Link to this section">&para;</a></h2>
@@ -10349,6 +10357,8 @@ Verify that the deletion was successful:</p>
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../../../javascripts/about.js"></script>
@@ -10364,6 +10374,16 @@ Verify that the deletion was successful:</p>
         <script src="../../../../../javascripts/tilt.js"></script>
       
         <script src="../../../../../javascripts/headings.js"></script>
+      
+        <script src="../../../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../../../javascripts/postside.js"></script>
       
         <script src="../../../../../javascripts/magnetic.js"></script>
       

@@ -10198,10 +10198,14 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="app-gateway-l7-lb-waf">App Gateway (L7 LB + <abbr title="Web Application Firewall: blocks common web attacks like SQL injection">WAF</abbr>) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 2v2h-5a2 2 0 0 0-2 2v3h2V6h5v2l3-3zm0 7v2H6.73c-.36-.62-1.02-1-1.73-1-1.1 0-2 .9-2 2s.9 2 2 2c.71 0 1.37-.38 1.73-1H17v2l3-3zm-7 6v3a2 2 0 0 0 2 2h5v2l3-3-3-3v2h-5v-3z"/></svg></span><a class="headerlink" href="#app-gateway-l7-lb-waf" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 4 min read</p>
+<header class="page-head" style="--s1: 13, 148, 136; --s2: 6, 182, 212"><p class="page-head__pill"><span>🔷</span> Azure / Load Balancer</p><h1 id="app-gateway-l7-lb-waf">App Gateway (L7 LB + <abbr title="Web Application Firewall: blocks common web attacks like SQL injection">WAF</abbr>) <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 2v2h-5a2 2 0 0 0-2 2v3h2V6h5v2l3-3zm0 7v2H6.73c-.36-.62-1.02-1-1.73-1-1.1 0-2 .9-2 2s.9 2 2 2c.71 0 1.37-.38 1.73-1H17v2l3-3zm-7 6v3a2 2 0 0 0 2 2h5v2l3-3-3-3v2h-5v-3z"/></svg></span><a class="headerlink" href="#app-gateway-l7-lb-waf" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 4 min read</span></p></header>
 <div class="admonition tldr">
-<p class="admonition-title">Tldr</p>
-<p><code>Azure Load Balancer</code> could load balance any <code>TCP/UDP traffic</code> to the backend servers; however, <code>Azure Application Gateway</code> is designed to distribute the incoming web requests to a web application (using HTTP). Unlike Azure Load Balancer, which operates at layer 4, or the Transport layer, Application Gateway uses layer 7, or the Application layer, routing to route the traffic to the backend web applications.</p>
+<p class="admonition-title">TL;<abbr title="Disaster Recovery: getting systems back after a major outage">DR</abbr></p>
+<p><code>Azure Load Balancer</code> can load balance any <code>TCP/UDP traffic</code> to the backend servers, while <code>Azure Application Gateway</code> is built to distribute incoming web requests (HTTP) to a web application.</p>
+<ul>
+<li><strong>Load Balancer</strong>: layer 4, the Transport layer</li>
+<li><strong>Application Gateway</strong>: layer 7, the Application layer, routing traffic to the backend web apps</li>
+</ul>
 </div>
 <p><center></p>
 <table>
@@ -10281,7 +10285,7 @@ as the main headline.
 <p>Application Gateway allows you to rewrite selected content of requests and responses. With this feature, you can translate URLs, query string parameters as well as modify request and response headers. It also allows you to add conditions to ensure that the URL or the specified headers are rewritten only when certain conditions are met. </p>
 <h3 id="multi-site-hosting">Multi-site hosting 🏘️<a class="headerlink" href="#multi-site-hosting" title="Link to this section">&para;</a></h3>
 <p>Multiple site hosting enables you to configure more than one web application on the same port of application gateways using public-facing listeners. It allows you to configure a more efficient topology for your deployments by adding up to 100+ websites to one application gateway. Each website can be directed to its own backend pool. For example, three domains, contoso.com, fabrikam.com, and adatum.com, point to the IP address of the application gateway. You'd create three multi-site listeners and configure each listener for the respective port and protocol setting.</p>
-<p><center> <img src="../images/multi-site-hosting.jpg" alt="Multi site hosting" width="90%"> </center></p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Load Balancer<span class="rn__time"> · 5 min read</span></p><p class="rn__title"><a href="../../azure/azlb/">Load Balancer (L4) →</a></p></li><li><p class="rn__kicker">Load Balancer<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../azure/front-door/">Front Door →</a></p></li></ul></div>
+<p><center> <img src="../images/multi-site-hosting.jpg" alt="Multi site hosting" width="90%"> </center></p><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../azure/azlb/" style="--s1: 13, 148, 136; --s2: 6, 182, 212"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3c-1.27 0-2.4.8-2.82 2H3v2h1.95L2 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3L6.05 7h3.12c.33.85.98 1.5 1.83 1.83V20H2v2h20v-2h-9V8.82c.85-.32 1.5-.97 1.82-1.82h3.13L15 14c-.47 2 1 3 3.5 3s4.06-1 3.5-3l-2.95-7H21V5h-6.17C14.4 3.8 13.27 3 12 3m0 2a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-6.5 5.25L7 14H4zm13 0L20 14h-3z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🔷</span> Azure / Load Balancer</span><span class="rn-card__title">Load Balancer (L4)</span><span class="rn-card__meta">⏱️ 5 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../azure/front-door/" style="--s1: 13, 148, 136; --s2: 6, 182, 212"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 3c-1.11 0-2 .89-2 2v16h12V5c0-1.11-.89-2-2-2zm0 2h8v14H8zm5 6v2h2v-2z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🔷</span> Azure / Load Balancer</span><span class="rn-card__title">Front Door</span><span class="rn-card__meta">⏱️ 1 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10394,6 +10398,8 @@ as the main headline.
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../javascripts/about.js"></script>
@@ -10409,6 +10415,16 @@ as the main headline.
         <script src="../../javascripts/tilt.js"></script>
       
         <script src="../../javascripts/headings.js"></script>
+      
+        <script src="../../javascripts/edgeray.js"></script>
+      
+        <script src="../../javascripts/tabs.js"></script>
+      
+        <script src="../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../javascripts/diagram.js"></script>
+      
+        <script src="../../javascripts/postside.js"></script>
       
         <script src="../../javascripts/magnetic.js"></script>
       

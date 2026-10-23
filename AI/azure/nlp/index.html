@@ -10135,7 +10135,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="nlp"><abbr title="Natural Language Processing: getting computers to understand and work with human language">NLP</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg></span><a class="headerlink" href="#nlp" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 9 min read</p>
+<header class="page-head" style="--s1: 219, 39, 119; --s2: 147, 51, 234"><p class="page-head__pill"><span>🤖</span> Artificial Intelligence / Azure</p><h1 id="nlp"><abbr title="Natural Language Processing: getting computers to understand and work with human language">NLP</abbr> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg></span><a class="headerlink" href="#nlp" title="Link to this section">&para;</a></h1><p class="page-head__meta readtime"><span class="page-head__chip">⏱️ 9 min read</span></p></header>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Natural language processing (<abbr title="Natural Language Processing: getting computers to understand and work with human language">NLP</abbr>) is a common AI problem in which software must be able to work with text or speech in the natural language form that a human user would write or speak.</p>
@@ -10243,7 +10243,7 @@ as the main headline.
 </div>
 <p>In some cases, a model might contain multiple intents for which utterances are likely to be similar. You can use the pattern of utterances to disambiguate the intents while minimizing the number of sample utterances.</p>
 <p>For example, consider the following utterances:
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Turn</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">kitchen</span><span class="nv"> </span><span class="s">light&quot;</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Turn</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">kitchen</span><span class="nv"> </span><span class="s">light&quot;</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Is</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">kitchen</span><span class="nv"> </span><span class="s">light</span><span class="nv"> </span><span class="s">on?&quot;</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;Turn</span><span class="nv"> </span><span class="s">off</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">kitchen</span><span class="nv"> </span><span class="s">light&quot;</span>
 </code></pre></div></p>
@@ -10251,7 +10251,7 @@ as the main headline.
 <div class="admonition info">
 <p class="admonition-title">Example utterances</p>
 <p>To train your model well, give it a handful of examples for each intent, covering the different ways people phrase it</p>
-<div class="highlight"><pre><span></span><code><span class="nt">TurnOnDevice</span><span class="p">:</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="nt">TurnOnDevice</span><span class="p">:</span>
 <span class="w">    </span><span class="s">&quot;Turn</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">{DeviceName}&quot;</span>
 <span class="w">    </span><span class="s">&quot;Switch</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">{DeviceName}&quot;</span>
 <span class="w">    </span><span class="s">&quot;Turn</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">{DeviceName}</span><span class="nv"> </span><span class="s">on&quot;</span>
@@ -10275,7 +10275,7 @@ as the main headline.
 <p>An entity is a person, place, thing, event, skill, or value. <code>Custom named entity recognition (NER)</code> is an Azure <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> service that looks at documents, identifies, and extracts user defined entities. These entities could be anything from names and addresses from bank statements to knowledge mining to improve search results.</p>
 </div>
 <p>Azure AI Language provides certain built-in entity recognition, to recognize things such as a person, location, organization, or URL. Built-in NER allows you to set up the service with minimal configuration, and extract entities. To call a built-in NER, create your service and call the endpoint for that NER service like this:</p>
-<div class="highlight"><pre><span></span><code>&lt;YOUR-ENDPOINT&gt;/text/analytics/v3.0/entities/recognition/general
+<div class="language-text highlight"><pre><span></span><code>&lt;YOUR-ENDPOINT&gt;/text/analytics/v3.0/entities/recognition/general
 </code></pre></div>
 <h2 id="service-types">Service Types 🧰<a class="headerlink" href="#service-types" title="Link to this section">&para;</a></h2>
 <p>Azure AI Language service features fall into two categories:
@@ -10304,7 +10304,7 @@ as the main headline.
 <p>Request deployment</p>
 <p>Submit a POST request to the following endpoint.
 HTTP</p>
-<div class="highlight"><pre><span></span><code><span class="p p-Indicator">{</span><span class="nv">ENDPOINT</span><span class="p p-Indicator">}</span><span class="l l-Scalar l-Scalar-Plain">/language/authoring/analyze-conversations/projects/{PROJECT-NAME}/deployments/{DEPLOYMENT-NAME}?api-version={API-VERSION}</span>
+<div class="language-yaml highlight"><pre><span></span><code><span class="p p-Indicator">{</span><span class="nv">ENDPOINT</span><span class="p p-Indicator">}</span><span class="l l-Scalar l-Scalar-Plain">/language/authoring/analyze-conversations/projects/{PROJECT-NAME}/deployments/{DEPLOYMENT-NAME}?api-version={API-VERSION}</span>
 </code></pre></div>
 <table>
 <thead>
@@ -10340,7 +10340,7 @@ HTTP</p>
 <div class="admonition info">
 <p class="admonition-title">Analyze Text</p>
 <p>To query your model using <abbr title="A common style for web APIs using HTTP verbs like GET and POST">REST</abbr>, create a POST request to the appropriate URL with the appropriate body specified. For built in features such as language detection or sentiment analysis, you'll query the analyze-text endpoint.</p>
-</div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Azure<span class="rn__time"> · 6 min read</span></p><p class="rn__title"><a href="../../../AI/azure/form-recognizer/">Form Recognizer →</a></p></li><li><p class="rn__kicker">Azure<span class="rn__time"> · 10 min read</span></p><p class="rn__title"><a href="../../../AI/azure/cognitive-search/">Cognitive Search →</a></p></li></ul></div>
+</div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="rn-cards"><a class="rn-card" href="../../../AI/azure/form-recognizer/" style="--s1: 219, 39, 119; --s2: 147, 51, 234"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 5h3l-1.5 2zM5 2h14a2 2 0 0 1 2 2v16c0 1.11-.89 2-2 2H5a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2m0 2v4h14V4zm0 16h14V10H5zm2-8h10v2H7zm0 4h10v2H7z"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🤖</span> Artificial Intelligence / Azure</span><span class="rn-card__title">Form Recognizer</span><span class="rn-card__meta">⏱️ 6 min read <span class="rn-card__go">→</span></span></span></a><a class="rn-card" href="../../../AI/azure/cognitive-search/" style="--s1: 219, 39, 119; --s2: 147, 51, 234"><span class="rn-card__cover" aria-hidden="true"><span class="rn-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.86 12.5A4.31 4.31 0 0 0 19 11c0-1.95-.68-3.6-2.04-4.96S13.95 4 12 4c-1.58 0-3 .47-4.25 1.43s-2.08 2.19-2.5 3.72c-1.25.28-2.29.93-3.08 1.95S1 13.28 1 14.58c0 1.51.54 2.8 1.61 3.85C3.69 19.5 5 20 6.5 20h12c1.25 0 2.31-.44 3.19-1.31.87-.88 1.31-1.94 1.31-3.19q0-1.725-1.14-3M16.57 18 14 15.43c-.57.36-1.26.57-2 .57-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4c0 .74-.21 1.43-.57 2L18 16.57zM14 12c0 1.11-.89 2-2 2s-2-.89-2-2 .9-2 2-2 2 .9 2 2"/></svg></span></span><span class="rn-card__body"><span class="rn-card__pill"><span>🤖</span> Artificial Intelligence / Azure</span><span class="rn-card__title">Cognitive Search</span><span class="rn-card__meta">⏱️ 10 min read <span class="rn-card__go">→</span></span></span></a></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
@@ -10453,6 +10453,8 @@ HTTP</p>
       
         <script src="/javascripts/anchor-copy.js"></script>
       
+        <script src="/javascripts/codelang.js"></script>
+      
         <script src="/javascripts/statuspage.js"></script>
       
         <script src="../../../javascripts/about.js"></script>
@@ -10468,6 +10470,16 @@ HTTP</p>
         <script src="../../../javascripts/tilt.js"></script>
       
         <script src="../../../javascripts/headings.js"></script>
+      
+        <script src="../../../javascripts/edgeray.js"></script>
+      
+        <script src="../../../javascripts/tabs.js"></script>
+      
+        <script src="../../../javascripts/tocmarker.js"></script>
+      
+        <script src="../../../javascripts/diagram.js"></script>
+      
+        <script src="../../../javascripts/postside.js"></script>
       
         <script src="../../../javascripts/magnetic.js"></script>
       
