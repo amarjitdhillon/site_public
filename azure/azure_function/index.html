@@ -10234,7 +10234,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="azure-functions-azure-compute-function-apps">Azure Functions :azure-compute-function-apps:<a class="headerlink" href="#azure-functions-azure-compute-function-apps" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 15 min read</p>
+<h1 id="azure-functions-azure-compute-function-apps">Azure Functions :azure-compute-function-apps:<a class="headerlink" href="#azure-functions-azure-compute-function-apps" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 16 min read</p>
 <p>A function contains two important pieces</p>
 <ul>
 <li><code>Code</code>: which can be written in a variety of languages </li>
@@ -10261,6 +10261,19 @@ as the main headline.
 <p>Behind the scenes, the extension manages state, checkpoints, and restarts for you, allowing you to focus on your business logic.</p>
 </div>
 <h3 id="app-patterns">App Patterns 🧩<a class="headerlink" href="#app-patterns" title="Link to this section">&para;</a></h3>
+<p>These are the classic shapes Durable Functions was built for. Once you see them, you'll spot them everywhere:</p>
+<ul>
+<li><strong>Function chaining</strong>: run A, then B, then C, passing output along. Like an assembly line</li>
+<li><strong>Fan-out / fan-in</strong>: kick off 100 tasks in parallel, wait for all of them, then aggregate. Think "resize 100 images, then zip them"</li>
+<li><strong>Async HTTP APIs</strong>: the client starts a long job, gets a status URL right away and polls it... no more HTTP timeouts</li>
+<li><strong>Monitor</strong>: a flexible polling loop, e.g. keep checking a job until it's done, then stop</li>
+<li><strong>Human interaction</strong>: wait for someone to approve something, with a timeout and an escalation if nobody responds</li>
+<li><strong>Aggregator</strong>: collect events over time into one stateful entity (that's where entity functions shine)</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The orchestrator replays from its history every time it wakes up, so keep orchestrator code deterministic: no <code>DateTime.Now</code>, random numbers or direct I/O in there. Push that stuff into activity functions</p>
+</div>
 <h2 id="example-of-durable-azure-function">Example of Durable Azure function 🧪<a class="headerlink" href="#example-of-durable-azure-function" title="Link to this section">&para;</a></h2>
 <p>To begin with, let’s do a brief explanation about a few key concepts around Azure Durable Functions.</p>
 <h3 id="azure-durable-functions-basics">Azure Durable Functions basics 📚<a class="headerlink" href="#azure-durable-functions-basics" title="Link to this section">&para;</a></h3>

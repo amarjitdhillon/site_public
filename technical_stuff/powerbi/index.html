@@ -8210,9 +8210,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#query-folding_1" class="md-nav__link">
+  <a href="#check-query-folding" class="md-nav__link">
     <span class="md-ellipsis">
-      Query folding 🗜️
+      Check query folding 🗜️
     </span>
   </a>
   
@@ -10461,9 +10461,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#query-folding_1" class="md-nav__link">
+  <a href="#check-query-folding" class="md-nav__link">
     <span class="md-ellipsis">
-      Query folding 🗜️
+      Check query folding 🗜️
     </span>
   </a>
   
@@ -10644,7 +10644,7 @@ as the main headline.
 <p>It's up to you how you organize the staged data in dataflows. For example, if you need to stage some tables from Dynamics 365, you can create one dataflow that has a query for each table you want to stage. So, dataflows allow you to logically group related Power Query queries</p>
 <h3 id="query-folding">Query folding 🗜️<a class="headerlink" href="#query-folding" title="Link to this section">&para;</a></h3>
 <p><code>Query folding</code> is the ability for a <code>Power Query query</code> to generate a single query statement that retrieves and transforms source data.</p>
-<p>Query folding may occur for an entire Power Query query, or for a subset of its steps. When query folding cannot be achieved—either partially or fully—the Power Query mashup engine must compensate by processing data transformations itself. This process can involve retrieving source query results, which for large datasets is very resource intensive and slow.</p>
+<p>Query folding may occur for an entire Power Query query, or for a subset of its steps. When query folding cannot be achieved (either partially or fully) the Power Query mashup engine must compensate by processing data transformations itself. This process can involve retrieving source query results, which for large datasets is very resource intensive and slow.</p>
 <h3 id="powerbi-service">PowerBI Service ☁️<a class="headerlink" href="#powerbi-service" title="Link to this section">&para;</a></h3>
 <p>There are two hosting options for Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> reports</p>
 <ol>
@@ -10669,12 +10669,16 @@ as the main headline.
 <h4 id="directquery-mode">DirectQuery mode<a class="headerlink" href="#directquery-mode" title="Link to this section">&para;</a></h4>
 <p>With <code>DirectQuery datasets</code>, no data is imported into Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr>. Instead, your Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> dataset is simply metadata (e.g., tables, relationships) of how your model is structured to query the data source. <mark>Data is only brought into Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> reports and dashboards at query-time (e.g., a user runs a report, or changes filters).</mark></p>
 <p><center> <img src="../images/directquery.jpg" alt="Directquery" width="90%"> </center></p>
-<p><strong>Pros:</strong>
-- Dataset size limits do not apply as all data still resides in the underlying database.
-- Datasets do not require a scheduled refresh as data is only retrieved at query-time.</p>
-<p><strong>Cons:</strong>
-- Typically, query-time performance will suffer, even when querying a cloud data warehouse like Snowflake.
-- Concurrency (e.g., multiple users running reports) against DirectQuery datasets could cause performance issues against the underlying database.</p>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Dataset size limits do not apply as all data still resides in the underlying database.</li>
+<li>Datasets do not require a scheduled refresh as data is only retrieved at query-time.</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Typically, query-time performance will suffer, even when querying a cloud data warehouse like Snowflake.</li>
+<li>Concurrency (e.g., multiple users running reports) against DirectQuery datasets could cause performance issues against the underlying database.</li>
+</ul>
 <h4 id="dual-mode">Dual mode<a class="headerlink" href="#dual-mode" title="Link to this section">&para;</a></h4>
 <p>In dual mode, data is imported into cache memory, but can also be served directly from the data source at the query time</p>
 <h4 id="hybrid-tables-composite-mode">Hybrid tables/ Composite mode<a class="headerlink" href="#hybrid-tables-composite-mode" title="Link to this section">&para;</a></h4>
@@ -10742,7 +10746,7 @@ as the main headline.
 <p>When you load data from the source into the destination (Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr>), there are two methods: Full Load or Incremental Refresh. Full Load means fetching the entire dataset each time and wiping out the previous data. </p>
 <p>Incremental refresh is an important feature to consider when working with large tables that you would like to import into memory. With Incremental Refresh, partitions are automatically created on your Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> table based on the amount of history to retain, as well as the partition size you would like to set. Since data modelers can define the size of each partition, refreshes will be faster, more reliable, and able to build history over time.</p>
 <div class="admonition tip">
-<p class="admonition-title">When to use incremental refresh/</p>
+<p class="admonition-title">When to use incremental refresh</p>
 <p>Consider you have a large dataset including 20 years of data. From that dataset, probably the data from 20 years ago won’t change anymore, or even the data from 5 years ago, sometimes even a year ago. So why re-processing it again? Why re-loading data that doesn’t update? Incremental Refresh is the process of loading only part of the data that might change and adding it to the previous dataset, which is no longer changing.</p>
 </div>
 <p>When setting up Incremental Refresh, keep in mind the following:</p>
@@ -10753,21 +10757,21 @@ as the main headline.
 <h4 id="partitioning">Partitioning<a class="headerlink" href="#partitioning" title="Link to this section">&para;</a></h4>
 <p>Incremental Load will split the table into partitions. The quantity of the partitions will be based on the settings applied at the time of Incremental refresh. For example, if you want to have the last year’s data refreshed only, a yearly partition will likely be created for every year, and the one for the current year will be refreshed on a scheduled basis.</p>
 <h3 id="hybrid-tables">Hybrid tables 🔀<a class="headerlink" href="#hybrid-tables" title="Link to this section">&para;</a></h3>
-<p>Are you using hybrid tables? </p>
-<h3 id="query-folding_1">Query folding 🗜️<a class="headerlink" href="#query-folding_1" title="Link to this section">&para;</a></h3>
-<p>Are you using query folding and is it finishing completely?</p>
+<p>Are you using hybrid tables? They mix both worlds in one table: older partitions are imported for speed, and the latest partition stays in DirectQuery so it's always fresh. Great with incremental refresh</p>
+<h3 id="check-query-folding">Check query folding 🗜️<a class="headerlink" href="#check-query-folding" title="Link to this section">&para;</a></h3>
+<p>Are you using query folding and is it finishing completely? Right-click a step in Power Query and look at <em>View Native Query</em>... if it's greyed out, folding broke at that step (more on query folding above)</p>
 <h3 id="avoid-row-level-security">Avoid row-level security 🔐<a class="headerlink" href="#avoid-row-level-security" title="Link to this section">&para;</a></h3>
 <p>Last but not least, avoid row-level security, which can be a performance killer.</p>
 <hr />
 <h3 id="dimensional-modelling">Dimensional modelling 📐<a class="headerlink" href="#dimensional-modelling" title="Link to this section">&para;</a></h3>
 <p>It is a set of guidelines to design database table structure for easier and faster data retrieval.</p>
-<div class="admonition remember">
-<p class="admonition-title">Remember</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Data is stored in de-normalized form here.</p>
 </div>
 <ul>
 <li>
-<p><strong>Dimentions</strong>: Descriptive entity.</p>
+<p><strong>Dimensions</strong>: Descriptive entity.</p>
 </li>
 <li>
 <p><strong>Facts</strong>: Quantitative entity value. They are mostly values.</p>
@@ -10777,7 +10781,7 @@ as the main headline.
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Syntax</th>
+<th style="text-align: left;">Aspect</th>
 <th style="text-align: center;">Normal form models</th>
 <th style="text-align: right;">Dimensional</th>
 </tr>
@@ -10806,9 +10810,9 @@ as the main headline.
 </tbody>
 </table>
 <p>Various kinds of dimensional modelling are:</p>
-<h5 id="star-schema">Star Schema<a class="headerlink" href="#star-schema" title="Link to this section">&para;</a></h5>
+<h4 id="star-schema">Star Schema<a class="headerlink" href="#star-schema" title="Link to this section">&para;</a></h4>
 <p>In this data model, you use a fact table, which is the table like sales that contains facts, meaning your measures. The fact table is related to your dimensions, which are things like your salespeople, products, business units, customers and so on. The fact table then has one-to-many relationships to your dimension tables.</p>
-<h5 id="snowflake-schema">Snowflake schema<a class="headerlink" href="#snowflake-schema" title="Link to this section">&para;</a></h5>
+<h4 id="snowflake-schema">Snowflake schema<a class="headerlink" href="#snowflake-schema" title="Link to this section">&para;</a></h4>
 <p>In a snowflake schema, each property of entries in a dimension table is assigned to a new table, creating what seems like a snowflake.</p>
 <h2 id="snowflake-and-powerbi">Snowflake and PowerBI ❄️<a class="headerlink" href="#snowflake-and-powerbi" title="Link to this section">&para;</a></h2>
 <p>We need to used datawarehouse in front of PowerBI</p>
@@ -10856,7 +10860,7 @@ as the main headline.
 <li>When the user connects to Snowflake, the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> service asks Azure AD to give it a token for Snowflake</li>
 <li>The <code>Power BI</code> service uses the embedded Snowflake driver to send the Azure AD token to Snowflake as part of the connection string.</li>
 <li><code>Snowflake</code> validates the token, extracts the username from the token, maps it to the Snowflake user, and creates a Snowflake session for the Power <abbr title="Business Intelligence: dashboards and reports for decisions">BI</abbr> service using the user’s default role.</li>
-</ol><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Data/Analytics<span class="rn__time"> · 7 min read</span></p><p class="rn__title"><a href="../../technical_stuff/sql_and_nosql/">DB, DW and Data Lake →</a></p></li><li><p class="rn__kicker">Data/Analytics<span class="rn__time"> · 5 min read</span></p><p class="rn__title"><a href="../../technical_stuff/snowflake/">Snowflake →</a></p></li></ul></div>
+</ol><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Data/Analytics<span class="rn__time"> · 8 min read</span></p><p class="rn__title"><a href="../../technical_stuff/sql_and_nosql/">DB, DW and Data Lake →</a></p></li><li><p class="rn__kicker">Data/Analytics<span class="rn__time"> · 5 min read</span></p><p class="rn__title"><a href="../../technical_stuff/snowflake/">Snowflake →</a></p></li></ul></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->

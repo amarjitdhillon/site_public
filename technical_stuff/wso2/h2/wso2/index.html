@@ -10025,19 +10025,19 @@ as the main headline.
 <p><center><img alt="" src="../../images/1.png" /></center></p>
 <p>As I am using the WSO2 IoT server, this file is located in the <code>IoT_HOME/conf/carbon.xml</code> as shown above. Open this file and uncomment the following</p>
 <div class="highlight"><pre><span></span><code>&lt;H2DatabaseConfiguration&gt;
- &lt;property name=”web” /&gt;
- &lt;property name=”webPort”&gt;8082&lt;/property&gt;
- &lt;property name=”webAllowOthers” /&gt;
- &lt;property name=”webSSL” /&gt;
- &lt;property name=”tcp” /&gt;
- &lt;property name=”tcpPort”&gt;9092&lt;/property&gt;
- &lt;property name=”tcpAllowOthers” /&gt;
- &lt;property name=”tcpSSL” /&gt;
- &lt;property name=”pg” /&gt;
- &lt;property name=”pgPort”&gt;5435&lt;/property&gt;
- &lt;property name=”pgAllowOthers” /&gt;
- &lt;property name=”trace” /&gt;
- &lt;property name=”baseDir”&gt;${carbon.home}&lt;/property&gt;
+ &lt;property name=&quot;web&quot; /&gt;
+ &lt;property name=&quot;webPort&quot;&gt;8082&lt;/property&gt;
+ &lt;property name=&quot;webAllowOthers&quot; /&gt;
+ &lt;property name=&quot;webSSL&quot; /&gt;
+ &lt;property name=&quot;tcp&quot; /&gt;
+ &lt;property name=&quot;tcpPort&quot;&gt;9092&lt;/property&gt;
+ &lt;property name=&quot;tcpAllowOthers&quot; /&gt;
+ &lt;property name=&quot;tcpSSL&quot; /&gt;
+ &lt;property name=&quot;pg&quot; /&gt;
+ &lt;property name=&quot;pgPort&quot;&gt;5435&lt;/property&gt;
+ &lt;property name=&quot;pgAllowOthers&quot; /&gt;
+ &lt;property name=&quot;trace&quot; /&gt;
+ &lt;property name=&quot;baseDir&quot;&gt;${carbon.home}&lt;/property&gt;
  &lt;/H2DatabaseConfiguration&gt;
 </code></pre></div>
 <h2 id="approach-a-using-web-browser">Approach A: Using Web Browser 🌐<a class="headerlink" href="#approach-a-using-web-browser" title="Link to this section">&para;</a></h2>
@@ -10049,8 +10049,8 @@ as the main headline.
 <p>Then copy the path for the database you want to open, In my case the database path I want to access is shown below <center><img alt="" src="../../images/2.png" /></center></p>
 </li>
 </ol>
-<div class="admonition watch out">
-<p class="admonition-title">Watch</p>
+<div class="admonition warning">
+<p class="admonition-title">Watch out</p>
 <p>Do not copy the <code>h2.db</code> part of the file. For example path I copied is</p>
 <div class="highlight"><pre><span></span><code>/Users/amar/Documents/ThesisCode/CEP_codes/wso2iot-3.3.0_new/wso2/broker/repository/database/WSO2MB_DB
 </code></pre></div>

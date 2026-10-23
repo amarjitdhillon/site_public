@@ -47,7 +47,7 @@ button.primary{background:var(--accent);color:#fff}button:disabled{opacity:.4;cu
 <script>
 const STEPS=[["Business","Stakeholders share the functional requirements, SMEs validate them, and BAs turn it all into FRs + NFRs in a BRD"],["Principal AI-SA + AI Teams","The BRD lands with the Principal AI-SA, who collaborates with the AI teams: data, ML, MLOps, apps, QA and RPA"],["Guardrails","Collaborate with Domain EA, run the cyber assessment, work closely with the Data SA and agree infra patterns with the Cloud Architect"],["System Integrator","The SI reports to the Cloud Architect, gives input on what&#x27;s feasible and grants the teams access via RBAC / Entra / AWS IAM / Unity Catalog"],["SA: AI","Weekly ALT meetings keep decisions flowing down and blockers flowing up"],["Outputs","The AOD goes to SRB / TRB / ALT reviews, and the DSA holds the detailed TOGAF views"],["Delivery","The delivery lead gets team access through the SI, who works with cloud infra to provision the environment"]];let cur=1;const N=STEPS.length;const $=s=>document.querySelector(s);
 const dots=$("#dots");STEPS.forEach(()=>dots.appendChild(document.createElement("i")));
-function render(){document.body.dataset.s=cur;$("#title").textContent=cur+" / "+N+" · "+STEPS[cur-1][0];$("#desc").textContent=STEPS[cur-1][1];
+function render(){document.body.dataset.s=cur;$("#title").textContent="Step "+cur+" of "+N+": "+STEPS[cur-1][0];$("#desc").textContent=STEPS[cur-1][1];
 [...dots.children].forEach((d,i)=>d.classList.toggle("on",i<cur));$("#back").disabled=cur===1;$("#next").textContent=cur===N?"↺ Restart":"Next →"}
 function next(){cur=cur===N?1:cur+1;render()}function back(){if(cur>1){cur--;render()}}
 $("#next").onclick=next;$("#back").onclick=back;$("#stage").onclick=next;

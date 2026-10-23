@@ -10635,7 +10635,7 @@ as the main headline.
 <p>The below list is presented in alphabetical order. A command’s position in the list is not representative of its usefulness or simplicity. </p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>For the final word on a command’s usage, refer to its man pages. The man command is in our list, of course—it’s short for “manual.”</p>
+<p>For the final word on a command’s usage, refer to its man pages. The man command is in our list, of course, it’s short for “manual.”</p>
 </div>
 <h2 id="alias">alias 🏷️<a class="headerlink" href="#alias" title="Link to this section">&para;</a></h2>
 <p>The alias command lets you give your own name to a command or sequence of commands. You can then type your short name, and the shell will execute the command or sequence of commands for you.</p>
@@ -10646,7 +10646,7 @@ This sets up an alias called <code>cls</code> . It will be another name for clea
 <div class="highlight"><pre><span></span><code><span class="nb">alias</span><span class="w"> </span><span class="nv">pf</span><span class="o">=</span><span class="s2">&quot;ps -e | grep </span><span class="nv">$1</span><span class="s2">&quot;</span>
 </code></pre></div>
 <div class="admonition note">
-<p>If you wanted to discover the process ID (PID) of the shutter process—or to find out if shutter was even running—you could use the alias like this. Type <code>pf</code> followed by a space, and the name of the process you are intere$$sted in:</p>
+<p>If you wanted to discover the process ID (PID) of the shutter process (or to find out if shutter was even running) you could use the alias like this. Type <code>pf</code> followed by a space, and the name of the process you are intere$$sted in:</p>
 </div>
 <p><div class="highlight"><pre><span></span><code>pf<span class="w"> </span>shutter
 </code></pre></div>
@@ -10835,7 +10835,7 @@ Typing two exclamation points repeats your previous command.</p>
 <p>To find the PID of shutter we’ll use our ps and grep trick from the section about the alias command, above. We can search for the shutter process and obtain its PID as follows:
 <div class="highlight"><pre><span></span><code>ps<span class="w"> </span>-e<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>shutter.
 </code></pre></div>
-Once we have determined the PID—1692 in this case—we can kill it as follows:</p>
+Once we have determined the PID (1692 in this case) we can kill it as follows:</p>
 <p><div class="highlight"><pre><span></span><code><span class="nb">kill</span><span class="w"> </span><span class="m">1692</span>
 </code></pre></div>
 kill command in a terminal window</p>
@@ -10945,7 +10945,7 @@ To hear a ping, use the <code>-a</code> (audible) option.</p>
 <p>You can also schedule a shutdown and inform any logged in users of the pending shutdown. To let the shutdown command know when you want it to shut down, you provide it with a time. This can be a set number of minutes from now, such as +90 or a precise time, like 23:00. Any text message you provide is broadcast to logged in users.</p>
 <div class="highlight"><pre><span></span><code>shutdown<span class="w"> </span><span class="m">23</span>:00<span class="w"> </span>Shutdown<span class="w"> </span>tonight<span class="w"> </span>at<span class="w"> </span><span class="m">23</span>:00,<span class="w"> </span>save<span class="w"> </span>your<span class="w"> </span>work<span class="w"> </span>and<span class="w"> </span>log<span class="w"> </span>out<span class="w"> </span>before<span class="w"> </span><span class="k">then</span>!
 </code></pre></div>
-<p>To cancel a shutdown, use the <code>-c</code> (cancel) option. Here we have scheduled a shutdown for fifteen minutes time from now—and then changed our minds.</p>
+<p>To cancel a shutdown, use the <code>-c</code> (cancel) option. Here we have scheduled a shutdown for fifteen minutes time from now, and then changed our minds.</p>
 <div class="highlight"><pre><span></span><code>shutdown<span class="w"> </span>+15<span class="w"> </span>Shutting<span class="w"> </span>down<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">15</span><span class="w"> </span>minutes!
 shutdown<span class="w"> </span>-c
 </code></pre></div>

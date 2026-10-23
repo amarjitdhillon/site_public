@@ -8019,6 +8019,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#common-table-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Table Expressions 🧾
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#zero-copy-cloning" class="md-nav__link">
     <span class="md-ellipsis">
       Zero-Copy Cloning 🧬
@@ -10101,6 +10110,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#common-table-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Table Expressions 🧾
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#zero-copy-cloning" class="md-nav__link">
     <span class="md-ellipsis">
       Zero-Copy Cloning 🧬
@@ -10249,7 +10267,7 @@ as the main headline.
 <p><center> <img src="../images/diff_whs.jpg" alt="Diff whs" width="70%"> </center></p>
 <h3 id="compression">Compression 🗜️<a class="headerlink" href="#compression" title="Link to this section">&para;</a></h3>
 <p>Another fundamental engineering work from Snowflake was the proprietary and sizeable compression. Faster compression and less data transfer led to less Input Output (IO) costs and an overall faster architecture. It is not uncommon to see <code>5x compression</code> when migrating data to Snowflake.</p>
-<h4 id="common-table-expressions">Common Table Expressions:<a class="headerlink" href="#common-table-expressions" title="Link to this section">&para;</a></h4>
+<h3 id="common-table-expressions">Common Table Expressions 🧾<a class="headerlink" href="#common-table-expressions" title="Link to this section">&para;</a></h3>
 <p>A Common Table Expression, also called as CTE in short form, is a temporary named result set that you can reference within a SELECT, INSERT, UPDATE, or DELETE statement. The CTE can also be used in a View.</p>
 <p>The WITH clause, an optional clause that precedes the SELECT statement, is used to define common table expressions (CTEs) which are referenced in the FROM clause</p>
 <div class="highlight"><pre><span></span><code><span class="k">WITH</span><span class="w"> </span><span class="n">expression_name</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">column_name</span><span class="w"> </span><span class="p">[,...</span><span class="n">n</span><span class="p">]</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w"> </span>
@@ -10269,8 +10287,8 @@ as the main headline.
 <ol>
 <li>
 <p><code>Query result cache</code>: The fastest way to retrieve data from Snowflake is by using the query result cache.
-The results of a Snowflake query are cached, or persisted, for 24 hours and then purged.</p>
-<p>The result cache is fully managed by the Snowflake global cloud services (GCS) layer, as shown in Figure 2-18, and is available across all virtual warehouses since virtual warehouses have access to all data.</p>
+    The results of a Snowflake query are cached, or persisted, for 24 hours and then purged.</p>
+<p>The result cache is fully managed by the Snowflake global cloud services (GCS) layer, and is available across all virtual warehouses since virtual warehouses have access to all data.</p>
 </li>
 <li>
 <p><code>Virtual warehouse cache</code>: Running virtual warehouses use SSD storage to store the micro-partitions that are pulled from the centralized database storage layer when a query is processed.</p>
@@ -10293,7 +10311,7 @@ The results of a Snowflake query are cached, or persisted, for 24 hours and then
 <span class="k">SET</span><span class="w"> </span><span class="n">WAREHOUSE_SIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">LARGE</span><span class="p">;</span>
 </code></pre></div>
 <div class="highlight"><span class="filename">Select a warehouse</span><pre><span></span><code><span class="n">USE</span><span class="w"> </span><span class="n">WAREHOUSE</span><span class="w"> </span><span class="n">AmarBlog_WH</span><span class="p">;</span>
-</code></pre></div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Data/Analytics<span class="rn__time"> · 17 min read</span></p><p class="rn__title"><a href="../../technical_stuff/powerbi/">Power BI →</a></p></li><li><p class="rn__kicker">Data/Analytics<span class="rn__time"> · 7 min read</span></p><p class="rn__title"><a href="../../technical_stuff/sql_and_nosql/">DB, DW and Data Lake →</a></p></li></ul></div>
+</code></pre></div><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Data/Analytics<span class="rn__time"> · 17 min read</span></p><p class="rn__title"><a href="../../technical_stuff/powerbi/">Power BI →</a></p></li><li><p class="rn__kicker">Data/Analytics<span class="rn__time"> · 8 min read</span></p><p class="rn__title"><a href="../../technical_stuff/sql_and_nosql/">DB, DW and Data Lake →</a></p></li></ul></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->

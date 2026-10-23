@@ -19,7 +19,7 @@
     box = document.createElement("div");
     box.className = "lb";
     box.innerHTML = '<img alt=""><button class="lb__x" aria-label="Close">✕</button>' +
-      '<div class="lb__hint">Scroll or pinch to zoom · drag to pan · double-click to reset</div>';
+      '<div class="lb__hint">Scroll or pinch to zoom, drag to pan, double-click to reset</div>';
     img = box.querySelector("img");
     document.body.appendChild(box);
 

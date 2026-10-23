@@ -10068,16 +10068,16 @@ as the main headline.
 <p>The master node consists of four components:</p>
 <ul>
 <li><strong>The <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> server</strong> -  When you run commands on <code>kubectl</code>, this is what it communicated with to perform operations. The <code>API server</code> exposes an <abbr title="Application Programming Interface: how one piece of software talks to another">API</abbr> for both external users and other components within the cluster.</li>
-<li><strong>The scheduler</strong> — This is responsible for selecting an appropriate node where a <code>pod</code> will run, given priority, resource needs, and other constraints.</li>
-<li><strong>The controller manager</strong> — This is responsible for executing <code>control loops</code>: the continual observe-diff-act operation that underpins the operation of Kubernetes.</li>
-<li><strong>A distributed key-value data store, etcd</strong> — This stores the underlying state of the cluster and thereby makes sure it persists when nodes fail or restarts are required.</li>
+<li><strong>The scheduler</strong>: This is responsible for selecting an appropriate node where a <code>pod</code> will run, given priority, resource needs, and other constraints.</li>
+<li><strong>The controller manager</strong>: This is responsible for executing <code>control loops</code>: the continual observe-diff-act operation that underpins the operation of Kubernetes.</li>
+<li><strong>A distributed key-value data store, etcd</strong>: This stores the underlying state of the cluster and thereby makes sure it persists when nodes fail or restarts are required.</li>
 </ul>
 <h3 id="worker-node">Worker node 👷<a class="headerlink" href="#worker-node" title="Link to this section">&para;</a></h3>
 <p>Each worker node uses the following components to run and monitor applications:</p>
 <ul>
-<li><strong>A container runtime</strong> — This can be Docker.</li>
-<li><strong>The kubelet</strong> — This interacts with the Kubernetes master to start, stop, and monitor containers on the node.</li>
-<li><strong>The kube-proxy</strong> — It is managing the virtual networking on each node. The proxy handles network routes and IP addressing for services and pods.</li>
+<li><strong>A container runtime</strong>: This can be Docker.</li>
+<li><strong>The kubelet</strong>: This interacts with the Kubernetes master to start, stop, and monitor containers on the node.</li>
+<li><strong>The kube-proxy</strong>: It is managing the virtual networking on each node. The proxy handles network routes and IP addressing for services and pods.</li>
 </ul>
 <h2 id="concepts">Concepts 💡<a class="headerlink" href="#concepts" title="Link to this section">&para;</a></h2>
 <ul>

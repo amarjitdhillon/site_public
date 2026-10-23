@@ -9977,7 +9977,7 @@ as the main headline.
 <p>This pattern is used to solve an issue of how to implement a query that retrieves data from multiple services in a microservice architecture?</p>
 <h2 id="solution">Solution 💡<a class="headerlink" href="#solution" title="Link to this section">&para;</a></h2>
 <p>The command query responsibility segregation (<abbr title="Command Query Responsibility Segregation: separate models for writes and reads">CQRS</abbr>) pattern separates the data mutation, or the command part of a system, from the query part. You can use the <abbr title="Command Query Responsibility Segregation: separate models for writes and reads">CQRS</abbr> pattern to separate updates and queries if they have different requirements for throughput, latency, or consistency.</p>
-<p>The <abbr title="Command Query Responsibility Segregation: separate models for writes and reads">CQRS</abbr> pattern splits the application into two parts—the command side and the query side—as shown in the following diagram. The command side handles <code>create</code>, <code>update</code>, and <code>delete</code> requests. The query side runs the query part by using the <code>read replicas</code>.</p>
+<p>The <abbr title="Command Query Responsibility Segregation: separate models for writes and reads">CQRS</abbr> pattern splits the application into two parts (the command side and the query side) as shown in the following diagram. The command side handles <code>create</code>, <code>update</code>, and <code>delete</code> requests. The query side runs the query part by using the <code>read replicas</code>.</p>
 <p><center> <figure>
 <img width="95%" src=
 "../../images/cqrs-ex1.png"></p>

@@ -10291,7 +10291,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="artificial-i-basics">Artificial I Basics<a class="headerlink" href="#artificial-i-basics" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 6 min read</p>
+<h1 id="artificial-i-basics">Artificial I Basics<a class="headerlink" href="#artificial-i-basics" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 7 min read</p>
 <p>A machine learning model is a program that can find patterns or make decisions from a previously unseen dataset.
 For example, in <code>natural language processing</code>, machine learning models can parse and correctly recognize the intent behind previously unheard sentences or combinations of words.
 In <code>image recognition</code>, a machine learning model can be taught to recognize objects - such as cars or dogs.</p>
@@ -10336,6 +10336,14 @@ In <code>image recognition</code>, a machine learning model can be taught to rec
 <p>A Decision Tree is a predictive approach in ML to determine what class an object belongs to. As the name suggests, a decision tree is a tree-like flow chart where the class of an object is determined step-by-step using certain known conditions.</p>
 <p><center> <img src="https://cms.databricks.com/sites/default/files/inline-images/visualizing-the-model.png" alt="Visualizing the model" width="95%"> </center></p>
 <h3 id="random-forests">Random Forests 🌲<a class="headerlink" href="#random-forests" title="Link to this section">&para;</a></h3>
+<p>One decision tree overfits like crazy. So... why not grow a whole forest and let them vote? That's a random forest</p>
+<ul>
+<li>Each tree trains on a random sample of the rows (bootstrapping, aka <strong>bagging</strong>)</li>
+<li>At every split, a tree only gets to look at a random subset of the features, so the trees end up different from each other</li>
+<li>Classification: majority vote. Regression: average of all the trees</li>
+<li>Lots of slightly different trees averaged together = way less overfitting than a single tree</li>
+</ul>
+<p>Good default when you want something solid without much tuning, and it gives you feature importance for free. The catch: it's slower and harder to explain than one tree, and boosting (XGBoost below) often squeezes out a bit more accuracy</p>
 <h3 id="xgboost">XGBoost 🚀<a class="headerlink" href="#xgboost" title="Link to this section">&para;</a></h3>
 <p>XGBoost, which stands for Extreme Gradient Boosting, is a scalable, distributed gradient-boosted decision tree (GBDT) machine learning library. It provides parallel tree boosting and is the leading machine learning library for regression, classification, and ranking problems.</p>
 <p><mark>A Gradient Boosting Decision Trees (GBDT) is a decision tree ensemble learning algorithm similar to random forest, for classification and regression. Ensemble learning algorithms combine multiple machine learning algorithms to obtain a better model.</mark></p>
@@ -10353,7 +10361,7 @@ In <code>image recognition</code>, a machine learning model can be taught to rec
 <p>Until the function is <mark>close to or equal to zero</mark>, the model will continue to adjust its parameters to yield the smallest possible error.</p>
 <div class="admonition info">
 <p class="admonition-title">TLDR</p>
-<p>Similar to finding the line of best fit in linear regression, the goal of gradient descent is to minimize the cost function, or the error between predicted and actual y. In order to do this, it requires two data points—a direction and a learning rate. These factors determine the partial derivative calculations of future iterations, allowing it to gradually arrive at the local or global minimum (i.e. point of convergence).</p>
+<p>Similar to finding the line of best fit in linear regression, the goal of gradient descent is to minimize the cost function, or the error between predicted and actual y. In order to do this, it requires two data points: a direction and a learning rate. These factors determine the partial derivative calculations of future iterations, allowing it to gradually arrive at the local or global minimum (i.e. point of convergence).</p>
 </div>
 <h4 id="costloss-function">Cost/Loss Function<a class="headerlink" href="#costloss-function" title="Link to this section">&para;</a></h4>
 <p>The cost (or loss) function measures the difference, or error, between <code>actual y</code> and <code>predicted y</code> at its current position. This improves the machine learning model's efficacy by providing feedback to the model so that it can adjust the parameters to minimize the error and find the <code>local or global minimum</code>.</p>
@@ -10368,7 +10376,7 @@ In <code>image recognition</code>, a machine learning model can be taught to rec
 <li><code>Ranking Labels</code> : MAP@k, MRR </li>
 <li><code>AUC / LogLoss</code> : AUC, PR-AUC, Log Loss</li>
 <li><code>Computer Vision / Object Detection</code> : Accuracy (MAP &amp; IoU coming soon)</li>
-</ul><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Basics<span class="rn__time"> · 3 min read</span></p><p class="rn__title"><a href="../../AI/mlops101/">MLOps →</a></p></li><li><p class="rn__kicker">Basics<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../AI/feature_store/">Feature Store →</a></p></li></ul></div>
+</ul><h2 id="__read-next" class="read-next__title">Keep exploring 🚀</h2><div class="grid cards read-next"><ul><li><p class="rn__kicker">Basics<span class="rn__time"> · 4 min read</span></p><p class="rn__title"><a href="../../AI/mlops101/">MLOps →</a></p></li><li><p class="rn__kicker">Basics<span class="rn__time"> · 1 min read</span></p><p class="rn__title"><a href="../../AI/feature_store/">Feature Store →</a></p></li></ul></div>
 
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->

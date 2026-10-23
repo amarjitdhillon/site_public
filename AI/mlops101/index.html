@@ -10171,7 +10171,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="mlops-basics">MLOPS Basics <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.89 3 1.96.4L11.11 21l-1.96-.4zm6.7 9L16 8.41V5.58L22.42 12 16 18.41v-2.83zM1.58 12 8 5.58v2.83L4.41 12 8 15.58v2.83z"/></svg></span><a class="headerlink" href="#mlops-basics" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 3 min read</p>
+<h1 id="mlops-basics">MLOPS Basics <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.89 3 1.96.4L11.11 21l-1.96-.4zm6.7 9L16 8.41V5.58L22.42 12 16 18.41v-2.83zM1.58 12 8 5.58v2.83L4.41 12 8 15.58v2.83z"/></svg></span><a class="headerlink" href="#mlops-basics" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 4 min read</p>
 <h2 id="mlaas">MLaaS ☁️<a class="headerlink" href="#mlaas" title="Link to this section">&para;</a></h2>
 <p>MLaaS describes a variety of machine learning capabilities that are delivered via the cloud. Vendors in the MLaaS market offer tools like image recognition, voice recognition, data visualization, and deep learning.<mark>A user typically uploads data to a vendor’s cloud, and then the machine learning computation is processed on the cloud</mark></p>
 <h2 id="model-training">Model Training 🏋️<a class="headerlink" href="#model-training" title="Link to this section">&para;</a></h2>
@@ -10216,8 +10216,20 @@ as the main headline.
 <p>They can predict any new data that comes in - good for long tailing.</p>
 </div>
 <h2 id="model-selection">Model Selection ⚖️<a class="headerlink" href="#model-selection" title="Link to this section">&para;</a></h2>
+<p>Picking the model isn't "which one is fanciest". It's which one does the job on data it hasn't seen, within your budget</p>
+<ul>
+<li><strong>Start simple</strong>: a baseline like logistic regression or a single tree. If the fancy model can't beat it, that tells you something</li>
+<li><strong>Hold out data</strong>: train / validation / test split, or k-fold cross-validation when data is small. Never pick a model using the test set</li>
+<li><strong>Pick the right metric</strong>: accuracy is useless on imbalanced data, so look at precision, recall, F1 or AUC. For regression, RMSE or MAE</li>
+<li><strong>Tune hyperparameters</strong>: grid search, random search or Bayesian search, always scored on validation data</li>
+<li><strong>Think beyond accuracy</strong>: latency, cost, model size and how explainable it needs to be all count in prod</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Track every run (params, metrics, data version) in something like MLflow, so you can actually compare models and reproduce the winner later</p>
+</div>
 <h2 id="model-deployment">Model Deployment 🚀<a class="headerlink" href="#model-deployment" title="Link to this section">&para;</a></h2>
-<p>Model deployment is the process of making a machine learning model available for use on a target environment—for <code>testing</code> or <code>production</code>.</p>
+<p>Model deployment is the process of making a machine learning model available for use on a target environment, for <code>testing</code> or <code>production</code>.</p>
 <h2 id="optimization-steps">Optimization Steps 🔧<a class="headerlink" href="#optimization-steps" title="Link to this section">&para;</a></h2>
 <ul>
 <li>Using <abbr title="Graphics Processing Unit: the chip that trains and runs most AI models">GPU</abbr>'s instead of CPU's when required. In addition to GPUs, researchers are using Field-Programmable Gate Arrays (FPGAs) to successfully run machine learning workloads. Sometimes FPGAs outperform GPUs when running neural network and deep learning operations</li>

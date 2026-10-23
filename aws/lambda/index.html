@@ -10816,7 +10816,7 @@ as the main headline.
 <p></center></p>
 <h3 id="policies">Policies 👮<a class="headerlink" href="#policies" title="Link to this section">&para;</a></h3>
 <h4 id="execution-role">Execution role 🙆‍♂️<a class="headerlink" href="#execution-role" title="Link to this section">&para;</a></h4>
-<p>The <code>execution role</code> gives your function permissions to interact with other services. You provide this role when you create a function, and <mark>Lambda assumes the role when your function is invoked</mark>. The policy for this role defines the actions the role is allowed to take — for example, writing to a DynamoDB table.</p>
+<p>The <code>execution role</code> gives your function permissions to interact with other services. You provide this role when you create a function, and <mark>Lambda assumes the role when your function is invoked</mark>. The policy for this role defines the actions the role is allowed to take, for example, writing to a DynamoDB table.</p>
 <p><center>
 <img width="90%" src=
 "../images/lam-pollicy.jpg"></p>
@@ -11013,7 +11013,7 @@ Throttling occurs when your <code>concurrent execution count</code> &gt; <code>c
 <p>If your test results uncover situations where functions from different applications or different environments are competing with each other for concurrency, you probably need to rethink your account segregation strategy and consider moving to a multi-account strategy. You don’t want to end up with a non-production function impacting production functions because they’re in the same account.</p>
 </div>
 <h3 id="memory-config">Memory config<a class="headerlink" href="#memory-config" title="Link to this section">&para;</a></h3>
-<p>When you configure functions, there is only one setting that can impact performance—memory. However, both CPU and I/O scale linearly with memory configuration. For example, a function with 256 MB of memory has twice the CPU and I/O as a 128 MB function.</p>
+<p>When you configure functions, there is only one setting that can impact performance, memory. However, both CPU and I/O scale linearly with memory configuration. For example, a function with 256 MB of memory has twice the CPU and I/O as a 128 MB function.</p>
 <p>Memory assignment will impact how long your function runs and, at a larger scale, can impact when functions are throttled.</p>
 <h2 id="alias">Alias<a class="headerlink" href="#alias" title="Link to this section">&para;</a></h2>
 <ul>
