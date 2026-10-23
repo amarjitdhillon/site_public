@@ -37,6 +37,26 @@
     <link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="../../assets/fonts/space-grotesk-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
     
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Model Observability",
+            "description": "Developer resources for Azure, AWS, K8S and more.",
+            "url": "https://www.amarjitdhillon.com/AI/model_observability/",
+            "author": {
+                "@type": "Person",
+                "name": "Amarjit Singh Dhillon",
+                "url": "https://www.amarjitdhillon.com/"
+            },
+            "publisher": {
+                "@type": "Person",
+                "name": "Amarjit Singh Dhillon",
+                "url": "https://www.amarjitdhillon.com/"
+            }
+        }
+    </script>
+    
 
     
       
@@ -9881,6 +9901,8 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 8c-1.5 0-2.3 1.4-1.9 2.5l-3.6 3.6c-.3-.1-.7-.1-1 0l-2.6-2.6c.4-1.1-.4-2.5-1.9-2.5-1.4 0-2.3 1.4-1.9 2.5L3.5 16c-1.1-.3-2.5.5-2.5 2 0 1.1.9 2 2 2 1.4 0 2.3-1.4 1.9-2.5l4.5-4.6c.3.1.7.1 1 0l2.6 2.6c-.3 1 .5 2.5 2 2.5s2.3-1.4 1.9-2.5l3.6-3.6c1.1.3 2.5-.5 2.5-1.9 0-1.1-.9-2-2-2m-6 1 .9-2.1L18 6l-2.1-.9L15 3l-.9 2.1L12 6l2.1.9zM3.5 11 4 9l2-.5L4 8l-.5-2L3 8l-2 .5L3 9z"/></svg>
+  
   <span class="md-ellipsis">
     Model Observability
   </span>
@@ -9891,6 +9913,8 @@
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
+  
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 8c-1.5 0-2.3 1.4-1.9 2.5l-3.6 3.6c-.3-.1-.7-.1-1 0l-2.6-2.6c.4-1.1-.4-2.5-1.9-2.5-1.4 0-2.3 1.4-1.9 2.5L3.5 16c-1.1-.3-2.5.5-2.5 2 0 1.1.9 2 2 2 1.4 0 2.3-1.4 1.9-2.5l4.5-4.6c.3.1.7.1 1 0l2.6 2.6c-.3 1 .5 2.5 2 2.5s2.3-1.4 1.9-2.5l3.6-3.6c1.1.3 2.5-.5 2.5-1.9 0-1.1-.9-2-2-2m-6 1 .9-2.1L18 6l-2.1-.9L15 3l-.9 2.1L12 6l2.1.9zM3.5 11 4 9l2-.5L4 8l-.5-2L3 8l-2 .5L3 9z"/></svg>
   
   <span class="md-ellipsis">
     Model Observability
@@ -11014,7 +11038,7 @@ as the main headline.
 
 <!-- Markdown content (marker turns on scroll-reveal; on for every page, `reveal: false` in front matter turns it off) -->
 <span data-reveal-page hidden></span>
-<h1 id="model-observability">Model Observability<a class="headerlink" href="#model-observability" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 5 min read</p>
+<h1 id="model-observability">Model Observability <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 8c-1.5 0-2.3 1.4-1.9 2.5l-3.6 3.6c-.3-.1-.7-.1-1 0l-2.6-2.6c.4-1.1-.4-2.5-1.9-2.5-1.4 0-2.3 1.4-1.9 2.5L3.5 16c-1.1-.3-2.5.5-2.5 2 0 1.1.9 2 2 2 1.4 0 2.3-1.4 1.9-2.5l4.5-4.6c.3.1.7.1 1 0l2.6 2.6c-.3 1 .5 2.5 2 2.5s2.3-1.4 1.9-2.5l3.6-3.6c1.1.3 2.5-.5 2.5-1.9 0-1.1-.9-2-2-2m-6 1 .9-2.1L18 6l-2.1-.9L15 3l-.9 2.1L12 6l2.1.9zM3.5 11 4 9l2-.5L4 8l-.5-2L3 8l-2 .5L3 9z"/></svg></span><a class="headerlink" href="#model-observability" title="Link to this section">&para;</a></h1><p class="readtime">⏱️ 5 min read</p>
 <p>Surveys have found that ML teams spend their &lt;1% of time in the production workflow, while a majority of time is spent in the data preparation, model development and model deployment phases. This is mostly due to the challenges that teams face in resolving these issues in production. </p>
 <h2 id="model-performance">Model Performance<a class="headerlink" href="#model-performance" title="Link to this section">&para;</a></h2>
 <p>The most common problems that plague all teams are around model and data drift performance degradation, and data quality issues.</p>
@@ -11053,9 +11077,61 @@ as the main headline.
 <!-- 👏 Claps: no-login appreciation on content pages (not the homepage, About or section landing pages).
      Backend: tools/claps/claps.yaml (API Gateway + Lambda + DynamoDB), URL in mkdocs.yml extra.claps_api -->
 
+<div class="claps" data-api="https://m10c8zmc30.execute-api.us-east-1.amazonaws.com/claps" data-page="./">
+  <button class="claps__btn" type="button" aria-label="Clap for this page">
+    <span class="claps__hand" aria-hidden="true">👏</span>
+    <span class="claps__count">0</span>
+  </button>
+  <span class="claps__text">Found this useful? Give it a clap, up to 10 👏</span>
+</div>
+
 
 <!-- 💬 Comments (Giscus, stored as GitHub Discussions in amarjitdhillon/site_public, "Announcements" category).
      Same pages as the claps: not the homepage, About or section landing pages. -->
+
+<h2 id="__comments" class="comments-title">Comments 💬</h2>
+<script src="https://giscus.app/client.js"
+        data-repo="amarjitdhillon/site_public"
+        data-repo-id="R_kgDOIaJLzA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOIaJLzM4DJS8p"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+<script>
+  // match Giscus to the site's light / dark palette, now and whenever it's toggled
+  (function () {
+    var themeFor = function () {
+      var p = typeof __md_get === "function" ? __md_get("__palette") : null;
+      return p && p.color && p.color.scheme === "slate" ? "transparent_dark" : "light";
+    };
+    var s = document.querySelector("script[src*='giscus.app/client.js']");
+    if (s) s.setAttribute("data-theme", themeFor());
+    // Giscus titles its frame "Comments" and Material turns every title into a floating tooltip,
+    // so move it to aria-label (screen readers still hear it, no stray tooltip)
+    var wrap = s && s.parentNode;
+    if (wrap) new MutationObserver(function (_, obs) {
+      var f = wrap.querySelector("iframe.giscus-frame[title]");
+      if (f) { f.setAttribute("aria-label", f.title); f.removeAttribute("title"); obs.disconnect(); }
+    }).observe(wrap, { childList: true, subtree: true });
+    var ref = document.querySelector("[data-md-component=palette]");
+    if (ref && !ref.dataset.giscusSync) {
+      ref.dataset.giscusSync = "1";
+      ref.addEventListener("change", function () {
+        var f = document.querySelector(".giscus-frame");
+        if (f) f.contentWindow.postMessage({ giscus: { setConfig: { theme: themeFor() } } }, "https://giscus.app");
+      });
+    }
+  })();
+</script>
 
 
 <!-- Source file information -->
