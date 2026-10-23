@@ -11614,7 +11614,7 @@ W1120<span class="w"> </span><span class="m">01</span>:29:06.688471<span class="
 <div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>csr-mani.yaml<span class="w"> </span>
 certificatesigningrequest.certificates.k8s.io/akshay<span class="w"> </span>created
 </code></pre></div></p>
-<p>check the CSR's
+<p>check the CSRs
 <div class="highlight"><pre><span></span><code>controlplane<span class="w"> </span>~<span class="w"> </span>➜<span class="w">  </span>k<span class="w"> </span>get<span class="w"> </span>csr
 NAME<span class="w">        </span>AGE<span class="w">   </span>SIGNERNAME<span class="w">                                    </span>REQUESTOR<span class="w">                  </span>REQUESTEDDURATION<span class="w">   </span>CONDITION
 akshay<span class="w">      </span>73s<span class="w">   </span>kubernetes.io/kube-apiserver-client<span class="w">           </span>kubernetes-admin<span class="w">           </span>24h<span class="w">                 </span>Pending
