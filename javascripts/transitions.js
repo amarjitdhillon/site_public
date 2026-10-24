@@ -5,6 +5,7 @@
   document$.subscribe(function () {
     if (first) { first = false; return; } // the first page load already has its own reveal
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (document.documentElement.classList.contains("vt-nav")) return; // a card morph (morph.js) is already animating this one
     var root = document.documentElement;
     root.classList.remove("page-in");
     void root.offsetWidth; // restart the animation

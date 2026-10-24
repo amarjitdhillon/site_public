@@ -8,7 +8,7 @@ document$.subscribe(function () {
     });
   }, { threshold: 0.6 });
   hs.forEach(function (h) {
-    if (h.closest(".bento, .grid, .admonition, details, .tabbed-block")) return; // only real section titles
+    if (h.closest(".bento, .grid, .admonition, details, .tabbed-block, .about-hero")) return; // only real section titles
     h.classList.add("uline");
     io.observe(h);
   });

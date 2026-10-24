@@ -35,6 +35,7 @@ document$.subscribe(function () {
     // little pop and a floating +1
     btn.classList.remove("pop"); void btn.offsetWidth; btn.classList.add("pop");
     var plus = document.createElement("span"); plus.className = "claps__plus"; plus.textContent = "+1";
+    if (mine === MAX && window.tsConfetti) window.tsConfetti(btn); // the 10th clap gets a little party
     btn.appendChild(plus); setTimeout(function () { plus.remove(); }, 900);
     clearTimeout(timer); timer = setTimeout(flush, 700);
   });

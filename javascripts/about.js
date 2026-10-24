@@ -53,23 +53,7 @@ document$.subscribe(function () {
     });
   });
 
-  // Rotating role line in the hero
-  var rot = document.querySelector(".about-rotator[data-words]");
-  if (rot && !rot.dataset.started) {
-    rot.dataset.started = "1";
-    var words = rot.dataset.words.split("|");
-    var i = 0;
-    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setInterval(function () {
-        rot.classList.add("is-out");
-        setTimeout(function () {
-          i = (i + 1) % words.length;
-          rot.textContent = words[i];
-          rot.classList.remove("is-out");
-        }, 300);
-      }, 2400);
-    }
-  }
+  // The role line in the hero types itself through typing.js ([data-words]), like the rest of the site
 
   // Timelines: the line draws itself as you scroll, roles slide in, dots light up when reached
   var lines = document.querySelectorAll(".about-timeline");
@@ -163,4 +147,39 @@ document$.subscribe(function () {
       if (count) count.textContent = shown;
     });
   });
+});
+
+// Hero photos: a tall rounded frame that crossfades through the photos with a slow zoom, dots to jump, pauses on hover.
+// Photos 2+ load only after the page is up, so the About page stays quick.
+document$.subscribe(function () {
+  var box = document.querySelector(".about-photos");
+  clearInterval(window.__photoTimer);
+  if (!box || box.dataset.ready) return;
+  box.dataset.ready = "1";
+  var imgs = Array.from(box.querySelectorAll(".about-photos__img")), dots = box.querySelector(".about-photos__dots"), i = 0, paused = false;
+  if (imgs.length < 2) return;
+  imgs.forEach(function (img, n) {
+    var d = document.createElement("button");
+    d.type = "button"; d.setAttribute("aria-label", "Show photo " + (n + 1));
+    d.addEventListener("click", function () { go(n); restart(); });
+    dots.appendChild(d);
+  });
+  function load(img) { if (img.dataset.src) { img.src = img.dataset.src; img.removeAttribute("data-src"); } }
+  function go(n) {
+    load(imgs[n]);
+    imgs[i].classList.remove("is-on");
+    i = n;
+    imgs[i].classList.add("is-on");
+    Array.from(dots.children).forEach(function (d, k) { d.classList.toggle("is-on", k === i); });
+  }
+  function restart() {
+    clearInterval(window.__photoTimer);
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    window.__photoTimer = setInterval(function () { if (!paused && !document.hidden) go((i + 1) % imgs.length); }, 5200);
+  }
+  box.addEventListener("mouseenter", function () { paused = true; });
+  box.addEventListener("mouseleave", function () { paused = false; });
+  go(0);
+  setTimeout(function () { imgs.forEach(load); }, 1500);
+  restart();
 });

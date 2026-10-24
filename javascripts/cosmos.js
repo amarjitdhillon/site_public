@@ -24,6 +24,7 @@ document$.subscribe(function () {
     [[10, 5, 14], [24, 6, 22]],   // magenta hint
   ];
   var SKY_CYCLE = 60000; // ms for the full loop
+  var hour = new Date().getHours(), NIGHT = hour >= 19 || hour < 6; // the visitor's own evening: more stars, dimmer glows
   var NEBULAE = [
     { x: .14, y: .05, r: .55, c: [91, 91, 247], a: .26, sx: .00007, sy: .00005, p: 0 },
     { x: .95, y: .95, r: .5, c: [214, 40, 110], a: .24, sx: .00006, sy: .00008, p: 2 },
@@ -104,13 +105,14 @@ document$.subscribe(function () {
 
   function build() {
     var r = hero.getBoundingClientRect();
+    if (!r.width || !r.height) return; // hero is detached or hidden (e.g. while leaving the page): nothing to draw
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     W = r.width; H = r.height;
     canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     stars = [];
     LAYERS.forEach(function (L, li) {
-      var n = Math.round(W * H / 10000 * L.n);
+      var n = Math.round(W * H / 10000 * L.n * (NIGHT ? 1.8 : 1));
       for (var i = 0; i < n; i++) {
         stars.push({
           l: li, x: Math.random() * W, y: Math.random() * H, r: rand(L.r[0], L.r[1]),
@@ -124,6 +126,7 @@ document$.subscribe(function () {
   }
 
   function draw(now, dt) {
+    if (!W || !H || !milky) return;
     // sky
     var k = (now % SKY_CYCLE) / SKY_CYCLE * SKIES.length, i = Math.floor(k), f = k - i;
     f = f * f * (3 - 2 * f); // smooth hand-off between palettes
@@ -147,7 +150,7 @@ document$.subscribe(function () {
       var y = (n.y + Math.cos(now * n.sy + n.p) * .1) * H;
       var rad = n.r * Math.max(W, H) * (1 + Math.sin(now * .0003 + n.p) * .08);
       var g = ctx.createRadialGradient(x, y, 0, x, y, rad);
-      g.addColorStop(0, rgb(n.c, n.a));
+      g.addColorStop(0, rgb(n.c, NIGHT ? n.a * .7 : n.a));
       g.addColorStop(.5, rgb(n.c, n.a * .35));
       g.addColorStop(1, rgb(n.c, 0));
       ctx.fillStyle = g;

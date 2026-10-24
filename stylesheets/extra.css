@@ -736,8 +736,9 @@ table code {
 .cert-filter.is-active { background: var(--md-primary-fg-color); border-color: var(--md-primary-fg-color); color: var(--md-primary-bg-color) }
 .cert-count { margin-left: auto; font-size: .7rem; color: var(--md-default-fg-color--light) }
 
-.about-rotator { display: inline-block; transition: opacity .3s ease, transform .3s ease }
-.about-rotator.is-out { opacity: 0; transform: translateY(-6px) }
+.about-rotator { display: inline-block }
+.about-rotator::after { content: ""; display: inline-block; width: 2px; height: 1em; margin-left: 3px; vertical-align: -.12em; border-radius: 1px; background: currentColor; animation: type-caret 1s steps(1) infinite }
+@media (prefers-reduced-motion: reduce) { .about-rotator::after { display: none } }
 
 .cert-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: .6rem }
 .md-typeset a.cert-tile {
@@ -1596,14 +1597,14 @@ table code {
 [data-md-color-scheme="slate"] .md-typeset .admonition.tldr > .admonition-title::before,
 [data-md-color-scheme="slate"] .md-typeset .admonition.abstract > .admonition-title::before { background-color: #a5b4fc }
 
-/* highlights: a soft marker stroke under the words instead of a yellow block */
+/* highlights: a full, soft yellow-to-pink band behind the words (the half-height marker stroke read as half highlighted) */
 .md-typeset mark {
-  color: inherit; padding: 0 .1em; border-radius: .15em;
-  background: linear-gradient(90deg, rgba(255, 209, 102, .55), rgba(255, 126, 182, .4)) 0 88% / 100% .42em no-repeat;
+  color: inherit; padding: .08em .3em; margin: 0 -.05em; border-radius: .35em;
+  background: linear-gradient(90deg, rgba(255, 209, 102, .5), rgba(255, 126, 182, .32));
   box-decoration-break: clone; -webkit-box-decoration-break: clone;
 }
 [data-md-color-scheme="slate"] .md-typeset mark {
-  background: linear-gradient(90deg, rgba(255, 209, 102, .35), rgba(255, 126, 182, .3)) 0 88% / 100% .42em no-repeat;
+  color: #fff; background: linear-gradient(90deg, rgba(255, 209, 102, .28), rgba(255, 126, 182, .26));
 }
 /* no glossary underline or tooltip inside box labels (the DR in "TL;DR" is not Disaster Recovery) */
 .md-typeset .admonition-title abbr, .md-typeset summary abbr { text-decoration: none; border-bottom: none; cursor: inherit; pointer-events: none }
@@ -2345,3 +2346,237 @@ table code {
 /* long words, paths and inline code wrap instead of pushing the page wider than a phone */
 .md-typeset :is(p, li, td, h1, h2, h3, h4, dd, blockquote) { overflow-wrap: break-word }
 .md-typeset :not(pre) > code { overflow-wrap: anywhere }
+
+/* ---------- Typing lines (javascripts/typing.js): post covers, blog heading, section landing pages, diagram pills ---------- */
+@keyframes type-caret { 50% { opacity: 0 } }
+.md-typeset .typed-line { margin: -.4rem 0 1.4rem; font-family: var(--brand-display); font-size: 1.05rem; font-weight: 600; color: var(--md-default-fg-color--light) }
+.md-typeset .typed-line .typed {
+  background: linear-gradient(90deg, rgb(var(--sec1)), rgb(var(--sec2))); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.md-typeset .typed-line .typed::after, .md-typeset .post-hero__typed .typed::after, .md-typeset .page-head__label.is-typing::after {
+  content: ""; display: inline-block; width: 2px; height: 1em; margin-left: 3px; vertical-align: -.12em; border-radius: 1px;
+  animation: type-caret 1s steps(1) infinite;
+}
+.md-typeset .typed-line .typed::after { background: rgb(var(--sec2)) }
+.md-typeset .post-hero__typed { margin: -.2rem 0 0; font-size: .95rem; font-weight: 600; color: rgba(255, 255, 255, .92); animation-delay: .18s !important }
+.md-typeset .post-hero__typed .typed::after { background: #fff }
+.md-typeset .post-hero__arrow { opacity: .7 }
+.md-typeset .page-head__label { font-style: normal }
+.md-typeset .page-head__label.is-typing::after { background: currentColor }
+@media (prefers-reduced-motion: reduce) { .md-typeset :is(.typed, .page-head__label)::after { display: none } }
+
+/* ---------- Presenter mode (javascripts/diagram.js): P or the Present button, a full-screen keynote of one diagram ---------- */
+.md-typeset .dstage__present {
+  flex: none; display: inline-flex; align-items: center; gap: .3rem; height: 1.6rem; padding: 0 .65rem; border: 0; border-radius: .5rem; cursor: pointer;
+  font: inherit; font-size: .62rem; font-weight: 700; color: #fff;
+  background: linear-gradient(135deg, rgb(var(--d1)), rgb(var(--d2)));
+  box-shadow: 0 .25rem .8rem rgba(var(--d1), .3);
+  transition: transform .6s cubic-bezier(.16, 1, .3, 1), box-shadow .6s cubic-bezier(.16, 1, .3, 1);
+}
+.md-typeset .dstage__present:hover { transform: translateY(-1px); box-shadow: 0 .4rem 1.1rem rgba(var(--d1), .45) }
+.md-typeset .dstage__present svg { width: .8rem; height: .8rem; fill: currentColor }
+@media (max-width: 44.9375em) { .md-typeset .dstage__present span { display: none } }
+.is-presenting body { overflow: hidden }
+.presenter {
+  position: fixed; inset: 0; z-index: 1000; display: flex; flex-direction: column;
+  background: radial-gradient(60rem 30rem at 15% 0, rgba(var(--d1), .28), transparent 60%), radial-gradient(50rem 30rem at 100% 100%, rgba(var(--d2), .22), transparent 60%), #0b0c22;
+  color: #fff; opacity: 0; transition: opacity .6s cubic-bezier(.16, 1, .3, 1);
+}
+.presenter.is-in { opacity: 1 }
+.presenter__bar { display: flex; align-items: center; gap: .8rem; padding: .7rem 1.1rem; font-size: .8rem }
+.presenter__dot { width: .6rem; height: .6rem; border-radius: 50%; background: linear-gradient(135deg, rgb(var(--d1)), rgb(var(--d2))); box-shadow: 0 0 .7rem rgba(var(--d1), .8) }
+.presenter__name { font-family: var(--brand-display); font-size: .95rem }
+.presenter__hint { margin-left: auto; font-size: .68rem; color: rgba(255, 255, 255, .55) }
+.presenter__btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .3rem; min-width: 2rem; height: 2rem; padding: 0 .8rem;
+  border: 0; border-radius: 999px; cursor: pointer; font: inherit; font-size: .7rem; font-weight: 700;
+  color: #fff !important; background: rgba(255, 255, 255, .1); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .18);
+  transition: background .6s cubic-bezier(.16, 1, .3, 1);
+}
+.presenter__btn:hover { background: linear-gradient(135deg, rgb(var(--d1)), rgb(var(--d2))) }
+.presenter__stage { flex: 1; min-height: 0; display: grid; place-items: center; padding: 0 1.2rem 1.2rem }
+.presenter__frame, .presenter__img {
+  width: min(100%, calc((100vh - 5rem) * var(--ar, 1.6))); aspect-ratio: var(--ar, 1.6); max-height: 100%;
+  border: 0; border-radius: 1rem; background: #fff;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, .55), 0 0 0 1px rgba(255, 255, 255, .08);
+  transform: scale(.96); transition: transform .9s cubic-bezier(.16, 1, .3, 1);
+}
+.presenter__img { width: auto; max-width: 100%; aspect-ratio: auto; object-fit: contain; padding: 1rem }
+.presenter.is-in :is(.presenter__frame, .presenter__img) { transform: none }
+@media (max-width: 44.9375em) { .presenter__hint { display: none } }
+
+/* ---------- Morphing transitions (javascripts/morph.js): card pieces fly into the new page ---------- */
+::view-transition-group(*) { animation-duration: .75s; animation-timing-function: cubic-bezier(.16, 1, .3, 1) }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .45s }
+::view-transition-old(vt-title), ::view-transition-new(vt-title),
+::view-transition-old(vt-pill), ::view-transition-new(vt-pill) { height: 100%; object-fit: none; object-position: left center }
+/* while a morph runs, the new page's own entrance animations wait, so the pieces land on solid content */
+.vt-nav :is(.post-hero, .page-head) > *, .vt-nav .post-hero__icon { animation: none !important; opacity: 1 !important }
+/* the old page steps aside fast and the new one fades in, so the two never ghost over each other */
+@keyframes vt-out { to { opacity: 0 } }
+@keyframes vt-in { from { opacity: 0 } }
+::view-transition-old(root) { animation: vt-out .22s ease both }
+::view-transition-new(root) { animation: vt-in .5s .12s cubic-bezier(.16, 1, .3, 1) both }
+
+/* ---------- Glossary cards (javascripts/glossary.js) ---------- */
+.md-typeset abbr.gloss-word { cursor: help; text-decoration: none; border-bottom: 1.5px dotted rgba(var(--sec1), .7); outline-offset: 2px }
+.md-typeset abbr.gloss-word:hover, .md-typeset abbr.gloss-word:focus-visible { border-bottom-style: solid; border-bottom-color: rgb(var(--sec1)) }
+.gloss {
+  position: absolute; z-index: 900; width: min(19rem, calc(100vw - 16px)); padding: .75rem .9rem .8rem;
+  display: flex; flex-direction: column; gap: .2rem;
+  border-radius: .9rem; font-size: .66rem; line-height: 1.5;
+  color: var(--md-default-fg-color); background: var(--md-default-bg-color);
+  box-shadow: inset 0 0 0 1px rgba(var(--sec1), .22), 0 1rem 2.4rem rgba(16, 18, 58, .2);
+  opacity: 0; transform: translateY(6px) scale(.98); transform-origin: var(--arrow, 50%) 0; pointer-events: none;
+  transition: opacity .35s cubic-bezier(.16, 1, .3, 1), transform .5s cubic-bezier(.16, 1, .3, 1);
+}
+.gloss.is-up { transform: translateY(-6px) scale(.98); transform-origin: var(--arrow, 50%) 100% }
+.gloss.is-on { opacity: 1; transform: none; pointer-events: auto }
+.gloss::before { content: ""; position: absolute; inset: 0 0 auto; height: 3px; border-radius: .9rem .9rem 0 0; background: linear-gradient(90deg, rgb(var(--sec1)), rgb(var(--sec2))) }
+.gloss__term {
+  align-self: flex-start; padding: .1em .55em; border-radius: 999px; font-size: .6rem; font-weight: 800; letter-spacing: .04em; color: #fff;
+  background: linear-gradient(135deg, rgb(var(--sec1)), rgb(var(--sec2)));
+}
+.gloss__full { font-size: .74rem; line-height: 1.35; margin-top: .15rem }
+.gloss__full:empty { display: none }
+.gloss__meaning { color: var(--md-default-fg-color--light) }
+.gloss__more {
+  align-self: flex-start; margin-top: .3rem; font-weight: 700; color: color-mix(in srgb, rgb(var(--sec1)) 65%, #000) !important;
+  transition: transform .6s cubic-bezier(.16, 1, .3, 1);
+}
+.gloss__more:hover { transform: translateX(3px) }
+[data-md-color-scheme="slate"] .gloss { background: hsla(236, 32%, 15%, 1); box-shadow: inset 0 0 0 1px rgba(var(--sec1), .4), 0 1rem 2.4rem rgba(0, 0, 0, .45) }
+[data-md-color-scheme="slate"] .gloss__more { color: color-mix(in srgb, rgb(var(--sec1)) 45%, #fff) !important }
+@media (prefers-reduced-motion: reduce) { .gloss { transition: opacity .2s } }
+
+/* ---------- Read ticks (javascripts/readmark.js): menu ticks, "Read" chip, section progress ring ---------- */
+.md-sidebar--primary a.md-nav__link.is-read::after {
+  content: "✓"; margin-left: auto; padding-left: .4rem; font-size: .62rem; font-weight: 800;
+  color: color-mix(in srgb, rgb(var(--sec1)) 65%, #000);
+}
+[data-md-color-scheme="slate"] .md-sidebar--primary a.md-nav__link.is-read::after { color: color-mix(in srgb, rgb(var(--sec1)) 45%, #fff) }
+.md-typeset .read-chip {
+  display: inline-flex; align-items: center; padding: .3em .8em; border-radius: 999px; font-size: inherit; font-weight: 700;
+  color: #fff; background: linear-gradient(135deg, #16a34a, #0d9488);
+}
+.md-typeset .read-chip.is-new { animation: read-pop 1s cubic-bezier(.16, 1, .3, 1) both }
+@keyframes read-pop { from { opacity: 0; transform: scale(.6) } 60% { transform: scale(1.08) } to { opacity: 1; transform: none } }
+.md-typeset .read-ring { display: flex; align-items: center; gap: .7rem; margin: -.6rem 0 1.4rem }
+.md-typeset .read-ring svg { width: 2.6rem; height: 2.6rem; transform: rotate(-90deg) }
+.md-typeset .read-ring circle { fill: none; stroke-width: 4; stroke-linecap: round }
+.md-typeset .read-ring__track { stroke: var(--md-default-fg-color--lightest) }
+.md-typeset .read-ring__fill { stroke: rgb(var(--sec1)); transition: stroke-dashoffset 1.6s cubic-bezier(.16, 1, .3, 1) }
+.md-typeset .read-ring b { display: block; font-size: .74rem }
+.md-typeset .read-ring small { font-size: .6rem; color: var(--md-default-fg-color--light) }
+
+/* ---------- About hero, recruiter-ready: pill instead of the plain title, tall photo frame, tight name block ---------- */
+.md-typeset h1.about-title { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap } /* still read by search engines and screen readers */
+.about-hero { align-items: stretch; gap: 2rem; padding: 1.6rem; border-radius: 1.2rem; margin-top: .4rem }
+.about-hero__text { display: flex; flex-direction: column; justify-content: center; align-items: flex-start }
+.md-typeset .about-hero__text > p { margin: 0 }
+.md-typeset .about-hero__text > p:has(> .about-hero__pill) { margin-bottom: .9rem }
+.md-typeset .about-hero__text > p:has(> .about-hero__hi) { margin-bottom: .1rem }
+.md-typeset .about-hero__text > p:has(> .md-button) { margin-top: 1rem }
+.md-typeset .about-hero__text > p:not(:has(> span, > .md-button)) { margin-top: .4rem; color: var(--md-default-fg-color--light); max-width: 34em }
+.about-hero__pill {
+  display: inline-flex; align-items: center; gap: .3em; padding: .3em .85em; border-radius: 999px;
+  font-size: .64rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: #fff;
+  background: linear-gradient(135deg, #5b5bf7, #c2185b); box-shadow: 0 .3rem .9rem rgba(91, 91, 247, .3);
+}
+.md-typeset .about-hero__hi { font-size: .95rem; font-weight: 600; color: var(--md-default-fg-color--light) }
+.md-typeset .about-hero__name { margin: 0; font-size: 2.3rem; line-height: 1.05; letter-spacing: -.02em }
+.md-typeset .about-hero__role { margin: .35rem 0 0; min-height: 1.5em; font-size: 1rem }
+/* the photo frame: tall rounded rectangle, photos crossfade with a slow zoom */
+.about-photos {
+  position: relative; flex: 0 0 auto; width: 13rem; aspect-ratio: 3 / 4; overflow: hidden; border-radius: 1.1rem;
+  background: #10123a;
+  box-shadow: 0 0 0 3px #ffd166, 0 0 0 9px rgba(91, 91, 247, .18), 0 1.2rem 2.6rem rgba(16, 18, 58, .3);
+}
+.about-photos__img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; transform: scale(1.08);
+  transition: opacity 1.4s cubic-bezier(.16, 1, .3, 1), transform 6.5s cubic-bezier(.16, 1, .3, 1);
+}
+.about-photos__img.is-on { opacity: 1; transform: scale(1) }
+.about-photos__dots { position: absolute; left: 0; right: 0; bottom: .55rem; z-index: 1; display: flex; justify-content: center; gap: .3rem }
+.about-photos__dots button {
+  width: .42rem; height: .42rem; padding: 0; border: 0; border-radius: 999px; cursor: pointer;
+  background: rgba(255, 255, 255, .55); box-shadow: 0 1px 3px rgba(0, 0, 0, .35);
+  transition: width .8s cubic-bezier(.16, 1, .3, 1), background .6s;
+}
+.about-photos__dots button.is-on { width: 1.1rem; background: #fff }
+@media (prefers-reduced-motion: reduce) { .about-photos__img { transition: opacity .3s } }
+@media screen and (max-width: 44.9375em) {
+  .about-hero { align-items: center }
+  .about-hero__text { align-items: center }
+  .about-photos { width: 11rem }
+  .md-typeset .about-hero__name { font-size: 1.9rem }
+}
+.md-content .md-typeset h2.about-hero__name { margin: 0; padding: 0 } /* beats the site-wide space above section headings */
+/* the hand in the About pill waves hello every few seconds */
+.about-hero__pill .wave { display: inline-block; transform-origin: 70% 75%; animation: wave-hello 3.6s ease-in-out .8s infinite }
+@keyframes wave-hello {
+  0%, 60%, 100% { transform: rotate(0) }
+  8% { transform: rotate(16deg) } 16% { transform: rotate(-10deg) } 24% { transform: rotate(16deg) }
+  32% { transform: rotate(-6deg) } 40% { transform: rotate(10deg) } 48% { transform: rotate(0) }
+}
+@media (prefers-reduced-motion: reduce) { .about-hero__pill .wave { animation: none } }
+
+/* ---------- Circular theme switch (javascripts/themeswitch.js): the new theme grows out of the sun/moon button ---------- */
+html.vt-theme::view-transition-old(root), html.vt-theme::view-transition-new(root) { animation: none; mix-blend-mode: normal }
+html.vt-theme::view-transition-old(root) { z-index: 1 }
+html.vt-theme::view-transition-new(root) { z-index: 2; animation: vt-circle .9s cubic-bezier(.16, 1, .3, 1) both }
+@keyframes vt-circle {
+  from { clip-path: circle(0 at var(--vt-x, 100%) var(--vt-y, 0)) }
+  to { clip-path: circle(var(--vt-r, 150vmax) at var(--vt-x, 100%) var(--vt-y, 0)) }
+}
+/* the sun/moon button: a glowing pill, golden sun in light mode, lavender moon in dark, spins on switch */
+.md-header__option[data-md-component="palette"] label.md-header__button {
+  display: grid; place-items: center; width: 2.1rem; height: 2.1rem; margin: 0 .2rem; padding: 0; border-radius: 999px;
+  background: rgba(255, 255, 255, .1); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .18);
+  transition: background .6s cubic-bezier(.16, 1, .3, 1), box-shadow .6s cubic-bezier(.16, 1, .3, 1);
+}
+.md-header__option[data-md-component="palette"] label.md-header__button svg {
+  width: 1.35rem; height: 1.35rem; fill: #ffd166; filter: drop-shadow(0 0 .35rem rgba(255, 209, 102, .7));
+  transition: transform .9s cubic-bezier(.16, 1, .3, 1);
+}
+[data-md-color-scheme="slate"] .md-header__option[data-md-component="palette"] label.md-header__button svg { fill: #c4b5fd; filter: drop-shadow(0 0 .4rem rgba(196, 181, 253, .8)) }
+.md-header__option[data-md-component="palette"] label.md-header__button:hover { background: rgba(255, 255, 255, .18); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .3), 0 0 1rem rgba(255, 209, 102, .3) }
+.md-header__option[data-md-component="palette"] label.md-header__button:hover svg { transform: rotate(25deg) scale(1.08) }
+.md-header__option[data-md-component="palette"].is-spin label.md-header__button:not([hidden]) svg { animation: theme-spin .9s cubic-bezier(.16, 1, .3, 1) }
+@keyframes theme-spin { from { transform: rotate(-180deg) scale(.4); opacity: 0 } to { transform: none; opacity: 1 } }
+.md-header__option[data-md-component="palette"] label.md-header__button[hidden] { display: none } /* only the toggle for the other theme shows */
+/* homepage pill: the city + weather line fades in once it arrives (javascripts/greeting.js) */
+.hero__pill.is-local { animation: local-in 1.2s cubic-bezier(.16, 1, .3, 1) both; max-width: 100%; white-space: normal }
+@keyframes local-in { from { opacity: 0; transform: translateY(6px) } to { opacity: 1; transform: none } }
+/* confetti canvas (javascripts/celebrate.js) */
+.confetti { position: fixed; inset: 0; z-index: 1100; width: 100vw; height: 100vh; pointer-events: none }
+
+/* ---------- Keyboard shortcuts sheet (javascripts/shortcuts.js) ---------- */
+.keys {
+  position: fixed; inset: 0; z-index: 1050; display: grid; place-items: center; padding: 1rem;
+  background: rgba(8, 9, 30, .45); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+  opacity: 0; transition: opacity .4s cubic-bezier(.16, 1, .3, 1);
+}
+.keys.is-in { opacity: 1 }
+.keys__card {
+  width: min(24rem, 100%); padding: 1.1rem 1.2rem 1rem; border-radius: 1.2rem;
+  color: var(--md-default-fg-color); background: var(--md-default-bg-color);
+  box-shadow: inset 0 0 0 1px rgba(var(--sec1), .25), 0 2rem 4rem rgba(0, 0, 0, .35);
+  transform: translateY(12px) scale(.97); transition: transform .6s cubic-bezier(.16, 1, .3, 1);
+  position: relative; overflow: hidden;
+}
+.keys__card::before { content: ""; position: absolute; inset: 0 0 auto; height: 3px; background: linear-gradient(90deg, rgb(var(--sec1)), rgb(var(--sec2))) }
+.keys.is-in .keys__card { transform: none }
+.keys__head { display: flex; align-items: center; justify-content: space-between; margin-bottom: .7rem; font-size: .85rem }
+.keys__x { width: 1.7rem; height: 1.7rem; border: 0; border-radius: 50%; cursor: pointer; font: inherit; color: inherit; background: var(--md-default-fg-color--lightest) }
+.keys ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .45rem }
+.keys li { display: flex; align-items: center; gap: .75rem; font-size: .72rem }
+.keys kbd, .keys__foot kbd {
+  display: inline-grid; place-items: center; min-width: 2.2rem; height: 1.7rem; padding: 0 .45rem; border-radius: .45rem;
+  font: 700 .7rem/1 var(--md-code-font-family); color: #fff;
+  background: linear-gradient(135deg, rgb(var(--sec1)), rgb(var(--sec2))); box-shadow: 0 .2rem 0 rgba(0, 0, 0, .25);
+}
+.keys__foot kbd { min-width: 1.5rem; height: 1.3rem }
+.keys__foot { margin: .9rem 0 0; font-size: .62rem; color: var(--md-default-fg-color--light) }
+[data-md-color-scheme="slate"] .keys__card { background: hsla(236, 32%, 14%, 1) }
